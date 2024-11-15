@@ -31,8 +31,15 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Raw" type="Label" parent="Body"]
+visible = false
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 autowrap_mode = 2
 
+[node name="NewGame" type="Button" parent="Body"]
+layout_mode = 2
+text = "New Game"
+
 [connection signal="data_recieved" from="Websocket" to="." method="_on_websocket_data_recieved"]
+[connection signal="button_down" from="Body/NewGame" to="." method="_on_new_game_button_down"]

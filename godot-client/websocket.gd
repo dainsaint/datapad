@@ -19,7 +19,9 @@ func _ready():
 		await get_tree().create_timer(2).timeout
 
 		# Send data.
-		socket.send_text("Test packet")
+		var test_packet = {"test": "hello_dain"}
+
+		socket.send_text(JSON.stringify(test_packet))
 
 
 func _process(_delta):
@@ -35,7 +37,7 @@ func _process(_delta):
 	if state == WebSocketPeer.STATE_OPEN:
 		while socket.get_available_packet_count():
 			var data = socket.get_packet().get_string_from_utf8()
-			data = str_to_var(data)
+			data = JSON.parse_string(data)
 			data_recieved.emit(data)
 
 	# WebSocketPeer.STATE_CLOSING means the socket is closing.
@@ -50,3 +52,7 @@ func _process(_delta):
 		var code = socket.get_close_code()
 		print("WebSocket closed with code: %d. Clean: %s" % [code, code != -1])
 		set_process(false)  # Stop processing.x
+
+
+func send_data(data):
+	socket.send_text(JSON.stringify(data))
