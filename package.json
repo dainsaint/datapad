@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js --ignore data/",
+    "dev": "concurrently \"nodemon index.js --ignore data/\" \"node dev.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "cd server && npm install && cd ../client && npm install"
   },
@@ -28,6 +28,7 @@
   "dependencies": {
     "express": "^4.21.1",
     "get-port": "^7.1.0",
+    "lit-html": "^3.2.1",
     "ws": "^8.18.0"
   }
 }

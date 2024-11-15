@@ -7,6 +7,8 @@ import Society from "./models/society.js";
 const types = {Game, Session, Player, Society};
 
 export default class Database {
+  static instance;
+
   data = {
     games: []
   };
@@ -45,6 +47,13 @@ export default class Database {
   update( callback ) {
     callback(this.data);
     this.write();
+  }
+
+  static get Instance() {
+    if(!Database.instance)
+      Database.instance = new Database();
+
+    return Database.instance;
   }
 
   static fromJSON(json) {
