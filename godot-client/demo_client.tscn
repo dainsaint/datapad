@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5suddisdtblr"]
+
+[ext_resource type="Script" path="res://demo_client.gd" id="1_gtfck"]
+[ext_resource type="Theme" uid="uid://c8ysyp3qs4xu8" path="res://Themes/SpaceOpera.tres" id="1_ii86j"]
+[ext_resource type="Script" path="res://websocket.gd" id="2_rh8ee"]
+
+[node name="DemoClient" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ii86j")
+script = ExtResource("1_gtfck")
+
+[node name="Websocket" type="Node" parent="."]
+script = ExtResource("2_rh8ee")
+
+[node name="Body" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Body"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Game Info"
+
+[node name="Tree" type="Tree" parent="Body"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Raw" type="Label" parent="Body"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 2
+
+[connection signal="data_recieved" from="Websocket" to="." method="_on_websocket_data_recieved"]
