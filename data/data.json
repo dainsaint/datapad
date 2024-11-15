@@ -1,0 +1,20 @@
+{
+  "games": [
+    {
+      "_id": "79e254a1-8e70-4416-89f4-fc7b0f1780ee",
+      "_type": "Game",
+      "date": "2024-11-15T00:11:45.081Z",
+      "sessions": [
+        {
+          "_id": "8ad8e567-14a4-4d19-bb36-53c70cab7dda",
+          "_type": "Session",
+          "date": "2024-11-15T00:11:45.081Z",
+          "societies": [],
+          "rounds": [],
+          "currentRound": 0
+        }
+      ],
+      "players": []
+    }
+  ]
+}
