@@ -1,9 +1,15 @@
 import express from "express";
-import Database from "./database.js";
-import GameBasicView from "./views/game/game-basic-view.js";
-import BaseLayoutView from "./views/layouts/base-layout-view.js";
-import GameFullView from "./views/game/game-full-view.js";
-import Player from "./models/player.js";
+
+import Database from "./core/database.js";
+
+import Game from "./models/game.js";
+
+import GameCard from "./views/game/GameCard.js";
+import GameOverview from "./views/game/GameOverview.js";
+import Layout from "./views/layouts/Layout.js";
+import SessionOverview from "./views/session/SessionOverview.js";
+import GameMaster from "./views/pages/GameMaster.js";
+import Home from "./views/pages/Home.js";
 
 export default class Frontend {
 
@@ -14,26 +20,30 @@ export default class Frontend {
     app.use( express.static( 'app/static') );
 
     app.get("/", (req, res) => {
-      const view = new GameBasicView();
-      const response = database.data.games
-        .map( view.render )
-        .join( "<br/>");
+      const layout = new Layout();
 
-      this.sendPageResponse( response, res );
+      res.send( layout.render( new Home().render( database.data.games ) ) );
+    })
+
+    app.post("/game", (req, res) => {
+      database.update( ({ games }) => {
+        games.push(new Game()); 
+      })
     })
 
     app.get("/game/:id", (req, res) => {
+      const layout = new Layout();
+      let content = "";
+
       const game = database.data.games
         .find( g => g._id == req.params.id );
 
       if( game ) {
-        const view = new GameFullView();
-        const response = view.render( game );
-        this.sendPageResponse( response, res );
-      } else {
-        console.log("how?", req.params.id );
-        this.sendPageResponse( "whoops", res);
-      }
+        const view = new GameOverview();
+        content = view.render( game );
+      } 
+
+      res.send( layout.render( content ) );
     });
 
     app.get("/game/basic/:id", (req, res) => {
@@ -41,13 +51,51 @@ export default class Frontend {
       let response = "Couldn't find it :(";
 
       if (game) {
-        const view = new GameBasicView();
+        const view = new GameCard();
         response = view.render(game);
       } 
 
-      res.set("Content-Type", "text/html");
-      res.send(Buffer.from(response));
+      res.send( response );
     });
+
+
+    app.get("/game/:game_id/session/:session_id", (req, res) => {
+      const layout = new Layout();
+      let content = "";
+
+      const game = database.data.games.find((g) => g._id == req.params.game_id);
+
+      if (!game) 
+        return res.send(layout.render(content));
+
+      const session = game.sessions.find( session => session._id == req.params.session_id );
+
+      if( !session )
+        return res.send(layout.render(content));
+
+      const view = new SessionOverview();
+      content = view.render(session);
+      res.send(layout.render(content));
+    });
+
+    app.get("/gm", (req, res) => {
+      const layout = new Layout();
+      let content = "";
+
+      const game = database.data.games.at(0);
+
+      if (!game) return res.send(layout.render(content));
+
+      const session = game.sessions.at(0);
+
+      if (!session) return res.send(layout.render(content));
+
+      const view = new GameMaster();
+      content = view.render(session);
+      res.send(layout.render(content));
+    })
+
+
 
     app.listen(port, error => {
       if(!error)
@@ -56,12 +104,6 @@ export default class Frontend {
 
   }
 
-  sendPageResponse( content, res ) {
-    const base = new BaseLayoutView();
-    const page = base.render( content );
-    res.set("Content-Type", "text/html");
-    res.send(Buffer.from(page));
-  }
 }
 
 

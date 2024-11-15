@@ -1,10 +1,16 @@
 import fs from "fs";
-import Game from "./models/game.js";
-import Session from "./models/session.js";
-import Player from "./models/player.js";
-import Society from "./models/society.js";
+import moment from "moment";
 
-const types = {Game, Session, Player, Society};
+import Community from "../models/community.js";
+import Game from "../models/game.js";
+import Phase from "../models/phase.js";
+import Player from "../models/player.js";
+import Resource from "../models/resource.js";
+import Round from "../models/round.js";
+import Session from "../models/session.js";
+import Society from "../models/society.js";
+
+const types = {Game, Session, Player, Society, Resource, Community, Round, Phase};
 
 export default class Database {
   static instance;
@@ -57,22 +63,27 @@ export default class Database {
   }
 
   static fromJSON(json) {
-    const instances = new Set();
+    const references = new Set();
 
     return JSON.parse(json, (key, value) => {
+
+      if ( moment(value, moment.ISO_8601, true).isValid() ) return new Date(value);
+
       if (typeof value !== "object") return value;
 
       if ("_type" in value) {
-        if (instances[value._id]) 
-          return instances[value._id]; 
+        if (references[value._id]) 
+        return references[value._id]; 
 
-        const Instance = types[value._type];
-        const instance = Object.assign(new Instance(), value);
-        instances[value._id] = instance;
-        return instance;
+        const Type = types[value._type];
+        if( !Type )
+          return value;
+
+        const reference = Object.assign(new Type(), value);
+        references[value._id] = reference;
+        return reference;
       }
 
-      if (Date.parse(value)) return new Date(value);
 
       return value;
     });

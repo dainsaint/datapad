@@ -1,22 +1,26 @@
 import View from "../../core/view.js";
 
-export default class BaseLayoutView extends View {
+export default class Layout extends View {
   render(content) {
+    if( Array.isArray(content) )
+      content = content.join("\n");
+
     return `
     <!DOCTYPE html>
     <html lang="en">
 
     <head>
       <link rel="stylesheet" href="/css/neusa/neusa.css"/>
+      <link rel="stylesheet" href="/css/reset.css"/> 
       <link rel="stylesheet" href="/css/styles.css" />
       <script type="module" src="/js/vendor/htmx.min.js"></script>
       <script type="module" src="/js/client.js"></script>
     </head>
 
     <body>
-      <main id="content">
+      <section class="app-content">
         ${content}
-      </main>
+      </section>
     </body>
 
     </html>
