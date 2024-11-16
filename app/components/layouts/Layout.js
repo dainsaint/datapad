@@ -1,13 +1,10 @@
-import View from "../../core/view.js";
+export default function Layout(content) {
+  if( Array.isArray(content) )
+    content = content.join("\n");
 
-export default class Layout extends View {
-  render(content) {
-    if( Array.isArray(content) )
-      content = content.join("\n");
-
-    return `
-    <!DOCTYPE html>
-    <html lang="en">
+  return `
+  <!DOCTYPE html>
+  <html lang="en">
 
     <head>
       <link rel="stylesheet" href="/css/neusa/neusa.css"/>
@@ -23,7 +20,6 @@ export default class Layout extends View {
       </section>
     </body>
 
-    </html>
-    `;
-  }
+  </html>
+  `;
 }
