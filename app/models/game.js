@@ -7,22 +7,8 @@ export default class Game extends Model {
   sessions = [];
   players = [];
 
-  constructor() {
+  constructor(name) {
     super();
-    this.sessions.push(new Session());
-  }
-
-  renderFull() {
-    return `
-      <div>
-        <em>${ this._id }</em>
-        <a href="/">View All</a><br/>
-        <h3>Sessions</h3>
-        <div>
-          ${ this.sessions.map( session => session.renderList() )}
-        </div>
-        <h3>Players</h3>
-      </div>
-    `
+    this.name = name;
   }
 }

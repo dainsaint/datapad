@@ -1,107 +1,340 @@
 {
   "games": [
     {
-      "_id": "79e254a1-8e70-4416-89f4-fc7b0f1780ee",
+      "_id": "sAYSLwIj",
       "_type": "Game",
-      "name": "July 2024 - Pendle Hill Playtest",
-      "date": "2024-11-15T00:11:45.081Z",
+      "name": "Arch St. - July 2024",
+      "date": "2024-11-18T17:43:08.414Z",
       "sessions": [
         {
-          "_id": "8ad8e567-14a4-4d19-bb36-53c70cab7dda",
-          "_type": "Session",
-          "date": "2024-11-15T00:11:45.081Z",
-          "societies": [
-            {
-              "_id": "ff0ea111-31a9-4284-bdff-e7836c1ab710",
-              "_type": "Society",
-              "name": "Tig Ol' Biddies",
-              "players": []
-            }
-          ],
-          "rounds": [],
-          "currentRound": 0
+          "_id": "LyjTNO98"
         }
       ],
       "players": [
         {
-          "_id": "27ff9717-6fbc-4161-88fa-3073ea3a7e81",
-          "_type": "Player",
+          "_id": "MG1DO6W_",
           "name": "Ving Rhames"
-        },
-        {
-          "_id": "3e6c8eb1-9bd9-46fa-a2a2-cbe5378e0a59",
-          "_type": "Player",
-          "name": "Michael Caine"
         }
       ]
-    },
-    {
-      "_id": "7a1f0f44-0f95-48e8-8cc8-472f1fbfadd5",
-      "_type": "Game",
-      "name": "August 2024 Playtest",
-      "date": "2024-11-15T01:22:49.411Z",
-      "sessions": [
-        {
-          "_id": "7c984a46-4383-4a77-876d-cdc7ef53f894",
-          "_type": "Session",
-          "date": "2024-11-15T01:22:49.411Z",
-          "societies": [],
-          "rounds": [],
-          "currentRound": 0
-        }
-      ],
-      "players": []
-    },
-    {
-      "_id": "facf8ab5-5fcf-4182-b95a-51985d9180cf",
-      "_type": "Game",
-      "name": "September 2024 Playtest",
-      "date": "2024-11-15T01:22:53.926Z",
-      "sessions": [
-        {
-          "_id": "68219804-1069-44a9-b64a-cf7e6f001518",
-          "_type": "Session",
-          "date": "2024-11-15T01:22:53.926Z",
-          "societies": [],
-          "rounds": [],
-          "currentRound": 0
-        }
-      ],
-      "players": []
-    },
-    {
-      "_id": "5d52dcfc-2c9a-426d-b5b8-5c8d89c6eaef",
-      "_type": "Game",
-      "name": "October 2024 Playtest",
-      "date": "2024-11-15T01:23:04.676Z",
-      "sessions": [
-        {
-          "_id": "25a346a4-0f3a-49cc-89f0-15af90fc3cdd",
-          "_type": "Session",
-          "date": "2024-11-15T01:23:04.676Z",
-          "societies": [],
-          "rounds": [],
-          "currentRound": 0
-        }
-      ],
-      "players": []
-    },
-    {
-      "_id": "804812cd-e4c8-403c-8f1f-c0d1040a962a",
-      "_type": "Game",
-      "name": "November 2024 Playtest",
-      "date": "2024-11-15T01:23:22.863Z",
-      "sessions": [
-        {
-          "_id": "2d51012b-7cc6-4e30-a6ac-48c237ceb654",
-          "_type": "Session",
-          "date": "2024-11-15T01:23:22.863Z",
-          "societies": [],
-          "rounds": [],
-          "currentRound": 0
-        }
-      ],
-      "players": []
     }
-  ]
+  ],
+  "sessions": {
+    "sAYSLwIj": [
+      {
+        "_id": "LyjTNO98",
+        "_type": "Session",
+        "date": "2024-11-18T17:43:08.414Z",
+        "players": [
+          {
+            "_id": "MG1DO6W_",
+            "name": "Ving Rhames"
+          }
+        ],
+        "societies": [
+          {
+            "_id": "CyP8nlk4",
+            "_type": "Society",
+            "name": "The Willow Whompers",
+            "archetype": "The Mighty",
+            "planet": "",
+            "communities": [
+              {
+                "_id": "zzmA57cs",
+                "_type": "Community",
+                "name": "Venerable Elders",
+                "resources": [
+                  {
+                    "_id": "LuKj3tYM",
+                    "_type": "Resource",
+                    "name": "Green Sludge",
+                    "relationship": "",
+                    "isExhausted": false
+                  },
+                  {
+                    "_id": "BE3XsHVA",
+                    "_type": "Resource",
+                    "name": "Amazing Suspenders",
+                    "relationship": "",
+                    "isExhausted": false
+                  },
+                  {
+                    "_id": "iqH6DdKr",
+                    "_type": "Resource",
+                    "name": "Big Rock",
+                    "relationship": "",
+                    "isExhausted": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "phases": [
+          {
+            "_id": "fcSiraqM",
+            "_type": "Phase",
+            "name": "Global Phase",
+            "round": 0,
+            "length": 1200,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "JFjBYNsA",
+            "_type": "Phase",
+            "name": "Universal Phase",
+            "round": 0,
+            "length": 240,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "AgRQSN7C",
+            "_type": "Phase",
+            "name": "Societal Phase",
+            "round": 0,
+            "length": 600,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "nD6Tlvwn",
+            "_type": "Phase",
+            "name": "Galactic Phase",
+            "round": 0,
+            "length": 600,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "DGl-wnVz",
+            "_type": "Phase",
+            "name": "Individual Phase",
+            "round": 0,
+            "length": 500,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "RpWL-L-A",
+            "_type": "Phase",
+            "name": "Universal Phase",
+            "round": 1,
+            "length": 240,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "QeeMm73n",
+            "_type": "Phase",
+            "name": "Societal Phase",
+            "round": 1,
+            "length": 600,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "UJFxqxgf",
+            "_type": "Phase",
+            "name": "Galactic Phase",
+            "round": 1,
+            "length": 600,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "kg9nbOE2",
+            "_type": "Phase",
+            "name": "Individual Phase",
+            "round": 1,
+            "length": 500,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "o_QYNxUL",
+            "_type": "Phase",
+            "name": "Universal Phase",
+            "round": 2,
+            "length": 240,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "2XeCeC0x",
+            "_type": "Phase",
+            "name": "Societal Phase",
+            "round": 2,
+            "length": 600,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "FCoGLnzl",
+            "_type": "Phase",
+            "name": "Galactic Phase",
+            "round": 2,
+            "length": 600,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "Er9oaIxr",
+            "_type": "Phase",
+            "name": "Individual Phase",
+            "round": 2,
+            "length": 500,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "sMa5QZ12",
+            "_type": "Phase",
+            "name": "Universal Phase",
+            "round": 3,
+            "length": 240,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "_HhH4j0M",
+            "_type": "Phase",
+            "name": "Societal Phase",
+            "round": 3,
+            "length": 600,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "hQcsVcYJ",
+            "_type": "Phase",
+            "name": "Galactic Phase",
+            "round": 3,
+            "length": 600,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "ls7NBk6x",
+            "_type": "Phase",
+            "name": "Generational Phase",
+            "round": 3,
+            "length": 500,
+            "timeElapsed": 0
+          },
+          {
+            "_id": "aTmAQ_fo",
+            "_type": "Phase",
+            "name": "Conclusion Phase",
+            "round": 3,
+            "length": 500,
+            "timeElapsed": 0
+          }
+        ],
+        "currentRound": 0
+      }
+    ]
+  },
+  "societies": {
+    "sAYSLwIj": {
+      "LyjTNO98": [
+        {
+          "_id": "CyP8nlk4",
+          "_type": "Society",
+          "name": "The Willow Whompers",
+          "archetype": "The Mighty",
+          "planet": "",
+          "communities": [
+            {
+              "_id": "zzmA57cs",
+              "_type": "Community",
+              "name": "Venerable Elders",
+              "resources": [
+                {
+                  "_id": "LuKj3tYM",
+                  "_type": "Resource",
+                  "name": "Green Sludge",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "BE3XsHVA",
+                  "_type": "Resource",
+                  "name": "Amazing Suspenders",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "iqH6DdKr",
+                  "_type": "Resource",
+                  "name": "Big Rock",
+                  "relationship": "",
+                  "isExhausted": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "communities": {
+    "CyP8nlk4": [
+      {
+        "_id": "zzmA57cs",
+        "_type": "Community",
+        "name": "Venerable Elders",
+        "resources": [
+          {
+            "_id": "LuKj3tYM",
+            "_type": "Resource",
+            "name": "Green Sludge",
+            "relationship": "",
+            "isExhausted": false
+          },
+          {
+            "_id": "BE3XsHVA",
+            "_type": "Resource",
+            "name": "Amazing Suspenders",
+            "relationship": "",
+            "isExhausted": false
+          },
+          {
+            "_id": "iqH6DdKr",
+            "_type": "Resource",
+            "name": "Big Rock",
+            "relationship": "",
+            "isExhausted": false
+          }
+        ]
+      }
+    ]
+  },
+  "resources": {
+    "zzmA57cs": [
+      {
+        "_id": "LuKj3tYM",
+        "_type": "Resource",
+        "name": "Green Sludge",
+        "relationship": "",
+        "isExhausted": false
+      },
+      {
+        "_id": "BE3XsHVA",
+        "_type": "Resource",
+        "name": "Amazing Suspenders",
+        "relationship": "",
+        "isExhausted": false
+      },
+      {
+        "_id": "iqH6DdKr",
+        "_type": "Resource",
+        "name": "Big Rock",
+        "relationship": "",
+        "isExhausted": false
+      }
+    ]
+  },
+  "players": {
+    "sAYSLwIj": [
+      {
+        "_id": "MG1DO6W_",
+        "_type": "Player",
+        "name": "Ving Rhames",
+        "pronouns": [
+          "they",
+          "them"
+        ],
+        "community": {
+          "_id": "JXgVDrJq",
+          "_type": "Community",
+          "resources": []
+        }
+      }
+    ]
+  }
 }

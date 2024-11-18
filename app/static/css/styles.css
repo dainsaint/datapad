@@ -1,3 +1,12 @@
+:root {
+  --color-mid: #dcdcdc;
+  --color-text: black;
+  --color-bg: white;
+  --color-text-active: white;
+  --color-bg-active: black;
+}
+
+
 body {
   padding: 0px;
   margin: 0px;
@@ -5,28 +14,176 @@ body {
   inset: 0px;
 }
 
-main#content {
+.app-content {
   font-family: 'Neusa';
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 1;
   text-transform: uppercase;
-  /* background: black;
-  color: white; */
-  padding: 16px;
   inset: 0px;
   position: absolute;
+  color: var(--color-text);
+}
+
+p {
+  font-size: 1rem;
+  color: inherit;
 }
 
 
-.game-basic-view {
-  display: block;
-  border: 1px solid black;
-  padding: 16px;
-  cursor: pointer;
-  &:hover {
-    background: rgba(0,0,0, .2);
+h1 {
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+time {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+
+nav {
+  ul { 
+    padding: 0px 
+  }
+  li {
+    list-style: none; 
+    margin: 0px;
   }
 }
 
-h3 {
-  margin: 0px;
+.content {
+  padding: 1rem;
+}
+
+[class*="grid"] {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  display: block;
+  --color-bg: var(--color-mid);
+  background: var(--color-bg);
+  border: 1px solid var(--color-bg);
+  color: var(--color-text);
+  padding: 1rem;
+}
+
+a.card {
+  text-decoration: none;
+  &:hover {
+    border: 1px solid var(--color-text);
+  }
+}
+
+
+.card-fancy {
+  border-bottom-left-radius: .5rem;
+  border-top-right-radius: 3rem;
+}
+
+.stack > * + *{
+  margin-top: 1rem;
+}
+
+.stack-tight > * + *{
+  margin-top: .5rem;
+}
+
+.stack-loose > * + *{
+  margin-top: 2rem;
+}
+
+
+.toolbar {
+  background-color: var(--color-bg);
+  width: 4rem;
+
+  li {
+    border-block-end: 1px solid white;
+  }
+
+  a {
+    display: block;
+  }
+
+  svg, img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.status-bar {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem;
+  border-inline-start: 1px solid var(--color-text);
+  border-block-end: 1px solid var(--color-text);
+}
+
+.frame-toolbar {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+}
+
+[class*="frame"] {
+  width: 100%;
+  height: 100%;
+}
+
+.layout-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.color-contrast {
+  --color-bg: black;
+  --color-text: white;
+}
+
+.icon {
+  fill: currentColor;
+  height: 4rem;
+  width: 4rem;
+}
+
+button {
+  text-transform: inherit;
+  font-size: inherit;
+  background: var(--color-bg-active);
+  color: var(--color-text-active);
+  padding: .5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 1px solid var(--color-bg-active);
+
+  &:hover {
+  --color-bg-active: green;
+  }
 }
