@@ -4,23 +4,29 @@ import Database from "./core/database.js";
 
 import Game from "./models/game.js";
 
-import GameCard from "./components/game/GameCard.js";
-import GameOverview from "./components/game/GameOverview.js";
-import Layout from "./components/layouts/Layout.js";
-import SessionOverview from "./components/session/SessionOverview.js";
-import GameMaster from "./components/pages/GameMaster.js";
-import Home from "./components/pages/Home.js";
+import GameCard from "./components/GameCard.js";
+import GameOverview from "./components/GameOverview.js";
+import Layout from "./components/Layout.js";
+import SessionOverview from "./components/SessionOverview.js";
+import GameMaster from "./components/GameMaster.js";
+import Home from "./components/Home.js";
 
 export default class Frontend {
 
   start(port) {
     const app = express();
-    const database = Database.Instance;
+    const database = Database.open("data.json");
 
     app.use( express.static( 'app/static') );
 
     app.get("/", (req, res) => {
-      res.send( Layout( Home( database.data.games ) ) );
+
+      const game = database.data.games.at(0);
+      const currentSession = database.data.sessions[ game._id ].at(0);
+
+      if (!currentSession) return res.send(Layout(""));
+
+      res.send( Layout( Home( database.data.games, currentSession ) ) );
     })
 
     app.post("/game", (req, res) => {
@@ -78,7 +84,7 @@ export default class Frontend {
 
       if (!game) return res.send( Layout(content) );
 
-      const session = game.sessions.at(0);
+      const session = database.data.sessions[game._id].at(0);
 
       if (!session) return res.send( Layout(content) );
 

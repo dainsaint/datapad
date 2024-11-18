@@ -1,7 +1,7 @@
 export default function GameCreateButton () {
   return `
-    <a class="button game-create-button" hx-post="/game">
+    <button>
       + Create a new game
-    </a>
+    </button>
   `;
 }

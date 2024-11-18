@@ -1,0 +1,412 @@
+{
+  "games": [
+    {
+      "_id": "79e254a1-8e70-4416-89f4-fc7b0f1780ee",
+      "_type": "Game",
+      "name": "July 2024 - Pendle Hill Playtest",
+      "date": "2024-11-15T00:11:45.081Z",
+      "sessions": [
+        {
+          "_id": "e2fe681a-b5cc-411a-931d-d64f738421e0",
+          "_type": "Session",
+          "date": "2024-11-15T20:40:54.384Z",
+          "societies": [
+            {
+              "_id": "05f25035-3c81-4e84-9a31-d77a9df72513",
+              "_type": "Society",
+              "name": "Ten Thousand Islands",
+              "archetype": "",
+              "planet": "",
+              "communities": [
+                {
+                  "_id": "e8b1766e-3b68-410a-b5e0-3b04152de88c",
+                  "_type": "Community",
+                  "name": "Venerated Elders",
+                  "resources": [
+                    {
+                      "_id": "6311ae2d-d9d4-4d3e-9566-e7b9e29716e1",
+                      "_type": "Resource",
+                      "name": "Green Sludge",
+                      "relationship": "",
+                      "isExhausted": false
+                    },
+                    {
+                      "_id": "ef554198-292c-41e7-854b-aeda14bea62c",
+                      "_type": "Resource",
+                      "name": "Amazing Suspenders",
+                      "relationship": "",
+                      "isExhausted": false
+                    },
+                    {
+                      "_id": "4a2effaa-bdf5-4252-a74e-97909f65ef8c",
+                      "_type": "Resource",
+                      "name": "Rock",
+                      "relationship": "",
+                      "isExhausted": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_id": "cbd23128-4d4d-401a-a74d-e5aa58f58fcb",
+              "_type": "Society",
+              "name": "Weugan",
+              "archetype": "",
+              "planet": "",
+              "communities": []
+            }
+          ],
+          "phases": [
+            {
+              "_id": "0ce9ad1e-2b49-490d-bb64-ec7bea0ef47c",
+              "_type": "Phase",
+              "name": "Global Phase",
+              "round": 0,
+              "length": "1970-01-01T00:00:01.200Z",
+              "timeElapsed": 0
+            },
+            {
+              "_id": "5ce08017-00a2-4f5f-b490-45f96280c08d",
+              "_type": "Phase",
+              "name": "Universal Phase",
+              "round": 0,
+              "length": 240,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "c6d4dbfb-3148-42e5-b8fa-612aa6dd7680",
+              "_type": "Phase",
+              "name": "Societal Phase",
+              "round": 0,
+              "length": 600,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "6e14d8e1-ad28-4f07-b277-99a02b1864f8",
+              "_type": "Phase",
+              "name": "Galactic Phase",
+              "round": 0,
+              "length": 600,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "8d555d64-6cae-4aaa-852c-4e8cc42703d3",
+              "_type": "Phase",
+              "name": "Individual Phase",
+              "round": 0,
+              "length": 500,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "49412181-da20-4d84-a5cb-99f9062010ec",
+              "_type": "Phase",
+              "name": "Universal Phase",
+              "round": 1,
+              "length": 240,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "af7bfbaf-1ff0-4cde-a456-d0f318c67d13",
+              "_type": "Phase",
+              "name": "Societal Phase",
+              "round": 1,
+              "length": 600,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "7a21e6f0-93d7-4d5f-9519-29e265e656ee",
+              "_type": "Phase",
+              "name": "Galactic Phase",
+              "round": 1,
+              "length": 600,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "6d25f850-bc9f-47d1-ae3c-d36bb6a7934a",
+              "_type": "Phase",
+              "name": "Individual Phase",
+              "round": 1,
+              "length": 500,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "64db832b-4d54-4106-8c5e-39410eec4208",
+              "_type": "Phase",
+              "name": "Universal Phase",
+              "round": 2,
+              "length": 240,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "001b249b-7128-470e-8f7e-614f6f43df58",
+              "_type": "Phase",
+              "name": "Societal Phase",
+              "round": 2,
+              "length": 600,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "18fe0dbb-17ba-4e58-b714-16b3759bb49f",
+              "_type": "Phase",
+              "name": "Galactic Phase",
+              "round": 2,
+              "length": 600,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "b7802fa5-faae-4018-9cbb-322375baf314",
+              "_type": "Phase",
+              "name": "Individual Phase",
+              "round": 2,
+              "length": 500,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "c5af0c46-2bfa-473a-8b3f-2c4e0293443b",
+              "_type": "Phase",
+              "name": "Universal Phase",
+              "round": 3,
+              "length": 240,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "e02a60ac-83ba-4957-84e5-18b400cb3c68",
+              "_type": "Phase",
+              "name": "Societal Phase",
+              "round": 3,
+              "length": 600,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "23e69b59-4149-4541-b272-6267237740fb",
+              "_type": "Phase",
+              "name": "Galactic Phase",
+              "round": 3,
+              "length": 600,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "0fc76269-8480-4f64-a5e5-97f3b96df0f2",
+              "_type": "Phase",
+              "name": "Generational Phase",
+              "round": 3,
+              "length": 500,
+              "timeElapsed": 0
+            },
+            {
+              "_id": "dd32f677-f974-4de5-a639-b9323051d297",
+              "_type": "Phase",
+              "name": "Conclusion Phase",
+              "round": 3,
+              "length": 500,
+              "timeElapsed": 0
+            }
+          ],
+          "currentRound": 0,
+          "rounds": [
+            {
+              "_id": "505541c8-d490-46b2-ad1d-7b14a40b459a",
+              "_type": "Round",
+              "number": "0",
+              "phases": [
+                {
+                  "_id": "e7101ef0-d756-412d-a91c-81c8853cfea8",
+                  "_type": "Phase",
+                  "name": "Universal Phase",
+                  "length": "1970-01-01T00:00:00.240Z",
+                  "timeElapsed": 0
+                },
+                {
+                  "_id": "7ddf3d59-ca58-4d84-b510-3735462e6914",
+                  "_type": "Phase",
+                  "name": "Societal Phase",
+                  "length": 0,
+                  "timeElapsed": 0
+                },
+                {
+                  "_id": "980ac503-4d56-4b56-8cd1-738db30bb65d",
+                  "_type": "Phase",
+                  "name": "Galactic Phase",
+                  "length": 0,
+                  "timeElapsed": 0
+                },
+                {
+                  "_id": "878bbfa1-f70e-4de9-8dfe-6a1080fa7337",
+                  "_type": "Phase",
+                  "name": "Individual Phase",
+                  "length": "1970-01-01T00:00:00.500Z",
+                  "timeElapsed": 0
+                }
+              ]
+            },
+            {
+              "_id": "0af2500b-891f-4c7e-abdc-6efbf5423b8a",
+              "_type": "Round",
+              "number": "1",
+              "phases": [
+                {
+                  "_id": "d830c7d0-b340-49e8-a0e3-847cabc8d222",
+                  "_type": "Phase",
+                  "name": "Universal Phase",
+                  "length": "1970-01-01T00:00:00.240Z",
+                  "timeElapsed": 0
+                },
+                {
+                  "_id": "930dfc97-0bff-4423-b8be-75ef5dba77b5",
+                  "_type": "Phase",
+                  "name": "Societal Phase",
+                  "length": 0,
+                  "timeElapsed": 0
+                },
+                {
+                  "_id": "e3d0b75b-1972-4cf3-a9a2-ad0f417f3cab",
+                  "_type": "Phase",
+                  "name": "Galactic Phase",
+                  "length": 0,
+                  "timeElapsed": 0
+                },
+                {
+                  "_id": "61b0564c-fb1c-4512-ab87-6afaea08921d",
+                  "_type": "Phase",
+                  "name": "Individual Phase",
+                  "length": "1970-01-01T00:00:00.500Z",
+                  "timeElapsed": 0
+                }
+              ]
+            },
+            {
+              "_id": "7187faba-847b-42f1-993a-1504cee1ce3b",
+              "_type": "Round",
+              "number": "2",
+              "phases": [
+                {
+                  "_id": "92fae012-837a-4508-b651-2d9619d9b3c9",
+                  "_type": "Phase",
+                  "name": "Universal Phase",
+                  "length": "1970-01-01T00:00:00.240Z",
+                  "timeElapsed": 0
+                },
+                {
+                  "_id": "24a25e6a-31b1-46be-bcbb-81460b78fb84",
+                  "_type": "Phase",
+                  "name": "Societal Phase",
+                  "length": 0,
+                  "timeElapsed": 0
+                },
+                {
+                  "_id": "ee31daa9-dd13-492b-86d3-4a0ecd47a7f5",
+                  "_type": "Phase",
+                  "name": "Galactic Phase",
+                  "length": 0,
+                  "timeElapsed": 0
+                },
+                {
+                  "_id": "aaab1e5e-6fcb-4d16-aa94-6657cfaec931",
+                  "_type": "Phase",
+                  "name": "Individual Phase",
+                  "length": "1970-01-01T00:00:00.500Z",
+                  "timeElapsed": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "players": [
+        {
+          "_id": "27ff9717-6fbc-4161-88fa-3073ea3a7e81",
+          "_type": "Player",
+          "name": "Ving Rhames",
+          "community": {
+            "_id": "f5938d8d-c9ad-406e-8e7c-079a13ffb727",
+            "_type": "Community",
+            "resources": []
+          }
+        },
+        {
+          "_id": "3e6c8eb1-9bd9-46fa-a2a2-cbe5378e0a59",
+          "_type": "Player",
+          "name": "Michael Caine",
+          "community": {
+            "_id": "7f7277ec-f41e-4c2d-93b0-1ab7d19b17b2",
+            "_type": "Community",
+            "resources": []
+          }
+        }
+      ]
+    },
+    {
+      "_id": "7a1f0f44-0f95-48e8-8cc8-472f1fbfadd5",
+      "_type": "Game",
+      "name": "August 2024 Playtest",
+      "date": "2024-11-15T01:22:49.411Z",
+      "sessions": [
+        {
+          "_id": "7c984a46-4383-4a77-876d-cdc7ef53f894",
+          "_type": "Session",
+          "date": "2024-11-15T01:22:49.411Z",
+          "societies": [],
+          "phases": [],
+          "currentRound": 0,
+          "rounds": []
+        }
+      ],
+      "players": []
+    },
+    {
+      "_id": "facf8ab5-5fcf-4182-b95a-51985d9180cf",
+      "_type": "Game",
+      "name": "September 2024 Playtest",
+      "date": "2024-11-15T01:22:53.926Z",
+      "sessions": [
+        {
+          "_id": "68219804-1069-44a9-b64a-cf7e6f001518",
+          "_type": "Session",
+          "date": "2024-11-15T01:22:53.926Z",
+          "societies": [],
+          "phases": [],
+          "currentRound": 0,
+          "rounds": []
+        }
+      ],
+      "players": []
+    },
+    {
+      "_id": "5d52dcfc-2c9a-426d-b5b8-5c8d89c6eaef",
+      "_type": "Game",
+      "name": "October 2024 Playtest",
+      "date": "2024-11-15T01:23:04.676Z",
+      "sessions": [
+        {
+          "_id": "25a346a4-0f3a-49cc-89f0-15af90fc3cdd",
+          "_type": "Session",
+          "date": "2024-11-15T01:23:04.676Z",
+          "societies": [],
+          "phases": [],
+          "currentRound": 0,
+          "rounds": []
+        }
+      ],
+      "players": []
+    },
+    {
+      "_id": "804812cd-e4c8-403c-8f1f-c0d1040a962a",
+      "_type": "Game",
+      "name": "November 2024 Playtest",
+      "date": "2024-11-15T01:23:22.863Z",
+      "sessions": [
+        {
+          "_id": "2d51012b-7cc6-4e30-a6ac-48c237ceb654",
+          "_type": "Session",
+          "date": "2024-11-15T01:23:22.863Z",
+          "societies": [],
+          "phases": [],
+          "currentRound": 0,
+          "rounds": []
+        }
+      ],
+      "players": []
+    }
+  ]
+}

@@ -6,26 +6,28 @@ import Game from "../models/game.js";
 import Phase from "../models/phase.js";
 import Player from "../models/player.js";
 import Resource from "../models/resource.js";
-import Round from "../models/round.js";
 import Session from "../models/session.js";
 import Society from "../models/society.js";
 
-const types = {Game, Session, Player, Society, Resource, Community, Round, Phase};
+const types = {Game, Session, Player, Society, Resource, Community, Phase};
+
+const databases = {};
 
 export default class Database {
-  static instance;
+  filename;
 
   data = {
     games: []
   };
 
-  constructor() {
+  constructor( filename ) {
+    this.filename = filename
     this.read();
   }
 
   read() {
     try {
-      const text = fs.readFileSync("./data/data.json");
+      const text = fs.readFileSync(`./data/${this.filename}`);
       this.data = Database.fromJSON( text.toString() );
     } catch(e) {
       if( e.code === "ENOENT") {
@@ -39,7 +41,7 @@ export default class Database {
 
   write() {
     try {
-      fs.writeFileSync("./data/data.json", JSON.stringify(this.data, null, 2));
+      fs.writeFileSync(`./data/${this.filename}`, JSON.stringify(this.data, null, 2));
     } catch(e) {
       if( e.code === "ENOENT") {
         fs.mkdirSync("./data");
@@ -55,11 +57,12 @@ export default class Database {
     this.write();
   }
 
-  static get Instance() {
-    if(!Database.instance)
-      Database.instance = new Database();
 
-    return Database.instance;
+  static open( filename ) {
+    if( !databases[filename] )
+      databases[ filename ] = new Database(filename);
+
+    return databases[filename];
   }
 
   static fromJSON(json) {

@@ -1,11 +1,11 @@
 :root {
   --color-mid: #dcdcdc;
+  --color-text: black;
+  --color-bg: white;
+  --color-text-active: white;
+  --color-bg-active: black;
 }
 
-h2 {
-  font-weight: normal;
-  font-size: 48px;
-}
 
 body {
   padding: 0px;
@@ -16,126 +16,174 @@ body {
 
 .app-content {
   font-family: 'Neusa';
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 1;
   text-transform: uppercase;
   inset: 0px;
   position: absolute;
+  color: var(--color-text);
 }
 
-.app-page {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  height: 100%;
+p {
+  font-size: 1rem;
+  color: inherit;
 }
+
+
+h1 {
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+time {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+
+nav {
+  ul { 
+    padding: 0px 
+  }
+  li {
+    list-style: none; 
+    margin: 0px;
+  }
+}
+
+.content {
+  padding: 1rem;
+}
+
+[class*="grid"] {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  display: block;
+  --color-bg: var(--color-mid);
+  background: var(--color-bg);
+  border: 1px solid var(--color-bg);
+  color: var(--color-text);
+  padding: 1rem;
+}
+
+a.card {
+  text-decoration: none;
+  &:hover {
+    border: 1px solid var(--color-text);
+  }
+}
+
+
+.card-fancy {
+  border-bottom-left-radius: .5rem;
+  border-top-right-radius: 3rem;
+}
+
+.stack > * + *{
+  margin-top: 1rem;
+}
+
+.stack-tight > * + *{
+  margin-top: .5rem;
+}
+
+.stack-loose > * + *{
+  margin-top: 2rem;
+}
+
 
 .toolbar {
-  background: black;
-  height: 100%;
+  background-color: var(--color-bg);
+  width: 4rem;
+
+  li {
+    border-block-end: 1px solid white;
+  }
+
+  a {
+    display: block;
+  }
+
+  svg, img {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 .status-bar {
-  background: black;
-  height: 80px;
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem;
+  border-inline-start: 1px solid var(--color-text);
+  border-block-end: 1px solid var(--color-text);
 }
 
-.icon-bar {
-  padding: 0px;
-  margin: 0px;
+.frame-toolbar {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
 }
 
-.icon-bar__button {
-  list-style: none;
-  padding: 0px;
-  width: 100%;
-  border-bottom: 1px solid white;
-}
-
-.icon-bar__button img {
+[class*="frame"] {
   width: 100%;
   height: 100%;
 }
 
+.layout-column {
+  display: flex;
+  flex-direction: column;
+}
 
-.game-card {
-  display: block;
-  border: 1px solid black;
-  padding: 16px;
+.layout-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.color-contrast {
+  --color-bg: black;
+  --color-text: white;
+}
+
+.icon {
+  fill: currentColor;
+  height: 4rem;
+  width: 4rem;
+}
+
+button {
+  text-transform: inherit;
+  font-size: inherit;
+  background: var(--color-bg-active);
+  color: var(--color-text-active);
+  padding: .5rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  color: black;
-  text-decoration: none;
-  margin-block-end: 16px;
-  &:hover {
-    background: rgba(0,0,0, .2);
-  }
-}
-
-.main-content {
-  padding: 16px;
-}
-
-.society-card {
-  background: var(--color-mid);
-  padding: 16px;
-}
-
-.button {
-  padding: 16px;
-  background: black;
-  color: white;
-  cursor: pointer;
-  display: block;
+  border: 1px solid var(--color-bg-active);
 
   &:hover {
-    background: var(--color-mid);
-  }
-}
-
-.session-overview {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.session-overview__timeline {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
-}
-
-.session-overview__phase {
-  flex: 1 1 auto;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 48px;
-  padding: 16px;
-  box-sizing: border-box;
-
-  &:first-child {
-    background: black;
-    color: white;
-  }
-
-  * {
-    margin: 0px;
-  }
-
-  *:first-child {
-    font-weight: bold;
-  }
-
-  h4 {
-    font-weight: normal;
-    font-size: 32px;
-  }
-
-  h4 + p {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  *:last-child {
-    font-weight: bold;
-    font-size: 48px;
+  --color-bg-active: green;
   }
 }

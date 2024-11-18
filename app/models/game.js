@@ -7,8 +7,8 @@ export default class Game extends Model {
   sessions = [];
   players = [];
 
-  constructor() {
+  constructor(name) {
     super();
-    this.sessions.push(new Session());
+    this.name = name;
   }
 }

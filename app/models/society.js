@@ -10,4 +10,5 @@ export default class Society extends Model {
     super();
     this.name = name;
   }
+
 }

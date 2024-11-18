@@ -7,7 +7,7 @@ export default function GameOverview (game) {
 
       <h2>Sessions</h2>
       <ul class="game-overview__section">
-        ${game.sessions.map( (session) => `<li><a href="/game/${game._id}/session/${session._id}">${session.date.toDateString() }</a></li>`)}
+        ${game.sessions.map( (session) => `<li><a href="/game/${game._id}/session/${session._id}">bleh</a></li>`)}
       </ul>
       <hr/>
       <h2>Players</h2>
