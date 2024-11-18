@@ -1,13 +1,13 @@
 import getPort, { portNumbers } from "get-port";
-import Realtime from "./app/realtime.js";
-import Frontend from "./app/frontend.js";
+// import Realtime from "./app/realtime.js";
+import Server from "./app/server.js";
 
 
-const realtimePort = await getPort({ port: portNumbers(3000, 3100) });
-const realtime = new Realtime();
+// const realtimePort = await getPort({ port: portNumbers(3000, 3100) });
+// const realtime = new Realtime();
 
-const frontendPort = await getPort({ port: portNumbers(4000, 4100) });
-const frontend = new Frontend();
+const serverPort = await getPort({ port: portNumbers(4000, 4100) });
+const server = new Server();
 
-realtime.start(realtimePort);
-frontend.start(frontendPort);
+// realtime.start(realtimePort);
+server.start(serverPort);

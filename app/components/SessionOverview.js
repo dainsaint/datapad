@@ -6,7 +6,7 @@ export default function SessionOverview (session) {
   
 
   return `
-    <main class="content grid-two" data=id="${session._id}">
+    <main class="content grid-two">
       <div class="stack">
         <h1>Timeline</h1>
         <div class="grid-three">
@@ -31,11 +31,16 @@ export default function SessionOverview (session) {
 function PhaseCard( phase, i ) { 
   const headings = ["Now", "Next", "Then"];
   return `
-    <div class="card ${ i == 0 && 'card-fancy color-contrast'}">
-      <p>${ headings[i] }</p>
-      <h2>${ phase.name }</h2>
-      <p>Round ${ phase.round + 1 }</p>
-      <time>${ secondsToTime( phase.timeRemaining ) }</time>
+    <div class="card ${i == 0 && "card-fancy color-contrast"} stack">
+      <div class="stack-tight">
+        <p class="annotation">${headings[i]}</p>
+        <div>
+        <h2>${phase.name}</h2>
+        <p class="subtitle">Round ${phase.round + 1}</p>
+        </div>
+      </div>
+
+      <time datetime="${phase.timeRemaining}s">${secondsToTime(phase.timeRemaining)}</time>
     </div>
-  `
+  `;
 }

@@ -3,9 +3,9 @@ import Socket from "./socket.js";
 let socket;
 
 const init = () => {
-  socket = new Socket("ws://localhost:3000");
-  socket.onData = onData;
-  socket.connect();
+  // socket = new Socket("ws://localhost:3000");
+  // socket.onData = onData;
+  // socket.connect();
 
   const button = document.querySelector("#send");
   button?.addEventListener("click", () => {
