@@ -19,9 +19,7 @@ export default function SessionOverview (session) {
         <div class="stack">
           ${session.societies.map(SocietyCard).join("\n")}
 
-        <button>
-          + Create a new society
-        </button>
+        <button>+ Create a new society</button>
 
         </div>
       </div>
