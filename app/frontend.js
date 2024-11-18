@@ -20,7 +20,7 @@ export default class Frontend {
     const app = express();
     const database = Database.open("data.json");
 
-    // populateDummyData();
+    populateDummyData();
 
     app.use( express.static( 'app/static') );
 

@@ -4,9 +4,6 @@ export default class Community extends Model {
   name = "New Community";
   resources = [];
 
-  player;
-  society;
-
   constructor(name) {
     super();
     this.name = name;
