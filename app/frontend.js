@@ -11,11 +11,16 @@ import SessionOverview from "./components/SessionOverview.js";
 import GameMaster from "./components/GameMaster.js";
 import Home from "./components/Home.js";
 
+import { populateDummyData } from "./populate.js";
+
+
 export default class Frontend {
 
   start(port) {
     const app = express();
     const database = Database.open("data.json");
+
+    // populateDummyData();
 
     app.use( express.static( 'app/static') );
 
