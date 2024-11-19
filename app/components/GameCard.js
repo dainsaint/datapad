@@ -5,7 +5,7 @@ export default function GameCard (game) {
     <a 
       class="card" 
       href="/game/${game._id}"
-      hx-get="/game/ui/card/${game._id}"
+      hx-get="/ui/game/card/${game._id}"
       hx-swap="outerHTML"
       hx-trigger="every 5s"
     >

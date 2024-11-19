@@ -12,6 +12,7 @@ import Home from "../components/Home.js";
 
 import { populateDummyData } from "../populate.js";
 import LayoutToolbar from "../components/LayoutToolbar.js";
+import ModalCreateGame from "../components/ModalCreateGame.js";
 
 
 const htmlRouter = express.Router();
@@ -45,16 +46,7 @@ htmlRouter.get("/game/:id", (req, res) => {
   res.send(Layout(content));
 });
 
-htmlRouter.get("/game/ui/card/:id", (req, res) => {
-  const game = db.data.games.find((g) => g._id == req.params.id);
-  let response = "Couldn't find it :(";
 
-  if (game) {
-    response = GameCard(game);
-  }
-
-  res.send(response);
-});
 
 htmlRouter.get("/session/:game_id/:session_id", (req, res) => {
   const { game_id, session_id } = req.params;
@@ -81,6 +73,22 @@ htmlRouter.get("/gm", (req, res) => {
   if (!session) return res.send(Layout(content));
 
   res.send( Layout(GameMaster(session)) );
+});
+
+
+htmlRouter.get("/ui/game/card/:id", (req, res) => {
+  const game = db.data.games.find((g) => g._id == req.params.id);
+  let response = "Couldn't find it :(";
+
+  if (game) {
+    response = GameCard(game);
+  }
+
+  res.send(response);
+});
+
+htmlRouter.get("/ui/game/create", (req, res) => {
+  res.send( ModalCreateGame() );
 });
 
 

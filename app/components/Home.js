@@ -6,7 +6,13 @@ export default function Home (games, session) {
     <main class="content stack">
       <h1>Games</h1>
       ${games.map(GameCard).join("\n")}
-      <button>+ Create a new game</button>
+      <button 
+        hx-get="/ui/game/create"
+        hx-target="#app"
+        hx-swap="beforeend"
+      >
+        + Create a new game
+      </button>
     </main>
   `;
 
