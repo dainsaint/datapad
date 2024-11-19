@@ -11,8 +11,8 @@ import GameMaster from "../components/GameMaster.js";
 import Home from "../components/Home.js";
 
 import { populateDummyData } from "../populate.js";
-import LayoutToolbar from "../components/LayoutToolbar.js";
-import ModalCreateGame from "../components/ModalCreateGame.js";
+import DialogCreateGame from "../components/DialogCreateGame.js";
+import DialogCreateSociety from "../components/DialogCreateSociety.js";
 
 
 const htmlRouter = express.Router();
@@ -88,7 +88,13 @@ htmlRouter.get("/ui/game/card/:id", (req, res) => {
 });
 
 htmlRouter.get("/ui/game/create", (req, res) => {
-  res.send( ModalCreateGame() );
+  res.send( DialogCreateGame() );
+});
+
+
+
+htmlRouter.get("/ui/society/create", (req, res) => {
+  res.send( DialogCreateSociety());
 });
 
 

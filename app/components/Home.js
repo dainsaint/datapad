@@ -14,7 +14,10 @@ export default function Home (games, session) {
         + Create a new game
       </button>
     </main>
+
   `;
+
+
 
   return LayoutToolbar(session, content);
 }

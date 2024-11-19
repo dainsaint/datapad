@@ -24,14 +24,26 @@ body {
   color: var(--color-text);
 }
 
-p, input, label {
+p, input, select, label {
   font-size: 1.5rem;
   color: inherit;
 }
 
-input {
+input, select {
+  display: block;
   padding: .5rem;
   border: 1px solid var(--color-text);
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  & + input, & + select {
+    margin-top: .25rem !important;
+  }
 }
 
 
@@ -228,20 +240,34 @@ button {
   height: 100%;
 }
 
-.layout-modal {
-  position: fixed;
-  
-  background: rgba(0,0,0,.5);
-  inset: 0px;
-  padding: 2rem;
-  display: flex;
-  align-items: start;
-  justify-content: center;
+dialog {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--color-bg);
+  width: 650px;
+  border: none;
+  margin-top: 1rem;
+  translate: 0 calc( -100% - 2rem );
+  transition: translate .2s;
 
-  .layout-modal-content {
-    background: var(--color-bg);
-    width: 650px;
-    max-width: 100%;
+  &[open] {
+    opacity: 1;
+    translate: 0 0;
+    pointer-events: revert;
   }
 
+  &::backdrop {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &[open]::backdrop {
+    animation: fadeIn 0.2s forwards;
+  }
+}
+
+@keyframes fadeIn{
+  0%{ opacity: 0 }
+  100%{ opacity: 1 }
 }
