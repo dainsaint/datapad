@@ -10,7 +10,7 @@ export default function SocietyCard (society) {
       ${ Icon("mighty") }
       <div>
         <h2>${society.name}</h2>
-        <p>${society.archetype}</p>
+        <p class="subtitle">${society.archetype}</p>
       </div>
     </div>
   `;

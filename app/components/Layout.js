@@ -15,7 +15,7 @@ export default function Layout(content) {
     </head>
 
     <body>
-      <section class="app-content">
+      <section id="app" class="app-content">
         ${content}
       </section>
     </body>
