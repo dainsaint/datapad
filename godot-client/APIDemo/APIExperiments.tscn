@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwwgut1tkr37s"]
+
+[ext_resource type="Script" path="res://APIDemo/api_experiments.gd" id="1_na002"]
+[ext_resource type="Script" path="res://APIDemo/sse.gd" id="2_iev5l"]
+
+[node name="APIExperiments" type="HTTPRequest"]
+script = ExtResource("1_na002")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="SSE" type="Node" parent="."]
+script = ExtResource("2_iev5l")

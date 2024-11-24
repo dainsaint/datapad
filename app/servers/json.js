@@ -4,6 +4,7 @@ import Database from "../core/database.js";
 const jsonRouter = express.Router();
 const database = Database.open("data.json");
 
+const clients = new Set();
 
 jsonRouter.use((req, res, next) => {
   res.type("json");
@@ -48,7 +49,38 @@ jsonRouter.get("/society", (req, res) => {
 
 
 
+jsonRouter.get('/events', (req, res) => {
+    // Set headers for SSE
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
 
+    console.log("new SSE attempt...")
+    // Send initial connection message
+    res.write('data: Connected to event stream\n\n');
+
+    // Add client to Set
+    clients.add(res);
+
+    // Handle client disconnect
+    req.on('close', () => {
+        clients.delete(res);
+    });
+});
+
+
+// Example endpoint to trigger events
+jsonRouter.get('/trigger-event', express.json(), (req, res) => {
+    // const eventData = req.body;
+    const eventData =  "woah cool new thing!";
+    
+    // Send event to all connected clients
+    clients.forEach(client => {
+        client.write(`data: ${JSON.stringify(eventData)}\n\n`);
+    });
+    
+    res.status(200).json({ message: 'Event sent to all clients' });
+});
 jsonRouter.use((err, req, res, next)=> {
   res.status(err.status || 400).json()
 })
