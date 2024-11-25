@@ -1,11 +1,17 @@
-import { nanoid } from "nanoid";
+import crypto from "node:crypto";
+
+const codex = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+
+const generateId = (length) => {
+  return new Array(length).fill(0).map((_, i) => codex[crypto.randomInt(i == 0 ? 52 : 64)]).join("");
+}
 
 export default class Model {
-  _id = "";
+  _id = ""; 
   _type = "Model";
 
   constructor() {
-    this._id = nanoid(8);
+    this._id = generateId(8);
     this._type = this.constructor.name;
   }
 
