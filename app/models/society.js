@@ -11,4 +11,7 @@ export default class Society extends Model {
     this.name = name;
   }
 
+  get resources() {
+    return this.communities.map( community => community.resources ).flat();
+  }
 }

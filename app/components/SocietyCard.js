@@ -1,13 +1,10 @@
 import Icon from "./Icon.js";
-
-const iconForArchetype = {
-  "the mighty": "mighty"
-}
+import { iconForArchetype } from "../core/utils.js";
 
 export default function SocietyCard (society) {
   return `
     <div class="card layout-row" data-id="${society._id}">
-      ${ Icon("mighty") }
+      ${ Icon( iconForArchetype(society.archetype) ) }
       <div>
         <h2>${society.name}</h2>
         <p class="subtitle">${society.archetype}</p>

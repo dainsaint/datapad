@@ -1,6 +1,6 @@
 import { secondsToTime } from "../core/utils.js";
 export default function StatusBar ( session ) {
-  const activePhase = session?.phases.at(0) || {
+  const activePhase = session?.phases.at( session.currentRound ) || {
     timeRemaining: 0,
     name: "None",
     round: 0
@@ -13,6 +13,7 @@ export default function StatusBar ( session ) {
       <h2>${activePhase.name}</h2>
       <p class="subtitle">Round ${ activePhase.round + 1}</p>
     </div>
+    <p>${ session.game.name }</p>
   </nav>
   `;
 }

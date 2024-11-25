@@ -3,6 +3,7 @@ import Model from "../core/model.js";
 export default class Community extends Model {
   name = "New Community";
   resources = [];
+  voice = "people"
 
   constructor(name) {
     super();

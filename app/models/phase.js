@@ -5,6 +5,8 @@ export default class Phase extends Model {
   round = 0;
   length = 0;
   timeElapsed = 0;
+  timeStarted = new Date();
+  timeCompleted = new Date();
 
   constructor(name, round, length) {
     super();

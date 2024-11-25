@@ -38,20 +38,19 @@ export function populateDummyData() {
       new Phase("Conclusion Phase", 3, 500)
     );
 
-    data.sessions = {};
-    data.sessions[game._id] ??= [];
-    data.sessions[game._id].push(session);
+    game.sessions.push( session.toReference('date') );
+    session.game = game.toReference('name')
 
-    game.sessions.push(session.toReference());
+    data.sessions = [];
+    data.sessions.push( session );
 
     const society = new Society("The Willow Whompers");
     society.archetype = "The Mighty";
     session.societies.push(society);
 
     data.societies = {};
-    data.societies[game._id] ??= {};
-    data.societies[game._id][session._id] ??= [];
-    data.societies[game._id][session._id].push(society);
+    data.societies[session._id] ??= [];
+    data.societies[session._id].push(society);
 
     const community = new Community("Venerable Elders");
     society.communities.push(community);
@@ -78,8 +77,12 @@ export function populateDummyData() {
     session.players.push(player.toReference("name"));
 
     data.players = {};
-    data.players[game._id] ??= [];
-    data.players[game._id].push(player);
+    data.players[session._id] ??= [];
+    data.players[session._id].push(player);
+
+    data.active = {
+      session
+    }
   });
 
 }

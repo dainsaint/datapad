@@ -1,4 +1,4 @@
-export default function Layout(content) {
+export default function App(content) {
   if( Array.isArray(content) )
     content = content.join("\n");
 

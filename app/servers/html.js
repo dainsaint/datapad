@@ -3,30 +3,67 @@ import Database from "../core/database.js";
 
 import Game from "../models/game.js";
 
+import App from "../components/App.js";
 import GameCard from "../components/GameCard.js";
 import GameOverview from "../components/GameOverview.js";
-import Layout from "../components/Layout.js";
-import SessionOverview from "../components/SessionOverview.js";
 import GameMaster from "../components/GameMaster.js";
 import Home from "../components/Home.js";
 
 import { populateDummyData } from "../populate.js";
 import DialogCreateGame from "../components/DialogCreateGame.js";
 import DialogCreateSociety from "../components/DialogCreateSociety.js";
+import Society from "../models/society.js";
+import Facilitator from "../components/Facilitator.js";
+import Script from "../components/Script.js";
 
 
 const htmlRouter = express.Router();
 const db = Database.open("data.json");
 
 
+// PAGES
+/////////////////////////////////////
+
 htmlRouter.get("/", (req, res) => {
-  const game = db.data.games.at(0);
-  const currentSession = db.data.sessions[game._id].at(0);
-
-  if (!currentSession) return res.send(Layout(""));
-
-  res.send(Layout(Home(db.data.games, currentSession)));
+  try {
+    const activeSession = db.data.active.session;
+    res.send(App(Home(db.data.games, activeSession)));
+  } catch(e) {
+    res.sendStatus(404); 
+  }
 });
+
+htmlRouter.get("/gm", (req, res) => {
+  try {
+    const session = db.data.active.session;
+    res.send(App(GameMaster(session)));
+  } catch (e) {
+    res.sendStatus(404); 
+  }
+});
+
+htmlRouter.get("/facilitator", (req, res) => {
+  try {
+    const session = db.data.active.session
+    res.send(App(Facilitator(session)));
+  } catch (e) {
+    res.sendStatus(404); 
+  }
+});
+
+htmlRouter.get("/script", (req, res) => {
+  try {
+    const session = db.data.active.session;
+    res.send(App(Script(session)));
+  } catch (e) {
+    res.sendStatus(404);
+  }
+});
+
+
+
+// GAME
+/////////////////////////////////////
 
 htmlRouter.post("/game", (req, res) => {
   db.update(({ games }) => {
@@ -34,57 +71,53 @@ htmlRouter.post("/game", (req, res) => {
   });
 });
 
-htmlRouter.get("/game/:id", (req, res) => {
-  let content = "";
-
-  const game = db.data.games.find((g) => g._id == req.params.id);
-
-  if (game) {
-    content = GameOverview(game);
+htmlRouter.get("/game/:id", (req, res, next) => {
+  try {
+    const game = db.data.games.find((g) => g._id == req.params.id);
+    res.send(App(GameOverview(game)));
+  } catch (e) {
+    res.sendStatus(404);
   }
-
-  res.send(Layout(content));
 });
 
 
+// SOCIETY
+/////////////////////////////////////
 
-htmlRouter.get("/session/:game_id/:session_id", (req, res) => {
-  const { game_id, session_id } = req.params;
+htmlRouter.post("/society", (req, res) => {
+  const{ session_id, name, archetype } = req.body;
 
-  const session = db.data.sessions?.[game_id]?.find(
-    (session) => session._id == session_id
-  );
+  db.update(data => {
+    try {
+      //yikes this ain't it
+      const session = db.data.sessions.find((session) => session._id == session_id);
+      
+      const society = new Society(name);
+      society.archetype = archetype;
 
-  if (!session) return res.send(Layout());
+      session.societies.push( society );
+      data.societies[session._id].push( society );
+      res.sendStatus(200);
 
-  res.send(Layout(SessionOverview(session)));
+    } catch(e) {
+      console.log( e );
+      res.sendStatus(400);
+    }
+  });
+
 });
 
-htmlRouter.get("/gm", (req, res) => {
-  let content = "";
 
-  //TODO: Logic for figuring out what the active/current game session is
-  const game = db.data.games.at(0);
-
-  if (!game) return res.send(Layout(content));
-
-  const session = db.data.sessions[game._id].at(0);
-
-  if (!session) return res.send(Layout(content));
-
-  res.send( Layout(GameMaster(session)) );
-});
-
+// UI
+/////////////////////////////////////
 
 htmlRouter.get("/ui/game/card/:id", (req, res) => {
-  const game = db.data.games.find((g) => g._id == req.params.id);
-  let response = "Couldn't find it :(";
-
-  if (game) {
-    response = GameCard(game);
+  try {
+    const game = db.data.games.find((g) => g._id == req.params.id);
+    res.send( GameCard(game) );
+  } catch(e) {
+    res.status(400).send("");
   }
-
-  res.send(response);
 });
 
 htmlRouter.get("/ui/game/create", (req, res) => {
@@ -92,9 +125,15 @@ htmlRouter.get("/ui/game/create", (req, res) => {
 });
 
 
-
 htmlRouter.get("/ui/society/create", (req, res) => {
-  res.send( DialogCreateSociety());
+  try {
+    //TODO: Logic for figuring out what the active/current game session is
+    const game = db.data.games.at(0);
+    const session = game.sessions.at(0);
+    res.send(DialogCreateSociety(game, session));
+  } catch (e) {
+    res.status(400).send("");
+  }
 });
 
 
