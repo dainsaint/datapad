@@ -55,9 +55,13 @@ export function populateDummyData() {
     const community = new Community("Venerable Elders");
     society.communities.push(community);
 
+    const community2 = new Community("Disaffected Youth");
+    society.communities.push(community2);
+
     data.communities = {};
-    data.communities[society._id] ??= [];
-    data.communities[society._id].push(community);
+    data.communities[session._id] ??= [];
+    data.communities[session._id].push(community);
+    data.communities[session._id].push(community2);
 
     const resource1 = new Resource("Green Sludge");
     const resource2 = new Resource("Amazing Suspenders");
@@ -67,10 +71,10 @@ export function populateDummyData() {
     community.resources.push(resource3);
 
     data.resources = {};
-    data.resources[community._id] ??= [];
-    data.resources[community._id].push(resource1);
-    data.resources[community._id].push(resource2);
-    data.resources[community._id].push(resource3);
+    data.resources[session._id] ??= [];
+    data.resources[session._id].push(resource1);
+    data.resources[session._id].push(resource2);
+    data.resources[session._id].push(resource3);
 
     const player = new Player("Ving Rhames");
     game.players.push(player.toReference("name"));

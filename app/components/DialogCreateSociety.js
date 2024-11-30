@@ -1,13 +1,10 @@
-export default function DialogCreateSociety(game, session) {
+export default function DialogCreateSociety(session) {
   return `
-    <dialog id="dialog-create-society" 
-      hx-on:htmx:load="this.showModal()"
-    >
+    <dialog id="dialog-create-society" hx-on:htmx:load="this.showModal()" >
       <h1>Create a new society</h1>
       <p class="text">Enter a name for this new society, and select its archetype.</p>
 
-      <form class="stack" action="/society" method="post">
-        <input type="hidden" name="game_id" value="${game._id}"/>
+      <form class="stack" hx-put="/society" hx-swap="none">
         <input type="hidden" name="session_id" value="${session._id}"/>
 
         <label for="name">Society Name</label>
@@ -32,4 +29,3 @@ export default function DialogCreateSociety(game, session) {
     </dialog>
   `;
 }
-

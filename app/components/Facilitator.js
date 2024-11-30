@@ -5,42 +5,32 @@ import { pluralize, iconForArchetype, map } from "../core/utils.js";
 
 const societyPanelId = ( society ) => `society-panel-${society?._id}`;
 
-export default function Facilitator (session) {
-  return LayoutToolbar(session, `
+export default function Facilitator (session, currentSociety) {
+  return LayoutToolbar( session, `
     <nav class="toolbar" style="background: var(--color-dark)">
       <ul class="layout-row">
-        ${ map( session.societies, SocietyToolbarLink ) }
+        ${map(session.societies, (society) =>
+          SocietyToolbarLink(society, society == currentSociety)
+        )}
       </ul>
     </nav>
-
-    ${ map( session.societies, SocietyPanel ) }
     
-    <script>
-      if(!window.location.hash) {
-        if(!localStorage.getItem("society-hash"))
-          localStorage.setItem("society-hash", "#society-panel-${societyPanelId( session.societies?.at(0))}");
-
-        window.location.hash = localStorage.getItem("society-hash");
-      }
-
-      document.querySelectorAll(".js-society-toolbar-link").forEach( link => {
-        link.onclick = () => localStorage.setItem("society-hash", link.getAttribute("href"))
-      })
-    </script>
-  `);
+    ${SocietyPanel(session, currentSociety)}
+  `
+  );
 }
 
-function SocietyToolbarLink(society) {
+function SocietyToolbarLink(society, isActive) {
   return `
     <li>
-      <a class="active-target js-society-toolbar-link" href="#${societyPanelId(society)}">${Icon(iconForArchetype(society.archetype))}</a>
+      <a hx-boost="true" class="${isActive ? 'active' : ''}" href="/facilitator/${society._id}">${Icon(iconForArchetype(society.archetype))}</a>
     </li>
   `;
 }
 
-function SocietyPanel( society ) {
+export function SocietyPanel( session, society ) {
   return `
-    <main id="${societyPanelId(society)}" class="content stack hidden target-visible">
+    <main id="${societyPanelId(society)}" class="content stack">
       <header>
         <h1>${society.name}</h1>
         <p class="subtitle">
@@ -53,30 +43,38 @@ function SocietyPanel( society ) {
       </header>
 
       <div class="grid-three">
-       ${map(society.communities, CommunityCard)}
+       ${map(society.communities, (community) => CommunityCard(session, community) )}
       </div>
     </main>
   `;
 }
 
-function CommunityCard( community ) {
+export function CommunityCard( session, community ) {
   return `
-     <div class="card stack">
-      <header>
-        <h2>${community.name}</h2>
-        <p class="subtitle">${community.voice}</h2>
-      </header>
-      <div class="grid-three">
-        ${ map( community.resources, ResourceCard) }
-      </div>
+    <div hx-get="/ui/community/card/${session._id}/${community._id}" hx-trigger="sse:resources, sse:societies">
+      <form id="community-card-${community._id}" class="card stack droppable" hx-post="/community/${community._id}/resources" hx-trigger="dropcomplete" hx-swap="none">
+        <header>
+          <h2>${community.name}</h2>
+          <p class="subtitle">${community.voice}</h2>
+        </header>
+
+        <div class="grid-three receivable">
+          ${ map( community.resources, ResourceCard) }
+        </div>
+
+        <input type="hidden" name="session_id" value="${session._id}"/>
+        <input type="hidden" name="ui" value="/ui/community/card/${session._id}/${community._id}"/>
+      </form>
     </div>
   `;
 }
 
-function ResourceCard( resource ) {
+export function ResourceCard( resource ) {
   return `
-    <div class="card color-contrast">
+    <div id="resource-card-${resource._id}" class="card color-contrast draggable" draggable="true" data-exhausted="${resource.isExhausted}">
       <h3>${resource.name}</h3>
+      <input type="hidden" name="resource_ids[]" value="${resource._id}"/>
     </div>
   `;
 }
+

@@ -5,7 +5,6 @@ import LayoutToolbar from "./LayoutToolbar.js";
 export default function GameMaster (session) {
   const phasesToDisplay = session.phases.slice(0,3);
   
-
   return LayoutToolbar(session, `
     <main class="content grid-two">
       <div class="stack">
@@ -17,26 +16,34 @@ export default function GameMaster (session) {
 
       <div class="stack">
         <h1>Society Overview</h1>
-        <div class="stack">
-          ${map(session.societies, SocietyCard)}
 
-        <button
-          hx-get="/ui/society/create"
+        ${SocietyCardList(session)}
+
+        <form 
+          hx-post="/ui/society/create"
           hx-target="#app"
-          hx-swap="beforeend"
-        >+ Create a new society</button>
-
-        </div>
+          hx-swap="beforeend">
+          <input type="hidden" name="session_id" value="${session._id}">
+          <button>+ Create a new society</button>
+        </form>
       </div>
     </main>
   `);
+}
+
+export function SocietyCardList(session) {
+  return `
+    <div id="society-card-list" class="stack" hx-get="/ui/society/list/${session._id}" hx-trigger="sse:societies">
+      ${map(session.societies, SocietyCard)}
+    </div>
+  `;
 }
 
 
 function PhaseCard( phase, i ) { 
   const headings = ["Now", "Next", "Then"];
   return `
-    <div class="card ${i == 0 && "card-fancy color-contrast"} stack">
+    <div class="card ${i == 0 ? 'card-fancy color-contrast' : 'card-transparent'} stack">
       <div class="stack-tight">
         <p class="annotation">${headings[i]}</p>
         <div>

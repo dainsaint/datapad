@@ -1,19 +1,19 @@
 {
   "games": [
     {
-      "_id": "fU3MlOIf",
+      "_id": "fr9Fft9u",
       "_type": "Game",
       "name": "Arch St. - July 2024",
-      "date": "2024-11-20T14:04:46.801Z",
+      "date": "2024-11-30T17:07:36.536Z",
       "sessions": [
         {
-          "_id": "LZBpTlvd",
-          "date": "2024-11-20T14:04:46.801Z"
+          "_id": "AEPtzBwX",
+          "date": "2024-11-30T17:07:36.536Z"
         }
       ],
       "players": [
         {
-          "_id": "TMxbn4PS",
+          "_id": "GQ5FA5RI",
           "name": "Ving Rhames"
         }
       ]
@@ -21,48 +21,48 @@
   ],
   "sessions": [
     {
-      "_id": "LZBpTlvd",
+      "_id": "AEPtzBwX",
       "_type": "Session",
-      "date": "2024-11-20T14:04:46.801Z",
+      "date": "2024-11-30T17:07:36.536Z",
       "game": {
-        "_id": "fU3MlOIf",
+        "_id": "fr9Fft9u",
         "name": "Arch St. - July 2024"
       },
       "players": [
         {
-          "_id": "TMxbn4PS",
+          "_id": "GQ5FA5RI",
           "name": "Ving Rhames"
         }
       ],
       "societies": [
         {
-          "_id": "YQE9yGor",
+          "_id": "XSHLeLP4",
           "_type": "Society",
           "name": "The Willow Whompers",
           "archetype": "The Mighty",
           "planet": "",
           "communities": [
             {
-              "_id": "tlZzDoId",
+              "_id": "jeeAW4nZ",
               "_type": "Community",
               "name": "Venerable Elders",
               "resources": [
                 {
-                  "_id": "nAuJOKiz",
+                  "_id": "aVQmKZF5",
                   "_type": "Resource",
                   "name": "Green Sludge",
                   "relationship": "",
                   "isExhausted": false
                 },
                 {
-                  "_id": "V2CyKnZA",
+                  "_id": "ZzU1Zjk7",
                   "_type": "Resource",
                   "name": "Amazing Suspenders",
                   "relationship": "",
                   "isExhausted": false
                 },
                 {
-                  "_id": "cO6AlRu6",
+                  "_id": "qtPrD-cG",
                   "_type": "Resource",
                   "name": "Big Rock",
                   "relationship": "",
@@ -70,241 +70,232 @@
                 }
               ],
               "voice": "people"
+            },
+            {
+              "_id": "CNb4JHc-",
+              "_type": "Community",
+              "name": "Disaffected Youth",
+              "resources": [],
+              "voice": "people"
             }
           ]
-        },
-        {
-          "_id": "I6nmml4I",
-          "_type": "Society",
-          "name": "The I'm So Pretties",
-          "archetype": "the aesthetic",
-          "planet": "",
-          "communities": []
-        },
-        {
-          "_id": "CVOBBY7v",
-          "_type": "Society",
-          "name": "Ten Thousand Islands",
-          "archetype": "the enterprise",
-          "planet": "",
-          "communities": []
         }
       ],
       "phases": [
         {
-          "_id": "bcalTo3X",
+          "_id": "hW4AmTkG",
           "_type": "Phase",
           "name": "Global Phase",
           "round": 0,
-          "length": "1970-01-01T00:00:01.200Z",
+          "length": 1200,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "Ikcnpp77",
+          "_id": "Eah5PxAH",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 0,
           "length": 240,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "MRLYkncp",
+          "_id": "DoawuFyD",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 0,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "rT5Q9Xe2",
+          "_id": "mRetJvJR",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 0,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "nSQj-DJY",
+          "_id": "ooBMcLZ3",
           "_type": "Phase",
           "name": "Individual Phase",
           "round": 0,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "N-GlOxyJ",
+          "_id": "jBDfPFjN",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 1,
           "length": 240,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "o40wXnrk",
+          "_id": "IBmMuVff",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 1,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "Q38I4pNQ",
+          "_id": "Ky9GwO0G",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 1,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "idqYB19J",
+          "_id": "A7ZmWUiX",
           "_type": "Phase",
           "name": "Individual Phase",
           "round": 1,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "jHS2b7GO",
+          "_id": "TL14tB1l",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 2,
           "length": 240,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "lDrHrZKK",
+          "_id": "MQdqy4X8",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 2,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "Jj5Oxk2B",
+          "_id": "C9HbSEGK",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 2,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "h9UVfBB6",
+          "_id": "hXuM_cpm",
           "_type": "Phase",
           "name": "Individual Phase",
           "round": 2,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "cYtmGpGO",
+          "_id": "v8reWK84",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 3,
           "length": 240,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "deSTAxCD",
+          "_id": "hRJ1Uzyk",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 3,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "doRE1Pl-",
+          "_id": "pkpZ-0OB",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 3,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "gkX_xuxc",
+          "_id": "Kpp0i4MW",
           "_type": "Phase",
           "name": "Generational Phase",
           "round": 3,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "SoRo_K-2",
+          "_id": "qRI2q4Mz",
           "_type": "Phase",
           "name": "Conclusion Phase",
           "round": 3,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         }
       ],
       "currentRound": 0
     }
   ],
   "societies": {
-    "LZBpTlvd": [
+    "AEPtzBwX": [
       {
-        "_id": "YQE9yGor",
+        "_id": "XSHLeLP4",
         "_type": "Society",
         "name": "The Willow Whompers",
         "archetype": "The Mighty",
         "planet": "",
         "communities": [
           {
-            "_id": "tlZzDoId",
+            "_id": "jeeAW4nZ",
             "_type": "Community",
             "name": "Venerable Elders",
             "resources": [
               {
-                "_id": "nAuJOKiz",
+                "_id": "aVQmKZF5",
                 "_type": "Resource",
                 "name": "Green Sludge",
                 "relationship": "",
                 "isExhausted": false
               },
               {
-                "_id": "V2CyKnZA",
+                "_id": "ZzU1Zjk7",
                 "_type": "Resource",
                 "name": "Amazing Suspenders",
                 "relationship": "",
                 "isExhausted": false
               },
               {
-                "_id": "cO6AlRu6",
+                "_id": "qtPrD-cG",
                 "_type": "Resource",
                 "name": "Big Rock",
                 "relationship": "",
@@ -312,50 +303,41 @@
               }
             ],
             "voice": "people"
+          },
+          {
+            "_id": "CNb4JHc-",
+            "_type": "Community",
+            "name": "Disaffected Youth",
+            "resources": [],
+            "voice": "people"
           }
         ]
-      },
-      {
-        "_id": "I6nmml4I",
-        "_type": "Society",
-        "name": "The I'm So Pretties",
-        "archetype": "the aesthetic",
-        "planet": "",
-        "communities": []
-      },
-      {
-        "_id": "CVOBBY7v",
-        "_type": "Society",
-        "name": "Ten Thousand Islands",
-        "archetype": "the enterprise",
-        "planet": "",
-        "communities": []
       }
     ]
   },
   "communities": {
-    "YQE9yGor": [
+    "AEPtzBwX": [
       {
-        "_id": "tlZzDoId",
+        "_id": "jeeAW4nZ",
         "_type": "Community",
         "name": "Venerable Elders",
         "resources": [
           {
-            "_id": "nAuJOKiz",
+            "_id": "aVQmKZF5",
             "_type": "Resource",
             "name": "Green Sludge",
             "relationship": "",
             "isExhausted": false
           },
           {
-            "_id": "V2CyKnZA",
+            "_id": "ZzU1Zjk7",
             "_type": "Resource",
             "name": "Amazing Suspenders",
             "relationship": "",
             "isExhausted": false
           },
           {
-            "_id": "cO6AlRu6",
+            "_id": "qtPrD-cG",
             "_type": "Resource",
             "name": "Big Rock",
             "relationship": "",
@@ -363,27 +345,34 @@
           }
         ],
         "voice": "people"
+      },
+      {
+        "_id": "CNb4JHc-",
+        "_type": "Community",
+        "name": "Disaffected Youth",
+        "resources": [],
+        "voice": "people"
       }
     ]
   },
   "resources": {
-    "tlZzDoId": [
+    "AEPtzBwX": [
       {
-        "_id": "nAuJOKiz",
+        "_id": "aVQmKZF5",
         "_type": "Resource",
         "name": "Green Sludge",
         "relationship": "",
         "isExhausted": false
       },
       {
-        "_id": "V2CyKnZA",
+        "_id": "ZzU1Zjk7",
         "_type": "Resource",
         "name": "Amazing Suspenders",
         "relationship": "",
         "isExhausted": false
       },
       {
-        "_id": "cO6AlRu6",
+        "_id": "qtPrD-cG",
         "_type": "Resource",
         "name": "Big Rock",
         "relationship": "",
@@ -392,68 +381,62 @@
     ]
   },
   "players": {
-    "LZBpTlvd": [
+    "AEPtzBwX": [
       {
-        "_id": "TMxbn4PS",
+        "_id": "GQ5FA5RI",
         "_type": "Player",
         "name": "Ving Rhames",
         "pronouns": [
           "they",
           "them"
-        ],
-        "community": {
-          "_id": "3NZMx4kP",
-          "_type": "Community",
-          "resources": [],
-          "voice": "people"
-        }
+        ]
       }
     ]
   },
   "active": {
     "session": {
-      "_id": "LZBpTlvd",
+      "_id": "AEPtzBwX",
       "_type": "Session",
-      "date": "2024-11-20T14:04:46.801Z",
+      "date": "2024-11-30T17:07:36.536Z",
       "game": {
-        "_id": "fU3MlOIf",
+        "_id": "fr9Fft9u",
         "name": "Arch St. - July 2024"
       },
       "players": [
         {
-          "_id": "TMxbn4PS",
+          "_id": "GQ5FA5RI",
           "name": "Ving Rhames"
         }
       ],
       "societies": [
         {
-          "_id": "YQE9yGor",
+          "_id": "XSHLeLP4",
           "_type": "Society",
           "name": "The Willow Whompers",
           "archetype": "The Mighty",
           "planet": "",
           "communities": [
             {
-              "_id": "tlZzDoId",
+              "_id": "jeeAW4nZ",
               "_type": "Community",
               "name": "Venerable Elders",
               "resources": [
                 {
-                  "_id": "nAuJOKiz",
+                  "_id": "aVQmKZF5",
                   "_type": "Resource",
                   "name": "Green Sludge",
                   "relationship": "",
                   "isExhausted": false
                 },
                 {
-                  "_id": "V2CyKnZA",
+                  "_id": "ZzU1Zjk7",
                   "_type": "Resource",
                   "name": "Amazing Suspenders",
                   "relationship": "",
                   "isExhausted": false
                 },
                 {
-                  "_id": "cO6AlRu6",
+                  "_id": "qtPrD-cG",
                   "_type": "Resource",
                   "name": "Big Rock",
                   "relationship": "",
@@ -461,206 +444,197 @@
                 }
               ],
               "voice": "people"
+            },
+            {
+              "_id": "CNb4JHc-",
+              "_type": "Community",
+              "name": "Disaffected Youth",
+              "resources": [],
+              "voice": "people"
             }
           ]
-        },
-        {
-          "_id": "I6nmml4I",
-          "_type": "Society",
-          "name": "The I'm So Pretties",
-          "archetype": "the aesthetic",
-          "planet": "",
-          "communities": []
-        },
-        {
-          "_id": "CVOBBY7v",
-          "_type": "Society",
-          "name": "Ten Thousand Islands",
-          "archetype": "the enterprise",
-          "planet": "",
-          "communities": []
         }
       ],
       "phases": [
         {
-          "_id": "bcalTo3X",
+          "_id": "hW4AmTkG",
           "_type": "Phase",
           "name": "Global Phase",
           "round": 0,
-          "length": "1970-01-01T00:00:01.200Z",
+          "length": 1200,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "Ikcnpp77",
+          "_id": "Eah5PxAH",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 0,
           "length": 240,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "MRLYkncp",
+          "_id": "DoawuFyD",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 0,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "rT5Q9Xe2",
+          "_id": "mRetJvJR",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 0,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "nSQj-DJY",
+          "_id": "ooBMcLZ3",
           "_type": "Phase",
           "name": "Individual Phase",
           "round": 0,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "N-GlOxyJ",
+          "_id": "jBDfPFjN",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 1,
           "length": 240,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "o40wXnrk",
+          "_id": "IBmMuVff",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 1,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "Q38I4pNQ",
+          "_id": "Ky9GwO0G",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 1,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "idqYB19J",
+          "_id": "A7ZmWUiX",
           "_type": "Phase",
           "name": "Individual Phase",
           "round": 1,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "jHS2b7GO",
+          "_id": "TL14tB1l",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 2,
           "length": 240,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "lDrHrZKK",
+          "_id": "MQdqy4X8",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 2,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "Jj5Oxk2B",
+          "_id": "C9HbSEGK",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 2,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "h9UVfBB6",
+          "_id": "hXuM_cpm",
           "_type": "Phase",
           "name": "Individual Phase",
           "round": 2,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "cYtmGpGO",
+          "_id": "v8reWK84",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 3,
           "length": 240,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "deSTAxCD",
+          "_id": "hRJ1Uzyk",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 3,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "doRE1Pl-",
+          "_id": "pkpZ-0OB",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 3,
           "length": 600,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "gkX_xuxc",
+          "_id": "Kpp0i4MW",
           "_type": "Phase",
           "name": "Generational Phase",
           "round": 3,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         },
         {
-          "_id": "SoRo_K-2",
+          "_id": "qRI2q4Mz",
           "_type": "Phase",
           "name": "Conclusion Phase",
           "round": 3,
           "length": 500,
           "timeElapsed": 0,
-          "timeStarted": "2024-11-20T14:04:46.801Z",
-          "timeCompleted": "2024-11-20T14:04:46.801Z"
+          "timeStarted": "2024-11-30T17:07:36.536Z",
+          "timeCompleted": "2024-11-30T17:07:36.536Z"
         }
       ],
       "currentRound": 0

@@ -12,7 +12,11 @@ body {
   padding: 0px;
   margin: 0px;
   position: absolute;
-  inset: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overscroll-behavior: none
 }
 
 .app-content {
@@ -20,7 +24,10 @@ body {
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
-  inset: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   position: absolute;
   color: var(--color-text);
 }
@@ -118,6 +125,11 @@ a.card {
   border-top-right-radius: 3rem;
 }
 
+.card-transparent {
+  background: transparent;
+  border-color: transparent;
+}
+
 .stack > * + *{
   margin-top: 1rem;
 }
@@ -158,11 +170,17 @@ a.card {
     display: block;
     background-color: var(--color-toolbar-item-bg);
     color: var(--color-toolbar-item-text);
+    text-decoration: none;
   }
 
   a.active {
     background-color: var(--color-toolbar-active-bg);
     color: var(--color-toolbar-active-text);
+  }
+
+  a:not(:has(svg, img)) {
+    font-size: 1.5rem;
+    padding: .5rem;
   }
 
   svg, img {
@@ -259,7 +277,7 @@ button {
 
 
 dialog {
-  display: block;
+  display: none;
   opacity: 0;
   pointer-events: none;
   background: var(--color-bg);
@@ -270,6 +288,7 @@ dialog {
   /* transition: translate .2s; */
 
   &[open] {
+    display: block;
     opacity: 1;
     /* translate: 0 0; */
     pointer-events: revert;
@@ -296,4 +315,16 @@ dialog {
 
 .target-visible:target {
   display: block;
+}
+
+.draggable {
+  cursor: grab;
+}
+
+.is-dragging {
+  border: 1px solid red;
+}
+
+.card.droppable.is-dropping {
+  background: var(--color-mid);
 }

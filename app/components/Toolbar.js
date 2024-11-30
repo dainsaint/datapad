@@ -2,7 +2,14 @@ import Icon from "./Icon.js";
 import { request } from "../server.js";
 
 export default function Toolbar() {
-  const getActiveClass = (href) => request.path == href ? 'active' : '';
+  const getActiveClass = (href) => {
+    if( href == "/" && request.path == "/" )
+      return 'true';
+    else if( href != "/" && request.path.startsWith(href) )
+      return 'active'
+    else
+      return '';
+  }
   return `
   <nav class="toolbar color-contrast" hx-boost="true" hx-push-url="true">
     <ul class="layout-column">

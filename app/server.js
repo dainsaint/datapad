@@ -8,6 +8,11 @@ export const request = {
   params: {}
 }
 
+const errorHandler = (err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something went wrong!");
+};
+
 export default class Server {
 
   start(port) {
@@ -23,6 +28,7 @@ export default class Server {
     });
     app.use("/api/v1", jsonRouter);
     app.use("/", htmlRouter);
+    app.use(errorHandler);
 
     app.listen(port, (error) => {
       if (!error)

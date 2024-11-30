@@ -1,13 +1,9 @@
-const init = () => {
-  window.addEventListener("hashchange", updateHashes);
-  updateHashes();
-}
+import initTabbables from "./modules/tabbable.js";
+import initDraggables from "./modules/draggable.js";
 
-const updateHashes = () => {
-  for( const anchor of document.querySelectorAll("a[href^='#']") ) {
-    const isActive = window.location.hash === anchor.getAttribute("href");
-    anchor.classList.toggle("active", isActive);
-  }
-}
+const init = () => {
+  // initTabbables();
+  initDraggables();
+};
 
 document.addEventListener("DOMContentLoaded", init);
