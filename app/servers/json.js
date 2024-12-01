@@ -1,8 +1,14 @@
 import express from "express";
-import Database from "../core/database.js";
+import {
+  getAllCommunities,
+  getAllGames,
+  getAllPlayers,
+  getAllSessions,
+  getAllSocieties,
+  getSessionById,
+} from "../core/data-access-layer.js";
 
 const jsonRouter = express.Router();
-const database = Database.open("data.json");
 
 
 jsonRouter.use((req, res, next) => {
@@ -11,39 +17,29 @@ jsonRouter.use((req, res, next) => {
 })
 
 jsonRouter.get("/game", (req, res) => {
-  res.send(database.data.games);
+  res.send(getAllGames());
 });
 
 jsonRouter.get("/session", (req, res) => {
-  res.send(database.data.sessions);
+  res.send(getAllSessions());
 });
 
-jsonRouter.get("/session/:session_id", (req, res) => {
-  const { session_id } = req.params;
-  const allSessions = Object.values( database.data.sessions ).flat();
-  
-  const session = allSessions?.find( (session) => session._id === session_id );
-  res.send(session);
-});
-
-jsonRouter.get("/session/:game_id/:session_id", (req, res) => {
-  const { game_id, session_id } = req.params;
-  const session = database.data.sessions?.[game_id]?.find(
-    (session) => session._id === session_id
-  );
+jsonRouter.get("/session/:id", (req, res) => {
+  const { id } = req.params;
+  const session = getSessionById(id)
   res.send(session);
 });
 
 jsonRouter.get("/community", (req, res) => {
-  res.send(database.data.communities);
+  res.send(getAllCommunities());
 });
 
 jsonRouter.get("/player", (req, res) => {
-  res.send(database.data.players);
+  res.send(getAllPlayers());
 });
 
 jsonRouter.get("/society", (req, res) => {
-  res.send(database.data.societies);
+  res.send(getAllSocieties());
 });
 
 

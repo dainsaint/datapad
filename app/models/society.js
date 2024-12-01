@@ -6,9 +6,11 @@ export default class Society extends Model {
   planet = "";
   communities = [];
 
-  constructor(name) {
+  constructor({name, archetype = "", planet = ""}) {
     super();
     this.name = name;
+    this.archetype = archetype;
+    this.planet = planet;
   }
 
   get resources() {

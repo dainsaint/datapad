@@ -43,16 +43,16 @@ export function SocietyPanel( session, society ) {
       </header>
 
       <div class="grid-three">
-       ${map(society.communities, (community) => CommunityCard(session, community) )}
+       ${map(society.communities, CommunityCard)}
       </div>
     </main>
   `;
 }
 
-export function CommunityCard( session, community ) {
+export function CommunityCard(  community ) {
   return `
-    <div hx-get="/ui/community/card/${session._id}/${community._id}" hx-trigger="sse:resources, sse:societies">
-      <form id="community-card-${community._id}" class="card stack droppable" hx-post="/community/${community._id}/resources" hx-trigger="dropcomplete" hx-swap="none">
+    <div hx-get="/ui/community/card/${community._id}" hx-trigger="sse:resources, sse:societies">
+      <form id="community-card-${community._id}" class="card stack droppable" hx-patch="/community/${community._id}" hx-trigger="dropcomplete" hx-swap="none">
         <header>
           <h2>${community.name}</h2>
           <p class="subtitle">${community.voice}</h2>
@@ -61,9 +61,6 @@ export function CommunityCard( session, community ) {
         <div class="grid-three receivable">
           ${ map( community.resources, ResourceCard) }
         </div>
-
-        <input type="hidden" name="session_id" value="${session._id}"/>
-        <input type="hidden" name="ui" value="/ui/community/card/${session._id}/${community._id}"/>
       </form>
     </div>
   `;
@@ -78,3 +75,5 @@ export function ResourceCard( resource ) {
   `;
 }
 
+        // <input type="hidden" name="session_id" value="${session._id}"/>
+        // <input type="hidden" name="ui" value="/ui/community/card/${session._id}/${community._id}"/>

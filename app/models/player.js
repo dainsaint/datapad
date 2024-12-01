@@ -6,7 +6,7 @@ export default class Player extends Model {
   pronouns = ["they", "them"];
   community;
 
-  constructor(name) {
+  constructor({name}) {
     super();
     this.name = name;
   }

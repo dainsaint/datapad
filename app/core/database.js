@@ -16,9 +16,7 @@ const databases = {};
 export default class Database {
   filename;
 
-  data = {
-    games: []
-  };
+  data = {};
 
   constructor( filename ) {
     this.filename = filename
@@ -82,7 +80,7 @@ export default class Database {
         if( !Type )
           return value;
 
-        const reference = Object.assign(new Type(), value);
+        const reference = Object.assign(new Type({}), value);
         references[value._id] = reference;
         return reference;
       }

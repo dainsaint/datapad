@@ -7,4 +7,14 @@ export default class Session extends Model {
   societies = [];
   phases = [];
   currentRound = 0;
+
+  constructor({name, date = new Date()}) {
+    super();
+    this.name = name;
+    this.date = date;
+  }
+
+  addPhase(phase) {
+    this.phases.push(phase);
+  }
 }

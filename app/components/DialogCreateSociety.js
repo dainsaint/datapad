@@ -4,7 +4,7 @@ export default function DialogCreateSociety(session) {
       <h1>Create a new society</h1>
       <p class="text">Enter a name for this new society, and select its archetype.</p>
 
-      <form class="stack" hx-put="/society" hx-swap="none">
+      <form class="stack" hx-post="/society" hx-swap="none">
         <input type="hidden" name="session_id" value="${session._id}"/>
 
         <label for="name">Society Name</label>

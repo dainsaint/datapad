@@ -6,8 +6,9 @@ export default class Game extends Model {
   sessions = [];
   players = [];
 
-  constructor(name) {
+  constructor({name, date = new Date()}) {
     super();
     this.name = name;
+    this.date = date;
   }
 }
