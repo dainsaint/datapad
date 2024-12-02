@@ -5,9 +5,10 @@ export default class Community extends Model {
   resources = [];
   voice = "people"
 
-  constructor(name) {
+  constructor({name, voice = "people"}) {
     super();
     this.name = name;
+    this.voice = voice;
   }
 
   get isEndangered() {

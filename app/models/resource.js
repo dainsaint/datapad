@@ -5,7 +5,7 @@ export default class Resource extends Model {
   relationship = "";
   isExhausted = false;
 
-  constructor(name) {
+  constructor({name}) {
     super();
     this.name = name;
   }
