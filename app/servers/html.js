@@ -123,7 +123,7 @@ htmlRouter.post("/society", (req, res) => {
       updateSociety(society, {name, archetype});
     }
     res.setHeader("HX-Trigger", "success");
-    res.sendStatus(200);
+    res.sendStatus(201);
     broadcast("societies");
   } catch(e) {
     res.setHeader("HX-Trigger", "error");

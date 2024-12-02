@@ -570,13 +570,6 @@
               "name": "Venerable Elders",
               "resources": [
                 {
-                  "_id": "KyXAs0Er",
-                  "_type": "Resource",
-                  "name": "Green Sludge",
-                  "relationship": "",
-                  "isExhausted": false
-                },
-                {
                   "_id": "Ts9PH2o9",
                   "_type": "Resource",
                   "name": "Amazing Suspenders",
@@ -587,6 +580,13 @@
                   "_id": "KiGxLcIY",
                   "_type": "Resource",
                   "name": "Big Rock",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "KyXAs0Er",
+                  "_type": "Resource",
+                  "name": "Green Sludge",
                   "relationship": "",
                   "isExhausted": false
                 }
@@ -609,7 +609,7 @@
           "_type": "Phase",
           "name": "Global Phase",
           "round": 0,
-          "length": 1200,
+          "length": "1970-01-01T00:00:01.200Z",
           "timeElapsed": 0,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
@@ -902,13 +902,6 @@
           "name": "Venerable Elders",
           "resources": [
             {
-              "_id": "KyXAs0Er",
-              "_type": "Resource",
-              "name": "Green Sludge",
-              "relationship": "",
-              "isExhausted": false
-            },
-            {
               "_id": "Ts9PH2o9",
               "_type": "Resource",
               "name": "Amazing Suspenders",
@@ -919,6 +912,13 @@
               "_id": "KiGxLcIY",
               "_type": "Resource",
               "name": "Big Rock",
+              "relationship": "",
+              "isExhausted": false
+            },
+            {
+              "_id": "KyXAs0Er",
+              "_type": "Resource",
+              "name": "Green Sludge",
               "relationship": "",
               "isExhausted": false
             }
@@ -1015,13 +1015,6 @@
       "name": "Venerable Elders",
       "resources": [
         {
-          "_id": "KyXAs0Er",
-          "_type": "Resource",
-          "name": "Green Sludge",
-          "relationship": "",
-          "isExhausted": false
-        },
-        {
           "_id": "Ts9PH2o9",
           "_type": "Resource",
           "name": "Amazing Suspenders",
@@ -1032,6 +1025,13 @@
           "_id": "KiGxLcIY",
           "_type": "Resource",
           "name": "Big Rock",
+          "relationship": "",
+          "isExhausted": false
+        },
+        {
+          "_id": "KyXAs0Er",
+          "_type": "Resource",
+          "name": "Green Sludge",
           "relationship": "",
           "isExhausted": false
         }
@@ -1169,13 +1169,6 @@
               "name": "Venerable Elders",
               "resources": [
                 {
-                  "_id": "KyXAs0Er",
-                  "_type": "Resource",
-                  "name": "Green Sludge",
-                  "relationship": "",
-                  "isExhausted": false
-                },
-                {
                   "_id": "Ts9PH2o9",
                   "_type": "Resource",
                   "name": "Amazing Suspenders",
@@ -1186,6 +1179,13 @@
                   "_id": "KiGxLcIY",
                   "_type": "Resource",
                   "name": "Big Rock",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "KyXAs0Er",
+                  "_type": "Resource",
+                  "name": "Green Sludge",
                   "relationship": "",
                   "isExhausted": false
                 }
@@ -1208,7 +1208,7 @@
           "_type": "Phase",
           "name": "Global Phase",
           "round": 0,
-          "length": 1200,
+          "length": "1970-01-01T00:00:01.200Z",
           "timeElapsed": 0,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
