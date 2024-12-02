@@ -187,10 +187,12 @@ htmlRouter.get('/events', (req, res) => {
 
   // Add client to Set
   clients.add(res);
+  console.log("new client")
   broadcast("welcome");
 
   // Handle client disconnect
   req.on('close', () => {
+    console.log("closing....")
     clients.delete(res);
   });
 });

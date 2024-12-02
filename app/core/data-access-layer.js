@@ -21,6 +21,10 @@ export function createGame(params) {
   })  
 
   return game;
+
+
+
+  //TODO: Insert logic about saving individual session to json here????
 }
 
 export function getGameById(id) {

@@ -50,6 +50,19 @@ export default class Database {
     } 
   }
 
+  writeSession() {
+    try {
+      fs.writeFileSync(`./data/${this.filename}`, JSON.stringify(this.data, null, 2));
+    } catch(e) {
+      if( e.code === "ENOENT") {
+        fs.mkdirSync("./data");
+        this.write();
+      } else {
+        console.error(`Unhandled error: ${e}`);
+      }
+    } 
+  }
+
   update( callback ) {
     callback(this.data);
     this.write();
