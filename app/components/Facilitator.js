@@ -39,7 +39,9 @@ export function SocietyPanel( session, society ) {
           ${pluralize(society.communities.length, "community", "communities")} • 
           ${society.resources.length}
           ${pluralize(society.resources.length, "resource")}
-        </p>
+         </p>
+        <button hx-get="/ui/society/edit/${society._id}
+        " hx-target="#app" >Edit...</button>
       </header>
 
       <div class="grid-three">
@@ -55,6 +57,7 @@ export function CommunityCard(  community ) {
       <form id="community-card-${community._id}" class="card stack droppable" hx-patch="/community/${community._id}" hx-trigger="dropcomplete" hx-swap="none">
         <header>
           <h2>${community.name}</h2>
+          <button>Edit...</button>
           <p class="subtitle">${community.voice}</h2>
         </header>
 

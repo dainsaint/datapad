@@ -20,6 +20,7 @@ export default function DialogCreateSociety(session) {
           <option value="the mighty">The Mighty</option>
           <option value="the scholars">The Scholars</option>
         </select>
+        <button>Add Community...</button>
 
         <div class="layout-horizontal">
           <button type="submit">+ New Society</button>

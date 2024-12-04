@@ -7,6 +7,7 @@ import GameMaster, { SocietyCardList } from "../components/GameMaster.js";
 import Home from "../components/Home.js";
 import DialogCreateGame from "../components/DialogCreateGame.js";
 import DialogCreateSociety from "../components/DialogCreateSociety.js";
+import DialogEditSociety from "../components/DialogEditSociety.js";
 import Facilitator, { CommunityCard } from "../components/Facilitator.js";
 import Script from "../components/Script.js";
 
@@ -228,6 +229,22 @@ htmlRouter.post("/ui/society/create", (req, res) => {
     const { session_id } = req.body;
     const session = getSessionById(session_id);
     res.send(DialogCreateSociety(session));
+  } catch (e) {
+    res.status(400).send("");
+  }
+});
+
+htmlRouter.get("/ui/society/edit/:society_id", (req, res) => {
+  const { society_id} = req.params;
+  // const { resource_ids = [] } = req.body;
+  console.log(society_id)
+
+  try {
+    const society= getSocietyById(society_id);
+    // const resources = resource_ids.map(getResourceById);
+    // updateCommunity(community, {resources});
+    console.log(society)
+    res.send(DialogEditSociety(society));
   } catch (e) {
     res.status(400).send("");
   }
