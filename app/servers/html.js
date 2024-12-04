@@ -132,9 +132,9 @@ htmlRouter.put("/session/:session_id/phase/:id", (req, res) => {
     const { action } = req.body;
 
     const session = getSessionById(session_id);
-    const phase = session.phases.find( phase => phase._id == id);
-    
-    switch( action ) {
+    const phase = session.phases.find((phase) => phase._id == id);
+
+    switch (action) {
       case "start":
         phase.startPhase();
         break;
@@ -148,6 +148,10 @@ htmlRouter.put("/session/:session_id/phase/:id", (req, res) => {
 
     updatePhase(phase, {});
 
+    //this is the way to "refresh" whatever page
+    //this was called from using ajax
+    const url = req.headers["hx-current-url"];
+    res.setHeader("HX-Location", url);
     res.sendStatus(200);
   } catch(e) {
     console.log( e );

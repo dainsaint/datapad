@@ -20,7 +20,7 @@ export default function GameMaster (session) {
           <form hx-put="/session/${session._id}/phase/${currentPhase._id}" class="grid-three">
             <button name="action" value="start" ${ currentPhase.isPlaying ? "disabled" : ""}>Start Current Phase</button>
             <button name="action" value="pause" ${!currentPhase.isPlaying ? "disabled" : ""}>Pause Current Phase</button>
-            <button name="action" value="stop" ${!currentPhase.isPlaying ? "disabled" : ""}>Complete Current Phase</button>
+            <button name="action" value="stop"  ${!currentPhase.isPlaying ? "disabled" : ""}>Complete Current Phase</button>
           </form>
         </div>
       </div>
