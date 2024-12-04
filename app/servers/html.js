@@ -1,13 +1,14 @@
 import express from "express";
 
+import { PhaseTime } from "../components/PhaseCard.js";
 import App from "../components/App.js";
-import GameCard from "../components/GameCard.js";
-import GameOverview from "../components/GameOverview.js";
-import GameMaster, { SocietyCardList } from "../components/GameMaster.js";
-import Home from "../components/Home.js";
 import DialogCreateGame from "../components/DialogCreateGame.js";
 import DialogCreateSociety from "../components/DialogCreateSociety.js";
 import Facilitator, { CommunityCard } from "../components/Facilitator.js";
+import GameCard from "../components/GameCard.js";
+import GameMaster, { SocietyCardList } from "../components/GameMaster.js";
+import GameOverview from "../components/GameOverview.js";
+import Home from "../components/Home.js";
 import Script from "../components/Script.js";
 
 import {
@@ -23,10 +24,12 @@ import {
   getSessionById,
   getSocietyById,
   updateCommunity,
+  updatePhase,
   updateSociety,
 } from "../core/data-access-layer.js";
 
 import { populateDummyData } from "../populate.js";
+
 
 const htmlRouter = express.Router();
 const clients = new Set();
@@ -34,13 +37,26 @@ const clients = new Set();
 // populateDummyData();
 
 
-// SSE
+// ADDITIONAL FUNCTIONS
 /////////////////////////////////////
 
-const broadcast = (name, data) => {
+export function broadcast(name, data) {
   for (const client of clients)
     client.write(`event: ${name}\ndata: ${data}\n\n`);
 };
+
+export function tick(deltaTime) {
+  try {
+    const session = getActiveSession();
+    const activePhases = session.phases.filter( phase => phase.isPlaying );
+    for( const phase of activePhases ){
+      phase.tick(deltaTime);
+      broadcast("phases");
+    }
+  } catch(e) {
+
+  }
+}
 
 // PAGES
 /////////////////////////////////////
@@ -77,6 +93,7 @@ htmlRouter.get("/facilitator/:society_id?", (req, res) => {
   }
 });
 
+
 htmlRouter.get("/script", (req, res) => {
   try {
     const session = getActiveSession();
@@ -101,6 +118,39 @@ htmlRouter.get("/game/:id", (req, res, next) => {
     const game = getGameById(id);
     res.send(App(GameOverview(game)));
   } catch (e) {
+    res.sendStatus(404);
+  }
+});
+
+
+// SESSION
+/////////////////////////////////////
+
+htmlRouter.put("/session/:session_id/phase/:id", (req, res) => {
+  try {
+    const { session_id, id } = req.params;
+    const { action } = req.body;
+
+    const session = getSessionById(session_id);
+    const phase = session.phases.find( phase => phase._id == id);
+    
+    switch( action ) {
+      case "start":
+        phase.startPhase();
+        break;
+      case "pause":
+        phase.pausePhase();
+        break;
+      case "stop":
+        phase.completePhase();
+        break;
+    }
+
+    updatePhase(phase, {});
+
+    res.sendStatus(200);
+  } catch(e) {
+    console.log( e );
     res.sendStatus(404);
   }
 });
@@ -255,5 +305,21 @@ htmlRouter.get("/ui/community/card/:id", (req, res) => {
     res.status(400).send("");
   }
 });
+
+
+// PHASE UI
+htmlRouter.get("/ui/phase/time/:id", (req, res) => {
+  try {
+    const { id } = req.params;
+    const session = getActiveSession();
+    const phase = session.phases.find( p => p._id == id);
+    
+    res.send( PhaseTime(phase) );
+  } catch (e) {
+    console.log(e);
+    res.status(400).send("");
+  }
+});
+
 
 export default htmlRouter;

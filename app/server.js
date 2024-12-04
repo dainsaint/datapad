@@ -1,7 +1,7 @@
 import express from "express";
-import htmlRouter from "./servers/html.js";
+import htmlRouter, {tick as htmlTick} from "./servers/html.js";
 import jsonRouter from "./servers/json.js";
-import App from "./components/App.js";
+import Timer from "./core/timer.js";
 
 export const request = {
   path: "/",
@@ -14,6 +14,12 @@ const errorHandler = (err, req, res, next) => {
 };
 
 export default class Server {
+
+  timer;
+
+  constructor() {
+    this.timer = new Timer(1000, this.tick);
+  }
 
   start(port) {
     const app = express();
@@ -34,8 +40,12 @@ export default class Server {
       if (!error)
         console.log(`Datapad server running at https://localhost:${port}`);
     });
+
+    this.timer.start();
+  }
+
+  tick(deltaTime) {
+    htmlTick(deltaTime);
   }
 
 }
-
-

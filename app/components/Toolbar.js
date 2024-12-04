@@ -4,7 +4,7 @@ import { request } from "../server.js";
 export default function Toolbar() {
   const getActiveClass = (href) => {
     if( href == "/" && request.path == "/" )
-      return 'true';
+      return 'active';
     else if( href != "/" && request.path.startsWith(href) )
       return 'active'
     else

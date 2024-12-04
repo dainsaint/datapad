@@ -38,6 +38,45 @@
         }
       ],
       "players": []
+    },
+    {
+      "_id": "uWJ_pyXD",
+      "_type": "Game",
+      "name": "ExCITE Center - October 2024",
+      "date": "2024-12-04T17:42:41.101Z",
+      "sessions": [
+        {
+          "_id": "MygYVCzB",
+          "date": "2024-07-15T04:00:00.000Z"
+        }
+      ],
+      "players": []
+    },
+    {
+      "_id": "XN3sDfhX",
+      "_type": "Game",
+      "name": "ExCITE Center - October 2024",
+      "date": "2024-12-04T17:42:43.685Z",
+      "sessions": [
+        {
+          "_id": "NlMbka2D",
+          "date": "2024-07-15T04:00:00.000Z"
+        }
+      ],
+      "players": []
+    },
+    {
+      "_id": "TLTfdPvG",
+      "_type": "Game",
+      "name": "ExCITE Center - October 2024",
+      "date": "2024-12-04T17:47:32.333Z",
+      "sessions": [
+        {
+          "_id": "tw_Ab8rq",
+          "date": "2024-07-15T04:00:00.000Z"
+        }
+      ],
+      "players": []
     }
   ],
   "sessions": [
@@ -117,8 +156,11 @@
           "_type": "Phase",
           "name": "Global Phase",
           "round": 0,
-          "length": "1970-01-01T00:00:01.200Z",
+          "length": "1970-01-01T00:00:05.000Z",
+          "scheduledTimeStart": "2024-12-04T15:57:34.990Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.990Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -128,7 +170,10 @@
           "name": "Universal Phase",
           "round": 0,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.990Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -138,7 +183,10 @@
           "name": "Societal Phase",
           "round": 0,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -148,7 +196,10 @@
           "name": "Galactic Phase",
           "round": 0,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -158,7 +209,10 @@
           "name": "Individual Phase",
           "round": 0,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -168,7 +222,10 @@
           "name": "Universal Phase",
           "round": 1,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -178,7 +235,10 @@
           "name": "Societal Phase",
           "round": 1,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -188,7 +248,10 @@
           "name": "Galactic Phase",
           "round": 1,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -198,7 +261,10 @@
           "name": "Individual Phase",
           "round": 1,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -208,7 +274,10 @@
           "name": "Universal Phase",
           "round": 2,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -218,7 +287,10 @@
           "name": "Societal Phase",
           "round": 2,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -228,7 +300,10 @@
           "name": "Galactic Phase",
           "round": 2,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -238,7 +313,10 @@
           "name": "Individual Phase",
           "round": 2,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -248,7 +326,10 @@
           "name": "Universal Phase",
           "round": 3,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -258,7 +339,10 @@
           "name": "Societal Phase",
           "round": 3,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -268,7 +352,10 @@
           "name": "Galactic Phase",
           "round": 3,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -278,7 +365,10 @@
           "name": "Generational Phase",
           "round": 3,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         },
@@ -288,12 +378,17 @@
           "name": "Conclusion Phase",
           "round": 3,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T14:43:45.129Z",
           "timeCompleted": "2024-12-01T14:43:45.129Z"
         }
       ],
       "currentRound": 0,
+      "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+      "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
       "name": "Hi there"
     },
     {
@@ -363,8 +458,11 @@
           "_type": "Phase",
           "name": "Global Phase",
           "round": 0,
-          "length": "1970-01-01T00:00:01.200Z",
+          "length": "1970-01-01T00:00:05.000Z",
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -374,7 +472,10 @@
           "name": "Universal Phase",
           "round": 0,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -384,7 +485,10 @@
           "name": "Societal Phase",
           "round": 0,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.991Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.991Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -394,7 +498,10 @@
           "name": "Galactic Phase",
           "round": 0,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -404,7 +511,10 @@
           "name": "Individual Phase",
           "round": 0,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -414,7 +524,10 @@
           "name": "Universal Phase",
           "round": 1,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -424,7 +537,10 @@
           "name": "Societal Phase",
           "round": 1,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -434,7 +550,10 @@
           "name": "Galactic Phase",
           "round": 1,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -444,7 +563,10 @@
           "name": "Individual Phase",
           "round": 1,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -454,7 +576,10 @@
           "name": "Universal Phase",
           "round": 2,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -464,7 +589,10 @@
           "name": "Societal Phase",
           "round": 2,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -474,7 +602,10 @@
           "name": "Galactic Phase",
           "round": 2,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -484,7 +615,10 @@
           "name": "Individual Phase",
           "round": 2,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -494,7 +628,10 @@
           "name": "Universal Phase",
           "round": 3,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -504,7 +641,10 @@
           "name": "Societal Phase",
           "round": 3,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -514,7 +654,10 @@
           "name": "Galactic Phase",
           "round": 3,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -524,7 +667,10 @@
           "name": "Generational Phase",
           "round": 3,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         },
@@ -534,12 +680,17 @@
           "name": "Conclusion Phase",
           "round": 3,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:28.553Z",
           "timeCompleted": "2024-12-01T17:27:28.553Z"
         }
       ],
       "currentRound": 0,
+      "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+      "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
       "name": "Hi there"
     },
     {
@@ -577,16 +728,16 @@
                   "isExhausted": false
                 },
                 {
-                  "_id": "KiGxLcIY",
+                  "_id": "KyXAs0Er",
                   "_type": "Resource",
-                  "name": "Big Rock",
+                  "name": "Green Sludge",
                   "relationship": "",
                   "isExhausted": false
                 },
                 {
-                  "_id": "KyXAs0Er",
+                  "_id": "KiGxLcIY",
                   "_type": "Resource",
-                  "name": "Green Sludge",
+                  "name": "Big Rock",
                   "relationship": "",
                   "isExhausted": false
                 }
@@ -601,6 +752,22 @@
               "voice": "people"
             }
           ]
+        },
+        {
+          "_id": "fyD-74CR",
+          "_type": "Society",
+          "name": "Ten Thousand Islands",
+          "archetype": "the aesthetic",
+          "planet": "",
+          "communities": []
+        },
+        {
+          "_id": "T8YobDE2",
+          "_type": "Society",
+          "name": "Ten Thousand Islands",
+          "archetype": "the aesthetic",
+          "planet": "",
+          "communities": []
         }
       ],
       "phases": [
@@ -609,8 +776,13 @@
           "_type": "Phase",
           "name": "Global Phase",
           "round": 0,
-          "length": "1970-01-01T00:00:01.200Z",
-          "timeElapsed": 0,
+          "length": "1970-01-01T00:00:05.000Z",
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
+          "actualTimeStart": "2024-12-04T17:31:52.809Z",
+          "actualTimeComplete": "2024-12-04T17:31:56.037Z",
+          "timeElapsed": 29050.005,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -620,7 +792,10 @@
           "name": "Universal Phase",
           "round": 0,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -630,7 +805,10 @@
           "name": "Societal Phase",
           "round": 0,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -640,7 +818,10 @@
           "name": "Galactic Phase",
           "round": 0,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -650,7 +831,10 @@
           "name": "Individual Phase",
           "round": 0,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -660,7 +844,10 @@
           "name": "Universal Phase",
           "round": 1,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.992Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.992Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -670,7 +857,10 @@
           "name": "Societal Phase",
           "round": 1,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -680,7 +870,10 @@
           "name": "Galactic Phase",
           "round": 1,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -690,7 +883,10 @@
           "name": "Individual Phase",
           "round": 1,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -700,7 +896,10 @@
           "name": "Universal Phase",
           "round": 2,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -710,7 +909,10 @@
           "name": "Societal Phase",
           "round": 2,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -720,7 +922,10 @@
           "name": "Galactic Phase",
           "round": 2,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -730,7 +935,10 @@
           "name": "Individual Phase",
           "round": 2,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -740,7 +948,10 @@
           "name": "Universal Phase",
           "round": 3,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -750,7 +961,10 @@
           "name": "Societal Phase",
           "round": 3,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -760,7 +974,10 @@
           "name": "Galactic Phase",
           "round": 3,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -770,7 +987,10 @@
           "name": "Generational Phase",
           "round": 3,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         },
@@ -780,12 +1000,817 @@
           "name": "Conclusion Phase",
           "round": 3,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+          "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
           "timeElapsed": 0,
+          "isPlaying": false,
           "timeStarted": "2024-12-01T17:27:34.103Z",
           "timeCompleted": "2024-12-01T17:27:34.103Z"
         }
       ],
       "currentRound": 0,
+      "scheduledTimeStart": "2024-12-04T15:57:34.993Z",
+      "scheduledTimeEnd": "2024-12-04T15:57:34.993Z",
+      "name": "Hi there"
+    },
+    {
+      "_id": "MygYVCzB",
+      "_type": "Session",
+      "date": "2024-07-15T04:00:00.000Z",
+      "game": {
+        "_id": "uWJ_pyXD",
+        "name": "ExCITE Center - October 2024"
+      },
+      "players": [
+        {
+          "_id": "cE1Q2dKk",
+          "name": "Ving Rhames"
+        }
+      ],
+      "societies": [
+        {
+          "_id": "fQFWp_Bl",
+          "_type": "Society",
+          "name": "The Willow Whompers",
+          "archetype": "the mighty",
+          "planet": "",
+          "communities": [
+            {
+              "_id": "pQeHz9dx",
+              "_type": "Community",
+              "name": "Venerable Elders",
+              "resources": [
+                {
+                  "_id": "JzgMxVCV",
+                  "_type": "Resource",
+                  "name": "Green Sludge",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "wVBc24jj",
+                  "_type": "Resource",
+                  "name": "Amazing Suspenders",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "PZl-5wqc",
+                  "_type": "Resource",
+                  "name": "Big Rock",
+                  "relationship": "",
+                  "isExhausted": false
+                }
+              ],
+              "voice": "leader"
+            },
+            {
+              "_id": "LMcbme-u",
+              "_type": "Community",
+              "name": "Disaffected Youth",
+              "resources": [],
+              "voice": "people"
+            }
+          ]
+        }
+      ],
+      "phases": [
+        {
+          "_id": "PWm6Vv3q",
+          "_type": "Phase",
+          "name": "Global Phase",
+          "round": 0,
+          "length": "1970-01-01T00:00:01.200Z",
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "jQvt1_rq",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 0,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "cYD5kWMo",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 0,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "A8-UnR6l",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 0,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "k6QV_EFo",
+          "_type": "Phase",
+          "name": "Individual Phase",
+          "round": 0,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "u8AwFeyG",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 1,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "N7vnj_Jk",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 1,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "WBCFkCoF",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 1,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "OEHMeN3f",
+          "_type": "Phase",
+          "name": "Individual Phase",
+          "round": 1,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "iHNvfj0K",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 2,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "WUAiBfaL",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 2,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "KAemdDm0",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 2,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "PHCYu2Rg",
+          "_type": "Phase",
+          "name": "Individual Phase",
+          "round": 2,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "XlF0LcUz",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 3,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "dwqEDSQd",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 3,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "G2vCjgFv",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 3,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "pCaBnMaJ",
+          "_type": "Phase",
+          "name": "Generational Phase",
+          "round": 3,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "fAT5wMGP",
+          "_type": "Phase",
+          "name": "Conclusion Phase",
+          "round": 3,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:41.105Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:41.105Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        }
+      ],
+      "currentRound": 0,
+      "scheduledTimeStart": "2024-12-04T17:42:41.104Z",
+      "scheduledTimeEnd": "2024-12-04T17:42:41.104Z",
+      "name": "Hi there"
+    },
+    {
+      "_id": "NlMbka2D",
+      "_type": "Session",
+      "date": "2024-07-15T04:00:00.000Z",
+      "game": {
+        "_id": "XN3sDfhX",
+        "name": "ExCITE Center - October 2024"
+      },
+      "players": [
+        {
+          "_id": "pWdPOzxy",
+          "name": "Ving Rhames"
+        }
+      ],
+      "societies": [
+        {
+          "_id": "VMwtLbqo",
+          "_type": "Society",
+          "name": "The Willow Whompers",
+          "archetype": "the mighty",
+          "planet": "",
+          "communities": [
+            {
+              "_id": "lt1bic-m",
+              "_type": "Community",
+              "name": "Venerable Elders",
+              "resources": [
+                {
+                  "_id": "my8qs8sn",
+                  "_type": "Resource",
+                  "name": "Green Sludge",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "Qbv8OGpH",
+                  "_type": "Resource",
+                  "name": "Amazing Suspenders",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "DJhU-HXP",
+                  "_type": "Resource",
+                  "name": "Big Rock",
+                  "relationship": "",
+                  "isExhausted": false
+                }
+              ],
+              "voice": "leader"
+            },
+            {
+              "_id": "CopBcuby",
+              "_type": "Community",
+              "name": "Disaffected Youth",
+              "resources": [],
+              "voice": "people"
+            }
+          ]
+        }
+      ],
+      "phases": [
+        {
+          "_id": "FiiG764i",
+          "_type": "Phase",
+          "name": "Global Phase",
+          "round": 0,
+          "length": "1970-01-01T00:00:01.200Z",
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "actualTimeStart": "2024-12-04T17:47:08.765Z",
+          "timeElapsed": 11017,
+          "isPlaying": true
+        },
+        {
+          "_id": "XYaabUef",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 0,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "obisYF3Y",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 0,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "zXFJJevw",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 0,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "Kv1rWilU",
+          "_type": "Phase",
+          "name": "Individual Phase",
+          "round": 0,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "YK2mzxdW",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 1,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "KaYGmwqL",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 1,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "dj5meAc4",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 1,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "HI8ocsOC",
+          "_type": "Phase",
+          "name": "Individual Phase",
+          "round": 1,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "oITBkp01",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 2,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "bpXI_EhJ",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 2,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "y8kPYPSZ",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 2,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "euc4Ym5Y",
+          "_type": "Phase",
+          "name": "Individual Phase",
+          "round": 2,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "qDsVdnkj",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 3,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "cIhAH95T",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 3,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "jTx5v_pT",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 3,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "RDEyDBh2",
+          "_type": "Phase",
+          "name": "Generational Phase",
+          "round": 3,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "pYe2BmTG",
+          "_type": "Phase",
+          "name": "Conclusion Phase",
+          "round": 3,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:42:43.690Z",
+          "scheduledTimeEnd": "2024-12-04T17:42:43.690Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        }
+      ],
+      "currentRound": 0,
+      "scheduledTimeStart": "2024-12-04T17:42:43.686Z",
+      "scheduledTimeEnd": "2024-12-04T17:42:43.686Z",
+      "name": "Hi there"
+    },
+    {
+      "_id": "tw_Ab8rq",
+      "_type": "Session",
+      "date": "2024-07-15T04:00:00.000Z",
+      "game": {
+        "_id": "TLTfdPvG",
+        "name": "ExCITE Center - October 2024"
+      },
+      "players": [
+        {
+          "_id": "b_iho6In",
+          "name": "Ving Rhames"
+        }
+      ],
+      "societies": [
+        {
+          "_id": "gdNnEGr0",
+          "_type": "Society",
+          "name": "The Willow Whompers",
+          "archetype": "the mighty",
+          "planet": "",
+          "communities": [
+            {
+              "_id": "W1nfLILQ",
+              "_type": "Community",
+              "name": "Venerable Elders",
+              "resources": [
+                {
+                  "_id": "FgYYG86T",
+                  "_type": "Resource",
+                  "name": "Green Sludge",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "aokk5nyN",
+                  "_type": "Resource",
+                  "name": "Amazing Suspenders",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "isA3dXDL",
+                  "_type": "Resource",
+                  "name": "Big Rock",
+                  "relationship": "",
+                  "isExhausted": false
+                }
+              ],
+              "voice": "leader"
+            },
+            {
+              "_id": "yvDQv1Ei",
+              "_type": "Community",
+              "name": "Disaffected Youth",
+              "resources": [],
+              "voice": "people"
+            }
+          ]
+        }
+      ],
+      "phases": [
+        {
+          "_id": "F4EvqrfQ",
+          "_type": "Phase",
+          "name": "Global Phase",
+          "round": 0,
+          "length": "1970-01-01T00:00:01.200Z",
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "actualTimeStart": "2024-12-04T17:50:07.894Z",
+          "timeElapsed": 52.066999999999986,
+          "isPlaying": true
+        },
+        {
+          "_id": "LLKGDyAR",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 0,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "RBsX_Gem",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 0,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "dCVd-L09",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 0,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "M0Rgq03V",
+          "_type": "Phase",
+          "name": "Individual Phase",
+          "round": 0,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "Cy-ADB0E",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 1,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "F_CCxBnd",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 1,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "Tcjjc-BX",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 1,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "extKGx2-",
+          "_type": "Phase",
+          "name": "Individual Phase",
+          "round": 1,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "xFoYPRzY",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 2,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "RX3P_q6G",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 2,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "IBj_pGNM",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 2,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "hKk53pHm",
+          "_type": "Phase",
+          "name": "Individual Phase",
+          "round": 2,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "j7VOI2Mr",
+          "_type": "Phase",
+          "name": "Universal Phase",
+          "round": 3,
+          "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "rExZ3c5B",
+          "_type": "Phase",
+          "name": "Societal Phase",
+          "round": 3,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "Uw586Xhf",
+          "_type": "Phase",
+          "name": "Galactic Phase",
+          "round": 3,
+          "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "acM-6I38",
+          "_type": "Phase",
+          "name": "Generational Phase",
+          "round": 3,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        },
+        {
+          "_id": "dXFEm0sA",
+          "_type": "Phase",
+          "name": "Conclusion Phase",
+          "round": 3,
+          "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "timeElapsed": 0,
+          "isPlaying": false
+        }
+      ],
+      "currentRound": 0,
+      "scheduledTimeStart": "2024-12-04T17:47:32.334Z",
+      "scheduledTimeEnd": "2024-12-04T17:47:32.334Z",
       "name": "Hi there"
     }
   ],
@@ -909,16 +1934,16 @@
               "isExhausted": false
             },
             {
-              "_id": "KiGxLcIY",
+              "_id": "KyXAs0Er",
               "_type": "Resource",
-              "name": "Big Rock",
+              "name": "Green Sludge",
               "relationship": "",
               "isExhausted": false
             },
             {
-              "_id": "KyXAs0Er",
+              "_id": "KiGxLcIY",
               "_type": "Resource",
-              "name": "Green Sludge",
+              "name": "Big Rock",
               "relationship": "",
               "isExhausted": false
             }
@@ -927,6 +1952,157 @@
         },
         {
           "_id": "I71zBNAR",
+          "_type": "Community",
+          "name": "Disaffected Youth",
+          "resources": [],
+          "voice": "people"
+        }
+      ]
+    },
+    {
+      "_id": "fyD-74CR",
+      "_type": "Society",
+      "name": "Ten Thousand Islands",
+      "archetype": "the aesthetic",
+      "planet": "",
+      "communities": []
+    },
+    {
+      "_id": "T8YobDE2",
+      "_type": "Society",
+      "name": "Ten Thousand Islands",
+      "archetype": "the aesthetic",
+      "planet": "",
+      "communities": []
+    },
+    {
+      "_id": "fQFWp_Bl",
+      "_type": "Society",
+      "name": "The Willow Whompers",
+      "archetype": "the mighty",
+      "planet": "",
+      "communities": [
+        {
+          "_id": "pQeHz9dx",
+          "_type": "Community",
+          "name": "Venerable Elders",
+          "resources": [
+            {
+              "_id": "JzgMxVCV",
+              "_type": "Resource",
+              "name": "Green Sludge",
+              "relationship": "",
+              "isExhausted": false
+            },
+            {
+              "_id": "wVBc24jj",
+              "_type": "Resource",
+              "name": "Amazing Suspenders",
+              "relationship": "",
+              "isExhausted": false
+            },
+            {
+              "_id": "PZl-5wqc",
+              "_type": "Resource",
+              "name": "Big Rock",
+              "relationship": "",
+              "isExhausted": false
+            }
+          ],
+          "voice": "leader"
+        },
+        {
+          "_id": "LMcbme-u",
+          "_type": "Community",
+          "name": "Disaffected Youth",
+          "resources": [],
+          "voice": "people"
+        }
+      ]
+    },
+    {
+      "_id": "VMwtLbqo",
+      "_type": "Society",
+      "name": "The Willow Whompers",
+      "archetype": "the mighty",
+      "planet": "",
+      "communities": [
+        {
+          "_id": "lt1bic-m",
+          "_type": "Community",
+          "name": "Venerable Elders",
+          "resources": [
+            {
+              "_id": "my8qs8sn",
+              "_type": "Resource",
+              "name": "Green Sludge",
+              "relationship": "",
+              "isExhausted": false
+            },
+            {
+              "_id": "Qbv8OGpH",
+              "_type": "Resource",
+              "name": "Amazing Suspenders",
+              "relationship": "",
+              "isExhausted": false
+            },
+            {
+              "_id": "DJhU-HXP",
+              "_type": "Resource",
+              "name": "Big Rock",
+              "relationship": "",
+              "isExhausted": false
+            }
+          ],
+          "voice": "leader"
+        },
+        {
+          "_id": "CopBcuby",
+          "_type": "Community",
+          "name": "Disaffected Youth",
+          "resources": [],
+          "voice": "people"
+        }
+      ]
+    },
+    {
+      "_id": "gdNnEGr0",
+      "_type": "Society",
+      "name": "The Willow Whompers",
+      "archetype": "the mighty",
+      "planet": "",
+      "communities": [
+        {
+          "_id": "W1nfLILQ",
+          "_type": "Community",
+          "name": "Venerable Elders",
+          "resources": [
+            {
+              "_id": "FgYYG86T",
+              "_type": "Resource",
+              "name": "Green Sludge",
+              "relationship": "",
+              "isExhausted": false
+            },
+            {
+              "_id": "aokk5nyN",
+              "_type": "Resource",
+              "name": "Amazing Suspenders",
+              "relationship": "",
+              "isExhausted": false
+            },
+            {
+              "_id": "isA3dXDL",
+              "_type": "Resource",
+              "name": "Big Rock",
+              "relationship": "",
+              "isExhausted": false
+            }
+          ],
+          "voice": "leader"
+        },
+        {
+          "_id": "yvDQv1Ei",
           "_type": "Community",
           "name": "Disaffected Youth",
           "resources": [],
@@ -1022,16 +2198,16 @@
           "isExhausted": false
         },
         {
-          "_id": "KiGxLcIY",
+          "_id": "KyXAs0Er",
           "_type": "Resource",
-          "name": "Big Rock",
+          "name": "Green Sludge",
           "relationship": "",
           "isExhausted": false
         },
         {
-          "_id": "KyXAs0Er",
+          "_id": "KiGxLcIY",
           "_type": "Resource",
-          "name": "Green Sludge",
+          "name": "Big Rock",
           "relationship": "",
           "isExhausted": false
         }
@@ -1040,6 +2216,114 @@
     },
     {
       "_id": "I71zBNAR",
+      "_type": "Community",
+      "name": "Disaffected Youth",
+      "resources": [],
+      "voice": "people"
+    },
+    {
+      "_id": "pQeHz9dx",
+      "_type": "Community",
+      "name": "Venerable Elders",
+      "resources": [
+        {
+          "_id": "JzgMxVCV",
+          "_type": "Resource",
+          "name": "Green Sludge",
+          "relationship": "",
+          "isExhausted": false
+        },
+        {
+          "_id": "wVBc24jj",
+          "_type": "Resource",
+          "name": "Amazing Suspenders",
+          "relationship": "",
+          "isExhausted": false
+        },
+        {
+          "_id": "PZl-5wqc",
+          "_type": "Resource",
+          "name": "Big Rock",
+          "relationship": "",
+          "isExhausted": false
+        }
+      ],
+      "voice": "leader"
+    },
+    {
+      "_id": "LMcbme-u",
+      "_type": "Community",
+      "name": "Disaffected Youth",
+      "resources": [],
+      "voice": "people"
+    },
+    {
+      "_id": "lt1bic-m",
+      "_type": "Community",
+      "name": "Venerable Elders",
+      "resources": [
+        {
+          "_id": "my8qs8sn",
+          "_type": "Resource",
+          "name": "Green Sludge",
+          "relationship": "",
+          "isExhausted": false
+        },
+        {
+          "_id": "Qbv8OGpH",
+          "_type": "Resource",
+          "name": "Amazing Suspenders",
+          "relationship": "",
+          "isExhausted": false
+        },
+        {
+          "_id": "DJhU-HXP",
+          "_type": "Resource",
+          "name": "Big Rock",
+          "relationship": "",
+          "isExhausted": false
+        }
+      ],
+      "voice": "leader"
+    },
+    {
+      "_id": "CopBcuby",
+      "_type": "Community",
+      "name": "Disaffected Youth",
+      "resources": [],
+      "voice": "people"
+    },
+    {
+      "_id": "W1nfLILQ",
+      "_type": "Community",
+      "name": "Venerable Elders",
+      "resources": [
+        {
+          "_id": "FgYYG86T",
+          "_type": "Resource",
+          "name": "Green Sludge",
+          "relationship": "",
+          "isExhausted": false
+        },
+        {
+          "_id": "aokk5nyN",
+          "_type": "Resource",
+          "name": "Amazing Suspenders",
+          "relationship": "",
+          "isExhausted": false
+        },
+        {
+          "_id": "isA3dXDL",
+          "_type": "Resource",
+          "name": "Big Rock",
+          "relationship": "",
+          "isExhausted": false
+        }
+      ],
+      "voice": "leader"
+    },
+    {
+      "_id": "yvDQv1Ei",
       "_type": "Community",
       "name": "Disaffected Youth",
       "resources": [],
@@ -1109,6 +2393,69 @@
       "name": "Big Rock",
       "relationship": "",
       "isExhausted": false
+    },
+    {
+      "_id": "JzgMxVCV",
+      "_type": "Resource",
+      "name": "Green Sludge",
+      "relationship": "",
+      "isExhausted": false
+    },
+    {
+      "_id": "wVBc24jj",
+      "_type": "Resource",
+      "name": "Amazing Suspenders",
+      "relationship": "",
+      "isExhausted": false
+    },
+    {
+      "_id": "PZl-5wqc",
+      "_type": "Resource",
+      "name": "Big Rock",
+      "relationship": "",
+      "isExhausted": false
+    },
+    {
+      "_id": "my8qs8sn",
+      "_type": "Resource",
+      "name": "Green Sludge",
+      "relationship": "",
+      "isExhausted": false
+    },
+    {
+      "_id": "Qbv8OGpH",
+      "_type": "Resource",
+      "name": "Amazing Suspenders",
+      "relationship": "",
+      "isExhausted": false
+    },
+    {
+      "_id": "DJhU-HXP",
+      "_type": "Resource",
+      "name": "Big Rock",
+      "relationship": "",
+      "isExhausted": false
+    },
+    {
+      "_id": "FgYYG86T",
+      "_type": "Resource",
+      "name": "Green Sludge",
+      "relationship": "",
+      "isExhausted": false
+    },
+    {
+      "_id": "aokk5nyN",
+      "_type": "Resource",
+      "name": "Amazing Suspenders",
+      "relationship": "",
+      "isExhausted": false
+    },
+    {
+      "_id": "isA3dXDL",
+      "_type": "Resource",
+      "name": "Big Rock",
+      "relationship": "",
+      "isExhausted": false
     }
   ],
   "players": [
@@ -1138,54 +2485,81 @@
         "they",
         "them"
       ]
+    },
+    {
+      "_id": "cE1Q2dKk",
+      "_type": "Player",
+      "name": "Ving Rhames",
+      "pronouns": [
+        "they",
+        "them"
+      ]
+    },
+    {
+      "_id": "pWdPOzxy",
+      "_type": "Player",
+      "name": "Ving Rhames",
+      "pronouns": [
+        "they",
+        "them"
+      ]
+    },
+    {
+      "_id": "b_iho6In",
+      "_type": "Player",
+      "name": "Ving Rhames",
+      "pronouns": [
+        "they",
+        "them"
+      ]
     }
   ],
   "active": {
     "session": {
-      "_id": "IrDOx2ri",
+      "_id": "tw_Ab8rq",
       "_type": "Session",
       "date": "2024-07-15T04:00:00.000Z",
       "game": {
-        "_id": "r1SelQvF",
+        "_id": "TLTfdPvG",
         "name": "ExCITE Center - October 2024"
       },
       "players": [
         {
-          "_id": "YHmwC1Em",
+          "_id": "b_iho6In",
           "name": "Ving Rhames"
         }
       ],
       "societies": [
         {
-          "_id": "arHWufTH",
+          "_id": "gdNnEGr0",
           "_type": "Society",
           "name": "The Willow Whompers",
           "archetype": "the mighty",
           "planet": "",
           "communities": [
             {
-              "_id": "i74hrb8s",
+              "_id": "W1nfLILQ",
               "_type": "Community",
               "name": "Venerable Elders",
               "resources": [
                 {
-                  "_id": "Ts9PH2o9",
+                  "_id": "FgYYG86T",
+                  "_type": "Resource",
+                  "name": "Green Sludge",
+                  "relationship": "",
+                  "isExhausted": false
+                },
+                {
+                  "_id": "aokk5nyN",
                   "_type": "Resource",
                   "name": "Amazing Suspenders",
                   "relationship": "",
                   "isExhausted": false
                 },
                 {
-                  "_id": "KiGxLcIY",
+                  "_id": "isA3dXDL",
                   "_type": "Resource",
                   "name": "Big Rock",
-                  "relationship": "",
-                  "isExhausted": false
-                },
-                {
-                  "_id": "KyXAs0Er",
-                  "_type": "Resource",
-                  "name": "Green Sludge",
                   "relationship": "",
                   "isExhausted": false
                 }
@@ -1193,7 +2567,7 @@
               "voice": "leader"
             },
             {
-              "_id": "I71zBNAR",
+              "_id": "yvDQv1Ei",
               "_type": "Community",
               "name": "Disaffected Youth",
               "resources": [],
@@ -1204,187 +2578,208 @@
       ],
       "phases": [
         {
-          "_id": "t57fAQka",
+          "_id": "F4EvqrfQ",
           "_type": "Phase",
           "name": "Global Phase",
           "round": 0,
           "length": "1970-01-01T00:00:01.200Z",
-          "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
+          "actualTimeStart": "2024-12-04T17:50:07.894Z",
+          "timeElapsed": 52.066999999999986,
+          "isPlaying": true
         },
         {
-          "_id": "kCGBFOeX",
+          "_id": "LLKGDyAR",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 0,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "OsAOEfi3",
+          "_id": "RBsX_Gem",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 0,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "f6TIth6g",
+          "_id": "dCVd-L09",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 0,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "ylAHFOHz",
+          "_id": "M0Rgq03V",
           "_type": "Phase",
           "name": "Individual Phase",
           "round": 0,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "d9zRsTxp",
+          "_id": "Cy-ADB0E",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 1,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "P-DHYajN",
+          "_id": "F_CCxBnd",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 1,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "Y1aU5qhQ",
+          "_id": "Tcjjc-BX",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 1,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "wgKqu-4I",
+          "_id": "extKGx2-",
           "_type": "Phase",
           "name": "Individual Phase",
           "round": 1,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "VVMIAKtH",
+          "_id": "xFoYPRzY",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 2,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "OHuqsx0I",
+          "_id": "RX3P_q6G",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 2,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "HS1snAlN",
+          "_id": "IBj_pGNM",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 2,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "vtFySNMB",
+          "_id": "hKk53pHm",
           "_type": "Phase",
           "name": "Individual Phase",
           "round": 2,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "JwaJwuiV",
+          "_id": "j7VOI2Mr",
           "_type": "Phase",
           "name": "Universal Phase",
           "round": 3,
           "length": 240,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "YXBQ1Rph",
+          "_id": "rExZ3c5B",
           "_type": "Phase",
           "name": "Societal Phase",
           "round": 3,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "k32gLPqb",
+          "_id": "Uw586Xhf",
           "_type": "Phase",
           "name": "Galactic Phase",
           "round": 3,
           "length": 600,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "KQs82qnS",
+          "_id": "acM-6I38",
           "_type": "Phase",
           "name": "Generational Phase",
           "round": 3,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         },
         {
-          "_id": "KZQPCRoo",
+          "_id": "dXFEm0sA",
           "_type": "Phase",
           "name": "Conclusion Phase",
           "round": 3,
           "length": 500,
+          "scheduledTimeStart": "2024-12-04T17:47:32.335Z",
+          "scheduledTimeEnd": "2024-12-04T17:47:32.335Z",
           "timeElapsed": 0,
-          "timeStarted": "2024-12-01T17:27:34.103Z",
-          "timeCompleted": "2024-12-01T17:27:34.103Z"
+          "isPlaying": false
         }
       ],
       "currentRound": 0,
+      "scheduledTimeStart": "2024-12-04T17:47:32.334Z",
+      "scheduledTimeEnd": "2024-12-04T17:47:32.334Z",
       "name": "Hi there"
     }
   }

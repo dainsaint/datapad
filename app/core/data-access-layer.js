@@ -54,6 +54,11 @@ export function getAllSessions() {
   return db.data.sessions || [];
 }
 
+export function updatePhase(phase, patch) {
+  db.update( _ => {
+    Object.assign(phase, patch);
+  })
+}
 
 export function addSessionToGame(session, game) {
   db.update( _ => {
