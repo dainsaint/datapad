@@ -51,6 +51,7 @@ export function tick(deltaTime) {
     const activePhases = session.phases.filter( phase => phase.isPlaying );
     for( const phase of activePhases ){
       phase.tick(deltaTime);
+      updatePhase(phase, {});
       broadcast("phases");
     }
   } catch(e) {
@@ -150,8 +151,10 @@ htmlRouter.put("/session/:session_id/phase/:id", (req, res) => {
 
     //this is the way to "refresh" whatever page
     //this was called from using ajax
-    const url = req.headers["hx-current-url"];
-    res.setHeader("HX-Location", url);
+    const currentUrl = req.get("hx-current-url");
+    if( currentUrl )
+      res.setHeader("HX-Location", currentUrl);
+    
     res.sendStatus(200);
   } catch(e) {
     console.log( e );

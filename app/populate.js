@@ -13,10 +13,12 @@ import {
   createSession,
   createSociety,
   makeActiveSession,
+  wipeAllData,
 } from "./core/data-access-layer.js";
 
 export function populateDummyData() {
 
+  wipeAllData();
 
   const game = createGame({name: "ExCITE Center - October 2024"});
   const session = createSession({name: "Hi there", date: new Date("July 15, 2024")});
