@@ -86,9 +86,9 @@
           "length": "1970-01-01T00:00:01.200Z",
           "scheduledTimeStart": "2024-12-04T18:19:29.824Z",
           "scheduledTimeEnd": "2024-12-04T18:19:29.824Z",
-          "actualTimeStart": "2024-12-04T18:19:55.984Z",
-          "timeElapsed": 65.076,
-          "isPlaying": true
+          "actualTimeStart": "2024-12-06T01:59:55.108Z",
+          "timeElapsed": 129701.27899990225,
+          "isPlaying": false
         },
         {
           "_id": "z5SMybJ7",
@@ -477,9 +477,9 @@
           "length": "1970-01-01T00:00:01.200Z",
           "scheduledTimeStart": "2024-12-04T18:19:29.824Z",
           "scheduledTimeEnd": "2024-12-04T18:19:29.824Z",
-          "actualTimeStart": "2024-12-04T18:19:55.984Z",
-          "timeElapsed": 65.076,
-          "isPlaying": true
+          "actualTimeStart": "2024-12-06T01:59:55.108Z",
+          "timeElapsed": 129701.27899990225,
+          "isPlaying": false
         },
         {
           "_id": "z5SMybJ7",
