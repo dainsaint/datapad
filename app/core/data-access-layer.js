@@ -9,6 +9,14 @@ import Database from "./database.js";
 const db = Database.open("data.json");
 
 //////////////////////////////////////////////////////
+// DANGER
+//////////////////////////////////////////////////////
+export function wipeAllData() {
+  db.data = {};
+  db.write()
+}
+
+//////////////////////////////////////////////////////
 // GAMES
 //////////////////////////////////////////////////////
 
@@ -54,6 +62,11 @@ export function getAllSessions() {
   return db.data.sessions || [];
 }
 
+export function updatePhase(phase, patch) {
+  db.update( _ => {
+    Object.assign(phase, patch);
+  })
+}
 
 export function addSessionToGame(session, game) {
   db.update( _ => {

@@ -7,6 +7,8 @@ export default class Session extends Model {
   societies = [];
   phases = [];
   currentRound = 0;
+  scheduledTimeStart = new Date();
+  scheduledTimeEnd = new Date();
 
   constructor({name, date = new Date()}) {
     super();
