@@ -1,13 +1,28 @@
-import Model from "../core/model.js";
+import { SessionModel } from "./session.js";
 
-export default class Resource extends Model {
-  name = "New Resource";
-  relationship = "";
-  isExhausted = false;
+export default function Resource ({
+  name = "New Resource",
+  tags = []
+}){
+  const model = SessionModel({type: "Resource"});
 
-  constructor({name}) {
-    super();
-    this.name = name;
+  const resource = {
+    ...model,
+    name,
+    tags,
+
+    toURL(append = "") {
+      return `/sessions/${resource.session}/resources/${resource.id}` + append;
+    }
   }
 
+  return resource; 
 }
+
+export const ResourceTag = {
+  EXHAUSTED: "exhausted",
+  VITAL: "vital",
+  TRANSFORMED: "transformed",
+  DESTROYED: "destroyed",
+  SEIZED: "seized",
+};

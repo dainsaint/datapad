@@ -12,12 +12,12 @@ export default function PhaseCard( phase, i ) {
 
 export function PhaseTime( phase ) {
   return `
-    <div class="phase-time" hx-get="/ui/phase/time/${phase._id}" hx-trigger="sse:phases">
+    <div class="phase-time" hx-get="${ phase.toURL('/time') }" hx-trigger="sse:phases">
       <header>
         <h2>${phase.name}</h2>
         <p class="subtitle">Round ${phase.round + 1}</p>
       </header>
-      <time datetime="${phase.timeRemaining}s">${secondsToTime(phase.timeRemaining)}</time>    
+      <time datetime="${phase.timeRemaining}s">${secondsToTime(phase.timeRemaining())}</time>    
     </div>
   `
 }

@@ -1,0 +1,217 @@
+{
+  "id": "JVXZmnhs",
+  "type": "Session",
+  "filename": "session/JVXZmnhs.json",
+  "name": "What In Tarnation?",
+  "date": "2024-12-12T21:53:38.602Z",
+  "game": {},
+  "players": [
+    {
+      "id": "r1bJ6JGx",
+      "type": "Player",
+      "session": "JVXZmnhs",
+      "name": "Ving Rhames",
+      "tags": []
+    }
+  ],
+  "phases": [
+    {
+      "id": "tE080ETP",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Global Phase",
+      "round": 0,
+      "duration": 1200,
+      "status": "idle"
+    },
+    {
+      "id": "D-NDfXhj",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Universal Phase",
+      "round": 0,
+      "duration": 240,
+      "status": "idle"
+    },
+    {
+      "id": "OpFE4yjV",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Societal Phase",
+      "round": 0,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "xRI7zDL9",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Galactic Phase",
+      "round": 0,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "SmMZ7prD",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Individual Phase",
+      "round": 0,
+      "duration": 500,
+      "status": "idle"
+    },
+    {
+      "id": "il4bju9h",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Universal Phase",
+      "round": 1,
+      "duration": 240,
+      "status": "idle"
+    },
+    {
+      "id": "IAiEYmhE",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Societal Phase",
+      "round": 1,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "ZvHamM93",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Galactic Phase",
+      "round": 1,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "PaxrpDyp",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Individual Phase",
+      "round": 1,
+      "duration": 500,
+      "status": "idle"
+    },
+    {
+      "id": "VhUnQGf5",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Universal Phase",
+      "round": 2,
+      "duration": 240,
+      "status": "idle"
+    },
+    {
+      "id": "K_SofV-r",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Societal Phase",
+      "round": 2,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "JU48_xa2",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Galactic Phase",
+      "round": 2,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "y_i6v8ZG",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Individual Phase",
+      "round": 2,
+      "duration": 500,
+      "status": "idle"
+    },
+    {
+      "id": "KnGBYvax",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Universal Phase",
+      "round": 3,
+      "duration": 240,
+      "status": "idle"
+    },
+    {
+      "id": "IjQ5xRUt",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Societal Phase",
+      "round": 3,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "PBn6Lv2v",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Galactic Phase",
+      "round": 3,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "F0a-Fb9e",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Generational Phase",
+      "round": 3,
+      "duration": 500,
+      "status": "idle"
+    },
+    {
+      "id": "hQQVlMUv",
+      "type": "Phase",
+      "session": "JVXZmnhs",
+      "name": "Conclusion Phase",
+      "round": 3,
+      "duration": 500,
+      "status": "idle"
+    }
+  ],
+  "societies": [
+    {
+      "id": "gkpAftnp",
+      "type": "Society",
+      "session": "JVXZmnhs",
+      "name": "Ten Thousand Islands",
+      "archetype": "the curious",
+      "planet": "Jorun",
+      "communities": [
+        {
+          "id": "GKVRd1uM",
+          "type": "Community",
+          "session": "JVXZmnhs",
+          "name": "Venerable Elders",
+          "voice": "leader",
+          "resources": [],
+          "tags": [],
+          "isEndangered": true
+        }
+      ],
+      "resources": []
+    }
+  ],
+  "communities": [
+    {
+      "id": "GKVRd1uM",
+      "type": "Community",
+      "session": "JVXZmnhs",
+      "name": "Venerable Elders",
+      "voice": "leader",
+      "resources": [],
+      "tags": [],
+      "isEndangered": true
+    }
+  ],
+  "resources": []
+}

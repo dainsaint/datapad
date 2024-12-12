@@ -1,3 +1,4 @@
+import { map } from "../core/utils.js";
 import LayoutToolbar from "./LayoutToolbar.js";
 
 export default function GameOverview (game) {
@@ -8,13 +9,13 @@ export default function GameOverview (game) {
       <ol class="cards">
         ${game.sessions.map(
           (session) =>
-            `<li><a href="/game/${game._id}/session/${session._id}">bleh</a></li>`
+            `<li><a href="${ session.toURL() }">bleh</a></li>`
         )}
       </ol>
 
       <h2>Players</h2>
       <ul>
-        ${game.players.map((player) => `<li>${player.name}</li>`).join("\n")}
+        ${ map( game.players, player => `<li><a href="${ player.toURL() }">${player.name}</a></li>`) }
       </ul>
 
     </main>

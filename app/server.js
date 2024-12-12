@@ -5,6 +5,7 @@ import Timer from "./core/timer.js";
 
 export const request = {
   path: "/",
+  query: {},
   params: {}
 }
 
@@ -18,7 +19,7 @@ export default class Server {
   timer;
 
   constructor() {
-    this.timer = new Timer(1000, this.tick);
+    this.timer = Timer(this.tick.bind(this), 1000);
   }
 
   start(port) {
@@ -29,6 +30,7 @@ export default class Server {
     app.use(express.static("app/static"));
     app.use((req, res, next) => {
       request.path = req.path;
+      request.query = req.query;
       request.params = req.params;
       next();
     });

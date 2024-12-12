@@ -1,73 +1,85 @@
+import Community, { CommunityVoice } from "./models/community.js";
 import Phase from "./models/phase.js";
-
-import {
-  addCommunityToSociety,
-  addPlayerToSession,
-  addResourceToCommunity,
-  addSessionToGame,
-  addSocietyToSession,
-  createCommunity,
-  createGame,
-  createPlayer,
-  createResource,
-  createSession,
-  createSociety,
-  makeActiveSession,
-  wipeAllData,
-} from "./core/data-access-layer.js";
+import Player from "./models/player.js";
+import Resource from "./models/resource.js";
+import Session from "./models/session.js";
+import Society, { SocietyArchetype } from "./models/society.js";
 
 export function populateDummyData() {
 
-  wipeAllData();
+  const session = Session({
+    date: new Date(),  
+    name: "What In Tarnation?"
+  });
 
-  const game = createGame({name: "ExCITE Center - October 2024"});
-  const session = createSession({name: "Hi there", date: new Date("July 15, 2024")});
+  session.addPhase(Phase({ name: "Global Phase",       round: 0, duration: 1200 }))
+  session.addPhase(Phase({ name: "Universal Phase",    round: 0, duration: 240 }))
+  session.addPhase(Phase({ name: "Societal Phase",     round: 0, duration: 600 }))
+  session.addPhase(Phase({ name: "Galactic Phase",     round: 0, duration: 600 }))
+  session.addPhase(Phase({ name: "Individual Phase",   round: 0, duration: 500 }))
+  session.addPhase(Phase({ name: "Universal Phase",    round: 1, duration: 240 }))
+  session.addPhase(Phase({ name: "Societal Phase",     round: 1, duration: 600 }))
+  session.addPhase(Phase({ name: "Galactic Phase",     round: 1, duration: 600 }))
+  session.addPhase(Phase({ name: "Individual Phase",   round: 1, duration: 500 }))
+  session.addPhase(Phase({ name: "Universal Phase",    round: 2, duration: 240 }))
+  session.addPhase(Phase({ name: "Societal Phase",     round: 2, duration: 600 }))
+  session.addPhase(Phase({ name: "Galactic Phase",     round: 2, duration: 600 }))
+  session.addPhase(Phase({ name: "Individual Phase",   round: 2, duration: 500 }))
+  session.addPhase(Phase({ name: "Universal Phase",    round: 3, duration: 240 }))
+  session.addPhase(Phase({ name: "Societal Phase",     round: 3, duration: 600 }))
+  session.addPhase(Phase({ name: "Galactic Phase",     round: 3, duration: 600 }))
+  session.addPhase(Phase({ name: "Generational Phase", round: 3, duration: 500 }))
+  session.addPhase(Phase({ name: "Conclusion Phase",   round: 3, duration: 500 }))
 
-  //TODO: get this in the update cycle
-  session.phases.push(
-    new Phase("Global Phase", 0, 1200),
-    new Phase("Universal Phase", 0, 240),
-    new Phase("Societal Phase", 0, 600),
-    new Phase("Galactic Phase", 0, 600),
-    new Phase("Individual Phase", 0, 500),
-    new Phase("Universal Phase", 1, 240),
-    new Phase("Societal Phase", 1, 600),
-    new Phase("Galactic Phase", 1, 600),
-    new Phase("Individual Phase", 1, 500),
-    new Phase("Universal Phase", 2, 240),
-    new Phase("Societal Phase", 2, 600),
-    new Phase("Galactic Phase", 2, 600),
-    new Phase("Individual Phase", 2, 500),
-    new Phase("Universal Phase", 3, 240),
-    new Phase("Societal Phase", 3, 600),
-    new Phase("Galactic Phase", 3, 600),
-    new Phase("Generational Phase", 3, 500),
-    new Phase("Conclusion Phase", 3, 500)
-  );
 
-  //if the session is associated with a game, update that bidirectionally
-  addSessionToGame(session, game);
 
-  const society = createSociety({name: "The Willow Whompers", archetype: "the mighty"});
-  addSocietyToSession(society, session);
+  const player = Player({
+    name: "Ving Rhames",
+  });
 
-  const community = createCommunity({name: "Venerable Elders", voice: "leader"});
-  addCommunityToSociety(community, society);
+  const society = Society({
+    name: "Ten Thousand Islands",
+    archetype: SocietyArchetype.CURIOUS,
+    planet: "Jorun",
+  });
 
-  const community2 = createCommunity({name: "Disaffected Youth", voice: "people"});
-  addCommunityToSociety(community2, society);
+  const community = Community({
+    name: "Venerable Elders",
+    voice: CommunityVoice.LEADER,
+  });
 
-  
-  const resource1 = createResource({name: "Green Sludge"});
-  const resource2 = createResource({name: "Amazing Suspenders"});
-  const resource3 = createResource({name: "Big Rock"});
+  const community2 = Community({
+    name: "Disaffected Youth",
+    voice: CommunityVoice.PEOPLE,
+  });
 
-  addResourceToCommunity(resource1, community);
-  addResourceToCommunity(resource2, community);
-  addResourceToCommunity(resource3, community);
 
-  const player = createPlayer({name: "Ving Rhames", pronouns: ["he", "him"]});
-  addPlayerToSession(player, session);
+  const resource1 = Resource({ name: "Green Sludge" });
+  const resource2 = Resource({ name: "Amazing Suspenders" });
+  const resource3 = Resource({ name: "Big Rock" });
 
-  makeActiveSession(session);
+  community.addResource(resource1);
+  community.addResource(resource2);
+  community.addResource(resource3);
+
+  society.addCommunity(community);
+  society.addCommunity(community2);
+
+  session.addPlayer(player);
+  session.addSociety(society);
+  session.addCommunity(community);
+  session.addCommunity(community2);
+  session.addResource(resource1);
+  session.addResource(resource2);
+  session.addResource(resource3);
+
+  session.makeActive();
+
+  // const datastore = Datastore({ root: "datastore-two/"} );
+  // const filename = datastore.getFilename( session );
+  // datastore.save( filename, session );
+
+  session.save();
+
+  // console.log(datastore.load("session/bIXPgPNH.json"));
 }

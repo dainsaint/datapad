@@ -26,3 +26,17 @@ export function iconForArchetype(archetype) {
 export function map(array, ...transformers) {
   return transformers.reduce( (result, transformer) => result.map(transformer), array ).join("\n");
 }
+
+export function debounce(func, duration) {
+  let timeout;
+
+  return function (...args) {
+    const effect = () => {
+      timeout = null;
+      return func.apply(this, args);
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(effect, duration);
+  };
+}

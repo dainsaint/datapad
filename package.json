@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"nodemon index.js --ignore data/\" \"node dev.js\"",
+    "dev": "concurrently \"nodemon index.js --ignore datastore/\" \"node dev.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

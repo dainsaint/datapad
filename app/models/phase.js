@@ -1,48 +1,66 @@
-import Model from "../core/model.js";
+import Tags from "../core/tags.js";
+import { SessionModel } from "./session.js";
 
-export default class Phase extends Model {
-  name = "";
-  round = 0;
-  length = 0;
+export default function Phase({ 
+  name = "",
+  round = 0,
+  duration = 0
+}) {
+  const model = SessionModel({ type: "Phase" });
 
-  scheduledTimeStart = new Date();
-  scheduledTimeEnd = new Date();
-  actualTimeStart;
-  actualTimeComplete;
-  timeElapsed = 0;
+  let status = PhaseStatus.IDLE;
+  let timeElapsed = 0, actualTimeComplete, actualTimeStart;
+  
+  const phase = {
+    ...model,
+    name,
+    round,
+    duration,
+    status,
 
-  isPlaying = false;
+    timeElapsed,
+    actualTimeStart,
+    actualTimeComplete,
 
-  constructor(name, round, length) {
-    super();
-    this.name = name;
-    this.round = round;
-    this.length = length;
-  }
+    timeRemaining() {
+      return Math.floor(duration - timeElapsed);
+    },
 
-  get timeRemaining() {
-    return Math.floor(this.length - this.timeElapsed);
-  }
+    actualDuration() {
+      return actualTimeComplete - actualTimeStart;
+    },
 
-  get actualLength() {
-    return this.actualTimeComplete - this.actualTimeStart;
-  }
+    startPhase() {
+      actualTimeStart = new Date();
+      status = PhaseStatus.PLAYING;
+    },
 
-  startPhase() {
-    this.actualTimeStart = new Date();
-    this.isPlaying = true;
-  }
+    pausePhase() {
+      phase.status = PhaseStatus.PAUSED;
+    },
 
-  pausePhase() {
-    this.isPlaying = false;
-  }
+    completePhase() {
+      actualTimeComplete = new Date();
+      phase.status = PhaseStatus.COMPLETE;
+    },
 
-  completePhase() {
-    this.actualTimeComplete = new Date();
-    this.isPlaying = false;
-  }
+    tick(deltaTimeMS) {
+      if ( phase.status === PhaseStatus.PLAYING ) {
+        timeElapsed += deltaTimeMS / 1000;
+      }
+    },
 
-  tick(deltaTimeMS) {
-    if (this.isPlaying) this.timeElapsed += deltaTimeMS/1000;
-  }
+    toURL(append = "") {
+      return `/sessions/${phase.session}/phases/${phase.id}` + append;
+    },
+  };
+
+  return phase;
+}
+
+export const PhaseStatus = {
+  IDLE: "idle",
+  PLAYING: "playing",
+  PAUSED: "paused",
+  COMPLETE: "complete"
 }

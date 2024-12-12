@@ -1,0 +1,300 @@
+{
+  "id": "A-9Fjs_y",
+  "type": "Session",
+  "name": "What In Tarnation?",
+  "date": "2024-12-12T22:52:48.057Z",
+  "tags": [
+    "active"
+  ],
+  "game": {},
+  "players": [
+    {
+      "id": "hxj1RD1o",
+      "type": "Player",
+      "session": "A-9Fjs_y",
+      "name": "Ving Rhames",
+      "tags": []
+    }
+  ],
+  "phases": [
+    {
+      "id": "xCioRZld",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Global Phase",
+      "round": 0,
+      "duration": 1200,
+      "status": "idle"
+    },
+    {
+      "id": "Lp2ZwTRw",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Universal Phase",
+      "round": 0,
+      "duration": 240,
+      "status": "idle"
+    },
+    {
+      "id": "dmx8rMAk",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Societal Phase",
+      "round": 0,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "FTzpUWgw",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Galactic Phase",
+      "round": 0,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "q1csRlOm",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Individual Phase",
+      "round": 0,
+      "duration": 500,
+      "status": "idle"
+    },
+    {
+      "id": "RAIBMM8A",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Universal Phase",
+      "round": 1,
+      "duration": 240,
+      "status": "idle"
+    },
+    {
+      "id": "Buq3iU1o",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Societal Phase",
+      "round": 1,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "qI2kciKM",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Galactic Phase",
+      "round": 1,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "GHEJAI6X",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Individual Phase",
+      "round": 1,
+      "duration": 500,
+      "status": "idle"
+    },
+    {
+      "id": "SgJUjNCi",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Universal Phase",
+      "round": 2,
+      "duration": 240,
+      "status": "idle"
+    },
+    {
+      "id": "dG2jnOY6",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Societal Phase",
+      "round": 2,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "HXVBx-2t",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Galactic Phase",
+      "round": 2,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "SXVoT9oT",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Individual Phase",
+      "round": 2,
+      "duration": 500,
+      "status": "idle"
+    },
+    {
+      "id": "QBwq9YC4",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Universal Phase",
+      "round": 3,
+      "duration": 240,
+      "status": "idle"
+    },
+    {
+      "id": "t_jSgc3F",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Societal Phase",
+      "round": 3,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "ujAyHG5p",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Galactic Phase",
+      "round": 3,
+      "duration": 600,
+      "status": "idle"
+    },
+    {
+      "id": "B7wAVVBW",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Generational Phase",
+      "round": 3,
+      "duration": 500,
+      "status": "idle"
+    },
+    {
+      "id": "YaV5eWkr",
+      "type": "Phase",
+      "session": "A-9Fjs_y",
+      "name": "Conclusion Phase",
+      "round": 3,
+      "duration": 500,
+      "status": "idle"
+    }
+  ],
+  "societies": [
+    {
+      "id": "DvTOf-pS",
+      "type": "Society",
+      "session": "A-9Fjs_y",
+      "name": "Ten Thousand Islands",
+      "archetype": "the curious",
+      "planet": "Jorun",
+      "communities": [
+        {
+          "id": "HxfV-Tp8",
+          "type": "Community",
+          "session": "A-9Fjs_y",
+          "name": "Venerable Elders",
+          "voice": "leader",
+          "resources": [
+            {
+              "id": "shv2FcgY",
+              "type": "Resource",
+              "session": "A-9Fjs_y",
+              "name": "Green Sludge",
+              "tags": []
+            },
+            {
+              "id": "BnpWd7Lr",
+              "type": "Resource",
+              "session": "A-9Fjs_y",
+              "name": "Amazing Suspenders",
+              "tags": []
+            },
+            {
+              "id": "rfk_bfmZ",
+              "type": "Resource",
+              "session": "A-9Fjs_y",
+              "name": "Big Rock",
+              "tags": []
+            }
+          ],
+          "tags": []
+        },
+        {
+          "id": "mwENyV24",
+          "type": "Community",
+          "session": "A-9Fjs_y",
+          "name": "Disaffected Youth",
+          "voice": "people",
+          "resources": [],
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "communities": [
+    {
+      "id": "HxfV-Tp8",
+      "type": "Community",
+      "session": "A-9Fjs_y",
+      "name": "Venerable Elders",
+      "voice": "leader",
+      "resources": [
+        {
+          "id": "shv2FcgY",
+          "type": "Resource",
+          "session": "A-9Fjs_y",
+          "name": "Green Sludge",
+          "tags": []
+        },
+        {
+          "id": "BnpWd7Lr",
+          "type": "Resource",
+          "session": "A-9Fjs_y",
+          "name": "Amazing Suspenders",
+          "tags": []
+        },
+        {
+          "id": "rfk_bfmZ",
+          "type": "Resource",
+          "session": "A-9Fjs_y",
+          "name": "Big Rock",
+          "tags": []
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "mwENyV24",
+      "type": "Community",
+      "session": "A-9Fjs_y",
+      "name": "Disaffected Youth",
+      "voice": "people",
+      "resources": [],
+      "tags": []
+    }
+  ],
+  "resources": [
+    {
+      "id": "shv2FcgY",
+      "type": "Resource",
+      "session": "A-9Fjs_y",
+      "name": "Green Sludge",
+      "tags": []
+    },
+    {
+      "id": "BnpWd7Lr",
+      "type": "Resource",
+      "session": "A-9Fjs_y",
+      "name": "Amazing Suspenders",
+      "tags": []
+    },
+    {
+      "id": "rfk_bfmZ",
+      "type": "Resource",
+      "session": "A-9Fjs_y",
+      "name": "Big Rock",
+      "tags": []
+    }
+  ]
+}
