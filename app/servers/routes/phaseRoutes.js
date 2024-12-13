@@ -1,5 +1,5 @@
 import express from "express";
-import Session from "../../models/session.js";
+import Session, { SessionTags } from "../../models/session.js";
 import PhaseCard, { PhaseTime } from "../../components/PhaseCard.js";
 
 
@@ -45,6 +45,8 @@ phases.put("/sessions/:id/phases/:phase_id", (req, res, next) => {
     const phase = session.getPhaseById(phase_id);
 
     //TODO: handle this logic better, with the mutability problem
+    
+
     switch (action) {
       case "start":
         phase.startPhase();
@@ -56,7 +58,8 @@ phases.put("/sessions/:id/phases/:phase_id", (req, res, next) => {
         phase.completePhase();
         break;
     }
-
+    //TODO: remove active doofer
+    session.makeActive();
     session.save();
 
     //this is the way to "refresh" whatever page

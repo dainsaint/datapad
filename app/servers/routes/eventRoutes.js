@@ -1,4 +1,5 @@
 import express from "express";
+import Ledger from "../../models/ledger.js";
 
 const events = express.Router();
 const clients = new Set();
@@ -8,15 +9,19 @@ export function broadcast(name, data) {
     client.write(`event: ${name}\ndata: ${data}\n\n`);
 };
 
+
+//TODO: Ledger "active" sessions dont survive deserialization...
 export function tick(deltaTime) {
   try {
-    // const session = getActiveSession();
-    // const activePhases = session.phases.filter( phase => phase.isPlaying );
-    // for( const phase of activePhases ){
-    //   phase.tick(deltaTime);
-    //   updatePhase(phase, {});
-    //   broadcast("phases");
-    // }
+    Ledger.active.forEach( session => {
+      const activePhases = session.phases.filter( phase => phase.isActive()  );
+      for( const phase of activePhases ){
+        phase.tick(deltaTime);
+        broadcast("phases");
+        session.save();
+      }
+    })
+
   } catch (e) {}
 }
 

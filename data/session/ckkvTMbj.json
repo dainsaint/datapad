@@ -1,7 +1,7 @@
 {
   "id": "ckkvTMbj",
   "type": "Session",
-  "name": "Another session",
+  "name": "What In Tarnation?",
   "date": "2024-12-13T17:14:30.069Z",
   "tags": [
     "active"
@@ -30,7 +30,7 @@
       "name": "Global Phase",
       "round": 0,
       "duration": 1200,
-      "status": "idle",
+      "status": "playing",
       "timeElapsed": 0
     },
     {

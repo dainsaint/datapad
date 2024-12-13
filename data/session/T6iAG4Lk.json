@@ -30,8 +30,8 @@
       "name": "Global Phase",
       "round": 0,
       "duration": 1200,
-      "status": "idle",
-      "timeElapsed": 0
+      "status": "playing",
+      "timeElapsed": 38.04800000000001
     },
     {
       "id": "W4txPz9J",

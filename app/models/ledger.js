@@ -26,6 +26,7 @@ const Ledger = function() {
     active = []
   } = file;
 
+
   function save() {
     datastore.save(filename, ledger);
   }
@@ -56,17 +57,18 @@ const Ledger = function() {
 
   //TODO: Make sure each game has a list of sessions
   function updateSession(session) {
-    updateRecord(getSessionRecord(session), sessions);
-    updateRecord(getGameRecord(session), games);
+    updateRecord(getSessionRecord(session), ledger.sessions);
+    updateRecord(getGameRecord(session), ledger.games);
 
     session.players.forEach( player => {
-      updateRecord(player, players);
+      updateRecord(player, ledger.players);
     })
+ 
 
-    if( session.isActive() && !active.includes(session) ) {
-      active.push( session )
-    } else if( !session.isActive() && active.includes(session) ) {
-      active.splice( active.indexOf(session), 1 );
+    if( session.isActive() && !ledger.active.includes(session) ) {
+      ledger.active.push(session);
+    } else if (!session.isActive() && ledger.active.includes(session)) {
+      ledger.active.splice(ledger.active.indexOf(session), 1);
     }
 
     save();

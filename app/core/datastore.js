@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "node:path";
 import moment from "moment";
 
-import { debounce } from "./utils.js";
+import { debounce, rateLimit } from "./utils.js";
 
 import Community from "../models/community.js";
 import Phase from "../models/phase.js";
@@ -11,6 +11,7 @@ import Resource from "../models/resource.js";
 import Session from "../models/session.js";
 import Society from "../models/society.js";
 import Game from "../models/game.js";
+import Tags from "./tags.js";
 
 const Types = { Community, Game, Phase, Player, Resource, Session, Society };
 const references = new Map();
@@ -42,10 +43,13 @@ export default function Datastore({ root = "data", diskWriteDelay = 2000 } = {})
   }
 
   function parse(text) {
-    return JSON.parse(text, (_, value) => {
+    return JSON.parse(text, (key, value) => {
       //TODO: Figure out how to rehydrate dates...
       // if (moment(value, moment.ISO_8601, true).isValid())
       //   return new Date(value);
+
+      //TODO: This is a very weird way to rehydrate this, but it should work for now
+      if( key === "tags" ) return new Tags(value);
 
       if (typeof value !== "object") return value;
 
@@ -57,7 +61,7 @@ export default function Datastore({ root = "data", diskWriteDelay = 2000 } = {})
           console.log( "Warning: Couldn't hydrate", value.type, "(has it been added to Types in datastore.js?");
           return value;
         }
-        
+
         const reference = Object.assign( Type(value), value );
         references.set(value.id, reference);
         return reference;
@@ -67,11 +71,11 @@ export default function Datastore({ root = "data", diskWriteDelay = 2000 } = {})
     });
   }
 
-  const debouncedSave = debounce(save, diskWriteDelay);
+  const rateLimitedSave = rateLimit(save, diskWriteDelay);
 
   return {
     save(filename, data) {
-      debouncedSave(filename, data);
+      rateLimitedSave(filename, data);
     },
 
     load(filename) {

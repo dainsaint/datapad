@@ -8,7 +8,6 @@ export default function Phase({
 }) {
   const model = SessionModel({ type: "Phase" });
 
-  let status = PhaseStatus.IDLE;
   let timeElapsed = 0, actualTimeComplete, actualTimeStart;
   
   const phase = {
@@ -16,23 +15,23 @@ export default function Phase({
     name,
     round,
     duration,
-    status,
+    status: PhaseStatus.IDLE,
 
     timeElapsed,
-    actualTimeStart,
-    actualTimeComplete,
+    // actualTimeStart,
+    // actualTimeComplete,
 
     timeRemaining() {
-      return Math.floor(duration - timeElapsed);
+      return Math.floor(phase.duration - phase.timeElapsed);
     },
 
-    actualDuration() {
-      return actualTimeComplete - actualTimeStart;
-    },
+    // actualDuration() {
+    //   return phase.actualTimeComplete - phase.actualTimeStart;
+    // },
 
     startPhase() {
-      actualTimeStart = new Date();
-      status = PhaseStatus.PLAYING;
+      // actualTimeStart = new Date();
+      phase.status = PhaseStatus.PLAYING;
     },
 
     pausePhase() {
@@ -40,13 +39,17 @@ export default function Phase({
     },
 
     completePhase() {
-      actualTimeComplete = new Date();
+      // actualTimeComplete = new Date();
       phase.status = PhaseStatus.COMPLETE;
     },
 
+    isActive() {
+      return phase.status === PhaseStatus.PLAYING;
+    },
+
     tick(deltaTimeMS) {
-      if ( phase.status === PhaseStatus.PLAYING ) {
-        timeElapsed += deltaTimeMS / 1000;
+      if ( phase.isActive() ) {
+        phase.timeElapsed += deltaTimeMS / 1000;
       }
     },
 

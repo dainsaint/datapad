@@ -40,3 +40,28 @@ export function debounce(func, duration) {
     timeout = setTimeout(effect, duration);
   };
 }
+
+export function rateLimit( callback, wait ) {  
+  let lastTime = 0; // Last time the callback was invoked
+  let timeout; // Timeout reference for the debounce
+
+  return function (...args) {
+    const now = Date.now();
+    const timeSinceLastCall = now - lastTime;
+
+    const invokeCallback = () => {
+      callback.apply(this, args);
+      lastTime = Date.now();
+    };
+
+    clearTimeout(timeout);
+
+    if (timeSinceLastCall >= wait) {
+      console.log("throttle triggered");
+      invokeCallback(); // Throttle behavior
+    } else {
+      console.log("timeout triggered");
+      timeout = setTimeout(invokeCallback, wait); // Debounce behavior
+    }
+  }
+}
