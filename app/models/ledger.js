@@ -31,7 +31,6 @@ const Ledger = function() {
   }
 
   function getSessionRecord(session) {
-    console.log( session );
     return {
       id: session.id,
       name: session.name,

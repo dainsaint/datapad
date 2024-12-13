@@ -228,13 +228,6 @@
               "tags": []
             },
             {
-              "id": "lG-7uZVJ",
-              "type": "Resource",
-              "session": "T6iAG4Lk",
-              "name": "Amazing Suspenders",
-              "tags": []
-            },
-            {
               "id": "bsolPuSN",
               "type": "Resource",
               "session": "T6iAG4Lk",
@@ -250,7 +243,15 @@
           "session": "T6iAG4Lk",
           "name": "Disaffected Youth",
           "voice": "people",
-          "resources": [],
+          "resources": [
+            {
+              "id": "lG-7uZVJ",
+              "type": "Resource",
+              "session": "T6iAG4Lk",
+              "name": "Amazing Suspenders",
+              "tags": []
+            }
+          ],
           "tags": []
         }
       ]
@@ -308,13 +309,6 @@
           "tags": []
         },
         {
-          "id": "lG-7uZVJ",
-          "type": "Resource",
-          "session": "T6iAG4Lk",
-          "name": "Amazing Suspenders",
-          "tags": []
-        },
-        {
           "id": "bsolPuSN",
           "type": "Resource",
           "session": "T6iAG4Lk",
@@ -330,7 +324,15 @@
       "session": "T6iAG4Lk",
       "name": "Disaffected Youth",
       "voice": "people",
-      "resources": [],
+      "resources": [
+        {
+          "id": "lG-7uZVJ",
+          "type": "Resource",
+          "session": "T6iAG4Lk",
+          "name": "Amazing Suspenders",
+          "tags": []
+        }
+      ],
       "tags": []
     }
   ],
