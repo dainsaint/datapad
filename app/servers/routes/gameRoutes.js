@@ -15,8 +15,8 @@ Games are implicitly created by sessions, so we dont need full CRUD here (right?
 - [ ] PUT    /games/:game
 */
 
-games.get("/games/:view?", (req, res, next) => {
-  const { view = "home" } = req.params;
+games.get("/games", (req, res, next) => {
+  const { view = "home" } = req.query;
 
   const Views = {
     home: games => App(Home(games))
@@ -34,9 +34,11 @@ games.get("/games/:view?", (req, res, next) => {
   res.status(200).send( View(games) );
 });
 
-games.get("/games/:id/:view?", (req, res, next) => {
+games.get("/games/:id", (req, res, next) => {
   try {
-    const { id, view = "overview" } = req.params;
+    const { id } = req.params;
+    const { view = "overview" } = req.query;
+
     const game = Ledger.getGameById(id);
 
     const Views = {

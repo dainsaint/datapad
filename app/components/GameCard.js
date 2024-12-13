@@ -5,7 +5,7 @@ export default function GameCard (game) {
     <a 
       class="card" 
       href="${ game.toURL() }"
-      hx-get="${ game.toURL('/card') }"
+      hx-get="${ game.toURL('?view=card') }"
       hx-swap="outerHTML"
       hx-trigger="every 5s"
     >
