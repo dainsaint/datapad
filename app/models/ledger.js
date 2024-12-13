@@ -31,6 +31,7 @@ const Ledger = function() {
   }
 
   function getSessionRecord(session) {
+    console.log( session );
     return {
       id: session.id,
       name: session.name,
@@ -54,6 +55,7 @@ const Ledger = function() {
     }
   }
 
+  //TODO: Make sure each game has a list of sessions
   function updateSession(session) {
     updateRecord(getSessionRecord(session), sessions);
     updateRecord(getGameRecord(session), games);

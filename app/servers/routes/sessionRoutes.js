@@ -4,7 +4,6 @@ import GameMaster from "../../components/GameMaster.js";
 import Facilitator from "../../components/Facilitator.js";
 import Script from "../../components/Script.js";
 import App from "../../components/App.js";
-import { broadcast } from "./events.js";
 
 const sessions = express.Router();
 

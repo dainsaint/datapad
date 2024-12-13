@@ -3,7 +3,6 @@ import Icon from "./Icon.js";
 import { pluralize, iconForArchetype, map } from "../core/utils.js";
 import { request } from "../server.js";
 
-
 const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 
 export default function Facilitator (session) {
@@ -54,7 +53,7 @@ export function SocietyPanel( society ) {
 
 export function CommunityCard(  community ) {
   return `
-    <div hx-get="${ community.toURL('/card') }" hx-trigger="sse:resources, sse:societies">
+    <div hx-get="${ community.toURL('?view=card') }" hx-trigger="sse:resources, sse:societies">
       <form id="community-card-${community.id}" class="card stack droppable" hx-patch="${ community.toURL() }" hx-trigger="dropcomplete" hx-swap="none">
         <header>
           <h2>${community.name}</h2>

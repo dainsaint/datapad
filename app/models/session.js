@@ -24,9 +24,9 @@ export default function Session({
 
   //Helper functions
   function addTo (key) {
-    return (model) => {
-      model.session = model.id;
-      session[key].push(model);
+    return (object) => {
+      object.session = session.id;
+      session[key].push(object);
     }
   }
 

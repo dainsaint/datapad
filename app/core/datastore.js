@@ -58,6 +58,8 @@ export default function Datastore({ root = "data", diskWriteDelay = 2000 } = {})
           return value;
         }
 
+        console.log(value);
+
         const reference = Object.assign( Type(value), value );
         references.set(value.id, reference);
         return reference;

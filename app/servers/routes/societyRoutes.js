@@ -3,7 +3,7 @@ import Session from "../../models/session.js";
 import Society from "../../models/society.js";
 import DialogCreateSociety from "../../components/DialogCreateSociety.js";
 import { SocietyCardList } from "../../components/GameMaster.js";
-import { broadcast } from "./events.js";
+import { broadcast } from "./eventRoutes.js";
 
 const societies = express.Router();
 
@@ -45,8 +45,6 @@ societies.post("/sessions/:id/societies", (req, res, next) => {
     const society = Society(req.body);
     session.addSociety(society);
     session.save();
-
-    console.log( session.societies );
 
     const currentUrl = req.get("hx-current-url");
     if (currentUrl) res.setHeader("HX-Location", currentUrl);
