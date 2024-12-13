@@ -57,9 +57,7 @@ export default function Datastore({ root = "data", diskWriteDelay = 2000 } = {})
           console.log( "Warning: Couldn't hydrate", value.type, "(has it been added to Types in datastore.js?");
           return value;
         }
-
-        console.log(value);
-
+        
         const reference = Object.assign( Type(value), value );
         references.set(value.id, reference);
         return reference;
