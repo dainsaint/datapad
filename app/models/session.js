@@ -2,34 +2,39 @@ import Datastore from "../core/datastore.js";
 import Tags from "../core/tags.js";
 import Model from "../core/model.js";
 import { PhaseStatus } from "./phase.js";
-import { debounce } from "../core/utils.js";
+import Ledger from "./ledger.js";
 
-const datastore = Datastore({ root: "datastore" });
+const datastore = Datastore();
 
 export default function Session({
-  date = new Date(),
   name = "",
-  players = [],
-  phases = [],
-  societies = [],
-  communities = [],
-  resources = [],
-  tags = new Tags(),
-  game = {},
+  date = new Date()
 }) {
   const type = "Session";
   const model = Model({ type });
-  const { id } = model;
-  
-  function save() {
-    const filename = datastore.getFilename(session);
-    datastore.save(filename, session);
+
+  //Properties
+  const game = {},
+    communities = [],
+    phases = [],
+    players = [],
+    resources = [],
+    societies = [],
+    tags = new Tags();
+
+  //Helper functions
+  function addTo (key) {
+    return (model) => {
+      model.session = model.id;
+      session[key].push(model);
+    }
   }
 
-  function getById(array, id) {
-    return (id) => array.find( element => element.id === id );
+  function getById(key) {
+    return (id) => session[key].find( element => element.id === id );
   }
 
+  //Final session object
   const session = {
     ...model,
     name,
@@ -42,42 +47,17 @@ export default function Session({
     communities,
     resources,
 
-    save: debounce(save, 2000),
+    addCommunity: addTo("communities"),
+    addPhase: addTo("phases"),
+    addPlayer: addTo("players"),
+    addResource: addTo("resources"),
+    addSociety: addTo("societies"),
 
-    makeActive() {
-      tags.add(SessionTags.ACTIVE);
-    },
-
-    addPlayer(player) {
-      players.push(player);
-      player.session = id;
-    },
-
-    addPhase(phase) {
-      phases.push(phase);
-      phase.session = id;
-    },
-
-    addSociety(society) {
-      societies.push(society);
-      society.session = id;
-    },
-
-    addCommunity(community) {
-      communities.push(community);
-      community.session = id;
-    },
-
-    addResource(resource) {
-      resources.push(resource);
-      resource.session = id;
-    },
-
-    getPlayerById: getById(players),
-    getPhaseById: getById(phases),
-    getResourceById: getById(resources),
-    getCommunityById: getById(communities),
-    getSocietyById: getById(societies),
+    getCommunityById: getById("communities"),
+    getPhaseById: getById("phases"),
+    getPlayerById: getById("players"),
+    getResourceById: getById("resources"),
+    getSocietyById: getById("societies"),
 
     getActivePhases() {
       return phases.filter((phase) => phase.status !== PhaseStatus.COMPLETE);
@@ -85,6 +65,20 @@ export default function Session({
 
     getAllResources() {
       return communities.map((community) => community.resources).flat();
+    },
+
+    makeActive() {
+      tags.add(SessionTags.ACTIVE);
+    },
+
+    isActive() {
+      return tags.has( SessionTags.ACTIVE );
+    },
+
+    save() {
+      const filename = datastore.getModelFilename(session);
+      datastore.save(filename, session);
+      Ledger.updateSession(session);
     },
 
     toURL(append = "") {
@@ -95,7 +89,8 @@ export default function Session({
   return session;
 }
 
-//MAKE SURE WE DONT LOAD FROM FILE IF WE DON"T NEED TO
+//STATIC FUNCTIONS
+//Make sure we don't load from file if we don't need to
 const loadedSessions = new Map();
 
 Session.load = (id) => {
@@ -103,13 +98,14 @@ Session.load = (id) => {
     return loadedSessions.get(id)
   }
 
-  const filename = datastore.getFilename({type: "Session", id});
+  const filename = datastore.getModelFilename({type: "Session", id});
   const session = datastore.load(filename);
   loadedSessions.set(id, session);
   return session;
 }
 
 
+//Helper Objects
 export function SessionModel({ type, session = "" }) {
   const model = Model({ type });
   return {

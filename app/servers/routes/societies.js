@@ -1,16 +1,22 @@
 import express from "express";
-import { broadcast } from "../html.js";
-import DialogCreateSociety from "../../components/DialogCreateSociety.js";
-import { SocietyCardList } from "../../components/GameMaster.js";
 import Session from "../../models/session.js";
 import Society from "../../models/society.js";
+import DialogCreateSociety from "../../components/DialogCreateSociety.js";
+import { SocietyCardList } from "../../components/GameMaster.js";
+import { broadcast } from "./events.js";
 
-const societyRouter = express.Router();
+const societies = express.Router();
 
-// SOCIETY
-/////////////////////////////////////
+/*
+- [x] GET     /sessions/:session/societies
+- [x] POST    /sessions/:session/societies
+- [ ] GET     /sessions/:session/societies/:society
+- [ ] PUT     /sessions/:session/societies/:society
+- [~] DELETE  /sessions/:session/societies/:society
+- [ ] GET     /sessions/:session/societies/:society/edit
+*/
 
-societyRouter.get("/sessions/:id/societies", (req, res) => {
+societies.get("/sessions/:id/societies", (req, res, next) => {
   try {
     const { id } = req.params;
     const { view = "list" } = req.query;
@@ -30,7 +36,8 @@ societyRouter.get("/sessions/:id/societies", (req, res) => {
   }
 });
 
-societyRouter.post("/sessions/:id/societies", (req, res) => {
+
+societies.post("/sessions/:id/societies", (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -39,27 +46,11 @@ societyRouter.post("/sessions/:id/societies", (req, res) => {
     session.addSociety(society);
     session.save();
 
+    console.log( session.societies );
+
     const currentUrl = req.get("hx-current-url");
     if (currentUrl) res.setHeader("HX-Location", currentUrl);
     res.sendStatus(201);
-    broadcast("societies");
-  } catch (e) {
-    res.setHeader("HX-Trigger", "error");
-    res.sendStatus(400);
-  }
-});
-
-societyRouter.delete("/sessions/:id/societies/:society_id", (req, res) => {
-  const { id, society_id } = req.params;
-  try {
-    const session = Session.load(id);
-    const society = session.getSocietyById(society_id);
-    //TODO: Determine what actual deletion logic we want, and how far it propagates
-    //Like, does deleting a society delete all communities it had?
-    // session.removeSocietyById(society_id);
-
-    res.setHeader("HX-Trigger", "success");
-    res.sendStatus(200);
     broadcast("societies");
   } catch (e) {
     console.log(e);
@@ -68,4 +59,26 @@ societyRouter.delete("/sessions/:id/societies/:society_id", (req, res) => {
   }
 });
 
-export default societyRouter;
+    
+//TODO: Determine what actual deletion logic we want, and how far it propagates
+//Like, does deleting a society delete all communities it had?
+// session.removeSocietyById(society_id);
+
+societies.delete("/sessions/:id/societies/:society_id", (req, res) => {
+  const { id, society_id } = req.params;
+
+  try {
+    const session = Session.load(id);
+    const society = session.getSocietyById(society_id);
+
+    const currentUrl = req.get("hx-current-url");
+    if (currentUrl) res.setHeader("HX-Location", currentUrl);
+    res.sendStatus(200);
+    broadcast("societies");
+  } catch (e) {
+    res.setHeader("HX-Trigger", "error");
+    res.sendStatus(400);
+  }
+});
+
+export default societies;

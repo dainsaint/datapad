@@ -11,7 +11,7 @@ export const request = {
 
 const errorHandler = (err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send("Something went wrong!");
+  res.status(500).send(err.message);
 };
 
 export default class Server {

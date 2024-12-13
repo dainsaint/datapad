@@ -1,7 +1,8 @@
 import Icon from "./Icon.js";
 import { request } from "../server.js";
 
-// this is gonna need access to session...
+// using the query here is weird, right?
+// but without it, we'll need access to session...
 // should probably be SessionToolbar!
 export default function Toolbar() {
   const getActiveClass = (href) => {

@@ -1,0 +1,360 @@
+{
+  "id": "xC-U00ph",
+  "type": "Session",
+  "name": "What In Tarnation?",
+  "date": "2024-12-13T13:57:58.490Z",
+  "tags": [
+    "active"
+  ],
+  "game": {
+    "id": "GCBkzYuM",
+    "type": "Game",
+    "name": "Excite Center — June 2025",
+    "tags": [],
+    "sessions": []
+  },
+  "players": [
+    {
+      "id": "QdvJl9tE",
+      "type": "Player",
+      "session": "QdvJl9tE",
+      "name": "Ving Rhames",
+      "tags": []
+    }
+  ],
+  "phases": [
+    {
+      "id": "eGf8VLBY",
+      "type": "Phase",
+      "session": "eGf8VLBY",
+      "name": "Global Phase",
+      "round": 0,
+      "duration": 1200,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "e-Ucjoop",
+      "type": "Phase",
+      "session": "e-Ucjoop",
+      "name": "Universal Phase",
+      "round": 0,
+      "duration": 240,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "lQSzgbZN",
+      "type": "Phase",
+      "session": "lQSzgbZN",
+      "name": "Societal Phase",
+      "round": 0,
+      "duration": 600,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "Tosduax-",
+      "type": "Phase",
+      "session": "Tosduax-",
+      "name": "Galactic Phase",
+      "round": 0,
+      "duration": 600,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "hk_QhCNK",
+      "type": "Phase",
+      "session": "hk_QhCNK",
+      "name": "Individual Phase",
+      "round": 0,
+      "duration": 500,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "xCJ1zbaF",
+      "type": "Phase",
+      "session": "xCJ1zbaF",
+      "name": "Universal Phase",
+      "round": 1,
+      "duration": 240,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "K3GUbjuM",
+      "type": "Phase",
+      "session": "K3GUbjuM",
+      "name": "Societal Phase",
+      "round": 1,
+      "duration": 600,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "tLJHo2gd",
+      "type": "Phase",
+      "session": "tLJHo2gd",
+      "name": "Galactic Phase",
+      "round": 1,
+      "duration": 600,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "FDNTHHAc",
+      "type": "Phase",
+      "session": "FDNTHHAc",
+      "name": "Individual Phase",
+      "round": 1,
+      "duration": 500,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "DFccPiqy",
+      "type": "Phase",
+      "session": "DFccPiqy",
+      "name": "Universal Phase",
+      "round": 2,
+      "duration": 240,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "CZipPIEe",
+      "type": "Phase",
+      "session": "CZipPIEe",
+      "name": "Societal Phase",
+      "round": 2,
+      "duration": 600,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "O23zwa_R",
+      "type": "Phase",
+      "session": "O23zwa_R",
+      "name": "Galactic Phase",
+      "round": 2,
+      "duration": 600,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "jFnGWg3a",
+      "type": "Phase",
+      "session": "jFnGWg3a",
+      "name": "Individual Phase",
+      "round": 2,
+      "duration": 500,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "jqxMKF1g",
+      "type": "Phase",
+      "session": "jqxMKF1g",
+      "name": "Universal Phase",
+      "round": 3,
+      "duration": 240,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "l5r2b9uv",
+      "type": "Phase",
+      "session": "l5r2b9uv",
+      "name": "Societal Phase",
+      "round": 3,
+      "duration": 600,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "f3pekOhP",
+      "type": "Phase",
+      "session": "f3pekOhP",
+      "name": "Galactic Phase",
+      "round": 3,
+      "duration": 600,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "KzD65P74",
+      "type": "Phase",
+      "session": "KzD65P74",
+      "name": "Generational Phase",
+      "round": 3,
+      "duration": 500,
+      "status": "idle",
+      "timeElapsed": 0
+    },
+    {
+      "id": "Lk0dFtdL",
+      "type": "Phase",
+      "session": "Lk0dFtdL",
+      "name": "Conclusion Phase",
+      "round": 3,
+      "duration": 500,
+      "status": "idle",
+      "timeElapsed": 0
+    }
+  ],
+  "societies": [
+    {
+      "id": "ZW1AR6ZD",
+      "type": "Society",
+      "session": "ZW1AR6ZD",
+      "name": "Ten Thousand Islands",
+      "archetype": "the curious",
+      "planet": "Jorun",
+      "communities": [
+        {
+          "id": "r3AP9lil",
+          "type": "Community",
+          "session": "r3AP9lil",
+          "name": "Venerable Elders",
+          "voice": "leader",
+          "resources": [
+            {
+              "id": "lc6bSJGD",
+              "type": "Resource",
+              "session": "lc6bSJGD",
+              "name": "Green Sludge",
+              "tags": []
+            },
+            {
+              "id": "dhhFPDqs",
+              "type": "Resource",
+              "session": "dhhFPDqs",
+              "name": "Amazing Suspenders",
+              "tags": []
+            },
+            {
+              "id": "wi9Z1qTG",
+              "type": "Resource",
+              "session": "wi9Z1qTG",
+              "name": "Big Rock",
+              "tags": []
+            }
+          ],
+          "tags": []
+        },
+        {
+          "id": "NKSGoxsC",
+          "type": "Community",
+          "session": "NKSGoxsC",
+          "name": "Disaffected Youth",
+          "voice": "people",
+          "resources": [],
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "bAEyHG-f",
+      "type": "Society",
+      "session": "bAEyHG-f",
+      "name": "23432",
+      "archetype": "the aesthetic",
+      "planet": "",
+      "communities": []
+    },
+    {
+      "id": "wv77lPp_",
+      "type": "Society",
+      "session": "wv77lPp_",
+      "name": "234231",
+      "archetype": "the aesthetic",
+      "planet": "",
+      "communities": []
+    },
+    {
+      "id": "UNAe3Ab5",
+      "type": "Society",
+      "session": "UNAe3Ab5",
+      "name": "2343-01-01T00:00:00.000Z",
+      "archetype": "the aesthetic",
+      "planet": "",
+      "communities": []
+    },
+    {
+      "id": "mORJLNVX",
+      "type": "Society",
+      "session": "mORJLNVX",
+      "name": "sdfhthst",
+      "archetype": "the aesthetic",
+      "planet": "",
+      "communities": []
+    }
+  ],
+  "communities": [
+    {
+      "id": "r3AP9lil",
+      "type": "Community",
+      "session": "r3AP9lil",
+      "name": "Venerable Elders",
+      "voice": "leader",
+      "resources": [
+        {
+          "id": "lc6bSJGD",
+          "type": "Resource",
+          "session": "lc6bSJGD",
+          "name": "Green Sludge",
+          "tags": []
+        },
+        {
+          "id": "dhhFPDqs",
+          "type": "Resource",
+          "session": "dhhFPDqs",
+          "name": "Amazing Suspenders",
+          "tags": []
+        },
+        {
+          "id": "wi9Z1qTG",
+          "type": "Resource",
+          "session": "wi9Z1qTG",
+          "name": "Big Rock",
+          "tags": []
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "NKSGoxsC",
+      "type": "Community",
+      "session": "NKSGoxsC",
+      "name": "Disaffected Youth",
+      "voice": "people",
+      "resources": [],
+      "tags": []
+    }
+  ],
+  "resources": [
+    {
+      "id": "lc6bSJGD",
+      "type": "Resource",
+      "session": "lc6bSJGD",
+      "name": "Green Sludge",
+      "tags": []
+    },
+    {
+      "id": "dhhFPDqs",
+      "type": "Resource",
+      "session": "dhhFPDqs",
+      "name": "Amazing Suspenders",
+      "tags": []
+    },
+    {
+      "id": "wi9Z1qTG",
+      "type": "Resource",
+      "session": "wi9Z1qTG",
+      "name": "Big Rock",
+      "tags": []
+    }
+  ]
+}

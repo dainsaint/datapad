@@ -1,9 +1,9 @@
 {
   "id": "JVXZmnhs",
   "type": "Session",
-  "filename": "session/JVXZmnhs.json",
   "name": "What In Tarnation?",
   "date": "2024-12-12T21:53:38.602Z",
+  "tags": [],
   "game": {},
   "players": [
     {
@@ -21,8 +21,9 @@
       "session": "JVXZmnhs",
       "name": "Global Phase",
       "round": 0,
-      "duration": 1200,
-      "status": "idle"
+      "duration": "1970-01-01T00:00:01.200Z",
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "D-NDfXhj",
@@ -31,7 +32,8 @@
       "name": "Universal Phase",
       "round": 0,
       "duration": 240,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "OpFE4yjV",
@@ -40,7 +42,8 @@
       "name": "Societal Phase",
       "round": 0,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "xRI7zDL9",
@@ -49,7 +52,8 @@
       "name": "Galactic Phase",
       "round": 0,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "SmMZ7prD",
@@ -58,7 +62,8 @@
       "name": "Individual Phase",
       "round": 0,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "il4bju9h",
@@ -67,7 +72,8 @@
       "name": "Universal Phase",
       "round": 1,
       "duration": 240,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "IAiEYmhE",
@@ -76,7 +82,8 @@
       "name": "Societal Phase",
       "round": 1,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "ZvHamM93",
@@ -85,7 +92,8 @@
       "name": "Galactic Phase",
       "round": 1,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "PaxrpDyp",
@@ -94,7 +102,8 @@
       "name": "Individual Phase",
       "round": 1,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "VhUnQGf5",
@@ -103,7 +112,8 @@
       "name": "Universal Phase",
       "round": 2,
       "duration": 240,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "K_SofV-r",
@@ -112,7 +122,8 @@
       "name": "Societal Phase",
       "round": 2,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "JU48_xa2",
@@ -121,7 +132,8 @@
       "name": "Galactic Phase",
       "round": 2,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "y_i6v8ZG",
@@ -130,7 +142,8 @@
       "name": "Individual Phase",
       "round": 2,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "KnGBYvax",
@@ -139,7 +152,8 @@
       "name": "Universal Phase",
       "round": 3,
       "duration": 240,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "IjQ5xRUt",
@@ -148,7 +162,8 @@
       "name": "Societal Phase",
       "round": 3,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "PBn6Lv2v",
@@ -157,7 +172,8 @@
       "name": "Galactic Phase",
       "round": 3,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "F0a-Fb9e",
@@ -166,7 +182,8 @@
       "name": "Generational Phase",
       "round": 3,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "hQQVlMUv",
@@ -175,7 +192,8 @@
       "name": "Conclusion Phase",
       "round": 3,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     }
   ],
   "societies": [
@@ -213,5 +231,6 @@
       "isEndangered": true
     }
   ],
-  "resources": []
+  "resources": [],
+  "filename": "session/JVXZmnhs.json"
 }

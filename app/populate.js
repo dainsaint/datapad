@@ -1,4 +1,5 @@
 import Community, { CommunityVoice } from "./models/community.js";
+import Game from "./models/game.js";
 import Phase from "./models/phase.js";
 import Player from "./models/player.js";
 import Resource from "./models/resource.js";
@@ -75,8 +76,14 @@ export function populateDummyData() {
 
   session.makeActive();
 
+  const game = Game({
+    name: "Excite Center — June 2024"
+  })
+
+  session.game = game;
+
   // const datastore = Datastore({ root: "datastore-two/"} );
-  // const filename = datastore.getFilename( session );
+  // const filename = datastore.getModelFilename( session );
   // datastore.save( filename, session );
 
   session.save();

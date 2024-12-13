@@ -23,8 +23,9 @@
       "session": "A-9Fjs_y",
       "name": "Global Phase",
       "round": 0,
-      "duration": 1200,
-      "status": "idle"
+      "duration": "1970-01-01T00:00:01.200Z",
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "Lp2ZwTRw",
@@ -33,7 +34,8 @@
       "name": "Universal Phase",
       "round": 0,
       "duration": 240,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "dmx8rMAk",
@@ -42,7 +44,8 @@
       "name": "Societal Phase",
       "round": 0,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "FTzpUWgw",
@@ -51,7 +54,8 @@
       "name": "Galactic Phase",
       "round": 0,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "q1csRlOm",
@@ -60,7 +64,8 @@
       "name": "Individual Phase",
       "round": 0,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "RAIBMM8A",
@@ -69,7 +74,8 @@
       "name": "Universal Phase",
       "round": 1,
       "duration": 240,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "Buq3iU1o",
@@ -78,7 +84,8 @@
       "name": "Societal Phase",
       "round": 1,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "qI2kciKM",
@@ -87,7 +94,8 @@
       "name": "Galactic Phase",
       "round": 1,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "GHEJAI6X",
@@ -96,7 +104,8 @@
       "name": "Individual Phase",
       "round": 1,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "SgJUjNCi",
@@ -105,7 +114,8 @@
       "name": "Universal Phase",
       "round": 2,
       "duration": 240,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "dG2jnOY6",
@@ -114,7 +124,8 @@
       "name": "Societal Phase",
       "round": 2,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "HXVBx-2t",
@@ -123,7 +134,8 @@
       "name": "Galactic Phase",
       "round": 2,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "SXVoT9oT",
@@ -132,7 +144,8 @@
       "name": "Individual Phase",
       "round": 2,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "QBwq9YC4",
@@ -141,7 +154,8 @@
       "name": "Universal Phase",
       "round": 3,
       "duration": 240,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "t_jSgc3F",
@@ -150,7 +164,8 @@
       "name": "Societal Phase",
       "round": 3,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "ujAyHG5p",
@@ -159,7 +174,8 @@
       "name": "Galactic Phase",
       "round": 3,
       "duration": 600,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "B7wAVVBW",
@@ -168,7 +184,8 @@
       "name": "Generational Phase",
       "round": 3,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     },
     {
       "id": "YaV5eWkr",
@@ -177,7 +194,8 @@
       "name": "Conclusion Phase",
       "round": 3,
       "duration": 500,
-      "status": "idle"
+      "status": "idle",
+      "timeElapsed": 0
     }
   ],
   "societies": [
@@ -230,6 +248,24 @@
           "tags": []
         }
       ]
+    },
+    {
+      "id": "i6U7EQyI",
+      "type": "Society",
+      "session": "i6U7EQyI",
+      "name": "24324134",
+      "archetype": "the aesthetic",
+      "planet": "",
+      "communities": []
+    },
+    {
+      "id": "PUC8VqEd",
+      "type": "Society",
+      "session": "PUC8VqEd",
+      "name": "2343",
+      "archetype": "the aesthetic",
+      "planet": "",
+      "communities": []
     }
   ],
   "communities": [
