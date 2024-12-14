@@ -1,30 +1,25 @@
 import Model from "../core/model.js";
 import Tags from "../core/tags.js";
 
-export default function Game({ 
-  name = "", 
+export default class Game extends Model {
+
   tags = new Tags() 
-}) {
-  const model = Model({ type: "Game" });
-  const sessions = [];
-  
-  const game = {
-    ...model,
-    name,
-    tags,
-    sessions,
+  sessions = []
 
-    addSession({id, name, date}) {
-      sessions.push({id, name, date})
-    },
+  constructor({ name = "" }) {
+    super();
+    this.name = name;
+  }
 
-    toURL(append = "") {
-      return `/games/${game.id}` + append;
-    },
-  };
+  addSession({id, name, date}) {
+    this.sessions.push({id, name, date})
+  }
 
-  return game;
-}
+  toURL(append = "") {
+    return `/games/${this.id}` + append;
+  }
+
+};
 
 export const GameTags = {
 

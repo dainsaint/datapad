@@ -1,117 +1,101 @@
 import Datastore from "../core/datastore.js";
-import Tags from "../core/tags.js";
 import Model from "../core/model.js";
-import { PhaseStatus } from "./phase.js";
+import Tags from "../core/tags.js";
 import Ledger from "./ledger.js";
+import { PhaseStatus } from "./phase.js";
 
-const datastore = Datastore();
+const datastore = new Datastore();
 
-export default function Session({
-  name = "",
+export default class Session extends Model {
+  name = ""
   date = new Date()
-}) {
-  const type = "Session";
-  const model = Model({ type });
+  game = {}
+  communities = []
+  phases = []
+  players = []
+  resources = []
+  societies = []
+  tags = new Tags()
 
-  //Properties
-  const game = {},
-    communities = [],
-    phases = [],
-    players = [],
-    resources = [],
-    societies = [],
-    tags = new Tags();
+  static #sessions = new Map();
+
+  constructor({name = "", date = new Date()} = {}){
+    super();
+    this.name = name;
+    this.date = date;
+  }
 
   //Helper functions
-  function addTo (key) {
+  #addTo(key) {
     return (object) => {
-      object.session = session.id;
-      session[key].push(object);
+      object.session = this.id;
+      this[key].push(object);
     }
   }
 
-  function getById(key) {
-    return (id) => session[key].find( element => element.id === id );
+  #getById(key) {
+    return (id) => this[key].find( element => element.id === id );
   }
 
-  //Final session object
-  const session = {
-    ...model,
-    name,
-    date,
-    tags,
-    game,
-    players,
-    phases,
-    societies,
-    communities,
-    resources,
+  addCommunity = this.#addTo("communities")
+  addPhase = this.#addTo("phases")
+  addPlayer = this.#addTo("players")
+  addResource = this.#addTo("resources")
+  addSociety = this.#addTo("societies")
 
-    addCommunity: addTo("communities"),
-    addPhase: addTo("phases"),
-    addPlayer: addTo("players"),
-    addResource: addTo("resources"),
-    addSociety: addTo("societies"),
+  getCommunityById = this.#getById("communities")
+  getPhaseById = this.#getById("phases")
+  getPlayerById = this.#getById("players")
+  getResourceById = this.#getById("resources")
+  getSocietyById = this.#getById("societies")
 
-    getCommunityById: getById("communities"),
-    getPhaseById: getById("phases"),
-    getPlayerById: getById("players"),
-    getResourceById: getById("resources"),
-    getSocietyById: getById("societies"),
-
-    getActivePhases() {
-      return phases.filter((phase) => phase.status !== PhaseStatus.COMPLETE);
-    },
-
-    getAllResources() {
-      return communities.map((community) => community.resources).flat();
-    },
-
-    makeActive() {
-      tags.add(SessionTags.ACTIVE);
-    },
-
-    isActive() {
-      return tags.has( SessionTags.ACTIVE );
-    },
-
-    save() {
-      const filename = datastore.getModelFilename(session);
-      datastore.save(filename, session);
-      Ledger.updateSession(session);
-    },
-
-    toURL(append = "") {
-      return `/sessions/${session.id}` + append;
-    },
-  };
-
-  return session;
-}
-
-//STATIC FUNCTIONS
-//Make sure we don't load from file if we don't need to
-const loadedSessions = new Map();
-
-Session.load = (id) => {
-  if( loadedSessions.has(id) ) {
-    return loadedSessions.get(id)
+  getActivePhases() {
+    return this.phases.filter((phase) => phase.status !== PhaseStatus.COMPLETE);
   }
 
-  const filename = datastore.getModelFilename({type: "Session", id});
-  const session = datastore.load(filename);
-  loadedSessions.set(id, session);
-  return session;
-}
+  getAllResources() {
+    return this.communities.map((community) => community.resources).flat();
+  }
+
+  makeActive() {
+    this.tags.add(SessionTags.ACTIVE);
+  }
+
+  isActive() {
+    return this.tags.has(SessionTags.ACTIVE);
+  }
+
+  save() {
+    const filename = datastore.getModelFilename(this);
+    datastore.save(filename, this);
+    Ledger.updateSession(this);
+  }
+
+  toURL(append = "") {
+    return `/sessions/${this.id}` + append;
+  }
 
 
-//Helper Objects
-export function SessionModel({ type, session = "" }) {
-  const model = Model({ type });
-  return {
-    ...model,
-    session,
+
+  static load(id) {
+    if (this.#sessions.has(id)) {
+      return this.#sessions.get(id);
+    }
+
+    const filename = datastore.getModelFilename({ type: "Session", id });
+    const session = datastore.load(filename);
+    this.#sessions.set(id, session);
+    return session;
   };
+};
+
+export class SessionModel extends Model {
+  session;
+
+  constructor({ session = "" }) {
+    super();
+    this.session = session;
+  }
 }
 
 export const SessionTags = {

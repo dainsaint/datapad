@@ -42,7 +42,7 @@ societies.post("/sessions/:id/societies", (req, res, next) => {
 
   try {
     const session = Session.load(id);
-    const society = Society(req.body);
+    const society = new Society(req.body);
     session.addSociety(society);
     session.save();
 

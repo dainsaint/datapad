@@ -12,6 +12,8 @@ import home from "./routes/homeRoutes.js";
 
 import { populateDummyData } from "../populate.js";
 
+// populateDummyData();
+
 const htmlRouter = express.Router();
 
 htmlRouter.use("/", communities);

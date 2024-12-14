@@ -9,12 +9,10 @@ const home = express.Router();
 - [ ] GET     /
 */
 
-
 home.get("/", (req, res, next) => {
   try {
     const games = Ledger.games;
     const sessions = Ledger.sessions;
-
     //TODO: Design the actual landing page: https://github.com/dainsaint/datapad/issues/39
     res.send(App(Home(games, sessions)));
   } catch (e) {

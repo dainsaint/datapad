@@ -2,23 +2,25 @@ import fs from "fs";
 import path from "node:path";
 import moment from "moment";
 
-import { debounce, rateLimit } from "./utils.js";
+import { rateLimit } from "./utils.js";
 
-import Community from "../models/community.js";
-import Phase from "../models/phase.js";
-import Player from "../models/player.js";
-import Resource from "../models/resource.js";
-import Session from "../models/session.js";
-import Society from "../models/society.js";
-import Game from "../models/game.js";
 import Tags from "./tags.js";
 
-const Types = { Community, Game, Phase, Player, Resource, Session, Society };
+const Types = {};
 const references = new Map();
 
-export default function Datastore({ root = "data", diskWriteDelay = 2000 } = {}) {
-  function save(filename, data) {
-    const fullPath = path.join(root, filename);
+export default class Datastore  {
+
+  root = "data"
+  diskWriteDelay = 2000
+
+  constructor({ root = "data", diskWriteDelay = 2000 } = {}) {
+    this.root = root;
+    this.diskWriteDelay = diskWriteDelay;
+  }
+
+  #save(filename, data) {
+    const fullPath = path.join(this.root, filename);
     
     try {
       //ensure subdir exists
@@ -36,13 +38,13 @@ export default function Datastore({ root = "data", diskWriteDelay = 2000 } = {})
     }
   }
 
-  function load(filename) {
-    const fullPath = path.join(root, filename);
+  #load(filename) {
+    const fullPath = path.join(this.root, filename);
     const file = fs.readFileSync(fullPath);
     return file.toString();
   }
 
-  function parse(text) {
+  #parse(text) {
     return JSON.parse(text, (key, value) => {
       //TODO: Figure out how to rehydrate dates...
       // if (moment(value, moment.ISO_8601, true).isValid())
@@ -62,7 +64,7 @@ export default function Datastore({ root = "data", diskWriteDelay = 2000 } = {})
           return value;
         }
 
-        const reference = Object.assign( Type(value), value );
+        const reference = Object.assign( new Type(value), value );
         references.set(value.id, reference);
         return reference;
       }
@@ -71,26 +73,31 @@ export default function Datastore({ root = "data", diskWriteDelay = 2000 } = {})
     });
   }
 
-  const rateLimitedSave = rateLimit(save, diskWriteDelay);
+  #rateLimitedSave = rateLimit(this.#save, this.diskWriteDelay);
 
-  return {
-    save(filename, data) {
-      rateLimitedSave(filename, data);
-    },
+  save(filename, data) {
+    this.#rateLimitedSave(filename, data);
+  }
 
-    load(filename) {
-      const text = load(filename);
-      const json = parse(text);
-      return json;
-    },
+  load(filename) {
+    const text = this.#load(filename);
+    const json = this.#parse(text);
+    return json;
+  }
 
-    has(filename) {
-      const fullPath = path.join(root, filename);
-      return fs.existsSync(fullPath);
-    },
+  has(filename) {
+    const fullPath = path.join(this.root, filename);
+    return fs.existsSync(fullPath);
+  }
 
-    getModelFilename({ id, type }) {
-      return `${type.toLowerCase()}/${id}.json`;
-    },
-  };
+  getModelFilename({ id, type }) {
+    return `${type.toLowerCase()}/${id}.json`;
+  }
+
+  static registerTypes(...types) {
+    types.forEach( type => {
+      Types[ type.name ] = type;
+    })
+  }
+
 }

@@ -9,19 +9,17 @@ export function broadcast(name, data) {
     client.write(`event: ${name}\ndata: ${data}\n\n`);
 };
 
-
-//TODO: Ledger "active" sessions dont survive deserialization...
 export function tick(deltaTime) {
   try {
     Ledger.active.forEach( session => {
-      const activePhases = session.phases.filter( phase => phase.isActive()  );
+      const activePhases = session.phases.filter( phase => phase.isPlaying  );
+      
       for( const phase of activePhases ){
         phase.tick(deltaTime);
         broadcast("phases");
         session.save();
       }
     })
-
   } catch (e) {}
 }
 

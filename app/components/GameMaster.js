@@ -4,6 +4,7 @@ import LayoutToolbar from "./LayoutToolbar.js";
 import PhaseCard from "./PhaseCard.js";
 
 export default function GameMaster (session) {
+
   const phasesToDisplay = session.phases.slice(0,3);
   const currentPhase = phasesToDisplay.at(0);
   

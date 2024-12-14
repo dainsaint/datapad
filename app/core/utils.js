@@ -57,10 +57,8 @@ export function rateLimit( callback, wait ) {
     clearTimeout(timeout);
 
     if (timeSinceLastCall >= wait) {
-      console.log("throttle triggered");
       invokeCallback(); // Throttle behavior
     } else {
-      console.log("timeout triggered");
       timeout = setTimeout(invokeCallback, wait); // Debounce behavior
     }
   }

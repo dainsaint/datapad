@@ -1,6 +1,6 @@
 import Datastore from "../core/datastore.js";
 
-const datastore = Datastore();
+const datastore = new Datastore();
 const filename = "ledger.json";
 
 /*
@@ -8,94 +8,92 @@ const filename = "ledger.json";
 - [ ] Cleanup references to sessions that no longer exist (on start?)
 */
 
-const Ledger = function() {
-  const file = {};
+class LedgerSingleton {
+  games = [];
+  sessions = [];
+  players = [];
+  active = [];
 
-  try {
-    const fromDisk = datastore.load(filename);
-    Object.assign(file, fromDisk);
-  } catch(e) {
-    //file doesnt exist, do nothing
-    //(we'll create automatically on next save)
+  initialize() {
+    const file = {};
+
+    try {
+      const fromDisk = datastore.load(filename);
+      Object.assign(file, fromDisk);
+    } catch (e) {
+      // console.log(e);
+      //file doesnt exist, do nothing
+      //(we'll create automatically on next save)
+    }
+
+    const { games = [], sessions = [], players = [], active = [] } = file;
+
+    this.games.push(...games);
+    this.sessions.push(...sessions);
+    this.players.push(...players);
+    this.active.push(...active);
   }
 
-  const {
-    games = [],
-    sessions = [],
-    players = [],
-    active = []
-  } = file;
-
-
-  function save() {
-    datastore.save(filename, ledger);
+  //PRIVATE METHODS
+  #save() {
+    datastore.save(filename, this);
   }
 
-  function getSessionRecord(session) {
+  #getSessionRecord(session) {
     return {
       id: session.id,
       name: session.name,
-      date: session.date
-    }
+      date: session.date,
+    };
   }
 
-  function getGameRecord(session) {
-    return session.game
+  #getGameRecord(session) {
+    return session.game;
   }
 
-  function updateRecord( record, records ) {
-    if(!record)
-      return;
+  #updateRecord(record, records) {
+    if (!record) return;
 
-    const oldRecord = records.find( r => r.id === record.id );
-    if( oldRecord ) {
+    const oldRecord = records.find((r) => r.id === record.id);
+    if (oldRecord) {
       Object.assign(oldRecord, record);
     } else {
-      records.push(record)
+      records.push(record);
     }
+  }
+
+  #getById(array) {
+    return (id) => array.find((element) => element.id === id);
+  }
+
+  //PUBLIC METHODS
+  getGameById = this.#getById(this.games);
+  getPlayerById = this.#getById(this.players);
+
+  getActiveSession() {
+    //TODO: Fix this doofer
+    return this.sessions.at(0);
   }
 
   //TODO: Make sure each game has a list of sessions
-  function updateSession(session) {
-    updateRecord(getSessionRecord(session), ledger.sessions);
-    updateRecord(getGameRecord(session), ledger.games);
+  updateSession(session) {
+    this.#updateRecord(this.#getSessionRecord(session), this.sessions);
+    this.#updateRecord(this.#getGameRecord(session), this.games);
 
-    session.players.forEach( player => {
-      updateRecord(player, ledger.players);
-    })
- 
+    session.players.forEach((player) => {
+      this.#updateRecord(player, this.players);
+    });
 
-    if( session.isActive() && !ledger.active.includes(session) ) {
-      ledger.active.push(session);
-    } else if (!session.isActive() && ledger.active.includes(session)) {
-      ledger.active.splice(ledger.active.indexOf(session), 1);
+    if (session.isActive() && !this.active.includes(session)) {
+      this.active.push(session);
+    } else if (!session.isActive() && this.active.includes(session)) {
+      this.active.splice(this.active.indexOf(session), 1);
     }
 
-    save();
+    this.#save();
   }
+}
 
-  function getById(key) {
-    return (id) => ledger[key].find((element) => element.id === id);
-  }
-
-  const ledger = {
-    games,
-    sessions,
-    players,
-    active,
-
-    getGameById: getById("games"),
-    getPlayerById: getById("players"),
-
-    getActiveSession() {
-      //TODO: Fix this doofer
-      return sessions.at(0);
-    },
-
-    updateSession,
-  };
-
-  return ledger;
-}();
+const Ledger = new LedgerSingleton();
 
 export default Ledger;

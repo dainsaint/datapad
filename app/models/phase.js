@@ -1,64 +1,56 @@
 import Tags from "../core/tags.js";
-import { SessionModel } from "./session.js";
+import SessionModel from "./session-model.js";
 
-export default function Phase({ 
-  name = "",
-  round = 0,
-  duration = 0
-}) {
-  const model = SessionModel({ type: "Phase" });
+export default class Phase extends SessionModel {
+  status = PhaseStatus.IDLE;
+  duration = 0;
+  timeElapsed = 0;
+  tags = new Tags();
+  actualTimeStart
+  actualTimeComplete
 
-  let timeElapsed = 0, actualTimeComplete, actualTimeStart;
-  
-  const phase = {
-    ...model,
-    name,
-    round,
-    duration,
-    status: PhaseStatus.IDLE,
+  constructor({ name = "", round = 0, duration = 0 }) {
+    super();
+    this.name = name;
+    this.round = round;
+    this.duration = duration;
+  }
 
-    timeElapsed,
-    // actualTimeStart,
-    // actualTimeComplete,
+  get timeRemaining() {
+    return Math.floor(this.duration - this.timeElapsed);
+  }
 
-    timeRemaining() {
-      return Math.floor(phase.duration - phase.timeElapsed);
-    },
+  get actualDuration() {
+    return this.actualTimeComplete - this.actualTimeStart;
+  }
 
-    // actualDuration() {
-    //   return phase.actualTimeComplete - phase.actualTimeStart;
-    // },
+  get isPlaying() {
+    return this.status === PhaseStatus.PLAYING;
+  }
 
-    startPhase() {
-      // actualTimeStart = new Date();
-      phase.status = PhaseStatus.PLAYING;
-    },
+  startPhase() {
+    this.actualTimeStart = new Date();
+    this.status = PhaseStatus.PLAYING;
+  }
 
-    pausePhase() {
-      phase.status = PhaseStatus.PAUSED;
-    },
+  pausePhase() {
+    this.status = PhaseStatus.PAUSED;
+  }
 
-    completePhase() {
-      // actualTimeComplete = new Date();
-      phase.status = PhaseStatus.COMPLETE;
-    },
+  completePhase() {
+    this.actualTimeComplete = new Date();
+    this.status = PhaseStatus.COMPLETE;
+  }
 
-    isActive() {
-      return phase.status === PhaseStatus.PLAYING;
-    },
+  tick(deltaTimeMS) {
+    if (this.isPlaying) {
+      this.timeElapsed += deltaTimeMS / 1000;
+    }
+  }
 
-    tick(deltaTimeMS) {
-      if ( phase.isActive() ) {
-        phase.timeElapsed += deltaTimeMS / 1000;
-      }
-    },
-
-    toURL(append = "") {
-      return `/sessions/${phase.session}/phases/${phase.id}` + append;
-    },
-  };
-
-  return phase;
+  toURL(append = "") {
+    return `/sessions/${this.session}/phases/${this.id}` + append;
+  }
 }
 
 export const PhaseStatus = {

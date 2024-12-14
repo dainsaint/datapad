@@ -45,8 +45,6 @@ phases.put("/sessions/:id/phases/:phase_id", (req, res, next) => {
     const phase = session.getPhaseById(phase_id);
 
     //TODO: handle this logic better, with the mutability problem
-    
-
     switch (action) {
       case "start":
         phase.startPhase();

@@ -22,7 +22,7 @@ communities.post("/sessions/:session_id/communities", (req, res) => {
   try {
     const session = Session.load(session_id);
     const society = session.getSocietyById(society_id);
-    const community = Community(req.body);
+    const community = new Community(req.body);
 
     society.addCommunity(community);
     session.addCommunity(community);

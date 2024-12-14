@@ -1,14 +1,15 @@
 import uuid from "./uuid.js";
 
-export default function Model({ id = uuid(8), type }) {
-  const model = { 
-    id, 
-    type,
+export default class Model {
+  id
+  type
 
-    update( patch ) {
-      Object.assign(model, patch);
-    }
-  };
+  constructor() {
+    this.id = uuid(8),
+    this.type = this.constructor.name;
+  }
 
-  return model;
+  update( patch ) {
+    Object.assign(this, patch);
+  }
 }
