@@ -1,21 +1,31 @@
-export default function Timer(callback, frequency) {  
-  let then, interval;
+export default class Timer{
+  
+  callback
+  frequency
+  
+  #then
+  #interval
 
-  function tick() {
+  constructor(callback, frequency) {  
+    this.callback = callback;
+    this.frequency = frequency;
+  }
+
+  #tick() {
     const now = Date.now();
-    const deltaTime = now - then;
-    callback( deltaTime );
-    then = now;
+    const deltaTime = now - this.#then;
+    this.callback( deltaTime );
+    this.#then = now;
   } 
 
-  return {
-    start() {
-      then = Date.now();
-      interval = setInterval(tick, frequency);
-    },
 
-    stop() {
-      clearInterval(interval);
-    }
+  start() {
+    this.#then = Date.now();
+    this.#interval = setInterval(this.#tick, this.frequency);
   }
+
+  stop() {
+    clearInterval(this.#interval);
+  }
+  
 }

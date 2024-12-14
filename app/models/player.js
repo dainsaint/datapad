@@ -5,6 +5,7 @@ export default class Player extends SessionModel {
 
   name = "New Player"
   pronouns = ["they", "them"] 
+  community
   tags = new Tags()
 
   constructor({ name = "New Player"} ){

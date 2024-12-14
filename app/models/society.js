@@ -1,8 +1,10 @@
 import SessionModel from "./session-model.js";
 
 export default class Society extends SessionModel {
-
-  communities = []
+  name = "";
+  archetype = "";
+  planet = "";
+  communities = [];
 
   constructor({ name = "", archetype = "", planet = "" }) {
     super();
@@ -10,7 +12,7 @@ export default class Society extends SessionModel {
     this.archetype = archetype;
     this.planet = planet;
   }
-  
+
   addCommunity(community) {
     this.communities.push(community);
   }
@@ -22,7 +24,6 @@ export default class Society extends SessionModel {
   toURL(append = "") {
     return `/sessions/${this.session}/societies/${this.id}` + append;
   }
-
 }
 
 export const SocietyArchetype = {

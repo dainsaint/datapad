@@ -25,6 +25,10 @@ export default class Session extends Model {
     this.date = date;
   }
 
+  get currentRound() {
+    return this.phases.at(0)?.round;
+  }
+
   //Helper functions
   #addTo(key) {
     return (object) => {
@@ -74,8 +78,6 @@ export default class Session extends Model {
   toURL(append = "") {
     return `/sessions/${this.id}` + append;
   }
-
-
 
   static load(id) {
     if (this.#sessions.has(id)) {

@@ -3,6 +3,7 @@ import SessionModel from "./session-model.js";
 
 export default class Resource extends SessionModel {
   name = "";
+  relationship = "";
   tags = new Tags();
 
   constructor({ name = "New Resource" }) {

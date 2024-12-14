@@ -19,7 +19,7 @@ export default class Server {
   timer;
 
   constructor() {
-    this.timer = Timer(this.tick.bind(this), 1000);
+    this.timer = new Timer(this.tick, 1000);
   }
 
   start(port) {

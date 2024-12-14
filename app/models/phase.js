@@ -3,11 +3,16 @@ import SessionModel from "./session-model.js";
 
 export default class Phase extends SessionModel {
   status = PhaseStatus.IDLE;
-  duration = 0;
+  round = 0;
+  length = 0;
   timeElapsed = 0;
   tags = new Tags();
-  actualTimeStart
-  actualTimeComplete
+  
+  scheduledTimeStart = new Date();
+  scheduledTimeEnd = new Date();
+
+  actualTimeStart;
+  actualTimeComplete;
 
   constructor({ name = "", round = 0, duration = 0 }) {
     super();
