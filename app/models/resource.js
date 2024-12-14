@@ -1,13 +1,25 @@
-import Model from "../core/model.js";
+import Tags from "../core/tags.js";
+import SessionModel from "./session-model.js";
 
-export default class Resource extends Model {
-  name = "New Resource";
+export default class Resource extends SessionModel {
+  name = "";
   relationship = "";
-  isExhausted = false;
+  tags = new Tags();
 
-  constructor({name}) {
+  constructor({ name = "New Resource" }) {
     super();
-    this.name = name;
+    Object.assign(this, {name});
   }
 
+  toURL(append = "") {
+    return `/sessions/${this.session}/resources/${this.id}` + append;
+  }
 }
+
+export const ResourceTag = {
+  EXHAUSTED: "exhausted",
+  VITAL: "vital",
+  TRANSFORMED: "transformed",
+  DESTROYED: "destroyed",
+  SEIZED: "seized",
+}; 

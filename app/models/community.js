@@ -1,17 +1,37 @@
-import Model from "../core/model.js";
+import Tags from "../core/tags.js";
+import SessionModel from "./session-model.js";
 
-export default class Community extends Model {
-  name = "New Community";
+export default class Community extends SessionModel {
+  
+  name
+  voice
   resources = [];
-  voice = "people"
+  tags = new Tags();
 
-  constructor({name, voice = "people"}) {
+  constructor({ name = "", voice = CommunityVoice.PEOPLE }) {
     super();
-    this.name = name;
-    this.voice = voice;
+    Object.assign( this, {name, voice});
   }
 
   get isEndangered() {
     return this.resources.length == 0;
   }
+
+  addResource(resource) {
+    this.resources.push(resource);
+  }
+
+  toURL(append = "") {
+    return `/sessions/${this.session}/communities/${this.id}` + append;
+  }
 }
+
+export const CommunityVoice = {
+  LEADER: "leader",
+  PEOPLE: "people",
+};
+
+export const CommunityTag = {
+  ENDANGERED: "endangered",
+  LOST: "lost",
+};

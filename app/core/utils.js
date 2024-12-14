@@ -26,3 +26,40 @@ export function iconForArchetype(archetype) {
 export function map(array, ...transformers) {
   return transformers.reduce( (result, transformer) => result.map(transformer), array ).join("\n");
 }
+
+export function debounce(func, duration) {
+  let timeout;
+
+  return function (...args) {
+    const effect = () => {
+      timeout = null;
+      return func.apply(this, args);
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(effect, duration);
+  };
+}
+
+export function rateLimit( callback, wait ) {  
+  let lastTime = 0; // Last time the callback was invoked
+  let timeout; // Timeout reference for the debounce
+
+  return function (...args) {
+    const now = Date.now();
+    const timeSinceLastCall = now - lastTime;
+
+    const invokeCallback = () => {
+      callback.apply(this, args);
+      lastTime = Date.now();
+    };
+
+    clearTimeout(timeout);
+
+    if (timeSinceLastCall >= wait) {
+      invokeCallback(); // Throttle behavior
+    } else {
+      timeout = setTimeout(invokeCallback, wait); // Debounce behavior
+    }
+  }
+}

@@ -1,13 +1,24 @@
-import Model from "../core/model.js";
+import Tags from "../core/tags.js";
+import SessionModel from "./session-model.js";
 
-export default class Player extends Model {
-  
-  name = "New Player";
-  pronouns = ["they", "them"];
-  community;
+export default class Player extends SessionModel {
 
-  constructor({name}) {
+  name = "New Player"
+  pronouns = ["they", "them"] 
+  community
+  tags = new Tags()
+
+  constructor({ name = "New Player"} ){
     super();
-    this.name = name;
+    Object.assign(this, {name})
   }
+
+  toURL(append = "") {
+    return `/sessions/${this.session}/phases/${this.id}` + append;
+  }
+
+}
+
+export const PlayerTags = {
+
 }

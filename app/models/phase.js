@@ -1,48 +1,60 @@
-import Model from "../core/model.js";
+import Tags from "../core/tags.js";
+import SessionModel from "./session-model.js";
 
-export default class Phase extends Model {
-  name = "";
+export default class Phase extends SessionModel {
+  status = PhaseStatus.IDLE;
   round = 0;
-  length = 0;
+  duration = 0;
+  timeElapsed = 0;
+  tags = new Tags();
 
   scheduledTimeStart = new Date();
   scheduledTimeEnd = new Date();
-  actualTimeStart;
-  actualTimeComplete;
-  timeElapsed = 0;
 
-  isPlaying = false;
+  actualTimeStart = new Date();
+  actualTimeComplete = new Date();
 
-  constructor(name, round, length) {
+  constructor({ name = "", round = 0, duration = 0 }) {
     super();
-    this.name = name;
-    this.round = round;
-    this.length = length;
+    Object.assign( this, {name, round, duration} );
   }
 
   get timeRemaining() {
-    return Math.floor(this.length - this.timeElapsed);
+    return Math.floor(this.duration - this.timeElapsed);
   }
 
-  get actualLength() {
-    return this.actualTimeComplete - this.actualTimeStart;
+  get isPlaying() {
+    return this.status === PhaseStatus.PLAYING;
   }
 
   startPhase() {
     this.actualTimeStart = new Date();
-    this.isPlaying = true;
+    this.status = PhaseStatus.PLAYING;
   }
 
   pausePhase() {
-    this.isPlaying = false;
+    this.status = PhaseStatus.PAUSED;
   }
 
   completePhase() {
     this.actualTimeComplete = new Date();
-    this.isPlaying = false;
+    this.status = PhaseStatus.COMPLETE;
   }
 
   tick(deltaTimeMS) {
-    if (this.isPlaying) this.timeElapsed += deltaTimeMS/1000;
+    if (this.isPlaying) {
+      this.timeElapsed += deltaTimeMS / 1000;
+    }
   }
+
+  toURL(append = "") {
+    return `/sessions/${this.session}/phases/${this.id}` + append;
+  }
+}
+
+export const PhaseStatus = {
+  IDLE: "idle",
+  PLAYING: "playing",
+  PAUSED: "paused",
+  COMPLETE: "complete"
 }

@@ -1,19 +1,36 @@
-import Model from "../core/model.js";
+import SessionModel from "./session-model.js";
 
-export default class Society extends Model {
+export default class Society extends SessionModel {
   name = "";
   archetype = "";
   planet = "";
   communities = [];
 
-  constructor({name, archetype = "", planet = ""}) {
+  constructor({ name = "", archetype = "", planet = "" }) {
     super();
-    this.name = name;
-    this.archetype = archetype;
-    this.planet = planet;
+    Object.assign(this, { name, archetype, planet });
   }
 
-  get resources() {
-    return this.communities.map( community => community.resources ).flat();
+  addCommunity(community) {
+    this.communities.push(community);
+  }
+
+  getAllResources() {
+    return this.communities.map((community) => community.resources).flat();
+  }
+
+  toURL(append = "") {
+    return `/sessions/${this.session}/societies/${this.id}` + append;
   }
 }
+
+export const SocietyArchetype = {
+  AESTHETIC: "the aesthetic",
+  CURIOUS: "the curious",
+  ENTERPRISE: "the enterprise",
+  FAITHFUL: "the faithful",
+  GROUNDED: "the grounded",
+  INTREPID: "the intrepid",
+  MIGHTY: "the mighty",
+  SCHOLARS: "the scholars",
+};

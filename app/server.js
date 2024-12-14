@@ -5,12 +5,13 @@ import Timer from "./core/timer.js";
 
 export const request = {
   path: "/",
+  query: {},
   params: {}
 }
 
 const errorHandler = (err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send("Something went wrong!");
+  res.status(500).send(err.message);
 };
 
 export default class Server {
@@ -18,7 +19,7 @@ export default class Server {
   timer;
 
   constructor() {
-    this.timer = new Timer(1000, this.tick);
+    this.timer = new Timer(this.tick, 1000);
   }
 
   start(port) {
@@ -29,6 +30,7 @@ export default class Server {
     app.use(express.static("app/static"));
     app.use((req, res, next) => {
       request.path = req.path;
+      request.query = req.query;
       request.params = req.params;
       next();
     });

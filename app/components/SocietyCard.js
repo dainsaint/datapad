@@ -3,7 +3,7 @@ import { iconForArchetype } from "../core/utils.js";
 
 export default function SocietyCard (society) {
   return `
-    <div class="card layout-row" data-id="${society._id}">
+    <div class="card layout-row" data-id="${society.id}">
       ${ Icon( iconForArchetype(society.archetype) ) }
       <div>
         <h2>${society.name}</h2>
