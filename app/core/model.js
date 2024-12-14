@@ -2,11 +2,9 @@ import uuid from "./uuid.js";
 
 export default class Model {
   id
-  type
 
   constructor() {
-    this.id = uuid(8),
-    this.type = this.constructor.name;
+    this.id = uuid(8)
   }
 
   update( patch ) {

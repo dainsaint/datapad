@@ -21,7 +21,7 @@ export default class Timer{
 
   start() {
     this.#then = Date.now();
-    this.#interval = setInterval(this.#tick, this.frequency);
+    this.#interval = setInterval(this.#tick.bind(this), this.frequency);
   }
 
   stop() {

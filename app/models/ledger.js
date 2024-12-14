@@ -15,23 +15,21 @@ class LedgerSingleton {
   active = [];
 
   initialize() {
-    const file = {};
+    const file = { games: [], sessions: [], players: [], active: [] };
 
     try {
       const fromDisk = datastore.load(filename);
       Object.assign(file, fromDisk);
     } catch (e) {
-      // console.log(e);
-      //file doesnt exist, do nothing
-      //(we'll create automatically on next save)
+      if( e.code !== "ENOENT" ) {
+        //ENONENT means file doesnt exist, thats fine
+        //(we'll create automatically on next save)
+        //any other error, we should see
+        console.log(e);
+      } 
     }
 
-    const { games = [], sessions = [], players = [], active = [] } = file;
-
-    this.games.push(...games);
-    this.sessions.push(...sessions);
-    this.players.push(...players);
-    this.active.push(...active);
+    Object.assign(this, file);
   }
 
   //PRIVATE METHODS
@@ -51,37 +49,37 @@ class LedgerSingleton {
     return session.game;
   }
 
-  #updateRecord(record, records) {
+  #updateRecord(key, record) {
     if (!record) return;
 
-    const oldRecord = records.find((r) => r.id === record.id);
+    const oldRecord = this[key].find((r) => r.id === record.id);
     if (oldRecord) {
       Object.assign(oldRecord, record);
     } else {
-      records.push(record);
+      this[key].push(record);
     }
   }
 
-  #getById(array) {
-    return (id) => array.find((element) => element.id === id);
+  #getById(key) {
+    return (id) => this[key].find((element) => element.id === id);
   }
 
   //PUBLIC METHODS
-  getGameById = this.#getById(this.games);
-  getPlayerById = this.#getById(this.players);
+  getGameById = this.#getById("games");
+  getPlayerById = this.#getById("players");
 
   getActiveSession() {
     //TODO: Fix this doofer
     return this.sessions.at(0);
   }
 
-  //TODO: Make sure each game has a list of sessions
+  //TODO: Make sure each game has a list of its sessions
   updateSession(session) {
-    this.#updateRecord(this.#getSessionRecord(session), this.sessions);
-    this.#updateRecord(this.#getGameRecord(session), this.games);
+    this.#updateRecord("sessions", this.#getSessionRecord(session));
+    this.#updateRecord("games", this.#getGameRecord(session));
 
     session.players.forEach((player) => {
-      this.#updateRecord(player, this.players);
+      this.#updateRecord("players", player);
     });
 
     if (session.isActive() && !this.active.includes(session)) {

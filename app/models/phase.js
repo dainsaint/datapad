@@ -7,7 +7,7 @@ export default class Phase extends SessionModel {
   length = 0;
   timeElapsed = 0;
   tags = new Tags();
-  
+
   scheduledTimeStart = new Date();
   scheduledTimeEnd = new Date();
 
@@ -16,7 +16,7 @@ export default class Phase extends SessionModel {
 
   constructor({ name = "", round = 0, duration = 0 }) {
     super();
-    this.name = name;
+    this.name = name; 
     this.round = round;
     this.duration = duration;
   }

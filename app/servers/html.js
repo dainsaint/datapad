@@ -10,10 +10,6 @@ import sessions from "./routes/sessionRoutes.js";
 import societies from "./routes/societyRoutes.js";
 import home from "./routes/homeRoutes.js";
 
-import { populateDummyData } from "../populate.js";
-
-// populateDummyData();
-
 const htmlRouter = express.Router();
 
 htmlRouter.use("/", communities);

@@ -5,6 +5,7 @@ import moment from "moment";
 import { rateLimit } from "./utils.js";
 
 import Tags from "./tags.js";
+import Serializer from "./serializer.js";
 
 const Types = {};
 const references = new Map();
@@ -31,7 +32,7 @@ export default class Datastore  {
 
     try {
       //save file
-      fs.writeFileSync(fullPath, JSON.stringify(data, null, 2));
+      fs.writeFileSync(fullPath, Serializer.serialize(data));
     } catch (e) {
       console.log(e);
       throw e;
@@ -45,32 +46,7 @@ export default class Datastore  {
   }
 
   #parse(text) {
-    return JSON.parse(text, (key, value) => {
-      //TODO: Figure out how to rehydrate dates...
-      // if (moment(value, moment.ISO_8601, true).isValid())
-      //   return new Date(value);
-
-      //TODO: This is a very weird way to rehydrate this, but it should work for now
-      if( key === "tags" ) return new Tags(value);
-
-      if (typeof value !== "object") return value;
-
-      if ("type" in value) {
-        if (references.has(value.id)) return references.get(value.id);
-
-        const Type = Types[value.type];
-        if (!Type) {
-          console.log( "Warning: Couldn't hydrate", value.type, "(has it been added to Types in datastore.js?");
-          return value;
-        }
-
-        const reference = Object.assign( new Type(value), value );
-        references.set(value.id, reference);
-        return reference;
-      }
-
-      return value;
-    });
+    return Serializer.deserialize(text);
   }
 
   #rateLimitedSave = rateLimit(this.#save, this.diskWriteDelay);
@@ -81,6 +57,7 @@ export default class Datastore  {
 
   load(filename) {
     const text = this.#load(filename);
+    
     const json = this.#parse(text);
     return json;
   }
@@ -90,7 +67,7 @@ export default class Datastore  {
     return fs.existsSync(fullPath);
   }
 
-  getModelFilename({ id, type }) {
+  getFilename({ id, type }) {
     return `${type.toLowerCase()}/${id}.json`;
   }
 
@@ -100,4 +77,4 @@ export default class Datastore  {
     })
   }
 
-}
+}  

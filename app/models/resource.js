@@ -22,4 +22,4 @@ export const ResourceTag = {
   TRANSFORMED: "transformed",
   DESTROYED: "destroyed",
   SEIZED: "seized",
-};
+}; 

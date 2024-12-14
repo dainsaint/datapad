@@ -1,5 +1,13 @@
 export default class Tags extends Set {
+
+  constructor({ value = [] } = {}) {
+    super( value )
+  }
+
   toJSON() {
-    return Array.from(this);
+    return {
+      _type: "Tags",
+      value: Array.from(this)
+    }
   }
 }

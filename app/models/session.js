@@ -70,7 +70,7 @@ export default class Session extends Model {
   }
 
   save() {
-    const filename = datastore.getModelFilename(this);
+    const filename = datastore.getFilename({ type: "Session", id: this.id});
     datastore.save(filename, this);
     Ledger.updateSession(this);
   }
@@ -78,13 +78,13 @@ export default class Session extends Model {
   toURL(append = "") {
     return `/sessions/${this.id}` + append;
   }
-
+ 
   static load(id) {
     if (this.#sessions.has(id)) {
       return this.#sessions.get(id);
     }
 
-    const filename = datastore.getModelFilename({ type: "Session", id });
+    const filename = datastore.getFilename({ type: "Session", id });
     const session = datastore.load(filename);
     this.#sessions.set(id, session);
     return session;

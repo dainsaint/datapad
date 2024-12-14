@@ -10,7 +10,7 @@ export function populateDummyData() {
 
   const session = new Session({
     date: new Date(),  
-    name: "What In Tarnation?"
+    name: "A Sample Session"
   });
 
   session.addPhase(new Phase({ name: "Global Phase",       round: 0, duration: 1200 }))
@@ -83,10 +83,8 @@ export function populateDummyData() {
   session.game = game;
 
   // const datastore = Datastore({ root: "datastore-two/"} );
-  // const filename = datastore.getModelFilename( session );
+  // const filename = datastore.getFilename( {type: "Session", id: session.id} );
   // datastore.save( filename, session );
 
   session.save();
-
-  // console.log(datastore.load("session/bIXPgPNH.json"));
 }

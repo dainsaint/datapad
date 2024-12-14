@@ -3,12 +3,13 @@ import Tags from "../core/tags.js";
 
 export default class Game extends Model {
 
+  name = "New Game"
   tags = new Tags() 
   sessions = []
 
-  constructor({ name = "" }) {
+  constructor({ name = "New Game" }) {
     super();
-    this.name = name;
+    Object.assign(this, {name});
   }
 
   addSession({id, name, date}) {

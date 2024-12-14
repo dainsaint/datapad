@@ -2,13 +2,15 @@ import Tags from "../core/tags.js";
 import SessionModel from "./session-model.js";
 
 export default class Community extends SessionModel {
+  
+  name
+  voice
   resources = [];
   tags = new Tags();
 
   constructor({ name = "", voice = CommunityVoice.PEOPLE }) {
     super();
-    this.name = name;
-    this.voice = voice;
+    Object.assign( this, {name, voice});
   }
 
   get isEndangered() {
