@@ -8,9 +8,7 @@ export default class Society extends SessionModel {
 
   constructor({ name = "", archetype = "", planet = "" }) {
     super();
-    this.name = name;
-    this.archetype = archetype;
-    this.planet = planet;
+    Object.assign(this, { name, archetype, planet });
   }
 
   addCommunity(community) {

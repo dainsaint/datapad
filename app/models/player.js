@@ -10,7 +10,7 @@ export default class Player extends SessionModel {
 
   constructor({ name = "New Player"} ){
     super();
-    this.name = name;
+    Object.assign(this, {name})
   }
 
   toURL(append = "") {

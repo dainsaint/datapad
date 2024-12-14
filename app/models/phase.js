@@ -4,29 +4,23 @@ import SessionModel from "./session-model.js";
 export default class Phase extends SessionModel {
   status = PhaseStatus.IDLE;
   round = 0;
-  length = 0;
+  duration = 0;
   timeElapsed = 0;
   tags = new Tags();
 
   scheduledTimeStart = new Date();
   scheduledTimeEnd = new Date();
 
-  actualTimeStart;
-  actualTimeComplete;
+  actualTimeStart = new Date();
+  actualTimeComplete = new Date();
 
   constructor({ name = "", round = 0, duration = 0 }) {
     super();
-    this.name = name; 
-    this.round = round;
-    this.duration = duration;
+    Object.assign( this, {name, round, duration} );
   }
 
   get timeRemaining() {
     return Math.floor(this.duration - this.timeElapsed);
-  }
-
-  get actualDuration() {
-    return this.actualTimeComplete - this.actualTimeStart;
   }
 
   get isPlaying() {

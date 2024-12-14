@@ -21,8 +21,7 @@ export default class Session extends Model {
 
   constructor({name = "", date = new Date()} = {}){
     super();
-    this.name = name;
-    this.date = date;
+    Object.assign(this, {name, date});
   }
 
   get currentRound() {

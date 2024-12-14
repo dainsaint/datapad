@@ -8,7 +8,7 @@ export default class Resource extends SessionModel {
 
   constructor({ name = "New Resource" }) {
     super();
-    this.name = name;
+    Object.assign(this, {name});
   }
 
   toURL(append = "") {
