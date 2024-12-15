@@ -1,7 +1,7 @@
 import express from "express";
-import Session, { SessionTags } from "../../models/session.js";
-import PhaseCard, { PhaseTime } from "../../components/PhaseCard.js";
-
+import Session from "../../models/session.js";
+import PhaseCard from "../../components/phases/PhaseCard.js";
+import PhaseTime from "../../components/phases/PhaseTime.js";
 
 const phases = express.Router();
 

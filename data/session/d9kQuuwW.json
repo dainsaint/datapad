@@ -68,18 +68,20 @@
       "_type": "Phase",
       "id": "r2d2Kb4t",
       "session": "d9kQuuwW",
-      "status": "idle",
+      "status": "paused",
       "round": 0,
-      "length": 0,
-      "timeElapsed": 0,
+      "duration": 1200,
+      "timeElapsed": 6.013999999999999,
       "tags": {
         "_type": "Tags",
         "value": []
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:29.748Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Global Phase",
-      "duration": 1200
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -87,7 +89,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 0,
-      "length": 0,
+      "duration": 240,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -95,8 +97,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Universal Phase",
-      "duration": 240
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -104,7 +108,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 0,
-      "length": 0,
+      "duration": 600,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -112,8 +116,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Societal Phase",
-      "duration": 600
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -121,7 +127,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 0,
-      "length": 0,
+      "duration": 600,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -129,8 +135,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Galactic Phase",
-      "duration": 600
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -138,7 +146,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 0,
-      "length": 0,
+      "duration": 500,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -146,8 +154,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Individual Phase",
-      "duration": 500
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -155,7 +165,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 1,
-      "length": 0,
+      "duration": 240,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -163,8 +173,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Universal Phase",
-      "duration": 240
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -172,7 +184,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 1,
-      "length": 0,
+      "duration": 600,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -180,8 +192,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Societal Phase",
-      "duration": 600
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -189,7 +203,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 1,
-      "length": 0,
+      "duration": 600,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -197,8 +211,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Galactic Phase",
-      "duration": 600
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -206,7 +222,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 1,
-      "length": 0,
+      "duration": 500,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -214,8 +230,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Individual Phase",
-      "duration": 500
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -223,7 +241,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 2,
-      "length": 0,
+      "duration": 240,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -231,8 +249,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Universal Phase",
-      "duration": 240
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -240,7 +260,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 2,
-      "length": 0,
+      "duration": 600,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -248,8 +268,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Societal Phase",
-      "duration": 600
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -257,7 +279,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 2,
-      "length": 0,
+      "duration": 600,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -265,8 +287,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Galactic Phase",
-      "duration": 600
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -274,7 +298,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 2,
-      "length": 0,
+      "duration": 500,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -282,8 +306,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Individual Phase",
-      "duration": 500
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -291,7 +317,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 3,
-      "length": 0,
+      "duration": 240,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -299,8 +325,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Universal Phase",
-      "duration": 240
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -308,7 +336,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 3,
-      "length": 0,
+      "duration": 600,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -316,8 +344,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.530Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.530Z",
       "name": "Societal Phase",
-      "duration": 600
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -325,7 +355,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 3,
-      "length": 0,
+      "duration": 600,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -333,8 +363,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.531Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.531Z",
       "name": "Galactic Phase",
-      "duration": 600
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -342,7 +374,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 3,
-      "length": 0,
+      "duration": 500,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -350,8 +382,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.531Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.531Z",
       "name": "Generational Phase",
-      "duration": 500
+      "length": 0
     },
     {
       "_type": "Phase",
@@ -359,7 +393,7 @@
       "session": "d9kQuuwW",
       "status": "idle",
       "round": 3,
-      "length": 0,
+      "duration": 500,
       "timeElapsed": 0,
       "tags": {
         "_type": "Tags",
@@ -367,8 +401,10 @@
       },
       "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
       "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+      "actualTimeStart": "2024-12-15T14:53:14.531Z",
+      "actualTimeComplete": "2024-12-15T14:53:14.531Z",
       "name": "Conclusion Phase",
-      "duration": 500
+      "length": 0
     }
   ],
   "players": [

@@ -1,17 +1,23 @@
 import express from "express";
 import Session from "../../models/session.js";
-import GameMaster from "../../components/GameMaster.js";
-import Facilitator from "../../components/Facilitator.js";
-import Script from "../../components/Script.js";
-import App from "../../components/App.js";
+
+import App from "../../components/layouts/App.js";
+import SessionGameMaster from "../../components/sessions/SessionGameMaster.js";
+import SessionFacilitator from "../../components/sessions/SessionFacilitator.js";
+import SessionDocuments from "../../components/sessions/SessionDocuments.js";
+
 
 const sessions = express.Router();
 
 /*
 - [ ] GET     /sessions/create;
-- [ ] GET     /sessions/:session/gm;
-- [ ] GET     /sessions/:session/facilitator;
-- [ ] GET     /sessions/:session/script;
+- [ ] POST    /sessions;
+- [ ] PATCH   /sessions/:session;
+- [x] GET     /sessions/:session/game-master;
+- [x] GET     /sessions/:session/facilitator;
+- [ ] GET     /sessions/:session/showrunner;
+- [ ] GET     /sessions/:session/prep;
+- [x] GET     /sessions/:session/documents;
 */
 
 
@@ -21,9 +27,9 @@ sessions.get("/sessions/:id", (req, res) => {
     const { view = "gm" } = req.query;
 
     const views = {
-      gm: GameMaster,
-      facilitator: Facilitator,
-      script: Script,
+      gm: SessionGameMaster,
+      facilitator: SessionFacilitator,
+      documents: SessionDocuments,
     };
 
     const session = Session.load(id);

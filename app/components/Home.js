@@ -1,6 +1,5 @@
 import moment from "moment";
 import { map, pluralize } from "../core/utils.js";
-import GameCard from "./GameCard.js";
 
 export default function Home (games, sessions) {
   return `

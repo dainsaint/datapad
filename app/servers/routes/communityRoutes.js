@@ -1,8 +1,9 @@
 import express from "express";
 import Session from "../../models/session.js";
 import Community from "../../models/community.js";
-import { CommunityCard } from "../../components/Facilitator.js";
+import CommunityCard from "../../components/communities/CommunityCard.js";
 import { broadcast } from "./eventRoutes.js";
+
 
 const communities = express.Router();
 

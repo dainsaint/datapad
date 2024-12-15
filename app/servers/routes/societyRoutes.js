@@ -1,9 +1,11 @@
 import express from "express";
 import Session from "../../models/session.js";
 import Society from "../../models/society.js";
-import DialogCreateSociety from "../../components/DialogCreateSociety.js";
-import { SocietyCardList } from "../../components/GameMaster.js";
+import DialogCreateSociety from "../../components/societies/DialogCreateSociety.js";
+import { SocietyCardList } from "../../components/sessions/SessionGameMaster.js";
+
 import { broadcast } from "./eventRoutes.js";
+
 
 const societies = express.Router();
 

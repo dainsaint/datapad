@@ -1,5 +1,4 @@
-import Icon from "./Icon.js";
-import { iconForArchetype } from "../core/utils.js";
+import Icon, { iconForArchetype } from "../ui/Icon.js";
 
 export default function SocietyCard (society) {
   return `

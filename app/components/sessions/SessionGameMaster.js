@@ -1,14 +1,14 @@
-import { map } from "../core/utils.js";
-import SocietyCard from "./SocietyCard.js";
-import LayoutToolbar from "./LayoutToolbar.js";
-import PhaseCard from "./PhaseCard.js";
+import { map } from "../../core/utils.js";
+import SocietyCard from "../societies/SocietyCard.js";
+import SessionLayout from "./SessionLayout.js";
+import PhaseCard from "../phases/PhaseCard.js";
 
-export default function GameMaster (session) {
+export default function SessionGameMaster (session) {
 
   const phasesToDisplay = session.phases.slice(0,3);
   const currentPhase = phasesToDisplay.at(0);
   
-  return LayoutToolbar(session, `
+  return SessionLayout(session, `
     <main class="content grid-two">
       <div class="stack">
         <h1>Timeline</h1>

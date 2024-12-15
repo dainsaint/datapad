@@ -1,8 +1,8 @@
 import express from "express";
 
-import App from "../../components/App.js";
-import GameCard from "../../components/GameCard.js";
-import GameOverview from "../../components/GameOverview.js";
+import App from "../../components/layouts/App.js";
+import GameCard from "../../components/games/GameCard.js";
+import GameOverview from "../../components/games/GameOverview.js";
 import Home from "../../components/Home.js";
 import Ledger from "../../models/ledger.js";
 

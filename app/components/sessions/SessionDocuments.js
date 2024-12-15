@@ -1,6 +1,6 @@
-import LayoutToolbar from "./LayoutToolbar.js";
+import SessionLayout from "./SessionLayout.js";
 
-export default function Script (session) {
+export default function SessionDocuments (session) {
   const content = `
     <nav class="toolbar">
       <ul>
@@ -23,7 +23,5 @@ export default function Script (session) {
 
   `;
 
-
-
-  return LayoutToolbar(session, content);
+  return SessionLayout(session, content);
 }

@@ -1,9 +1,9 @@
-import { map } from "../core/utils.js";
+import { map } from "../../core/utils.js";
 
 export default function GameOverview (game) {
   return `<main class="content stack">
       <h1>${game.name}</h3>
-
+      <em>View incomplete, <a href="/">back home?</a>
       <h2>Sessions</h2>
       <ol class="cards">
         ${map( game.sessions, (session) => `<li><a href="${session.toURL()}">bleh</a></li>`)}

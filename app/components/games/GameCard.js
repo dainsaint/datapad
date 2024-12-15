@@ -1,4 +1,4 @@
-import { pluralize } from "../core/utils.js";
+import { pluralize } from "../../core/utils.js";
 
 export default function GameCard (game) {
   return `
