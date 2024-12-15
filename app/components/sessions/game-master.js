@@ -3,7 +3,7 @@ import LayoutToolbar from "../layouts/LayoutToolbar.js";
 import SocietyCard from "../societies/SocietyCard.js";
 import PhaseCard from "../phases/PhaseCard.js";
 
-export default function GameMaster (session) {
+export default function SessionGameMaster (session) {
 
   const phasesToDisplay = session.phases.slice(0,3);
   const currentPhase = phasesToDisplay.at(0);

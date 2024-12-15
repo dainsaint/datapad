@@ -2,8 +2,8 @@ import express from "express";
 import Session from "../../models/session.js";
 
 import App from "../../components/layouts/App.js";
-import Facilitator from "../../components/sessions/Facilitator.js";
-import GameMaster from "../../components/sessions/GameMaster.js";
+import Facilitator from "../../components/sessions/facilitator.js";
+import GameMaster from "../../components/sessions/game-master.js";
 import Script from "../../components/sessions/Script.js";
 
 const sessions = express.Router();

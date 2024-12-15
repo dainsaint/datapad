@@ -1,12 +1,10 @@
 import LayoutToolbar from "../layouts/LayoutToolbar.js";
 import Icon from "../Icon.js";
-import { pluralize, iconForArchetype, map } from "../../core/utils.js";
+import { iconForArchetype, map } from "../../core/utils.js";
 import { request } from "../../server.js";
-import CommunityCard from "../communities/CommunityCard.js";
+import SocietyPanel from "../societies/panel.js";
 
-const societyPanelId = ( society ) => `society-panel-${society?.id}`;
-
-export default function Facilitator (session) {
+export default function SessionFacilitator (session) {
   const { society } = request.query;
   const currentSociety = society ? session.societies.find( x => x.id == society ) : session.societies[0];
   return LayoutToolbar( session, `
@@ -30,25 +28,3 @@ function SocietyToolbarLink(society, isActive) {
     </li>
   `;
 }
-
-export function SocietyPanel( society ) {
-  return `
-    <main id="${societyPanelId(society)}" class="content stack">
-      <header>
-        <h1>${society.name}</h1>
-        <p class="subtitle">
-          ${society.archetype} • 
-          ${society.communities.length} 
-          ${pluralize(society.communities.length, "community", "communities")} • 
-          ${society.getAllResources().length}
-          ${pluralize(society.getAllResources().length, "resource")}
-        </p>
-      </header>
-
-      <div class="grid-three">
-       ${map(society.communities, CommunityCard)}
-      </div>
-    </main>
-  `;
-}
-

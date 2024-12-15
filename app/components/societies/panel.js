@@ -3,7 +3,7 @@ import CommunityCard from "../communities/card.js";
 
 const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 
-export function SocietyPanel( society ) {
+export default function SocietyPanel({ society }) {
   return `
     <main id="${societyPanelId(society)}" class="content stack">
       <header>
