@@ -1,7 +1,9 @@
-import Icon from "./Icon.js";
-import { iconForArchetype } from "../core/utils.js";
+import Icon from "../Icon.js";
+import Society from "../../models/society.js";
+import { iconForArchetype } from "../../core/utils.js";
 
-export default function SocietyCard (society) {
+
+export default function SocietyCard ({ society = new Society() }) {
   return `
     <div class="card layout-row" data-id="${society.id}">
       ${ Icon( iconForArchetype(society.archetype) ) }

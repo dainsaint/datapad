@@ -1,8 +1,8 @@
 import moment from "moment";
-import { map, pluralize } from "../core/utils.js";
-import GameCard from "./GameCard.js";
+import { map, pluralize } from "../../core/utils.js";
 
-export default function Home (games, sessions) {
+export default function Home ({ games, sessions = [] }) {
+  console.log( games );
   return `
     <main class="content stack">
       <h1>Datapad</h1>

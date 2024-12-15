@@ -1,6 +1,7 @@
-import { map } from "../core/utils.js";
+import { map } from "../../core/utils.js";
 
-export default function GameOverview (game) {
+export default function GameOverview ({ game }) {
+  console.log( game );
   return `<main class="content stack">
       <h1>${game.name}</h3>
 

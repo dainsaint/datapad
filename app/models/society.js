@@ -6,7 +6,7 @@ export default class Society extends SessionModel {
   planet = "";
   communities = [];
 
-  constructor({ name = "", archetype = "", planet = "" }) {
+  constructor({ name = "New Society", archetype = "None", planet = "Earth" }) {
     super();
     Object.assign(this, { name, archetype, planet });
   }

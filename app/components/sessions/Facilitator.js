@@ -1,7 +1,8 @@
-import LayoutToolbar from "./LayoutToolbar.js";
-import Icon from "./Icon.js";
-import { pluralize, iconForArchetype, map } from "../core/utils.js";
-import { request } from "../server.js";
+import LayoutToolbar from "../layouts/LayoutToolbar.js";
+import Icon from "../Icon.js";
+import { pluralize, iconForArchetype, map } from "../../core/utils.js";
+import { request } from "../../server.js";
+import CommunityCard from "../communities/CommunityCard.js";
 
 const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 
@@ -51,28 +52,3 @@ export function SocietyPanel( society ) {
   `;
 }
 
-export function CommunityCard(  community ) {
-  return `
-    <div hx-get="${ community.toURL('?view=card') }" hx-trigger="sse:resources, sse:societies">
-      <form id="community-card-${community.id}" class="card stack droppable" hx-patch="${ community.toURL() }" hx-trigger="dropcomplete" hx-swap="none">
-        <header>
-          <h2>${community.name}</h2>
-          <p class="subtitle">${community.voice}</h2>
-        </header>
-
-        <div class="grid-three receivable">
-          ${ map( community.resources, ResourceCard) }
-        </div>
-      </form>
-    </div>
-  `;
-}
-
-export function ResourceCard( resource ) {
-  return `
-    <div id="resource-card-${resource.id}" class="card color-contrast draggable" draggable="true" data-exhausted="${resource.isExhausted}">
-      <h3>${resource.name}</h3>
-      <input type="hidden" name="resource_ids[]" value="${resource.id}"/>
-    </div>
-  `;
-}

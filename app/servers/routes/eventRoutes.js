@@ -25,8 +25,8 @@ export function tick(deltaTime) {
 
 
 /*
-- [ ] GET     /events;
-- [ ] POST    /events;
+- [X] GET     /events;
+- [X] POST    /events;
 */
 
 events.get("/events", (req, res) => {

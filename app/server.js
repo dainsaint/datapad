@@ -25,6 +25,19 @@ export default class Server {
   start(port) {
     const app = express();
 
+    app.engine("js", async(filePath, options, callback) => {
+      try {
+        const Template = await import(filePath);
+        const rendered = Template.default(options);
+        callback(null, rendered);
+      } catch(e) {
+        callback(e);
+      }
+    })
+
+    app.set("views", "app/components");
+    app.set("view engine", "js");
+
     app.use(express.json());
     app.use(express.urlencoded());
     app.use(express.static("app/static"));

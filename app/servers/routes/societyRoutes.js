@@ -1,9 +1,13 @@
 import express from "express";
 import Session from "../../models/session.js";
 import Society from "../../models/society.js";
-import DialogCreateSociety from "../../components/DialogCreateSociety.js";
-import { SocietyCardList } from "../../components/GameMaster.js";
+
+import Dialog from "../../components/layouts/Dialog.js";
+import SocietyCreate from "../../components/societies/SocietyCreate.js";
+import { SocietyCardList } from "../../components/sessions/GameMaster.js";
+
 import { broadcast } from "./eventRoutes.js";
+
 
 const societies = express.Router();
 
@@ -24,7 +28,7 @@ societies.get("/sessions/:id/societies", (req, res, next) => {
     const session = Session.load(id);
 
     const views = {
-      create: DialogCreateSociety,
+      create: session => Dialog(SocietyCreate(session)),
       list: SocietyCardList,
     };
 

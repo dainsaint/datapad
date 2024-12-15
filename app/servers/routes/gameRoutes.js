@@ -1,9 +1,9 @@
 import express from "express";
 
-import App from "../../components/App.js";
-import GameCard from "../../components/GameCard.js";
-import GameOverview from "../../components/GameOverview.js";
-import Home from "../../components/Home.js";
+import App from "../../components/layouts/App.js";
+import GameCard from "../../components/games/GameCard.js";
+import GameOverview from "../../components/games/GameOverview.js";
+import Home from "../../components/games/Home.js";
 import Ledger from "../../models/ledger.js";
 
 const games = express.Router();
@@ -17,21 +17,9 @@ Games are implicitly created by sessions, so we dont need full CRUD here (right?
 
 games.get("/games", (req, res, next) => {
   const { view = "home" } = req.query;
-
-  const Views = {
-    home: games => App(Home(games))
-  }
-
+  
   const games = Ledger.games;
-
-  const View = Views[view];
-
-  if(!View) {
-    next();
-    return;
-  }
-
-  res.status(200).send( View(games) );
+  res.render(`games/${view}`, {games});
 });
 
 games.get("/games/:id", (req, res, next) => {
@@ -40,15 +28,7 @@ games.get("/games/:id", (req, res, next) => {
     const { view = "overview" } = req.query;
 
     const game = Ledger.getGameById(id);
-
-    const Views = {
-      overview: (game) => App(GameOverview(game)),
-      card: GameCard,
-    };
-
-    const View = Views[view];
-
-    res.send(View(game));
+    res.render(`games/${view}`, { game });
   } catch (e) {
     next(e);
   }

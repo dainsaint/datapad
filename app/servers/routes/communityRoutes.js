@@ -1,7 +1,7 @@
 import express from "express";
 import Session from "../../models/session.js";
 import Community from "../../models/community.js";
-import { CommunityCard } from "../../components/Facilitator.js";
+import CommunityCard from "../../components/communities/CommunityCard.js";
 import { broadcast } from "./eventRoutes.js";
 
 const communities = express.Router();
@@ -64,13 +64,7 @@ communities.get("/sessions/:session_id/communities/:community_id", (req, res) =>
     const session = Session.load(session_id);
     const community = session.getCommunityById(community_id);
 
-    const Views = {
-      card: CommunityCard,
-    };
-
-    const View = Views[view];
-
-    res.send(View(community));
+    res.render(`communities/${view}`, {community});
   } catch (e) {
     console.log(e);
     res.sendStatus(400);

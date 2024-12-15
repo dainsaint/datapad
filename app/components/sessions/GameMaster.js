@@ -1,7 +1,7 @@
-import { map } from "../core/utils.js";
-import SocietyCard from "./SocietyCard.js";
-import LayoutToolbar from "./LayoutToolbar.js";
-import PhaseCard from "./PhaseCard.js";
+import { map } from "../../core/utils.js";
+import LayoutToolbar from "../layouts/LayoutToolbar.js";
+import SocietyCard from "../societies/SocietyCard.js";
+import PhaseCard from "../phases/PhaseCard.js";
 
 export default function GameMaster (session) {
 

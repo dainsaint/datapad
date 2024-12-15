@@ -1,4 +1,4 @@
-import LayoutToolbar from "./LayoutToolbar.js";
+import LayoutToolbar from "../layouts/LayoutToolbar.js";
 
 export default function Script (session) {
   const content = `

@@ -1,7 +1,7 @@
 import express from "express";
 import Ledger from "../../models/ledger.js";
-import App from "../../components/App.js";
-import Home from "../../components/Home.js";
+import App from "../../components/layouts/App.js";
+import Home from "../../components/games/Home.js";
 
 const home = express.Router();
 

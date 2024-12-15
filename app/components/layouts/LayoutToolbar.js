@@ -1,5 +1,5 @@
-import StatusBar from "./StatusBar.js";
-import Toolbar from "./Toolbar.js";
+import StatusBar from "../StatusBar.js";
+import Toolbar from "../Toolbar.js";
 
 export default function LayoutToolbar( session, content ) {
   return `
