@@ -1,8 +1,8 @@
-import { map } from "../../core/utils.js";
+import { map, wrap } from "../../core/utils.js";
 import Community from "../../models/community.js";
-import ResourceCard from "../resources/ResourceCard.js";
+import ResourceCard from "../resources/card.js";
 
-export default function CommunityCard({ community = new Community() }) {
+export default function CommunityCard({ community = new Community() } = {}) {
   return `
     <div hx-get="${ community.toURL('?view=card') }" hx-trigger="sse:resources, sse:societies">
       <form id="community-card-${community.id}" class="card stack droppable" hx-patch="${ community.toURL() }" hx-trigger="dropcomplete" hx-swap="none">
@@ -12,7 +12,7 @@ export default function CommunityCard({ community = new Community() }) {
         </header>
 
         <div class="grid-three receivable">
-          ${ map(community.resources, ResourceCard) }
+          ${ map(community.resources, wrap("resource"), ResourceCard) }
         </div>
       </form>
     </div>

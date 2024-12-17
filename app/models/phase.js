@@ -1,20 +1,20 @@
+import { DateTime, Duration, Interval } from "luxon";
 import Tags from "../core/tags.js";
 import SessionModel from "./session-model.js";
 
 export default class Phase extends SessionModel {
+  
+  name = "New Phase"
   status = PhaseStatus.IDLE;
   round = 0;
   duration = 0;
   timeElapsed = 0;
   tags = new Tags();
 
-  scheduledTimeStart = new Date();
-  scheduledTimeEnd = new Date();
+  scheduledTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: 0 }));
+  actualTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: 0 }));
 
-  actualTimeStart = new Date();
-  actualTimeComplete = new Date();
-
-  constructor({ name = "", round = 0, duration = 0 }) {
+  constructor({ name = "New Phase", round = 0, duration = 0 }) {
     super();
     Object.assign( this, {name, round, duration} );
   }
@@ -28,7 +28,7 @@ export default class Phase extends SessionModel {
   }
 
   startPhase() {
-    this.actualTimeStart = new Date();
+    this.actualTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: this.duration }))
     this.status = PhaseStatus.PLAYING;
   }
 
@@ -37,7 +37,7 @@ export default class Phase extends SessionModel {
   }
 
   completePhase() {
-    this.actualTimeComplete = new Date();
+    this.actualTime = Interval.fromDateTimes( this.actualTime.start || DateTime.now(), DateTime.now() );
     this.status = PhaseStatus.COMPLETE;
   }
 

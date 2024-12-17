@@ -1,4 +1,6 @@
-export default function SocietyCreate(session) {
+import Society from "../../models/society";
+//figure out the society/session jawn here...
+export default function SocietyEdit({ society = new Society()} = {}) {
   return `
     <h1>Create a new society</h1>
     <p class="text">Enter a name for this new society, and select its archetype.</p>

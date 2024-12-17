@@ -1,9 +1,4 @@
 import express from "express";
-
-import App from "../../components/layouts/App.js";
-import GameCard from "../../components/games/GameCard.js";
-import GameOverview from "../../components/games/GameOverview.js";
-import Home from "../../components/games/Home.js";
 import Ledger from "../../models/ledger.js";
 
 const games = express.Router();

@@ -1,8 +1,7 @@
 import moment from "moment";
 import { map, pluralize } from "../../core/utils.js";
 
-export default function Home ({ games, sessions = [] }) {
-  console.log( games );
+export default function Home ({ games = new Array(), sessions = new Array() }) {
   return `
     <main class="content stack">
       <h1>Datapad</h1>

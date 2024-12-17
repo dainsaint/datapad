@@ -1,19 +1,20 @@
-import { map } from "../../core/utils.js";
-import LayoutToolbar from "../layouts/LayoutToolbar.js";
-import SocietyCard from "../societies/SocietyCard.js";
+import { map, wrap } from "../../core/utils.js";
+import Session from "../../models/session.js";
 import PhaseCard from "../phases/PhaseCard.js";
+import SessionLayout from "./parts/layout.js";
+import SocietyCard from "../societies/card.js";
 
-export default function SessionGameMaster (session) {
+export default function SessionGameMaster ({ session = new Session()} = {}) {
 
   const phasesToDisplay = session.phases.slice(0,3);
   const currentPhase = phasesToDisplay.at(0);
   
-  return LayoutToolbar(session, `
+  const content = `
     <main class="content grid-two">
       <div class="stack">
         <h1>Timeline</h1>
         <div class="grid-three">
-        ${map(phasesToDisplay, PhaseCard)}
+        ${map(phasesToDisplay, wrap("phase"), PhaseCard)}
         </div>
 
         <div class="stack">
@@ -29,7 +30,7 @@ export default function SessionGameMaster (session) {
       <div class="stack">
         <h1>Society Overview</h1>
 
-        ${SocietyCardList(session)}
+        ${SocietyCardList({ session })}
 
         <form 
           hx-get="${ session.toURL('/societies?view=create') }"
@@ -39,13 +40,15 @@ export default function SessionGameMaster (session) {
         </form>
       </div>
     </main>
-  `);
+  `;
+
+  return SessionLayout( session, content );
 }
 
-export function SocietyCardList(session) {
+export function SocietyCardList({ session }) {
   return `
     <div id="society-card-list" class="stack" hx-get="${ session.toURL('/societies?view=list') }" hx-trigger="sse:societies">
-      ${map(session.societies, SocietyCard)}
+      ${map(session.societies, wrap("society"), SocietyCard)}
     </div>
   `;
 }

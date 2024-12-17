@@ -1,6 +1,7 @@
 import { secondsToTime } from "../../core/utils.js";
+import Phase from "../../models/phase.js";
 
-export default function PhaseTime( phase ) {
+export default function PhaseTime({ phase = new Phase() } = {}) {
   return `
     <div class="phase-time" hx-get="${ phase.toURL('?view=time') }" hx-trigger="sse:phases">
       <header>

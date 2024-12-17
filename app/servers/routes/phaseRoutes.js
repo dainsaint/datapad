@@ -1,7 +1,5 @@
 import express from "express";
 import Session from "../../models/session.js";
-import PhaseCard from "../../components/phases/PhaseCard.js";
-import PhaseTime from "../../components/phases/PhaseTime.js";
 
 const phases = express.Router();
 
@@ -18,19 +16,12 @@ const phases = express.Router();
 phases.get("/sessions/:id/phases/:phase_id", (req, res, next) => {
   try {
     const { id, phase_id } = req.params;
-    const { view = "card" } = req.query;
+    const { view = "card" } = req.query;  
 
     const session = Session.load(id);
     const phase = session.getPhaseById(phase_id);
 
-    const views = {
-      card: PhaseCard,
-      time: PhaseTime,
-    };
-
-    const View = views[view];
-
-    res.send(View(phase));
+    res.render(`phases/${view}`, { phase });
   } catch (e) {
     res.status(400).send(e);
   }
@@ -64,7 +55,7 @@ phases.put("/sessions/:id/phases/:phase_id", (req, res, next) => {
     //this was called from using ajax
     const currentUrl = req.get("hx-current-url");
     if (currentUrl) res.setHeader("HX-Location", currentUrl);
-
+    
     res.sendStatus(200);
   } catch (e) {
     console.log(e);

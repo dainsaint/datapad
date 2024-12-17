@@ -1,4 +1,4 @@
-import { map, pluralize } from "../../core/utils.js";
+import { map, pluralize, wrap } from "../../core/utils.js";
 import CommunityCard from "../communities/card.js";
 
 const societyPanelId = ( society ) => `society-panel-${society?.id}`;
@@ -18,7 +18,7 @@ export default function SocietyPanel({ society }) {
       </header>
 
       <div class="grid-three">
-       ${map(society.communities, CommunityCard)}
+       ${map(society.communities, wrap("communities"), CommunityCard)}
       </div>
     </main>
   `;

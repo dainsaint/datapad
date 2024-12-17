@@ -4,7 +4,7 @@ import Society from "../../models/society.js";
 
 import Dialog from "../../components/layouts/Dialog.js";
 import SocietyCreate from "../../components/societies/SocietyCreate.js";
-import { SocietyCardList } from "../../components/sessions/game-master.js";
+import { SocietyCardList } from "../../components/sessions/gm.js";
 
 import { broadcast } from "./eventRoutes.js";
 

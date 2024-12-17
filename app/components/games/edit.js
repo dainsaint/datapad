@@ -1,4 +1,6 @@
-export default function GameCreate() {
+import Game from "../../models/game.js";
+
+export default function GameEdit({ game = new Game() } = {}) {
   return `
     <form class="stack" onsubmit="event.preventDefault()">
       <h1>Create a new game</h1>
@@ -12,4 +14,3 @@ export default function GameCreate() {
     </form>
   `;
 }
-
