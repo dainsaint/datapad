@@ -1,7 +1,13 @@
 import express from "express";
+import path from "node:path";
 import htmlRouter, {tick as htmlTick} from "./servers/html.js";
 import jsonRouter from "./servers/json.js";
 import Timer from "./core/timer.js";
+import { fileURLToPath } from "node:url";
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export const request = {
   path: "/",
@@ -27,9 +33,18 @@ export default class Server {
 
     app.engine("js", async(filePath, options, callback) => {
       try {
+        const { layout = "app", ...data } = options;
         const Template = await import(filePath);
-        const rendered = Template.default(options);
-        callback(null, rendered);
+        const content = Template.default(options);
+
+        if( layout && layout !== "none" ) {
+          const layoutPath = path.join( __dirname, `components/layouts/${layout}.js`);
+          const Layout = await import(layoutPath);
+          const layoutRendered = Layout.default( content )
+          callback(null, layoutRendered);
+        } else {
+          callback(null, content);
+        }
       } catch(e) {
         callback(e);
       }

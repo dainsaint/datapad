@@ -1,6 +1,6 @@
 import express from "express";
 import Ledger from "../../models/ledger.js";
-import App from "../../components/layouts/App.js";
+import App from "../../components/layouts/app.js";
 import Home from "../../components/pages/home.js";
 
 const home = express.Router();

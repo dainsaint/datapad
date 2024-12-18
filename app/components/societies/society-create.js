@@ -1,6 +1,7 @@
-import Society from "../../models/society";
+import Session from "../../models/session.js";
+
 //figure out the society/session jawn here...
-export default function SocietyEdit({ society = new Society()} = {}) {
+export default function SocietyCreate({ session = new Session()} = {}) {
   return `
     <h1>Create a new society</h1>
     <p class="text">Enter a name for this new society, and select its archetype.</p>

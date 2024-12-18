@@ -1,14 +1,7 @@
 import fs from "fs";
 import path from "node:path";
-import moment from "moment";
-
-import { rateLimit } from "./utils.js";
-
-import Tags from "./tags.js";
 import Serializer from "./serializer.js";
-
-const Types = {};
-const references = new Map();
+import { rateLimit } from "./utils.js";
 
 export default class Datastore  {
 
@@ -69,12 +62,6 @@ export default class Datastore  {
 
   getFilename({ id, type }) {
     return `${type.toLowerCase()}/${id}.json`;
-  }
-
-  static registerTypes(...types) {
-    types.forEach( type => {
-      Types[ type.name ] = type;
-    })
   }
 
 }  

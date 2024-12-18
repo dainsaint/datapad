@@ -4,9 +4,9 @@ import SessionToolbar from "./toolbar.js";
 export default function SessionLayout(session, content) {
   return `
     <section class="layout-toolbar">
-      ${SessionToolbar(session)}
+      ${SessionToolbar({ session })}
       <div class="layout-column">
-        ${SessionStatusBar(session)}
+        ${SessionStatusBar({ session })}
         ${content}
       </div>
     </section>

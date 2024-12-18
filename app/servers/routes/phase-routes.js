@@ -4,24 +4,22 @@ import Session from "../../models/session.js";
 const phases = express.Router();
 
 /*
-- [ ] GET     /sessions/:session/phases/create;
-- [x] GET     /sessions/:session/phases/:phase?view=card;
-- [x] GET     /sessions/:session/phases/:phase?view=time;
-- [ ] POST    /sessions/:session/phases/:phase;
+- [ ] GET     /sessions/:session/phases;
+- [ ] POST    /sessions/:session/phases;
+- [x] GET     /sessions/:session/phases/:phase;
 - [x] PUT     /sessions/:session/phases/:phase;
 - [ ] DELETE  /sessions/:session/phases/:phase;
-- [ ] GET     /sessions/:session/phases/:phase/edit;
 */
 
 phases.get("/sessions/:id/phases/:phase_id", (req, res, next) => {
   try {
     const { id, phase_id } = req.params;
-    const { view = "card" } = req.query;  
+    const { view = "card", layout = "none" } = req.query;  
 
     const session = Session.load(id);
     const phase = session.getPhaseById(phase_id);
 
-    res.render(`phases/${view}`, { phase });
+    res.render(`phases/${view}`, { phase, layout });
   } catch (e) {
     res.status(400).send(e);
   }

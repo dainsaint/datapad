@@ -1,8 +1,8 @@
-import { map, wrap } from "../../core/utils.js";
+import { map, eachAs } from "../../core/utils.js";
 import Session from "../../models/session.js";
-import PhaseCard from "../phases/PhaseCard.js";
 import SessionLayout from "./parts/layout.js";
-import SocietyCard from "../societies/card.js";
+import SocietyCard from "../societies/society-card.js";
+import PhaseCard from "../phases/card.js";
 
 export default function SessionGameMaster ({ session = new Session()} = {}) {
 
@@ -14,7 +14,7 @@ export default function SessionGameMaster ({ session = new Session()} = {}) {
       <div class="stack">
         <h1>Timeline</h1>
         <div class="grid-three">
-        ${map(phasesToDisplay, wrap("phase"), PhaseCard)}
+        ${map(phasesToDisplay, eachAs("phase"), PhaseCard)}
         </div>
 
         <div class="stack">
@@ -33,7 +33,7 @@ export default function SessionGameMaster ({ session = new Session()} = {}) {
         ${SocietyCardList({ session })}
 
         <form 
-          hx-get="${ session.toURL('/societies?view=create') }"
+          hx-get="${ session.toURL('/societies?view=create&layout=dialog') }"
           hx-target="#app"
           hx-swap="beforeend">
           <button>+ Create a new society</button>
@@ -48,7 +48,7 @@ export default function SessionGameMaster ({ session = new Session()} = {}) {
 export function SocietyCardList({ session }) {
   return `
     <div id="society-card-list" class="stack" hx-get="${ session.toURL('/societies?view=list') }" hx-trigger="sse:societies">
-      ${map(session.societies, wrap("society"), SocietyCard)}
+      ${map(session.societies, eachAs("society"), SocietyCard)}
     </div>
   `;
 }

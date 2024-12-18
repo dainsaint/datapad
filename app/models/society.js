@@ -6,13 +6,28 @@ export default class Society extends SessionModel {
   planet = "";
   communities = [];
 
-  constructor({ name = "New Society", archetype = "None", planet = "Earth" }) {
+  constructor({
+    name = "New Society",
+    archetype = "None",
+    planet = "Earth",
+  } = {}) {
     super();
     Object.assign(this, { name, archetype, planet });
   }
 
+  getCommunityById(id) {
+    return this.communities.find((r) => r.id === id);
+  }
+
   addCommunity(community) {
     this.communities.push(community);
+  }
+
+  removeCommunity(community) {
+    const index = this.communities.indexOf(community);
+    if (index >= 0) {
+      this.communities.splice(index, 1);
+    }
   }
 
   getAllResources() {

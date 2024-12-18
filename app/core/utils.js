@@ -27,7 +27,7 @@ export function map(array, ...transformers) {
   return transformers.reduce( (result, transformer) => result.map(transformer), array ).join("\n");
 }
 
-export function wrap(name) {
+export function eachAs(name) {
   return function(object) {
     return {
       [name]: object
@@ -70,4 +70,8 @@ export function rateLimit( callback, wait ) {
       timeout = setTimeout(invokeCallback, wait); // Debounce behavior
     }
   }
+}
+
+export function attr(attribute, condition) {
+  return condition ? attribute : "";
 }

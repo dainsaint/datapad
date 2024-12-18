@@ -1,31 +1,31 @@
 import { request } from "../../server.js";
 import { iconForArchetype, map } from "../../core/utils.js";
-import SocietyPanel from "../societies/panel.js";
+import SocietyPanel from "../societies/society-panel.js";
 import SessionLayout from "./parts/layout.js";
 import Icon from "../ui/Icon.js";
 import Session from "../../models/session.js";
 
-export default function SessionFacilitator ({ session = new Session()} = {}) {
+export default function SessionFacilitator ({ session = new Session() } = {}) {
   const { society } = request.query;
-  const currentSociety = society ? session.societies.find( x => x.id == society ) : session.societies[0];
-  return SessionLayout( session, `
+  const currentSociety = society ? session.getSocietyById( society ) : session.societies.at(0);
+  const content = `
     <nav class="toolbar" style="background: var(--color-dark)">
       <ul class="layout-row">
         ${map(session.societies, (society) =>
-          SocietyToolbarLink(society, society == currentSociety)
+          SocietyToolbarLink(session, society, society == currentSociety)
         )}
       </ul>
     </nav>
-    ${SocietyPanel(currentSociety)}
+
+    ${SocietyPanel({society: currentSociety})} 
   `
-  );
+  return SessionLayout(session, content);
 }
 
-
-function SocietyToolbarLink(society, isActive) {
+function SocietyToolbarLink(session, society, isActive) {
   return `
     <li>
-      <a hx-boost="true" class="${isActive ? 'active' : ''}" href="?view=facilitator&society=${society.id}">${Icon(iconForArchetype(society.archetype))}</a>
+      <a hx-boost="true" class="${isActive ? 'active' : ''}" href="${ session.toURL('?view=facilitator&society=' + society.id) }">${Icon(iconForArchetype(society.archetype))}</a>
     </li>
   `;
 }
