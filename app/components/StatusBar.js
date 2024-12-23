@@ -1,19 +1,12 @@
-import { secondsToTime } from "../core/utils.js";
+import Phase from "../models/phase.js";
+import { PhaseTime } from "./PhaseCard.js";
 export default function StatusBar ( session ) {
-  const activePhase = session?.phases.at( session.currentRound ) || {
-    timeRemaining: 0,
-    name: "None",
-    round: 0
-  };
+  const activePhase = session?.phases?.at( session.currentRound ) || Phase({ name: "No Phase", round: -1, duration: 0 })
 
   return `
   <nav class="status-bar layout-row color-contrast">
-    <time datetime="${activePhase.timeRemaining}s" >${secondsToTime(activePhase.timeRemaining)}</time>
-    <div>
-      <h2>${activePhase.name}</h2>
-      <p class="subtitle">Round ${ activePhase.round + 1}</p>
-    </div>
-    <p>${ session.game.name }</p>
+    ${ PhaseTime(activePhase) }
+    <p>${ session?.game?.name }</p>
   </nav>
   `;
 }

@@ -1,0 +1,530 @@
+{
+  "games": [
+    {
+      "_type": "Game",
+      "id": "Y6oEgFmZ",
+      "name": "John's House — Feb-Mar 2025",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      },
+      "sessions": []
+    }
+  ],
+  "sessions": [
+    {
+      "id": "d9kQuuwW",
+      "name": "A Sample Session",
+      "date": "2024-12-14T15:19:54.135Z"
+    }
+  ],
+  "players": [
+    {
+      "_type": "Player",
+      "id": "NNtrHYif",
+      "session": "d9kQuuwW",
+      "name": "Ving Rhames",
+      "pronouns": [
+        "they",
+        "them"
+      ],
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    }
+  ],
+  "active": [
+    {
+      "_type": "Session",
+      "id": "d9kQuuwW",
+      "name": "A Sample Session",
+      "date": "2024-12-14T15:19:54.135Z",
+      "game": {
+        "_type": "Game",
+        "id": "Y6oEgFmZ",
+        "name": "John's House — Feb-Mar 2025",
+        "tags": {
+          "_type": "Tags",
+          "value": []
+        },
+        "sessions": []
+      },
+      "communities": [
+        {
+          "_type": "Community",
+          "id": "pFFqs6sI",
+          "session": "d9kQuuwW",
+          "name": "Venerable Elders",
+          "voice": "leader",
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "g2ycN8NA",
+              "session": "d9kQuuwW",
+              "name": "Green Sludge",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "iDvdPkH3",
+          "session": "d9kQuuwW",
+          "name": "Disaffected Youth",
+          "voice": "people",
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "oV_jbBkF",
+              "session": "d9kQuuwW",
+              "name": "Amazing Suspenders",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
+      "phases": [
+        {
+          "_type": "Phase",
+          "id": "r2d2Kb4t",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 0,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Global Phase",
+          "duration": 1200
+        },
+        {
+          "_type": "Phase",
+          "id": "DzjNpyV6",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 0,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Universal Phase",
+          "duration": 240
+        },
+        {
+          "_type": "Phase",
+          "id": "wKEPI-LQ",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 0,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Societal Phase",
+          "duration": 600
+        },
+        {
+          "_type": "Phase",
+          "id": "rP3rq0rF",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 0,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Galactic Phase",
+          "duration": 600
+        },
+        {
+          "_type": "Phase",
+          "id": "XFpsOuRi",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 0,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Individual Phase",
+          "duration": 500
+        },
+        {
+          "_type": "Phase",
+          "id": "SjaKgg57",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 1,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Universal Phase",
+          "duration": 240
+        },
+        {
+          "_type": "Phase",
+          "id": "X5eN8JgE",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 1,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Societal Phase",
+          "duration": 600
+        },
+        {
+          "_type": "Phase",
+          "id": "pq_41FS6",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 1,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Galactic Phase",
+          "duration": 600
+        },
+        {
+          "_type": "Phase",
+          "id": "Y3AkNSsy",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 1,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Individual Phase",
+          "duration": 500
+        },
+        {
+          "_type": "Phase",
+          "id": "x9tQCQXi",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 2,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Universal Phase",
+          "duration": 240
+        },
+        {
+          "_type": "Phase",
+          "id": "vchfzjav",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 2,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Societal Phase",
+          "duration": 600
+        },
+        {
+          "_type": "Phase",
+          "id": "YOfZ_t18",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 2,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Galactic Phase",
+          "duration": 600
+        },
+        {
+          "_type": "Phase",
+          "id": "W12OO8n-",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 2,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Individual Phase",
+          "duration": 500
+        },
+        {
+          "_type": "Phase",
+          "id": "o4IHdWMy",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 3,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Universal Phase",
+          "duration": 240
+        },
+        {
+          "_type": "Phase",
+          "id": "gJT2BkFo",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 3,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Societal Phase",
+          "duration": 600
+        },
+        {
+          "_type": "Phase",
+          "id": "AmnHL7Z5",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 3,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Galactic Phase",
+          "duration": 600
+        },
+        {
+          "_type": "Phase",
+          "id": "XPFcVKnS",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 3,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Generational Phase",
+          "duration": 500
+        },
+        {
+          "_type": "Phase",
+          "id": "nxwUEHkH",
+          "session": "d9kQuuwW",
+          "status": "idle",
+          "round": 3,
+          "length": 0,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
+          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
+          "name": "Conclusion Phase",
+          "duration": 500
+        }
+      ],
+      "players": [
+        {
+          "_type": "Player",
+          "id": "NNtrHYif",
+          "session": "d9kQuuwW",
+          "name": "Ving Rhames",
+          "pronouns": [
+            "they",
+            "them"
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "g2ycN8NA",
+          "session": "d9kQuuwW",
+          "name": "Green Sludge",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "oV_jbBkF",
+          "session": "d9kQuuwW",
+          "name": "Amazing Suspenders",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "IrH5cQBw",
+          "session": "d9kQuuwW",
+          "name": "Big Rock",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
+      "societies": [
+        {
+          "_type": "Society",
+          "id": "Rtn1fgq1",
+          "session": "d9kQuuwW",
+          "name": "Ten Thousand Islands",
+          "archetype": "the curious",
+          "planet": "Jorun",
+          "communities": [
+            {
+              "_type": "Community",
+              "id": "pFFqs6sI",
+              "session": "d9kQuuwW",
+              "name": "Venerable Elders",
+              "voice": "leader",
+              "resources": [
+                {
+                  "_type": "Resource",
+                  "id": "g2ycN8NA",
+                  "session": "d9kQuuwW",
+                  "name": "Green Sludge",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                }
+              ],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Community",
+              "id": "iDvdPkH3",
+              "session": "d9kQuuwW",
+              "name": "Disaffected Youth",
+              "voice": "people",
+              "resources": [
+                {
+                  "_type": "Resource",
+                  "id": "oV_jbBkF",
+                  "session": "d9kQuuwW",
+                  "name": "Amazing Suspenders",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                }
+              ],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "_type": "Tags",
+        "value": [
+          "active"
+        ]
+      }
+    }
+  ]
+}

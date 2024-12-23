@@ -13,8 +13,8 @@ export default function App(content) {
       <link rel="stylesheet" href="/css/neusa/neusa.css"/>
       <link rel="stylesheet" href="/css/reset.css"/> 
       <link rel="stylesheet" href="/css/styles.css" />
-      <script src="https://unpkg.com/htmx.org@2.0.2"></script>
-      <script src="https://unpkg.com/htmx-ext-sse@2.2.2"></script>
+      <script src="/js/vendor/htmx.min.js"></script>
+      <script src="/js/vendor/htmx.sse.js"></script>
       <script type="module" src="/js/client.js"></script>
     </head>
 

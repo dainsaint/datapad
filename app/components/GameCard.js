@@ -4,14 +4,15 @@ export default function GameCard (game) {
   return `
     <a 
       class="card" 
-      href="/game/${game._id}"
-      hx-get="/ui/game/card/${game._id}"
+      href="${ game.toURL() }"
+      hx-get="${ game.toURL('?view=card') }"
       hx-swap="outerHTML"
       hx-trigger="every 5s"
     >
       <h2>${game.name}</h2>
-      ${game.sessions.length} ${pluralize(game.sessions.length, "session")} •  
-      ${game.players.length} ${pluralize(game.players.length, "player")}.
+      ${game.sessions.length} ${pluralize(game.sessions.length, "session")}
     </a>
   `;
 }
+
+// * ${game.players.length} ${pluralize(game.players.length, "player")}.

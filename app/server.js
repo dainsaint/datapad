@@ -1,19 +1,26 @@
 import express from "express";
-import htmlRouter from "./servers/html.js";
+import htmlRouter, {tick as htmlTick} from "./servers/html.js";
 import jsonRouter from "./servers/json.js";
-import App from "./components/App.js";
+import Timer from "./core/timer.js";
 
 export const request = {
   path: "/",
+  query: {},
   params: {}
 }
 
 const errorHandler = (err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send("Something went wrong!");
+  res.status(500).send(err.message);
 };
 
 export default class Server {
+
+  timer;
+
+  constructor() {
+    this.timer = new Timer(this.tick, 1000);
+  }
 
   start(port) {
     const app = express();
@@ -23,6 +30,7 @@ export default class Server {
     app.use(express.static("app/static"));
     app.use((req, res, next) => {
       request.path = req.path;
+      request.query = req.query;
       request.params = req.params;
       next();
     });
@@ -34,8 +42,12 @@ export default class Server {
       if (!error)
         console.log(`Datapad server running at https://localhost:${port}`);
     });
+
+    this.timer.start();
+  }
+
+  tick(deltaTime) {
+    htmlTick(deltaTime);
   }
 
 }
-
-

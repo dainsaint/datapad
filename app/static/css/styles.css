@@ -204,9 +204,16 @@ a.card {
   height: 4rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  padding: .5rem;
+  padding: .5rem 1rem;
   border-inline-start: 1px solid var(--color-text);
+
+  .phase-time {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
 }
 
 /* LAYOUTS */
@@ -250,6 +257,11 @@ button {
 
   &:hover {
   --color-bg-active: green;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: .5;
   }
 }
 

@@ -1,24 +1,15 @@
-import { map } from "../core/utils.js";
+import moment from "moment";
+import { map, pluralize } from "../core/utils.js";
 import GameCard from "./GameCard.js";
-import LayoutToolbar from "./LayoutToolbar.js";
 
-export default function Home (games, session) {
-  const content = `
+export default function Home (games, sessions) {
+  return `
     <main class="content stack">
-      <h1>Games</h1>
-      ${map(games, GameCard)}
-      <button 
-        hx-get="/ui/game/create"
-        hx-target="#app"
-        hx-swap="beforeend"
-      >
-        + Create a new game
-      </button>
+      <h1>Datapad</h1>
+      <h2>Sessions</h2>
+      ${map(sessions, session => `<li><a href="/sessions/${session.id}">${session.name} • ${moment(session.date).format("YYYY-MM-DD") }</a></li>`)}
+      <h2>Games</h2>
+      ${map(games, game => `<li><a href="${ game.toURL() }">${game.name} • ${game.sessions.length} ${ pluralize( game.sessions.length, "session") }</a></li>`)}
     </main>
-
   `;
-
-
-
-  return LayoutToolbar(session, content);
 }
