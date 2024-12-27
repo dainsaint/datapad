@@ -17,7 +17,7 @@ export const request = {
 
 const errorHandler = (err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send(err.message);
+  res.status(500).send(`<pre>${err.stack}</pre>`);
 };
 
 export default class Server {
@@ -38,7 +38,7 @@ export default class Server {
         const content = Template.default(data);
 
         if( layout && layout !== "none" ) {
-          const layoutPath = path.join( __dirname, `components/layouts/${layout}.js`);
+          const layoutPath = path.join( __dirname, `views/layouts/${layout}.js`);
           const Layout = await import(layoutPath);
           const layoutRendered = Layout.default( content );
           callback(null, layoutRendered);
@@ -50,12 +50,12 @@ export default class Server {
       }
     })
 
-    app.set("views", "app/components");
+    app.set("views", "app/views");
     app.set("view engine", "js");
 
     app.use(express.json());
     app.use(express.urlencoded());
-    app.use(express.static("app/static"));
+    app.use(express.static("app/public"));
     app.use((req, res, next) => {
       request.path = req.path;
       request.query = req.query;

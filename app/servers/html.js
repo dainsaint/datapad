@@ -1,14 +1,14 @@
 import express from "express";
 
-import communities from "./routes/community-routes.js";
-import events, { tick as eventTick } from "./routes/event-routes.js";
-import games from "./routes/game-routes.js";
-import phases from "./routes/phase-routes.js";
-import players from "./routes/player-routes.js";
-import resources from "./routes/resource-routes.js";
-import sessions from "./routes/session-routes.js";
-import societies from "./routes/society-routes.js";
-import home from "./routes/home-routes.js";
+import communities from "./routes/communities.js";
+import events, { tick as eventTick } from "./routes/events.js";
+import games from "./routes/games.js";
+import phases from "./routes/phases.js";
+import players from "./routes/players.js";
+import resources from "./routes/resources.js";
+import sessions from "./routes/sessions.js";
+import societies from "./routes/societies.js";
+import home from "./routes/home.js";
 
 const htmlRouter = express.Router();
 

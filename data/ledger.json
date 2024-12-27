@@ -16,6 +16,11 @@
       "id": "d9kQuuwW",
       "name": "A Sample Session",
       "date": "2024-12-14T10:19:54.135-05:00"
+    },
+    {
+      "id": "IGPnhCaE",
+      "name": "Test this thing now",
+      "date": "2025-02-20T00:00:00.000-05:00"
     }
   ],
   "players": [
@@ -104,14 +109,15 @@
             },
             {
               "_type": "Resource",
-              "id": "AOq6X9IL",
+              "id": "RpgWa4w4",
               "session": "d9kQuuwW",
-              "name": "sdfew",
+              "name": "Rad Resource",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
                 "value": []
-              }
+              },
+              "community_id": "pFFqs6sI"
             }
           ],
           "tags": {
@@ -128,7 +134,7 @@
           "resources": [
             {
               "_type": "Resource",
-              "id": "RpgWa4w4",
+              "id": "c74DfOzA",
               "session": "d9kQuuwW",
               "name": "",
               "relationship": "",
@@ -139,7 +145,19 @@
             },
             {
               "_type": "Resource",
-              "id": "c74DfOzA",
+              "id": "oWqPy0Pa",
+              "session": "d9kQuuwW",
+              "name": "better world",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              },
+              "community_id": "wts9MaVb"
+            },
+            {
+              "_type": "Resource",
+              "id": "l6MEv5e3",
               "session": "d9kQuuwW",
               "name": "",
               "relationship": "",
@@ -199,17 +217,6 @@
             },
             {
               "_type": "Resource",
-              "id": "hhtLXumN",
-              "session": "d9kQuuwW",
-              "name": "Extreme Biopsy",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            },
-            {
-              "_type": "Resource",
               "id": "zlIjqyZA",
               "session": "d9kQuuwW",
               "name": "",
@@ -221,9 +228,9 @@
             },
             {
               "_type": "Resource",
-              "id": "dfcgyR-y",
+              "id": "AOq6X9IL",
               "session": "d9kQuuwW",
-              "name": "Test my resource",
+              "name": "sdfew",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -232,15 +239,14 @@
             },
             {
               "_type": "Resource",
-              "id": "oWqPy0Pa",
+              "id": "hhtLXumN",
               "session": "d9kQuuwW",
-              "name": "better world",
+              "name": "Extreme Biopsy",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
                 "value": []
-              },
-              "community_id": "wts9MaVb"
+              }
             }
           ],
           "tags": {
@@ -347,17 +353,6 @@
                 "_type": "Tags",
                 "value": []
               }
-            },
-            {
-              "_type": "Resource",
-              "id": "l6MEv5e3",
-              "session": "d9kQuuwW",
-              "name": "",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
             }
           ],
           "tags": {
@@ -374,6 +369,17 @@
           "resources": [
             {
               "_type": "Resource",
+              "id": "l1leeKvq",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
               "id": "u84PBwol",
               "session": "d9kQuuwW",
               "name": "",
@@ -385,9 +391,9 @@
             },
             {
               "_type": "Resource",
-              "id": "l1leeKvq",
+              "id": "dfcgyR-y",
               "session": "d9kQuuwW",
-              "name": "",
+              "name": "Test my resource",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -1226,12 +1232,13 @@
           "_type": "Resource",
           "id": "RpgWa4w4",
           "session": "d9kQuuwW",
-          "name": "",
+          "name": "Rad Resource",
           "relationship": "",
           "tags": {
             "_type": "Tags",
             "value": []
-          }
+          },
+          "community_id": "pFFqs6sI"
         },
         {
           "_type": "Resource",
@@ -1341,14 +1348,15 @@
                 },
                 {
                   "_type": "Resource",
-                  "id": "AOq6X9IL",
+                  "id": "RpgWa4w4",
                   "session": "d9kQuuwW",
-                  "name": "sdfew",
+                  "name": "Rad Resource",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
                     "value": []
-                  }
+                  },
+                  "community_id": "pFFqs6sI"
                 }
               ],
               "tags": {
@@ -1376,17 +1384,6 @@
                 },
                 {
                   "_type": "Resource",
-                  "id": "hhtLXumN",
-                  "session": "d9kQuuwW",
-                  "name": "Extreme Biopsy",
-                  "relationship": "",
-                  "tags": {
-                    "_type": "Tags",
-                    "value": []
-                  }
-                },
-                {
-                  "_type": "Resource",
                   "id": "zlIjqyZA",
                   "session": "d9kQuuwW",
                   "name": "",
@@ -1398,9 +1395,9 @@
                 },
                 {
                   "_type": "Resource",
-                  "id": "dfcgyR-y",
+                  "id": "AOq6X9IL",
                   "session": "d9kQuuwW",
-                  "name": "Test my resource",
+                  "name": "sdfew",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
@@ -1409,15 +1406,14 @@
                 },
                 {
                   "_type": "Resource",
-                  "id": "oWqPy0Pa",
+                  "id": "hhtLXumN",
                   "session": "d9kQuuwW",
-                  "name": "better world",
+                  "name": "Extreme Biopsy",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
                     "value": []
-                  },
-                  "community_id": "wts9MaVb"
+                  }
                 }
               ],
               "tags": {
@@ -1476,17 +1472,6 @@
                     "_type": "Tags",
                     "value": []
                   }
-                },
-                {
-                  "_type": "Resource",
-                  "id": "l6MEv5e3",
-                  "session": "d9kQuuwW",
-                  "name": "",
-                  "relationship": "",
-                  "tags": {
-                    "_type": "Tags",
-                    "value": []
-                  }
                 }
               ],
               "tags": {
@@ -1503,6 +1488,17 @@
               "resources": [
                 {
                   "_type": "Resource",
+                  "id": "l1leeKvq",
+                  "session": "d9kQuuwW",
+                  "name": "",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
                   "id": "u84PBwol",
                   "session": "d9kQuuwW",
                   "name": "",
@@ -1514,9 +1510,9 @@
                 },
                 {
                   "_type": "Resource",
-                  "id": "l1leeKvq",
+                  "id": "dfcgyR-y",
                   "session": "d9kQuuwW",
-                  "name": "",
+                  "name": "Test my resource",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
@@ -1538,7 +1534,7 @@
               "resources": [
                 {
                   "_type": "Resource",
-                  "id": "RpgWa4w4",
+                  "id": "c74DfOzA",
                   "session": "d9kQuuwW",
                   "name": "",
                   "relationship": "",
@@ -1549,7 +1545,19 @@
                 },
                 {
                   "_type": "Resource",
-                  "id": "c74DfOzA",
+                  "id": "oWqPy0Pa",
+                  "session": "d9kQuuwW",
+                  "name": "better world",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  },
+                  "community_id": "wts9MaVb"
+                },
+                {
+                  "_type": "Resource",
+                  "id": "l6MEv5e3",
                   "session": "d9kQuuwW",
                   "name": "",
                   "relationship": "",

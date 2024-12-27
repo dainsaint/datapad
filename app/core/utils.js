@@ -27,14 +27,6 @@ export function map(array, ...transformers) {
   return transformers.reduce( (result, transformer) => result.map(transformer), array ).join("\n");
 }
 
-export function eachAs(name) {
-  return function(object) {
-    return {
-      [name]: object
-    }
-  }
-}
-
 export function debounce(func, duration) {
   let timeout;
 
