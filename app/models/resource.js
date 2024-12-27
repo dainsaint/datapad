@@ -11,6 +11,10 @@ export default class Resource extends SessionModel {
     Object.assign(this, {name});
   }
 
+  get isExhausted() {
+    return this.tags.has( ResourceTag.EXHAUSTED );
+  }
+
   toURL(append = "") {
     return `/sessions/${this.session}/resources/${this.id}` + append;
   }

@@ -15,7 +15,7 @@
     {
       "id": "d9kQuuwW",
       "name": "A Sample Session",
-      "date": "2024-12-14T15:19:54.135Z"
+      "date": "2024-12-14T10:19:54.135-05:00"
     }
   ],
   "players": [
@@ -39,7 +39,7 @@
       "_type": "Session",
       "id": "d9kQuuwW",
       "name": "A Sample Session",
-      "date": "2024-12-14T15:19:54.135Z",
+      "date": "2024-12-14T10:19:54.135-05:00",
       "game": {
         "_type": "Game",
         "id": "Y6oEgFmZ",
@@ -60,9 +60,53 @@
           "resources": [
             {
               "_type": "Resource",
-              "id": "g2ycN8NA",
+              "id": "LftQ-70a",
               "session": "d9kQuuwW",
-              "name": "Green Sludge",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "L5e8sE1_",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "ctHkRg8S",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "wQixsZxS",
+              "session": "d9kQuuwW",
+              "name": "bleh",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "AOq6X9IL",
+              "session": "d9kQuuwW",
+              "name": "sdfew",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -84,9 +128,266 @@
           "resources": [
             {
               "_type": "Resource",
+              "id": "RpgWa4w4",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "c74DfOzA",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "hCpXqn0e",
+          "session": "d9kQuuwW",
+          "name": "Dick Nasties",
+          "voice": "people",
+          "resources": [
+            {
+              "_type": "Resource",
               "id": "oV_jbBkF",
               "session": "d9kQuuwW",
               "name": "Amazing Suspenders",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              },
+              "community_id": "hCpXqn0e"
+            }
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "wts9MaVb",
+          "session": "d9kQuuwW",
+          "name": "Drag Knights",
+          "voice": "leader",
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "pEtRAmA4",
+              "session": "d9kQuuwW",
+              "name": "Big Coffee",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "hhtLXumN",
+              "session": "d9kQuuwW",
+              "name": "Extreme Biopsy",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "zlIjqyZA",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "dfcgyR-y",
+              "session": "d9kQuuwW",
+              "name": "Test my resource",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "oWqPy0Pa",
+              "session": "d9kQuuwW",
+              "name": "better world",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              },
+              "community_id": "wts9MaVb"
+            }
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "wwQkQjrR",
+          "session": "d9kQuuwW",
+          "name": "nonon",
+          "voice": "people",
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "u_PYr-0k",
+              "session": "d9kQuuwW",
+              "name": "Big bobb",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "gUsRo_5p",
+          "session": "d9kQuuwW",
+          "name": "okay thn",
+          "voice": "leader",
+          "resources": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "I-l-Ndbk",
+          "session": "d9kQuuwW",
+          "name": "babab",
+          "voice": "people",
+          "resources": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "kFdisiiH",
+          "session": "d9kQuuwW",
+          "name": "ANother Comm",
+          "voice": "people",
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "PycK9JR0",
+              "session": "d9kQuuwW",
+              "name": "Big Donvs",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              },
+              "community_id": "kFdisiiH"
+            },
+            {
+              "_type": "Resource",
+              "id": "g2ycN8NA",
+              "session": "d9kQuuwW",
+              "name": "Green Sludge",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "MetQypBX",
+              "session": "d9kQuuwW",
+              "name": "Fat Kittens",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "UNpNSOt7",
+              "session": "d9kQuuwW",
+              "name": "wait, what?",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "l6MEv5e3",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "gBWWBx0X",
+          "session": "d9kQuuwW",
+          "name": "aferferf",
+          "voice": "people",
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "u84PBwol",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "l1leeKvq",
+              "session": "d9kQuuwW",
+              "name": "",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -105,307 +406,559 @@
           "_type": "Phase",
           "id": "r2d2Kb4t",
           "session": "d9kQuuwW",
+          "name": "Global Phase",
           "status": "idle",
           "round": 0,
-          "length": 0,
+          "duration": 1200,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Global Phase",
-          "duration": 1200
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.436-05:00",
+            "e": "2024-12-17T15:57:27.436-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.436-05:00",
+            "e": "2024-12-17T15:57:27.436-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "DzjNpyV6",
           "session": "d9kQuuwW",
+          "name": "Universal Phase",
           "status": "idle",
           "round": 0,
-          "length": 0,
+          "duration": 240,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Universal Phase",
-          "duration": 240
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "wKEPI-LQ",
           "session": "d9kQuuwW",
+          "name": "Societal Phase",
           "status": "idle",
           "round": 0,
-          "length": 0,
+          "duration": 600,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Societal Phase",
-          "duration": 600
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "rP3rq0rF",
           "session": "d9kQuuwW",
+          "name": "Galactic Phase",
           "status": "idle",
           "round": 0,
-          "length": 0,
+          "duration": 600,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Galactic Phase",
-          "duration": 600
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "XFpsOuRi",
           "session": "d9kQuuwW",
+          "name": "Individual Phase",
           "status": "idle",
           "round": 0,
-          "length": 0,
+          "duration": 500,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Individual Phase",
-          "duration": 500
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "SjaKgg57",
           "session": "d9kQuuwW",
+          "name": "Universal Phase",
           "status": "idle",
           "round": 1,
-          "length": 0,
+          "duration": 240,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Universal Phase",
-          "duration": 240
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.437-05:00",
+            "e": "2024-12-17T15:57:27.437-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "X5eN8JgE",
           "session": "d9kQuuwW",
+          "name": "Societal Phase",
           "status": "idle",
           "round": 1,
-          "length": 0,
+          "duration": 600,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Societal Phase",
-          "duration": 600
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "pq_41FS6",
           "session": "d9kQuuwW",
+          "name": "Galactic Phase",
           "status": "idle",
           "round": 1,
-          "length": 0,
+          "duration": 600,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Galactic Phase",
-          "duration": 600
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "Y3AkNSsy",
           "session": "d9kQuuwW",
+          "name": "Individual Phase",
           "status": "idle",
           "round": 1,
-          "length": 0,
+          "duration": 500,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Individual Phase",
-          "duration": 500
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "x9tQCQXi",
           "session": "d9kQuuwW",
+          "name": "Universal Phase",
           "status": "idle",
           "round": 2,
-          "length": 0,
+          "duration": 240,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Universal Phase",
-          "duration": 240
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "vchfzjav",
           "session": "d9kQuuwW",
+          "name": "Societal Phase",
           "status": "idle",
           "round": 2,
-          "length": 0,
+          "duration": 600,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Societal Phase",
-          "duration": 600
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "YOfZ_t18",
           "session": "d9kQuuwW",
+          "name": "Galactic Phase",
           "status": "idle",
           "round": 2,
-          "length": 0,
+          "duration": 600,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Galactic Phase",
-          "duration": 600
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "W12OO8n-",
           "session": "d9kQuuwW",
+          "name": "Individual Phase",
           "status": "idle",
           "round": 2,
-          "length": 0,
+          "duration": 500,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Individual Phase",
-          "duration": 500
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.438-05:00",
+            "e": "2024-12-17T15:57:27.438-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "o4IHdWMy",
           "session": "d9kQuuwW",
+          "name": "Universal Phase",
           "status": "idle",
           "round": 3,
-          "length": 0,
+          "duration": 240,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Universal Phase",
-          "duration": 240
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.439-05:00",
+            "e": "2024-12-17T15:57:27.439-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.439-05:00",
+            "e": "2024-12-17T15:57:27.439-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "gJT2BkFo",
           "session": "d9kQuuwW",
+          "name": "Societal Phase",
           "status": "idle",
           "round": 3,
-          "length": 0,
+          "duration": 600,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Societal Phase",
-          "duration": 600
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.439-05:00",
+            "e": "2024-12-17T15:57:27.439-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.439-05:00",
+            "e": "2024-12-17T15:57:27.439-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "AmnHL7Z5",
           "session": "d9kQuuwW",
+          "name": "Galactic Phase",
           "status": "idle",
           "round": 3,
-          "length": 0,
+          "duration": 600,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Galactic Phase",
-          "duration": 600
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.439-05:00",
+            "e": "2024-12-17T15:57:27.439-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.439-05:00",
+            "e": "2024-12-17T15:57:27.439-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "XPFcVKnS",
           "session": "d9kQuuwW",
+          "name": "Generational Phase",
           "status": "idle",
           "round": 3,
-          "length": 0,
+          "duration": 500,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Generational Phase",
-          "duration": 500
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.440-05:00",
+            "e": "2024-12-17T15:57:27.440-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.440-05:00",
+            "e": "2024-12-17T15:57:27.440-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         },
         {
           "_type": "Phase",
           "id": "nxwUEHkH",
           "session": "d9kQuuwW",
+          "name": "Conclusion Phase",
           "status": "idle",
           "round": 3,
-          "length": 0,
+          "duration": 500,
           "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
-          "scheduledTimeStart": "2024-12-14T15:19:54.135Z",
-          "scheduledTimeEnd": "2024-12-14T15:19:54.135Z",
-          "name": "Conclusion Phase",
-          "duration": 500
+          "scheduledTime": {
+            "s": "2024-12-17T15:57:27.440-05:00",
+            "e": "2024-12-17T15:57:27.440-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-17T15:57:27.440-05:00",
+            "e": "2024-12-17T15:57:27.440-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "scheduledTimeStart": "2024-12-14T10:19:54.135-05:00",
+          "scheduledTimeEnd": "2024-12-14T10:19:54.135-05:00",
+          "actualTimeStart": "2024-12-14T18:54:32.746-05:00",
+          "actualTimeComplete": "2024-12-14T18:54:32.746-05:00",
+          "length": 0
         }
       ],
       "players": [
@@ -445,13 +998,280 @@
           "tags": {
             "_type": "Tags",
             "value": []
-          }
+          },
+          "community_id": "hCpXqn0e"
         },
         {
           "_type": "Resource",
           "id": "IrH5cQBw",
           "session": "d9kQuuwW",
           "name": "Big Rock",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "cGC4KYvk",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "pEtRAmA4",
+          "session": "d9kQuuwW",
+          "name": "Big Coffee",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "hhtLXumN",
+          "session": "d9kQuuwW",
+          "name": "Extreme Biopsy",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "MetQypBX",
+          "session": "d9kQuuwW",
+          "name": "Fat Kittens",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "u_PYr-0k",
+          "session": "d9kQuuwW",
+          "name": "Big bobb",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "tOV-mMOR",
+          "session": "d9kQuuwW",
+          "name": "bbbbbb",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "Wqrb8S4W",
+          "session": "d9kQuuwW",
+          "name": "ja fa",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "YLwkRVD7",
+          "session": "d9kQuuwW",
+          "name": "YEAH",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "PycK9JR0",
+          "session": "d9kQuuwW",
+          "name": "Big Donvs",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "community_id": "kFdisiiH"
+        },
+        {
+          "_type": "Resource",
+          "id": "UNpNSOt7",
+          "session": "d9kQuuwW",
+          "name": "wait, what?",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "AWeem7_T",
+          "session": "d9kQuuwW",
+          "name": "aefaefa",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "c74DfOzA",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "LftQ-70a",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "L5e8sE1_",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "ctHkRg8S",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "u84PBwol",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "l1leeKvq",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "zlIjqyZA",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "l6MEv5e3",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "RpgWa4w4",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "dfcgyR-y",
+          "session": "d9kQuuwW",
+          "name": "Test my resource",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "wQixsZxS",
+          "session": "d9kQuuwW",
+          "name": "bleh",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "oWqPy0Pa",
+          "session": "d9kQuuwW",
+          "name": "better world",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "community_id": "wts9MaVb"
+        },
+        {
+          "_type": "Resource",
+          "id": "AOq6X9IL",
+          "session": "d9kQuuwW",
+          "name": "sdfew",
           "relationship": "",
           "tags": {
             "_type": "Tags",
@@ -477,9 +1297,226 @@
               "resources": [
                 {
                   "_type": "Resource",
+                  "id": "LftQ-70a",
+                  "session": "d9kQuuwW",
+                  "name": "",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "L5e8sE1_",
+                  "session": "d9kQuuwW",
+                  "name": "",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "ctHkRg8S",
+                  "session": "d9kQuuwW",
+                  "name": "",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "wQixsZxS",
+                  "session": "d9kQuuwW",
+                  "name": "bleh",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "AOq6X9IL",
+                  "session": "d9kQuuwW",
+                  "name": "sdfew",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                }
+              ],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Community",
+              "id": "wts9MaVb",
+              "session": "d9kQuuwW",
+              "name": "Drag Knights",
+              "voice": "leader",
+              "resources": [
+                {
+                  "_type": "Resource",
+                  "id": "pEtRAmA4",
+                  "session": "d9kQuuwW",
+                  "name": "Big Coffee",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "hhtLXumN",
+                  "session": "d9kQuuwW",
+                  "name": "Extreme Biopsy",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "zlIjqyZA",
+                  "session": "d9kQuuwW",
+                  "name": "",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "dfcgyR-y",
+                  "session": "d9kQuuwW",
+                  "name": "Test my resource",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "oWqPy0Pa",
+                  "session": "d9kQuuwW",
+                  "name": "better world",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  },
+                  "community_id": "wts9MaVb"
+                }
+              ],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Community",
+              "id": "kFdisiiH",
+              "session": "d9kQuuwW",
+              "name": "ANother Comm",
+              "voice": "people",
+              "resources": [
+                {
+                  "_type": "Resource",
+                  "id": "PycK9JR0",
+                  "session": "d9kQuuwW",
+                  "name": "Big Donvs",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  },
+                  "community_id": "kFdisiiH"
+                },
+                {
+                  "_type": "Resource",
                   "id": "g2ycN8NA",
                   "session": "d9kQuuwW",
                   "name": "Green Sludge",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "MetQypBX",
+                  "session": "d9kQuuwW",
+                  "name": "Fat Kittens",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "UNpNSOt7",
+                  "session": "d9kQuuwW",
+                  "name": "wait, what?",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "l6MEv5e3",
+                  "session": "d9kQuuwW",
+                  "name": "",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                }
+              ],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Community",
+              "id": "gBWWBx0X",
+              "session": "d9kQuuwW",
+              "name": "aferferf",
+              "voice": "people",
+              "resources": [
+                {
+                  "_type": "Resource",
+                  "id": "u84PBwol",
+                  "session": "d9kQuuwW",
+                  "name": "",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "l1leeKvq",
+                  "session": "d9kQuuwW",
+                  "name": "",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
@@ -501,9 +1538,20 @@
               "resources": [
                 {
                   "_type": "Resource",
-                  "id": "oV_jbBkF",
+                  "id": "RpgWa4w4",
                   "session": "d9kQuuwW",
-                  "name": "Amazing Suspenders",
+                  "name": "",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "c74DfOzA",
+                  "session": "d9kQuuwW",
+                  "name": "",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
@@ -517,6 +1565,163 @@
               }
             }
           ]
+        },
+        {
+          "_type": "Society",
+          "id": "YHzYjON0",
+          "session": "d9kQuuwW",
+          "name": "Better Name",
+          "archetype": "the faithful",
+          "planet": "Earth",
+          "communities": [
+            {
+              "_type": "Community",
+              "id": "gUsRo_5p",
+              "session": "d9kQuuwW",
+              "name": "okay thn",
+              "voice": "leader",
+              "resources": [],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ]
+        },
+        {
+          "_type": "Society",
+          "id": "NAj6eYjg",
+          "session": "d9kQuuwW",
+          "name": "Name it",
+          "archetype": "the mighty",
+          "planet": "Earth",
+          "communities": [
+            {
+              "_type": "Community",
+              "id": "I-l-Ndbk",
+              "session": "d9kQuuwW",
+              "name": "babab",
+              "voice": "people",
+              "resources": [],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Community",
+              "id": "hCpXqn0e",
+              "session": "d9kQuuwW",
+              "name": "Dick Nasties",
+              "voice": "people",
+              "resources": [
+                {
+                  "_type": "Resource",
+                  "id": "oV_jbBkF",
+                  "session": "d9kQuuwW",
+                  "name": "Amazing Suspenders",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  },
+                  "community_id": "hCpXqn0e"
+                }
+              ],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ]
+        },
+        {
+          "_type": "Society",
+          "id": "OivSctcc",
+          "session": "d9kQuuwW",
+          "name": "hbiubj",
+          "archetype": "the enterprise",
+          "planet": "Earth",
+          "communities": [
+            {
+              "_type": "Community",
+              "id": "wwQkQjrR",
+              "session": "d9kQuuwW",
+              "name": "nonon",
+              "voice": "people",
+              "resources": [
+                {
+                  "_type": "Resource",
+                  "id": "u_PYr-0k",
+                  "session": "d9kQuuwW",
+                  "name": "Big bobb",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                }
+              ],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ]
+        },
+        {
+          "_type": "Society",
+          "id": "TntpktJw",
+          "session": "d9kQuuwW",
+          "name": "okay",
+          "archetype": "the intrepid",
+          "planet": "Earth",
+          "communities": []
+        },
+        {
+          "_type": "Society",
+          "id": "e_OP_Z_C",
+          "session": "d9kQuuwW",
+          "name": "",
+          "archetype": "the aesthetic",
+          "planet": "Earth",
+          "communities": []
+        },
+        {
+          "_type": "Society",
+          "id": "Juu3Ja9V",
+          "session": "d9kQuuwW",
+          "name": "renamed",
+          "archetype": "the aesthetic",
+          "planet": "Earth",
+          "communities": []
+        },
+        {
+          "_type": "Society",
+          "id": "tNEWMwcF",
+          "session": "d9kQuuwW",
+          "name": "An actual name",
+          "archetype": "the aesthetic",
+          "planet": "Earth",
+          "communities": []
+        },
+        {
+          "_type": "Society",
+          "id": "ah1fLpfN",
+          "session": "d9kQuuwW",
+          "name": "",
+          "archetype": "the aesthetic",
+          "planet": "Earth",
+          "communities": []
+        },
+        {
+          "_type": "Society",
+          "id": "QYQgeaZg",
+          "session": "d9kQuuwW",
+          "name": "Try Me",
+          "archetype": "the mighty",
+          "planet": "Earth",
+          "communities": []
         }
       ],
       "tags": {
@@ -524,6 +1729,12 @@
         "value": [
           "active"
         ]
+      },
+      "scheduledTime": {
+        "s": "2024-12-17T15:57:27.440-05:00",
+        "e": "2024-12-17T20:57:27.440-05:00",
+        "invalid": null,
+        "isLuxonInterval": true
       }
     }
   ]

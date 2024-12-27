@@ -4,6 +4,10 @@ export default class Tags extends Set {
     super( value )
   }
 
+  toList() {
+    return [...this.values()].join();
+  }
+
   toJSON() {
     return {
       _type: "Tags",

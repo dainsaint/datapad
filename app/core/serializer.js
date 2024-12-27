@@ -1,3 +1,5 @@
+import { DateTime, Interval } from "luxon";
+
 const Types = new Map();
 const instances = new Map();
 
@@ -15,6 +17,18 @@ function replacer(_, value) {
 }
 
 function reviver(key, value) {
+
+  if( value === null )
+    return undefined;
+
+  if( typeof value === "string" && DateTime.fromISO( value ).isValid ) {
+    return DateTime.fromISO( value )
+  }
+
+  if( value?.isLuxonInterval ) {
+    return Interval.fromDateTimes( DateTime.fromISO(value.s), DateTime.fromISO(value.e) );
+  }
+
   if (!Object.hasOwn(value, "_type")) {
     return value;
   }

@@ -1,3 +1,4 @@
+import { DateTime, Duration, Interval } from "luxon";
 import Datastore from "../core/datastore.js";
 import Model from "../core/model.js";
 import Tags from "../core/tags.js";
@@ -8,7 +9,7 @@ const datastore = new Datastore();
 
 export default class Session extends Model {
   name = ""
-  date = new Date()
+  date = DateTime.now()
   game = {}
   communities = []
   phases = []
@@ -17,9 +18,11 @@ export default class Session extends Model {
   societies = []
   tags = new Tags()
 
+  scheduledTime = Interval.after(DateTime.now(), Duration.fromObject({hours: 5}))
+
   static #sessions = new Map();
 
-  constructor({name = "", date = new Date()} = {}){
+  constructor({name = "", date = DateTime.now() } = {}){
     super();
     Object.assign(this, {name, date});
   }
