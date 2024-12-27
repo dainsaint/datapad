@@ -35,12 +35,12 @@ export default class Server {
       try {
         const { layout = "app", ...data } = options;
         const Template = await import(filePath);
-        const content = Template.default(options);
+        const content = Template.default(data);
 
         if( layout && layout !== "none" ) {
           const layoutPath = path.join( __dirname, `components/layouts/${layout}.js`);
           const Layout = await import(layoutPath);
-          const layoutRendered = Layout.default( content )
+          const layoutRendered = Layout.default( content );
           callback(null, layoutRendered);
         } else {
           callback(null, content);
@@ -62,6 +62,7 @@ export default class Server {
       request.params = req.params;
       next();
     });
+
     app.use("/api/v1", jsonRouter);
     app.use("/", htmlRouter);
     app.use(errorHandler);

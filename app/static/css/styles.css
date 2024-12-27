@@ -29,6 +29,7 @@ body {
   right: 0px;
   bottom: 0px;
   position: absolute;
+  background: var(--color-bg);
   color: var(--color-text);
 }
 
@@ -54,6 +55,9 @@ label {
   }
 }
 
+a {
+  cursor: pointer;
+}
 
 h1 {
   font-weight: normal;
@@ -110,6 +114,7 @@ nav {
   border: 1px solid var(--color-bg);
   color: var(--color-text);
   padding: 1rem;
+  height: 100%;
 }
 
 a.card {
@@ -296,13 +301,13 @@ dialog {
   width: 650px;
   border: none;
   /* margin-top: 1rem; */
-  /* translate: 0 calc( -100% - 2rem ); */
-  /* transition: translate .2s; */
+  translate: 0 calc( -100% - 2rem );
+  transition: translate .2s;
 
   &[open] {
     display: block;
     opacity: 1;
-    /* translate: 0 0; */
+    translate: 0 0;
     pointer-events: revert;
   }
 
@@ -339,4 +344,25 @@ dialog {
 
 .card.droppable.is-dropping {
   background: var(--color-mid);
+}
+
+body {
+   background: black;
+}
+
+.app-content {
+  transition: all .2s ease-out;
+}
+
+.app-content:has(dialog[open]) {
+  scale: .99; 
+  border-radius: 20px; 
+  overflow: hidden;
+  filter: blur(3px);
+}
+
+
+.scrollable {
+  max-height: 100%;
+  overflow-y: scroll;
 }

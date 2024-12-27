@@ -22,7 +22,7 @@ export default function CommunityCreate({ community }) {
       </select>
       <div class="layout-horizontal">
         <button>~ Update Community</button>
-        <button onclick="this.closest('dialog').remove()">Cancel</button>
+        <button type="button" value="cancel">Cancel</button>
       </div>
     </form>
   `;

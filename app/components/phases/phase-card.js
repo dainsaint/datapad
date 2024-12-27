@@ -1,5 +1,5 @@
 import Phase from "../../models/phase.js";
-import PhaseTime from "./time.js";
+import PhaseTime from "./phase-time.js";
 
 export default function PhaseCard({ phase = new Phase() }, i ) { 
   const headings = ["Now", "Next", "Then"];

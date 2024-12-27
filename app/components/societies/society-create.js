@@ -25,7 +25,7 @@ export default function SocietyCreate({ session = new Session()} = {}) {
 
       <div class="layout-horizontal">
         <button type="submit">+ New Society</button>
-        <button onclick="this.closest('dialog').remove()">Cancel</button>
+        <button type="button" value="cancel">Cancel</button>
       </div>
     </form>
   `;

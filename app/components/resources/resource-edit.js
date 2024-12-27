@@ -23,7 +23,7 @@ export default function ResourceEdit({ resource }) {
       </select>
       <div class="layout-horizontal">
         <button>~ Update Resource</button>
-        <button onclick="this.closest('dialog').remove()">Cancel</button>
+        <button type="button" value="cancel">Cancel</button>
       </div>
     </form>
   `;

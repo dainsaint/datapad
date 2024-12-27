@@ -21,15 +21,15 @@ export default function SocietyPanel({ society = new Society()} = {}) {
       </header>
 
       <div class="grid-three">
-       ${map(society.communities, eachAs("community"), CommunityCard)}
+       ${map(society.communities, community => CommunityCard({community}) )}
       </div>
 
       <div class="stack-tight">
         <h3>Actions (put these in a better place)</h3>
         <div class="layout-horizontal">
-          <button hx-get="${ society.toURL('?view=edit&layout=dialog') }" hx-target="#app" hx-swap="beforeend">~ Edit Society</button>
-          <button hx-get="${ session.toURL('/resources/?view=create&layout=dialog') }" hx-target="#app" hx-swap="beforeend">+ New Resource</button>
-          <button hx-get="${ session.toURL('/communities/?view=create&layout=dialog') }" hx-target="#app" hx-swap="beforeend">+ New Community</button>
+          <button hx-get="${ society.toURL('?view=edit') }" hx-target="#dialog">~ Edit Society</button>
+          <button hx-get="${ session.toURL('/resources/?view=create') }" hx-target="#dialog">+ New Resource</button>
+          <button hx-get="${ session.toURL('/communities/?view=create') }" hx-target="#dialog">+ New Community</button>
         </div>
       </div>
     </main>

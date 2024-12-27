@@ -11,6 +11,15 @@ const sessions = express.Router();
 - [ ] GET     /sessions/:session/script;
 */
 
+sessions.get("/sessions", (req, res) => {
+  try {
+    const { view = "create" } = req.query;
+
+    res.render(`sessions/${view}`, { layout: "none" });
+  } catch (e) {
+    res.status(404).send(e.toString());
+  }
+});
 
 sessions.get("/sessions/:id", (req, res) => {
   try {

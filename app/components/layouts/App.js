@@ -20,7 +20,12 @@ export default function App(content) {
 
     <body>
       <section id="app" class="app-content" hx-ext="sse" sse-connect="/events">
-        ${content}
+        ${content} 
+        
+        <dialog id="dialog" class="stack" 
+          hx-on:htmx:load="this.showModal()" 
+          onclick="if(event.target.value === 'cancel') this.close()">
+        </dialog>
       </section>
     </body>
 

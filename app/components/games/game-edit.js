@@ -9,7 +9,7 @@ export default function GameEdit({ game = new Game() } = {}) {
       <input autofocus name="name" placeholder="Enter Game Name" />
       <div class="layout-horizontal">
         <button>+ New Game</button>
-        <button onclick="this.closest('dialog').remove()">Cancel</button>
+        <button type="button" value="cancel">Cancel</button>
       </div>
     </form>
   `;

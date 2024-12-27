@@ -5,14 +5,57 @@
   import SocietyCard from "../societies/society-card.js";
   import PhaseCard from "../phases/card.js";
 
-  const phasesToDisplay = session.phases.slice(0, 3);
-  const currentPhase = phasesToDisplay.at(0);
+
+
+
+  // function component(name, init){
+
+  //   const template = 
+
+
+  //   class CustomElement extends HTMLElement {
+      
+  //   }
+
+
+  // }
+
+
+
+
+  component("session-gm", ({ session }) => {
+    const phasesToDisplay = session.phases.slice(0, 3);
+    const currentPhase = phasesToDisplay.at(0);
+
+    return {
+      currentPhase,
+      phasesToDisplay
+    }
+  })
+
+  component("phase-time", ({ phase }) => ({ phase }) );
+
 </script>
 
-<link rel="import" as="phase-card" href="../phases/phase-card.html" />
-<link rel="import" as="society-card" href="../societies/society-card.html"/>
+<template id="phase-time">
+  <div class="phase-time" hx-get="${ phase.toURL('?view=time') }" hx-trigger="sse:phases">
+    <header>
+      <h2>${phase.name}</h2>
+      <p class="subtitle">Round ${phase.round + 1}</p>
+    </header>
+    <time datetime="${phase.timeRemaining}s">${secondsToTime(phase.timeRemaining)}</time>
+  </div>
+</template>
 
-<template id="session-gm" session={ new Session() }>
+
+<template id="phase-card">
+  <div class="card ${i == 0 ? 'card-fancy color-contrast' : 'card-transparent'} stack">
+    <p class="annotation">${heading}</p>
+    <phase-time phase="${ phase }"/>
+  </div>
+</template>
+
+<template id="session-gm">
   <main class="content grid-two">
     <div class="stack">
       <h1>Timeline</h1>
@@ -38,7 +81,7 @@
         <society-card each=${society in session.societies} />
       </div>
 
-      <form hx-get="${ session.toURL('/societies?view=create&layout=dialog') }" hx-target="#app" hx-swap="beforeend">
+      <form hx-get="${ session.toURL('/societies?view=create') }" hx-target="#app" hx-swap="beforeend">
         <button>+ Create a new society</button>
       </form>
     </div>

@@ -19,8 +19,8 @@ export default function ResourceCreate({ session }) {
       } ) }
       </select>
       <div class="layout-horizontal">
-        <button>+ New Resource</button>
-        <button onclick="this.closest('dialog').remove()">Cancel</button>
+        <button type="submit">+ New Resource</button>
+        <button type="button" value="cancel">Cancel</button>
       </div>
     </form>
   `;

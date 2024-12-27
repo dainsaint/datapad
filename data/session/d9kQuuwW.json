@@ -23,9 +23,9 @@
       "resources": [
         {
           "_type": "Resource",
-          "id": "hhtLXumN",
+          "id": "LftQ-70a",
           "session": "d9kQuuwW",
-          "name": "Extreme Biopsy",
+          "name": "",
           "relationship": "",
           "tags": {
             "_type": "Tags",
@@ -34,9 +34,42 @@
         },
         {
           "_type": "Resource",
-          "id": "UNpNSOt7",
+          "id": "L5e8sE1_",
           "session": "d9kQuuwW",
-          "name": "wait, what?",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "ctHkRg8S",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "wQixsZxS",
+          "session": "d9kQuuwW",
+          "name": "bleh",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "AOq6X9IL",
+          "session": "d9kQuuwW",
+          "name": "sdfew",
           "relationship": "",
           "tags": {
             "_type": "Tags",
@@ -55,7 +88,30 @@
       "session": "d9kQuuwW",
       "name": "Disaffected Youth",
       "voice": "people",
-      "resources": [],
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "RpgWa4w4",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "c74DfOzA",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
       "tags": {
         "_type": "Tags",
         "value": []
@@ -70,36 +126,15 @@
       "resources": [
         {
           "_type": "Resource",
-          "id": "cGC4KYvk",
+          "id": "oV_jbBkF",
           "session": "d9kQuuwW",
-          "name": "",
+          "name": "Amazing Suspenders",
           "relationship": "",
           "tags": {
             "_type": "Tags",
             "value": []
-          }
-        },
-        {
-          "_type": "Resource",
-          "id": "tOV-mMOR",
-          "session": "d9kQuuwW",
-          "name": "bbbbbb",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Resource",
-          "id": "AWeem7_T",
-          "session": "d9kQuuwW",
-          "name": "aefaefa",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
+          },
+          "community_id": "hCpXqn0e"
         }
       ],
       "tags": {
@@ -127,14 +162,48 @@
         },
         {
           "_type": "Resource",
-          "id": "g2ycN8NA",
+          "id": "hhtLXumN",
           "session": "d9kQuuwW",
-          "name": "Green Sludge",
+          "name": "Extreme Biopsy",
           "relationship": "",
           "tags": {
             "_type": "Tags",
             "value": []
           }
+        },
+        {
+          "_type": "Resource",
+          "id": "zlIjqyZA",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "dfcgyR-y",
+          "session": "d9kQuuwW",
+          "name": "Test my resource",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "oWqPy0Pa",
+          "session": "d9kQuuwW",
+          "name": "better world",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "community_id": "wts9MaVb"
         }
       ],
       "tags": {
@@ -208,6 +277,50 @@
             "value": []
           },
           "community_id": "kFdisiiH"
+        },
+        {
+          "_type": "Resource",
+          "id": "g2ycN8NA",
+          "session": "d9kQuuwW",
+          "name": "Green Sludge",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "MetQypBX",
+          "session": "d9kQuuwW",
+          "name": "Fat Kittens",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "UNpNSOt7",
+          "session": "d9kQuuwW",
+          "name": "wait, what?",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "l6MEv5e3",
+          "session": "d9kQuuwW",
+          "name": "",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
         }
       ],
       "tags": {
@@ -224,9 +337,9 @@
       "resources": [
         {
           "_type": "Resource",
-          "id": "MetQypBX",
+          "id": "u84PBwol",
           "session": "d9kQuuwW",
-          "name": "Fat Kittens",
+          "name": "",
           "relationship": "",
           "tags": {
             "_type": "Tags",
@@ -235,15 +348,14 @@
         },
         {
           "_type": "Resource",
-          "id": "oV_jbBkF",
+          "id": "l1leeKvq",
           "session": "d9kQuuwW",
-          "name": "Amazing Suspenders",
+          "name": "",
           "relationship": "",
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "community_id": "pFFqs6sI"
+          }
         }
       ],
       "tags": {
@@ -850,7 +962,7 @@
         "_type": "Tags",
         "value": []
       },
-      "community_id": "pFFqs6sI"
+      "community_id": "hCpXqn0e"
     },
     {
       "_type": "Resource",
@@ -984,6 +1096,150 @@
         "_type": "Tags",
         "value": []
       }
+    },
+    {
+      "_type": "Resource",
+      "id": "c74DfOzA",
+      "session": "d9kQuuwW",
+      "name": "",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "LftQ-70a",
+      "session": "d9kQuuwW",
+      "name": "",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "L5e8sE1_",
+      "session": "d9kQuuwW",
+      "name": "",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "ctHkRg8S",
+      "session": "d9kQuuwW",
+      "name": "",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "u84PBwol",
+      "session": "d9kQuuwW",
+      "name": "",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "l1leeKvq",
+      "session": "d9kQuuwW",
+      "name": "",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "zlIjqyZA",
+      "session": "d9kQuuwW",
+      "name": "",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "l6MEv5e3",
+      "session": "d9kQuuwW",
+      "name": "",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "RpgWa4w4",
+      "session": "d9kQuuwW",
+      "name": "",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "dfcgyR-y",
+      "session": "d9kQuuwW",
+      "name": "Test my resource",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "wQixsZxS",
+      "session": "d9kQuuwW",
+      "name": "bleh",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "oWqPy0Pa",
+      "session": "d9kQuuwW",
+      "name": "better world",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      },
+      "community_id": "wts9MaVb"
+    },
+    {
+      "_type": "Resource",
+      "id": "AOq6X9IL",
+      "session": "d9kQuuwW",
+      "name": "sdfew",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
     }
   ],
   "societies": [
@@ -1004,42 +1260,7 @@
           "resources": [
             {
               "_type": "Resource",
-              "id": "hhtLXumN",
-              "session": "d9kQuuwW",
-              "name": "Extreme Biopsy",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            },
-            {
-              "_type": "Resource",
-              "id": "UNpNSOt7",
-              "session": "d9kQuuwW",
-              "name": "wait, what?",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            }
-          ],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Community",
-          "id": "hCpXqn0e",
-          "session": "d9kQuuwW",
-          "name": "Dick Nasties",
-          "voice": "people",
-          "resources": [
-            {
-              "_type": "Resource",
-              "id": "cGC4KYvk",
+              "id": "LftQ-70a",
               "session": "d9kQuuwW",
               "name": "",
               "relationship": "",
@@ -1050,9 +1271,9 @@
             },
             {
               "_type": "Resource",
-              "id": "tOV-mMOR",
+              "id": "L5e8sE1_",
               "session": "d9kQuuwW",
-              "name": "bbbbbb",
+              "name": "",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -1061,9 +1282,31 @@
             },
             {
               "_type": "Resource",
-              "id": "AWeem7_T",
+              "id": "ctHkRg8S",
               "session": "d9kQuuwW",
-              "name": "aefaefa",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "wQixsZxS",
+              "session": "d9kQuuwW",
+              "name": "bleh",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "AOq6X9IL",
+              "session": "d9kQuuwW",
+              "name": "sdfew",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -1096,14 +1339,48 @@
             },
             {
               "_type": "Resource",
-              "id": "g2ycN8NA",
+              "id": "hhtLXumN",
               "session": "d9kQuuwW",
-              "name": "Green Sludge",
+              "name": "Extreme Biopsy",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
                 "value": []
               }
+            },
+            {
+              "_type": "Resource",
+              "id": "zlIjqyZA",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "dfcgyR-y",
+              "session": "d9kQuuwW",
+              "name": "Test my resource",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "oWqPy0Pa",
+              "session": "d9kQuuwW",
+              "name": "better world",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              },
+              "community_id": "wts9MaVb"
             }
           ],
           "tags": {
@@ -1129,6 +1406,50 @@
                 "value": []
               },
               "community_id": "kFdisiiH"
+            },
+            {
+              "_type": "Resource",
+              "id": "g2ycN8NA",
+              "session": "d9kQuuwW",
+              "name": "Green Sludge",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "MetQypBX",
+              "session": "d9kQuuwW",
+              "name": "Fat Kittens",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "UNpNSOt7",
+              "session": "d9kQuuwW",
+              "name": "wait, what?",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "l6MEv5e3",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
             }
           ],
           "tags": {
@@ -1145,9 +1466,9 @@
           "resources": [
             {
               "_type": "Resource",
-              "id": "MetQypBX",
+              "id": "u84PBwol",
               "session": "d9kQuuwW",
-              "name": "Fat Kittens",
+              "name": "",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -1156,15 +1477,14 @@
             },
             {
               "_type": "Resource",
-              "id": "oV_jbBkF",
+              "id": "l1leeKvq",
               "session": "d9kQuuwW",
-              "name": "Amazing Suspenders",
+              "name": "",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
                 "value": []
-              },
-              "community_id": "pFFqs6sI"
+              }
             }
           ],
           "tags": {
@@ -1178,7 +1498,30 @@
           "session": "d9kQuuwW",
           "name": "Disaffected Youth",
           "voice": "people",
-          "resources": [],
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "RpgWa4w4",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "c74DfOzA",
+              "session": "d9kQuuwW",
+              "name": "",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ],
           "tags": {
             "_type": "Tags",
             "value": []
@@ -1227,6 +1570,31 @@
             "_type": "Tags",
             "value": []
           }
+        },
+        {
+          "_type": "Community",
+          "id": "hCpXqn0e",
+          "session": "d9kQuuwW",
+          "name": "Dick Nasties",
+          "voice": "people",
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "oV_jbBkF",
+              "session": "d9kQuuwW",
+              "name": "Amazing Suspenders",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              },
+              "community_id": "hCpXqn0e"
+            }
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
         }
       ]
     },
@@ -1270,6 +1638,51 @@
       "session": "d9kQuuwW",
       "name": "okay",
       "archetype": "the intrepid",
+      "planet": "Earth",
+      "communities": []
+    },
+    {
+      "_type": "Society",
+      "id": "e_OP_Z_C",
+      "session": "d9kQuuwW",
+      "name": "",
+      "archetype": "the aesthetic",
+      "planet": "Earth",
+      "communities": []
+    },
+    {
+      "_type": "Society",
+      "id": "Juu3Ja9V",
+      "session": "d9kQuuwW",
+      "name": "renamed",
+      "archetype": "the aesthetic",
+      "planet": "Earth",
+      "communities": []
+    },
+    {
+      "_type": "Society",
+      "id": "tNEWMwcF",
+      "session": "d9kQuuwW",
+      "name": "An actual name",
+      "archetype": "the aesthetic",
+      "planet": "Earth",
+      "communities": []
+    },
+    {
+      "_type": "Society",
+      "id": "ah1fLpfN",
+      "session": "d9kQuuwW",
+      "name": "",
+      "archetype": "the aesthetic",
+      "planet": "Earth",
+      "communities": []
+    },
+    {
+      "_type": "Society",
+      "id": "QYQgeaZg",
+      "session": "d9kQuuwW",
+      "name": "Try Me",
+      "archetype": "the mighty",
       "planet": "Earth",
       "communities": []
     }

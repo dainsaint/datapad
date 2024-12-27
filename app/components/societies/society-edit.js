@@ -1,6 +1,5 @@
 import { map } from "../../core/utils.js";
 import Society from "../../models/society.js";
-//figure out the society/session jawn here...
 
 const archetypes = {
   "the aesthetic": "The Aesthetic",
@@ -20,18 +19,25 @@ export default function SocietyEdit({ society = new Society() } = {}) {
 
     <form class="stack" hx-put="${society.toURL()}" hx-swap="none">
       <label for="name">Society Name</label>
-      <input autofocus name="name" placeholder="e.g. Ten Thousand Islands" value="${ society.name }"/>
+      <input autofocus name="name" placeholder="e.g. Ten Thousand Islands" value="${
+        society.name
+      }"/>
 
       <label for="archetype">Society Archetype</label>
       <select name="archetype" placeholder="Select Archetype">
-      ${ map(Object.entries(archetypes), ([value, text]) => 
-        `<option value="${ value }" ${society.archetype == value && "selected"}>${ text }</option>`
+      ${map(
+        Object.entries(archetypes),
+        ([value, text]) =>
+          `<option value="${value}" ${
+            society.archetype == value && "selected"
+          }>${text}</option>`
       )}
       </select>
 
       <div class="layout-horizontal">
         <button type="submit">~ Update Society</button>
-        <button onclick="this.closest('dialog').remove()">Cancel</button>
+        <button type="button" value="delete" hx-delete="${society.toURL()}">x Delete Society</button>
+        <button type="button" value="cancel">Cancel</button>
       </div>
     </form>
   `;

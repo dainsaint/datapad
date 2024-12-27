@@ -9,7 +9,7 @@ const resources = express.Router();
 - [X] GET     /sessions/:session/resources;
 - [X] POST    /sessions/:session/resources;
 - [x] GET     /sessions/:session/resources/:resource;
-- [ ] PATCH   /sessions/:session/resources/:resource;
+- [x] PATCH   /sessions/:session/resources/:resource;
 */
 
 
@@ -41,6 +41,8 @@ resources.post("/sessions/:id/resources", (req, res, next) => {
     
     const currentUrl = req.get("hx-current-url");
     if (currentUrl) res.setHeader("HX-Location", currentUrl);
+    
+    res.location( resource.toURL() )
     res.sendStatus(201);
 
     broadcast("resources");

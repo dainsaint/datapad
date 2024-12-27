@@ -19,7 +19,7 @@ export default function CommunityCreate({ session }) {
       </select>
       <div class="layout-horizontal">
         <button>+ New Community</button>
-        <button onclick="this.closest('dialog').remove()">Cancel</button>
+        <button type="button" value="cancel">Cancel</button>
       </div>
     </form>
   `;

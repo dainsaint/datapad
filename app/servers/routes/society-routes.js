@@ -36,11 +36,17 @@ societies.post("/sessions/:id/societies", (req, res, next) => {
     session.addSociety(society);
     session.save();
 
-    res.sendStatus(201);
-    const currentUrl = req.get("hx-current-url");
-    if (currentUrl) res.setHeader("HX-Location", currentUrl);
 
-    broadcast("societies");
+    // const currentUrl = req.get("hx-current-url");
+    // if (currentUrl) res.setHeader("HX-Location", currentUrl);
+    res.status(201)
+      .location( society.toURL() )
+      .setHeader("HX-Refresh", "true");
+
+    // this should return the url of the newly created resource
+    // res.s
+    
+    // broadcast("societies");
   } catch (e) {
     console.log(e);
     res.setHeader("HX-Trigger", "error");
@@ -92,6 +98,16 @@ societies.delete("/sessions/:id/societies/:society_id", (req, res) => {
   try {
     const session = Session.load(id);
     const society = session.getSocietyById(society_id);
+
+    // society.communities.forEach( community => {
+    //   community.resources.forEach( resource => 
+    //     session.removeResource(resource)
+    //   );
+
+    //   session.removeCommunity(community);
+    // })
+
+    // session.removeSociety(society);
 
     const currentUrl = req.get("hx-current-url");
     if (currentUrl) res.setHeader("HX-Location", currentUrl);

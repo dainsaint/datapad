@@ -1,6 +1,6 @@
 import Phase from "../../../models/phase.js";
 import Session from "../../../models/session.js";
-import PhaseTime from "../../phases/time.js";
+import PhaseTime from "../../phases/phase-time.js";
 
 
 export default function SessionStatusBar ({ session = new Session() } = {}) {
