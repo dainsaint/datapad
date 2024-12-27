@@ -1,15 +1,15 @@
 import { map } from "../../core/utils.js";
 
-export default function CommunityCreate({ session }) {
+export default function CommunityCreate({ episode }) {
   return `
-    <form class="stack" hx-post="${ session.toURL('/communities') }">
+    <form class="stack" hx-post="${ episode.toURL('/communities') }">
       <h1>Create a new community</h1>
       <p class="text">Enter a name/archetype for this community</p>
       <label for="name">Name</label>
       <input autofocus name="name" placeholder="New Community" />
       <label for="society_id">Society</label>
       <select name="society_id">
-        ${ map( session.societies, society => `<option value=${society.id}>${society.name}</option>` ) }
+        ${ map( episode.societies, society => `<option value=${society.id}>${society.name}</option>` ) }
       </select>
 
       <label for="voice">Voice</label>

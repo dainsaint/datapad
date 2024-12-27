@@ -1,7 +1,7 @@
 import { map, pluralize } from "../../core/utils.js";
 import Icon from "../ui/icon.js";
 
-export default function Home ({ games = new Array(), sessions = new Array() }) {
+export default function Home ({ games = new Array(), episodes = new Array() }) {
   return `
     <main id="home">
       <div class="top">
@@ -11,19 +11,17 @@ export default function Home ({ games = new Array(), sessions = new Array() }) {
 
       <div class="content stack">
         <details>
-          <summary><h2>Load Session</h2></summary>
+          <summary><h2>Load Episode</h2></summary>
           <ul>
           ${map(
-            sessions,
-            (session) =>
-              `<li><a href="/sessions/${session.id}">${
-                session.name
-              } • ${session.date.toISODate()}</a></li>`
+            episodes,
+            (episode) =>
+              `<li><a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a></li>`
           )}
           </ul>
         </details>
 
-        <h2 hx-get="/sessions" hx-target="#dialog">New Session</h2>
+        <h2 hx-get="/episodes" hx-target="#dialog">New Episode</h2>
         
         <details>
           <summary><h2>View Games</h2></summary>
@@ -31,9 +29,7 @@ export default function Home ({ games = new Array(), sessions = new Array() }) {
           ${map(
             games,
             (game) =>
-              `<li><a href="${game.toURL()}">${game.name} • ${
-                game.sessions.length
-              } ${pluralize(game.sessions.length, "session")}</a></li>`
+              `<li><a href="${game.toURL()}">${game.name} • ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}</a></li>`
           )}
           </ul>
         </details>  

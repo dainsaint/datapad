@@ -1,6 +1,6 @@
-import SessionModel from "./session-model.js";
+import EpisodeModel from "./episode-model.js";
 
-export default class Society extends SessionModel {
+export default class Society extends EpisodeModel {
   name = "";
   archetype = "";
   planet = "";
@@ -35,7 +35,7 @@ export default class Society extends SessionModel {
   }
 
   toURL(append = "") {
-    return `/sessions/${this.session}/societies/${this.id}` + append;
+    return `/episodes/${this.episode}/societies/${this.id}` + append;
   }
 }
 

@@ -1,9 +1,9 @@
 import { map } from "../../core/utils.js"
-import Session from "../../models/session.js";
+import Episode from "../../models/episode.js";
 
 export default function ResourceEdit({ resource }) {
-  const session = Session.load( resource.session );
-  const myCommunity = session.communities.find( c => c.resources.some( r => r.id === resource.id ) ); //yikes
+  const episode = Episode.load( resource.episode );
+  const myCommunity = episode.communities.find( c => c.resources.some( r => r.id === resource.id ) ); //yikes
 
   return `
     <form class="stack" hx-patch=${ resource.toURL() }>
@@ -13,7 +13,7 @@ export default function ResourceEdit({ resource }) {
       <input name="name" placeholder="New Resource" value="${ resource.name }"/>
       <label for="community_id">Community</label>
       <select name="community_id">
-      ${ map( session.societies, society => {
+      ${ map( episode.societies, society => {
         return `
           <optgroup label="${ society.name }">
             ${ map( society.communities, community => `<option value="${ community.id }" ${ community.id === myCommunity.id && "selected" }>${community.name}</option>`) }

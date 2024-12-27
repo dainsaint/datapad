@@ -1,7 +1,7 @@
 import Tags from "../core/tags.js";
-import SessionModel from "./session-model.js";
+import EpisodeModel from "./episode-model.js";
 
-export default class Community extends SessionModel {
+export default class Community extends EpisodeModel {
   name;
   voice;
   resources = [];
@@ -32,7 +32,7 @@ export default class Community extends SessionModel {
   }
 
   toURL(append = "") {
-    return `/sessions/${this.session}/communities/${this.id}` + append;
+    return `/episodes/${this.episode}/communities/${this.id}` + append;
   }
 }
 

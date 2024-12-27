@@ -1,7 +1,7 @@
 import getPort, { portNumbers } from "get-port";
-import Server from "./app/server.js";
-import registry from "./app/core/registry.js";
-import { populateDummyData } from "./app/populate.js";
+import Server from "./app/app.js";
+import registry from "./app/database/registry.js";
+import { populateDummyData } from "./app/database/populate.js";
 
 registry.initialize();
 // populateDummyData();

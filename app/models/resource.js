@@ -1,7 +1,7 @@
 import Tags from "../core/tags.js";
-import SessionModel from "./session-model.js";
+import EpisodeModel from "./episode-model.js";
 
-export default class Resource extends SessionModel {
+export default class Resource extends EpisodeModel {
   name = "";
   relationship = "";
   tags = new Tags();
@@ -16,7 +16,7 @@ export default class Resource extends SessionModel {
   }
 
   toURL(append = "") {
-    return `/sessions/${this.session}/resources/${this.id}` + append;
+    return `/episodes/${this.episode}/resources/${this.id}` + append;
   }
 }
 

@@ -1,8 +1,8 @@
 import { DateTime, Duration, Interval } from "luxon";
 import Tags from "../core/tags.js";
-import SessionModel from "./session-model.js";
+import EpisodeModel from "./episode-model.js";
 
-export default class Phase extends SessionModel {
+export default class Phase extends EpisodeModel {
   
   name = "New Phase"
   status = PhaseStatus.IDLE;
@@ -48,7 +48,7 @@ export default class Phase extends SessionModel {
   }
 
   toURL(append = "") {
-    return `/sessions/${this.session}/phases/${this.id}` + append;
+    return `/episodes/${this.episode}/phases/${this.id}` + append;
   }
 }
 

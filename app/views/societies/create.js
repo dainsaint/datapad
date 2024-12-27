@@ -1,13 +1,13 @@
-import Session from "../../models/session.js";
+import Episode from "../../models/episode.js";
 
-//figure out the society/session jawn here...
-export default function SocietyCreate({ session = new Session()} = {}) {
+//figure out the society/episode jawn here...
+export default function SocietyCreate({ episode = new Episode()} = {}) {
   return `
     <h1>Create a new society</h1>
     <p class="text">Enter a name for this new society, and select its archetype.</p>
 
-    <form class="stack" hx-post="${ session.toURL('/societies') }" hx-swap="none">
-      <input type="hidden" name="session_id" value="${session.id}"/>
+    <form class="stack" hx-post="${ episode.toURL('/societies') }" hx-swap="none">
+      <input type="hidden" name="session_id" value="${episode.id}"/>
 
       <label for="name">Society Name</label>
       <input autofocus name="name" placeholder="e.g. Ten Thousand Islands" />

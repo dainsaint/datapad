@@ -1,16 +1,16 @@
 import { map } from "../../core/utils.js"
 
-export default function ResourceCreate({ session }) {
+export default function ResourceCreate({ episode }) {
 
   return `
-    <form class="stack" hx-post=${ session.toURL("/resources") }>
+    <form class="stack" hx-post=${ episode.toURL("/resources") }>
       <h1>Create a new resource</h1>
       <p class="text">Enter a name for this resource</p>
       <label for="name">Name</label>
       <input autofocus name="name" placeholder="New Resource" />
       <label for="community_id">Community</label>
       <select name="community_id">
-      ${ map( session.societies, society => {
+      ${ map( episode.societies, society => {
         return `
           <optgroup label="${ society.name }">
             ${ map( society.communities, community => `<option value="${ community.id }">${community.name}</option>`) }

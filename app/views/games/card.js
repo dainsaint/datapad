@@ -10,7 +10,7 @@ export default function GameCard ({ game }) {
       hx-trigger="every 5s"
     >
       <h2>${game.name}</h2>
-      ${game.sessions.length} ${pluralize(game.sessions.length, "session")}
+      ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}
     </a>
   `;
 }

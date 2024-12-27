@@ -1,21 +1,21 @@
-import Datastore from "../core/datastore.js";
+import Datastore from "../database/datastore.js";
 
 const datastore = new Datastore();
 const filename = "ledger.json";
 
 /*
 - [ ] Index players?
-- [ ] Cleanup references to sessions that no longer exist (on start?)
+- [ ] Cleanup references to episodes that no longer exist (on start?)
 */
 
 class LedgerSingleton {
   games = [];
-  sessions = [];
+  episodes = [];
   players = [];
   active = [];
 
   initialize() {
-    const file = { games: [], sessions: [], players: [], active: [] };
+    const file = { games: [], episodes: [], players: [], active: [] };
 
     try {
       const fromDisk = datastore.load(filename);
@@ -37,16 +37,16 @@ class LedgerSingleton {
     datastore.save(filename, this);
   }
 
-  #getSessionRecord(session) {
+  #getSessionRecord(episode) {
     return {
-      id: session.id,
-      name: session.name,
-      date: session.date,
+      id: episode.id,
+      name: episode.name,
+      date: episode.date,
     };
   }
 
-  #getGameRecord(session) {
-    return session.game;
+  #getGameRecord(episode) {
+    return episode.game;
   }
 
   #updateRecord(key, record) {
@@ -70,22 +70,22 @@ class LedgerSingleton {
 
   getActiveSession() {
     //TODO: Fix this doofer
-    return this.sessions.at(0);
+    return this.episodes.at(0);
   }
 
-  //TODO: Make sure each game has a list of its sessions
-  updateSession(session) {
-    this.#updateRecord("sessions", this.#getSessionRecord(session));
-    this.#updateRecord("games", this.#getGameRecord(session));
+  //TODO: Make sure each game has a list of its episodes
+  updateSession(episode) {
+    this.#updateRecord("episodes", this.#getSessionRecord(episode));
+    this.#updateRecord("games", this.#getGameRecord(episode));
 
-    session.players.forEach((player) => {
+    episode.players.forEach((player) => {
       this.#updateRecord("players", player);
     });
 
-    if (session.isActive() && !this.active.includes(session)) {
-      this.active.push(session);
-    } else if (!session.isActive() && this.active.includes(session)) {
-      this.active.splice(this.active.indexOf(session), 1);
+    if (episode.isActive() && !this.active.includes(episode)) {
+      this.active.push(episode);
+    } else if (!episode.isActive() && this.active.includes(episode)) {
+      this.active.splice(this.active.indexOf(episode), 1);
     }
 
     this.#save();

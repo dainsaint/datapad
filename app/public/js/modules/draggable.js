@@ -19,7 +19,6 @@ export default function initDraggables() {
 
   // DROP
   const handleDrop = (event) => {
-    console.log( event )
     const query = event.srcElement.dataset.draggable || "[data-droppable]";
     const droppable = event.target.closest(query);
     if (!droppable) return;

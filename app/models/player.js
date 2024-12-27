@@ -1,7 +1,7 @@
 import Tags from "../core/tags.js";
-import SessionModel from "./session-model.js";
+import EpisodeModel from "./episode-model.js";
 
-export default class Player extends SessionModel {
+export default class Player extends EpisodeModel {
 
   name = "New Player"
   pronouns = ["they", "them"] 
@@ -14,7 +14,7 @@ export default class Player extends SessionModel {
   }
 
   toURL(append = "") {
-    return `/sessions/${this.session}/phases/${this.id}` + append;
+    return `/episodes/${this.episode}/phases/${this.id}` + append;
   }
 
 }

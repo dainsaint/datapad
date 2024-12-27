@@ -1,11 +1,11 @@
-import Model from "../core/model.js";
+import Model from "./model.js";
 import Tags from "../core/tags.js";
 
 export default class Game extends Model {
 
   name = "New Game"
   tags = new Tags() 
-  sessions = []
+  episodes = []
 
   constructor({ name = "New Game" }) {
     super();
@@ -13,7 +13,7 @@ export default class Game extends Model {
   }
 
   addSession({id, name, date}) {
-    this.sessions.push({id, name, date})
+    this.episodes.push({id, name, date})
   }
 
   toURL(append = "") {

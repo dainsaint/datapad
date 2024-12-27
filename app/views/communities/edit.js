@@ -1,9 +1,9 @@
 import { attr, map } from "../../core/utils.js";
-import Session from "../../models/session.js";
+import Episode from "../../models/episode.js";
 
 export default function CommunityCreate({ community }) {
-  const session = Session.load(community.session);
-  const mySociety = session.societies.find( s => s.getCommunityById( community.id ));
+  const episode = Episode.load(community.episode);
+  const mySociety = episode.societies.find( s => s.getCommunityById( community.id ));
   return `
     <form class="stack" hx-patch="${ community.toURL() }">
       <h1>Edit a community</h1>
@@ -12,7 +12,7 @@ export default function CommunityCreate({ community }) {
       <input autofocus name="name" placeholder="New Community" value="${ community.name }"/>
       <label for="society_id">Society</label>
       <select name="society_id">
-        ${ map( session.societies, society => `<option value="${society.id}" ${ attr("selected", society.id === mySociety.id) }>${society.name}</option>` ) }
+        ${ map( episode.societies, society => `<option value="${society.id}" ${ attr("selected", society.id === mySociety.id) }>${society.name}</option>` ) }
       </select>
 
       <label for="voice">Voice</label>
