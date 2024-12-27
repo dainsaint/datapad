@@ -7,7 +7,7 @@ export default function SessionCreate({ session = new Session() } = {}) {
   
   return `
     <form hx-post="${session.toURL()}" class="stack">
-      <h1>New Session</h1>
+      <h1>New Session (borked)</h1>
       <label for="name">Session Name</label>
       <input name="name" type="text"/>
 
