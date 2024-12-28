@@ -31,10 +31,13 @@ episodes.post("/episodes", (req, res) => {
 ////////////////////////////////////////
 
 episodes.get("/episodes/:id/:view?", (req, res) => {
-  const { id, view = "gm" } = req.params;
+  const { id, view } = req.params;
   const episode = Episode.load(id);
 
-  res.render(`episodes/${view}`, { episode, layout: "app" });
+  if(!view)
+    res.redirect(`/episodes/${id}/gm`)
+  else
+    res.render(`episodes/${view}`, { episode, layout: "app" });
 });
 
 export default episodes;
