@@ -7,7 +7,7 @@ export default function SocietyCreate({ episode = new Episode()} = {}) {
     <p class="text">Enter a name for this new society, and select its archetype.</p>
 
     <form class="stack" hx-post="${ episode.toURL('/societies') }" hx-swap="none">
-      <input type="hidden" name="session_id" value="${episode.id}"/>
+      <input type="hidden" name="episode_id" value="${episode.id}"/>
 
       <label for="name">Society Name</label>
       <input autofocus name="name" placeholder="e.g. Ten Thousand Islands" />

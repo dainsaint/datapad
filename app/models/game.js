@@ -12,7 +12,7 @@ export default class Game extends Model {
     Object.assign(this, {name});
   }
 
-  addSession({id, name, date}) {
+  addEpisode({id, name, date}) {
     this.episodes.push({id, name, date})
   }
 

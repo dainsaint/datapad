@@ -64,17 +64,17 @@ export default class Episode extends Model {
   }
 
   makeActive() {
-    this.tags.add(SessionTags.ACTIVE);
+    this.tags.add(EpisodeTags.ACTIVE);
   }
 
   isActive() {
-    return this.tags.has(SessionTags.ACTIVE);
+    return this.tags.has(EpisodeTags.ACTIVE);
   }
 
   save() {
     const filename = datastore.getFilename({ type: "Episode", id: this.id});
     datastore.save(filename, this);
-    Ledger.updateSession(this);
+    Ledger.updateEpisode(this);
   }
 
   toURL(append = "") {
@@ -102,7 +102,7 @@ export class EpisodeModel extends Model {
   }
 }
 
-export const SessionTags = {
+export const EpisodeTags = {
   ACTIVE: "active",
   COMPLETE: "complete",
 };

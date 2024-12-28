@@ -25,20 +25,20 @@ jsonRouter.get("/episodes/:id", (req, res) => {
 
 //TODO: These requests should be scoped to either a specific society, or the active society (if one exists)
 jsonRouter.get("/communities", (req, res) => {
-  const activeSession = Ledger.getActiveSession();
-  const communities = activeSession?.communities || [];
+  const activeEpisode = Ledger.getActiveEpisode();
+  const communities = activeEpisode?.communities || [];
   res.send(communities);
 });
 
 jsonRouter.get("/players", (req, res) => {
-  const activeSession = Ledger.getActiveSession();
-  const players = activeSession?.players || [];
+  const activeEpisode = Ledger.getActiveEpisode();
+  const players = activeEpisode?.players || [];
   res.send(players);
 });
 
 jsonRouter.get("/societies", (req, res) => {
-  const activeSession = Ledger.getActiveSession();
-  const societies = activeSession?.societies || [];
+  const activeEpisode = Ledger.getActiveEpisode();
+  const societies = activeEpisode?.societies || [];
   res.send(societies);
 });
 

@@ -37,7 +37,7 @@ class LedgerSingleton {
     datastore.save(filename, this);
   }
 
-  #getSessionRecord(episode) {
+  #getEpisodeRecord(episode) {
     return {
       id: episode.id,
       name: episode.name,
@@ -68,14 +68,14 @@ class LedgerSingleton {
   getGameById = this.#getById("games");
   getPlayerById = this.#getById("players");
 
-  getActiveSession() {
+  getActiveEpisode() {
     //TODO: Fix this doofer
     return this.episodes.at(0);
   }
 
   //TODO: Make sure each game has a list of its episodes
-  updateSession(episode) {
-    this.#updateRecord("episodes", this.#getSessionRecord(episode));
+  updateEpisode(episode) {
+    this.#updateRecord("episodes", this.#getEpisodeRecord(episode));
     this.#updateRecord("games", this.#getGameRecord(episode));
 
     episode.players.forEach((player) => {
