@@ -71,9 +71,9 @@
             },
             {
               "_type": "Resource",
-              "id": "YdMRPTR2",
+              "id": "bcg9wyz1",
               "episode": "FpGA5osK",
-              "name": "Big Rock",
+              "name": "Amazing Suspenders",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -95,9 +95,9 @@
           "resources": [
             {
               "_type": "Resource",
-              "id": "bcg9wyz1",
+              "id": "YdMRPTR2",
               "episode": "FpGA5osK",
-              "name": "Amazing Suspenders",
+              "name": "Big Rock",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -105,6 +105,18 @@
               }
             }
           ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "w6tDokkN",
+          "episode": "FpGA5osK",
+          "name": "My Guys",
+          "voice": "people",
+          "resources": [],
           "tags": {
             "_type": "Tags",
             "value": []
@@ -120,7 +132,7 @@
           "status": "paused",
           "round": 0,
           "duration": 1200,
-          "timeElapsed": 15.021999999999998,
+          "timeElapsed": 24.031,
           "tags": {
             "_type": "Tags",
             "value": []
@@ -132,8 +144,8 @@
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:13:09.251-05:00",
-            "e": "2024-12-27T16:33:09.251-05:00",
+            "s": "2024-12-28T10:25:46.211-05:00",
+            "e": "2024-12-28T10:45:46.211-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -661,9 +673,9 @@
                 },
                 {
                   "_type": "Resource",
-                  "id": "YdMRPTR2",
+                  "id": "bcg9wyz1",
                   "episode": "FpGA5osK",
-                  "name": "Big Rock",
+                  "name": "Amazing Suspenders",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
@@ -685,9 +697,9 @@
               "resources": [
                 {
                   "_type": "Resource",
-                  "id": "bcg9wyz1",
+                  "id": "YdMRPTR2",
                   "episode": "FpGA5osK",
-                  "name": "Amazing Suspenders",
+                  "name": "Big Rock",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
@@ -709,7 +721,20 @@
           "name": "The Unfriendly Woods",
           "archetype": "the mighty",
           "planet": "Earth",
-          "communities": []
+          "communities": [
+            {
+              "_type": "Community",
+              "id": "w6tDokkN",
+              "episode": "FpGA5osK",
+              "name": "My Guys",
+              "voice": "people",
+              "resources": [],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ]
         }
       ],
       "tags": {

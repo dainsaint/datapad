@@ -4,21 +4,14 @@ import Episode from "../../models/episode.js";
 const episodes = express.Router();
 
 /*
-- [ ] GET     /episodes/create;
-- [ ] GET     /episodes/:episode/gm;
-- [ ] GET     /episodes/:episode/facilitator;
-- [ ] GET     /episodes/:episode/showrunner;
-- [ ] GET     /episodes/:episode/script;
+- [ ] GET     /episodes
+- [x] GET     /episodes/create
+- [~] POST    /episodes/create
+- [x] GET     /episodes/:id/view?
 */
 
-episodes.get("/episodes", (req, res) => {
-  try {
-    const { view = "create" } = req.query;
-
-    res.render(`episodes/${view}`, { layout: "none" });
-  } catch (e) {
-    res.status(404).send(e.toString());
-  }
+episodes.get("/episodes/create", (req, res) => {
+  res.render(`episodes/create`, { layout: "none" });
 });
 
 episodes.post("/episodes", (req, res) => {
@@ -33,17 +26,15 @@ episodes.post("/episodes", (req, res) => {
   }
 })
 
+////////////////////////////////////////
+// INDIVIDUAL ROUTES
+////////////////////////////////////////
 
-episodes.get("/episodes/:id", (req, res) => {
-  try {
-    const { id } = req.params;
-    const { view = "gm" } = req.query;
-    const episode = Episode.load(id);
+episodes.get("/episodes/:id/:view?", (req, res) => {
+  const { id, view = "gm" } = req.params;
+  const episode = Episode.load(id);
 
-    res.render(`episodes/${view}`, { episode, layout: "app" });
-  } catch (e) {
-    res.status(404).send(e.toString());
-  }
+  res.render(`episodes/${view}`, { episode, layout: "app" });
 });
 
 export default episodes;

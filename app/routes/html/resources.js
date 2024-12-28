@@ -52,15 +52,33 @@ resources.post("/episodes/:id/resources", (req, res, next) => {
 });
 
 
-resources.get("/episodes/:id/resources/:resource_id", (req, res, next) => {
+
+resources.get("/episodes/:id/resources/create", (req, res, next) => {
+  const { id } = req.params;
+  const { society } = req.query;
+
+  const episode = Episode.load(id);
+
+  res.render(`resources/create`, { episode, society, layout: "none" });
+});
+
+
+
+////////////////////////////////////////
+// INDIVIDUAL ROUTES
+////////////////////////////////////////
+
+
+
+
+resources.get("/episodes/:id/resources/:resource_id/:view?", (req, res, next) => {
   try {
-    const { id, resource_id } = req.params;
-    const { view = "card", layout = "none" } = req.query;  
+    const { id, resource_id, view = "card" } = req.params;
 
     const episode = Episode.load(id);
     const resource = episode.getResourceById(resource_id);
 
-    res.render(`resources/${view}`, { resource, layout });
+    res.render(`resources/${view}`, { resource, layout: "none" });
   } catch (e) {
     res.status(400).send(e);
   }

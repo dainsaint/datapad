@@ -35,7 +35,7 @@ export default function SessionGameMaster ({ episode = new Episode() } = {}) {
         ${SocietyList({ episode })}
 
         <form 
-          hx-get="${ episode.toURL('/societies?view=create') }"
+          hx-get="${ episode.toURL('/societies/create') }"
           hx-target="#dialog"
           >
           <button>+ Create a new society</button>

@@ -351,11 +351,11 @@ body {
 }
 
 .app-content {
-  transition: all .2s ease-out;
+  transition: all .2s ease-in-out;
 }
 
 .app-content:has(dialog[open]) {
-  scale: .99; 
+  scale: .98; 
   border-radius: 20px; 
   overflow: hidden;
   filter: blur(3px);
@@ -366,3 +366,16 @@ body {
   max-height: 100%;
   overflow-y: scroll;
 }
+
+
+/* body {
+  background: white;
+}
+
+.app-content {
+  background: none;
+  background: url("/images/bg.jpg") top left no-repeat;
+  backdrop-filter: blur(10px) brightness(30%);
+  color: white;
+  text-shadow: 0 0 20px #fff;
+} */

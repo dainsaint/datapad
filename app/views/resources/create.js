@@ -1,7 +1,7 @@
 import { map } from "../../core/utils.js"
 
-export default function ResourceCreate({ episode }) {
-
+export default function ResourceCreate({ episode, society }) {
+  const current = society;
   return `
     <form class="stack" hx-post=${ episode.toURL("/resources") }>
       <h1>Create a new resource</h1>
@@ -9,11 +9,12 @@ export default function ResourceCreate({ episode }) {
       <label for="name">Name</label>
       <input autofocus name="name" placeholder="New Resource" />
       <label for="community_id">Community</label>
+
       <select name="community_id">
       ${ map( episode.societies, society => {
         return `
           <optgroup label="${ society.name }">
-            ${ map( society.communities, community => `<option value="${ community.id }">${community.name}</option>`) }
+            ${ map( society.communities, ( community, i ) => `<option value="${ community.id }" ${ current == society.id && i == 0 ? "selected" : ""}>${community.name}</option>`) }
           </optgroup>
         `
       } ) }

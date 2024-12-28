@@ -10,23 +10,17 @@ Games are implicitly created by episodes, so we dont need full CRUD here (right?
 - [ ] PUT    /games/:game
 */
 
-games.get("/games", (req, res, next) => {
-  const { view = "overview", layout = "none" } = req.query;
+games.get("/games/:view?", (req, res, next) => {
+  const { view = "overview" } = req.params;
   
   const games = Ledger.games;
-  res.render(`games/${view}`, {games, layout});
+  res.render(`games/${view}`, { games });
 });
 
-games.get("/games/:id", (req, res, next) => {
-  try {
-    const { id } = req.params;
-    const { view = "overview", layout = "none" } = req.query;
-
-    const game = Ledger.getGameById(id);
-    res.render(`games/${view}`, { game, layout });
-  } catch (e) {
-    next(e);
-  }
+games.get("/games/:id/:view?", (req, res, next) => {
+  const { id, view = "overview"} = req.params;
+  const game = Ledger.getGameById(id);
+  res.render(`games/${view}`, { game });
 });
 
 export default games;

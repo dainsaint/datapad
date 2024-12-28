@@ -11,18 +11,13 @@ const phases = express.Router();
 - [ ] DELETE  /episodes/:episode/phases/:phase;
 */
 
-phases.get("/episodes/:id/phases/:phase_id", (req, res, next) => {
-  try {
-    const { id, phase_id } = req.params;
-    const { view = "card", layout = "none" } = req.query;  
+phases.get("/episodes/:id/phases/:phase_id/:view?", (req, res, next) => {
+  const { id, phase_id, view = "card" } = req.params;
 
-    const episode = Episode.load(id);
-    const phase = episode.getPhaseById(phase_id);
+  const episode = Episode.load(id);
+  const phase = episode.getPhaseById(phase_id);
 
-    res.render(`phases/${view}`, { phase, layout });
-  } catch (e) {
-    res.status(400).send(e);
-  }
+  res.render(`phases/${view}`, { phase, layout: "none" });
 });
 
 phases.put("/episodes/:id/phases/:phase_id", (req, res, next) => {

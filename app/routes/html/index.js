@@ -8,7 +8,7 @@ import players from "./players.js";
 import resources from "./resources.js";
 import episodes from "./episodes.js";
 import societies from "./societies.js";
-import home from "./home.js";
+import pages from "./pages.js";
 
 const htmlRouter = express.Router();
 
@@ -20,7 +20,7 @@ htmlRouter.use("/", players);
 htmlRouter.use("/", resources);
 htmlRouter.use("/", episodes);
 htmlRouter.use("/", societies);
-htmlRouter.use("/", home);
+htmlRouter.use("/", pages);
 
 export default htmlRouter;
 export const tick = eventTick;

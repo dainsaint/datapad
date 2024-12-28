@@ -1,10 +1,10 @@
-import { map } from "../../core/utils.js";
-import Community from "../../models/community.js";
-import ResourceCard from "../resources/card.js";
+import { map } from "#core/utils";
+import Community from "#models/community";
+import ResourceCard from "#views/resources/card";
 
 export default function CommunityCard({ community = new Community() } = {}) {
   return `
-    <div hx-get="${ community.toURL('?view=card') }" hx-trigger="sse:resources, sse:societies">
+    <div hx-get="${ community.toURL('/card') }" hx-trigger="sse:resources, sse:societies">
       <form 
         id="community-card-${community.id}" 
         class="card stack droppable"
@@ -12,7 +12,7 @@ export default function CommunityCard({ community = new Community() } = {}) {
         hx-trigger="dropcomplete"
         data-droppable="[data-drop-target]">
         <header>
-          <h2><a hx-get="${ community.toURL('?view=edit') }" hx-target="#dialog" hx-trigger="click">${community.name}</a></h2>
+          <h2><a hx-get="${ community.toURL('/edit') }" hx-target="#dialog" hx-trigger="click">${community.name}</a></h2>
           <p class="subtitle">${community.voice}</h2>
         </header>
 

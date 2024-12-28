@@ -25,7 +25,7 @@ export default function SessionFacilitator ({ episode = new Episode() } = {}) {
 function SocietyToolbarLink(episode, society, isActive) {
   return `
     <li>
-      <a hx-boost="true" class="${isActive ? 'active' : ''}" href="${ episode.toURL('?view=facilitator&society=' + society.id) }">${Icon(iconForArchetype(society.archetype))}</a>
+      <a hx-boost="true" class="${isActive ? 'active' : ''}" href="${ episode.toURL('/facilitator?society=' + society.id) }">${Icon(iconForArchetype(society.archetype))}</a>
     </li>
   `;
 }
