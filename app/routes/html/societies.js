@@ -15,34 +15,34 @@ const societies = express.Router();
 - [~] DELETE  /episodes/:episode/societies/:society
 */
 
-societies.get("/episodes/:id/societies", (req, res, next) => {
-  const { id } = req.params;
-  const episode = Episode.load(id);
-  res.render(`societies/list`, { episode, layout: "none" })
+societies.get("/episodes/:episodeId/societies/:view?", (req, res, next) => {
+  const { episodeId, view = "list" } = req.params;
+  const episode = Episode.load(episodeId);
+  res.render(`societies/${view}`, { episode, layout: "none" })
 });
 
-societies.post("/episodes/:id/societies", (req, res, next) => {
-  const { id } = req.params;
+societies.post("/episodes/:episodeId/societies", (req, res, next) => {
+  const { episodeId } = req.params;
 
-  const episode = Episode.load(id);
+  const episode = Episode.load(episodeId);
   const society = new Society(req.body);
   episode.addSociety(society);
   episode.save();
 
   const currentUrl = req.get("hx-current-url");
   if (currentUrl) res.setHeader("HX-Location", currentUrl);
-  res.status(201)
-    .location( society.toURL() )
 
+  res.location(society.toURL());
+  res.sendStatus(201);
   // TODO: this should really return the url of the newly created resource...
   
   broadcast("societies");
 });
 
 
-societies.get("/episodes/:id/societies/create", (req, res, next) => {
-  const { id } = req.params;
-  const episode = Episode.load(id);
+societies.get("/episodes/:episodeId/societies/create", (req, res, next) => {
+  const { episodeId } = req.params;
+  const episode = Episode.load(episodeId);
   res.render(`societies/create`, { episode, layout: "none" });
 });
 
@@ -51,20 +51,20 @@ societies.get("/episodes/:id/societies/create", (req, res, next) => {
 // INDIVIDUAL ROUTES
 ////////////////////////////////////////
 
-societies.get("/episodes/:id/societies/:society_id/:view?", (req, res, next) => {
-  const { id, society_id, view = "panel" } = req.params;
+societies.get("/episodes/:episodeId/societies/:societyId/:view?", (req, res, next) => {
+  const { episodeId, societyId, view = "panel" } = req.params;
 
-  const episode = Episode.load(id);
-  const society = episode.getSocietyById(society_id);
+  const episode = Episode.load(episodeId);
+  const society = episode.getSocietyById(societyId);
 
   res.render(`societies/${view}`, { society, layout: "none" });
 });
 
-societies.put("/episodes/:id/societies/:society_id", (req, res, next) => {
-  const { id, society_id } = req.params;
+societies.put("/episodes/:episodeId/societies/:societyId", (req, res, next) => {
+  const { episodeId, societyId } = req.params;
 
-  const episode = Episode.load(id);
-  const society = episode.getSocietyById(society_id);
+  const episode = Episode.load(episodeId);
+  const society = episode.getSocietyById(societyId);
   society.update( req.body );
   episode.save();
 
@@ -77,14 +77,14 @@ societies.put("/episodes/:id/societies/:society_id", (req, res, next) => {
     
 //TODO: Determine what actual deletion logic we want, and how far it propagates
 //Like, does deleting a society delete all communities it had?
-// episode.removeSocietyById(society_id);
+// episode.removeSocietyById(societyId);
 
-societies.delete("/episodes/:id/societies/:society_id", (req, res) => {
-  const { id, society_id } = req.params;
+societies.delete("/episodes/:episodeId/societies/:societyId", (req, res) => {
+  const { episodeId, societyId } = req.params;
 
   try {
-    const episode = Episode.load(id);
-    const society = episode.getSocietyById(society_id);
+    const episode = Episode.load(episodeId);
+    const society = episode.getSocietyById(societyId);
 
     // society.communities.forEach( community => {
     //   community.resources.forEach( resource => 

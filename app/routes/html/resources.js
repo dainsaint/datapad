@@ -13,12 +13,12 @@ const resources = express.Router();
 */
 
 
-resources.get("/episodes/:id/resources", (req, res, next) => {
+resources.get("/episodes/:episodeId/resources", (req, res, next) => {
   try {
-    const { id } = req.params;
+    const { episodeId } = req.params;
     const { view = "list", layout = "none" } = req.query;
 
-    const episode = Episode.load(id);
+    const episode = Episode.load(episodeId);
 
     res.render(`resources/${view}`, { episode, layout });
   } catch (e) {
@@ -26,13 +26,13 @@ resources.get("/episodes/:id/resources", (req, res, next) => {
   }
 });
 
-resources.post("/episodes/:id/resources", (req, res, next) => {
+resources.post("/episodes/:episodeId/resources", (req, res, next) => {
   try {
-    const { id } = req.params;
-    const { community_id } = req.body;
+    const { episodeId } = req.params;
+    const { communityId } = req.body;
 
-    const episode = Episode.load(id);
-    const community = episode.getCommunityById( community_id );
+    const episode = Episode.load(episodeId);
+    const community = episode.getCommunityById( communityId );
     const resource = new Resource( req.body );
     
     community.addResource(resource);
@@ -53,11 +53,11 @@ resources.post("/episodes/:id/resources", (req, res, next) => {
 
 
 
-resources.get("/episodes/:id/resources/create", (req, res, next) => {
-  const { id } = req.params;
+resources.get("/episodes/:episodeId/resources/create", (req, res, next) => {
+  const { episodeId } = req.params;
   const { society } = req.query;
 
-  const episode = Episode.load(id);
+  const episode = Episode.load(episodeId);
 
   res.render(`resources/create`, { episode, society, layout: "none" });
 });
@@ -71,12 +71,12 @@ resources.get("/episodes/:id/resources/create", (req, res, next) => {
 
 
 
-resources.get("/episodes/:id/resources/:resource_id/:view?", (req, res, next) => {
+resources.get("/episodes/:episodeId/resources/:resourceId/:view?", (req, res, next) => {
   try {
-    const { id, resource_id, view = "card" } = req.params;
+    const { episodeId, resourceId, view = "card" } = req.params;
 
-    const episode = Episode.load(id);
-    const resource = episode.getResourceById(resource_id);
+    const episode = Episode.load(episodeId);
+    const resource = episode.getResourceById(resourceId);
 
     res.render(`resources/${view}`, { resource, layout: "none" });
   } catch (e) {
@@ -84,16 +84,16 @@ resources.get("/episodes/:id/resources/:resource_id/:view?", (req, res, next) =>
   }
 });
 
-resources.patch("/episodes/:id/resources/:resource_id", (req, res, next) => {
+resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) => {
   try {
-    const { id, resource_id } = req.params;
-    const { community_id } = req.body;
+    const { episodeId, resourceId } = req.params;
+    const { communityId } = req.body;
 
-    const episode = Episode.load(id);
-    const resource = episode.getResourceById(resource_id);
+    const episode = Episode.load(episodeId);
+    const resource = episode.getResourceById(resourceId);
 
-    const prevCommunity = episode.communities.find(community => community.getResourceById(resource_id));
-    const nextCommunity = episode.getCommunityById(community_id);
+    const prevCommunity = episode.communities.find(community => community.getResourceById(resourceId));
+    const nextCommunity = episode.getCommunityById(communityId);
 
     if( prevCommunity != nextCommunity ) {
       prevCommunity.removeResource( resource );

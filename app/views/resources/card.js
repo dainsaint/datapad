@@ -15,7 +15,7 @@ export default function ResourceCard({ resource = new Resource() } = {}) {
       data-tags="${resource.tags.toList()}" 
       >
       <h3>${resource.name}</h3>
-      <input type="hidden" name="resource_ids[]" value="${resource.id}"/>
+      <input type="hidden" name="resourceIds[]" value="${resource.id}"/>
     </a> 
   `;
 }

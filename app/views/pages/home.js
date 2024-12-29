@@ -21,7 +21,7 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
           </ul>
         </details>
 
-        <h2 hx-get="/episodes" hx-target="#dialog">New Episode</h2>
+        <h2 hx-get="/episodes/create" hx-target="#dialog">New Episode</h2>
         
         <details>
           <summary><h2>View Games</h2></summary>

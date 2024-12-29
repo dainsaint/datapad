@@ -11,8 +11,8 @@ export default function CommunityCreate({ episode, society }) {
       <label for="name">Name</label>
       <input autofocus name="name" placeholder="New Community" />
 
-      <label for="society_id">Society</label>
-      ${ Select({ name: "society_id", current: currentSociety, options: episode.societies }) }
+      <label for="societyId">Society</label>
+      ${ Select({ name: "societyId", current: currentSociety, options: episode.societies }) }
 
       <label for="voice">Voice</label>
       <select name="voice">

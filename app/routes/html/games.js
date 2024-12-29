@@ -18,7 +18,7 @@ games.get("/games/:view?", (req, res, next) => {
 });
 
 games.get("/games/:id/:view?", (req, res, next) => {
-  const { id, view = "overview"} = req.params;
+  const { episodeId, view = "overview"} = req.params;
   const game = Ledger.getGameById(id);
   res.render(`games/${view}`, { game });
 });

@@ -1,4 +1,5 @@
 import express from "express";
+import session from "express-session";
 import path from "node:path";
 import htmlRouter, {tick as htmlTick} from "./routes/html/index.js";
 import jsonRouter from "./routes/json.js";
@@ -56,6 +57,9 @@ export default class Server {
     app.set("views", "app/views");
     app.set("view engine", "js");
 
+    app.use(session({
+      secret: "burning holes"
+    }));
     app.use(express.json());
     app.use(express.urlencoded());
     app.use(express.static("app/public"));

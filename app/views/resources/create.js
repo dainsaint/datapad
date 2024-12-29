@@ -8,9 +8,9 @@ export default function ResourceCreate({ episode, society }) {
       <p class="text">Enter a name for this resource</p>
       <label for="name">Name</label>
       <input autofocus name="name" placeholder="New Resource" />
-      <label for="community_id">Community</label>
+      <label for="communityId">Community</label>
 
-      <select name="community_id">
+      <select name="communityId">
       ${ map( episode.societies, society => {
         return `
           <optgroup label="${ society.name }">
