@@ -23,6 +23,17 @@
       "resources": [
         {
           "_type": "Resource",
+          "id": "bcg9wyz1",
+          "episode": "FpGA5osK",
+          "name": "Amazing Suspenders",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
           "id": "pJ9BxtnV",
           "episode": "FpGA5osK",
           "name": "Green Sludge",
@@ -30,7 +41,8 @@
           "tags": {
             "_type": "Tags",
             "value": []
-          }
+          },
+          "communityId": "I0cY3CIh"
         }
       ],
       "tags": {
@@ -50,17 +62,6 @@
           "id": "YdMRPTR2",
           "episode": "FpGA5osK",
           "name": "Big Rock",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Resource",
-          "id": "bcg9wyz1",
-          "episode": "FpGA5osK",
-          "name": "Amazing Suspenders",
           "relationship": "",
           "tags": {
             "_type": "Tags",
@@ -582,7 +583,8 @@
       "tags": {
         "_type": "Tags",
         "value": []
-      }
+      },
+      "communityId": "I0cY3CIh"
     },
     {
       "_type": "Resource",
@@ -625,6 +627,17 @@
           "resources": [
             {
               "_type": "Resource",
+              "id": "bcg9wyz1",
+              "episode": "FpGA5osK",
+              "name": "Amazing Suspenders",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
               "id": "pJ9BxtnV",
               "episode": "FpGA5osK",
               "name": "Green Sludge",
@@ -632,7 +645,8 @@
               "tags": {
                 "_type": "Tags",
                 "value": []
-              }
+              },
+              "communityId": "I0cY3CIh"
             }
           ],
           "tags": {
@@ -652,17 +666,6 @@
               "id": "YdMRPTR2",
               "episode": "FpGA5osK",
               "name": "Big Rock",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            },
-            {
-              "_type": "Resource",
-              "id": "bcg9wyz1",
-              "episode": "FpGA5osK",
-              "name": "Amazing Suspenders",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
