@@ -31,17 +31,6 @@
             "_type": "Tags",
             "value": []
           }
-        },
-        {
-          "_type": "Resource",
-          "id": "bcg9wyz1",
-          "episode": "FpGA5osK",
-          "name": "Amazing Suspenders",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
         }
       ],
       "tags": {
@@ -61,6 +50,17 @@
           "id": "YdMRPTR2",
           "episode": "FpGA5osK",
           "name": "Big Rock",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "bcg9wyz1",
+          "episode": "FpGA5osK",
+          "name": "Amazing Suspenders",
           "relationship": "",
           "tags": {
             "_type": "Tags",
@@ -95,7 +95,7 @@
       "status": "paused",
       "round": 0,
       "duration": 1200,
-      "timeElapsed": 24.031,
+      "timeElapsed": 43.05099999999999,
       "tags": {
         "_type": "Tags",
         "value": []
@@ -107,8 +107,8 @@
         "isLuxonInterval": true
       },
       "actualTime": {
-        "s": "2024-12-28T10:25:46.211-05:00",
-        "e": "2024-12-28T10:45:46.211-05:00",
+        "s": "2024-12-29T13:00:50.776-05:00",
+        "e": "2024-12-29T13:20:50.776-05:00",
         "invalid": null,
         "isLuxonInterval": true
       }
@@ -633,17 +633,6 @@
                 "_type": "Tags",
                 "value": []
               }
-            },
-            {
-              "_type": "Resource",
-              "id": "bcg9wyz1",
-              "episode": "FpGA5osK",
-              "name": "Amazing Suspenders",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
             }
           ],
           "tags": {
@@ -663,6 +652,17 @@
               "id": "YdMRPTR2",
               "episode": "FpGA5osK",
               "name": "Big Rock",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "bcg9wyz1",
+              "episode": "FpGA5osK",
+              "name": "Amazing Suspenders",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -698,6 +698,42 @@
           }
         }
       ]
+    },
+    {
+      "_type": "Society",
+      "id": "cu19Rwl3",
+      "episode": "FpGA5osK",
+      "name": "The Broken Compass",
+      "archetype": "the intrepid",
+      "planet": "Earth",
+      "communities": []
+    },
+    {
+      "_type": "Society",
+      "id": "q_-pgTkU",
+      "episode": "FpGA5osK",
+      "name": "Hmm",
+      "archetype": "the aesthetic",
+      "planet": "Earth",
+      "communities": []
+    },
+    {
+      "_type": "Society",
+      "id": "sE2WAlfb",
+      "episode": "FpGA5osK",
+      "name": "Another",
+      "archetype": "the aesthetic",
+      "planet": "Earth",
+      "communities": []
+    },
+    {
+      "_type": "Society",
+      "id": "US-pwqj8",
+      "episode": "FpGA5osK",
+      "name": "let's go",
+      "archetype": "the aesthetic",
+      "planet": "Earth",
+      "communities": []
     }
   ],
   "tags": {

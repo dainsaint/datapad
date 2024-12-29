@@ -11,8 +11,8 @@ export default function ResourceEdit({ resource }) {
       <p class="text">Enter a name for this resource</p>
       <label for="name">Name</label>
       <input name="name" placeholder="New Resource" value="${ resource.name }"/>
-      <label for="community_id">Community</label>
-      <select name="community_id">
+      <label for="communityId">Community</label>
+      <select name="communityId">
       ${ map( episode.societies, society => {
         return `
           <optgroup label="${ society.name }">

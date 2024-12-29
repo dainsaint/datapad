@@ -17,9 +17,9 @@ jsonRouter.get("/episodes", (req, res) => {
   res.send(Ledger.episodes);
 });
 
-jsonRouter.get("/episodes/:id", (req, res) => {
-  const { id } = req.params;
-  const episode = Episode.load(id)
+jsonRouter.get("/episodes/:episodeId", (req, res) => {
+  const { episodeId } = req.params;
+  const episode = Episode.load(episodeId)
   res.send(episode);
 });
 

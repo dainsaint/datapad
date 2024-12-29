@@ -11,22 +11,22 @@ const phases = express.Router();
 - [ ] DELETE  /episodes/:episode/phases/:phase;
 */
 
-phases.get("/episodes/:id/phases/:phase_id/:view?", (req, res, next) => {
-  const { id, phase_id, view = "card" } = req.params;
+phases.get("/episodes/:episodeId/phases/:phaseId/:view?", (req, res, next) => {
+  const { episodeId, phaseId, view = "card" } = req.params;
 
-  const episode = Episode.load(id);
-  const phase = episode.getPhaseById(phase_id);
+  const episode = Episode.load(episodeId);
+  const phase = episode.getPhaseById(phaseId);
 
   res.render(`phases/${view}`, { phase, layout: "none" });
 });
 
-phases.put("/episodes/:id/phases/:phase_id", (req, res, next) => {
+phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   try {
-    const { id, phase_id } = req.params;
+    const { episodeId, phaseId } = req.params;
     const { action } = req.body;
 
-    const episode = Episode.load(id);
-    const phase = episode.getPhaseById(phase_id);
+    const episode = Episode.load(episodeId);
+    const phase = episode.getPhaseById(phaseId);
 
     //TODO: handle this logic better, with the mutability problem
     switch (action) {

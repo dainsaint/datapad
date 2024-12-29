@@ -10,8 +10,8 @@ export default function CommunityCreate({ community }) {
       <p class="text">Enter a name/archetype for this community</p>
       <label for="name">Name</label>
       <input autofocus name="name" placeholder="New Community" value="${ community.name }"/>
-      <label for="society_id">Society</label>
-      <select name="society_id">
+      <label for="societyId">Society</label>
+      <select name="societyId">
         ${ map( episode.societies, society => `<option value="${society.id}" ${ attr("selected", society.id === mySociety.id) }>${society.name}</option>` ) }
       </select>
 
