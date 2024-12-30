@@ -5,6 +5,7 @@ import htmlRouter, {tick as htmlTick} from "./routes/html/index.js";
 import jsonRouter from "./routes/json.js";
 import Timer from "./core/timer.js";
 import { fileURLToPath } from "node:url";
+import { loadRoutes } from "./router.js";
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -35,27 +36,29 @@ export default class Server {
   start(port) {
     const app = express();
 
-    app.engine("js", async(filePath, options, callback) => {
-      try {
-        const { layout = "app", ...data } = options;
-        const Template = await import(filePath);
-        const content = Template.default(data);
+    loadRoutes(app);
 
-        if( layout && layout !== "none" ) {
-          const layoutPath = path.join( __dirname, `views/layouts/${layout}.js`);
-          const Layout = await import(layoutPath);
-          const layoutRendered = Layout.default( content );
-          callback(null, layoutRendered);
-        } else {
-          callback(null, content);
-        }
-      } catch(e) {
-        callback(e);
-      }
-    })
+    // app.engine("js", async(filePath, options, callback) => {
+    //   try {
+    //     const { layout = "app", ...data } = options;
+    //     const Template = await import(filePath);
+    //     const content = Template.default(data);
 
-    app.set("views", "app/views");
-    app.set("view engine", "js");
+    //     if( layout && layout !== "none" ) {
+    //       const layoutPath = path.join( __dirname, `views/layouts/${layout}.js`);
+    //       const Layout = await import(layoutPath);
+    //       const layoutRendered = Layout.default( content );
+    //       callback(null, layoutRendered);
+    //     } else {
+    //       callback(null, content);
+    //     }
+    //   } catch(e) {
+    //     callback(e);
+    //   }
+    // })
+
+    // app.set("views", "app/views");
+    // app.set("view engine", "js");
 
     app.use(session({
       secret: "burning holes"
