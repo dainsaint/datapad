@@ -74,7 +74,7 @@ export default class Server {
     });
 
     app.use("/api/v1", jsonRouter);
-    app.use("/", htmlRouter);
+    // app.use("/", htmlRouter);
     app.use(errorHandler);
 
     app.listen(port, (error) => {

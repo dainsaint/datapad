@@ -1,5 +1,5 @@
 import { iconForArchetype, map } from "#core/utils";
-import SocietyPanel from "#views/societies/panel";
+import SocietyPanel from "../societies/[societyId]/index.js";
 import EpisodeLayout from "#views/episodes/parts/layout";
 import Icon from "#views/ui/icon";
 import Episode from "#models/episode";
@@ -10,16 +10,8 @@ export async function get(req, res) {
   const episode = Episode.load(episodeId);
 
   req.session.facilitator ??= {}  
-
-  if( !societyId && episode.societies.length ) {
-    req.session.facilitator.societyId ??= episode.societies.at(0)?.id;
-    res.redirect(
-      `/episodes/${episodeId}/facilitator/${req.session.facilitator.societyId}`
-    );
-  } else {
-    req.session.facilitator.societyId = societyId;
-    return { episode, societyId }
-  }
+  req.session.facilitator.societyId = societyId;
+  return { episode, societyId }
 };
 
 export default function EpisodeFacilitator ({ episode = new Episode(), societyId = undefined } = {}) {
@@ -35,7 +27,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
 
     ${SocietyPanel({society: currentSociety})} 
   `
-  return EpisodeLayout(episode, content);
+  return content;//EpisodeLayout(episode, content);
 }
 
 function SocietyToolbarLink(episode, society, isActive) {
@@ -45,5 +37,3 @@ function SocietyToolbarLink(episode, society, isActive) {
     </li>
   `;
 }
-
-// linkTo(society.id)

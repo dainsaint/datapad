@@ -7,9 +7,15 @@ export async function get(req) {
   return { episode }
 };
 
+function validate(body) {
+  return true;
+}
+
 export async function post(req) {
   const { episodeId } = req.params;
   const { societyId } = req.body;
+
+  validate(req.body);
 
   const episode = Episode.load(episodeId);
   const society = episode.getSocietyById(societyId);
@@ -18,12 +24,6 @@ export async function post(req) {
   society.addCommunity(community);
   episode.addCommunity(community);
   episode.save();
-  
+
   return { community };
-
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
-  res.sendStatus(201);
-
-  broadcast("resources");
-};
+}

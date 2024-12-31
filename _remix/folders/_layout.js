@@ -1,6 +1,4 @@
-export default function AppLayout({ content }) {
-  if (Array.isArray(content)) content = content.join("\n");
-
+export default function AppLayout(content) {
   return `
   <!DOCTYPE html>
   <html lang="en">

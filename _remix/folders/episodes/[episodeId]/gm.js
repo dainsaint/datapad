@@ -52,5 +52,5 @@ export default function EpisodeGameMaster ({ episode = new Episode() } = {}) {
     </main>
   `;
 
-  return EpisodeLayout( episode, content );
+  return content;
 }

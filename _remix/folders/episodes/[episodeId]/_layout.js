@@ -3,19 +3,19 @@ import Phase from "#models/phase";
 import PhaseTime from "#views/phases/time";
 import Icon from "#views/ui/icon";
 
-export default function EpisodeLayout({ episode, content }) {
+export default function EpisodeLayout(content) {
   return `
     <section class="layout-toolbar">
-      ${EpisodeToolbar({ episode })}
+      ${EpisodeToolbar({  })}
       <div class="layout-column">
-        ${EpisodeStatusBar({ episode })}
+        ${EpisodeStatusBar({  })}
         ${content}
       </div>
     </section>
   `;
 }
 
-export function EpisodeStatusBar ({ episode = new Episode() } = {}) {
+function EpisodeStatusBar ({ episode = new Episode() } = {}) {
   const activePhase = episode?.phases?.at( episode.currentRound ) || new Phase({ name: "No Phase", round: -1, duration: 0 })
 
   return `
@@ -26,12 +26,9 @@ export function EpisodeStatusBar ({ episode = new Episode() } = {}) {
   `;
 }
 
-export function EpisodeToolbar({ episode = new Episode() } = {}) {
+function EpisodeToolbar({ episode = new Episode() } = {}) {
   const getActiveClass = (href) => {
-    if( href != "/" && request.path.includes(href) )
-      return 'active'
-    else
-      return '';
+return '/';
   }
   return `
     <nav class="toolbar color-contrast" hx-boost="true" hx-push-url="true">
