@@ -1,11 +1,26 @@
 import fs from "fs/promises";
 import path from "path";
 
+const context = {
+  routePath: "/"
+};
+
+export function linkTo(url) {
+  if( url.startsWith("/") )
+    return url;
+
+  if( !url.startsWith('.') )
+    url = "../" + url;
+
+  return path.resolve(context.routePath, url);
+}
+
 export async function loadRoutes( app, dir = path.resolve("_remix/folders"), baseRoute = "/", parentLayout = (content) => content ) {
   const files = await fs.readdir(dir);
   files.reverse();
 
   const layoutFile = path.join(dir, "_layout.js");
+
   let currentLayout = parentLayout;
 
   try {
@@ -40,6 +55,7 @@ export async function loadRoutes( app, dir = path.resolve("_remix/folders"), bas
             const result = await handler(req, res, next);
 
             if (result !== undefined && handlers.default) {
+              context.routePath = req.path;
               const Component = handlers.default;
               const rendered = currentLayout( Component(result) );
               res.send(rendered);
@@ -51,6 +67,7 @@ export async function loadRoutes( app, dir = path.resolve("_remix/folders"), bas
       if (handlers.default && !handlers.get) {
         console.log("GET", routePath);
         app.get(routePath, async (req, res, next) => {
+          context.routePath = req.path;
           const Component = handlers.default;
           const rendered = currentLayout(Component({}));
           res.send(rendered);

@@ -1,3 +1,5 @@
+import Episode from "#models/episode";
+import societies from "#routes/html/societies";
 import Datastore from "../database/datastore.js";
 
 const datastore = new Datastore();
@@ -13,20 +15,27 @@ class LedgerSingleton {
   episodes = [];
   players = [];
   active = [];
+  index = {};
 
   initialize() {
-    const file = { games: [], episodes: [], players: [], active: [] };
+    const file = {
+      games: [],
+      episodes: [],
+      players: [],
+      active: [],
+      index: {},
+    };
 
     try {
       const fromDisk = datastore.load(filename);
       Object.assign(file, fromDisk);
     } catch (e) {
-      if( e.code !== "ENOENT" ) {
+      if (e.code !== "ENOENT") {
         //ENONENT means file doesnt exist, thats fine
         //(we'll create automatically on next save)
         //any other error, we should see
         console.log(e);
-      } 
+      }
     }
 
     Object.assign(this, file);
@@ -64,13 +73,45 @@ class LedgerSingleton {
     return (id) => this[key].find((element) => element.id === id);
   }
 
+  #getEpisodeByModelId(key) {
+    return (id) => {
+      const episodeId = this.getEpisodeIdFor(key, id);
+      return Episode.load(episodeId);
+    };
+  }
+
+  #indexEpisodeCollection(episodeId, collection, array) {
+    this.index[collection] ??= {};
+    this.index[collection][episodeId] = array.map((item) => item.id);
+  }
+
+  #indexEpisode(episode) {
+    const keys = ["communities", "phases", "players", "resources", "societies"];
+
+    for (const key of keys) {
+      this.#indexEpisodeCollection(episode.id, key, episode[key]);
+    }
+  }
+
   //PUBLIC METHODS
   getGameById = this.#getById("games");
   getPlayerById = this.#getById("players");
 
+  getEpisodeByCommunityId = this.#getEpisodeByModelId("communities");
+  getEpisodeByPhaseId = this.#getEpisodeByModelId("phases");
+  getEpisodeByPlayerId = this.#getEpisodeByModelId("players");
+  getEpisodeByResourceId = this.#getEpisodeByModelId("resources");
+  getEpisodeBySocietyId = this.#getEpisodeByModelId("societies");
+
   getActiveEpisode() {
     //TODO: Fix this doofer
     return this.episodes.at(0);
+  }
+
+  getEpisodeIdFor(collection, id) {
+    return Object.entries(this.index[collection])
+      .find(([episodeId, societyIds]) => societyIds.includes(id))
+      ?.at(0);
   }
 
   //TODO: Make sure each game has a list of its episodes
@@ -81,6 +122,8 @@ class LedgerSingleton {
     episode.players.forEach((player) => {
       this.#updateRecord("players", player);
     });
+
+    this.#indexEpisode(episode);
 
     if (episode.isActive() && !this.active.includes(episode)) {
       this.active.push(episode);

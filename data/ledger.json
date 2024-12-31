@@ -2,7 +2,17 @@
   "games": [
     {
       "_type": "Game",
-      "id": "CHElYh79",
+      "id": "e1gz1jzu",
+      "name": "John's House — Feb-Mar 2025",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      },
+      "episodes": []
+    },
+    {
+      "_type": "Game",
+      "id": "GFna0l3v",
       "name": "John's House — Feb-Mar 2025",
       "tags": {
         "_type": "Tags",
@@ -13,16 +23,35 @@
   ],
   "episodes": [
     {
-      "id": "FpGA5osK",
+      "id": "Z_nSvYly",
       "name": "A Sample Episode",
-      "date": "2024-12-27T16:08:44.553-05:00"
+      "date": "2024-12-31T15:35:47.625-05:00"
+    },
+    {
+      "id": "dZGPf9yV",
+      "name": "A Sample Episode",
+      "date": "2024-12-31T15:37:01.961-05:00"
     }
   ],
   "players": [
     {
       "_type": "Player",
-      "id": "uFt3G13V",
-      "episode": "FpGA5osK",
+      "id": "b1pRdtMp",
+      "episode": "Z_nSvYly",
+      "name": "Ving Rhames",
+      "pronouns": [
+        "they",
+        "them"
+      ],
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Player",
+      "id": "hkEOPqgw",
+      "episode": "dZGPf9yV",
       "name": "Ving Rhames",
       "pronouns": [
         "they",
@@ -37,12 +66,12 @@
   "active": [
     {
       "_type": "Episode",
-      "id": "FpGA5osK",
+      "id": "Z_nSvYly",
       "name": "A Sample Episode",
-      "date": "2024-12-27T16:08:44.553-05:00",
+      "date": "2024-12-31T15:35:47.625-05:00",
       "game": {
         "_type": "Game",
-        "id": "CHElYh79",
+        "id": "e1gz1jzu",
         "name": "John's House — Feb-Mar 2025",
         "tags": {
           "_type": "Tags",
@@ -53,15 +82,26 @@
       "communities": [
         {
           "_type": "Community",
-          "id": "I0cY3CIh",
-          "episode": "FpGA5osK",
+          "id": "htUoaEuF",
+          "episode": "Z_nSvYly",
           "name": "Venerable Elders",
           "voice": "leader",
           "resources": [
             {
               "_type": "Resource",
-              "id": "bcg9wyz1",
-              "episode": "FpGA5osK",
+              "id": "AyyViCwB",
+              "episode": "Z_nSvYly",
+              "name": "Green Sludge",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "TbDyoYJA",
+              "episode": "Z_nSvYly",
               "name": "Amazing Suspenders",
               "relationship": "",
               "tags": {
@@ -71,33 +111,8 @@
             },
             {
               "_type": "Resource",
-              "id": "pJ9BxtnV",
-              "episode": "FpGA5osK",
-              "name": "Green Sludge",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              },
-              "communityId": "I0cY3CIh"
-            }
-          ],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Community",
-          "id": "AQ7JGN2g",
-          "episode": "FpGA5osK",
-          "name": "Disaffected Youth",
-          "voice": "people",
-          "resources": [
-            {
-              "_type": "Resource",
-              "id": "YdMRPTR2",
-              "episode": "FpGA5osK",
+              "id": "JI48wMvg",
+              "episode": "Z_nSvYly",
               "name": "Big Rock",
               "relationship": "",
               "tags": {
@@ -113,9 +128,9 @@
         },
         {
           "_type": "Community",
-          "id": "w6tDokkN",
-          "episode": "FpGA5osK",
-          "name": "My Guys",
+          "id": "khutl5K4",
+          "episode": "Z_nSvYly",
+          "name": "Disaffected Youth",
           "voice": "people",
           "resources": [],
           "tags": {
@@ -127,34 +142,34 @@
       "phases": [
         {
           "_type": "Phase",
-          "id": "jd7uBlEg",
-          "episode": "FpGA5osK",
+          "id": "RezqalYq",
+          "episode": "Z_nSvYly",
           "name": "Global Phase",
-          "status": "paused",
+          "status": "idle",
           "round": 0,
           "duration": 1200,
-          "timeElapsed": 43.05099999999999,
+          "timeElapsed": 0,
           "tags": {
             "_type": "Tags",
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.568-05:00",
-            "e": "2024-12-27T16:08:44.568-05:00",
+            "s": "2024-12-31T15:35:47.639-05:00",
+            "e": "2024-12-31T15:35:47.639-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-29T13:00:50.776-05:00",
-            "e": "2024-12-29T13:20:50.776-05:00",
+            "s": "2024-12-31T15:35:47.639-05:00",
+            "e": "2024-12-31T15:35:47.639-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "KwGJ9xng",
-          "episode": "FpGA5osK",
+          "id": "HhPaBn-r",
+          "episode": "Z_nSvYly",
           "name": "Universal Phase",
           "status": "idle",
           "round": 0,
@@ -165,22 +180,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.568-05:00",
-            "e": "2024-12-27T16:08:44.568-05:00",
+            "s": "2024-12-31T15:35:47.639-05:00",
+            "e": "2024-12-31T15:35:47.639-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.568-05:00",
-            "e": "2024-12-27T16:08:44.568-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "txylUQEa",
-          "episode": "FpGA5osK",
+          "id": "a9Rg2ISS",
+          "episode": "Z_nSvYly",
           "name": "Societal Phase",
           "status": "idle",
           "round": 0,
@@ -191,22 +206,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.568-05:00",
-            "e": "2024-12-27T16:08:44.568-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.568-05:00",
-            "e": "2024-12-27T16:08:44.568-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "N__53_97",
-          "episode": "FpGA5osK",
+          "id": "PKuAlYg-",
+          "episode": "Z_nSvYly",
           "name": "Galactic Phase",
           "status": "idle",
           "round": 0,
@@ -217,22 +232,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "fW08Gd9Q",
-          "episode": "FpGA5osK",
+          "id": "HZJ2qbt8",
+          "episode": "Z_nSvYly",
           "name": "Individual Phase",
           "status": "idle",
           "round": 0,
@@ -243,22 +258,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "I8i8N87d",
-          "episode": "FpGA5osK",
+          "id": "uNlOp5fr",
+          "episode": "Z_nSvYly",
           "name": "Universal Phase",
           "status": "idle",
           "round": 1,
@@ -269,22 +284,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "W6hv9FvZ",
-          "episode": "FpGA5osK",
+          "id": "Iw1r-bF5",
+          "episode": "Z_nSvYly",
           "name": "Societal Phase",
           "status": "idle",
           "round": 1,
@@ -295,22 +310,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "rjYXmCSK",
-          "episode": "FpGA5osK",
+          "id": "ecdj_bVE",
+          "episode": "Z_nSvYly",
           "name": "Galactic Phase",
           "status": "idle",
           "round": 1,
@@ -321,22 +336,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "M7Hw3vUK",
-          "episode": "FpGA5osK",
+          "id": "L21mPmGA",
+          "episode": "Z_nSvYly",
           "name": "Individual Phase",
           "status": "idle",
           "round": 1,
@@ -347,22 +362,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "N3wch4eS",
-          "episode": "FpGA5osK",
+          "id": "QWgtz3-V",
+          "episode": "Z_nSvYly",
           "name": "Universal Phase",
           "status": "idle",
           "round": 2,
@@ -373,22 +388,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "jR1r7lDb",
-          "episode": "FpGA5osK",
+          "id": "de1v9cGN",
+          "episode": "Z_nSvYly",
           "name": "Societal Phase",
           "status": "idle",
           "round": 2,
@@ -399,22 +414,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "KGmWr1ix",
-          "episode": "FpGA5osK",
+          "id": "CWwTqLXf",
+          "episode": "Z_nSvYly",
           "name": "Galactic Phase",
           "status": "idle",
           "round": 2,
@@ -425,22 +440,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "UgA9RVvX",
-          "episode": "FpGA5osK",
+          "id": "jLSOYmh7",
+          "episode": "Z_nSvYly",
           "name": "Individual Phase",
           "status": "idle",
           "round": 2,
@@ -451,22 +466,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "ofYzFaKe",
-          "episode": "FpGA5osK",
+          "id": "rxrF-CKK",
+          "episode": "Z_nSvYly",
           "name": "Universal Phase",
           "status": "idle",
           "round": 3,
@@ -477,22 +492,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "mkT5I_zA",
-          "episode": "FpGA5osK",
+          "id": "GuU4ZKj4",
+          "episode": "Z_nSvYly",
           "name": "Societal Phase",
           "status": "idle",
           "round": 3,
@@ -503,22 +518,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "RwGMjsQc",
-          "episode": "FpGA5osK",
+          "id": "NMKN64AC",
+          "episode": "Z_nSvYly",
           "name": "Galactic Phase",
           "status": "idle",
           "round": 3,
@@ -529,22 +544,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "CvIU5Dzh",
-          "episode": "FpGA5osK",
+          "id": "RrrJjikP",
+          "episode": "Z_nSvYly",
           "name": "Generational Phase",
           "status": "idle",
           "round": 3,
@@ -555,22 +570,22 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "iMK1jNb5",
-          "episode": "FpGA5osK",
+          "id": "hN2jQdNO",
+          "episode": "Z_nSvYly",
           "name": "Conclusion Phase",
           "status": "idle",
           "round": 3,
@@ -581,14 +596,14 @@
             "value": []
           },
           "scheduledTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           },
           "actualTime": {
-            "s": "2024-12-27T16:08:44.569-05:00",
-            "e": "2024-12-27T16:08:44.569-05:00",
+            "s": "2024-12-31T15:35:47.640-05:00",
+            "e": "2024-12-31T15:35:47.640-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -597,8 +612,8 @@
       "players": [
         {
           "_type": "Player",
-          "id": "uFt3G13V",
-          "episode": "FpGA5osK",
+          "id": "b1pRdtMp",
+          "episode": "Z_nSvYly",
           "name": "Ving Rhames",
           "pronouns": [
             "they",
@@ -613,20 +628,19 @@
       "resources": [
         {
           "_type": "Resource",
-          "id": "pJ9BxtnV",
-          "episode": "FpGA5osK",
+          "id": "AyyViCwB",
+          "episode": "Z_nSvYly",
           "name": "Green Sludge",
           "relationship": "",
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "communityId": "I0cY3CIh"
+          }
         },
         {
           "_type": "Resource",
-          "id": "bcg9wyz1",
-          "episode": "FpGA5osK",
+          "id": "TbDyoYJA",
+          "episode": "Z_nSvYly",
           "name": "Amazing Suspenders",
           "relationship": "",
           "tags": {
@@ -636,8 +650,8 @@
         },
         {
           "_type": "Resource",
-          "id": "YdMRPTR2",
-          "episode": "FpGA5osK",
+          "id": "JI48wMvg",
+          "episode": "Z_nSvYly",
           "name": "Big Rock",
           "relationship": "",
           "tags": {
@@ -649,23 +663,34 @@
       "societies": [
         {
           "_type": "Society",
-          "id": "DdScqQK_",
-          "episode": "FpGA5osK",
+          "id": "wN3AbL02",
+          "episode": "Z_nSvYly",
           "name": "Ten Thousand Islands",
-          "archetype": "the enterprise",
+          "archetype": "the curious",
           "planet": "Jorun",
           "communities": [
             {
               "_type": "Community",
-              "id": "I0cY3CIh",
-              "episode": "FpGA5osK",
+              "id": "htUoaEuF",
+              "episode": "Z_nSvYly",
               "name": "Venerable Elders",
               "voice": "leader",
               "resources": [
                 {
                   "_type": "Resource",
-                  "id": "bcg9wyz1",
-                  "episode": "FpGA5osK",
+                  "id": "AyyViCwB",
+                  "episode": "Z_nSvYly",
+                  "name": "Green Sludge",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "TbDyoYJA",
+                  "episode": "Z_nSvYly",
                   "name": "Amazing Suspenders",
                   "relationship": "",
                   "tags": {
@@ -675,33 +700,8 @@
                 },
                 {
                   "_type": "Resource",
-                  "id": "pJ9BxtnV",
-                  "episode": "FpGA5osK",
-                  "name": "Green Sludge",
-                  "relationship": "",
-                  "tags": {
-                    "_type": "Tags",
-                    "value": []
-                  },
-                  "communityId": "I0cY3CIh"
-                }
-              ],
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            },
-            {
-              "_type": "Community",
-              "id": "AQ7JGN2g",
-              "episode": "FpGA5osK",
-              "name": "Disaffected Youth",
-              "voice": "people",
-              "resources": [
-                {
-                  "_type": "Resource",
-                  "id": "YdMRPTR2",
-                  "episode": "FpGA5osK",
+                  "id": "JI48wMvg",
+                  "episode": "Z_nSvYly",
                   "name": "Big Rock",
                   "relationship": "",
                   "tags": {
@@ -714,22 +714,12 @@
                 "_type": "Tags",
                 "value": []
               }
-            }
-          ]
-        },
-        {
-          "_type": "Society",
-          "id": "Fc596rW8",
-          "episode": "FpGA5osK",
-          "name": "The Unfriendly Woods",
-          "archetype": "the mighty",
-          "planet": "Earth",
-          "communities": [
+            },
             {
               "_type": "Community",
-              "id": "w6tDokkN",
-              "episode": "FpGA5osK",
-              "name": "My Guys",
+              "id": "khutl5K4",
+              "episode": "Z_nSvYly",
+              "name": "Disaffected Youth",
               "voice": "people",
               "resources": [],
               "tags": {
@@ -738,42 +728,6 @@
               }
             }
           ]
-        },
-        {
-          "_type": "Society",
-          "id": "cu19Rwl3",
-          "episode": "FpGA5osK",
-          "name": "The Broken Compass",
-          "archetype": "the intrepid",
-          "planet": "Earth",
-          "communities": []
-        },
-        {
-          "_type": "Society",
-          "id": "q_-pgTkU",
-          "episode": "FpGA5osK",
-          "name": "Hmm",
-          "archetype": "the aesthetic",
-          "planet": "Earth",
-          "communities": []
-        },
-        {
-          "_type": "Society",
-          "id": "sE2WAlfb",
-          "episode": "FpGA5osK",
-          "name": "Another",
-          "archetype": "the aesthetic",
-          "planet": "Earth",
-          "communities": []
-        },
-        {
-          "_type": "Society",
-          "id": "US-pwqj8",
-          "episode": "FpGA5osK",
-          "name": "let's go",
-          "archetype": "the aesthetic",
-          "planet": "Earth",
-          "communities": []
         }
       ],
       "tags": {
@@ -783,11 +737,772 @@
         ]
       },
       "scheduledTime": {
-        "s": "2024-12-27T16:08:44.567-05:00",
-        "e": "2024-12-27T21:08:44.567-05:00",
+        "s": "2024-12-31T15:35:47.638-05:00",
+        "e": "2024-12-31T20:35:47.638-05:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      }
+    },
+    {
+      "_type": "Episode",
+      "id": "dZGPf9yV",
+      "name": "A Sample Episode",
+      "date": "2024-12-31T15:37:01.961-05:00",
+      "game": {
+        "_type": "Game",
+        "id": "GFna0l3v",
+        "name": "John's House — Feb-Mar 2025",
+        "tags": {
+          "_type": "Tags",
+          "value": []
+        },
+        "episodes": []
+      },
+      "communities": [
+        {
+          "_type": "Community",
+          "id": "S7ysoaOH",
+          "episode": "dZGPf9yV",
+          "name": "Venerable Elders",
+          "voice": "leader",
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "iTnc2HpK",
+              "episode": "dZGPf9yV",
+              "name": "Green Sludge",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "O19NA7Qo",
+              "episode": "dZGPf9yV",
+              "name": "Amazing Suspenders",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "Tj77XCbc",
+              "episode": "dZGPf9yV",
+              "name": "Big Rock",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "E5iToFgU",
+          "episode": "dZGPf9yV",
+          "name": "Disaffected Youth",
+          "voice": "people",
+          "resources": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
+      "phases": [
+        {
+          "_type": "Phase",
+          "id": "m92ruKgJ",
+          "episode": "dZGPf9yV",
+          "name": "Global Phase",
+          "status": "idle",
+          "round": 0,
+          "duration": 1200,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "kvMbvBlb",
+          "episode": "dZGPf9yV",
+          "name": "Universal Phase",
+          "status": "idle",
+          "round": 0,
+          "duration": 240,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "QJr_dIbU",
+          "episode": "dZGPf9yV",
+          "name": "Societal Phase",
+          "status": "idle",
+          "round": 0,
+          "duration": 600,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "OHeZ3rNo",
+          "episode": "dZGPf9yV",
+          "name": "Galactic Phase",
+          "status": "idle",
+          "round": 0,
+          "duration": 600,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "Rbd_ZphY",
+          "episode": "dZGPf9yV",
+          "name": "Individual Phase",
+          "status": "idle",
+          "round": 0,
+          "duration": 500,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "cj2hXJl9",
+          "episode": "dZGPf9yV",
+          "name": "Universal Phase",
+          "status": "idle",
+          "round": 1,
+          "duration": 240,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "YpE3bMml",
+          "episode": "dZGPf9yV",
+          "name": "Societal Phase",
+          "status": "idle",
+          "round": 1,
+          "duration": 600,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "rGHNY9au",
+          "episode": "dZGPf9yV",
+          "name": "Galactic Phase",
+          "status": "idle",
+          "round": 1,
+          "duration": 600,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "HFmG7GlW",
+          "episode": "dZGPf9yV",
+          "name": "Individual Phase",
+          "status": "idle",
+          "round": 1,
+          "duration": 500,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "vHNRDAZ1",
+          "episode": "dZGPf9yV",
+          "name": "Universal Phase",
+          "status": "idle",
+          "round": 2,
+          "duration": 240,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "GsGrKTbb",
+          "episode": "dZGPf9yV",
+          "name": "Societal Phase",
+          "status": "idle",
+          "round": 2,
+          "duration": 600,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "ehrYrvDx",
+          "episode": "dZGPf9yV",
+          "name": "Galactic Phase",
+          "status": "idle",
+          "round": 2,
+          "duration": 600,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "a0et55hP",
+          "episode": "dZGPf9yV",
+          "name": "Individual Phase",
+          "status": "idle",
+          "round": 2,
+          "duration": 500,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "XmAYNkA4",
+          "episode": "dZGPf9yV",
+          "name": "Universal Phase",
+          "status": "idle",
+          "round": 3,
+          "duration": 240,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "ddxqyfqM",
+          "episode": "dZGPf9yV",
+          "name": "Societal Phase",
+          "status": "idle",
+          "round": 3,
+          "duration": 600,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "kzWmU7WQ",
+          "episode": "dZGPf9yV",
+          "name": "Galactic Phase",
+          "status": "idle",
+          "round": 3,
+          "duration": 600,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "ftl9fM8o",
+          "episode": "dZGPf9yV",
+          "name": "Generational Phase",
+          "status": "idle",
+          "round": 3,
+          "duration": 500,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "tKdvvHNz",
+          "episode": "dZGPf9yV",
+          "name": "Conclusion Phase",
+          "status": "idle",
+          "round": 3,
+          "duration": 500,
+          "timeElapsed": 0,
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "scheduledTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "actualTime": {
+            "s": "2024-12-31T15:37:01.961-05:00",
+            "e": "2024-12-31T15:37:01.961-05:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          }
+        }
+      ],
+      "players": [
+        {
+          "_type": "Player",
+          "id": "hkEOPqgw",
+          "episode": "dZGPf9yV",
+          "name": "Ving Rhames",
+          "pronouns": [
+            "they",
+            "them"
+          ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "iTnc2HpK",
+          "episode": "dZGPf9yV",
+          "name": "Green Sludge",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "O19NA7Qo",
+          "episode": "dZGPf9yV",
+          "name": "Amazing Suspenders",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "Tj77XCbc",
+          "episode": "dZGPf9yV",
+          "name": "Big Rock",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
+      "societies": [
+        {
+          "_type": "Society",
+          "id": "RNNfEj3p",
+          "episode": "dZGPf9yV",
+          "name": "Ten Thousand Islands",
+          "archetype": "the curious",
+          "planet": "Jorun",
+          "communities": [
+            {
+              "_type": "Community",
+              "id": "S7ysoaOH",
+              "episode": "dZGPf9yV",
+              "name": "Venerable Elders",
+              "voice": "leader",
+              "resources": [
+                {
+                  "_type": "Resource",
+                  "id": "iTnc2HpK",
+                  "episode": "dZGPf9yV",
+                  "name": "Green Sludge",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "O19NA7Qo",
+                  "episode": "dZGPf9yV",
+                  "name": "Amazing Suspenders",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "Tj77XCbc",
+                  "episode": "dZGPf9yV",
+                  "name": "Big Rock",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                }
+              ],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Community",
+              "id": "E5iToFgU",
+              "episode": "dZGPf9yV",
+              "name": "Disaffected Youth",
+              "voice": "people",
+              "resources": [],
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "_type": "Tags",
+        "value": [
+          "active"
+        ]
+      },
+      "scheduledTime": {
+        "s": "2024-12-31T15:37:01.961-05:00",
+        "e": "2024-12-31T20:37:01.961-05:00",
         "invalid": null,
         "isLuxonInterval": true
       }
     }
-  ]
+  ],
+  "index": {
+    "communities": {
+      "Z_nSvYly": [
+        "htUoaEuF",
+        "khutl5K4"
+      ],
+      "dZGPf9yV": [
+        "S7ysoaOH",
+        "E5iToFgU"
+      ]
+    },
+    "phases": {
+      "Z_nSvYly": [
+        "RezqalYq",
+        "HhPaBn-r",
+        "a9Rg2ISS",
+        "PKuAlYg-",
+        "HZJ2qbt8",
+        "uNlOp5fr",
+        "Iw1r-bF5",
+        "ecdj_bVE",
+        "L21mPmGA",
+        "QWgtz3-V",
+        "de1v9cGN",
+        "CWwTqLXf",
+        "jLSOYmh7",
+        "rxrF-CKK",
+        "GuU4ZKj4",
+        "NMKN64AC",
+        "RrrJjikP",
+        "hN2jQdNO"
+      ],
+      "dZGPf9yV": [
+        "m92ruKgJ",
+        "kvMbvBlb",
+        "QJr_dIbU",
+        "OHeZ3rNo",
+        "Rbd_ZphY",
+        "cj2hXJl9",
+        "YpE3bMml",
+        "rGHNY9au",
+        "HFmG7GlW",
+        "vHNRDAZ1",
+        "GsGrKTbb",
+        "ehrYrvDx",
+        "a0et55hP",
+        "XmAYNkA4",
+        "ddxqyfqM",
+        "kzWmU7WQ",
+        "ftl9fM8o",
+        "tKdvvHNz"
+      ]
+    },
+    "players": {
+      "Z_nSvYly": [
+        "b1pRdtMp"
+      ],
+      "dZGPf9yV": [
+        "hkEOPqgw"
+      ]
+    },
+    "resources": {
+      "Z_nSvYly": [
+        "AyyViCwB",
+        "TbDyoYJA",
+        "JI48wMvg"
+      ],
+      "dZGPf9yV": [
+        "iTnc2HpK",
+        "O19NA7Qo",
+        "Tj77XCbc"
+      ]
+    },
+    "societies": {
+      "Z_nSvYly": [
+        "wN3AbL02"
+      ],
+      "dZGPf9yV": [
+        "RNNfEj3p"
+      ]
+    }
+  }
 }

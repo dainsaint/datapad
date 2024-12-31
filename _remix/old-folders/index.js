@@ -2,17 +2,15 @@ import { map, pluralize } from "#core/utils";
 import Ledger from "#models/ledger";
 import Icon from "#views/ui/icon";
 
-
 export async function get(req) {
   const games = Ledger.games;
   const episodes = Ledger.episodes;
 
   //TODO: Design the actual landing page: https://github.com/dainsaint/datapad/issues/39
   return { games, episodes };
-};
+}
 
-
-export default function Home ({ games = new Array(), episodes = new Array() }) {
+export default function Home({ games = new Array(), episodes = new Array() }) {
   return `
     <main id="home">
       <div class="top">
@@ -27,7 +25,9 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
           ${map(
             episodes,
             (episode) =>
-              `<li><a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a></li>`
+              `<li><a href="/episodes/${episode.id}">${
+                episode.name
+              } • ${episode.date.toISODate()}</a></li>`
           )}
           </ul>
         </details>
@@ -40,7 +40,9 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
           ${map(
             games,
             (game) =>
-              `<li><a href="${game.toURL()}">${game.name} • ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}</a></li>`
+              `<li><a href="${game.toURL()}">${game.name} • ${
+                game.episodes.length
+              } ${pluralize(game.episodes.length, "episode")}</a></li>`
           )}
           </ul>
         </details>  

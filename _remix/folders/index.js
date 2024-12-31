@@ -24,10 +24,7 @@ export default function Home({ games = new Array(), episodes = new Array() }) {
           <ul>
           ${map(
             episodes,
-            (episode) =>
-              `<li><a href="/episodes/${episode.id}">${
-                episode.name
-              } • ${episode.date.toISODate()}</a></li>`
+            (episode) => `<li><a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a></li>`
           )}
           </ul>
         </details>

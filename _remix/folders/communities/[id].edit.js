@@ -1,18 +1,8 @@
 import { attr, map } from "#core/utils";
 import Episode from "#models/episode";
+import { linkTo } from "../../../app/router.js";
 
-
-export const route = "/episodes/:eid/communities/:id/edit";
-
-export async function get(req) {
-  const { eid, id } = req.params;
-
-  const episode = Episode.load(eid);
-  const community = episode.getCommunityById(id);
-
-  return { community };
-}
-
+export { get } from "./[id].js";
 
 export default function CommunityEdit({ community }) {
   const episode = Episode.load(community.episode);
@@ -39,35 +29,4 @@ export default function CommunityEdit({ community }) {
       </div>
     </form>
   `;
-}
-
-
-export async function patch(req, res) {
-  const { community_id, id } = req.params;
-  const { society_id, resource_ids = [] } = req.body;
-
-  const episode = Episode.load(id);
-  const community = episode.getCommunityById(community_id);
-
-  //update resources
-  const resources = resource_ids.map(episode.getResourceById);
-  community.resources = resources;
-
-  //update societies (encapsulate!)
-  const prevSociety = episode.societies.find((society) =>
-    society.getCommunityById(community_id)
-  );
-  const nextSociety = episode.getSocietyById(society_id);
-
-  if (prevSociety && nextSociety && prevSociety != nextSociety) {
-    prevSociety.removeCommunity(community);
-    nextSociety.addCommunity(community);
-  }
-
-  episode.save();
-
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
-  res.sendStatus(200);
-  broadcast("resources");
 }
