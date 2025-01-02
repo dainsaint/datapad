@@ -20,6 +20,10 @@ export default class Community extends EpisodeModel {
     return this.resources.find((r) => r.id === id);
   }
 
+  hasResource(resource) {
+    return this.resources.includes(resource);
+  }
+
   addResource(resource) {
     this.resources.push(resource);
   }

@@ -1,6 +1,5 @@
 import Select from "#views/ui/select";
 import Episode from "#models/episode";
-import Community from "#models/community";
 
 export async function get(req) {
   const { episodeId } = req.params;

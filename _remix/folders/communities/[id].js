@@ -1,4 +1,3 @@
-import Episode from "#models/episode";
 import Ledger from "#models/ledger";
 
 export async function get(req) {
@@ -13,10 +12,10 @@ export async function get(req) {
 export async function patch(req, res) {
   validate(req.body);
 
-  const { id, eid } = req.params;
+  const { id } = req.params;
   const { societyId, resourceIds = [] } = req.body;
 
-  const episode = Episode.load(eid);
+  const episode = Ledger.getEpisodeByCommunityId(id);
   const community = episode.getCommunityById(id);
 
   //update resources

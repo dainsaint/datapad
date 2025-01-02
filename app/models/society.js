@@ -23,6 +23,10 @@ export default class Society extends EpisodeModel {
     this.communities.push(community);
   }
 
+  hasCommunity(community) {
+    return this.communities.includes( community );
+  }
+
   removeCommunity(community) {
     const index = this.communities.indexOf(community);
     if (index >= 0) {
