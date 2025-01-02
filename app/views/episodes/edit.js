@@ -27,16 +27,16 @@ export default function SessionEdit({ episode = new Episode() } = {}) {
       <div class="grid-two">
         <div>
           <label for="start">Scheduled Start</label>
-          <input name="scheduledTime.s" type="time" value="${ episode.scheduledTime.start?.toISOTime() }"/>
+          <input name="scheduledTime[s]" type="time" value="${ episode.scheduledTime.start?.toISOTime() }"/>
         </div>
 
         <div>
           <label for="end">Scheduled End</label>
-          <input name="scheduleTime.e" type="time" value="${ episode.scheduledTime.end?.toISOTime() }"/>
+          <input name="scheduleTime[e]" type="time" value="${ episode.scheduledTime.end?.toISOTime() }"/>
         </div>
       </div>
 
-      <input type="hidden" name="scheduledTime.isLuxonInterval" value="true"/>
+      <input type="hidden" name="scheduledTime[isLuxonInterval]" value="true"/>
 
       <li>Calendar date/time selectors for scheduled start and end</li>
       <li>game selector/editor (drop down on available games from the ledger)</li>

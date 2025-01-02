@@ -1,0 +1,32 @@
+{
+  "_type": "Episode",
+  "id": "LzOr_rGf",
+  "name": "New Episode",
+  "date": "2025-01-02T00:00:00.000-05:00",
+  "game": {},
+  "communities": [],
+  "phases": [],
+  "players": [],
+  "resources": [],
+  "societies": [
+    {
+      "_type": "Society",
+      "id": "yDVYv18n",
+      "episode": "LzOr_rGf",
+      "name": "Ten Thousand Islands",
+      "archetype": "the aesthetic",
+      "planet": "Earth",
+      "communities": []
+    }
+  ],
+  "tags": {
+    "_type": "Tags",
+    "value": []
+  },
+  "scheduledTime": {
+    "s": "2025-01-02T13:00:00.000-05:00",
+    "e": "2025-01-02T18:00:00.000-05:00",
+    "invalid": null,
+    "isLuxonInterval": true
+  }
+}

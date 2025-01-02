@@ -14,9 +14,18 @@ export default function SessionFacilitator ({ episode = new Episode(), societyId
         )}
       </ul>
     </nav>
-
-    ${SocietyPanel({society: currentSociety})} 
-  `
+      
+    ${
+      currentSociety
+        ? SocietyPanel({ society: currentSociety })
+        : `
+        <main class="content stack-loose">
+          <h1>No Societies Yet</h1>
+          <button hx-get="${episode.toURL("/societies/create")}" hx-target="#dialog">+ Create a new society</button>
+        </main>
+        `
+    } 
+  `;
   return SessionLayout(episode, content);
 }
 

@@ -1,5 +1,7 @@
 import express from "express";
+import { body, matchedData, validationResult } from "express-validator";
 import Episode from "../../models/episode.js";
+import { DateTime, Duration, Interval } from "luxon";
 
 const episodes = express.Router();
 
@@ -14,16 +16,31 @@ episodes.get("/episodes/create", (req, res) => {
   res.render(`episodes/create`, { layout: "none" });
 });
 
-episodes.post("/episodes", (req, res) => {
-  try {
-    const episode = new Episode(req.body);
-    //todo: validation
-    episode.save();
+episodes.post("/episodes",
+  
+  body("name").notEmpty(), 
+  body("date").customSanitizer( (date, meta) => {
+    const { time, duration } = meta.req.body;
+    const dateObject = DateTime.fromISO(date);
+    const start = dateObject.set( DateTime.fromISO(time).toObject() );
+    const scheduledTime = Interval.after(start, Duration.fromDurationLike(duration));
+    console.log(scheduledTime);
 
-    res.redirect( episode.toURL() );
-  } catch (e) {
-    res.status(404).send(e.toString());
-  }
+    meta.req.body.scheduledTime = scheduledTime;
+    return date;
+  }),
+  body("scheduledTime"),
+  
+  (req, res) => {
+    const result = validationResult(req);
+    if( !result.isEmpty() ) {
+      throw new Error( JSON.stringify( result.array(), null, 2 ) )
+    }
+
+    // const episode = new Episode(req.body);
+    // episode.save();
+
+    // res.redirect( episode.toURL() );
 })
 
 ////////////////////////////////////////
@@ -58,5 +75,29 @@ episodes.get("/episodes/:episodeId/:view?", (req, res) => {
   else
     res.render(`episodes/${view}`, { episode, layout: "app" });
 });
+
+
+function validate(req) {
+
+  const { name, game, date, time, duration } = req.body;
+
+  const start = DateTime.fromISO(date).set( DateTime.fromISO(time).toObject() );
+  const durationObject = /(?<hours>[^h])h (?<minutes>[^h])m/g.exec(duration)?.groups;
+
+  const scheduledTime = Interval.after(
+    start,
+    Duration.fromDurationLike( durationObject )
+  );
+
+  console.log(scheduledTime);
+
+  req.body.scheduledTime = scheduledTime;
+
+  throw new Error("validation off");
+
+  // return {
+  //   name, game, date: DateTime.fromISO(date), scheduledTime 
+  // };
+}
 
 export default episodes;

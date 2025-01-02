@@ -1,4 +1,4 @@
-import { map } from "../../core/utils.js";
+import { map, cx } from "../../core/utils.js";
 import Episode from "../../models/episode.js";
 import Society from "../../models/society.js";
 import CommunityCard from "../communities/card.js";
@@ -25,8 +25,9 @@ export default function SocietyPanel({ society = new Society()} = {}) {
       <div class="stack-tight">
         <h3>Actions (put these in a better place)</h3>
         <div class="layout-horizontal">
-          <button hx-get="${ episode.toURL(`/resources/create?society=${society.id}`) }" hx-target="#dialog">+ New Resource</button>
+          <button hx-get="${ episode.toURL(`/resources/create?society=${society.id}`) }" hx-target="#dialog" ${ cx({disabled: episode.communities.length == 0}) } >+ New Resource</button>
           <button hx-get="${ episode.toURL(`/communities/create?society=${society.id}`) }" hx-target="#dialog">+ New Community</button>
+          <button hx-get="${ episode.toURL('/societies/create') }" hx-target="#dialog">+ New Society</button>
         </div>
       </div>
     </main>

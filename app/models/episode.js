@@ -22,9 +22,9 @@ export default class Episode extends Model {
 
   static #episodes = new Map();
 
-  constructor({name = "", date = DateTime.now() } = {}){
+  constructor({name = "", date = DateTime.now(), scheduledTime = Interval.after(DateTime.now(), Duration.fromObject({hours: 5})) } = {}){
     super();
-    Object.assign(this, {name, date});
+    Object.assign(this, {name, date, scheduledTime});
   }
 
   get currentRound() {

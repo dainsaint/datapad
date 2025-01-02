@@ -58,8 +58,11 @@ export default class Server {
     app.set("view engine", "js");
 
     app.use(session({
-      secret: "burning holes"
+      secret: "burning holes",
+      resave: true,
+      saveUninitialized: true
     }));
+    
     app.use(express.json());
     app.use(express.urlencoded());
     app.use(express.static("app/public"));

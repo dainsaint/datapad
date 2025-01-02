@@ -54,7 +54,7 @@ class LedgerSingleton {
   }
 
   #getGameRecord(episode) {
-    return episode.game;
+    return episode.game || undefined;
   }
 
   #updateRecord(key, record) {

@@ -22,8 +22,31 @@ img, picture, video, canvas, svg {
 }
 
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input, button, textarea, select, input[type="date"], input[type="time"] {
   font: inherit;
+  line-height: normal;;
+}
+
+input::-webkit-datetime-edit {
+  display: block;
+  padding: 0;
+}
+
+input,
+textarea,
+select,
+input[type="date"],
+input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border-radius: 0px;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
 }
 
 /* 7. Avoid text overflows */
