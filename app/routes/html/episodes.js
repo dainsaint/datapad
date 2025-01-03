@@ -21,13 +21,14 @@ episodes.post("/episodes",
   body("name").notEmpty(), 
   body("date").customSanitizer( (date, meta) => {
     const { time, duration } = meta.req.body;
+    const { hour, minute } = DateTime.fromISO(time).toObject();
+    
     const dateObject = DateTime.fromISO(date);
-    const start = dateObject.set( DateTime.fromISO(time).toObject() );
+    const start = dateObject.set( { hour, minute } );
     const scheduledTime = Interval.after(start, Duration.fromDurationLike(duration));
-    console.log(scheduledTime);
 
     meta.req.body.scheduledTime = scheduledTime;
-    return date;
+    return dateObject;
   }),
   body("scheduledTime"),
   
@@ -37,10 +38,13 @@ episodes.post("/episodes",
       throw new Error( JSON.stringify( result.array(), null, 2 ) )
     }
 
-    // const episode = new Episode(req.body);
-    // episode.save();
+    const data = matchedData(req);
+    // console.log( data );
 
-    // res.redirect( episode.toURL() );
+    const episode = new Episode(data);
+    episode.save();
+
+    res.redirect( episode.toURL() );
 })
 
 ////////////////////////////////////////
@@ -76,28 +80,5 @@ episodes.get("/episodes/:episodeId/:view?", (req, res) => {
     res.render(`episodes/${view}`, { episode, layout: "app" });
 });
 
-
-function validate(req) {
-
-  const { name, game, date, time, duration } = req.body;
-
-  const start = DateTime.fromISO(date).set( DateTime.fromISO(time).toObject() );
-  const durationObject = /(?<hours>[^h])h (?<minutes>[^h])m/g.exec(duration)?.groups;
-
-  const scheduledTime = Interval.after(
-    start,
-    Duration.fromDurationLike( durationObject )
-  );
-
-  console.log(scheduledTime);
-
-  req.body.scheduledTime = scheduledTime;
-
-  throw new Error("validation off");
-
-  // return {
-  //   name, game, date: DateTime.fromISO(date), scheduledTime 
-  // };
-}
 
 export default episodes;

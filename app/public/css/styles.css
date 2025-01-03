@@ -301,14 +301,19 @@ button {
 
 dialog {
   display: none;
+
   opacity: 0;
   pointer-events: none;
   background: var(--color-bg);
-  width: 650px;
+  /* width: 650px; */
+  width: 100vw;
   border: none;
   /* margin-top: 1rem; */
-  translate: 0 calc( -100% - 2rem );
-  transition: translate .2s;
+  translate: 0 100%;
+  transition: translate .2s ease-in-out;
+  margin-block-end: 0;
+
+  /* height: 100vh; */
 
   &[open] {
     display: block;
@@ -355,7 +360,7 @@ dialog {
 body {
    background: black;
 }
-
+/* 
 .app-content {
   transition: all .2s ease-in-out;
 }
@@ -365,7 +370,7 @@ body {
   border-radius: 20px; 
   overflow: hidden;
   filter: blur(3px);
-}
+} */
 
 
 .scrollable {

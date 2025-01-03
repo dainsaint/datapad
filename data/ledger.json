@@ -9,8 +9,7 @@
         "value": []
       },
       "episodes": []
-    },
-    {}
+    }
   ],
   "episodes": [
     {
@@ -22,6 +21,11 @@
       "id": "LzOr_rGf",
       "name": "New Episode",
       "date": "2025-01-02T00:00:00.000-05:00"
+    },
+    {
+      "id": "IQLG8PYV",
+      "name": "My new episode",
+      "date": "2025-03-03T00:00:00.000-05:00"
     }
   ],
   "players": [
@@ -769,7 +773,8 @@
         "nce-aLZE",
         "dGJKx-lm"
       ],
-      "LzOr_rGf": []
+      "LzOr_rGf": [],
+      "IQLG8PYV": []
     },
     "phases": {
       "iYi1c0yR": [
@@ -792,13 +797,15 @@
         "gYr07GK6",
         "PqvXBNsI"
       ],
-      "LzOr_rGf": []
+      "LzOr_rGf": [],
+      "IQLG8PYV": []
     },
     "players": {
       "iYi1c0yR": [
         "s-tdMsuP"
       ],
-      "LzOr_rGf": []
+      "LzOr_rGf": [],
+      "IQLG8PYV": []
     },
     "resources": {
       "iYi1c0yR": [
@@ -806,7 +813,8 @@
         "i-hZuEkL",
         "U_LCB8aG"
       ],
-      "LzOr_rGf": []
+      "LzOr_rGf": [],
+      "IQLG8PYV": []
     },
     "societies": {
       "iYi1c0yR": [
@@ -815,7 +823,8 @@
       ],
       "LzOr_rGf": [
         "yDVYv18n"
-      ]
+      ],
+      "IQLG8PYV": []
     }
   }
 }

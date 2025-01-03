@@ -1,4 +1,4 @@
-import { attr, map } from "../../core/utils.js";
+import { cx, map } from "../../core/utils.js";
 import Episode from "../../models/episode.js";
 
 export default function CommunityCreate({ community }) {
@@ -12,13 +12,13 @@ export default function CommunityCreate({ community }) {
       <input autofocus name="name" placeholder="New Community" value="${ community.name }"/>
       <label for="societyId">Society</label>
       <select name="societyId">
-        ${ map( episode.societies, society => `<option value="${society.id}" ${ attr("selected", society.id === mySociety.id) }>${society.name}</option>` ) }
+        ${ map( episode.societies, society => `<option value="${society.id}" ${ cx({selected: society.id === mySociety.id}) }>${society.name}</option>` ) }
       </select>
 
       <label for="voice">Voice</label>
       <select name="voice">
-        <option value="people" ${ attr("selected", community.voice == "people") }>Voice of the People</option>
-        <option value="leader" ${ attr("selected", community.voice == "leader") }>Voice of the Leaders</option>
+        <option value="people" ${ cx({selected: community.voice == "people"}) }>Voice of the People</option>
+        <option value="leader" ${ cx({selected: community.voice == "leader"}) }>Voice of the Leaders</option>
       </select>
       <div class="layout-horizontal">
         <button>~ Update Community</button>

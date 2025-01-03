@@ -64,6 +64,6 @@ export function rateLimit( callback, wait ) {
   }
 }
 
-export function attr(attribute, condition) {
-  return condition ? attribute : "";
+export function cx(props) {
+  return Object.keys(props).filter( key => props[key] ).join(' ')
 }

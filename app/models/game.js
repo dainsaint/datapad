@@ -20,6 +20,7 @@ export default class Game extends Model {
     return `/games/${this.id}` + append;
   }
 
+  static NONE = undefined
 };
 
 export const GameTags = {

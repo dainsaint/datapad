@@ -13,7 +13,11 @@ export default function EpisodeCreate({ body, errors }) {
   const nextDefaultTime = DateTime.now().set({ hour: 13, minute: 0, second: 0 }).plus({ days: daysToAdd });
   return `
     <form hx-post="/episodes" class="stack">
-      <h1>New Episode (borked)</h1>
+      <header>
+        <h1>New Episode (borked)</h1>
+      </header>
+
+      <article class="stack">
 
       <label for="name">Episode Name</label>
       <input name="name" type="text" required/>
@@ -74,8 +78,13 @@ export default function EpisodeCreate({ body, errors }) {
     .plus({ hours: 5 })
     .toFormat("h:mm a")}.</p>
 
-      <button type="submit">+ New Episode</button>
-      <button type="button" value="cancel">Cancel</button>
+      </article>
+
+      <footer>
+        <button type="submit">+ New Episode</button>
+        <button type="button" value="cancel">Cancel</button>
+      </footer>
+
     </form>
   `;
 }

@@ -4,13 +4,14 @@ import Model from "./model.js";
 import Tags from "../core/tags.js";
 import Ledger from "./ledger.js";
 import { PhaseStatus } from "./phase.js";
+import Game from "#models/game";
 
 const datastore = new Datastore();
 
 export default class Episode extends Model {
   name = ""
   date = DateTime.now()
-  game = {}
+  game = Game.NONE
   communities = []
   phases = []
   players = []
