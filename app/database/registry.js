@@ -1,13 +1,13 @@
+import Tags from "#core/tags";
+import Ledger from "#database/ledger";
+import Community from "#modules/communities/model";
+import Episode from "#modules/episodes/model";
+import Game from "#modules/games/model";
+import Phase from "#modules/phases/model";
+import Player from "#modules/players/model";
+import Resource from "#modules/resources/model";
+import Society from "#modules/societies/model";
 import Serializer from "./serializer.js";
-import Community from "../models/community.js";
-import Game from "../models/game.js";
-import Phase from "../models/phase.js";
-import Player from "../models/player.js";
-import Resource from "../models/resource.js";
-import Episode from "../models/episode.js";
-import Society from "../models/society.js";
-import Ledger from "../models/ledger.js";
-import Tags from "../core/tags.js";
 
 function initialize() {
   Serializer.register("Community", Community);
