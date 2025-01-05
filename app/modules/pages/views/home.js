@@ -9,6 +9,8 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
         <div>Space Opera Datapad v0.1-alpha</div>
       </div>
 
+      
+
       <div class="content stack">
         <details>
           <summary><h2>Load Episode</h2></summary>

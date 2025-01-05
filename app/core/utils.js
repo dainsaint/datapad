@@ -4,14 +4,25 @@ export function html(strings, ...values) {
     
     result += string;
 
-    if( Array.isArray(value) )
+    if( Array.isArray(value) ) {
       result += value.join("");
-    else if (typeof value === "string")
+    } else if (typeof value === "string") {
       result += value;
-    else if (typeof value === "number")
+    } else if (typeof value === "number") {
       result += String(value);
-    else if (typeof value === "object")
-      result += Object.keys(value).filter( key => value[key] ).join(' ');
+    } else if (typeof value === "object") {
+      result += Object.keys(value).map( key => {
+        const val = value[key];
+        if (val === true ) {
+          return key;
+        } else if( val ) {
+          return `${key}="${val}"`
+        } else {
+          return "";
+        }
+      }).join(' ')
+    }
+      
 
     return result;
   }, "");
