@@ -1,8 +1,6 @@
 import Select from "#modules/ui/select";
 
 export default function CommunityCreate({ episode, society }) {
-  const currentSociety = society;
-
   return `
     <form class="stack" hx-post="${ episode.toURL('/communities') }">
       <h1>Create a new community</h1>
@@ -12,7 +10,7 @@ export default function CommunityCreate({ episode, society }) {
       <input autofocus name="name" placeholder="New Community" />
 
       <label for="societyId">Society</label>
-      ${ Select({ name: "societyId", current: currentSociety, options: episode.societies }) }
+      ${ Select({ name: "societyId", current: society, options: episode.societies }) }
 
       <label for="voice">Voice</label>
       <select name="voice">
