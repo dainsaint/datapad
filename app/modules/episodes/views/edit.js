@@ -32,7 +32,7 @@ export default function SessionEdit({ episode = new Episode() } = {}) {
 
         <div>
           <label for="end">Scheduled End</label>
-          <input name="scheduleTime[e]" type="time" value="${ episode.scheduledTime.end?.toISOTime() }"/>
+          <input name="scheduledTime[e]" type="time" value="${ episode.scheduledTime.end?.toISOTime() }"/>
         </div>
       </div>
 

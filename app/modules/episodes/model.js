@@ -10,6 +10,7 @@ const datastore = new Datastore();
 export default class Episode extends Model {
   name = ""
   date = DateTime.now()
+  scheduledTime = Interval.after(DateTime.now(), Duration.fromObject({hours: 5}))
   game = Game.NONE
   communities = []
   phases = []
@@ -17,8 +18,6 @@ export default class Episode extends Model {
   resources = []
   societies = []
   tags = new Tags()
-
-  scheduledTime = Interval.after(DateTime.now(), Duration.fromObject({hours: 5}))
 
   static #episodes = new Map();
 

@@ -21,16 +21,7 @@ export default function EpisodeCreate({ body, errors }) {
 
       <label for="name">Episode Name</label>
       <input name="name" type="text" required/>
-      <p class="error">${ errorsFor("name", errors) } </p>
-<!--
-      <label for="game">Series (Optional)</label>
-      <input list="games-available" name="game" placeholder="No series selected"/>
-      <datalist id="games-available">
-        ${map(games, (game) => `<option>${game.name}</option>`
-        )}
-      </datalist>
-      <p class="text">This will create a new game called 'NLEEB'</p>
--->
+
       <div class="grid-three">
         <div>
           <label for="date">Date</label>
@@ -72,11 +63,8 @@ export default function EpisodeCreate({ body, errors }) {
         </div>
       </div>
       
-      <p class="text">This episode will take place ${nextDefaultTime.toFormat(
-        "DDD"
-      )} from ${nextDefaultTime.toFormat("h:mm a")} till ${nextDefaultTime
-    .plus({ hours: 5 })
-    .toFormat("h:mm a")}.</p>
+      <p class="text">This episode will take place ${nextDefaultTime.toFormat("DDD")} from ${nextDefaultTime.toFormat("h:mm a")} till ${nextDefaultTime.plus({ hours: 5 }).toFormat("h:mm a")}.</p>
+
 
       </article>
 
@@ -88,3 +76,14 @@ export default function EpisodeCreate({ body, errors }) {
     </form>
   `;
 }
+
+
+// <p class="error">${ errorsFor("name", errors) } </p>
+
+// <label for="game">Series (Optional)</label>
+// <input list="games-available" name="game" placeholder="No series selected"/>
+// <datalist id="games-available">
+//   ${map(games, (game) => `<option>${game.name}</option>`
+//   )}
+// </datalist>
+// <p class="text">This will create a new game called 'NLEEB'</p>

@@ -1,4 +1,4 @@
-import { iconForArchetype, map } from "#core/utils";
+import { map } from "#core/utils";
 import SocietyPanel from "#modules/societies/views/panel";
 import EpisodeLayout from "#modules/episodes/views/components/layout";
 import Episode from "#modules/episodes/model";
@@ -31,7 +31,7 @@ export default function SessionFacilitator ({ episode = new Episode(), societyId
 function SocietyToolbarLink(episode, society, isActive) {
   return `
     <li>
-      <a hx-boost="true" class="${isActive ? 'active' : ''}" href="${ episode.toURL('/facilitator/' + society.id) }">${Icon(iconForArchetype(society.archetype))}</a>
+      <a hx-boost="true" class="${isActive ? 'active' : ''}" href="${ episode.toURL('/facilitator/' + society.id) }">${Icon.forArchetype(society.archetype)}</a>
     </li>
   `;
 }

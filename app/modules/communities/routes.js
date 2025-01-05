@@ -58,7 +58,7 @@ communities.get("/episodes/:episodeId/communities/:communityId/:view?", (req, re
   const episode = Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
 
-  res.render(`communities/views/${view}`, {community});
+  res.render(`communities/views/${view}`, {community, layout: "none"});
 });
 
 communities.patch("/episodes/:episodeId/communities/:communityId", (req, res) => {

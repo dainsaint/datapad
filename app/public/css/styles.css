@@ -47,7 +47,7 @@ input, input[type="date"], input[type="time"], select {
   width: 100%;
 }
 
-input:invalid {
+input:user-invalid {
   border-color: var(--color-error);
 }
 
