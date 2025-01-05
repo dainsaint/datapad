@@ -1,17 +1,11 @@
+import { html } from "#core/utils";
 import { DateTime } from "luxon";
-import { map } from "#core/utils";
-import Ledger from "#database/ledger";
 
-function errorsFor(name, errors = []) {
-  return errors.filter( error => error.path == name ).map( error => error.msg ).join("<br/>");
-}
-
-export default function EpisodeCreate({ body, errors }) {
-  console.log( errors );
-  const games = Ledger.games;
+export default function EpisodeCreate({}) {
   const daysToAdd = DateTime.now().hour > 13 ? 1 : 0;
   const nextDefaultTime = DateTime.now().set({ hour: 13, minute: 0, second: 0 }).plus({ days: daysToAdd });
-  return `
+
+  return html`
     <form hx-post="/episodes" class="stack">
       <header>
         <h1>New Episode (borked)</h1>
@@ -30,9 +24,7 @@ export default function EpisodeCreate({ body, errors }) {
 
         <div>
           <label for="start">Time</label>
-          <input name="time" type="time" value="${nextDefaultTime.toFormat(
-            "HH:mm"
-          )}"/>
+          <input name="time" type="time" value="${nextDefaultTime.toFormat('HH:mm')}"/>
         </div>
 
         <div>

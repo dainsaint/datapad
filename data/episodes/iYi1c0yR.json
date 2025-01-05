@@ -37,17 +37,6 @@
             "_type": "Tags",
             "value": []
           }
-        },
-        {
-          "_type": "Resource",
-          "id": "AfdgeFeg",
-          "episode": "iYi1c0yR",
-          "name": "Green Sludge",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
         }
       ],
       "tags": {
@@ -61,7 +50,19 @@
       "episode": "iYi1c0yR",
       "name": "Disaffected Youth",
       "voice": "people",
-      "resources": [],
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "AfdgeFeg",
+          "episode": "iYi1c0yR",
+          "name": "Green Sludge",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
       "tags": {
         "_type": "Tags",
         "value": []
@@ -102,7 +103,7 @@
       "status": "paused",
       "round": 0,
       "duration": 1200,
-      "timeElapsed": 15.013999999999998,
+      "timeElapsed": 16.014999999999997,
       "tags": {
         "_type": "Tags",
         "value": []
@@ -114,8 +115,8 @@
         "isLuxonInterval": true
       },
       "actualTime": {
-        "s": "2025-01-04T20:18:22.733-05:00",
-        "e": "2025-01-04T20:38:22.733-05:00",
+        "s": "2025-01-05T10:39:33.870-05:00",
+        "e": "2025-01-05T10:59:33.870-05:00",
         "invalid": null,
         "isLuxonInterval": true
       }
@@ -641,17 +642,6 @@
                 "_type": "Tags",
                 "value": []
               }
-            },
-            {
-              "_type": "Resource",
-              "id": "AfdgeFeg",
-              "episode": "iYi1c0yR",
-              "name": "Green Sludge",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
             }
           ],
           "tags": {
@@ -665,7 +655,19 @@
           "episode": "iYi1c0yR",
           "name": "Disaffected Youth",
           "voice": "people",
-          "resources": [],
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "AfdgeFeg",
+              "episode": "iYi1c0yR",
+              "name": "Green Sludge",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            }
+          ],
           "tags": {
             "_type": "Tags",
             "value": []

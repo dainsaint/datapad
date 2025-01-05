@@ -1,3 +1,23 @@
+export function html(strings, ...values) {
+  return strings.reduce( (result, string, i) => {
+    const value = values[i];
+    
+    result += string;
+
+    if( Array.isArray(value) )
+      result += value.join("");
+    else if (typeof value === "string")
+      result += value;
+    else if (typeof value === "number")
+      result += String(value);
+    else if (typeof value === "object")
+      result += Object.keys(value).filter( key => value[key] ).join(' ');
+
+    return result;
+  }, "");
+}
+
+
 export function pluralize( number, one, many = "" ) {
   return number == 1 
     ? one 
@@ -12,10 +32,6 @@ export function secondsToTime( seconds ) {
   return `${ minutes.toString().padStart(2, '0') }:${ remaining.toString().padStart(2, '0') }`
 }
 
-// I got tired of adding .join("\n") everywhere
-export function map(array, ...transformers) {
-  return transformers.reduce( (result, transformer) => result.map(transformer), array ).join("\n");
-}
 
 export function debounce(func, duration) {
   let timeout;
@@ -52,8 +68,4 @@ export function rateLimit( callback, wait ) {
       timeout = setTimeout(invokeCallback, wait); // Debounce behavior
     }
   }
-}
-
-export function cx(props) {
-  return Object.keys(props).filter( key => props[key] ).join(' ')
 }

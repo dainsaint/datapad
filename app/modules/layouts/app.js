@@ -1,8 +1,7 @@
-export default function AppLayout(content) {
-  if( Array.isArray(content) )
-    content = content.join("\n");
+import { html } from "#core/utils";
 
-  return `
+export default function AppLayout(props, children) {
+  return html`
   <!DOCTYPE html>
   <html lang="en">
 
@@ -20,7 +19,7 @@ export default function AppLayout(content) {
 
     <body>
       <section id="app" class="app-content" hx-ext="sse" sse-connect="/events">
-        ${content} 
+        ${children} 
         
         <dialog id="dialog" class="stack" 
           hx-on:htmx:load="this.showModal()" 

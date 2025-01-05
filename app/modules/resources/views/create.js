@@ -1,8 +1,8 @@
-import { cx, map } from "#core/utils";
+import { html } from "#core/utils";
 
 export default function ResourceCreate({ episode, society }) {
   const current = society;
-  return `
+  return html`
     <form class="stack" hx-post="${ episode.toURL('/resources') }">
       <header>
         <h1>Create a new resource</h1>
@@ -14,9 +14,11 @@ export default function ResourceCreate({ episode, society }) {
         <label for="communityId">Community</label>
 
         <select name="communityId">
-        ${ map( episode.societies, society => `
+        ${ episode.societies.map( society => `
             <optgroup label="${ society.name }">
-              ${ map( society.communities, ( community, i ) => `<option value="${ community.id }" ${ cx({ selected: i== 0 && current == society.id }) }>${community.name}</option>`) }
+              ${ society.communities.map(( community, i ) => 
+                html`<option value="${ community.id }" ${{ selected: i== 0 && current == society.id }}>${community.name}</option>`
+              )}
             </optgroup>
           `
         )}

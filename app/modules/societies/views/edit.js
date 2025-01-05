@@ -1,4 +1,4 @@
-import { map } from "#core/utils";
+import { html } from "#core/utils";
 import Society from "#modules/societies/model";
 
 const archetypes = {
@@ -13,24 +13,19 @@ const archetypes = {
 };
 
 export default function SocietyEdit({ society = new Society() } = {}) {
-  return `
+  return html`
     <h1>Edit Society</h1>
     <p class="text">Enter a name for this new society, and select its archetype.</p>
 
     <form class="stack" hx-put="${society.toURL()}" hx-swap="none">
       <label for="name">Society Name</label>
-      <input autofocus name="name" placeholder="e.g. Ten Thousand Islands" value="${
-        society.name
-      }"/>
+      <input autofocus name="name" placeholder="e.g. Ten Thousand Islands" value="${society.name}"/>
 
       <label for="archetype">Society Archetype</label>
       <select name="archetype" placeholder="Select Archetype">
-      ${map(
-        Object.entries(archetypes),
+      ${Object.entries(archetypes).map(
         ([value, text]) =>
-          `<option value="${value}" ${
-            society.archetype == value && "selected"
-          }>${text}</option>`
+          html`<option value="${value}" ${{selected: society.archetype == value}}>${text}</option>`
       )}
       </select>
 

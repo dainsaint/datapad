@@ -1,11 +1,11 @@
-import { map } from "#core/utils";
+import { html } from "#core/utils";
 import Episode from "#modules/episodes/model";
 
 export default function ResourceEdit({ resource }) {
   const episode = Episode.load( resource.episode );
   const myCommunity = episode.communities.find( c => c.resources.some( r => r.id === resource.id ) ); //yikes
 
-  return `
+  return html`
     <form class="stack" hx-patch=${ resource.toURL() }>
       <h1>Edit a resource</h1>
       <p class="text">Enter a name for this resource</p>
@@ -13,10 +13,12 @@ export default function ResourceEdit({ resource }) {
       <input name="name" placeholder="New Resource" value="${ resource.name }"/>
       <label for="communityId">Community</label>
       <select name="communityId">
-      ${ map( episode.societies, society => {
+      ${ episode.societies.map( society => {
         return `
           <optgroup label="${ society.name }">
-            ${ map( society.communities, community => `<option value="${ community.id }" ${ community.id === myCommunity.id && "selected" }>${community.name}</option>`) }
+            ${ society.communities.map( community => 
+              html`<option value="${ community.id }" ${ community.id === myCommunity.id && "selected" }>${community.name}</option>`
+            )}
           </optgroup>
         `
       } ) }
