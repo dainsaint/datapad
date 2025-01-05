@@ -4,7 +4,6 @@ import EpisodeLayout from "#modules/episodes/views/components/layout";
 import Episode from "#modules/episodes/model";
 import Icon from "#modules/ui/icon";
 
-
 export default function EpisodeFacilitator ({ episode = new Episode(), societyId = undefined } = {}) {
   const currentSociety = societyId ? episode.getSocietyById( societyId ) : episode.societies.at(0);
   const content = html`
@@ -25,7 +24,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
 function SocietyToolbarLink(episode, society, isActive) {
   return html`
     <li>
-      <a hx-boost="true" class="${isActive ? 'active' : ''}" href="${ episode.toURL('/facilitator/' + society.id) }">
+      <a hx-boost="true" class="${isActive && 'active'}" href="${ episode.toURL('/facilitator/' + society.id) }">
         ${Icon.forArchetype(society.archetype)}
       </a>
     </li>

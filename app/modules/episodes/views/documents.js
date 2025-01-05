@@ -1,8 +1,9 @@
+import { html } from "#core/utils";
 import Episode from "#modules/episodes/model";
-import SessionLayout from "./components/layout.js";
+import EpisodeLayout from "./components/layout.js";
 
-export default function SessionDocuments ({ episode = new Episode()} = {}) {
-  const content = `
+export default function EpisodeDocuments ({ episode = new Episode()} = {}) {
+  const content = html`
     <nav class="toolbar">
       <ul>
         <li><a href="#script">Script</a></li>
@@ -24,7 +25,5 @@ export default function SessionDocuments ({ episode = new Episode()} = {}) {
 
   `;
 
-
-
-  return SessionLayout(episode, content);
+  return EpisodeLayout(episode, content);
 }

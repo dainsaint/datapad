@@ -16,14 +16,14 @@ export default function CommunityCard({ community = new Community() } = {}) {
         </header>
 
         <div class="grid-three" data-drop-target>
-          ${ community.resources.map( resource => CommunityResourceCard({ resource }) )}
+          ${ community.resources.map(resource => CommunityResourceCard({ resource })) }
         </div>
       </form>
     </div>
   `;
 }
 
-function CommunityResourceCard({ resource }) {
+export function CommunityResourceCard({ resource }) {
   return html`
     <a id="resource-card-${resource.id}" 
       class="card color-contrast" 

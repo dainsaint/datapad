@@ -74,7 +74,7 @@ resources.get("/episodes/:episodeId/resources/create", (req, res, next) => {
 
 resources.get("/episodes/:episodeId/resources/:resourceId/:view?", (req, res, next) => {
   try {
-    const { episodeId, resourceId, view = "card" } = req.params;
+    const { episodeId, resourceId, view = "edit" } = req.params;
 
     const episode = Episode.load(episodeId);
     const resource = episode.getResourceById(resourceId);

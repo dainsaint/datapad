@@ -1,7 +1,8 @@
+import { html } from "#core/utils";
 import Select from "#modules/ui/select";
 
 export default function CommunityCreate({ episode, society }) {
-  return `
+  return html`
     <form class="stack" hx-post="${ episode.toURL('/communities') }">
       <h1>Create a new community</h1>
       <p class="text">Enter a name/archetype for this community</p>

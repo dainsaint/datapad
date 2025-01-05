@@ -1,0 +1,21 @@
+{
+  "_type": "Episode",
+  "id": "vNIavdFu",
+  "name": "My New Episode",
+  "date": "2025-01-08T00:00:00.000-05:00",
+  "scheduledTime": {
+    "s": "2025-01-08T13:00:00.000-05:00",
+    "e": "2025-01-08T18:00:00.000-05:00",
+    "invalid": null,
+    "isLuxonInterval": true
+  },
+  "communities": [],
+  "phases": [],
+  "players": [],
+  "resources": [],
+  "societies": [],
+  "tags": {
+    "_type": "Tags",
+    "value": []
+  }
+}

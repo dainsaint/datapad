@@ -2,8 +2,6 @@ import { DateTime, Duration, Interval } from "luxon";
 import { EpisodeModel } from "#modules/episodes/model";
 import Tags from "#core/tags";
 
-
-
 export default class Phase extends EpisodeModel {
   name = "New Phase"
   status = PhaseStatus.IDLE;

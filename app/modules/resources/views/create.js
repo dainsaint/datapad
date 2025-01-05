@@ -14,14 +14,13 @@ export default function ResourceCreate({ episode, society }) {
         <label for="communityId">Community</label>
 
         <select name="communityId">
-        ${ episode.societies.map( society => `
+        ${ episode.societies.map( society => html`
             <optgroup label="${ society.name }">
               ${ society.communities.map(( community, i ) => 
-                html`<option value="${ community.id }" ${{ selected: i== 0 && current == society.id }}>${community.name}</option>`
+                html`<option value="${ community.id }" ${{ selected: i == 0 && current == society.id }}>${community.name}</option>`
               )}
             </optgroup>
-          `
-        )}
+        `)}
         </select>
       </article>
 
