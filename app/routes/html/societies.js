@@ -1,8 +1,8 @@
 import express from "express";
-import Episode from "../../models/episode.js";
-import Society from "../../models/society.js";
+import Episode from "#models/episode";
+import Society from "#models/society";
 
-import { broadcast } from "../events/events.js";
+import { broadcast } from "#routes/html/events";
 import { body, matchedData } from "express-validator";
 
 const societies = express.Router();
@@ -19,7 +19,7 @@ const societies = express.Router();
 societies.get("/episodes/:episodeId/societies/:view?", (req, res, next) => {
   const { episodeId, view = "list" } = req.params;
   const episode = Episode.load(episodeId);
-  res.render(`societies/views/${view}`, { episode, layout: "none" })
+  res.render(`societies/${view}`, { episode, layout: "none" })
 });
 
 societies.post("/episodes/:episodeId/societies", (req, res, next) => {
@@ -44,7 +44,7 @@ societies.post("/episodes/:episodeId/societies", (req, res, next) => {
 societies.get("/episodes/:episodeId/societies/create", (req, res, next) => {
   const { episodeId } = req.params;
   const episode = Episode.load(episodeId);
-  res.render(`societies//viewscreate`, { episode, layout: "none" });
+  res.render(`societies/create`, { episode, layout: "none" });
 });
 
 
@@ -58,7 +58,7 @@ societies.get("/episodes/:episodeId/societies/:societyId/:view?", (req, res, nex
   const episode = Episode.load(episodeId);
   const society = episode.getSocietyById(societyId);
 
-  res.render(`societies/views/${view}`, { society, layout: "none" });
+  res.render(`societies/${view}`, { society, layout: "none" });
 });
 
 societies.put("/episodes/:episodeId/societies/:societyId", body("name").trim(), (req, res, next) => {

@@ -1,5 +1,5 @@
 import { html } from "#core/utils"
-import Episode from "#modules/episodes/model";
+import Episode from "#models/episode";
 
 export default function CommunityEdit({ community }) {
   const episode = Episode.load(community.episode);

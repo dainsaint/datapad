@@ -1,8 +1,8 @@
 import { html } from "#core/utils";
-import Episode from "#modules/episodes/model";
-import EpisodeLayout from "#modules/episodes/views/components/layout";
-import PhaseCard from "#modules/phases/views/card";
-import SocietyList from "#modules/societies/views/list";
+import Episode from "#models/episode";
+import EpisodeLayout from "#views/episodes/components/layout";
+import PhaseCard from "#views/phases/card";
+import SocietyList from "#views/societies/list";
 
 export default function EpisodeGameMaster ({ episode = new Episode() } = {}) {
   const phasesToDisplay = episode.phases.slice(0,3);

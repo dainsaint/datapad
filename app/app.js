@@ -1,9 +1,9 @@
 import express from "express";
 import session from "express-session";
 import path from "node:path";
-import htmlRouter, {tick as htmlTick} from "./routes/html.js";
-import jsonRouter from "./routes/json.js";
-import Timer from "./core/timer.js";
+import htmlRouter, {tick as htmlTick} from "#routes/html/index";
+import jsonRouter from "#routes/json";
+import Timer from "#core/timer";
 import { fileURLToPath } from "node:url";
 
 
@@ -42,7 +42,7 @@ export default class Server {
         const content = Template.default(data);
 
         if( layout && layout !== "none" ) {
-          const layoutPath = path.join( __dirname, `modules/layouts/${layout}.js`);
+          const layoutPath = path.join( __dirname, `views/layouts/${layout}.js`);
           const Layout = await import(layoutPath);
           const layoutRendered = Layout.default( {}, content );
           callback(null, layoutRendered);
@@ -54,7 +54,7 @@ export default class Server {
       }
     })
 
-    app.set("views", "app/modules");
+    app.set("views", "app/views");
     app.set("view engine", "js");
 
     app.use(session({

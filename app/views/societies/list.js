@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import SocietyCard from "./card.js";
+import SocietyCard from "#views/societies/card";
 
 export default function SocietyList({ episode }) {
   return html`

@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import Select from "#modules/ui/select";
+import Select from "#views/ui/select";
 
 export default function CommunityCreate({ episode, society }) {
   return html`

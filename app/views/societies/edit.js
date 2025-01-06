@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import Society from "#modules/societies/model";
+import Society from "#models/society";
 
 const archetypes = {
   "the aesthetic": "The Aesthetic",

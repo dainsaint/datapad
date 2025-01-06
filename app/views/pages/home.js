@@ -1,5 +1,5 @@
-import { html, pluralize } from "../../../core/utils.js";
-import Icon from "../../ui/icon.js";
+import { html, pluralize } from "#core/utils";
+import Icon from "#views/ui/icon";
 
 export default function Home ({ games = new Array(), episodes = new Array() }) {
   return html`
@@ -27,7 +27,7 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
           <summary><h2>View Games</h2></summary>
           <ul>
           ${games.map( (game) =>
-            html`<li><a href="${game.toURL()}">${game.name} • ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}</a></li>`
+            html`<li><a href="${game.toURL("/overview")}">${game.name} • ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}</a></li>`
           )}
           </ul>
         </details>  

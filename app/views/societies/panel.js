@@ -1,7 +1,7 @@
 import { html } from "#core/utils";
 import CommunityCard from "../communities/card.js";
-import Episode from "#modules/episodes/model";
-import Society from "#modules/societies/model";
+import Episode from "#models/episode";
+import Society from "#models/society";
 import SocietyInfo from "./components/info.js";
 
 const societyPanelId = ( society ) => `society-panel-${society?.id}`;

@@ -17,7 +17,8 @@
     "#/*": "./app/*.js",
     "#core/*": "./app/core/*.js",
     "#database/*": "./app/database/*.js",
-    "#modules/*": "./app/modules/*.js",
+    "#views/*": "./app/views/*.js",
+    "#models/*": "./app/models/*.js",
     "#routes/*": "./app/routes/*.js"
   },
   "license": "ISC",

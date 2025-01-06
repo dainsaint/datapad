@@ -1,8 +1,8 @@
 import { html } from "#core/utils";
-import SocietyPanel from "../societies/panel";
-import EpisodeLayout from "#modules/episodes/views/components/layout";
-import Episode from "#modules/episodes/model";
-import Icon from "../ui/icon";
+import SocietyPanel from "#views/societies/panel";
+import EpisodeLayout from "#views/episodes/components/layout";
+import Episode from "#models/episode";
+import Icon from "#views/ui/icon";
 
 export default function EpisodeFacilitator ({ episode = new Episode(), societyId = undefined } = {}) {
   const currentSociety = societyId ? episode.getSocietyById( societyId ) : episode.societies.at(0);
@@ -15,7 +15,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
       </ul>
     </nav>
       
-    ${ currentSociety ? SocietyPanel({ society: currentSociety }) : NoSocieties() }
+    ${ currentSociety ? SocietyPanel({ society: currentSociety }) : NoSocieties({episode}) }
   `;
 
   return EpisodeLayout(episode, content);
@@ -31,7 +31,7 @@ function SocietyToolbarLink(episode, society, isActive) {
   `;
 }
 
-function NoSocieties() {
+function NoSocieties({episode}) {
   return html`
     <main class="content stack-loose">
       <h1>No Societies Yet</h1>

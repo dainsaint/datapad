@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import Episode from "#modules/episodes/model";
+import Episode from "#models/episode";
 
 //figure out the society/episode jawn here...
 export default function SocietyCreate({ episode = new Episode()} = {}) {

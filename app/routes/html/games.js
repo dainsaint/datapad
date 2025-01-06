@@ -15,13 +15,13 @@ games.get("/games/:view?", (req, res, next) => {
   const { view = "overview" } = req.params;
   
   const games = Ledger.games;
-  res.render(`games/views/${view}`, { games });
+  res.render(`games/${view}`, { games });
 });
 
 games.get("/games/:id/:view?", (req, res, next) => {
   const { id, view = "overview"} = req.params;
   const game = Ledger.getGameById(id);
-  res.render(`games/views/${view}`, { game });
+  res.render(`games/${view}`, { game });
 });
 
 export default games;

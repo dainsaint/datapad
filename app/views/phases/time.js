@@ -1,5 +1,5 @@
 import { secondsToTime } from "#core/utils"
-import Phase from "../../../models/phase"
+import Phase from "#models/phase"
 
 
 export default function PhaseTime({ phase = new Phase() } = {}) {

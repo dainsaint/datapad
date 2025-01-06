@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import Episode from "#modules/episodes/model";
+import Episode from "#models/episode";
 import EpisodeLayout from "./components/layout.js";
 
 export default function EpisodeDocuments ({ episode = new Episode()} = {}) {

@@ -1,14 +1,14 @@
 import express from "express";
 
-import communities from "#modules/communities/communities";
+import communities from "#routes/html/communities";
 import events, { tick as eventTick } from "#routes/html/events";
 import games from "#routes/html/games";
-import phases from "#modules/phases/phases";
+import phases from "#routes/html/phases";
 import players from "#routes/html/players";
 import resources from "#routes/html/resources";
 import episodes from "#routes/html/episodes";
 import societies from "#routes/html/societies";
-import pages from "#modules/pages/routes";
+import pages from "#routes/html/pages";
 
 const htmlRouter = express.Router();
 

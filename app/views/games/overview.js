@@ -1,4 +1,4 @@
-import { html } from "../../../core/utils.js";
+import { html } from "#core/utils";
 
 export default function GameOverview ({ game }) {
   return html`<main class="content stack">

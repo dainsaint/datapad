@@ -1,6 +1,6 @@
 import { html } from "#core/utils";
 import Ledger from "#database/ledger";
-import Episode from "#modules/episodes/model";
+import Episode from "#models/episode";
 
 
 export default function EpisodeEdit({ episode = new Episode() } = {}) {

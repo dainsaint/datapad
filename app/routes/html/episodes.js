@@ -1,8 +1,8 @@
-import express from "express";
 import { body, matchedData, validationResult } from "express-validator";
-import Episode from "../../models/episode.js";
 import { DateTime, Duration, Interval } from "luxon";
 import { EpisodeTimeInput } from "#views/episodes/create";
+import Episode from "#models/episode";
+import express from "express";
 
 const episodes = express.Router();
 
@@ -14,7 +14,7 @@ const episodes = express.Router();
 */
 
 episodes.get("/episodes/create", (req, res) => {
-  res.render(`episodes/views/create`, { layout: "none" });
+  res.render(`episodes/create`, { layout: "none" });
 });
 
 episodes.post("/episodes/create/time", (req, res) => {
@@ -76,7 +76,7 @@ episodes.get("/episodes/:episodeId/facilitator/:societyId?", (req, res) => {
     );
   } else {
     req.session.facilitator.societyId = societyId;
-    res.render(`episodes/views/facilitator`, { episode, societyId, layout: "app" });
+    res.render(`episodes/facilitator`, { episode, societyId, layout: "app" });
   }
   
 });
@@ -88,7 +88,7 @@ episodes.get("/episodes/:episodeId/:view?", (req, res) => {
   if(!view)
     res.redirect(`/episodes/${episodeId}/gm`)
   else
-    res.render(`episodes/views/${view}`, { episode, layout: "app" });
+    res.render(`episodes/${view}`, { episode, layout: "app" });
 });
 
 

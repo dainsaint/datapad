@@ -1,6 +1,6 @@
 import { html } from "#core/utils";
-import Icon from "../ui/icon.js";
-import Society from "../../models/society.js"
+import Icon from "#views/ui/icon";
+import Society from "#models/society";
 
 export default function SocietyCard ({ society = new Society() } = {}) {
   return html`

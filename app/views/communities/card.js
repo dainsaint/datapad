@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import Community from "../model.js";
+import Community from "#models/community";
 
 export default function CommunityCard({ community = new Community() } = {}) {
   return html`

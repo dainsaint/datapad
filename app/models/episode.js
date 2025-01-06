@@ -3,7 +3,7 @@ import Datastore from "#database/datastore";
 import Model from "#database/model";
 import Tags from "#core/tags";
 import Ledger from "#database/ledger";
-import Game from "./game";
+import Game from "#models/game";
 
 const datastore = new Datastore();
 

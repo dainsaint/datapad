@@ -1,5 +1,5 @@
 import Ledger from "#database/ledger";
-import Episode from "../models/episode";
+import Episode from "#models/episode";
 import express from "express";
 
 

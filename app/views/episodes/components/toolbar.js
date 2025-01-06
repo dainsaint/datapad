@@ -1,6 +1,6 @@
 import { html } from "#core/utils";
-import Episode from "../../../models/episode.js";
-import Icon from "../../ui/icon.js";
+import Episode from "#models/episode";
+import Icon from "#views/ui/icon";
 import { request } from "../../../app.js";
 
 

@@ -1,4 +1,4 @@
-import Episode from "../views/episodes/model.js";
+import Episode from "#models/episode";
 import Datastore from "../database/datastore.js";
 
 const datastore = new Datastore();

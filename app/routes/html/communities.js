@@ -1,6 +1,6 @@
 import express from "express";
-import Episode from "../../models/episode.js";
-import Community from "../../models/community.js";
+import Episode from "#models/episode";
+import Community from "#models/community";
 import { broadcast } from "#routes/html/events";
 
 const communities = express.Router();
@@ -18,7 +18,7 @@ communities.get("/episodes/:episodeId/communities", (req, res) => {
   const { view = "list" } = req.query;
 
   const episode = Episode.load(episodeId);
-  res.render(`communities/views/${view}`, { episode })
+  res.render(`communities/${view}`, { episode })
 });
 
 
@@ -45,7 +45,7 @@ communities.get("/episodes/:episodeId/communities/create", (req, res) => {
   const { episodeId } = req.params;
   const { society } = req.query;
   const episode = Episode.load(episodeId);
-  res.render(`communities/views/create`, { episode, society, layout: "none" });
+  res.render(`communities/create`, { episode, society, layout: "none" });
 });
 
 ////////////////////////////////////////
@@ -58,7 +58,7 @@ communities.get("/episodes/:episodeId/communities/:communityId/:view?", (req, re
   const episode = Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
 
-  res.render(`communities/views/${view}`, {community, layout: "none"});
+  res.render(`communities/${view}`, {community, layout: "none"});
 });
 
 communities.patch("/episodes/:episodeId/communities/:communityId", (req, res) => {

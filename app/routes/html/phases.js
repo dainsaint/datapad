@@ -1,4 +1,4 @@
-import Episode from "../../models/episode";
+import Episode from "#models/episode";
 import express from "express";
 
 
@@ -18,7 +18,7 @@ phases.get("/episodes/:episodeId/phases/:phaseId/:view?", (req, res, next) => {
   const episode = Episode.load(episodeId);
   const phase = episode.getPhaseById(phaseId);
 
-  res.render(`phases/views/${view}`, { phase, layout: "none" });
+  res.render(`phases/${view}`, { phase, layout: "none" });
 });
 
 phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
