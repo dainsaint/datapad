@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import CommunityCard from "#modules/communities/views/card";
+import CommunityCard from "../communities/card.js";
 import Episode from "#modules/episodes/model";
 import Society from "#modules/societies/model";
 import SocietyInfo from "./components/info.js";

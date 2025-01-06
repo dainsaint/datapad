@@ -1,5 +1,5 @@
 import Tags from "#core/tags";
-import { EpisodeModel } from "#modules/episodes/model";
+import { EpisodeModel } from "./episode";
 
 export default class Community extends EpisodeModel {
   name;

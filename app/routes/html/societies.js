@@ -1,8 +1,8 @@
 import express from "express";
-import Episode from "#modules/episodes/model";
-import Society from "#modules/societies/model";
+import Episode from "../../models/episode.js";
+import Society from "../../models/society.js";
 
-import { broadcast } from "../events/routes.js";
+import { broadcast } from "../events/events.js";
 import { body, matchedData } from "express-validator";
 
 const societies = express.Router();

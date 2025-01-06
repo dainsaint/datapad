@@ -1,4 +1,4 @@
-import Phase from "#modules/phases/model";
+import Phase from "../../../models/phase.js";
 import PhaseTime from "./time.js";
 
 export default function PhaseCard({ phase = new Phase(), i = 0 }) { 

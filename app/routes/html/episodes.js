@@ -1,8 +1,8 @@
 import express from "express";
 import { body, matchedData, validationResult } from "express-validator";
-import Episode from "./model.js";
+import Episode from "../../models/episode.js";
 import { DateTime, Duration, Interval } from "luxon";
-import { EpisodeTimeInput } from "./views/create.js";
+import { EpisodeTimeInput } from "#views/episodes/create";
 
 const episodes = express.Router();
 

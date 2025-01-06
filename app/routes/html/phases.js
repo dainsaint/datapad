@@ -1,4 +1,4 @@
-import Episode from "#modules/episodes/model";
+import Episode from "../../models/episode";
 import express from "express";
 
 

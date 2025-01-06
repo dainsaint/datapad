@@ -1,8 +1,8 @@
 import { html } from "#core/utils";
-import SocietyPanel from "#modules/societies/views/panel";
+import SocietyPanel from "../societies/panel";
 import EpisodeLayout from "#modules/episodes/views/components/layout";
 import Episode from "#modules/episodes/model";
-import Icon from "#modules/ui/icon";
+import Icon from "../ui/icon";
 
 export default function EpisodeFacilitator ({ episode = new Episode(), societyId = undefined } = {}) {
   const currentSociety = societyId ? episode.getSocietyById( societyId ) : episode.societies.at(0);

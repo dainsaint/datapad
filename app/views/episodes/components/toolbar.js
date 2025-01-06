@@ -1,7 +1,7 @@
 import { html } from "#core/utils";
-import Episode from "#modules/episodes/model";
-import Icon from "#modules/ui/icon";
-import { request } from "../../../../app.js";
+import Episode from "../../../models/episode.js";
+import Icon from "../../ui/icon.js";
+import { request } from "../../../app.js";
 
 
 export default function EpisodeToolbar({ episode = new Episode() } = {}) {

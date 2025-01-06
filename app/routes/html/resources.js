@@ -1,7 +1,7 @@
 import express from "express";
-import Episode from "#modules/episodes/model";
-import Resource from "#modules/resources/model";
-import { broadcast } from "#modules/events/routes";
+import Episode from "../../models/episode";
+import Resource from "../../models/resource";
+import { broadcast } from "#routes/html/events";
 
 
 const resources = express.Router();

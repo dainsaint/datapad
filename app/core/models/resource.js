@@ -1,5 +1,5 @@
 import Tags from "#core/tags";
-import { EpisodeModel } from "#modules/episodes/model";
+import { EpisodeModel } from "#modules/episodes/episode";
 
 export default class Resource extends EpisodeModel {
   name = "";

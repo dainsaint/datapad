@@ -1,6 +1,6 @@
 import { html } from "#core/utils";
-import Episode from "#modules/episodes/model";
-import Phase from "#modules/phases/model";
+import Episode from "../../../../models/episode";
+import Phase from "../../../../models/phase";
 import PhaseTime from "#modules/phases/views/time";
 
 export default function EpisodeStatusBar ({ episode = new Episode() } = {}) {

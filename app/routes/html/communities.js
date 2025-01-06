@@ -1,7 +1,7 @@
 import express from "express";
-import Episode from "#modules/episodes/model";
-import Community from "./model.js";
-import { broadcast } from "#modules/events/routes";
+import Episode from "../../models/episode.js";
+import Community from "../../models/community.js";
+import { broadcast } from "#routes/html/events";
 
 const communities = express.Router();
 

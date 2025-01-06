@@ -1,5 +1,5 @@
 import { DateTime, Duration, Interval } from "luxon";
-import { EpisodeModel } from "#modules/episodes/model";
+import { EpisodeModel } from "./episode";
 import Tags from "#core/tags";
 
 export default class Phase extends EpisodeModel {

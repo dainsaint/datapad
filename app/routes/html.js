@@ -1,13 +1,13 @@
 import express from "express";
 
-import communities from "#modules/communities/routes";
-import events, { tick as eventTick } from "#modules/events/routes";
-import games from "#modules/games/routes";
-import phases from "#modules/phases/routes";
-import players from "#modules/players/routes";
-import resources from "#modules/resources/routes";
-import episodes from "#modules/episodes/routes";
-import societies from "#modules/societies/routes";
+import communities from "#modules/communities/communities";
+import events, { tick as eventTick } from "#routes/html/events";
+import games from "#routes/html/games";
+import phases from "#modules/phases/phases";
+import players from "#routes/html/players";
+import resources from "#routes/html/resources";
+import episodes from "#routes/html/episodes";
+import societies from "#routes/html/societies";
 import pages from "#modules/pages/routes";
 
 const htmlRouter = express.Router();
