@@ -3,6 +3,12 @@
   "id": "iYi1c0yR",
   "name": "A Sample Episode",
   "date": "2024-12-31T16:09:04.287-05:00",
+  "scheduledTime": {
+    "s": "2024-12-31T16:09:04.299-05:00",
+    "e": "2024-12-31T21:09:04.299-05:00",
+    "invalid": null,
+    "isLuxonInterval": true
+  },
   "game": {
     "_type": "Game",
     "id": "n7Jru4dj",
@@ -21,6 +27,17 @@
       "name": "Venerable Elders",
       "voice": "leader",
       "resources": [
+        {
+          "_type": "Resource",
+          "id": "U_LCB8aG",
+          "episode": "iYi1c0yR",
+          "name": "Big Rock",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
         {
           "_type": "Resource",
           "id": "AfdgeFeg",
@@ -44,19 +61,7 @@
       "episode": "iYi1c0yR",
       "name": "Disaffected Youth",
       "voice": "people",
-      "resources": [
-        {
-          "_type": "Resource",
-          "id": "U_LCB8aG",
-          "episode": "iYi1c0yR",
-          "name": "Big Rock",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        }
-      ],
+      "resources": [],
       "tags": {
         "_type": "Tags",
         "value": []
@@ -97,7 +102,7 @@
       "status": "paused",
       "round": 0,
       "duration": 1200,
-      "timeElapsed": 4.005,
+      "timeElapsed": 16.014999999999997,
       "tags": {
         "_type": "Tags",
         "value": []
@@ -109,8 +114,8 @@
         "isLuxonInterval": true
       },
       "actualTime": {
-        "s": "2024-12-31T16:12:40.409-05:00",
-        "e": "2024-12-31T16:32:40.409-05:00",
+        "s": "2025-01-05T10:39:33.870-05:00",
+        "e": "2025-01-05T10:59:33.870-05:00",
         "invalid": null,
         "isLuxonInterval": true
       }
@@ -616,7 +621,7 @@
       "id": "S8GfypoA",
       "episode": "iYi1c0yR",
       "name": "Ten Thousand Islands",
-      "archetype": "the curious",
+      "archetype": "the aesthetic",
       "planet": "Jorun",
       "communities": [
         {
@@ -626,6 +631,17 @@
           "name": "Venerable Elders",
           "voice": "leader",
           "resources": [
+            {
+              "_type": "Resource",
+              "id": "U_LCB8aG",
+              "episode": "iYi1c0yR",
+              "name": "Big Rock",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
             {
               "_type": "Resource",
               "id": "AfdgeFeg",
@@ -649,19 +665,7 @@
           "episode": "iYi1c0yR",
           "name": "Disaffected Youth",
           "voice": "people",
-          "resources": [
-            {
-              "_type": "Resource",
-              "id": "U_LCB8aG",
-              "episode": "iYi1c0yR",
-              "name": "Big Rock",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            }
-          ],
+          "resources": [],
           "tags": {
             "_type": "Tags",
             "value": []
@@ -674,7 +678,7 @@
       "id": "qK9CQui6",
       "episode": "iYi1c0yR",
       "name": "Test Society",
-      "archetype": "the enterprise",
+      "archetype": "the mighty",
       "planet": "Earth",
       "communities": [
         {
@@ -710,11 +714,5 @@
     "value": [
       "active"
     ]
-  },
-  "scheduledTime": {
-    "s": "2024-12-31T16:09:04.299-05:00",
-    "e": "2024-12-31T21:09:04.299-05:00",
-    "invalid": null,
-    "isLuxonInterval": true
   }
 }

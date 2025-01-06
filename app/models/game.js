@@ -1,5 +1,6 @@
-import Model from "./model.js";
-import Tags from "../core/tags.js";
+import Tags from "#core/tags";
+import Model from "#database/model";
+
 
 export default class Game extends Model {
 

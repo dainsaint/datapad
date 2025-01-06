@@ -1,5 +1,6 @@
-import { secondsToTime } from "../../core/utils.js";
-import Phase from "../../models/phase.js";
+import { secondsToTime } from "#core/utils"
+import Phase from "#models/phase"
+
 
 export default function PhaseTime({ phase = new Phase() } = {}) {
   return `

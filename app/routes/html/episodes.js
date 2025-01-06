@@ -1,7 +1,8 @@
-import express from "express";
 import { body, matchedData, validationResult } from "express-validator";
-import Episode from "../../models/episode.js";
 import { DateTime, Duration, Interval } from "luxon";
+import { EpisodeTimeInput } from "#views/episodes/create";
+import Episode from "#models/episode";
+import express from "express";
 
 const episodes = express.Router();
 
@@ -14,6 +15,16 @@ const episodes = express.Router();
 
 episodes.get("/episodes/create", (req, res) => {
   res.render(`episodes/create`, { layout: "none" });
+});
+
+episodes.post("/episodes/create/time", (req, res) => {
+  const { date, time, duration } = req.body;
+
+  res.send( EpisodeTimeInput({
+    date: DateTime.fromISO(date),
+    time: DateTime.fromISO(time),
+    duration
+  }))
 });
 
 episodes.post("/episodes",

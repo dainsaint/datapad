@@ -1,11 +1,11 @@
 import { DateTime } from "luxon";
-import Community, { CommunityVoice } from "../models/community.js";
-import Game from "../models/game.js";
-import Phase from "../models/phase.js";
-import Player from "../models/player.js";
-import Resource from "../models/resource.js";
-import Episode from "../models/episode.js";
-import Society, { SocietyArchetype } from "../models/society.js";
+import Community, { CommunityVoice } from "#models/community";
+import Episode from "#models/episode";
+import Game from "#models/game";
+import Phase from "#models/phase";
+import Player from "#models/player";
+import Resource from "#models/resource";
+import Society, { SocietyArchetype } from "#models/society";
 
 export function populateDummyData() {
 
@@ -82,10 +82,6 @@ export function populateDummyData() {
   });
 
   episode.game = game;
-
-  // const datastore = Datastore({ root: "datastore-two/"} );
-  // const filename = datastore.getFilename( {type: "Episode", id: episode.id} );
-  // datastore.save( filename, episode );
 
   episode.save();
 }

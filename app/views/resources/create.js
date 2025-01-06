@@ -1,28 +1,33 @@
-import { map } from "../../core/utils.js"
+import { html } from "#core/utils";
 
 export default function ResourceCreate({ episode, society }) {
   const current = society;
-  return `
-    <form class="stack" hx-post=${ episode.toURL("/resources") }>
-      <h1>Create a new resource</h1>
-      <p class="text">Enter a name for this resource</p>
-      <label for="name">Name</label>
-      <input autofocus name="name" placeholder="New Resource" />
-      <label for="communityId">Community</label>
+  return html`
+    <form class="stack" hx-post="${ episode.toURL('/resources') }">
+      <header>
+        <h1>Create a new resource</h1>
+      </header>
 
-      <select name="communityId">
-      ${ map( episode.societies, society => {
-        return `
-          <optgroup label="${ society.name }">
-            ${ map( society.communities, ( community, i ) => `<option value="${ community.id }" ${ current == society.id && i == 0 ? "selected" : ""}>${community.name}</option>`) }
-          </optgroup>
-        `
-      } ) }
-      </select>
-      <div class="layout-horizontal">
+      <article class="stack">
+        <label for="name">Name</label>
+        <input autofocus name="name" placeholder="New Resource" />
+        <label for="communityId">Community</label>
+
+        <select name="communityId">
+        ${ episode.societies.map( society => html`
+            <optgroup label="${ society.name }">
+              ${ society.communities.map(( community, i ) => 
+                html`<option value="${ community.id }" ${{ selected: i == 0 && current == society.id }}>${community.name}</option>`
+              )}
+            </optgroup>
+        `)}
+        </select>
+      </article>
+
+      <footer class="layout-horizontal">
         <button type="submit">+ New Resource</button>
         <button type="button" value="cancel">Cancel</button>
-      </div>
+      </footer>
     </form>
   `;
 }

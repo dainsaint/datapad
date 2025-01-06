@@ -1,5 +1,6 @@
+import Ledger from "#database/ledger";
 import express from "express";
-import Ledger from "../../models/ledger.js";
+
 
 const games = express.Router();
 
@@ -18,7 +19,7 @@ games.get("/games/:view?", (req, res, next) => {
 });
 
 games.get("/games/:id/:view?", (req, res, next) => {
-  const { episodeId, view = "overview"} = req.params;
+  const { id, view = "overview"} = req.params;
   const game = Ledger.getGameById(id);
   res.render(`games/${view}`, { game });
 });

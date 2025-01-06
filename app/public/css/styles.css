@@ -47,7 +47,7 @@ input, input[type="date"], input[type="time"], select {
   width: 100%;
 }
 
-input:invalid {
+input:user-invalid {
   border-color: var(--color-error);
 }
 
@@ -300,26 +300,14 @@ button {
 
 
 dialog {
-  display: none;
-
-  opacity: 0;
-  pointer-events: none;
   background: var(--color-bg);
-  /* width: 650px; */
-  width: 100vw;
   border: none;
-  /* margin-top: 1rem; */
-  translate: 0 100%;
-  transition: translate .2s ease-in-out;
-  margin-block-end: 0;
-
-  /* height: 100vh; */
+  /* margin-block-end: 0; */
+  /* min-height: 50vh; */
+  width: 650px;
 
   &[open] {
-    display: block;
-    opacity: 1;
-    translate: 0 0;
-    pointer-events: revert;
+    animation: slideIn 0.2s forwards;
   }
 
   &::backdrop {
@@ -330,6 +318,11 @@ dialog {
   &[open]::backdrop {
     animation: fadeIn 0.2s forwards;
   }
+}
+
+@keyframes slideIn {
+  0%{ translate: 0% 100% }
+  100%{ translate: 0 0 }
 }
 
 @keyframes fadeIn{

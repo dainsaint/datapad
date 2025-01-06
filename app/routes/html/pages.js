@@ -1,7 +1,5 @@
 import express from "express";
-import Ledger from "../../models/ledger.js";
-import App from "../../views/layouts/app.js";
-import Home from "../../views/pages/home.js";
+import Ledger from "#database/ledger";
 
 const pages = express.Router();
 
@@ -13,8 +11,7 @@ pages.get("/", (req, res) => {
   const games = Ledger.games;
   const episodes = Ledger.episodes;
 
-  //TODO: Design the actual landing page: https://github.com/dainsaint/datapad/issues/39
-  res.send(App(Home({ games, episodes })));
+  res.render("pages/home", { games, episodes, layout: "app" });
 });
 
 export default pages;

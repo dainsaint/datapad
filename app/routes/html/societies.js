@@ -1,8 +1,9 @@
 import express from "express";
-import Episode from "../../models/episode.js";
-import Society from "../../models/society.js";
+import Episode from "#models/episode";
+import Society from "#models/society";
 
-import { broadcast } from "./events.js";
+import { broadcast } from "#routes/html/events";
+import { body, matchedData } from "express-validator";
 
 const societies = express.Router();
 
@@ -60,12 +61,14 @@ societies.get("/episodes/:episodeId/societies/:societyId/:view?", (req, res, nex
   res.render(`societies/${view}`, { society, layout: "none" });
 });
 
-societies.put("/episodes/:episodeId/societies/:societyId", (req, res, next) => {
+societies.put("/episodes/:episodeId/societies/:societyId", body("name").trim(), (req, res, next) => {
   const { episodeId, societyId } = req.params;
 
   const episode = Episode.load(episodeId);
   const society = episode.getSocietyById(societyId);
-  society.update( req.body );
+  const data = { ...req.body, ...matchedData(req) }
+
+  society.update( data );
   episode.save();
 
   const currentUrl = req.get("hx-current-url");

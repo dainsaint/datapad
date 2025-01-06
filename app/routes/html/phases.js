@@ -1,5 +1,6 @@
+import Episode from "#models/episode";
 import express from "express";
-import Episode from "../../models/episode.js";
+
 
 const phases = express.Router();
 

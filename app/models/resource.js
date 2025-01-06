@@ -1,5 +1,5 @@
-import Tags from "../core/tags.js";
-import EpisodeModel from "./episode-model.js";
+import Tags from "#core/tags";
+import { EpisodeModel } from "#models/episode";
 
 export default class Resource extends EpisodeModel {
   name = "";

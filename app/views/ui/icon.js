@@ -10,3 +10,20 @@ export default function Icon (name) {
   }
 
 }
+
+Icon.forArchetype = function (archetype) {
+  const lookup = {
+    "the aesthetic": "aesthetic",
+    "the curious": "curious",
+    "the enterprise": "enterprise",
+    "the faithful": "faithful",
+    "the grounded": "grounded",
+    "the intrepid": "intrepid",
+    "the mighty": "mighty",
+    "the scholars": "scholars",
+  };
+
+  const name = lookup[archetype.toLowerCase()] || "spop";
+
+  return Icon(name);
+};

@@ -1,22 +1,22 @@
-import { map, pluralize } from "../../core/utils.js";
-import Icon from "../ui/icon.js";
+import { html, pluralize } from "#core/utils";
+import Icon from "#views/ui/icon";
 
 export default function Home ({ games = new Array(), episodes = new Array() }) {
-  return `
+  return html`
     <main id="home">
       <div class="top">
         ${Icon("spop")}
         <div>Space Opera Datapad v0.1-alpha</div>
       </div>
 
+      
+
       <div class="content stack">
         <details>
           <summary><h2>Load Episode</h2></summary>
           <ul>
-          ${map(
-            episodes,
-            (episode) =>
-              `<li><a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a></li>`
+          ${ episodes.map( (episode) =>
+            html`<li><a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a></li>`
           )}
           </ul>
         </details>
@@ -26,16 +26,23 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
         <details>
           <summary><h2>View Games</h2></summary>
           <ul>
-          ${map(
-            games,
-            (game) =>
-              `<li><a href="${game.toURL()}">${game.name} • ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}</a></li>`
+          ${games.map( (game) =>
+            html`<li><a href="${game.toURL("/overview")}">${game.name} • ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}</a></li>`
           )}
           </ul>
         </details>  
       </div>
     </main>
-    <style>
+
+    ${ styles() }
+  `;
+}
+
+
+//todo -> get this in the head where it belongs, or decompose
+export function styles() {
+  return html`
+  <style>
       #home {
         --color-bg: black;
         --color-text: white;
@@ -113,5 +120,5 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
       }
 
     </style>
-  `;
+  `
 }

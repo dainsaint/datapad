@@ -1,11 +1,12 @@
-import { map } from "../../core/utils.js";
-import Ledger from "../../models/ledger.js";
-import Episode from "../../models/episode.js";
+import { html } from "#core/utils";
+import Ledger from "#database/ledger";
+import Episode from "#models/episode";
 
-export default function SessionEdit({ episode = new Episode() } = {}) {
+
+export default function EpisodeEdit({ episode = new Episode() } = {}) {
   const games = Ledger.games;
   
-  return `
+  return html`
     <form hx-post="${episode.toURL()}" class="stack">
       Other info about the episode timing goes here. 
       <li>This should be a form</li>
@@ -18,7 +19,7 @@ export default function SessionEdit({ episode = new Episode() } = {}) {
       <label for="game">Game (Optional)</label>
       <input list="games-available" name="game" />
       <datalist id="games-available">
-        ${map( games, (game) => `<option value=${game.id}>${game.name}</option>`)}
+        ${ games.map( game => `<option value=${game.id}>${game.name}</option>`) }
       </datalist>
 
       <label for="date">Date</label>
@@ -32,7 +33,7 @@ export default function SessionEdit({ episode = new Episode() } = {}) {
 
         <div>
           <label for="end">Scheduled End</label>
-          <input name="scheduleTime[e]" type="time" value="${ episode.scheduledTime.end?.toISOTime() }"/>
+          <input name="scheduledTime[e]" type="time" value="${ episode.scheduledTime.end?.toISOTime() }"/>
         </div>
       </div>
 

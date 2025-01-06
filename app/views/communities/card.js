@@ -1,9 +1,8 @@
-import { map } from "#core/utils";
+import { html } from "#core/utils";
 import Community from "#models/community";
-import ResourceCard from "#views/resources/card";
 
 export default function CommunityCard({ community = new Community() } = {}) {
-  return `
+  return html`
     <div hx-get="${ community.toURL('/card') }" hx-trigger="sse:resources, sse:societies">
       <form 
         id="community-card-${community.id}" 
@@ -17,9 +16,27 @@ export default function CommunityCard({ community = new Community() } = {}) {
         </header>
 
         <div class="grid-three" data-drop-target>
-          ${ map(community.resources, resource => ResourceCard({ resource })) }
+          ${ community.resources.map(resource => CommunityResourceCard({ resource })) }
         </div>
       </form>
     </div>
   `;
+}
+
+export function CommunityResourceCard({ resource }) {
+  return html`
+    <a id="resource-card-${resource.id}" 
+      class="card color-contrast" 
+      draggable="true" 
+
+      hx-get="${resource.toURL('/edit')}"
+      hx-target="#dialog"
+      hx-trigger="click"
+      
+      data-draggable="[data-droppable]"
+      data-tags="${resource.tags.toList()}">
+      <h3>${resource.name}</h3>
+      <input type="hidden" name="resourceIds[]" value="${resource.id}"/>
+    </a>
+  `
 }

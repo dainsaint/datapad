@@ -1,38 +1,41 @@
-import { iconForArchetype, map } from "../../core/utils.js";
-import SocietyPanel from "../societies/panel.js";
-import SessionLayout from "./parts/layout.js";
-import Icon from "../ui/icon.js";
-import Episode from "../../models/episode.js";
+import { html } from "#core/utils";
+import SocietyPanel from "#views/societies/panel";
+import EpisodeLayout from "#views/episodes/components/layout";
+import Episode from "#models/episode";
+import Icon from "#views/ui/icon";
 
-export default function SessionFacilitator ({ episode = new Episode(), societyId = undefined } = {}) {
+export default function EpisodeFacilitator ({ episode = new Episode(), societyId = undefined } = {}) {
   const currentSociety = societyId ? episode.getSocietyById( societyId ) : episode.societies.at(0);
-  const content = `
+  const content = html`
     <nav class="toolbar" style="background: var(--color-dark)">
       <ul class="layout-row">
-        ${map(episode.societies, (society) =>
+        ${ episode.societies.map( (society) =>
           SocietyToolbarLink(episode, society, society == currentSociety)
         )}
       </ul>
     </nav>
       
-    ${
-      currentSociety
-        ? SocietyPanel({ society: currentSociety })
-        : `
-        <main class="content stack-loose">
-          <h1>No Societies Yet</h1>
-          <button hx-get="${episode.toURL("/societies/create")}" hx-target="#dialog">+ Create a new society</button>
-        </main>
-        `
-    } 
+    ${ currentSociety ? SocietyPanel({ society: currentSociety }) : NoSocieties({episode}) }
   `;
-  return SessionLayout(episode, content);
+
+  return EpisodeLayout(episode, content);
 }
 
 function SocietyToolbarLink(episode, society, isActive) {
-  return `
+  return html`
     <li>
-      <a hx-boost="true" class="${isActive ? 'active' : ''}" href="${ episode.toURL('/facilitator/' + society.id) }">${Icon(iconForArchetype(society.archetype))}</a>
+      <a hx-boost="true" class="${isActive && 'active'}" href="${ episode.toURL('/facilitator/' + society.id) }">
+        ${Icon.forArchetype(society.archetype)}
+      </a>
     </li>
+  `;
+}
+
+function NoSocieties({episode}) {
+  return html`
+    <main class="content stack-loose">
+      <h1>No Societies Yet</h1>
+      <button hx-get="${episode.toURL('/societies/create')}" hx-target="#dialog">+ Create a new society</button>
+    </main>
   `;
 }

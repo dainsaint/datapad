@@ -1,15 +1,17 @@
-import Episode from "../../../models/episode.js";
+import { html } from "#core/utils";
+import Episode from "#models/episode";
+import Icon from "#views/ui/icon";
 import { request } from "../../../app.js";
-import Icon from "../../ui/icon.js";
 
-export default function SessionToolbar({ episode = new Episode() } = {}) {
+
+export default function EpisodeToolbar({ episode = new Episode() } = {}) {
   const getActiveClass = (href) => {
     if( href != "/" && request.path.includes(href) )
       return 'active'
     else
       return '';
   }
-  return `
+  return html`
     <nav class="toolbar color-contrast" hx-boost="true" hx-push-url="true">
       <ul class="layout-column">
         <li><a id="nav-link-home" class="${ getActiveClass('/') }" href="/">${Icon("spop")}</a></li>

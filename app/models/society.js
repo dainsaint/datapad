@@ -1,4 +1,4 @@
-import EpisodeModel from "./episode-model.js";
+import { EpisodeModel } from "#models/episode";
 
 export default class Society extends EpisodeModel {
   name = "";

@@ -1,8 +1,9 @@
-import Episode from "../../models/episode.js";
+import { html } from "#core/utils";
+import Episode from "#models/episode";
 
 //figure out the society/episode jawn here...
 export default function SocietyCreate({ episode = new Episode()} = {}) {
-  return `
+  return html`
     <h1>Create a new society</h1>
     <p class="text">Enter a name for this new society, and select its archetype.</p>
 

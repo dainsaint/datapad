@@ -1,9 +1,8 @@
 import { DateTime, Duration, Interval } from "luxon";
-import Datastore from "../database/datastore.js";
-import Model from "./model.js";
-import Tags from "../core/tags.js";
-import Ledger from "./ledger.js";
-import { PhaseStatus } from "./phase.js";
+import Datastore from "#database/datastore";
+import Model from "#database/model";
+import Tags from "#core/tags";
+import Ledger from "#database/ledger";
 import Game from "#models/game";
 
 const datastore = new Datastore();
@@ -11,6 +10,7 @@ const datastore = new Datastore();
 export default class Episode extends Model {
   name = ""
   date = DateTime.now()
+  scheduledTime = Interval.after(DateTime.now(), Duration.fromObject({hours: 5}))
   game = Game.NONE
   communities = []
   phases = []
@@ -18,8 +18,6 @@ export default class Episode extends Model {
   resources = []
   societies = []
   tags = new Tags()
-
-  scheduledTime = Interval.after(DateTime.now(), Duration.fromObject({hours: 5}))
 
   static #episodes = new Map();
 
@@ -57,7 +55,7 @@ export default class Episode extends Model {
   getSocietyById = this.#getById("societies")
 
   getActivePhases() {
-    return this.phases.filter((phase) => phase.status !== PhaseStatus.COMPLETE);
+    return this.phases.filter((phase) => phase.isComplete)
   }
 
   getAllResources() {
@@ -73,7 +71,7 @@ export default class Episode extends Model {
   }
 
   save() {
-    const filename = datastore.getFilename({ type: "Episode", id: this.id});
+    const filename = datastore.getFilename({ type: "episodes", id: this.id});
     datastore.save(filename, this);
     Ledger.updateEpisode(this);
   }
@@ -87,20 +85,21 @@ export default class Episode extends Model {
       return this.#episodes.get(id);
     }
 
-    const filename = datastore.getFilename({ type: "Episode", id });
+    const filename = datastore.getFilename({ type: "episodes", id });
     const episode = datastore.load(filename);
     this.#episodes.set(id, episode);
     return episode;
   };
 };
 
-export class EpisodeModel extends Model {
-  episode;
 
-  constructor({ episode = "" }) {
-    super();
-    this.episode = episode;
-  }
+export function validate() {
+
+}
+
+
+export class EpisodeModel extends Model {
+  episode = "";
 }
 
 export const EpisodeTags = {

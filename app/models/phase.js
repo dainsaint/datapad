@@ -1,9 +1,8 @@
 import { DateTime, Duration, Interval } from "luxon";
-import Tags from "../core/tags.js";
-import EpisodeModel from "./episode-model.js";
+import { EpisodeModel } from "#models/episode";
+import Tags from "#core/tags";
 
 export default class Phase extends EpisodeModel {
-  
   name = "New Phase"
   status = PhaseStatus.IDLE;
   round = 0;
@@ -25,6 +24,10 @@ export default class Phase extends EpisodeModel {
 
   get isPlaying() {
     return this.status === PhaseStatus.PLAYING;
+  }
+
+  get isComplete() {
+    return this.status === PhaseStatus.COMPLETE;
   }
 
   startPhase() {
