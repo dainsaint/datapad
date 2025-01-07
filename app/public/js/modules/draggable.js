@@ -1,14 +1,15 @@
 export default function initDraggables() {
+
   //DRAG
   const handleDrag = (event) => {
-    if (!event.target.matches("[data-draggable]")) return;
     const draggable = event.target;
 
     switch (event.type) {
       case "dragstart":
         draggable.classList.add("is-dragging");
-        const dt = event.dataTransfer;
-        dt.setData("text/plain", draggable.id);
+        event.dataTransfer.effectAllowed = "all";
+        event.dataTransfer.setData("text/html", draggable.innerHTML);
+        console.log( event.dataTransfer );
         break;
 
       case "dragend":
@@ -20,33 +21,49 @@ export default function initDraggables() {
   // DROP
   const handleDrop = (event) => {
     const query = event.srcElement.dataset.draggable || "[data-droppable]";
-    const droppable = event.target.closest(query);
-    if (!droppable) return;
+    const matches = event.target.matches(query);
+    if (!matches) return false;
+
+    const droppable = event.target;
 
     switch (event.type) {
       case "dragenter":
-      case "dragover":
-        droppable.classList.add("is-dropping");
+        droppable.classList.add("is-dropping"); 
         event.preventDefault();
+        event.dataTransfer.dropEffect = droppable.dataset.dropeffect || "move";
+        console.log( event.dataTransfer );
+        break;
+
+      case "dragover":
+        event.preventDefault();
+        console.log( event.dataTransfer );
+        return false;
         break;
 
       case "dragleave":
         droppable.classList.remove("is-dropping");
         event.preventDefault();
+                console.log( event.dataTransfer );
         break;
 
       case "drop":
-        droppable.classList.remove("is-dropping");
+        event.stopPropagation();
+        event.preventDefault();
+        console.log( event.dataTransfer );
 
+        droppable.classList.remove("is-dropping");
         const draggableId = event.dataTransfer.getData("text/plain");
         const draggable = document.getElementById(draggableId);
-        const receivable = droppable.querySelector(droppable.dataset.droppable) || droppable;
+        const receivable = droppable.dataset.droppable && droppable.querySelector(droppable.dataset.droppable) || droppable;
         
         if (receivable.contains(draggable)) 
           break;
 
         const origin = draggable?.parentElement;
-        receivable.appendChild(draggable);
+        // const clone = draggable.cloneNode(true);
+        // receivable.appendChild(clone);
+
+ 
 
         origin?.dispatchEvent(new CustomEvent("dropcomplete", { bubbles: true }));
         draggable?.dispatchEvent(new CustomEvent("dropcomplete", { bubbles: true }));
@@ -55,10 +72,20 @@ export default function initDraggables() {
     }
   };
 
-  document.body.addEventListener("dragstart", handleDrag);
-  document.body.addEventListener("dragend", handleDrag);
-  document.body.addEventListener("dragenter", handleDrop);
-  document.body.addEventListener("dragover", handleDrop);
-  document.body.addEventListener("dragleave", handleDrop);
-  document.body.addEventListener("drop", handleDrop);
+  htmx.onLoad( (element) => {
+    element.querySelectorAll("[data-draggable]").forEach( node => {
+      node.addEventListener("dragstart", handleDrag);
+      node.addEventListener("dragend", handleDrag);
+    })
+
+    element.querySelectorAll("[data-droppable]").forEach( node => {
+      node.addEventListener("dragenter", handleDrop);
+      node.addEventListener("dragover", handleDrop);
+      node.addEventListener("dragleave", handleDrop);
+      node.addEventListener("drop", handleDrop);
+    })
+  })
+
+
 };
+

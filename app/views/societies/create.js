@@ -24,7 +24,7 @@ export default function SocietyCreate({ episode = new Episode()} = {}) {
         <option value="the scholars">The Scholars</option>
       </select>
 
-      <div class="layout-horizontal">
+      <div class="layout-row gap-tight">
         <button type="submit">+ New Society</button>
         <button type="button" value="cancel">Cancel</button>
       </div>

@@ -91,7 +91,7 @@ class LedgerSingleton {
   }
 
   #indexEpisode(episode) {
-    const keys = ["communities", "phases", "players", "resources", "societies"];
+    const keys = ["actions", "communities", "phases", "players", "resources", "societies"];
 
     for (const key of keys) {
       this.#indexEpisodeCollection(episode.id, key, episode[key]);
@@ -102,11 +102,13 @@ class LedgerSingleton {
   getGameById = this.#getById("games");
   getPlayerById = this.#getById("players");
 
+  getEpisodeByActionId = this.#getEpisodeByModelId("actions");
   getEpisodeByCommunityId = this.#getEpisodeByModelId("communities");
   getEpisodeByPhaseId = this.#getEpisodeByModelId("phases");
   getEpisodeByPlayerId = this.#getEpisodeByModelId("players");
   getEpisodeByResourceId = this.#getEpisodeByModelId("resources");
   getEpisodeBySocietyId = this.#getEpisodeByModelId("societies");
+
 
   getActiveEpisode() {
     //TODO: Fix this doofer

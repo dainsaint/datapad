@@ -8,7 +8,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
   const currentSociety = societyId ? episode.getSocietyById( societyId ) : episode.societies.at(0);
   const content = html`
     <nav class="toolbar" style="background: var(--color-dark)">
-      <ul class="layout-row">
+      <ul>
         ${ episode.societies.map( (society) =>
           SocietyToolbarLink(episode, society, society == currentSociety)
         )}

@@ -7,6 +7,8 @@
   --color-text-active: white;
   --color-bg-active: black;
   --color-error: red;
+
+  --gap: 1rem;
 }
 
 body {
@@ -98,7 +100,7 @@ nav {
 
 [class*="grid"] {
   display: grid;
-  gap: 1rem;
+  gap: var(--gap);
 }
 
 .grid-two {
@@ -111,6 +113,18 @@ nav {
 
 .grid-four {
   grid-template-columns: repeat(4, 1fr);
+}
+
+[class*="gap"] {
+  gap: var(--gap);
+}
+
+.gap-tight {
+  --gap: .5rem;
+}
+
+.gap-loose {
+  --gap: 2rem;
 }
 
 .card {
@@ -237,6 +251,7 @@ a.card {
 .layout-row {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .layout-toolbar {
