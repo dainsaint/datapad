@@ -2,6 +2,7 @@ import { html } from "#core/utils";
 import Action from "#models/action";
 import Episode from "#models/episode";
 import Society from "#models/society";
+import Community from "#models/community";
 import SocietyInfo from "./components/info.js";;
 
 const societyPanelId = ( society ) => `society-panel-${society?.id}`;
@@ -42,34 +43,54 @@ export function ActionBuilder({ episode, society } = {}) {
   const actions = episode.actions.filter( action => action.society == society.id );
   
   return html`
-    <form hx-post="${episode.toURL(`/actions`)}">
-      <input type="hidden" name="societyId" value="${society.id}"/>
-      <button >+ New Action</button>
-    </form>
-
-    ${ actions.map( action => html`
-      <form class="layout-row gap">
-        <h2>Action</h2>
-        
-        <h3>We use</h3>
-
-        <div class="card" 
-          hx-patch="${ action.toURL() }" 
-          hx-trigger="dropcomplete"
-          data-dropeffect="link"
-          data-droppable>
-          //main resource  
-        </div>
-
-        <h3>We aid with</h3>
-
-        <div class="card">
-          //additional resource
-        </div>
-      
+    <section>
+      <form hx-post="${episode.toURL(`/actions`)}">
+        <input type="hidden" name="societyId" value="${society.id}" />
+        <button>+ New Action</button>
       </form>
-    `)}
-  `
+
+      ${actions.map(
+        (action) => html`
+          <h2>Action</h2>
+          <div id="action-test" class="layout-row gap">
+            <h3>We use</h3>
+
+            <div class="layout-column">
+              //main resource
+              <form
+                class="card"
+                data-sortable="action"
+                data-sortable-allow="action: move, resources: clone"
+                data-sortable-limit="1"
+                
+
+              >
+                ${
+                  action.resources.primary &&
+                  CommunityResourceCard({ resource: action.resources.primary })
+                }
+              </form>
+            </div>
+
+            <h3>We aid with</h3>
+
+            <div class="layout-column">
+              //additional resources
+              <form
+                class="card layout-row gap-tight"
+                data-sortable="action"
+                data-sortable-allow="action: move, resources: clone"
+              >
+                ${action.resources.additional.map((resource) =>
+                  CommunityResourceCard({ resource })
+                )}
+              </form>
+            </div>
+          </div>
+        `
+      )}
+    </section>
+  `;
 }
 
 
@@ -81,15 +102,13 @@ export function CommunityCard({ community = new Community() } = {}) {
         id="community-card-${community.id}" 
         class="card stack droppable"
         hx-patch="${ community.toURL() }"
-        hx-trigger="dropcomplete"
-        data-dropeffect="move"
-        data-droppable="[data-drop-target]">
+      >
         <header>
           <h2><a hx-get="${ community.toURL('/edit') }" hx-target="#dialog" hx-trigger="click">${community.name}</a></h2>
           <p class="subtitle">${community.voice}</h2>
         </header>
 
-        <div class="grid-three" data-drop-target>
+        <div class="grid-three" data-sortable="resources">
           ${ community.resources.map(resource => CommunityResourceCard({ resource })) }
         </div>
       </form>
@@ -101,16 +120,27 @@ export function CommunityResourceCard({ resource }) {
   return html`
     <a id="resource-card-${resource.id}" 
       class="card color-contrast" 
-      draggable="true" 
-
       hx-get="${resource.toURL('/edit')}"
       hx-target="#dialog"
       hx-trigger="click"
-      
-      data-draggable="[data-droppable]"
       data-tags="${resource.tags.toList()}">
       <h3>${resource.name}</h3>
       <input type="hidden" name="resourceIds[]" value="${resource.id}"/>
     </a>
   `
 }
+
+export function Deleteable({ content }) {
+  return html`
+    <div class="deletable">
+      x
+      ${ content }
+    </div>
+  `;
+}
+
+
+            // hx-post="${action.toURL("/primary")}"
+            // hx-trigger="sorted"
+            // hx-target="#action-builder"
+            // hx-swap="outerHTML"

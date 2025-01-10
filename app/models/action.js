@@ -22,11 +22,18 @@ export default class Action extends EpisodeModel {
   }
 
   setPrimaryResource(resource) {
+    const { additional } = this.resources;
+
     this.resources.primary = resource;
+
+    if( additional.includes(resource) )
+      additional.splice(additional.indexOf(resource), 1);
   }
 
   setAdditionalResources( resources ) {
     this.resources.additional = resources;
+    if( resources.includes(this.resources.primary) )
+      this.resources.primary = undefined;
   }
 
   toURL(append = "") {

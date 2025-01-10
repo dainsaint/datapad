@@ -89,6 +89,39 @@
                 "_type": "Tags",
                 "value": []
               }
+            },
+            {
+              "_type": "Resource",
+              "id": "HyqihBK9",
+              "episode": "iYi1c0yR",
+              "name": "sdfdsfds",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "M-yD8iMV",
+              "episode": "iYi1c0yR",
+              "name": "sdfdsfsd",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "EpIrqIe8",
+              "episode": "iYi1c0yR",
+              "name": "BARABARBARBAR",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
             }
           ],
           "tags": {
@@ -654,6 +687,61 @@
             "_type": "Tags",
             "value": []
           }
+        },
+        {
+          "_type": "Resource",
+          "id": "GMZnwOAC",
+          "episode": "iYi1c0yR",
+          "name": "alksndas",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "Jc05Te6W",
+          "episode": "iYi1c0yR",
+          "name": "asdkjasndas",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "HyqihBK9",
+          "episode": "iYi1c0yR",
+          "name": "sdfdsfds",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "M-yD8iMV",
+          "episode": "iYi1c0yR",
+          "name": "sdfdsfsd",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "EpIrqIe8",
+          "episode": "iYi1c0yR",
+          "name": "BARABARBARBAR",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
         }
       ],
       "societies": [
@@ -677,6 +765,39 @@
                   "id": "AfdgeFeg",
                   "episode": "iYi1c0yR",
                   "name": "Green Sludge",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "HyqihBK9",
+                  "episode": "iYi1c0yR",
+                  "name": "sdfdsfds",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "M-yD8iMV",
+                  "episode": "iYi1c0yR",
+                  "name": "sdfdsfsd",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "EpIrqIe8",
+                  "episode": "iYi1c0yR",
+                  "name": "BARABARBARBAR",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
@@ -749,7 +870,63 @@
             "value": []
           },
           "resources": {
-            "additional": []
+            "additional": [
+              {
+                "_type": "Resource",
+                "id": "AfdgeFeg",
+                "episode": "iYi1c0yR",
+                "name": "Green Sludge",
+                "relationship": "",
+                "tags": {
+                  "_type": "Tags",
+                  "value": []
+                }
+              },
+              {
+                "_type": "Resource",
+                "id": "HyqihBK9",
+                "episode": "iYi1c0yR",
+                "name": "sdfdsfds",
+                "relationship": "",
+                "tags": {
+                  "_type": "Tags",
+                  "value": []
+                }
+              },
+              {
+                "_type": "Resource",
+                "id": "AfdgeFeg",
+                "episode": "iYi1c0yR",
+                "name": "Green Sludge",
+                "relationship": "",
+                "tags": {
+                  "_type": "Tags",
+                  "value": []
+                }
+              },
+              {
+                "_type": "Resource",
+                "id": "AfdgeFeg",
+                "episode": "iYi1c0yR",
+                "name": "Green Sludge",
+                "relationship": "",
+                "tags": {
+                  "_type": "Tags",
+                  "value": []
+                }
+              },
+              {
+                "_type": "Resource",
+                "id": "HyqihBK9",
+                "episode": "iYi1c0yR",
+                "name": "sdfdsfds",
+                "relationship": "",
+                "tags": {
+                  "_type": "Tags",
+                  "value": []
+                }
+              }
+            ]
           },
           "society": "S8GfypoA",
           "roll": []
@@ -811,7 +988,12 @@
       "iYi1c0yR": [
         "AfdgeFeg",
         "i-hZuEkL",
-        "U_LCB8aG"
+        "U_LCB8aG",
+        "GMZnwOAC",
+        "Jc05Te6W",
+        "HyqihBK9",
+        "M-yD8iMV",
+        "EpIrqIe8"
       ],
       "LzOr_rGf": [],
       "IQLG8PYV": [],

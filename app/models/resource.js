@@ -21,6 +21,7 @@ export default class Resource extends EpisodeModel {
 }
 
 export const ResourceTag = {
+  USING: "using",
   EXHAUSTED: "exhausted",
   VITAL: "vital",
   TRANSFORMED: "transformed",
