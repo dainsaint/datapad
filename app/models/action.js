@@ -5,10 +5,7 @@ import { EpisodeModel } from "#models/episode";
 export default class Action extends EpisodeModel {
   tags = new Tags() 
   
-  resources = {
-    primary: undefined,
-    additional: []
-  }
+  resources = [];
   
   society
   emissary
@@ -21,19 +18,23 @@ export default class Action extends EpisodeModel {
     Object.assign(this, {society});
   }
 
-  setPrimaryResource(resource) {
-    const { additional } = this.resources;
-
-    this.resources.primary = resource;
-
-    if( additional.includes(resource) )
-      additional.splice(additional.indexOf(resource), 1);
+  setResources( resources ) {
+    this.resources = resources;
   }
 
-  setAdditionalResources( resources ) {
-    this.resources.additional = resources;
-    if( resources.includes(this.resources.primary) )
-      this.resources.primary = undefined;
+  removeResources( resources ) {
+    for( const resource of resources ) {
+      const index = this.resources.indexOf(resource);
+      if( index >= 0 )
+        this.resources.splice(index, 1);
+    }
+  }
+
+  get primaryResource () {
+    if( !Array.isArray(this.resources) )
+      this.resources = [];
+
+    return this.resources.at(0);
   }
 
   toURL(append = "") {

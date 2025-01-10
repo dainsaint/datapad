@@ -10,7 +10,7 @@ export async function delay( ms ) {
  * @param {*} defaultValue 
  * @returns 
  */
-export async function parseKVPString(kvpString, defaultValue = true) {
+export function parseKVPString(kvpString, defaultValue = true) {
   const lines = kvpString.trim().split(/\s*,\s*/);
   const pairs = lines.map((line) => line.split(/\s*:\s*/));
   const map = pairs.reduce((result, [key, value]) => {

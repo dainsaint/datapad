@@ -6,18 +6,24 @@ import { ActionBuilder } from "#views/societies/panel";
 
 const actions = express.Router();
 
+actions.get("/episodes/:episodeId/actions", (req, res, next) => {
+  const { episodeId } = req.params;
+  const { societyId } = req.query;
+
+  const episode = Episode.load(episodeId);
+
+  res.send(ActionBuilder({ episode, societyId }));
+});
+
+
 actions.post("/episodes/:episodeId/actions", (req, res, next) => {
   const { episodeId } = req.params;
   const { societyId } = req.body;
 
-  const episode = Episode.load(episodeId);
-  const society = episode.getSocietyById(societyId);
-  
+  const episode = Episode.load(episodeId);  
   const action = new Action({ society: societyId });
   episode.addAction(action);
 
-  console.log( action );
-  
   const currentUrl = req.get("hx-current-url");
   if (currentUrl) res.setHeader("HX-Location", currentUrl);
   
@@ -27,35 +33,28 @@ actions.post("/episodes/:episodeId/actions", (req, res, next) => {
   broadcast("actions");
 });
 
-actions.post("/episodes/:episodeId/actions/:actionId/primary", (req, res, next) => {
+
+actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next) => {
   const { episodeId, actionId } = req.params;
-  const { resourceIds } = req.body;
-  console.log( req.body );
-  // console.log('primary');
+  const { resourceIds = [] } = req.body;
+
   const episode = Episode.load(episodeId);
   const action = episode.getActionById(actionId);
-  const society = episode.getSocietyById(action.society);
-  // const resource = episode.getResourceById( resourceIds.at(0) );
+  const otherActions = episode.actions.filter( other => other != action && other.society == action.society );
 
-  // action.setPrimaryResource(resource);
-  // episode.save();
+  //Ensure unique
+  const resources = resourceIds
+    .filter( (id, i) => resourceIds.indexOf(id) == i )
+    .map( id => episode.getResourceById(id) );
 
-  res.send( ActionBuilder({ episode, society}) );
-});
-
-actions.post("/episodes/:episodeId/actions/:actionId/additional", (req, res, next) => {
-  const { episodeId, actionId } = req.params;
-  const { resourceIds } = req.body;
-  console.log("addtl");
-  const episode = Episode.load(episodeId);
-  const action = episode.getActionById(actionId);
-  const society = episode.getSocietyById(action.society);
-  const resources = resourceIds.map( id => episode.getResourceById(id) );
-
-  action.setAdditionalResources(resources);
+  action.setResources(resources);
+  otherActions.forEach( other => other.removeResources(resources) );
   episode.save();
 
-  res.send( ActionBuilder({ episode, society}) );
+  // res.send( ActionBuilder({ episode, society}) );
+  res.location(action.toURL());
+  res.sendStatus(201);
+  broadcast("actions");
 });
 
 

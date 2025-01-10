@@ -20,7 +20,7 @@ export default function SocietyPanel({ society = new Society()} = {}) {
         ${SocietyInfo({ society })}
       </header> 
 
-      ${ ActionBuilder({ episode, society }) }
+      ${ ActionBuilder({ episode, societyId: society.id }) }
 
       <div class="grid-three">
        ${society.communities.map( (community) => CommunityCard({ community }))}
@@ -39,54 +39,47 @@ export default function SocietyPanel({ society = new Society()} = {}) {
 }
 
 
-export function ActionBuilder({ episode, society } = {}) {
-  const actions = episode.actions.filter( action => action.society == society.id );
-  
+export function ActionBuilder({ episode, societyId } = {}) {
+  const actions = episode.actions.filter( action => action.society == societyId );
+
   return html`
-    <section>
-      <form hx-post="${episode.toURL(`/actions`)}">
-        <input type="hidden" name="societyId" value="${society.id}" />
-        <button>+ New Action</button>
-      </form>
-
+    <section
+      class="action-builder stack"
+      hx-get="${episode.toURL(`/actions?societyId=${societyId}`)}"
+      hx-trigger="sse:actions"
+    >
+      <h2>
+        Actions
+        <button 
+          name="societyId"
+          value="${societyId}" 
+          ${{ disabled: actions.length >= 2 }}
+          hx-post="${episode.toURL(`/actions`)}">+ New</button>
+      </h2>
       ${actions.map(
-        (action) => html`
-          <h2>Action</h2>
-          <div id="action-test" class="layout-row gap">
-            <h3>We use</h3>
+        (action, i) => html`
+          <form
+            class="layout-column layout-row gap"
+            data-sortable="action"
+            data-sortable-allow="action, resources: clone"
+            hx-post="${action.toURL("/resources")}"
+            hx-trigger="sorted"
+            hx-swap="none"
+          >
+            <h3 data-sortable-pinned>${i + 1}: We use</h3>
 
-            <div class="layout-column">
-              //main resource
-              <form
-                class="card"
-                data-sortable="action"
-                data-sortable-allow="action: move, resources: clone"
-                data-sortable-limit="1"
-                
+            ${action.resources.length >= 1
+              ? CommunityResourceCard({ resource: action.resources.at(0) })
+              : html`<span>//primary</span>`}
 
-              >
-                ${
-                  action.resources.primary &&
-                  CommunityResourceCard({ resource: action.resources.primary })
-                }
-              </form>
-            </div>
+            <h3 data-sortable-pinned>We aid with</h3>
 
-            <h3>We aid with</h3>
-
-            <div class="layout-column">
-              //additional resources
-              <form
-                class="card layout-row gap-tight"
-                data-sortable="action"
-                data-sortable-allow="action: move, resources: clone"
-              >
-                ${action.resources.additional.map((resource) =>
-                  CommunityResourceCard({ resource })
-                )}
-              </form>
-            </div>
-          </div>
+            ${action.resources.length > 1
+              ? action.resources
+                  .slice(1)
+                  .map((resource) => CommunityResourceCard({ resource }))
+              : html`<span>//addtl</span>`}
+          </form>
         `
       )}
     </section>
@@ -144,3 +137,37 @@ export function Deleteable({ content }) {
             // hx-trigger="sorted"
             // hx-target="#action-builder"
             // hx-swap="outerHTML"
+
+
+export function Test() {
+return html`
+  <form class="grid-two">
+    <fieldset>
+      <legend>Primary Resource</legend>
+      <label for="primary">None</label>
+      <input type="radio" name="primary" value="" />
+
+      <label for="primary">Resource 1</label>
+      <input type="radio" name="primary" value="93n7ahr" />
+
+      <label for="primary">Resource 2</label>
+      <input type="radio" name="primary" value="jhd27bd" />
+
+      <label for="primary">Resource 3</label>
+      <input type="radio" name="primary" value="8723hda" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Additional Resources</legend>
+      <label for="primary">Resource 1</label>
+      <input type="checkbox" name="primary" value="93n7ahr" />
+
+      <label for="primary">Resource 2</label>
+      <input type="checkbox" name="primary" value="jhd27bd" />
+
+      <label for="primary">Resource 3</label>
+      <input type="checkbox" name="primary" value="8723hda" />
+    </fieldset>
+  </form>
+`;
+}

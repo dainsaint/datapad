@@ -40,17 +40,6 @@
         },
         {
           "_type": "Resource",
-          "id": "HyqihBK9",
-          "episode": "iYi1c0yR",
-          "name": "sdfdsfds",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Resource",
           "id": "M-yD8iMV",
           "episode": "iYi1c0yR",
           "name": "sdfdsfsd",
@@ -83,7 +72,20 @@
       "episode": "iYi1c0yR",
       "name": "Disaffected Youth",
       "voice": "people",
-      "resources": [],
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "HyqihBK9",
+          "episode": "iYi1c0yR",
+          "name": "Youth Bomb",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "communityId": "nce-aLZE"
+        }
+      ],
       "tags": {
         "_type": "Tags",
         "value": []
@@ -107,6 +109,17 @@
             "value": []
           },
           "communityId": "dGJKx-lm"
+        },
+        {
+          "_type": "Resource",
+          "id": "iUm9S7rK",
+          "episode": "iYi1c0yR",
+          "name": "Another",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
         }
       ],
       "tags": {
@@ -662,12 +675,13 @@
       "_type": "Resource",
       "id": "HyqihBK9",
       "episode": "iYi1c0yR",
-      "name": "sdfdsfds",
+      "name": "Youth Bomb",
       "relationship": "",
       "tags": {
         "_type": "Tags",
         "value": []
-      }
+      },
+      "communityId": "nce-aLZE"
     },
     {
       "_type": "Resource",
@@ -685,6 +699,17 @@
       "id": "EpIrqIe8",
       "episode": "iYi1c0yR",
       "name": "BARABARBARBAR",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "iUm9S7rK",
+      "episode": "iYi1c0yR",
+      "name": "Another",
       "relationship": "",
       "tags": {
         "_type": "Tags",
@@ -713,17 +738,6 @@
               "id": "AfdgeFeg",
               "episode": "iYi1c0yR",
               "name": "Green Sludge",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            },
-            {
-              "_type": "Resource",
-              "id": "HyqihBK9",
-              "episode": "iYi1c0yR",
-              "name": "sdfdsfds",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -764,7 +778,20 @@
           "episode": "iYi1c0yR",
           "name": "Disaffected Youth",
           "voice": "people",
-          "resources": [],
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "HyqihBK9",
+              "episode": "iYi1c0yR",
+              "name": "Youth Bomb",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              },
+              "communityId": "nce-aLZE"
+            }
+          ],
           "tags": {
             "_type": "Tags",
             "value": []
@@ -798,6 +825,17 @@
                 "value": []
               },
               "communityId": "dGJKx-lm"
+            },
+            {
+              "_type": "Resource",
+              "id": "iUm9S7rK",
+              "episode": "iYi1c0yR",
+              "name": "Another",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
             }
           ],
           "tags": {
@@ -806,6 +844,15 @@
           }
         }
       ]
+    },
+    {
+      "_type": "Society",
+      "id": "FkMicAOv",
+      "episode": "iYi1c0yR",
+      "name": "Big Coffee",
+      "archetype": "the scholars",
+      "planet": "Earth",
+      "communities": []
     }
   ],
   "actions": [
@@ -817,65 +864,139 @@
         "_type": "Tags",
         "value": []
       },
-      "resources": {
-        "additional": [
-          {
-            "_type": "Resource",
-            "id": "AfdgeFeg",
-            "episode": "iYi1c0yR",
-            "name": "Green Sludge",
-            "relationship": "",
-            "tags": {
-              "_type": "Tags",
-              "value": []
-            }
-          },
-          {
-            "_type": "Resource",
-            "id": "HyqihBK9",
-            "episode": "iYi1c0yR",
-            "name": "sdfdsfds",
-            "relationship": "",
-            "tags": {
-              "_type": "Tags",
-              "value": []
-            }
-          },
-          {
-            "_type": "Resource",
-            "id": "AfdgeFeg",
-            "episode": "iYi1c0yR",
-            "name": "Green Sludge",
-            "relationship": "",
-            "tags": {
-              "_type": "Tags",
-              "value": []
-            }
-          },
-          {
-            "_type": "Resource",
-            "id": "AfdgeFeg",
-            "episode": "iYi1c0yR",
-            "name": "Green Sludge",
-            "relationship": "",
-            "tags": {
-              "_type": "Tags",
-              "value": []
-            }
-          },
-          {
-            "_type": "Resource",
-            "id": "HyqihBK9",
-            "episode": "iYi1c0yR",
-            "name": "sdfdsfds",
-            "relationship": "",
-            "tags": {
-              "_type": "Tags",
-              "value": []
-            }
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "M-yD8iMV",
+          "episode": "iYi1c0yR",
+          "name": "sdfdsfsd",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
           }
-        ]
+        }
+      ],
+      "society": "S8GfypoA",
+      "roll": []
+    },
+    {
+      "_type": "Action",
+      "id": "yNdIvJvK",
+      "episode": "iYi1c0yR",
+      "tags": {
+        "_type": "Tags",
+        "value": []
       },
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "iUm9S7rK",
+          "episode": "iYi1c0yR",
+          "name": "Another",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "i-hZuEkL",
+          "episode": "iYi1c0yR",
+          "name": "Amazing Suspenders",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "communityId": "dGJKx-lm"
+        }
+      ],
+      "society": "qK9CQui6",
+      "roll": []
+    },
+    {
+      "_type": "Action",
+      "id": "w6G9bwmH",
+      "episode": "iYi1c0yR",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      },
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "i-hZuEkL",
+          "episode": "iYi1c0yR",
+          "name": "Amazing Suspenders",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "communityId": "dGJKx-lm"
+        }
+      ],
+      "society": "qK9CQui6",
+      "roll": []
+    },
+    {
+      "_type": "Action",
+      "id": "PoY2bMiF",
+      "episode": "iYi1c0yR",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      },
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "AfdgeFeg",
+          "episode": "iYi1c0yR",
+          "name": "Green Sludge",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "EpIrqIe8",
+          "episode": "iYi1c0yR",
+          "name": "BARABARBARBAR",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "HyqihBK9",
+          "episode": "iYi1c0yR",
+          "name": "Youth Bomb",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "communityId": "nce-aLZE"
+        }
+      ],
+      "society": "S8GfypoA",
+      "roll": []
+    },
+    {
+      "_type": "Action",
+      "id": "GS9yU9g8",
+      "episode": "iYi1c0yR",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      },
+      "resources": [],
       "society": "S8GfypoA",
       "roll": []
     }

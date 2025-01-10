@@ -12,20 +12,21 @@ export default function initSortables() {
       const pull = (to, from) => {
         const fromKey = from.el.dataset.sortable;
         const allowString = to.el.dataset.sortableAllow || fromKey;
-        const allows = parseKVPString(allowString, "move");
+        const allows = parseKVPString(allowString);
 
         return allows[fromKey];
       };
 
-      const put = (to, from) => {
+      const put = (to, from) => {        
         const limit = to.el.dataset.sortableLimit
           ? parseInt(to.el.dataset.sortableLimit)
           : Infinity;
 
+          
         if (to.el.children.length >= limit) return false;
         
-        const allowString = to.el.dataset.sortableAccept || to.el.dataset.sortable;
-        const allows = parseKVPString(allowString, "move")
+        const allowString = to.el.dataset.sortableAllow || to.el.dataset.sortable;
+        const allows = parseKVPString(allowString)
         const allowed = Object.keys(allows);
 
         return allowed.length ? allowed.includes(from.el.dataset.sortable) : true;
@@ -33,6 +34,7 @@ export default function initSortables() {
 
       new Sortable(sortable, {
         group: { group, pull, put },
+        filter: "[data-sortable-pinned]",
         animation: 150,
         ghostClass: "is-dragging",
       });
