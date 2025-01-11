@@ -61,16 +61,35 @@ communities.get("/episodes/:episodeId/communities/:communityId/:view?", (req, re
   res.render(`communities/${view}`, {community, layout: "none"});
 });
 
+
 communities.patch("/episodes/:episodeId/communities/:communityId", (req, res) => {
   const { episodeId, communityId } = req.params;
-  const { societyId, resourceIds = [] } = req.body;
+
+  const episode = Episode.load(episodeId);
+  const community = episode.getCommunityById(communityId);
+  community.update( req.body );
+  episode.save();
+
+  const currentUrl = req.get("hx-current-url");
+  if (currentUrl) res.setHeader("HX-Location", currentUrl);
+  res.sendStatus(200);
+  broadcast("societies");
+});
+
+
+
+communities.post("/episodes/:episodeId/communities/:communityId/resources", (req, res) => {
+  const { episodeId, communityId } = req.params;
+  const { societyId, resourceIds } = req.body;
 
   const episode = Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
   
   //update resources
-  const resources = resourceIds.map(episode.getResourceById);
-  community.resources = resources;
+  if( resourceIds ) {
+    const resources = resourceIds.map(episode.getResourceById);
+    community.resources = resources;
+  }
 
   //update societies (encapsulate!)
   const prevSociety = episode.societies.find(society => society.getCommunityById(communityId));

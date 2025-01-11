@@ -1,0 +1,72 @@
+/* 
+** DIALOG
+*/
+
+dialog {
+  background: var(--color-bg);
+  border: none;
+  width: 650px;
+
+  &[open] {
+    animation: slideIn 0.2s forwards;
+  }
+
+  &::backdrop,
+  &+.backdrop {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &[open]::backdrop,
+  &+.backdrop {
+    animation: fadeIn 0.2s forwards;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    translate: 0% 100%
+  }
+
+  100% {
+    translate: 0 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+
+/* 
+** SORTABLE
+*/
+
+.is-sortable-ghost {
+  opacity: .5;
+}
+
+[data-sortable-bounds] {
+  position: relative;
+}
+
+[data-sortable-expand]::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  pointer-events: none;
+}
+
+.is-sorting [data-sortable-expand]::after {
+  pointer-events: all;
+}
+
+.card:has(.is-sortable-ghost) {
+  background: var(--color-mid);
+}

@@ -10,14 +10,11 @@ export default function AppLayout(props, children) {
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       
-      <link rel="stylesheet" href="/css/neusa/neusa.css"/>
-      <link rel="stylesheet" href="/css/reset.css"/> 
       <link rel="stylesheet" id="polyfill-styles" />
       <link rel="stylesheet" href="/css/styles.css" />
 
       <link rel="icon" href="/icons/spop.svg" type="image/svg"/>
       <link rel="apple-touch-icon" href="/icons/spop.svg"  type="image/svg"/>
-
 
       <script src="/js/vendor/htmx.min.js"></script>
       <script src="/js/vendor/htmx.sse.js"></script>

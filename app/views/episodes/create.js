@@ -12,19 +12,16 @@ export default function EpisodeCreate({}) {
       </header>
 
       <article class="stack">
+        <label for="name">Episode Name</label>
+        <input name="name" type="text" required/>
 
-      <label for="name">Episode Name</label>
-      <input name="name" type="text" required/>
-
-      ${ EpisodeTimeInput({ date: nextDefaultTime, time: nextDefaultTime, duration: {hours: 5, minutes: 0} }) }
-      
+        ${ EpisodeTimeInput({ date: nextDefaultTime, time: nextDefaultTime, duration: {hours: 5, minutes: 0} }) }
       </article>
 
       <footer>
         <button type="submit">+ New Episode</button>
         <button type="button" value="cancel">Cancel</button>
       </footer>
-
     </form>
   `;
 }
@@ -63,22 +60,11 @@ export function EpisodeTimeInput({ date, time, duration }) {
         </div>
       </div>
 
-      <div>
+      <p>
         This episode will take place ${date.toFormat("DDD")}
         from ${time.toFormat("h:mm a")}
         till ${endTime.toFormat("h:mm a")}.
-      </div>
-  </section>
+      </p>
+    </section>
   `
 }
-
-
-// <p class="error">${ errorsFor("name", errors) } </p>
-
-// <label for="game">Series (Optional)</label>
-// <input list="games-available" name="game" placeholder="No series selected"/>
-// <datalist id="games-available">
-//   ${map(games, (game) => `<option>${game.name}</option>`
-//   )}
-// </datalist>
-// <p class="text">This will create a new game called 'NLEEB'</p>

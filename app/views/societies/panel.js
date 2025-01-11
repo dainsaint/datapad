@@ -12,9 +12,11 @@ export default function SocietyPanel({ society = new Society()} = {}) {
     <main id="${societyPanelId(society)}" class="content stack-loose">
       <header>
         <div class="layout-row gap-tight" style="display: flex; gap: 1rem">
-          <h1>${society.name}</h1>
-
-          <button hx-get="${society.toURL('/edit')}" hx-target="#dialog">Edit</button>
+          <h1>
+            <a hx-get="${society.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">
+              ${society.name}
+            </a>
+          </h1>
         </div>
         ${SocietyInfo({ society })}
       </header> 
@@ -43,7 +45,8 @@ export function CommunityCard({ community = new Community() } = {}) {
       <form 
         id="community-card-${community.id}" 
         class="card stack droppable-target"
-        hx-patch="${community.toURL()}"
+        data-sortable-bounds
+        hx-post="${community.toURL("/resources")}"
       >
         <header>
           <h2>
@@ -52,7 +55,7 @@ export function CommunityCard({ community = new Community() } = {}) {
           </h2>
         </header>
 
-        <div class="grid-three droppable" data-sortable="resources">
+        <div class="grid-three" data-sortable="resources" data-sortable-expand>
           ${community.resources.map((resource) =>
             CommunityResourceCard({ resource })
           )}
@@ -133,6 +136,11 @@ export function ActionBuilder({ episode, societyId } = {}) {
     </section>
 
     <style>
+      .drop {
+        border: 2px dashed var(--color-text);
+        padding: 1rem;
+      }
+
       .drop-primary:has(+ .action-resource-card),
       .action-resource-card + .drop-primary {
         display: none;

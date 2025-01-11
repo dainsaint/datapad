@@ -1,15 +1,9 @@
-:root {
-  --color-dark: #939393;
-  --color-mid: #b2b2b2;
-  --color-light: #dcdcdc;
-  --color-text: black;
-  --color-bg: white;
-  --color-text-active: white;
-  --color-bg-active: black;
-  --color-error: red;
+@import url("./neusa/neusa.css");
+@import url("./reset.css");
+@import url("./layouts.css");
+@import url("./colours.css");
+@import url("./behaviours.css");
 
-  --gap: 1rem;
-}
 
 body {
   padding: 0px;
@@ -98,37 +92,8 @@ nav {
   padding: 1rem;
 }
 
-[class*="grid"] {
-  display: grid;
-  gap: var(--gap);
-}
-
-.grid-two {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid-three {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-four {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-[class*="gap"] {
-  gap: var(--gap);
-}
-
-.gap-tight {
-  --gap: .5rem;
-}
-
-.gap-loose {
-  --gap: 2rem;
-}
 
 .card {
-  display: block;
   --color-bg: var(--color-light);
   background: var(--color-bg);
   border: 1px solid var(--color-bg);
@@ -138,6 +103,7 @@ nav {
 }
 
 a.card {
+  display: flex;
   text-decoration: none;
   &:hover {
     border: 1px solid var(--color-text);
@@ -155,17 +121,8 @@ a.card {
   border-color: transparent;
 }
 
-.stack > * + *{
-  margin-top: 1rem;
-}
 
-.stack-tight > * + *{
-  margin-top: .5rem;
-}
 
-.stack-loose > * + *{
-  margin-top: 2rem;
-}
 
 .color-contrast {
   --color-bg: black;
@@ -241,27 +198,6 @@ a.card {
   }
 }
 
-/* LAYOUTS */
-
-.layout-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.layout-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.layout-toolbar {
-  display: grid;
-  grid-template-columns: 4rem 1fr;
-  width: 100%;
-  height: 100%;
-}
-
-
 
 
 
@@ -314,36 +250,6 @@ button {
 
 
 
-dialog {
-  background: var(--color-bg);
-  border: none;
-  /* margin-block-end: 0; */
-  /* min-height: 50vh; */
-  width: 650px;
-
-  &[open] {
-    animation: slideIn 0.2s forwards;
-  }
-
-  &::backdrop, & + .backdrop {
-    display: block;
-    background: rgba(0, 0, 0, 0.5);
-  }
-
-  &[open]::backdrop, & + .backdrop{
-    animation: fadeIn 0.2s forwards;
-  }
-}
-
-@keyframes slideIn {
-  0%{ translate: 0% 100% }
-  100%{ translate: 0 0 }
-}
-
-@keyframes fadeIn{
-  0%{ opacity: 0 }
-  100%{ opacity: 1 }
-}
 
 .hidden {
   display: none;
@@ -353,33 +259,10 @@ dialog {
   display: block;
 }
 
-[data-draggable] {
-  cursor: grab;
-}
-
-[data-draggable].is-dragging {
-  border: 1px solid red;
-}
-
-.card.is-dropping {
-  background: var(--color-mid);
-}
 
 body {
    background: black;
 }
-/* 
-.app-content {
-  transition: all .2s ease-in-out;
-}
-
-.app-content:has(dialog[open]) {
-  scale: .98; 
-  border-radius: 20px; 
-  overflow: hidden;
-  filter: blur(3px);
-} */
-
 
 .scrollable {
   max-height: 100%;
@@ -387,23 +270,8 @@ body {
 }
 
 
-/* body {
-  background: white;
-}
-
-.app-content {
-  background: none;
-  background: url("/images/bg.jpg") top left no-repeat;
-  backdrop-filter: blur(10px) brightness(30%);
-  color: white;
-  text-shadow: 0 0 20px #fff;
-} */
 
 
-.drop {
-  border: 2px dashed var(--color-text);
-  padding: 1rem;
-}
 
 .button-close {
   border-radius: 100%;
@@ -439,25 +307,5 @@ body {
   position: relative;
 }
 
-.is-sortable-ghost {
-  opacity: .5;
-} 
 
-.droppable-target {
-  position: relative;
-}
 
-.droppable::after {
-  content: "";
-  position: absolute;
-  inset: 0px;
-  pointer-events: none;
-}
-
-.is-dragging .droppable::after {
-  pointer-events: all;
-}
-
-.card:has(.is-sortable-ghost) {
-  background: var(--color-mid);
-}

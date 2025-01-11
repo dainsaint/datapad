@@ -64,7 +64,8 @@
       "tags": {
         "_type": "Tags",
         "value": []
-      }
+      },
+      "societyId": "S8GfypoA"
     },
     {
       "_type": "Community",
@@ -97,31 +98,7 @@
       "episode": "iYi1c0yR",
       "name": "Test Community",
       "voice": "leader",
-      "resources": [
-        {
-          "_type": "Resource",
-          "id": "i-hZuEkL",
-          "episode": "iYi1c0yR",
-          "name": "Amazing Suspenders",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "communityId": "dGJKx-lm"
-        },
-        {
-          "_type": "Resource",
-          "id": "iUm9S7rK",
-          "episode": "iYi1c0yR",
-          "name": "Another",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        }
-      ],
+      "resources": [],
       "tags": {
         "_type": "Tags",
         "value": []
@@ -715,6 +692,39 @@
         "_type": "Tags",
         "value": []
       }
+    },
+    {
+      "_type": "Resource",
+      "id": "uIPwuZNo",
+      "episode": "iYi1c0yR",
+      "name": "BLARGH",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "iHw6VQER",
+      "episode": "iYi1c0yR",
+      "name": "werqerq",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "jE62nIO5",
+      "episode": "iYi1c0yR",
+      "name": "sdfds",
+      "relationship": "",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
     }
   ],
   "societies": [
@@ -770,7 +780,8 @@
           "tags": {
             "_type": "Tags",
             "value": []
-          }
+          },
+          "societyId": "S8GfypoA"
         },
         {
           "_type": "Community",
@@ -806,44 +817,7 @@
       "name": "Test Society",
       "archetype": "the mighty",
       "planet": "Earth",
-      "communities": [
-        {
-          "_type": "Community",
-          "id": "dGJKx-lm",
-          "episode": "iYi1c0yR",
-          "name": "Test Community",
-          "voice": "leader",
-          "resources": [
-            {
-              "_type": "Resource",
-              "id": "i-hZuEkL",
-              "episode": "iYi1c0yR",
-              "name": "Amazing Suspenders",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              },
-              "communityId": "dGJKx-lm"
-            },
-            {
-              "_type": "Resource",
-              "id": "iUm9S7rK",
-              "episode": "iYi1c0yR",
-              "name": "Another",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            }
-          ],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        }
-      ]
+      "communities": []
     },
     {
       "_type": "Society",
@@ -852,7 +826,20 @@
       "name": "Big Coffee",
       "archetype": "the scholars",
       "planet": "Earth",
-      "communities": []
+      "communities": [
+        {
+          "_type": "Community",
+          "id": "dGJKx-lm",
+          "episode": "iYi1c0yR",
+          "name": "Test Community",
+          "voice": "leader",
+          "resources": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ]
     }
   ],
   "actions": [

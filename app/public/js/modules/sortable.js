@@ -41,10 +41,10 @@ export default function initSortables() {
         dragClass: "is-sortable-drag",
         forceFallback: true,
         onStart: () => {
-          document.body.classList.add("is-dragging");
+          document.body.classList.add("is-sorting");
         },
         onEnd: () => {
-          document.body.classList.remove("is-dragging");
+          document.body.classList.remove("is-sorting");
         },
       });
 
