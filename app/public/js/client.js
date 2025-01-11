@@ -1,8 +1,8 @@
-import initTabbables from "./modules/tabbable.js";
+import initPolyfills from "./modules/polyfills.js";
 import initSortables from "./modules/sortable.js";
 
 const init = () => {
-  // initTabbables();
+  initPolyfills();
   initSortables();
 };
 

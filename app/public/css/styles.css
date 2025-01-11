@@ -325,12 +325,12 @@ dialog {
     animation: slideIn 0.2s forwards;
   }
 
-  &::backdrop {
+  &::backdrop, & + .backdrop {
     display: block;
     background: rgba(0, 0, 0, 0.5);
   }
 
-  &[open]::backdrop {
+  &[open]::backdrop, & + .backdrop{
     animation: fadeIn 0.2s forwards;
   }
 }
