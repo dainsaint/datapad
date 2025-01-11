@@ -6,7 +6,7 @@ import { populateDummyData } from "./app/database/populate.js";
 registry.initialize();
 // populateDummyData();
 
-const serverPort = await getPort({ port: portNumbers(4000, 4100) });
+const serverPort = process.env.PORT || await getPort({ port: portNumbers(4000, 4100) });
 const server = new Server();
 
 server.start(serverPort);
