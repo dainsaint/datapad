@@ -17,6 +17,8 @@ export default class Episode extends Model {
   players = []
   resources = []
   societies = []
+  actions = []
+
   tags = new Tags()
 
   static #episodes = new Map();
@@ -42,12 +44,15 @@ export default class Episode extends Model {
     return (id) => this[key].find( element => element.id === id );
   }
 
+  addAction = this.#addTo("actions")
   addCommunity = this.#addTo("communities")
   addPhase = this.#addTo("phases")
   addPlayer = this.#addTo("players")
   addResource = this.#addTo("resources")
   addSociety = this.#addTo("societies")
+  
 
+  getActionById = this.#getById("actions")
   getCommunityById = this.#getById("communities")
   getPhaseById = this.#getById("phases")
   getPlayerById = this.#getById("players")

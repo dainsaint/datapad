@@ -1,9 +1,9 @@
 import initTabbables from "./modules/tabbable.js";
-import initDraggables from "./modules/draggable.js";
+import initSortables from "./modules/sortable.js";
 
 const init = () => {
   // initTabbables();
-  initDraggables();
+  initSortables();
 };
 
 document.addEventListener("DOMContentLoaded", init);

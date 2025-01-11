@@ -21,7 +21,7 @@ export default function CommunityEdit({ community }) {
         <option value="people" ${{selected: community.voice == "people"}}>Voice of the People</option>
         <option value="leader" ${{selected: community.voice == "leader"}}>Voice of the Leaders</option>
       </select>
-      <div class="layout-horizontal">
+      <div class="layout-row gap-tight">
         <button>~ Update Community</button>
         <button type="button" value="cancel">Cancel</button>
       </div>

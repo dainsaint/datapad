@@ -81,9 +81,9 @@
           "resources": [
             {
               "_type": "Resource",
-              "id": "U_LCB8aG",
+              "id": "AfdgeFeg",
               "episode": "iYi1c0yR",
-              "name": "Big Rock",
+              "name": "Green Sludge",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -92,9 +92,20 @@
             },
             {
               "_type": "Resource",
-              "id": "AfdgeFeg",
+              "id": "M-yD8iMV",
               "episode": "iYi1c0yR",
-              "name": "Green Sludge",
+              "name": "sdfdsfsd",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "EpIrqIe8",
+              "episode": "iYi1c0yR",
+              "name": "BARABARBARBAR",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
@@ -113,7 +124,20 @@
           "episode": "iYi1c0yR",
           "name": "Disaffected Youth",
           "voice": "people",
-          "resources": [],
+          "resources": [
+            {
+              "_type": "Resource",
+              "id": "HyqihBK9",
+              "episode": "iYi1c0yR",
+              "name": "Youth Bomb",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              },
+              "communityId": "nce-aLZE"
+            }
+          ],
           "tags": {
             "_type": "Tags",
             "value": []
@@ -137,6 +161,17 @@
                 "value": []
               },
               "communityId": "dGJKx-lm"
+            },
+            {
+              "_type": "Resource",
+              "id": "iUm9S7rK",
+              "episode": "iYi1c0yR",
+              "name": "Another",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
             }
           ],
           "tags": {
@@ -665,6 +700,73 @@
             "_type": "Tags",
             "value": []
           }
+        },
+        {
+          "_type": "Resource",
+          "id": "GMZnwOAC",
+          "episode": "iYi1c0yR",
+          "name": "alksndas",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "Jc05Te6W",
+          "episode": "iYi1c0yR",
+          "name": "asdkjasndas",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "HyqihBK9",
+          "episode": "iYi1c0yR",
+          "name": "Youth Bomb",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "communityId": "nce-aLZE"
+        },
+        {
+          "_type": "Resource",
+          "id": "M-yD8iMV",
+          "episode": "iYi1c0yR",
+          "name": "sdfdsfsd",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "EpIrqIe8",
+          "episode": "iYi1c0yR",
+          "name": "BARABARBARBAR",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "iUm9S7rK",
+          "episode": "iYi1c0yR",
+          "name": "Another",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
         }
       ],
       "societies": [
@@ -685,9 +787,9 @@
               "resources": [
                 {
                   "_type": "Resource",
-                  "id": "U_LCB8aG",
+                  "id": "AfdgeFeg",
                   "episode": "iYi1c0yR",
-                  "name": "Big Rock",
+                  "name": "Green Sludge",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
@@ -696,9 +798,20 @@
                 },
                 {
                   "_type": "Resource",
-                  "id": "AfdgeFeg",
+                  "id": "M-yD8iMV",
                   "episode": "iYi1c0yR",
-                  "name": "Green Sludge",
+                  "name": "sdfdsfsd",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
+                },
+                {
+                  "_type": "Resource",
+                  "id": "EpIrqIe8",
+                  "episode": "iYi1c0yR",
+                  "name": "BARABARBARBAR",
                   "relationship": "",
                   "tags": {
                     "_type": "Tags",
@@ -717,7 +830,20 @@
               "episode": "iYi1c0yR",
               "name": "Disaffected Youth",
               "voice": "people",
-              "resources": [],
+              "resources": [
+                {
+                  "_type": "Resource",
+                  "id": "HyqihBK9",
+                  "episode": "iYi1c0yR",
+                  "name": "Youth Bomb",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  },
+                  "communityId": "nce-aLZE"
+                }
+              ],
               "tags": {
                 "_type": "Tags",
                 "value": []
@@ -751,6 +877,17 @@
                     "value": []
                   },
                   "communityId": "dGJKx-lm"
+                },
+                {
+                  "_type": "Resource",
+                  "id": "iUm9S7rK",
+                  "episode": "iYi1c0yR",
+                  "name": "Another",
+                  "relationship": "",
+                  "tags": {
+                    "_type": "Tags",
+                    "value": []
+                  }
                 }
               ],
               "tags": {
@@ -759,6 +896,77 @@
               }
             }
           ]
+        },
+        {
+          "_type": "Society",
+          "id": "FkMicAOv",
+          "episode": "iYi1c0yR",
+          "name": "Big Coffee",
+          "archetype": "the scholars",
+          "planet": "Earth",
+          "communities": []
+        }
+      ],
+      "actions": [
+        {
+          "_type": "Action",
+          "id": "KQRX23oI",
+          "episode": "iYi1c0yR",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "resources": [],
+          "society": "S8GfypoA",
+          "roll": []
+        },
+        {
+          "_type": "Action",
+          "id": "yNdIvJvK",
+          "episode": "iYi1c0yR",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "resources": [],
+          "society": "qK9CQui6",
+          "roll": []
+        },
+        {
+          "_type": "Action",
+          "id": "w6G9bwmH",
+          "episode": "iYi1c0yR",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "resources": [],
+          "society": "qK9CQui6",
+          "roll": []
+        },
+        {
+          "_type": "Action",
+          "id": "PoY2bMiF",
+          "episode": "iYi1c0yR",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "resources": [],
+          "society": "S8GfypoA",
+          "roll": []
+        },
+        {
+          "_type": "Action",
+          "id": "GS9yU9g8",
+          "episode": "iYi1c0yR",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "resources": [],
+          "society": "S8GfypoA",
+          "roll": []
         }
       ],
       "tags": {
@@ -817,7 +1025,13 @@
       "iYi1c0yR": [
         "AfdgeFeg",
         "i-hZuEkL",
-        "U_LCB8aG"
+        "U_LCB8aG",
+        "GMZnwOAC",
+        "Jc05Te6W",
+        "HyqihBK9",
+        "M-yD8iMV",
+        "EpIrqIe8",
+        "iUm9S7rK"
       ],
       "LzOr_rGf": [],
       "IQLG8PYV": [],
@@ -826,13 +1040,23 @@
     "societies": {
       "iYi1c0yR": [
         "S8GfypoA",
-        "qK9CQui6"
+        "qK9CQui6",
+        "FkMicAOv"
       ],
       "LzOr_rGf": [
         "yDVYv18n"
       ],
       "IQLG8PYV": [],
       "vNIavdFu": []
+    },
+    "actions": {
+      "iYi1c0yR": [
+        "KQRX23oI",
+        "yNdIvJvK",
+        "w6G9bwmH",
+        "PoY2bMiF",
+        "GS9yU9g8"
+      ]
     }
   }
 }

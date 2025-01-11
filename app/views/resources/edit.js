@@ -23,7 +23,7 @@ export default function ResourceEdit({ resource }) {
         `
       } ) }
       </select>
-      <div class="layout-horizontal">
+      <div class="layout-row gap-tight">
         <button>~ Update Resource</button>
         <button type="button" value="cancel">Cancel</button>
       </div>

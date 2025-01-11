@@ -24,7 +24,7 @@ export default function ResourceCreate({ episode, society }) {
         </select>
       </article>
 
-      <footer class="layout-horizontal">
+      <footer class="layout-row gap-tight">
         <button type="submit">+ New Resource</button>
         <button type="button" value="cancel">Cancel</button>
       </footer>

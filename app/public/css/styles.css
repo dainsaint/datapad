@@ -7,6 +7,8 @@
   --color-text-active: white;
   --color-bg-active: black;
   --color-error: red;
+
+  --gap: 1rem;
 }
 
 body {
@@ -98,7 +100,7 @@ nav {
 
 [class*="grid"] {
   display: grid;
-  gap: 1rem;
+  gap: var(--gap);
 }
 
 .grid-two {
@@ -111,6 +113,18 @@ nav {
 
 .grid-four {
   grid-template-columns: repeat(4, 1fr);
+}
+
+[class*="gap"] {
+  gap: var(--gap);
+}
+
+.gap-tight {
+  --gap: .5rem;
+}
+
+.gap-loose {
+  --gap: 2rem;
 }
 
 .card {
@@ -237,6 +251,7 @@ a.card {
 .layout-row {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .layout-toolbar {
@@ -383,3 +398,66 @@ body {
   color: white;
   text-shadow: 0 0 20px #fff;
 } */
+
+
+.drop {
+  border: 2px dashed var(--color-text);
+  padding: 1rem;
+}
+
+.button-close {
+  border-radius: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  translate: 50% -50%;
+
+  &:hover {
+    background: red;
+    color: var(--color-bg);
+  }
+
+  &::after {
+    content: '\00d7';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.is-sortable-ghost {
+  opacity: .5;
+} 
+
+.droppable-target {
+  position: relative;
+}
+
+.droppable::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  pointer-events: none;
+}
+
+.is-dragging .droppable::after {
+  pointer-events: all;
+}
+
+.card:has(.is-sortable-ghost) {
+  background: var(--color-mid);
+}

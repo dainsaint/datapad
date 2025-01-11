@@ -19,7 +19,7 @@ export default function CommunityCreate({ episode, society }) {
         <option value="leader">Voice of the Leaders</option>
       </select>
 
-      <div class="layout-horizontal">
+      <div class="layout-row gap-tight">
         <button>+ New Community</button>
         <button type="button" value="cancel">Cancel</button>
       </div>
