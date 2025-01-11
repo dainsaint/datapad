@@ -36,7 +36,16 @@ export default function initSortables() {
         group: { group, pull, put },
         filter: "[data-sortable-pinned]",
         animation: 150,
-        ghostClass: "is-dragging",
+        chosenClass: "is-sortable-chosen",
+        ghostClass: "is-sortable-ghost",
+        dragClass: "is-sortable-drag",
+        forceFallback: true,
+        onStart: () => {
+          document.body.classList.add("is-dragging");
+        },
+        onEnd: () => {
+          document.body.classList.remove("is-dragging");
+        },
       });
 
       sortable.addEventListener("end", (evt) => {

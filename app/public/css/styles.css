@@ -398,3 +398,66 @@ body {
   color: white;
   text-shadow: 0 0 20px #fff;
 } */
+
+
+.drop {
+  border: 2px dashed var(--color-text);
+  padding: 1rem;
+}
+
+.button-close {
+  border-radius: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  translate: 50% -50%;
+
+  &:hover {
+    background: red;
+    color: var(--color-bg);
+  }
+
+  &::after {
+    content: '\00d7';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.is-sortable-ghost {
+  opacity: .5;
+} 
+
+.droppable-target {
+  position: relative;
+}
+
+.droppable::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  pointer-events: none;
+}
+
+.is-dragging .droppable::after {
+  pointer-events: all;
+}
+
+.card:has(.is-sortable-ghost) {
+  background: var(--color-mid);
+}
