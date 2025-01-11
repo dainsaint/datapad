@@ -9,10 +9,10 @@ export default function EpisodeGameMaster ({ episode = new Episode() } = {}) {
   const currentPhase = phasesToDisplay.at(0);
   
   const content = html`
-    <main class="content grid-two scrollable">
+    <main class="content grid-huge scrollable">
       <div class="stack">
         <h1>Timeline</h1>
-        <div class="grid-three">
+        <div class="switch">
         ${ phasesToDisplay.map((phase, i) => PhaseCard({phase, i})) }
         </div>
       ${ currentPhase ?  PhaseControls({ phase: currentPhase }): "No Phases Created yet"}

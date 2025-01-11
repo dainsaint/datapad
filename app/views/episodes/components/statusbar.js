@@ -9,7 +9,6 @@ export default function EpisodeStatusBar ({ episode = new Episode() } = {}) {
   return html`
     <nav class="status-bar layout-row color-contrast">
       ${ PhaseTime({phase: activePhase}) }
-      <p>${ episode?.game?.name }</p>
     </nav>
   `;
 }

@@ -9,7 +9,7 @@ const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 export default function SocietyPanel({ society = new Society()} = {}) {
   const episode = Episode.load( society.episode );
   return html`
-    <main id="${societyPanelId(society)}" class="content stack-loose">
+    <main id="${societyPanelId(society)}" class="content stack-loose scrollable">
       <header>
         <div class="layout-row gap-tight" style="display: flex; gap: 1rem">
           <h1>
@@ -23,7 +23,7 @@ export default function SocietyPanel({ society = new Society()} = {}) {
 
       ${ ActionBuilder({ episode, societyId: society.id }) }
 
-      <div class="grid-three">
+      <div class="grid-large">
        ${society.communities.map( (community) => CommunityCard({ community }))}
       </div>
 

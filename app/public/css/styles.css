@@ -4,6 +4,9 @@
 @import url("./colours.css");
 @import url("./behaviours.css");
 
+:root {
+  font-size: clamp(12px, 1vw, 16px);
+}
 
 body {
   padding: 0px;
@@ -18,7 +21,6 @@ body {
 
 .app-content {
   font-family: 'Neusa';
-  font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
   top: 0px;
@@ -178,6 +180,25 @@ a.card {
   --color-toolbar-item-text: var(--color-text);
   --color-toolbar-active-bg: var(--color-mid);
 }
+
+ul.ribbon {
+  display: flex;
+  width: 100%;
+  justify-content: stretch;
+
+  li {
+    flex-grow: 1;
+  }
+
+  li a * {
+    margin: 0px auto;
+  }
+
+  @media screen and (min-width: 500px) {
+    flex-direction: column;
+  }
+}
+
 
 
 .status-bar {

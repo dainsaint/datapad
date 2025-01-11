@@ -6,7 +6,7 @@ export default function EpisodeLayout(episode, content) {
   return html`
     <section class="layout-toolbar">
       ${EpisodeToolbar({ episode })}
-      <div class="layout-column">
+      <div class="layout-column in-main">
         ${EpisodeStatusBar({ episode })}
         ${content}
       </div>
