@@ -64,10 +64,21 @@ communities.get("/episodes/:episodeId/communities/:communityId/:view?", (req, re
 
 communities.patch("/episodes/:episodeId/communities/:communityId", (req, res) => {
   const { episodeId, communityId } = req.params;
+  const { societyId } = req.body;
 
   const episode = Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
-  community.update( req.body );
+  community.update(req.body);
+
+  //update societies (encapsulate!)
+  const prevSociety = episode.societies.find((society) => society.getCommunityById(communityId) );
+  const nextSociety = episode.getSocietyById(societyId);
+
+  if (prevSociety && nextSociety && prevSociety != nextSociety) {
+    prevSociety.removeCommunity(community);
+    nextSociety.addCommunity(community);
+  }
+
   episode.save();
 
   const currentUrl = req.get("hx-current-url");
@@ -79,32 +90,26 @@ communities.patch("/episodes/:episodeId/communities/:communityId", (req, res) =>
 
 
 communities.post("/episodes/:episodeId/communities/:communityId/resources", (req, res) => {
+
   const { episodeId, communityId } = req.params;
-  const { societyId, resourceIds } = req.body;
+  const { resourceIds = [] } = req.body;
 
   const episode = Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
   
   //update resources
-  if( resourceIds ) {
-    const resources = resourceIds.map(episode.getResourceById);
-    community.resources = resources;
-  }
-
-  //update societies (encapsulate!)
-  const prevSociety = episode.societies.find(society => society.getCommunityById(communityId));
-  const nextSociety = episode.getSocietyById(societyId);
-
-  if( prevSociety && nextSociety && prevSociety != nextSociety ) {
-    prevSociety.removeCommunity(community);
-    nextSociety.addCommunity(community);
-  }
+  const resources = resourceIds
+    .filter((id, i) => resourceIds.indexOf(id) == i)
+    .map(episode.getResourceById);
+    
+  community.resources = resources;
 
   episode.save();
 
   const currentUrl = req.get("hx-current-url");
   if (currentUrl) res.setHeader("HX-Location", currentUrl);
   res.sendStatus(200);
+  
   broadcast("resources");
 });
 

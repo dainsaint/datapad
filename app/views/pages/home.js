@@ -42,7 +42,7 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
 //todo -> get this in the head where it belongs, or decompose
 export function styles() {
   return html`
-  <style>
+    <style>
       #home {
         --color-bg: black;
         --color-text: white;
@@ -64,11 +64,12 @@ export function styles() {
       .top {
         display: grid;
         align-content: end;
-        .icon {
-          margin: 1px auto;
-          width: 400px;
-          height: 400px;
-        }
+      }
+      
+      .top .icon {
+        margin: 1px auto;
+        width: 400px;
+        height: 400px;
       }
 
       h2 {
@@ -96,7 +97,7 @@ export function styles() {
             text-decoration: none;
 
             &:hover {
-              background: var(--color-dark); 
+              background: var(--color-dark);
             }
           }
         }
@@ -118,7 +119,6 @@ export function styles() {
       details > summary::-webkit-details-marker {
         display: none;
       }
-
     </style>
-  `
+  `;
 }

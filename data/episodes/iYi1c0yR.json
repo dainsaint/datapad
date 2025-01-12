@@ -29,14 +29,15 @@
       "resources": [
         {
           "_type": "Resource",
-          "id": "AfdgeFeg",
+          "id": "EpIrqIe8",
           "episode": "iYi1c0yR",
-          "name": "Green Sludge",
+          "name": "BARABA BARBAR",
           "relationship": "",
           "tags": {
             "_type": "Tags",
             "value": []
-          }
+          },
+          "communityId": "VQHwRDYn"
         },
         {
           "_type": "Resource",
@@ -48,18 +49,6 @@
             "_type": "Tags",
             "value": []
           }
-        },
-        {
-          "_type": "Resource",
-          "id": "EpIrqIe8",
-          "episode": "iYi1c0yR",
-          "name": "BARABA BARBAR",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "communityId": "VQHwRDYn"
         }
       ],
       "tags": {
@@ -74,20 +63,7 @@
       "episode": "iYi1c0yR",
       "name": "Disaffected Youth",
       "voice": "people",
-      "resources": [
-        {
-          "_type": "Resource",
-          "id": "HyqihBK9",
-          "episode": "iYi1c0yR",
-          "name": "Youth Bomb",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "communityId": "nce-aLZE"
-        }
-      ],
+      "resources": [],
       "tags": {
         "_type": "Tags",
         "value": []
@@ -111,7 +87,31 @@
       "episode": "iYi1c0yR",
       "name": "Big Ol' Orcs",
       "voice": "people",
-      "resources": [],
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "AfdgeFeg",
+          "episode": "iYi1c0yR",
+          "name": "Green Sludge",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "HyqihBK9",
+          "episode": "iYi1c0yR",
+          "name": "Youth Bomb",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "communityId": "nce-aLZE"
+        }
+      ],
       "tags": {
         "_type": "Tags",
         "value": []
@@ -759,14 +759,15 @@
           "resources": [
             {
               "_type": "Resource",
-              "id": "AfdgeFeg",
+              "id": "EpIrqIe8",
               "episode": "iYi1c0yR",
-              "name": "Green Sludge",
+              "name": "BARABA BARBAR",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
                 "value": []
-              }
+              },
+              "communityId": "VQHwRDYn"
             },
             {
               "_type": "Resource",
@@ -778,18 +779,6 @@
                 "_type": "Tags",
                 "value": []
               }
-            },
-            {
-              "_type": "Resource",
-              "id": "EpIrqIe8",
-              "episode": "iYi1c0yR",
-              "name": "BARABA BARBAR",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              },
-              "communityId": "VQHwRDYn"
             }
           ],
           "tags": {
@@ -804,7 +793,30 @@
           "episode": "iYi1c0yR",
           "name": "Disaffected Youth",
           "voice": "people",
+          "resources": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "kxAULBra",
+          "episode": "iYi1c0yR",
+          "name": "Big Ol' Orcs",
+          "voice": "people",
           "resources": [
+            {
+              "_type": "Resource",
+              "id": "AfdgeFeg",
+              "episode": "iYi1c0yR",
+              "name": "Green Sludge",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
             {
               "_type": "Resource",
               "id": "HyqihBK9",
@@ -822,18 +834,6 @@
             "_type": "Tags",
             "value": []
           }
-        },
-        {
-          "_type": "Community",
-          "id": "kxAULBra",
-          "episode": "iYi1c0yR",
-          "name": "Big Ol' Orcs",
-          "voice": "people",
-          "resources": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
         }
       ]
     },
@@ -842,7 +842,7 @@
       "id": "qK9CQui6",
       "episode": "iYi1c0yR",
       "name": "Test Society",
-      "archetype": "the mighty",
+      "archetype": "the enterprise",
       "planet": "Earth",
       "communities": []
     },
@@ -878,7 +878,32 @@
         "_type": "Tags",
         "value": []
       },
-      "resources": [],
+      "resources": [
+        {
+          "_type": "Resource",
+          "id": "HyqihBK9",
+          "episode": "iYi1c0yR",
+          "name": "Youth Bomb",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "communityId": "nce-aLZE"
+        },
+        {
+          "_type": "Resource",
+          "id": "EpIrqIe8",
+          "episode": "iYi1c0yR",
+          "name": "BARABA BARBAR",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "communityId": "VQHwRDYn"
+        }
+      ],
       "society": "S8GfypoA",
       "roll": []
     },
@@ -928,6 +953,18 @@
       },
       "resources": [],
       "society": "S8GfypoA",
+      "roll": []
+    },
+    {
+      "_type": "Action",
+      "id": "D6WsOFSB",
+      "episode": "iYi1c0yR",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      },
+      "resources": [],
+      "society": "FkMicAOv",
       "roll": []
     }
   ],

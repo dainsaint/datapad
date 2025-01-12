@@ -53,10 +53,10 @@ label {
   display: block;
   font-weight: bold;
   font-size: 1.5rem;
+}
 
-  & + * {
-    margin-top: .25rem !important;
-  }
+label + * {
+  margin-top: .25rem !important;
 }
 
 a {
@@ -95,9 +95,10 @@ time {
 a.card {
   display: flex;
   text-decoration: none;
-  &:hover {
-    border: 1px solid var(--color-text);
-  }
+}
+
+a.card:hover {
+  border: 1px solid var(--color-text);
 }
 
 
@@ -125,29 +126,30 @@ a.card {
   --color-toolbar-item-text: var(--color-dark);
   --color-toolbar-active-bg: var(--color-bg);
   --color-toolbar-active-text: var(--color-text);
+}
 
-  a {
-    display: flex;
-    background-color: var(--color-toolbar-item-bg);
-    color: var(--color-toolbar-item-text);
-    text-decoration: none;
-    justify-content: center;
-  }
+.toolbar a {
+  display: flex;
+  background-color: var(--color-toolbar-item-bg);
+  color: var(--color-toolbar-item-text);
+  text-decoration: none;
+  justify-content: center;
+}
 
-  a.active {
-    background-color: var(--color-toolbar-active-bg);
-    color: var(--color-toolbar-active-text);
-  }
+.toolbar a.active {
+  background-color: var(--color-toolbar-active-bg);
+  color: var(--color-toolbar-active-text);
+}
 
-  a:not(:has(svg, img)) {
-    font-size: 1.5rem;
-    padding: .5rem;
-  }
+.toolbar a:not(:has(svg, img)) {
+  font-size: 1.5rem;
+  padding: .5rem;
+}
 
-  svg, img {
-    width: 4rem;
-    height: 4rem;
-  }
+.toolbar svg,
+.toolbar img {
+  width: 4rem;
+  height: 4rem;
 }
 
 .toolbar.color-contrast {
@@ -162,17 +164,20 @@ a.card {
   display: flex;
   width: 100%;
   background-color: var(--color-toolbar-bg);
-  & > * {
-    flex-grow: 1;
+}
+
+.ribbon > * {
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 500px) {
+  .ribbon {
+    height: 100%;
+    flex-direction: column;
   }
 
-
-  @media screen and (min-width: 500px) {
-    height: 100%;
-    & > * {
-      flex-grow: 0;
-    }
-    flex-direction: column;
+  .ribbon > * {
+    flex-grow: 0;
   }
 }
 
@@ -183,16 +188,17 @@ a.card {
   color: var(--color-text);
   height: 4rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: .5rem 1rem;
+}
 
-  .phase-time {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 1rem;
-  }
+.status-bar .phase-time {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
 }
 
 
@@ -213,15 +219,15 @@ button {
   font-size: 1.5rem;
   cursor: pointer;
   border: 1px solid var(--color-bg-active);
+}
 
-  &:hover {
+button:hover {
   --color-bg-active: green;
-  }
+}
 
-  &[disabled] {
-    pointer-events: none;
-    opacity: .5;
-  }
+button[disabled] {
+  pointer-events: none;
+  opacity: .5;
 }
 
 .subtitle {
@@ -283,21 +289,21 @@ body {
   padding: none;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   translate: 50% -50%;
+}
 
-  &:hover {
-    background: red;
-    color: var(--color-bg);
-  }
+.button-close:hover {
+  background: red;
+  color: var(--color-bg);
+}
 
-  &::after {
-    content: '\00d7';
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.button-close::after {
+  content: '\00d7';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {

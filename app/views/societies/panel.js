@@ -8,8 +8,7 @@ const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 
 export default function SocietyPanel({ society = new Society()} = {}) {
   const episode = Episode.load( society.episode );
-  return html`
-    <main id="${societyPanelId(society)}" class="content stack-loose scrollable">
+  return html` <main id="${societyPanelId(society)}" class="content stack-loose scrollable">
       <header>
         <div class="layout-row gap-tight" style="display: flex; gap: 1rem">
           <h1>
@@ -47,6 +46,7 @@ export function CommunityCard({ community = new Community() } = {}) {
         class="card stack droppable-target"
         data-sortable-bounds
         hx-post="${community.toURL("/resources")}"
+        hx-trigger="sorted"
       >
         <header>
           <h2>
@@ -107,9 +107,9 @@ export function ActionBuilder({ episode, societyId } = {}) {
       ${actions.map(
         (action, i) => html`
           <div class="layout-row gap">
-            <h3 data-sortable-pinned>${i + 1}: We use</h3>
+            <h3>${i + 1}: We use</h3>
             <form
-              class="layout-row gap"
+              class="layout-row gap action-resources"
               data-sortable="action"
               data-sortable-allow="action, resources: clone"
               hx-post="${action.toURL("/resources")}"
@@ -121,14 +121,14 @@ export function ActionBuilder({ episode, societyId } = {}) {
 
               <div class="drop drop-primary">Primary</div>
 
-              <h3 data-sortable-pinned>We aid with</h3>
+              <h3 class="requires-primary">We aid with</h3>
 
               ${action.resources.length > 1 &&
               action.resources
                 .slice(1)
                 .map((resource) => ActionResourceCard({ resource }))}
 
-              <div class="drop drop-additional">Additional</div>
+              <div class="requires-primary drop drop-additional">Additional</div>
             </form>
           </div>
         `
@@ -139,6 +139,14 @@ export function ActionBuilder({ episode, societyId } = {}) {
       .drop {
         border: 2px dashed var(--color-text);
         padding: 1rem;
+      }
+
+      .requires-primary {
+        display: none;
+      }
+
+      .action-resources:has(.action-resource-card) .requires-primary {
+        display: initial;
       }
 
       .drop-primary:has(+ .action-resource-card),
