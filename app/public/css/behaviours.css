@@ -5,7 +5,12 @@
 dialog {
   background: var(--color-bg);
   border: none;
-  width: 650px;
+  width: max-content;
+  margin-inline-end: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  height: 100%;
+  
 
   &[open] {
     animation: slideIn 0.2s forwards;
@@ -25,7 +30,7 @@ dialog {
 
 @keyframes slideIn {
   0% {
-    translate: 0% 100%
+    translate: 100% 0%
   }
 
   100% {

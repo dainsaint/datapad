@@ -24,8 +24,11 @@ export default function AppLayout(props, children) {
     </head>
 
     <body>
-      <section id="app" class="app-content" hx-ext="sse" sse-connect="/events">
-        ${children} 
+      <section id="app" class="app-content layout-app" hx-ext="sse" sse-connect="/events">
+        
+        <div class="in-app">
+          ${children} 
+        </div>
         
         <dialog id="dialog" class="stack" 
           hx-on:htmx:load="this.showModal()" 
@@ -37,3 +40,4 @@ export default function AppLayout(props, children) {
   </html>
   `;
 }
+

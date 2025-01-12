@@ -185,3 +185,14 @@
   overflow: hidden;
 }
 
+.layout-app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "app";
+}
+
+
+.in-app {
+  grid-area: app;
+}

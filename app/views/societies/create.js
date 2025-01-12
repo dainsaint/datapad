@@ -11,7 +11,7 @@ export default function SocietyCreate({ episode = new Episode()} = {}) {
       <input type="hidden" name="episodeId" value="${episode.id}"/>
 
       <label for="name">Society Name</label>
-      <input autofocus name="name" placeholder="e.g. Ten Thousand Islands" />
+      <input autofocus name="name" autocapitalize="words" placeholder="e.g. Ten Thousand Islands" />
 
       <label for="name">Society Archetype</label>
       <select name="archetype" placeholder="Select Archetype" >

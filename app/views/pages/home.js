@@ -50,8 +50,10 @@ export function styles() {
         color: white;
         display: grid;
         grid-template-rows: 60% 40%;
-        inset: 0px;
-        position: absolute;
+        /* inset: 0px; */
+        /* position: absolute; */
+        width: 100%;
+        height: 100%;
         align-items: stretch;
         justify-items: stretch;
         text-align: center;

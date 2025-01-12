@@ -10,7 +10,7 @@ export default function ResourceCreate({ episode, society }) {
 
       <article class="stack">
         <label for="name">Name</label>
-        <input autofocus name="name" placeholder="New Resource" />
+        <input autofocus name="name" placeholder="New Resource" autocapitalize="words"/>
         <label for="communityId">Community</label>
 
         <select name="communityId">
