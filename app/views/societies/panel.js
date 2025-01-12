@@ -23,13 +23,13 @@ export default function SocietyPanel({ society = new Society()} = {}) {
 
       ${ ActionBuilder({ episode, societyId: society.id }) }
 
-      <div class="grid-large">
+      <div class="grid-medium">
        ${society.communities.map( (community) => CommunityCard({ community }))}
       </div>
 
       <div class="stack-tight">
         <h3>Actions (put these in a better place)</h3>
-        <div class="layout-row gap-tight">
+        <div class="switch">
           <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog" ${{ disabled: episode.communities.length == 0 }}>+ New Resource</button>
           <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">+ New Community</button>
           <button hx-get="${episode.toURL('/societies/create')}" hx-target="#dialog">+ New Society</button>

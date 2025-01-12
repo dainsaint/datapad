@@ -53,12 +53,13 @@
           "_type": "Resource",
           "id": "EpIrqIe8",
           "episode": "iYi1c0yR",
-          "name": "BARABARBARBAR",
+          "name": "BARABA BARBAR",
           "relationship": "",
           "tags": {
             "_type": "Tags",
             "value": []
-          }
+          },
+          "communityId": "VQHwRDYn"
         }
       ],
       "tags": {
@@ -103,6 +104,18 @@
         "_type": "Tags",
         "value": []
       }
+    },
+    {
+      "_type": "Community",
+      "id": "kxAULBra",
+      "episode": "iYi1c0yR",
+      "name": "Big Ol' Orcs",
+      "voice": "people",
+      "resources": [],
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
     }
   ],
   "phases": [
@@ -114,7 +127,7 @@
       "status": "paused",
       "round": 0,
       "duration": 1200,
-      "timeElapsed": 16.014999999999997,
+      "timeElapsed": 1541.637999999975,
       "tags": {
         "_type": "Tags",
         "value": []
@@ -126,8 +139,8 @@
         "isLuxonInterval": true
       },
       "actualTime": {
-        "s": "2025-01-05T10:39:33.870-05:00",
-        "e": "2025-01-05T10:59:33.870-05:00",
+        "s": "2025-01-11T19:46:18.028-05:00",
+        "e": "2025-01-11T20:06:18.028-05:00",
         "invalid": null,
         "isLuxonInterval": true
       }
@@ -675,12 +688,13 @@
       "_type": "Resource",
       "id": "EpIrqIe8",
       "episode": "iYi1c0yR",
-      "name": "BARABARBARBAR",
+      "name": "BARABA BARBAR",
       "relationship": "",
       "tags": {
         "_type": "Tags",
         "value": []
-      }
+      },
+      "communityId": "VQHwRDYn"
     },
     {
       "_type": "Resource",
@@ -769,12 +783,13 @@
               "_type": "Resource",
               "id": "EpIrqIe8",
               "episode": "iYi1c0yR",
-              "name": "BARABARBARBAR",
+              "name": "BARABA BARBAR",
               "relationship": "",
               "tags": {
                 "_type": "Tags",
                 "value": []
-              }
+              },
+              "communityId": "VQHwRDYn"
             }
           ],
           "tags": {
@@ -803,6 +818,18 @@
               "communityId": "nce-aLZE"
             }
           ],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Community",
+          "id": "kxAULBra",
+          "episode": "iYi1c0yR",
+          "name": "Big Ol' Orcs",
+          "voice": "people",
+          "resources": [],
           "tags": {
             "_type": "Tags",
             "value": []

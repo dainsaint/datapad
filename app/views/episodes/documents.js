@@ -25,5 +25,5 @@ export default function EpisodeDocuments ({ episode = new Episode()} = {}) {
 
   `;
 
-  return EpisodeLayout(episode, content);
+  return EpisodeLayout({episode}, content);
 }

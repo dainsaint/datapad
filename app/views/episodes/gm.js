@@ -9,7 +9,7 @@ export default function EpisodeGameMaster ({ episode = new Episode() } = {}) {
   const currentPhase = phasesToDisplay.at(0);
   
   const content = html`
-    <main class="content grid-huge scrollable">
+    <main class="content grid-large gap-loose scrollable">
       <div class="stack">
         <h1>Timeline</h1>
         <div class="switch">
@@ -33,7 +33,7 @@ export default function EpisodeGameMaster ({ episode = new Episode() } = {}) {
     </main>
   `;
 
-  return EpisodeLayout( episode, content );
+  return EpisodeLayout({ episode }, content );
 }
 
 function PhaseControls({ phase }) {

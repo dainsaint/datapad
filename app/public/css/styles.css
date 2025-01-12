@@ -5,7 +5,7 @@
 @import url("./behaviours.css");
 
 :root {
-  font-size: clamp(12px, 1vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 body {
@@ -79,19 +79,8 @@ time {
   font-size: 3rem;
 }
 
-
-nav {
-  ul { 
-    padding: 0px 
-  }
-  li {
-    list-style: none; 
-    margin: 0px;
-  }
-}
-
 .content {
-  padding: 1rem;
+  padding: 1rem 1rem 10rem 1rem;
 }
 
 
@@ -101,7 +90,6 @@ nav {
   border: 1px solid var(--color-bg);
   color: var(--color-text);
   padding: 1rem;
-  height: 100%;
 }
 
 a.card {
@@ -123,14 +111,12 @@ a.card {
   border-color: transparent;
 }
 
-
-
-
 .color-contrast {
   --color-bg: black;
   --color-text: white;
   --color-bg-active: var(--color-mid);
 }
+
 
 .toolbar {
   --color-toolbar-bg: var(--color-dark);
@@ -140,21 +126,12 @@ a.card {
   --color-toolbar-active-bg: var(--color-bg);
   --color-toolbar-active-text: var(--color-text);
 
-  background-color: var(--color-toolbar-bg);
-
-  ul {
-    display: flex;
-    gap: 1px;
-    background-color: var(--color-toolbar-separator);
-    width: max-content;
-    height: max-content;
-  }
-
   a {
-    display: block;
+    display: flex;
     background-color: var(--color-toolbar-item-bg);
     color: var(--color-toolbar-item-text);
     text-decoration: none;
+    justify-content: center;
   }
 
   a.active {
@@ -181,20 +158,20 @@ a.card {
   --color-toolbar-active-bg: var(--color-mid);
 }
 
-ul.ribbon {
+.ribbon {
   display: flex;
   width: 100%;
-  justify-content: stretch;
-
-  li {
+  background-color: var(--color-toolbar-bg);
+  & > * {
     flex-grow: 1;
   }
 
-  li a * {
-    margin: 0px auto;
-  }
 
   @media screen and (min-width: 500px) {
+    height: 100%;
+    & > * {
+      flex-grow: 0;
+    }
     flex-direction: column;
   }
 }
@@ -210,7 +187,6 @@ ul.ribbon {
   justify-content: space-between;
   gap: 1rem;
   padding: .5rem 1rem;
-  border-inline-start: 1px solid var(--color-text);
 
   .phase-time {
     display: flex;

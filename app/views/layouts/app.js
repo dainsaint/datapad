@@ -13,8 +13,7 @@ export default function AppLayout(props, children) {
       <link rel="stylesheet" id="polyfill-styles" />
       <link rel="stylesheet" href="/css/styles.css" />
 
-      <link rel="icon" href="/icons/spop.svg" type="image/svg"/>
-      <link rel="apple-touch-icon" href="/icons/spop.svg"  type="image/svg"/>
+      <link rel="manifest" href="/manifest.json">
 
       <script src="/js/vendor/htmx.min.js"></script>
       <script src="/js/vendor/htmx.sse.js"></script>
