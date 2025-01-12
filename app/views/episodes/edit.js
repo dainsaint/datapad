@@ -14,7 +14,7 @@ export default function EpisodeEdit({ episode = new Episode() } = {}) {
       <input name="id" type="hidden" value="${episode.id}"/>
 
       <label for="name">Episode Name</label>
-      <input name="name" type="text" value="${episode.name}"/>
+      <input name="name" autofocus autocapitalize="words" type="text" value="${episode.name}"/>
 
       <label for="game">Game (Optional)</label>
       <input list="games-available" name="game" />

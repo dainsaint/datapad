@@ -24,8 +24,8 @@ export default function AppLayout(props, children) {
     </head>
 
     <body>
-      <section id="app" class="app-content layout-app" hx-ext="sse" sse-connect="/events">
-        
+      <section id="app" class="layout-app" hx-ext="sse" sse-connect="/events">
+
         <div class="in-app">
           ${children} 
         </div>

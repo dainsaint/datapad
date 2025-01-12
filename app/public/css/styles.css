@@ -19,7 +19,7 @@ body {
   overscroll-behavior: none
 }
 
-.app-content {
+.layout-app {
   font-family: 'Neusa';
   line-height: 1;
   text-transform: uppercase;

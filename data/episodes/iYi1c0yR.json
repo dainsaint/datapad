@@ -40,6 +40,29 @@
         },
         {
           "_type": "Resource",
+          "id": "AfdgeFeg",
+          "episode": "iYi1c0yR",
+          "name": "Green Sludge",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "HyqihBK9",
+          "episode": "iYi1c0yR",
+          "name": "Youth Bomb",
+          "relationship": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          },
+          "communityId": "nce-aLZE"
+        },
+        {
+          "_type": "Resource",
           "id": "EpIrqIe8",
           "episode": "iYi1c0yR",
           "name": "BARABA BARBAR",
@@ -63,19 +86,7 @@
       "episode": "iYi1c0yR",
       "name": "Disaffected Youth",
       "voice": "people",
-      "resources": [
-        {
-          "_type": "Resource",
-          "id": "AfdgeFeg",
-          "episode": "iYi1c0yR",
-          "name": "Green Sludge",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        }
-      ],
+      "resources": [],
       "tags": {
         "_type": "Tags",
         "value": []
@@ -99,20 +110,7 @@
       "episode": "iYi1c0yR",
       "name": "Big Ol' Orcs",
       "voice": "people",
-      "resources": [
-        {
-          "_type": "Resource",
-          "id": "HyqihBK9",
-          "episode": "iYi1c0yR",
-          "name": "Youth Bomb",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "communityId": "nce-aLZE"
-        }
-      ],
+      "resources": [],
       "tags": {
         "_type": "Tags",
         "value": []
@@ -771,6 +769,29 @@
             },
             {
               "_type": "Resource",
+              "id": "AfdgeFeg",
+              "episode": "iYi1c0yR",
+              "name": "Green Sludge",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              }
+            },
+            {
+              "_type": "Resource",
+              "id": "HyqihBK9",
+              "episode": "iYi1c0yR",
+              "name": "Youth Bomb",
+              "relationship": "",
+              "tags": {
+                "_type": "Tags",
+                "value": []
+              },
+              "communityId": "nce-aLZE"
+            },
+            {
+              "_type": "Resource",
               "id": "EpIrqIe8",
               "episode": "iYi1c0yR",
               "name": "BARABA BARBAR",
@@ -794,19 +815,7 @@
           "episode": "iYi1c0yR",
           "name": "Disaffected Youth",
           "voice": "people",
-          "resources": [
-            {
-              "_type": "Resource",
-              "id": "AfdgeFeg",
-              "episode": "iYi1c0yR",
-              "name": "Green Sludge",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            }
-          ],
+          "resources": [],
           "tags": {
             "_type": "Tags",
             "value": []
@@ -818,20 +827,7 @@
           "episode": "iYi1c0yR",
           "name": "Big Ol' Orcs",
           "voice": "people",
-          "resources": [
-            {
-              "_type": "Resource",
-              "id": "HyqihBK9",
-              "episode": "iYi1c0yR",
-              "name": "Youth Bomb",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              },
-              "communityId": "nce-aLZE"
-            }
-          ],
+          "resources": [],
           "tags": {
             "_type": "Tags",
             "value": []
@@ -844,7 +840,7 @@
       "id": "qK9CQui6",
       "episode": "iYi1c0yR",
       "name": "Test Society",
-      "archetype": "the enterprise",
+      "archetype": "the faithful",
       "planet": "Earth",
       "communities": []
     },
@@ -869,6 +865,15 @@
           }
         }
       ]
+    },
+    {
+      "_type": "Society",
+      "id": "aa9kXNsB",
+      "episode": "iYi1c0yR",
+      "name": "Diamonds On My Wrist",
+      "archetype": "the enterprise",
+      "planet": "Earth",
+      "communities": []
     }
   ],
   "actions": [

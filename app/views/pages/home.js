@@ -6,16 +6,13 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
     <main id="home">
       <div class="top">
         ${Icon("spop")}
-  
       </div>
 
-      
-
       <div class="content stack scrollable">
-              <div>Space Opera Datapad v0.1-alpha</div>
+        <div>Space Opera Datapad v0.1-alpha</div>
+
         <details>
           <summary><h2>Load Episode</h2></summary>
-
           ${ episodes.map( (episode) =>
             html`<a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a>`
           )}

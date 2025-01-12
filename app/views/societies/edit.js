@@ -19,7 +19,7 @@ export default function SocietyEdit({ society = new Society() } = {}) {
 
     <form class="stack" hx-put="${society.toURL()}" hx-swap="none">
       <label for="name">Society Name</label>
-      <input autofocus name="name" placeholder="e.g. Ten Thousand Islands" value="${society.name}"/>
+      <input name="name" autofocus autocapitalize="words" placeholder="e.g. Ten Thousand Islands" value="${society.name}"/>
 
       <label for="archetype">Society Archetype</label>
       <select name="archetype" placeholder="Select Archetype">

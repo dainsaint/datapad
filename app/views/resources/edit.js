@@ -10,7 +10,7 @@ export default function ResourceEdit({ resource }) {
       <h1>Edit a resource</h1>
       <p class="text">Enter a name for this resource</p>
       <label for="name">Name</label>
-      <input name="name" placeholder="New Resource" value="${ resource.name }"/>
+      <input name="name" autofocus autocapitalize="words" placeholder="New Resource" value="${ resource.name }"/>
       <label for="communityId">Community</label>
       <select name="communityId">
       ${ episode.societies.map( society => {

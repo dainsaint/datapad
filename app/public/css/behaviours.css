@@ -9,43 +9,41 @@ dialog {
   margin-inline-end: 0;
   margin-block-end: 0;
   margin-block-start: 0;
-  height: 100%;
-  
+  height: 100dvh;
+  max-height: unset;
+  animation: slideOut 0.2s forwards;
+  transition: display 1s step-end, overlay 1s step-end;
+  transition-behavior: allow-discrete;
+}
 
-  &[open] {
-    animation: slideIn 0.2s forwards;
-  }
+dialog[open] {
+  animation: slideIn 0.2s forwards;
+}
 
-  &::backdrop,
-  &+.backdrop {
-    display: block;
-    background: rgba(0, 0, 0, 0.5);
-  }
+dialog::backdrop,
+dialog + .backdrop {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+}
 
-  &[open]::backdrop,
-  &+.backdrop {
-    animation: fadeIn 0.2s forwards;
-  }
+dialog[open]::backdrop,
+dialog + .backdrop {
+  animation: fadeIn 0.2s forwards;
 }
 
 @keyframes slideIn {
-  0% {
-    translate: 100% 0%
-  }
+  from { translate: 100% 0% }
+  to { translate: 0 0 }
+}
 
-  100% {
-    translate: 0 0
-  }
+@keyframes slideOut {
+  from { translate: 0% 0% }
+  to { translate: 100% 0 }
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0
-  }
-
-  100% {
-    opacity: 1
-  }
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
 
 

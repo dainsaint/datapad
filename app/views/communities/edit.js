@@ -10,7 +10,7 @@ export default function CommunityEdit({ community }) {
       <h1>Edit a community</h1>
       <p class="text">Enter a name/archetype for this community</p>
       <label for="name">Name</label>
-      <input autofocus name="name" placeholder="New Community" value="${ community.name }"/>
+      <input name="name" autofocus autocapitalize="words" placeholder="New Community" value="${ community.name }"/>
       <label for="societyId">Society</label>
       <select name="societyId">
         ${ episode.societies.map(society => html`<option value="${society.id}" ${{selected: society.id === mySociety.id}}>${society.name}</option>`) }

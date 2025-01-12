@@ -163,7 +163,7 @@ export function ActionBuilder({ episode, societyId } = {}) {
 }
 
 
-export function ActionResourceCard({action, resource} ){
+export function ActionResourceCard({resource} ){
   return html`
     <div class="action-resource-card container">
       <button type="button" class="button-close" onclick="this.nextElementSibling.remove(); this.dispatchEvent(new CustomEvent('sorted', {bubbles: true}));"></button>
