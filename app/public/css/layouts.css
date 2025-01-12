@@ -195,4 +195,5 @@
 
 .in-app {
   grid-area: app;
+  overflow: hidden;
 }

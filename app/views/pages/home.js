@@ -6,30 +6,28 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
     <main id="home">
       <div class="top">
         ${Icon("spop")}
-        <div>Space Opera Datapad v0.1-alpha</div>
+  
       </div>
 
       
 
-      <div class="content stack">
+      <div class="content stack scrollable">
+              <div>Space Opera Datapad v0.1-alpha</div>
         <details>
           <summary><h2>Load Episode</h2></summary>
-          <ul>
+
           ${ episodes.map( (episode) =>
-            html`<li><a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a></li>`
+            html`<a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a>`
           )}
-          </ul>
         </details>
 
         <h2 hx-get="/episodes/create" hx-target="#dialog">New Episode</h2>
         
         <details>
           <summary><h2>View Games</h2></summary>
-          <ul>
           ${games.map( (game) =>
-            html`<li><a href="${game.toURL("/overview")}">${game.name} • ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}</a></li>`
+            html`<a href="${game.toURL("/overview")}">${game.name} • ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}</a>`
           )}
-          </ul>
         </details>  
       </div>
     </main>
@@ -49,7 +47,7 @@ export function styles() {
         background: black;
         color: white;
         display: grid;
-        grid-template-rows: 60% 40%;
+        grid-template-rows: 50% 50%;
         /* inset: 0px; */
         /* position: absolute; */
         width: 100%;
@@ -67,7 +65,7 @@ export function styles() {
         display: grid;
         align-content: end;
       }
-      
+
       .top .icon {
         margin: 1px auto;
         width: 400px;
@@ -81,28 +79,24 @@ export function styles() {
         margin: 0px auto;
       }
 
-      ul {
-        padding: 0px;
+      details a {
+        border: 1px solid white;
+        border-bottom: none;
+        padding: 10px;
         width: 300px;
         margin: 0px auto;
+        display: block;
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+      }
 
-        li {
-          list-style: none;
-          margin: 0px;
+      details a:last-child {
+        border-bottom: 1px solid white;
+      }
 
-          a {
-            border: 1px solid white;
-            padding: 10px;
-            display: block;
-            font-size: 1rem;
-            color: white;
-            text-decoration: none;
-
-            &:hover {
-              background: var(--color-dark);
-            }
-          }
-        }
+      details a:hover {
+        background: var(--color-dark);
       }
 
       details {
