@@ -112,7 +112,7 @@ class LedgerSingleton {
 
   getActiveEpisode() {
     //TODO: Fix this doofer
-    return this.episodes.at(0);
+    return this.active.at(0);
   }
 
   //TODO: Make sure each game has a list of its episodes

@@ -43,6 +43,19 @@ jsonRouter.get("/societies", (req, res) => {
   res.send(societies);
 });
 
+jsonRouter.get("/ledger", (req, res) => {
+  res.send(Ledger);
+});
+
+jsonRouter.get("/active/episode", (req, res) => {
+  res.send(Ledger.getActiveEpisode());
+});
+
+jsonRouter.get("/active/phases", (req, res) => {
+  res.send(Ledger.getActiveEpisode().phases);
+});
+
+
 jsonRouter.use((err, req, res, next)=> {
   res.status(err.status || 400).json()
 })
