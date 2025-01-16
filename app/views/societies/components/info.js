@@ -1,7 +1,7 @@
 import { pluralize } from "#core/utils";
 
 export default function SocietyInfo({ society }){
-  const resources = society.getAllResources();
+  const resources = society.resources;
 
   return `
     <p class="subtitle">

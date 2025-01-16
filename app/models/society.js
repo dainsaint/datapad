@@ -1,4 +1,4 @@
-import { EpisodeModel } from "#models/episode";
+import EpisodeModel from "#database/episode-model"
 
 export default class Society extends EpisodeModel {
   name = "";
@@ -30,7 +30,7 @@ export default class Society extends EpisodeModel {
     }
   }
 
-  getAllResources() {
+  get resources() {
     return this.communities.map((community) => community.resources).flat();
   }
 

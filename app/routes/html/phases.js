@@ -1,4 +1,5 @@
 import Episode from "#models/episode";
+import Phase from "#models/phase";
 import express from "express";
 
 
@@ -22,39 +23,46 @@ phases.get("/episodes/:episodeId/phases/:phaseId/:view?", (req, res, next) => {
 });
 
 phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
-  try {
-    const { episodeId, phaseId } = req.params;
-    const { action } = req.body;
+  const { episodeId, phaseId } = req.params;
+  const { action } = req.body;
+  
+  const episode = Episode.load(episodeId);
+  const phase = episode.getPhaseById(phaseId);
+  
+  console.log( phaseId, phase, action );
 
-    const episode = Episode.load(episodeId);
-    const phase = episode.getPhaseById(phaseId);
-
-    //TODO: handle this logic better, with the mutability problem
-    switch (action) {
-      case "start":
-        phase.startPhase();
-        break;
-      case "pause":
-        phase.pausePhase();
-        break;
-      case "stop":
-        phase.completePhase();
-        break;
-    }
-    //TODO: remove active doofer
-    episode.makeActive();
-    episode.save();
-
-    //this is the way to "refresh" whatever page
-    //this was called from using ajax
-    const currentUrl = req.get("hx-current-url");
-    if (currentUrl) res.setHeader("HX-Location", currentUrl);
-    
-    res.sendStatus(200);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(404);
+  //TODO: handle this logic better, with the mutability problem
+  switch (action) {
+    case "start":
+      phase.startPhase();
+      break;
+    case "pause":
+      phase.pausePhase();
+      break;
+    case "next":
+      phase.completePhase();
+      break;
+    case "split":
+      const newGalacticPhase = new Phase({
+        name: "Galactic Phase",
+        round: phase.round,
+        duration: 180
+      })
+      episode.splitPhase(phase, newGalacticPhase);
+      // console.log( Phase.splitPhase(phase) );
+      break;
   }
+  //TODO: remove active doofer
+  episode.makeActive();
+  episode.save();
+
+  //this is the way to "refresh" whatever page
+  //this was called from using ajax
+  const currentUrl = req.get("hx-current-url");
+  if (currentUrl) res.setHeader("HX-Location", currentUrl);
+  
+  res.sendStatus(200);
+
 });
 
 export default phases;

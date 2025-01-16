@@ -4,6 +4,7 @@ import Model from "#database/model";
 import Tags from "#core/tags";
 import Ledger from "#database/ledger";
 import Game from "#models/game";
+import Phase from "#models/phase";
 
 const datastore = new Datastore();
 
@@ -59,13 +60,31 @@ export default class Episode extends Model {
   getResourceById = this.#getById("resources")
   getSocietyById = this.#getById("societies")
 
-  getActivePhases() {
-    return this.phases.filter((phase) => phase.isComplete)
+  get activePhases() {
+    return this.phases.filter((phase) => !phase.isComplete)
   }
 
-  getAllResources() {
+  get currentPhase() {
+    return this.phases.find( phase => !phase.isComplete );
+  }
+
+  get resources() {
     return this.communities.map((community) => community.resources).flat();
   }
+
+
+  splitPhase( phase, ...phasesToInsert) {
+    const index = this.phases.indexOf(phase);
+    
+    const phases = Phase.splitPhase(phase);
+    phases[0].completePhase();
+    phases.splice(1, 0, ...phasesToInsert);
+    phases.forEach( phase => phase.episode = this.id );
+
+    this.phases.splice(index, 1, ...phases);
+  }
+
+
 
   makeActive() {
     this.tags.add(EpisodeTags.ACTIVE);
@@ -102,12 +121,8 @@ export function validate() {
 
 }
 
-
-export class EpisodeModel extends Model {
-  episode = "";
-}
-
 export const EpisodeTags = {
   ACTIVE: "active",
   COMPLETE: "complete",
+  CRISIS_MODE: "crisis-mode"
 };

@@ -39,7 +39,7 @@ export function pluralize( number, one, many = "" ) {
 
 export function secondsToTime( seconds ) {
   const minutes = Math.floor( seconds / 60 );
-  const remaining = seconds - minutes * 60;
+  const remaining = Math.floor( seconds - minutes * 60 );
   return `${ minutes.toString().padStart(2, '0') }:${ remaining.toString().padStart(2, '0') }`
 }
 
@@ -77,6 +77,19 @@ export function rateLimit( callback, wait ) {
       invokeCallback(); // Throttle behavior
     } else {
       timeout = setTimeout(invokeCallback, wait); // Debounce behavior
+    }
+  }
+}
+
+export function from(number) {
+  return {
+    repeat: (count) => new Array(count).fill(number),
+    to: (to) => {
+      const result = [];
+      const sign = Math.sign(to - number) || 1;
+      for( let i = number; i <= to; i += sign )
+        result.push(i);
+      return result
     }
   }
 }

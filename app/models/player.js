@@ -1,5 +1,5 @@
 import Tags from "#core/tags"
-import { EpisodeModel } from "#models/episode"
+import EpisodeModel from "#database/episode-model"
 
 export default class Player extends EpisodeModel {
 

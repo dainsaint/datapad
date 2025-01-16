@@ -11,6 +11,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
       ${ episode.societies.map( (society) =>
         SocietyToolbarLink(episode, society, society == currentSociety)
       )}
+      <button hx-get="${episode.toURL('/societies/create')}" hx-target="#dialog">+ New Society</button>
     </nav>
       
     ${ currentSociety ? SocietyPanel({ society: currentSociety }) : NoSocieties({episode}) }

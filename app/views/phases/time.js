@@ -1,9 +1,9 @@
-import { secondsToTime } from "#core/utils"
+import { html, secondsToTime } from "#core/utils"
 import Phase from "#models/phase"
 
 
 export default function PhaseTime({ phase = new Phase() } = {}) {
-  return `
+  return html`
     <div class="phase-time" hx-get="${ phase.toURL('/time') }" hx-trigger="sse:phases">
       <header>
         <h2>${phase.name}</h2>

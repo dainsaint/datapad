@@ -1,5 +1,5 @@
 import { DateTime, Duration, Interval } from "luxon";
-import { EpisodeModel } from "#models/episode";
+import EpisodeModel from "#database/episode-model"
 import Tags from "#core/tags";
 
 export default class Phase extends EpisodeModel {
@@ -10,7 +10,6 @@ export default class Phase extends EpisodeModel {
   timeElapsed = 0;
   tags = new Tags();
 
-  scheduledTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: 0 }));
   actualTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: 0 }));
 
   constructor({ name = "New Phase", round = 0, duration = 0 }) {
@@ -43,6 +42,35 @@ export default class Phase extends EpisodeModel {
     this.actualTime = Interval.fromDateTimes( this.actualTime.start || DateTime.now(), DateTime.now() );
     this.status = PhaseStatus.COMPLETE;
   }
+
+
+  static splitPhase(phase) {
+    if( phase.timeElapsed == 0 || phase.timeElapsed >= phase.duration) {
+      return [phase];
+    }
+
+    const phaseA = new Phase({
+      name: phase.name,
+      round: phase.round,
+      duration: phase.timeElapsed
+    })
+
+    const phaseB = new Phase({
+      name: phase.name,
+      round: phase.round,
+      duration: phase.timeRemaining,
+    });
+
+    phaseA.timeElapsed = phase.timeElapsed;
+
+    for( const tag of phase.tags.values() ) {
+      phaseA.tags.add(tag);
+      phaseB.tags.add(tag);
+    }
+
+    return [phaseA, phaseB];
+  }
+
 
   tick(deltaTimeMS) {
     if (this.isPlaying) {

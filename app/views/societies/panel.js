@@ -24,15 +24,7 @@ export default function SocietyPanel({ society = new Society()} = {}) {
 
       <div class="grid-medium">
        ${society.communities.map( (community) => CommunityCard({ community }))}
-      </div>
-
-      <div class="stack-tight">
-        <h3>Actions (put these in a better place)</h3>
-        <div class="switch">
-          <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog" ${{ disabled: episode.communities.length == 0 }}>+ New Resource</button>
-          <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">+ New Community</button>
-          <button hx-get="${episode.toURL('/societies/create')}" hx-target="#dialog">+ New Society</button>
-        </div>
+       <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">+ New Community</button>
       </div>
     </main>
   `;
@@ -59,6 +51,7 @@ export function CommunityCard({ community = new Community() } = {}) {
           ${community.resources.map((resource) =>
             CommunityResourceCard({ resource })
           )}
+          <button data-sortable-pinned hx-get="${`/episode/${community.episode}/resources/create`}" hx-target="#dialog">+ New Resource</button>
         </div>
       </form>
     </div>
