@@ -125,14 +125,14 @@
           "status": "complete",
           "round": 0,
           "duration": 1200,
-          "timeElapsed": 7.007,
+          "timeElapsed": 20.018000000000004,
           "tags": {
             "_type": "Tags",
             "value": []
           },
           "actualTime": {
-            "s": "2025-01-15T23:34:46.261-05:00",
-            "e": "2025-01-15T23:34:53.678-05:00",
+            "s": "2025-01-21T17:04:57.485-05:00",
+            "e": "2025-01-21T17:05:00.225-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -142,7 +142,7 @@
           "id": "rvrFPPYM",
           "episode": "SRcvtno7",
           "name": "Universal Phase",
-          "status": "complete",
+          "status": "idle",
           "round": 0,
           "duration": 240,
           "timeElapsed": 0,
@@ -152,7 +152,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.206-05:00",
-            "e": "2025-01-15T23:34:55.395-05:00",
+            "e": "2025-01-19T10:54:40.591-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -162,7 +162,7 @@
           "id": "GllI-WdX",
           "episode": "SRcvtno7",
           "name": "Societal Phase",
-          "status": "complete",
+          "status": "idle",
           "round": 0,
           "duration": 9.011999999999999,
           "timeElapsed": 9.011999999999999,
@@ -172,7 +172,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:35:05.897-05:00",
-            "e": "2025-01-15T23:35:05.897-05:00",
+            "e": "2025-01-19T10:53:08.111-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -182,7 +182,7 @@
           "id": "QVVPn82c",
           "episode": "SRcvtno7",
           "name": "Galactic Phase",
-          "status": "complete",
+          "status": "idle",
           "round": 0,
           "duration": 180,
           "timeElapsed": 11.008999999999999,
@@ -192,7 +192,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:35:08.577-05:00",
-            "e": "2025-01-15T23:35:19.127-05:00",
+            "e": "2025-01-19T10:53:08.257-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -202,7 +202,7 @@
           "id": "z5UzJRPp",
           "episode": "SRcvtno7",
           "name": "Societal Phase",
-          "status": "paused",
+          "status": "idle",
           "round": 0,
           "duration": 590,
           "timeElapsed": 10.007999999999997,
@@ -212,7 +212,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:35:25.745-05:00",
-            "e": "2025-01-15T23:45:15.745-05:00",
+            "e": "2025-01-19T10:53:08.440-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -232,7 +232,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.207-05:00",
-            "e": "2025-01-15T23:14:00.207-05:00",
+            "e": "2025-01-19T10:49:07.949-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -252,7 +252,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.207-05:00",
-            "e": "2025-01-15T23:14:00.207-05:00",
+            "e": "2025-01-19T10:49:08.879-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -272,7 +272,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.207-05:00",
-            "e": "2025-01-15T23:14:00.207-05:00",
+            "e": "2025-01-19T10:49:09.613-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -292,7 +292,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.207-05:00",
-            "e": "2025-01-15T23:14:00.207-05:00",
+            "e": "2025-01-19T10:44:58.863-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -312,7 +312,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.208-05:00",
-            "e": "2025-01-15T23:14:00.208-05:00",
+            "e": "2025-01-19T10:44:59.031-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -332,7 +332,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.208-05:00",
-            "e": "2025-01-15T23:14:00.208-05:00",
+            "e": "2025-01-19T10:44:59.213-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -352,7 +352,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.209-05:00",
-            "e": "2025-01-15T23:14:00.209-05:00",
+            "e": "2025-01-19T10:44:59.379-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -372,7 +372,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.209-05:00",
-            "e": "2025-01-15T23:14:00.209-05:00",
+            "e": "2025-01-19T10:44:59.563-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -392,7 +392,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.209-05:00",
-            "e": "2025-01-15T23:14:00.209-05:00",
+            "e": "2025-01-19T10:44:59.728-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -412,7 +412,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.209-05:00",
-            "e": "2025-01-15T23:14:00.209-05:00",
+            "e": "2025-01-19T10:44:59.896-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -432,7 +432,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.209-05:00",
-            "e": "2025-01-15T23:14:00.209-05:00",
+            "e": "2025-01-19T10:45:00.071-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -452,7 +452,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.209-05:00",
-            "e": "2025-01-15T23:14:00.209-05:00",
+            "e": "2025-01-19T10:45:00.246-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -472,7 +472,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.209-05:00",
-            "e": "2025-01-15T23:14:00.209-05:00",
+            "e": "2025-01-19T10:45:00.413-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }
@@ -492,7 +492,7 @@
           },
           "actualTime": {
             "s": "2025-01-15T23:14:00.209-05:00",
-            "e": "2025-01-15T23:14:00.209-05:00",
+            "e": "2025-01-19T10:45:00.597-05:00",
             "invalid": null,
             "isLuxonInterval": true
           }

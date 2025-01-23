@@ -44,24 +44,24 @@ export default class Phase extends EpisodeModel {
   }
 
 
-  static splitPhase(phase) {
-    if( phase.timeElapsed == 0 || phase.timeElapsed >= phase.duration) {
-      return [phase];
+  split() {
+    if( this.timeElapsed == 0 || this.timeElapsed >= this.duration) {
+      return [this];
     }
 
     const phaseA = new Phase({
-      name: phase.name,
-      round: phase.round,
-      duration: phase.timeElapsed
+      name: this.name,
+      round: this.round,
+      duration: this.timeElapsed
     })
 
     const phaseB = new Phase({
-      name: phase.name,
-      round: phase.round,
-      duration: phase.timeRemaining,
+      name: this.name,
+      round: this.round,
+      duration: this.timeRemaining,
     });
 
-    phaseA.timeElapsed = phase.timeElapsed;
+    phaseA.timeElapsed = this.timeElapsed;
 
     for( const tag of phase.tags.values() ) {
       phaseA.tags.add(tag);

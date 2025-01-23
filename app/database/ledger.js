@@ -16,6 +16,8 @@ class LedgerSingleton {
   active = [];
   index = {};
 
+  #collections = [];
+
   initialize() {
     const file = {
       games: [],
@@ -38,6 +40,11 @@ class LedgerSingleton {
     }
 
     Object.assign(this, file);
+
+
+    //introspection
+    const episode = new Episode();
+    this.#collections = Object.keys(episode).filter( key => Array.isArray(episode[key]) );
   }
 
   //PRIVATE METHODS
@@ -72,8 +79,8 @@ class LedgerSingleton {
     return (id) => this[key].find((element) => element.id === id);
   }
 
-  #getEpisodeByModelId(key) {
-    return (id) => {
+  #getEpisodeByModelId(key = "") {
+    return (id = "") => {
       const episodeId = this.#getEpisodeIdFor(key, id);
       return Episode.load(episodeId);
     };
@@ -81,7 +88,7 @@ class LedgerSingleton {
 
   #getEpisodeIdFor(collection, id) {
     return Object.entries(this.index[collection])
-      .find(([episodeId, societyIds]) => societyIds.includes(id))
+      .find(([episodeId, modelIds]) => modelIds.includes(id))
       ?.at(0);
   }
   
@@ -91,9 +98,7 @@ class LedgerSingleton {
   }
 
   #indexEpisode(episode) {
-    const keys = ["actions", "communities", "phases", "players", "resources", "societies"];
-
-    for (const key of keys) {
+    for (const key of this.#collections) {
       this.#indexEpisodeCollection(episode.id, key, episode[key]);
     }
   }
@@ -109,6 +114,27 @@ class LedgerSingleton {
   getEpisodeByResourceId = this.#getEpisodeByModelId("resources");
   getEpisodeBySocietyId = this.#getEpisodeByModelId("societies");
 
+
+  // collection(key = "") {
+  //   let array = [];
+
+  //   if( key == "episodes" ) {
+  //     array = this.episodes;
+  //   } else if( key == "games" ){
+  //     array = this.games;
+  //   } else if( this.#collections.includes(key) ) {
+  //     return {
+  //       get: (id) => {
+  //         const episode = this.#getEpisodeByModelId(key);
+  //       }
+  //     }
+  //   } else {
+  //     throw new Error(`No addressable collection named ${key} in episodes or ledger`);
+  //   }
+
+  //   return array;
+  // }
+  
 
   getActiveEpisode() {
     //TODO: Fix this doofer

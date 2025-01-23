@@ -3,6 +3,7 @@
 @import url("./layouts.css");
 @import url("./colours.css");
 @import url("./behaviours.css");
+@import url("./components.css");
 
 :root {
   font-size: clamp(12px, 1vw, 16px);

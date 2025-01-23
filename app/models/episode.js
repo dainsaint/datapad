@@ -4,7 +4,6 @@ import Model from "#database/model";
 import Tags from "#core/tags";
 import Ledger from "#database/ledger";
 import Game from "#models/game";
-import Phase from "#models/phase";
 
 const datastore = new Datastore();
 
@@ -76,7 +75,7 @@ export default class Episode extends Model {
   splitPhase( phase, ...phasesToInsert) {
     const index = this.phases.indexOf(phase);
     
-    const phases = Phase.splitPhase(phase);
+    const phases = phase.split();
     phases[0].completePhase();
     phases.splice(1, 0, ...phasesToInsert);
     phases.forEach( phase => phase.episode = this.id );
@@ -104,6 +103,11 @@ export default class Episode extends Model {
     return `/episodes/${this.id}` + append;
   }
  
+  /**
+   * 
+   * @param {string} id 
+   * @returns {Episode}
+   */
   static load(id) {
     if (this.#episodes.has(id)) {
       return this.#episodes.get(id);

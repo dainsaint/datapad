@@ -1,0 +1,112 @@
+.phase-timeline {
+  overflow-x: scroll;
+  overflow-y: visible;
+  max-width: 100%;
+  height: 5rem;
+
+  --color-current: black;
+  --color-elapsed: gray;
+  --color-complete: lightgray;
+  --color-overflow: red;
+  --color-hover: purple;
+}
+
+.phase-timeline__container {
+  display: flex;
+  gap: 1px;
+  width: 200%;
+  padding: 1px;
+  position: relative
+}
+
+.phase-timeline__phase {
+  --color: #eee;
+  display: flex;
+  flex: auto;
+  position: relative;
+  cursor: pointer;
+}
+.phase-timeline__bar {
+  width: 100%;
+  overflow: hidden;
+}
+
+.phase-timeline__phase--current {
+  --color: black;
+}
+
+.phase-timeline__phase--last {
+  margin-right: 5px;
+}
+
+.phase-timeline__phase--last .phase-timeline__bar {
+  border-bottom-right-radius: 15px; 
+}
+
+
+.phase-timeline__phase-scheduled {
+  background: var(--color);
+  flex: auto;
+  padding: 5px;
+  position: relative;
+  height: calc(1rem + 10px);
+  overflow: hidden;
+}
+
+.phase-timeline__phase-elapsed {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: grey;
+}
+
+.phase-timeline__phase-overflow {
+  background: red;
+  flex: auto;
+}
+
+.phase-timeline__time {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.phase-timeline__label {
+  position: absolute;
+  top: calc(100% + 1px);
+  opacity: 0;
+}
+
+.phase-timeline__phase:hover .phase-timeline__label {
+  opacity: 1;
+}
+
+.phase-timeline__phase--current .phase-timeline__label {
+  opacity: 1;
+}
+
+.phase-timeline__phase:hover .phase-timeline__phase-scheduled {
+  background: green; 
+}
+
+
+/** 
+
+STATES TO DESIGN FOR 
+- Current Phase
+- Current Phase playing
+- current phase, paused
+- current phase elapsed
+- current phase over time
+- Phase Complete 
+- upcoming phase
+- phase hover
+- Phases, crisis mode
+
+
+
+
+
+**/

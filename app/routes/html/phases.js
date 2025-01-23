@@ -1,5 +1,5 @@
 import Episode from "#models/episode";
-import Phase from "#models/phase";
+import Phase, { PhaseStatus } from "#models/phase";
 import express from "express";
 
 
@@ -28,11 +28,13 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   
   const episode = Episode.load(episodeId);
   const phase = episode.getPhaseById(phaseId);
-  
-  console.log( phaseId, phase, action );
 
   //TODO: handle this logic better, with the mutability problem
   switch (action) {
+    case "prev":
+      const prevPhase = episode.phases.at( episode.phases.indexOf(phase) - 1);
+      prevPhase.status = PhaseStatus.IDLE;
+      break;
     case "start":
       phase.startPhase();
       break;
