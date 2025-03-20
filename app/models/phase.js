@@ -3,7 +3,7 @@ import EpisodeModel from "#database/episode-model"
 import Tags from "#core/tags";
 
 export default class Phase extends EpisodeModel {
-  name = "New Phase"
+  type = PhaseType.BLANK;
   status = PhaseStatus.IDLE;
   round = 0;
   duration = 0;
@@ -12,9 +12,9 @@ export default class Phase extends EpisodeModel {
 
   actualTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: 0 }));
 
-  constructor({ name = "New Phase", round = 0, duration = 0 }) {
+  constructor({ type = PhaseType.BLANK, round = 0, duration = 0 }) {
     super();
-    Object.assign( this, {name, round, duration} );
+    Object.assign( this, {type, round, duration} );
   }
 
   get timeRemaining() {
@@ -50,13 +50,13 @@ export default class Phase extends EpisodeModel {
     }
 
     const phaseA = new Phase({
-      name: this.name,
+      type: this.type,
       round: this.round,
       duration: this.timeElapsed
     })
 
     const phaseB = new Phase({
-      name: this.name,
+      type: this.type,
       round: this.round,
       duration: this.timeRemaining,
     });
@@ -88,4 +88,15 @@ export const PhaseStatus = {
   PLAYING: "playing",
   PAUSED: "paused",
   COMPLETE: "complete"
+}
+
+export const PhaseType = {
+  BLANK: "Blank Phase",
+  SETUP: "Setup Phase",
+  UNIVERSAL: "Universal Phase",
+  SOCIETAL: "Societal Phase",
+  GALACTIC: "Galactic Phase",  
+  INDIVIDUAL: "Individual Phase",
+  GENERATIONAL: "Generational Phase",
+  CONCLUSION: "Conclusion Phase"
 }

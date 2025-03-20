@@ -1,5 +1,5 @@
 import Episode from "#models/episode";
-import Phase, { PhaseStatus } from "#models/phase";
+import Phase, { PhaseStatus, PhaseType } from "#models/phase";
 import express from "express";
 
 
@@ -46,7 +46,7 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
       break;
     case "split":
       const newGalacticPhase = new Phase({
-        name: "Galactic Phase",
+        type: PhaseType.GALACTIC,
         round: phase.round,
         duration: 180
       })
@@ -66,5 +66,29 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   res.sendStatus(200);
 
 });
+
+phases.post("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
+  const { episodeId, phaseId } = req.params;
+  const { type, round, duration: { minutes, seconds }} = req.body;
+
+  const episode = Episode.load(episodeId);
+  const phase = episode.getPhaseById(phaseId);
+  
+  const update = {
+    type,
+    round: parseInt(round),
+    duration: parseInt(minutes) * 60 + parseInt(seconds)
+  };
+
+  phase.update( update );
+  episode.save();
+
+  //this is the way to "refresh" whatever page
+  //this was called from using ajax
+  const currentUrl = req.get("hx-current-url");
+  if (currentUrl) res.setHeader("HX-Location", currentUrl);
+  
+  res.sendStatus(200);
+})
 
 export default phases;

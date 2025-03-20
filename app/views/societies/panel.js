@@ -22,9 +22,14 @@ export default function SocietyPanel({ society = new Society()} = {}) {
 
       ${ ActionBuilder({ episode, societyId: society.id }) }
 
-      <div class="grid-medium">
+      <div class="grid-three">
        ${society.communities.map( (community) => CommunityCard({ community }))}
-       <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">+ New Community</button>
+      </div>
+
+      <div class="layout-row gap-tiny">
+        <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog">+ New Resource</button>
+        <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">+ New Community</button>
+        <button hx-get="${episode.toURL('/societies/create')}" hx-target="#dialog">+ New Society</button>
       </div>
     </main>
   `;
@@ -47,11 +52,11 @@ export function CommunityCard({ community = new Community() } = {}) {
           </h2>
         </header>
 
-        <div class="grid-three" data-sortable="resources" data-sortable-expand>
+        <div class="grid-small" data-sortable="resources" data-sortable-expand>
           ${community.resources.map((resource) =>
             CommunityResourceCard({ resource })
           )}
-          <button data-sortable-pinned hx-get="${`/episode/${community.episode}/resources/create`}" hx-target="#dialog">+ New Resource</button>
+          
         </div>
       </form>
     </div>

@@ -1,5 +1,6 @@
 import { html, secondsToTime } from "#core/utils";
 import Episode from "#models/episode";
+import { PhaseType } from "#models/phase";
 import EpisodeLayout from "#views/episodes/components/layout";
 import PhaseCard from "#views/phases/card";
 import SocietyList from "#views/societies/list";
@@ -49,8 +50,8 @@ function PhaseControls({ currentPhase, phases }) {
         <button name="action" value="prev" ${{disabled: phases.at(0) == currentPhase }}>Previous Phase</button>
         ${ !currentPhase.isPlaying && html`<button name="action" value="start" >Start Phase</button>` }
         ${ currentPhase.isPlaying && html`<button name="action" value="pause" >Pause Phase</button>` }
-        <button name="action" value="split">Split Phase</button>
-        <button name="action" value="next" ${{disabled: phases.at(-1) == currentPhase }}>Next Phase</button>
+        ${ (currentPhase.type == PhaseType.SOCIETAL || currentPhase.type == PhaseType.GALACTIC) && html`<button name="action" value="split">Split Phase</button>` }
+        <button name="action" value="next" ${{disabled: phases.at(-1) == currentPhase }}>Skip Phase</button>
         
       </form>
     </div>
@@ -63,10 +64,15 @@ function PhaseTimeline({ currentPhase, phases }) {
   <figure class="phase-timeline">
     <div class="phase-timeline__container"> 
     ${phases.map( (phase, i) => html`
-      <div class="phase-timeline__phase ${{
-        "phase-timeline__phase--current": phase == currentPhase,
-        "phase-timeline__phase--last": phase.round != phases.at(i+1)?.round
-      }}" data-status="${phase.status}" style="flex-basis: ${Math.max( phase.duration, phase.timeElapsed )}px" >
+      <div 
+        class="phase-timeline__phase ${{
+          "phase-timeline__phase--current": phase == currentPhase,
+          "phase-timeline__phase--last": phase.round != phases.at(i+1)?.round
+        }}" 
+        data-status="${phase.status}" 
+        hx-get="${ phase.toURL("/edit") }"
+        hx-target="#dialog"
+        style="flex-basis: ${Math.max( phase.duration, phase.timeElapsed )}px" >
         <div class="phase-timeline__bar">
           <div class="phase-timeline__phase-scheduled" style="flex-basis: ${phase.duration}px">
             <div class="phase-timeline__phase-elapsed" style="width: ${ Math.min(phase.timeElapsed / phase.duration, 1) * 100}%;"></div>
@@ -79,8 +85,8 @@ function PhaseTimeline({ currentPhase, phases }) {
         </div>
 
         <div class="phase-timeline__label">
-          <strong>Round ${ phase.round + 1}</strong> <br/> 
-          ${ phase.name } 
+          <strong>Round ${ phase.round }</strong> <br/> 
+          ${ phase.type } 
         </div>
       </div>`
     )}

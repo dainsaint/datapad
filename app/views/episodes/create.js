@@ -13,7 +13,10 @@ export default function EpisodeCreate({}) {
 
       <article class="stack">
         <label for="name">Episode Name</label>
-        <input name="name" type="text" autofocus autocapitalize="words" required/>
+        <input name="name" type="text" placeholder="New Episode" 
+          autofocus 
+          autocapitalize="words" 
+          required/>
 
         ${ EpisodeTimeInput({ date: nextDefaultTime, time: nextDefaultTime, duration: {hours: 5, minutes: 0} }) }
       </article>
