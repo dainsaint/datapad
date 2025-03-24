@@ -18,6 +18,7 @@ export default class Episode extends Model {
   resources = []
   societies = []
   actions = []
+  logs = []
 
   tags = new Tags()
 
@@ -83,7 +84,17 @@ export default class Episode extends Model {
     this.phases.splice(index, 1, ...phases);
   }
 
+  log(entry) {
+    this.logs.push(entry);
+  }
 
+  beginCrisisMode() {
+    this.tags.add(EpisodeTags.CRISIS_MODE);
+  }
+
+  endCrisisMode() {
+    this.tags.remove(EpisodeTags.CRISIS_MODE);
+  }
 
   makeActive() {
     this.tags.add(EpisodeTags.ACTIVE);

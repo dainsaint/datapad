@@ -2,7 +2,7 @@
   overflow-x: scroll;
   overflow-y: visible;
   max-width: 100%;
-  height: 5rem;
+  height: 6rem;
 
   --color-upcoming: lightgray;
   --color-current: gray;
@@ -10,6 +10,10 @@
   --color-complete: black;
   --color-overflow: red;
   --color-hover: purple;
+}
+
+.phase-timeline::-webkit-scrollbar {
+  display: none;
 }
 
 .phase-timeline__container {
@@ -122,3 +126,26 @@ STATES TO DESIGN FOR
 
 
 **/
+
+
+
+
+.phase-card__edit {}
+
+.phase-card__edit .icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+}
+
+
+
+.resource-card[data-tags*="vital"]::before {
+  content: "★";
+  margin-inline-end: .25em;
+}
+
+.resource-card[data-tags*="exhausted"] {
+  opacity: .5;
+}

@@ -16,11 +16,14 @@ export default function EpisodeGameMaster ({ episode = new Episode() } = {}) {
 
     <main class="content stack-loose scrollable">
       <div class="stack">
+
+        ${ currentPhase ?  PhaseControls({ currentPhase, phases: episode.phases }): "No Phases Created yet"}
+
         <h1>Timeline</h1>
         <div class="switch">
         ${ phasesToDisplay.map((phase, i) => PhaseCard({phase, i})) }
         </div>
-      ${ currentPhase ?  PhaseControls({ currentPhase, phases: episode.phases }): "No Phases Created yet"}
+      
       </div>
 
       <div class="stack">
@@ -45,14 +48,13 @@ function PhaseControls({ currentPhase, phases }) {
   
   return html`
     <div class="stack">
-      <h1>Controls (TEMP.)</h1>
+      <h1>Time Controls</h1>
       <form hx-put="${ currentPhase.toURL() }" class="grid-four">
         <button name="action" value="prev" ${{disabled: phases.at(0) == currentPhase }}>Previous Phase</button>
         ${ !currentPhase.isPlaying && html`<button name="action" value="start" >Start Phase</button>` }
         ${ currentPhase.isPlaying && html`<button name="action" value="pause" >Pause Phase</button>` }
         ${ (currentPhase.type == PhaseType.SOCIETAL || currentPhase.type == PhaseType.GALACTIC) && html`<button name="action" value="split">Split Phase</button>` }
-        <button name="action" value="next" ${{disabled: phases.at(-1) == currentPhase }}>Skip Phase</button>
-        
+        <button name="action" value="next" ${{disabled: phases.at(-1) == currentPhase }}>Next Phase</button>
       </form>
     </div>
   `

@@ -41,6 +41,12 @@ export const CommunityVoice = {
   PEOPLE: "people",
 };
 
+export const CommunityRole = {
+  NONE: "none",
+  EMISSARY: "emissary",
+  AMBASSADOR: "ambassador",
+};
+
 export const CommunityTag = {
   ENDANGERED: "endangered",
   LOST: "lost",

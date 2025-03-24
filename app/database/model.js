@@ -7,7 +7,17 @@ export default class Model {
     this.id = uuid(8)
   }
 
-  update( patch ) {
-    Object.assign(this, patch);
+  update( patch = {} ) {
+    const props = Object.getOwnPropertyNames(this);
+    const update = Object.keys(patch)
+      .filter( key => props.includes(key) )
+      .reduce( (result, key) => {
+        result[key] = patch[key];
+        return result;
+      }, {})
+    
+    console.log( props, patch, update );
+
+    Object.assign(this, update);
   }
 }

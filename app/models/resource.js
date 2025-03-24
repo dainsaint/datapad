@@ -15,6 +15,10 @@ export default class Resource extends EpisodeModel {
     return this.tags.has( ResourceTag.EXHAUSTED );
   }
 
+  get isVital() {
+    return this.tags.has( ResourceTag.VITAL );
+  }
+
   toURL(append = "") {
     return `/episodes/${this.episode}/resources/${this.id}` + append;
   }

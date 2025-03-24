@@ -1,6 +1,6 @@
 import express from "express";
 import Episode from "#models/episode";
-import Resource from "#models/resource";
+import Resource, { ResourceTag } from "#models/resource";
 import { broadcast } from "#routes/html/events";
 
 
@@ -75,7 +75,7 @@ resources.get("/episodes/:episodeId/resources/:resourceId/:view?", (req, res, ne
 
 resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) => {
   const { episodeId, resourceId } = req.params;
-  const { communityId } = req.body;
+  const { communityId, shouldAlterTags, vital, exhausted } = req.body;
 
   const episode = Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
@@ -88,7 +88,30 @@ resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) =
     nextCommunity.addResource( resource );
   }
 
+  console.log( req.body );
+  delete req.body.shouldAlterTags;
+  delete req.body.exhausted;
+  delete req.body.vital;
+
+
   resource.update(req.body);
+console.log( resource );
+  if( shouldAlterTags ) {
+    if(vital) {
+      resource.tags.add(ResourceTag.VITAL);
+    } else {
+      resource.tags.delete(ResourceTag.VITAL);
+    }
+
+    if(exhausted) {
+      resource.tags.add(ResourceTag.EXHAUSTED);
+    } else {
+      resource.tags.delete(ResourceTag.EXHAUSTED);
+    }
+  }
+
+
+
   episode.save();
 
   const currentUrl = req.get("hx-current-url");

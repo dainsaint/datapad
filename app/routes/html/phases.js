@@ -30,9 +30,9 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   const phase = episode.getPhaseById(phaseId);
 
   //TODO: handle this logic better, with the mutability problem
+  const prevPhase = episode.phases.at( episode.phases.indexOf(phase) - 1);
   switch (action) {
     case "prev":
-      const prevPhase = episode.phases.at( episode.phases.indexOf(phase) - 1);
       prevPhase.status = PhaseStatus.IDLE;
       break;
     case "start":
@@ -43,6 +43,10 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
       break;
     case "next":
       phase.completePhase();
+      if( phase.round > prevPhase.round ) {
+        console.log("HANDLE ROUND COMPLETE")
+      }
+      
       break;
     case "split":
       const newGalacticPhase = new Phase({

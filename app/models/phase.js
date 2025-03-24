@@ -63,7 +63,7 @@ export default class Phase extends EpisodeModel {
 
     phaseA.timeElapsed = this.timeElapsed;
 
-    for( const tag of phase.tags.values() ) {
+    for( const tag of this.tags.values() ) {
       phaseA.tags.add(tag);
       phaseB.tags.add(tag);
     }
