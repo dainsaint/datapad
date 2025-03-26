@@ -1,12 +1,14 @@
 import { DateTime, Duration, Interval } from "luxon";
-import Model from "#database/model";
+import EpisodeModel from "#database/episode-model"
+import Tags from "#core/tags";
 
-export default class Phase extends Model {
+export default class Phase extends EpisodeModel {
   type = PhaseType.BLANK;
   status = PhaseStatus.IDLE;
   round = 0;
   duration = 0;
   timeElapsed = 0;
+  tags = new Tags();
 
   actualTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: 0 }));
 
@@ -15,7 +17,17 @@ export default class Phase extends Model {
     Object.assign( this, {type, round, duration} );
   }
 
+  get timeRemaining() {
+    return Math.floor(this.duration - this.timeElapsed);
+  }
 
+  get isPlaying() {
+    return this.status === PhaseStatus.PLAYING;
+  }
+
+  get isComplete() {
+    return this.status === PhaseStatus.COMPLETE;
+  }
 
   startPhase() {
     this.actualTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: this.duration }))
@@ -66,26 +78,10 @@ export default class Phase extends Model {
     }
   }
 
-  
-
-  get isPlaying() {
-    return this.status === PhaseStatus.PLAYING;
-  }
-
-  get isComplete() {
-    return this.status === PhaseStatus.COMPLETE;
-  }
-
-  get timeRemaining() {
-    return Math.floor(this.duration - this.timeElapsed);
-  }
-
-
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/phases/${this.id}` + append;
+    return `/episodes/${this.episodeId}/phases/${this.id}` + append;
   }
 }
-
 
 export const PhaseStatus = {
   IDLE: "idle",

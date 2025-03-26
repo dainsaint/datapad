@@ -1,14 +1,16 @@
-import Model from "#database/model";
+import Tags from "#core/tags";
+import EpisodeModel from "#database/episode-model"
 
-export default class Resource extends Model {
-  communityId
+export default class Resource extends EpisodeModel {
+  name = "";
+  relationship = "";
+  tags = new Tags();
 
-  name = "New Resource"
+  communityId;
 
-  
-  constructor(data) {
-    super(data);
-    this.update(data);
+  constructor({ name = "New Resource" }) {
+    super();
+    Object.assign(this, {name});
   }
 
   exhaust() {
@@ -18,7 +20,6 @@ export default class Resource extends Model {
   unexhaust() {
     this.tags.delete( ResourceTag.EXHAUSTED );
   }
-  
 
   get isExhausted() {
     return this.tags.has( ResourceTag.EXHAUSTED );
@@ -28,17 +29,10 @@ export default class Resource extends Model {
     return this.tags.has( ResourceTag.VITAL );
   }
 
-  get community() {
-    return this.episode.communities.find( community => community.id == this.communityId );
-  }
-
-
-  
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/resources/${this.id}` + append;
+    return `/episodes/${this.episodeId}/resources/${this.id}` + append;
   }
 }
-
 
 export const ResourceTag = {
   USING: "using",

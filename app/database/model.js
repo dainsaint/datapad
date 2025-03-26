@@ -1,13 +1,27 @@
-import uuid from "../core/uuid.js";
+import Tags from "#core/tags";
+import uuid from "#core/uuid";
 
-export default class Model {
+export default class Model { 
   id
+  tags = new Tags()
+  
+  #episode
 
-  constructor() {
-    this.id = uuid(8)
+  constructor(data) {
+    this.id = uuid(5);
+    if(data)
+      this.update(data);
   }
 
-  update( patch = {} ) {
+  setEpisode( episode ) {
+    this.#episode = episode;
+  }
+
+  get episode() {
+    return this.#episode;
+  }
+
+  update( patch ) {
     const props = Object.getOwnPropertyNames(this);
     const update = Object.keys(patch)
       .filter( key => props.includes(key) )
@@ -16,6 +30,6 @@ export default class Model {
         return result;
       }, {})
 
-    Object.assign(this, update);
+    Object.assign( this, update );
   }
 }

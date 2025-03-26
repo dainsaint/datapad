@@ -1,5 +1,5 @@
 import express from "express";
-import Ledger from "#database/ledger";
+// import Ledger from "#database/ledger";
 
 const events = express.Router();
 const clients = new Set();
@@ -10,17 +10,17 @@ export function broadcast(name, data) {
 }
 
 export function tick(deltaTime) {
-  try {
-    Ledger.active.forEach((episode) => {
-      const activePhases = episode.phases.filter((phase) => phase.isPlaying);
+  // try {
+  //   Ledger.active.forEach((episode) => {
+  //     const activePhases = episode.phases.filter((phase) => phase.isPlaying);
 
-      for (const phase of activePhases) {
-        phase.tick(deltaTime);
-        broadcast("phases");
-        episode.save();
-      }
-    });
-  } catch (e) {}
+  //     for (const phase of activePhases) {
+  //       phase.tick(deltaTime);
+  //       broadcast("phases");
+  //       episode.save();
+  //     }
+  //   });
+  // } catch (e) {}
 }
 
 /*

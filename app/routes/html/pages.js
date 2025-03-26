@@ -1,5 +1,6 @@
 import express from "express";
 import Ledger from "#database/ledger";
+import Episode from "#models/episode";
 
 const pages = express.Router();
 
@@ -14,7 +15,18 @@ const pages = express.Router();
 // });
 
 pages.get("/", (req, res) => {
-  const episode = Ledger.getActiveEpisode();
+  let episode = Ledger.getActiveEpisode();
+  
+  if( !episode ) {
+    const lastEpisodeData = Ledger.episodes.at(-1);  
+   
+    episode = Episode.load( lastEpisodeData.id );
+    episode.makeActive();
+    episode.save();
+
+    console.log( Ledger.active );
+  }
+
   res.redirect(`/episodes/${ episode.id }/gm`)
 });
 

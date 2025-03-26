@@ -1,40 +1,46 @@
-import Tags from "#core/tags";
-import EpisodeModel from "#database/episode-model"
+import Model from "#database/model";
 
-export default class Community extends EpisodeModel {
-  name;
+
+export default class Community extends Model {
+  societyId
+  playerId
+
+  name
   voice;
-  resources = [];
-  tags = new Tags();
 
-  playerId;
-
-  constructor({ name = "", voice = CommunityVoice.PEOPLE }) {
-    super();
-    Object.assign(this, { name, voice });
+  constructor(data) {
+    super(data);
+    this.update(data);
   }
+
+  endanger() {
+    this.tags.add( CommunityTag.ENDANGERED )
+  }
+
+  unendanger() {
+    this.tags.delete( CommunityTag.ENDANGERED );
+  }
+
 
   get isEndangered() {
-    return this.resources.length == 0;
+    return this.tags.has( CommunityTag.ENDANGERED );
   }
 
-  getResourceById(id) {
-    return this.resources.find((r) => r.id === id);
+
+  get resources() {
+    return this.episode.resources.filter( resource => resource.communityId == this.id );
   }
 
-  addResource(resource) {
-    this.resources.push(resource);
+  get society() {
+    return this.episode.societies.find( society => society.id == this.societyId );
   }
 
-  removeResource(resource) {
-    const index = this.resources.indexOf(resource);
-    if (index >= 0) {
-      this.resources.splice(index, 1);
-    }
+  get player() {
+    return this.episode.players.find( player => player.id == this.playerId );
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episodeId}/communities/${this.id}` + append;
+    return `/episodes/${this.episode.id}/communities/${this.id}` + append;
   }
 }
 

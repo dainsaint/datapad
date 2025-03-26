@@ -5,8 +5,8 @@ import EpisodeLayout from "#views/episodes/components/layout";
 import PhaseCard from "#views/phases/card";
 import SocietyList from "#views/societies/list";
 
-export default function EpisodeGameMaster ({ episode = new Episode() } = {}) {
-  
+export default function EpisodeGameMaster ({ episode } = {}) {
+  // console.log( episode );
   const phasesToDisplay = episode.activePhases.slice(0,3);
   const currentPhase = episode.currentPhase;
 
@@ -26,8 +26,6 @@ export default function EpisodeGameMaster ({ episode = new Episode() } = {}) {
 
         ${ currentPhase ?  PhaseControls({ currentPhase, phases: episode.phases }): "No Phases Created yet"}
 
-
-      
       </div>
 
       <div class="stack">
