@@ -4,6 +4,8 @@ import Model from "#database/model";
 import Tags from "#core/tags";
 import Ledger from "#database/ledger";
 import Game from "#models/game";
+import Record, { RecordType } from "#models/record";
+import Action from "#models/action";
 
 const datastore = new Datastore();
 
@@ -18,7 +20,8 @@ export default class Episode extends Model {
   resources = []
   societies = []
   actions = []
-  logs = []
+  records = []
+  
 
   tags = new Tags()
 
@@ -36,7 +39,7 @@ export default class Episode extends Model {
   //Helper functions
   #addTo(key) {
     return (object) => {
-      object.episode = this.id;
+      object.episodeId = this.id;
       this[key].push(object);
     }
   }
@@ -51,6 +54,7 @@ export default class Episode extends Model {
   addPlayer = this.#addTo("players")
   addResource = this.#addTo("resources")
   addSociety = this.#addTo("societies")
+  addRecord = this.#addTo("records")
   
 
   getActionById = this.#getById("actions")
@@ -59,6 +63,7 @@ export default class Episode extends Model {
   getPlayerById = this.#getById("players")
   getResourceById = this.#getById("resources")
   getSocietyById = this.#getById("societies")
+  getRecordById = this.#getById("records")
 
   get activePhases() {
     return this.phases.filter((phase) => !phase.isComplete)
@@ -73,13 +78,43 @@ export default class Episode extends Model {
   }
 
 
+  turnoverRound() {
+    //every exhausted resource becomes unexhausted
+    const exhaustedResources = this.resources.filter( resource => resource.isExhausted );
+    exhaustedResources.forEach( resource => resource.unexhaust() );
+
+    //every resource in actions becomes exhausted
+    const usedResources = this.actions.map( action => action.resources ).flat();
+    usedResources.forEach( resource => resource.exhaust() );
+
+    //wipe and record actions
+    this.actions.forEach( action => this.addRecord( new Record({ 
+      type: RecordType.ACTION_RESOURCES, 
+      description: `${this.getSocietyById(action.societyId).name} used ${ action.resources.map( resource => resource.name ).join() } to take action.`,
+      value: action.resources.length
+    })))
+
+    this.actions = [];
+
+    //init actions — two per society
+    this.societies.forEach( society => {
+      for( let i = 0; i < 2; i++ ) {
+        const action = new Action({ societyId: society.id, round: this.currentPhase.round });
+        this.addAction(action);
+      }
+    })
+
+    this.save();
+  }
+
+
   splitPhase( phase, ...phasesToInsert) {
     const index = this.phases.indexOf(phase);
     
     const phases = phase.split();
     phases[0].completePhase();
     phases.splice(1, 0, ...phasesToInsert);
-    phases.forEach( phase => phase.episode = this.id );
+    phases.forEach( phase => phase.episodeId = this.id );
 
     this.phases.splice(index, 1, ...phases);
   }

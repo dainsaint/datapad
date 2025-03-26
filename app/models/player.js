@@ -2,11 +2,11 @@ import Tags from "#core/tags"
 import EpisodeModel from "#database/episode-model"
 
 export default class Player extends EpisodeModel {
+  name = "New Player";
+  pronouns = "they/them";
+  tags = new Tags();
 
-  name = "New Player"
-  pronouns = ["they", "them"] 
-  community
-  tags = new Tags()
+  societyId;
 
   constructor({ name = "New Player"} ){
     super();
@@ -14,7 +14,7 @@ export default class Player extends EpisodeModel {
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode}/phases/${this.id}` + append;
+    return `/episodes/${this.episodeId}/phases/${this.id}` + append;
   }
 
 }

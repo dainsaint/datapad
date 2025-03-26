@@ -1,6 +1,8 @@
 import Episode from "#models/episode";
 import Phase, { PhaseStatus, PhaseType } from "#models/phase";
+import Record, { RecordType } from "#models/record";
 import express from "express";
+import { broadcast } from "#routes/html/events";
 
 
 const phases = express.Router();
@@ -31,6 +33,8 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
 
   //TODO: handle this logic better, with the mutability problem
   const prevPhase = episode.phases.at( episode.phases.indexOf(phase) - 1);
+  const nextPhase = episode.phases.at( episode.phases.indexOf(phase) + 1);
+
   switch (action) {
     case "prev":
       prevPhase.status = PhaseStatus.IDLE;
@@ -43,8 +47,9 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
       break;
     case "next":
       phase.completePhase();
-      if( phase.round > prevPhase.round ) {
-        console.log("HANDLE ROUND COMPLETE")
+      episode.addRecord(new Record({ type: RecordType.PHASE_ENDED, description: `Round ${phase.round}: ${phase.type}`, value: phase.duration }));
+      if( nextPhase && nextPhase.round > phase.round ) {
+        completeRound( episode, phase )
       }
       
       break;
@@ -55,6 +60,7 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
         duration: 180
       })
       episode.splitPhase(phase, newGalacticPhase);
+      episode.addRecord(new Record({ type: RecordType.EPISODE_CRISIS_MODE_BEGAN, description: `Round ${phase.round}`, value: true }));
       // console.log( Phase.splitPhase(phase) );
       break;
   }
@@ -94,5 +100,25 @@ phases.post("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   
   res.sendStatus(200);
 })
+
+
+function completeRound( episode ) {
+  console.log("HANDLE ROUND COMPLETE")
+
+  episode.societies.forEach( society => {
+    episode.addRecord( new Record({ type: RecordType.SOCIETY_RESOURCES, description: society.name, value: society.resources.length }));
+    episode.addRecord( new Record({ type: RecordType.SOCIETY_ACTIONS_TAKEN, description: society.name, value: society.resources.length }));
+  })
+
+  episode.addRecord( new Record({ type: RecordType.EPISODE_COMMUNITIES_ENDANGERED, value: episode.communities.filter( community => community.isEndangered ).length }))
+
+  episode.turnoverRound();
+
+  episode.save();
+
+  broadcast("societies");
+}
+
+
 
 export default phases;

@@ -2,6 +2,7 @@ import express from "express";
 import Episode from "#models/episode";
 import Resource, { ResourceTag } from "#models/resource";
 import { broadcast } from "#routes/html/events";
+import Record, { RecordType } from "#models/record";
 
 
 const resources = express.Router();
@@ -33,6 +34,9 @@ resources.post("/episodes/:episodeId/resources", (req, res, next) => {
   
   community.addResource(resource);
   episode.addResource(resource);
+
+  episode.addRecord(new Record({ type: RecordType.RESOURCE_CREATED, value: resource.name }));
+
   episode.save();
   
   const currentUrl = req.get("hx-current-url");

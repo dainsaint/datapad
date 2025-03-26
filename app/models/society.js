@@ -35,7 +35,7 @@ export default class Society extends EpisodeModel {
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode}/societies/${this.id}` + append;
+    return `/episodes/${this.episodeId}/societies/${this.id}` + append;
   }
 }
 

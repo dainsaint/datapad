@@ -2,7 +2,7 @@ import { html } from "#core/utils"
 import Episode from "#models/episode";
 
 export default function CommunityEdit({ community }) {
-  const episode = Episode.load(community.episode);
+  const episode = Episode.load(community.episodeId);
   const mySociety = episode.societies.find( s => s.getCommunityById( community.id ));
   
   return html`

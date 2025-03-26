@@ -15,8 +15,6 @@ export default class Model {
         result[key] = patch[key];
         return result;
       }, {})
-    
-    console.log( props, patch, update );
 
     Object.assign(this, update);
   }

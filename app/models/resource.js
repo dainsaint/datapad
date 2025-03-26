@@ -6,9 +6,19 @@ export default class Resource extends EpisodeModel {
   relationship = "";
   tags = new Tags();
 
+  communityId;
+
   constructor({ name = "New Resource" }) {
     super();
     Object.assign(this, {name});
+  }
+
+  exhaust() {
+    this.tags.add( ResourceTag.EXHAUSTED );
+  }
+
+  unexhaust() {
+    this.tags.delete( ResourceTag.EXHAUSTED );
   }
 
   get isExhausted() {
@@ -20,7 +30,7 @@ export default class Resource extends EpisodeModel {
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode}/resources/${this.id}` + append;
+    return `/episodes/${this.episodeId}/resources/${this.id}` + append;
   }
 }
 

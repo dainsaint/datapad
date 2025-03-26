@@ -7,6 +7,8 @@ export default class Community extends EpisodeModel {
   resources = [];
   tags = new Tags();
 
+  playerId;
+
   constructor({ name = "", voice = CommunityVoice.PEOPLE }) {
     super();
     Object.assign(this, { name, voice });
@@ -32,7 +34,7 @@ export default class Community extends EpisodeModel {
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode}/communities/${this.id}` + append;
+    return `/episodes/${this.episodeId}/communities/${this.id}` + append;
   }
 }
 

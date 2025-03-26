@@ -3,7 +3,7 @@ import Episode from "#models/episode";
 import { ResourceTag } from "#models/resource";
 
 export default function ResourceEdit({ resource }) {
-  const episode = Episode.load( resource.episode );
+  const episode = Episode.load( resource.episodeId );
   const myCommunity = episode.communities.find( c => c.resources.some( r => r.id === resource.id ) ); //yikes
 
   return html`

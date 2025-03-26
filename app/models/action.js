@@ -7,15 +7,15 @@ export default class Action extends EpisodeModel {
   
   resources = [];
   
-  society
+  societyId
   emissary
   round
   
   roll = []
 
-  constructor({ society } = {}) {
+  constructor({ societyId } = {}) {
     super();
-    Object.assign(this, {society});
+    Object.assign(this, {societyId});
   }
 
   setResources( resources ) {
@@ -38,7 +38,7 @@ export default class Action extends EpisodeModel {
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode}/actions/${this.id}` + append;
+    return `/episodes/${this.episodeId}/actions/${this.id}` + append;
   }
 
 };

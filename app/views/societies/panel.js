@@ -7,8 +7,8 @@ import SocietyInfo from "./components/info.js";;
 const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 
 export default function SocietyPanel({ society = new Society()} = {}) {
-  const episode = Episode.load( society.episode );
-  return html` <main id="${societyPanelId(society)}" class="content stack-loose scrollable">
+  const episode = Episode.load( society.episodeId );
+  return html` <main id="${societyPanelId(society)}" class="content stack-loose scrollable" hx-get="${society.toURL("/panel")}" hx-trigger="sse:societies">
       <header>
         <div class="layout-row gap-tight" style="display: flex; gap: 1rem">
           <h1>
@@ -83,7 +83,7 @@ export function CommunityResourceCard({ resource }) {
 
 
 export function ActionBuilder({ episode, societyId } = {}) {
-  const actions = episode.actions.filter( action => action.society == societyId );
+  const actions = episode.actions.filter( action => action.societyId == societyId );
 
   return html`
     <section
@@ -91,17 +91,7 @@ export function ActionBuilder({ episode, societyId } = {}) {
       hx-get="${episode.toURL(`/actions?societyId=${societyId}`)}"
       hx-trigger="sse:actions"
     >
-      <h2>
-        Actions
-        <button
-          name="societyId"
-          value="${societyId}"
-          ${{ disabled: actions.length >= 2 }}
-          hx-post="${episode.toURL(`/actions`)}"
-        >
-          + New
-        </button>
-      </h2>
+      <h2>Actions</h2>
       ${actions.map(
         (action, i) => html`
           <div class="layout-row gap">
