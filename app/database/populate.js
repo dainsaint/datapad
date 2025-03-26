@@ -1,7 +1,7 @@
 import { DateTime } from "luxon";
 import Community, { CommunityVoice } from "#models/community";
 import Episode from "#models/episode";
-import Game from "#models/game";
+// import Game from "#models/game";
 import Phase, {PhaseType} from "#models/phase";
 import Player from "#models/player";
 import Resource from "#models/resource";
@@ -60,12 +60,12 @@ export function populateDummyData() {
   const resource2 = new Resource({ name: "Amazing Suspenders" });
   const resource3 = new Resource({ name: "Big Rock" });
 
-  community.addResource(resource1);
-  community.addResource(resource2);
-  community.addResource(resource3);
+  resource1.communityId = community.id;
+  resource2.communityId = community.id;
+  resource3.communityId = community.id;
 
-  society.addCommunity(community);
-  society.addCommunity(community2);
+  community.societyId = society.id;
+  community2.societyId = society.id;
 
   episode.addPlayer(player);
   episode.addSociety(society);
@@ -75,13 +75,18 @@ export function populateDummyData() {
   episode.addResource(resource2);
   episode.addResource(resource3);
 
-  episode.makeActive();
-
-  const game = new Game({
-    name: "John's House — Feb-Mar 2025",
-  });
-
-  episode.game = game;
-
   episode.save();
 }
+
+
+
+  // episode.makeActive();
+
+  // const game = new Game({
+  //   name: "John's House — Feb-Mar 2025",
+  // });
+
+  // episode.game = game;
+
+//   episode.save();
+// 

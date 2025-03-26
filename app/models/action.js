@@ -1,47 +1,45 @@
-import Tags from "#core/tags";
-import EpisodeModel from "#database/episode-model"
+import Model from "#database/model";
 
-
-export default class Action extends EpisodeModel {
-  tags = new Tags() 
-  
-  resources = [];
-  
+export default class Action extends Model {
   societyId
-  emissary
+  resourceIds = []
   round
-  
-  roll = []
 
-  constructor({ societyId } = {}) {
-    super();
-    Object.assign(this, {societyId});
+  constructor(data) {
+    super(data);
+    this.update(data);
   }
 
   setResources( resources ) {
-    this.resources = resources;
+    this.resourceIds = resources.map( resource => resource.id );
   }
 
   removeResources( resources ) {
     for( const resource of resources ) {
-      const index = this.resources.indexOf(resource);
+      const index = this.resourceIds.indexOf(resource.id);
       if( index >= 0 )
-        this.resources.splice(index, 1);
+        this.resourceIds.splice(index, 1);
     }
   }
 
   get primaryResource () {
-    if( !Array.isArray(this.resources) )
-      this.resources = [];
+    let resourceId = this.resourceIds.at(0);
+    return this.episode.getResourceById(resourceId);
+  }
 
-    return this.resources.at(0);
+  get resources() {
+    return this.resourceIds.map(this.episode.getResourceById);
+  }
+
+  get society() {
+    return this.episode.getSocietyById( this.societyId );
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episodeId}/actions/${this.id}` + append;
+    return `/episodes/${this.episode.id}/actions/${this.id}` + append;
   }
+}
 
-};
 
 export const ActionResultTags = {
   SUCCESS: "success",

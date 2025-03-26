@@ -1,43 +1,30 @@
-import EpisodeModel from "#database/episode-model"
+import Model from "#database/model";
 
-export default class Society extends EpisodeModel {
-  name = "";
-  archetype = "";
-  planet = "";
-  communities = [];
+export default class Society extends Model {
+  name
+  archetype
+  planet
 
-  constructor({
-    name = "New Society",
-    archetype = "None",
-    planet = "Earth",
-  } = {}) {
-    super();
-    Object.assign(this, { name, archetype, planet });
+  constructor(data) {
+    super(data);
+    this.update(data);
   }
 
-  getCommunityById(id) {
-    return this.communities.find((r) => r.id === id);
-  }
 
-  addCommunity(community) {
-    this.communities.push(community);
-  }
-
-  removeCommunity(community) {
-    const index = this.communities.indexOf(community);
-    if (index >= 0) {
-      this.communities.splice(index, 1);
-    }
+  get communities() {
+    return this.episode.communities.filter( community => community.societyId == this.id );
   }
 
   get resources() {
-    return this.communities.map((community) => community.resources).flat();
+    return this.communities.map( community => community.resources ).flat();
   }
 
+
   toURL(append = "") {
-    return `/episodes/${this.episodeId}/societies/${this.id}` + append;
+    return `/episodes/${this.episode.id}/societies/${this.id}` + append;
   }
 }
+
 
 export const SocietyArchetype = {
   AESTHETIC: "the aesthetic",
@@ -49,3 +36,7 @@ export const SocietyArchetype = {
   MIGHTY: "the mighty",
   SCHOLARS: "the scholars",
 };
+
+export const SocietyTags = {
+  INSPIRED: "inspired"
+}

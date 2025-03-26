@@ -1,18 +1,18 @@
-import Model from "#database/model";
+import EpisodeModel from "#database/episode-model"
 
-export default class Record extends Model {
-  timestamp;
+export default class Record extends EpisodeModel {
+  timestamp = new Date();
   type = RecordType.NONE;
   description = "New Record";
   value;
   
-  constructor(data){
-    super(data);
+  constructor({} ){
+    super();
     this.timestamp = new Date();
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/records/${this.id}` + append;
+    return `/episodes/${this.episodeId}/phases/${this.id}` + append;
   }
 
 }

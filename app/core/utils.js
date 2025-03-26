@@ -93,3 +93,8 @@ export function from(number) {
     }
   }
 }
+
+
+export function filterUnique( current, i, array ) {
+  return array.indexOf(current) === i
+}

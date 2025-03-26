@@ -1,31 +1,45 @@
 import { DateTime, Duration, Interval } from "luxon";
-import Action from "#models/action";
-import Database from "#database/database"
+import Datastore from "#database/datastore";
 import Model from "#database/model";
+import Tags from "#core/tags";
 import Ledger from "#database/ledger";
+import Game from "#models/game";
 import Record, { RecordType } from "#models/record";
+import Action from "#models/action";
 
-
-const loadedEpisodes = new Map();
-const database = new Database();
+const datastore = new Datastore();
 
 export default class Episode extends Model {
-  name = "New Episode"
+  name = ""
   date = DateTime.now()
   scheduledTime = Interval.after(DateTime.now(), Duration.fromObject({hours: 5}))
-
-  actions = []
+  game = Game.NONE
   communities = []
   phases = []
   players = []
-  records = []
   resources = []
   societies = []
+  actions = []
+  records = []
+  
+
+  tags = new Tags()
+
+  static #episodes = new Map();
+
+  constructor({name = "", date = DateTime.now(), scheduledTime = Interval.after(DateTime.now(), Duration.fromObject({hours: 5})) } = {}){
+    super();
+    Object.assign(this, {name, date, scheduledTime});
+  }
+
+  get currentRound() {
+    return this.phases.at(0)?.round;
+  }
 
   //Helper functions
   #addTo(key) {
     return (object) => {
-      object.setEpisode(this);
+      object.episodeId = this.id;
       this[key].push(object);
     }
   }
@@ -42,6 +56,7 @@ export default class Episode extends Model {
   addSociety = this.#addTo("societies")
   addRecord = this.#addTo("records")
   
+
   getActionById = this.#getById("actions")
   getCommunityById = this.#getById("communities")
   getPhaseById = this.#getById("phases")
@@ -58,21 +73,9 @@ export default class Episode extends Model {
     return this.phases.find( phase => !phase.isComplete );
   }
 
-
-  save() {
-    const filename = database.getFilename({ type: "episodes", id: this.id});
-    database.save(filename, this);
-    Ledger.updateEpisode(this);
+  get resources() {
+    return this.communities.map((community) => community.resources).flat();
   }
-
-  rereferenceModels() {
-    [ this.actions, this.communities, this.phases, this.players, this.records, this.resources, this.societies ].forEach( 
-      collection => collection.forEach(
-        model => model?.setEpisode?.(this)
-      )
-    )
-  }
-
 
 
   turnoverRound() {
@@ -81,16 +84,8 @@ export default class Episode extends Model {
     exhaustedResources.forEach( resource => resource.unexhaust() );
 
     //every resource in actions becomes exhausted
-    const usedResources = this.actions.map( action => action.resourceIds.map( this.getResourceById ) ).flat();
+    const usedResources = this.actions.map( action => action.resources ).flat();
     usedResources.forEach( resource => resource.exhaust() );
-
-    //every zero-resource community is now endangered
-    this.communities.forEach( community => {
-      if( this.resources.some( resource => resource.communityId == community.id ) )
-        community.unendanger();
-      else
-        community.endanger();
-    })
 
     //wipe and record actions
     this.actions.forEach( action => this.addRecord( new Record({ 
@@ -113,13 +108,27 @@ export default class Episode extends Model {
   }
 
 
+  splitPhase( phase, ...phasesToInsert) {
+    const index = this.phases.indexOf(phase);
+    
+    const phases = phase.split();
+    phases[0].completePhase();
+    phases.splice(1, 0, ...phasesToInsert);
+    phases.forEach( phase => phase.episodeId = this.id );
+
+    this.phases.splice(index, 1, ...phases);
+  }
+
+  log(entry) {
+    this.logs.push(entry);
+  }
 
   beginCrisisMode() {
     this.tags.add(EpisodeTags.CRISIS_MODE);
   }
 
   endCrisisMode() {
-    this.tags.delete(EpisodeTags.CRISIS_MODE);
+    this.tags.remove(EpisodeTags.CRISIS_MODE);
   }
 
   makeActive() {
@@ -130,26 +139,37 @@ export default class Episode extends Model {
     return this.tags.has(EpisodeTags.ACTIVE);
   }
 
-  static load(id) {
-    if (loadedEpisodes.has(id)) {
-      return loadedEpisodes.get(id);
-    }
-
-    const filename = database.getFilename({ type: "episodes", id });
-    const episode = database.load(filename);
-    episode.rereferenceModels();
-
-    loadedEpisodes.set(id, episode);
-    return episode;
-  };
-
-
-    toURL(append = "") {
-    return `/episodes/${this.id}` + append;
+  save() {
+    const filename = datastore.getFilename({ type: "episodes", id: this.id});
+    datastore.save(filename, this);
+    Ledger.updateEpisode(this);
   }
 
-}
+  toURL(append = "") {
+    return `/episodes/${this.id}` + append;
+  }
+ 
+  /**
+   * 
+   * @param {string} id 
+   * @returns {Episode}
+   */
+  static load(id) {
+    if (this.#episodes.has(id)) {
+      return this.#episodes.get(id);
+    }
 
+    const filename = datastore.getFilename({ type: "episodes", id });
+    const episode = datastore.load(filename);
+    this.#episodes.set(id, episode);
+    return episode;
+  };
+};
+
+
+export function validate() {
+
+}
 
 export const EpisodeTags = {
   ACTIVE: "active",

@@ -26,15 +26,11 @@ resources.get("/episodes/:episodeId/resources", (req, res, next) => {
 
 resources.post("/episodes/:episodeId/resources", (req, res, next) => {
   const { episodeId } = req.params;
-  const { communityId } = req.body;
 
   const episode = Episode.load(episodeId);
-  const community = episode.getCommunityById( communityId );
   const resource = new Resource( req.body );
   
-  community.addResource(resource);
   episode.addResource(resource);
-
   episode.addRecord(new Record({ type: RecordType.RESOURCE_CREATED, value: resource.name }));
 
   episode.save();
@@ -79,27 +75,13 @@ resources.get("/episodes/:episodeId/resources/:resourceId/:view?", (req, res, ne
 
 resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) => {
   const { episodeId, resourceId } = req.params;
-  const { communityId, shouldAlterTags, vital, exhausted } = req.body;
+  const { shouldAlterTags, vital, exhausted } = req.body;
 
   const episode = Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
 
-  const prevCommunity = episode.communities.find(community => community.getResourceById(resourceId));
-  const nextCommunity = episode.getCommunityById(communityId);
-
-  if( prevCommunity != nextCommunity ) {
-    prevCommunity.removeResource( resource );
-    nextCommunity.addResource( resource );
-  }
-
-  console.log( req.body );
-  delete req.body.shouldAlterTags;
-  delete req.body.exhausted;
-  delete req.body.vital;
-
-
   resource.update(req.body);
-console.log( resource );
+
   if( shouldAlterTags ) {
     if(vital) {
       resource.tags.add(ResourceTag.VITAL);
@@ -113,8 +95,6 @@ console.log( resource );
       resource.tags.delete(ResourceTag.EXHAUSTED);
     }
   }
-
-
 
   episode.save();
 

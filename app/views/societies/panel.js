@@ -1,5 +1,4 @@
 import { html } from "#core/utils";
-import Episode from "#models/episode";
 import Society from "#models/society";
 import Community from "#models/community";
 import SocietyInfo from "./components/info.js";;
@@ -7,7 +6,7 @@ import SocietyInfo from "./components/info.js";;
 const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 
 export default function SocietyPanel({ society = new Society()} = {}) {
-  const episode = Episode.load( society.episodeId );
+  const episode = society.episode;
   return html` <main id="${societyPanelId(society)}" class="content stack-loose scrollable" hx-get="${society.toURL("/panel")}" hx-trigger="sse:societies">
       <header>
         <div class="layout-row gap-tight" style="display: flex; gap: 1rem">
