@@ -74,13 +74,13 @@
         "value": []
       },
       "type": "Setup Phase",
-      "status": "idle",
+      "status": "paused",
       "round": 0,
       "duration": 1200,
-      "timeElapsed": 0,
+      "timeElapsed": 39.04,
       "actualTime": {
-        "s": "2025-03-26T17:51:30.531-04:00",
-        "e": "2025-03-26T17:58:18.808-04:00",
+        "s": "2025-03-26T18:06:18.560-04:00",
+        "e": "2025-03-26T18:26:18.560-04:00",
         "invalid": null,
         "isLuxonInterval": true
       }
@@ -427,7 +427,7 @@
         "_type": "Tags",
         "value": []
       },
-      "timestamp": "2025-03-26T21:58:18.808Z",
+      "timestamp": "2025-03-26T17:58:18.808-04:00",
       "type": "None",
       "description": "New Record"
     },
@@ -438,7 +438,7 @@
         "_type": "Tags",
         "value": []
       },
-      "timestamp": "2025-03-26T21:58:18.808Z",
+      "timestamp": "2025-03-26T17:58:18.808-04:00",
       "type": "None",
       "description": "New Record"
     },
@@ -449,7 +449,7 @@
         "_type": "Tags",
         "value": []
       },
-      "timestamp": "2025-03-26T21:58:18.808Z",
+      "timestamp": "2025-03-26T17:58:18.808-04:00",
       "type": "None",
       "description": "New Record"
     },
@@ -460,7 +460,7 @@
         "_type": "Tags",
         "value": []
       },
-      "timestamp": "2025-03-26T21:58:18.808Z",
+      "timestamp": "2025-03-26T17:58:18.808-04:00",
       "type": "None",
       "description": "New Record"
     }
