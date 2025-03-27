@@ -86,7 +86,9 @@
       "_type": "Action",
       "id": "Xeh6l",
       "societyId": "EwZHX",
-      "resourceIds": [],
+      "resourceIds": [
+        "RqUx7"
+      ],
       "round": 4,
       "tags": {
         "_type": "Tags",
@@ -97,6 +99,28 @@
       "_type": "Action",
       "id": "gWUSD",
       "societyId": "EwZHX",
+      "resourceIds": [],
+      "round": 4,
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Action",
+      "id": "rA3AT",
+      "societyId": "USLJj",
+      "resourceIds": [],
+      "round": 4,
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Action",
+      "id": "G8vWD",
+      "societyId": "USLJj",
       "resourceIds": [],
       "round": 4,
       "tags": {
@@ -395,10 +419,10 @@
       "status": "paused",
       "round": 4,
       "duration": 240,
-      "timeElapsed": 70.067,
+      "timeElapsed": 76.07400000000001,
       "actualTime": {
-        "s": "2025-03-26T21:39:54.265-04:00",
-        "e": "2025-03-26T21:43:54.265-04:00",
+        "s": "2025-03-26T21:50:12.802-04:00",
+        "e": "2025-03-26T21:54:12.802-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -2461,15 +2485,47 @@
     {
       "_type": "Record",
       "id": "KnraA",
-      "timestamp": "2025-03-27T01:39:54.266Z",
+      "timestamp": "2025-03-26T21:39:54.266-04:00",
       "type": "PhaseStarted",
       "description": "Round 4: Universal Phase",
-      "value": "2025-03-27T01:39:54.265Z"
+      "value": "2025-03-26T21:39:54.265-04:00"
     },
     {
       "_type": "Record",
       "id": "Ct4wp",
-      "timestamp": "2025-03-27T01:39:54.266Z",
+      "timestamp": "2025-03-26T21:39:54.266-04:00",
+      "type": "CommunitiesEndangered",
+      "description": "",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "yn2cH",
+      "timestamp": "2025-03-26T21:48:59.813-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 4: Universal Phase",
+      "value": "2025-03-26T21:48:59.813-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "llPbv",
+      "timestamp": "2025-03-26T21:48:59.813-04:00",
+      "type": "CommunitiesEndangered",
+      "description": "",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "u44M2",
+      "timestamp": "2025-03-27T01:50:12.802Z",
+      "type": "PhaseStarted",
+      "description": "Round 4: Universal Phase",
+      "value": "2025-03-27T01:50:12.802Z"
+    },
+    {
+      "_type": "Record",
+      "id": "JPSWa",
+      "timestamp": "2025-03-27T01:50:12.803Z",
       "type": "CommunitiesEndangered",
       "description": "",
       "value": 0

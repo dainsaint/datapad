@@ -181,10 +181,15 @@ a.card:hover {
   padding: .5rem;
 }
 
-.toolbar svg,
-.toolbar img {
+.toolbar a:has(.icon) {
   width: 4rem;
   height: 4rem;
+  place-items: center;
+}
+
+.toolbar .icon {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .toolbar.color-contrast {

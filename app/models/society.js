@@ -18,7 +18,9 @@ export default class Society extends Model {
 
   startRound( roundNumber ) {
     //create two new actions if none exist
-    const actionsThisRound = this.episode.actions.filter( action => action.round == roundNumber );
+    const actionsThisRound = this.episode.actions
+      .filter( action => action.round == roundNumber )
+      .filter( action => action.societyId == this.id )
 
     if( actionsThisRound.length == 0 ) {
       const numActions = roundNumber == 1 ? 1 : 2;
