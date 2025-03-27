@@ -3,12 +3,17 @@ import Model from "#database/model";
 export default class Record extends Model {
   timestamp;
   type = RecordType.NONE;
-  description = "New Record";
+  description;
   value;
   
   constructor(data){
     super(data);
     this.timestamp = new Date();
+    this.update(data);
+  }
+
+  toLog() {
+    return [this.type, this.description, this.value].join(', ');
   }
 
   toURL(append = "") {
@@ -42,6 +47,7 @@ export const RecordType = {
 
   PHASE_STARTED: "PhaseStarted",
   PHASE_ENDED: "PhaseEnded",
+  PHASE_DURATION: "PhaseDuration",
 
   ROUND_STARTED: "RoundStarted",
   ROUND_ENDED: "RoundEnded"

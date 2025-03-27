@@ -1,3 +1,4 @@
+import Tags from "#core/tags";
 import Model from "#database/model";
 
 
@@ -7,6 +8,7 @@ export default class Community extends Model {
 
   name
   voice;
+  tags = new Tags()
 
   constructor(data) {
     super(data);
@@ -19,6 +21,16 @@ export default class Community extends Model {
 
   unendanger() {
     this.tags.delete( CommunityTag.ENDANGERED );
+  }
+
+  startRound( roundNumber ) {
+    const hasResources = this.episode.resources.some( resource => resource.communityId == this.id );
+
+    if( hasResources ) {
+      this.unendanger();
+    } else {
+      this.endanger();
+    }
   }
 
 

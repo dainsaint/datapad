@@ -4,23 +4,29 @@ import Database from "#database/database"
 import Model from "#database/model";
 import Ledger from "#database/ledger";
 import Record, { RecordType } from "#models/record";
+import Tags from "#core/tags";
 
 
 const loadedEpisodes = new Map();
+
 const database = new Database();
 
 export default class Episode extends Model {
   name = "New Episode"
   date = DateTime.now()
   scheduledTime = Interval.after(DateTime.now(), Duration.fromObject({hours: 5}))
+  tags = new Tags()
 
   actions = []
   communities = []
   phases = []
   players = []
-  records = []
   resources = []
   societies = []
+
+
+  //TODO: Put these in a separate file?
+  records = []
 
   //Helper functions
   #addTo(key) {
@@ -40,7 +46,10 @@ export default class Episode extends Model {
   addPlayer = this.#addTo("players")
   addResource = this.#addTo("resources")
   addSociety = this.#addTo("societies")
-  addRecord = this.#addTo("records")
+  addRecord = record => {
+    console.log( record.toLog() );
+    this.#addTo("records")(record);
+  }
   
   getActionById = this.#getById("actions")
   getCommunityById = this.#getById("communities")
@@ -73,45 +82,40 @@ export default class Episode extends Model {
     )
   }
 
+  startRound( roundNumber ) {
+    const actionsLastRound = this.actions.filter( action => action.round == roundNumber - 1);
 
-
-  turnoverRound() {
     //every exhausted resource becomes unexhausted
     const exhaustedResources = this.resources.filter( resource => resource.isExhausted );
     exhaustedResources.forEach( resource => resource.unexhaust() );
 
     //every resource in actions becomes exhausted
-    const usedResources = this.actions.map( action => action.resourceIds.map( this.getResourceById ) ).flat();
+    const usedResources = actionsLastRound.map( action => action.resourceIds.map( this.getResourceById ) ).flat();
     usedResources.forEach( resource => resource.exhaust() );
 
     //every zero-resource community is now endangered
-    this.communities.forEach( community => {
-      if( this.resources.some( resource => resource.communityId == community.id ) )
-        community.unendanger();
-      else
-        community.endanger();
-    })
+    this.communities.forEach( community => community.startRound(roundNumber) )
 
-    //wipe and record actions
-    this.actions.forEach( action => this.addRecord( new Record({ 
-      type: RecordType.ACTION_RESOURCES, 
-      description: `${this.getSocietyById(action.societyId).name} used ${ action.resources.map( resource => resource.name ).join() } to take action.`,
-      value: action.resources.length
-    })))
+    const endangeredCommunities = this.communities.filter( community => community.isEndangered );
+    this.addRecord( new Record({ type: RecordType.EPISODE_COMMUNITIES_ENDANGERED, description: endangeredCommunities.map( x => x.name ).join(), value: endangeredCommunities.length }))
 
-    this.actions = [];
-
-    //init actions — two per society
-    this.societies.forEach( society => {
-      for( let i = 0; i < 2; i++ ) {
-        const action = new Action({ societyId: society.id, round: this.currentPhase.round });
-        this.addAction(action);
-      }
-    })
+    //per society actions
+    this.societies.forEach( society => society.startRound(roundNumber) );
 
     this.save();
   }
 
+  completeRound( roundNumber ) {
+    this.societies.forEach( society => society.completeRound(roundNumber) );
+    this.save();
+  }
+
+
+  getCurrentActionsForSocietyId( societyId ) {
+    return this.actions
+      .filter( action => action.round == this.currentPhase.round )
+      .filter( action => action.societyId == societyId )
+  }
 
 
   beginCrisisMode() {

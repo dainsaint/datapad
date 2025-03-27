@@ -41,15 +41,19 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
       break;
     case "start":
       phase.startPhase();
+      if( phase.type == PhaseType.UNIVERSAL ) {
+        console.log("BLKABFA");
+        episode.startRound( phase.round );
+      }
       break;
     case "pause":
       phase.pausePhase();
       break;
     case "next":
       phase.completePhase();
-      episode.addRecord(new Record({ type: RecordType.PHASE_ENDED, description: `Round ${phase.round}: ${phase.type}`, value: phase.duration }));
+      
       if( nextPhase && nextPhase.round > phase.round ) {
-        completeRound( episode, phase )
+        episode.completeRound( phase.round );
       }
       
       break;
@@ -72,6 +76,9 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   //this was called from using ajax
   const currentUrl = req.get("hx-current-url");
   if (currentUrl) res.setHeader("HX-Location", currentUrl);
+
+  broadcast("phases");
+  broadcast("societies");
   
   res.sendStatus(200);
 
@@ -100,25 +107,6 @@ phases.post("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   
   res.sendStatus(200);
 })
-
-
-function completeRound( episode ) {
-  console.log("HANDLE ROUND COMPLETE")
-
-  episode.societies.forEach( society => {
-    episode.addRecord( new Record({ type: RecordType.SOCIETY_RESOURCES, description: society.name, value: society.resources.length }));
-    episode.addRecord( new Record({ type: RecordType.SOCIETY_ACTIONS_TAKEN, description: society.name, value: society.resources.length }));
-  })
-
-  episode.addRecord( new Record({ type: RecordType.EPISODE_COMMUNITIES_ENDANGERED, value: episode.communities.filter( community => community.isEndangered ).length }))
-
-  episode.turnoverRound();
-
-  episode.save();
-
-  broadcast("societies");
-}
-
 
 
 export default phases;

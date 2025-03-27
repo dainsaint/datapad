@@ -1,9 +1,12 @@
+import Tags from "#core/tags";
 import Model from "#database/model";
 
 export default class Action extends Model {
   societyId
   resourceIds = []
   round
+  tags = new Tags()
+
 
   constructor(data) {
     super(data);
@@ -11,7 +14,9 @@ export default class Action extends Model {
   }
 
   setResources( resources ) {
-    this.resourceIds = resources.map( resource => resource.id );
+    this.resourceIds = resources
+      .filter( resource => !resource.isExhausted )
+      .map( resource => resource.id );
   }
 
   removeResources( resources ) {
@@ -41,7 +46,9 @@ export default class Action extends Model {
 }
 
 
-export const ActionResultTags = {
+export const ActionTags = {
+  READY: "ready",
+
   SUCCESS: "success",
   MIXED_SUCCESS: "mixed_success",
   CRITICAL_SUCCESS: "critical_success",

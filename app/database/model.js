@@ -3,7 +3,6 @@ import uuid from "#core/uuid";
 
 export default class Model { 
   id
-  tags = new Tags()
   
   #episode
 

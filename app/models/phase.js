@@ -1,5 +1,7 @@
 import { DateTime, Duration, Interval } from "luxon";
 import Model from "#database/model";
+import Tags from "#core/tags";
+import Record, { RecordType } from "#models/record";
 
 export default class Phase extends Model {
   type = PhaseType.BLANK;
@@ -10,16 +12,17 @@ export default class Phase extends Model {
 
   actualTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: 0 }));
 
+  tags = new Tags()
+
   constructor({ type = PhaseType.BLANK, round = 0, duration = 0 }) {
     super();
     Object.assign( this, {type, round, duration} );
   }
 
-
-
   startPhase() {
     this.actualTime = Interval.after( DateTime.now(), Duration.fromObject({ seconds: this.duration }))
     this.status = PhaseStatus.PLAYING;
+    this.episode.addRecord(new Record({ type: RecordType.PHASE_STARTED, description: `Round ${this.round}: ${this.type}`, value: new Date().toISOString() }));
   }
 
   pausePhase() {
@@ -28,6 +31,12 @@ export default class Phase extends Model {
 
   completePhase() {
     this.actualTime = Interval.fromDateTimes( this.actualTime.start || DateTime.now(), DateTime.now() );
+  
+    if( this.isPlaying ) {
+      this.episode.addRecord(new Record({ type: RecordType.PHASE_ENDED, description: `Round ${this.round}: ${this.type}`, value: new Date().toISOString() }));
+      this.episode.addRecord(new Record({ type: RecordType.PHASE_DURATION, description: `Round ${this.round}: ${this.type}`, value: this.actualTime.toDuration("minutes").toObject().minutes }));
+    }
+
     this.status = PhaseStatus.COMPLETE;
   }
 

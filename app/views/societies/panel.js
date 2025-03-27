@@ -7,7 +7,7 @@ const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 
 export default function SocietyPanel({ society = new Society()} = {}) {
   const episode = society.episode;
-  return html` <main id="${societyPanelId(society)}" class="content stack-loose scrollable" hx-get="${society.toURL("/panel")}" hx-trigger="sse:societies">
+  return html` <main id="${societyPanelId(society)}" class="content stack-loose scrollable" hx-get="${society.toURL("/panel")}" hx-trigger="sse:societies" hx-swap="outerHTML">
       <header>
         <div class="layout-row gap-tight" style="display: flex; gap: 1rem">
           <h1>
@@ -28,7 +28,6 @@ export default function SocietyPanel({ society = new Society()} = {}) {
       <div class="layout-row gap-tiny">
         <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog">+ New Resource</button>
         <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">+ New Community</button>
-        <button hx-get="${episode.toURL('/societies/create')}" hx-target="#dialog">+ New Society</button>
       </div>
     </main>
   `;
@@ -82,7 +81,7 @@ export function CommunityResourceCard({ resource }) {
 
 
 export function ActionBuilder({ episode, societyId } = {}) {
-  const actions = episode.actions.filter( action => action.societyId == societyId );
+  const actions = episode.getCurrentActionsForSocietyId( societyId );
 
   return html`
     <section

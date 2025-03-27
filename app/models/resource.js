@@ -1,9 +1,11 @@
+import Tags from "#core/tags";
 import Model from "#database/model";
 
 export default class Resource extends Model {
   communityId
 
   name = "New Resource"
+  tags = new Tags()
 
   
   constructor(data) {
