@@ -2,6 +2,7 @@ import express from "express";
 
 import actions from "#routes/html/actions";
 import communities from "#routes/html/communities";
+import downloads from "#routes/html/downloads";
 import events, { tick as eventTick } from "#routes/html/events";
 import games from "#routes/html/games";
 import phases from "#routes/html/phases";
@@ -15,6 +16,7 @@ const htmlRouter = express.Router();
 
 htmlRouter.use("/", actions);
 htmlRouter.use("/", communities);
+htmlRouter.use("/", downloads);
 htmlRouter.use("/", events);
 htmlRouter.use("/", games);
 htmlRouter.use("/", phases);

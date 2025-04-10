@@ -16,7 +16,7 @@ export default function EpisodeToolbar({ episode = new Episode() } = {}) {
       <a id="nav-link-home" class="${ getActiveClass('/') }" href="/">${Icon("spop")}</a>
       <a id="nav-link-gm" class="${ getActiveClass('gm') }" href="${ episode.toURL('/gm')}">${Icon("dice")}</a>
       <a id="nav-link-facilitator" class="${ getActiveClass('facilitator') }" href="${ episode.toURL('/facilitator') }">${Icon("planet")}</a>
-      <a id="nav-link-settings" class="${ getActiveClass('settings') }" href="${ episode.toURL('/settings') }">${Icon("chat")}</a>
+      <a id="nav-link-settings" class="${ getActiveClass('settings') }" href="${ episode.toURL('/settings') }">${Icon("download")}</a>
       <!-- <a id="nav-link-showrunner" class="${ getActiveClass('showrunner') }" href="${ episode.toURL('/showrunner') }">${Icon("chat")}</a> -->
     </nav>
   `;

@@ -1,10 +1,12 @@
 import Tags from "#core/tags";
+import { oxfordize } from "#core/utils";
 import Model from "#database/model";
 
 export default class Action extends Model {
   societyId
   resourceIds = []
   round
+  text= ""
   tags = new Tags()
 
 
@@ -27,6 +29,26 @@ export default class Action extends Model {
     }
   }
 
+  commit() {
+    this.tags.add( ActionTags.COMMITTED );
+  }
+
+  toDeclaration() {
+    let result = "";
+    const resources = this.resources;
+
+    if( resources.length > 0 )
+      result += `They use ${resources.at(0).name}.`
+    
+    if( resources.length > 1 )
+      result += ` They aid with ${ oxfordize(resources.slice(1).map( x => x.name ))}.`
+
+    else if ( resources.length == 0 )
+      result = "Action not yet decided."
+
+    return result;
+  }
+
   get primaryResource () {
     let resourceId = this.resourceIds.at(0);
     return this.episode.getResourceById(resourceId);
@@ -47,7 +69,7 @@ export default class Action extends Model {
 
 
 export const ActionTags = {
-  READY: "ready",
+  COMMITTED: "committed",
 
   SUCCESS: "success",
   MIXED_SUCCESS: "mixed_success",

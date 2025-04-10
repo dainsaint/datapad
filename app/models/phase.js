@@ -89,6 +89,10 @@ export default class Phase extends Model {
     return Math.floor(this.duration - this.timeElapsed);
   }
 
+  get isOverTime() {
+    return this.timeRemaining <= 0 ;
+  }
+
 
   toURL(append = "") {
     return `/episodes/${this.episode.id}/phases/${this.id}` + append;

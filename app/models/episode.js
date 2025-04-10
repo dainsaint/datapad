@@ -33,6 +33,7 @@ export default class Episode extends Model {
     return (object) => {
       object.setEpisode(this);
       this[key].push(object);
+      return object;
     }
   }
 
@@ -97,7 +98,9 @@ export default class Episode extends Model {
     this.communities.forEach( community => community.startRound(roundNumber) )
 
     const endangeredCommunities = this.communities.filter( community => community.isEndangered );
-    this.addRecord( new Record({ type: RecordType.EPISODE_COMMUNITIES_ENDANGERED, description: endangeredCommunities.map( x => x.name ).join(), value: endangeredCommunities.length }))
+    if( endangeredCommunities.length > 0 ) {
+      this.addRecord( new Record({ type: RecordType.EPISODE_COMMUNITIES_ENDANGERED, description: this.name + ": " + endangeredCommunities.map( x => x.name ).join(), value: endangeredCommunities.length }))
+    }
 
     //per society actions
     this.societies.forEach( society => society.startRound(roundNumber) );

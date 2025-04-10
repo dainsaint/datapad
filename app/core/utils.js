@@ -1,3 +1,5 @@
+import { Duration } from "luxon";
+
 export function html(strings, ...values) {
   return strings.reduce( (result, string, i) => {
     const value = values[i];
@@ -37,10 +39,18 @@ export function pluralize( number, one, many = "" ) {
       : one + 's';
 }
 
+export function oxfordize( words ) {
+  const strings = words.map((x) => x.toString());
+  
+  if (strings.length > 1)
+    strings[strings.length - 1] = "and " + strings[strings.length - 1];
+
+  return strings.length == 2 ? strings.join(" ") : strings.join(", ");
+}
+
 export function secondsToTime( seconds ) {
-  const minutes = Math.floor( seconds / 60 );
-  const remaining = Math.floor( seconds - minutes * 60 );
-  return `${ minutes.toString().padStart(2, '0') }:${ remaining.toString().padStart(2, '0') }`
+  const duration = Duration.fromObject({ seconds });
+  return duration.toFormat('mm:ss');
 }
 
 

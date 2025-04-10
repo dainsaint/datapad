@@ -12,7 +12,7 @@ export default function AppLayout(props, children) {
       
       <link rel="stylesheet" id="polyfill-styles" />
       <link rel="stylesheet" href="/css/styles.css" />
-
+      
       <link rel="favicon" href="/images/web-icon.svg"/>
       <link rel="manifest" href="/manifest.webmanifest">
 

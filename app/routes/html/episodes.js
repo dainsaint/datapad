@@ -3,6 +3,7 @@ import { DateTime, Duration, Interval } from "luxon";
 import { EpisodeTimeInput } from "#views/episodes/create";
 import Episode from "#models/episode";
 import express from "express";
+import { PhaseTimeline } from "#views/episodes/gm";
 
 const episodes = express.Router();
 
@@ -81,6 +82,18 @@ episodes.get("/episodes/:episodeId/facilitator/:societyId?", (req, res) => {
   
 });
 
+
+episodes.get("/episodes/:episodeId/timeline", (req, res) => {
+  const { episodeId } = req.params;
+  const episode = Episode.load(episodeId);
+
+  res.send( PhaseTimeline({
+    episode,
+    currentPhase: episode.currentPhase,
+    phases: episode.phases
+  }))
+});
+
 episodes.get("/episodes/:episodeId/:view?", (req, res) => {
   const { episodeId, view } = req.params;
   const episode = Episode.load(episodeId);
@@ -90,6 +103,9 @@ episodes.get("/episodes/:episodeId/:view?", (req, res) => {
   else
     res.render(`episodes/${view}`, { episode, layout: "app" });
 });
+
+
+
 
 
 export default episodes;

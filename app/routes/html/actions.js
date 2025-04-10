@@ -37,7 +37,7 @@ actions.post("/episodes/:episodeId/actions", (req, res, next) => {
 
 actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next) => {
   const { episodeId, actionId } = req.params;
-  const { resourceIds = [] } = req.body;
+  const { resourceIds = [], text, commit } = req.body;
 
   const episode = Episode.load(episodeId);
   const action = episode.getActionById(actionId);
@@ -49,7 +49,17 @@ actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next
     .map( episode.getResourceById );
 
   action.setResources(resources);
+  action.text = text;
+  
+  if( commit )  {
+    action.commit(); 
+  }
+
   otherActions.forEach( other => other.removeResources(resources) );
+  
+
+
+
   episode.save();
 
   // res.send( ActionBuilder({ episode, society}) );
