@@ -7,4 +7,23 @@
   --color-text-active: white;
   --color-bg-active: black;
   --color-error: red;
+
+
+  --color-blue: #3498db;
+  --color-purple: #9b59b6;
+  --color-green: #2ecc71;
+  --color-red: #e74c3c;
+  --color-orange: #f39c12;
+}
+
+
+.color-contrast {
+  --color-bg: black;
+  --color-text: white;
+  --color-bg-active: var(--color-mid);
+}
+
+
+.color-danger {
+  --color-bg: var(--color-red);
 }

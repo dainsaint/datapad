@@ -1,8 +1,8 @@
 import { DateTime } from "luxon";
 import Community, { CommunityVoice } from "#models/community";
 import Episode from "#models/episode";
-import Game from "#models/game";
-import Phase from "#models/phase";
+// import Game from "#models/game";
+import Phase, {PhaseType} from "#models/phase";
 import Player from "#models/player";
 import Resource from "#models/resource";
 import Society, { SocietyArchetype } from "#models/society";
@@ -14,24 +14,24 @@ export function populateDummyData() {
     name: "A Sample Episode"
   });
 
-  episode.addPhase(new Phase({ name: "Global Phase",       round: 0, duration: 1200 }))
-  episode.addPhase(new Phase({ name: "Universal Phase",    round: 0, duration: 240 }))
-  episode.addPhase(new Phase({ name: "Societal Phase",     round: 0, duration: 600 }))
-  episode.addPhase(new Phase({ name: "Galactic Phase",     round: 0, duration: 600 }))
-  episode.addPhase(new Phase({ name: "Individual Phase",   round: 0, duration: 500 }))
-  episode.addPhase(new Phase({ name: "Universal Phase",    round: 1, duration: 240 }))
-  episode.addPhase(new Phase({ name: "Societal Phase",     round: 1, duration: 600 }))
-  episode.addPhase(new Phase({ name: "Galactic Phase",     round: 1, duration: 600 }))
-  episode.addPhase(new Phase({ name: "Individual Phase",   round: 1, duration: 500 }))
-  episode.addPhase(new Phase({ name: "Universal Phase",    round: 2, duration: 240 }))
-  episode.addPhase(new Phase({ name: "Societal Phase",     round: 2, duration: 600 }))
-  episode.addPhase(new Phase({ name: "Galactic Phase",     round: 2, duration: 600 }))
-  episode.addPhase(new Phase({ name: "Individual Phase",   round: 2, duration: 500 }))
-  episode.addPhase(new Phase({ name: "Universal Phase",    round: 3, duration: 240 }))
-  episode.addPhase(new Phase({ name: "Societal Phase",     round: 3, duration: 600 }))
-  episode.addPhase(new Phase({ name: "Galactic Phase",     round: 3, duration: 600 }))
-  episode.addPhase(new Phase({ name: "Generational Phase", round: 3, duration: 500 }))
-  episode.addPhase(new Phase({ name: "Conclusion Phase",   round: 3, duration: 500 }))
+  episode.addPhase(new Phase({ type: PhaseType.SETUP,       round: 0, duration: 1200 }))
+  episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: 1, duration: 240 }))
+  episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: 1, duration: 600 }))
+  episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: 1, duration: 600 }))
+  episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,   round: 1, duration: 495 }))
+  episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: 2, duration: 240 }))
+  episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: 2, duration: 600 }))
+  episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: 2, duration: 600 }))
+  episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,   round: 2, duration: 495 }))
+  episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: 3, duration: 240 }))
+  episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: 3, duration: 600 }))
+  episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: 3, duration: 600 }))
+  episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,   round: 3, duration: 495 }))
+  episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: 4, duration: 240 }))
+  episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: 4, duration: 600 }))
+  episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: 4, duration: 600 }))
+  episode.addPhase(new Phase({ type: PhaseType.GENERATIONAL, round: 4, duration: 495 }))
+  episode.addPhase(new Phase({ type: PhaseType.CONCLUSION,   round: 4, duration: 495 }))
 
 
 
@@ -60,12 +60,12 @@ export function populateDummyData() {
   const resource2 = new Resource({ name: "Amazing Suspenders" });
   const resource3 = new Resource({ name: "Big Rock" });
 
-  community.addResource(resource1);
-  community.addResource(resource2);
-  community.addResource(resource3);
+  resource1.communityId = community.id;
+  resource2.communityId = community.id;
+  resource3.communityId = community.id;
 
-  society.addCommunity(community);
-  society.addCommunity(community2);
+  community.societyId = society.id;
+  community2.societyId = society.id;
 
   episode.addPlayer(player);
   episode.addSociety(society);
@@ -75,13 +75,18 @@ export function populateDummyData() {
   episode.addResource(resource2);
   episode.addResource(resource3);
 
-  episode.makeActive();
-
-  const game = new Game({
-    name: "John's House — Feb-Mar 2025",
-  });
-
-  episode.game = game;
-
   episode.save();
 }
+
+
+
+  // episode.makeActive();
+
+  // const game = new Game({
+  //   name: "John's House — Feb-Mar 2025",
+  // });
+
+  // episode.game = game;
+
+//   episode.save();
+// 

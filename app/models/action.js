@@ -1,49 +1,76 @@
 import Tags from "#core/tags";
-import { EpisodeModel } from "#models/episode";
+import { oxfordize } from "#core/utils";
+import Model from "#database/model";
 
-
-export default class Action extends EpisodeModel {
-  tags = new Tags() 
-  
-  resources = [];
-  
-  society
-  emissary
+export default class Action extends Model {
+  societyId
+  resourceIds = []
   round
-  
-  roll = []
+  text= ""
+  tags = new Tags()
 
-  constructor({ society } = {}) {
-    super();
-    Object.assign(this, {society});
+
+  constructor(data) {
+    super(data);
+    this.update(data);
   }
 
   setResources( resources ) {
-    this.resources = resources;
+    this.resourceIds = resources
+      .filter( resource => !resource.isExhausted )
+      .map( resource => resource.id );
   }
 
   removeResources( resources ) {
     for( const resource of resources ) {
-      const index = this.resources.indexOf(resource);
+      const index = this.resourceIds.indexOf(resource.id);
       if( index >= 0 )
-        this.resources.splice(index, 1);
+        this.resourceIds.splice(index, 1);
     }
   }
 
-  get primaryResource () {
-    if( !Array.isArray(this.resources) )
-      this.resources = [];
+  commit() {
+    this.tags.add( ActionTags.COMMITTED );
+  }
 
-    return this.resources.at(0);
+  toDeclaration() {
+    let result = "";
+    const resources = this.resources;
+
+    if( resources.length > 0 )
+      result += `They use ${resources.at(0).name}.`
+    
+    if( resources.length > 1 )
+      result += ` They aid with ${ oxfordize(resources.slice(1).map( x => x.name ))}.`
+
+    else if ( resources.length == 0 )
+      result = "Action not yet decided."
+
+    return result;
+  }
+
+  get primaryResource () {
+    let resourceId = this.resourceIds.at(0);
+    return this.episode.getResourceById(resourceId);
+  }
+
+  get resources() {
+    return this.resourceIds.map(this.episode.getResourceById);
+  }
+
+  get society() {
+    return this.episode.getSocietyById( this.societyId );
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode}/actions/${this.id}` + append;
+    return `/episodes/${this.episode.id}/actions/${this.id}` + append;
   }
+}
 
-};
 
-export const ActionResultTags = {
+export const ActionTags = {
+  COMMITTED: "committed",
+
   SUCCESS: "success",
   MIXED_SUCCESS: "mixed_success",
   CRITICAL_SUCCESS: "critical_success",

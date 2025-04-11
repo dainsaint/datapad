@@ -12,8 +12,8 @@ dialog {
   height: 100dvh;
   max-height: unset;
   animation: slideOut 0.2s forwards;
-  transition: display 1s step-end, overlay 1s step-end;
-  transition-behavior: allow-discrete;
+  /* transition: display 0.2s step-end, overlay 0.2s step-end; */
+  /* transition-behavior: allow-discrete; */
 }
 
 dialog[open] {

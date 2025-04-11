@@ -1,4 +1,4 @@
-import Ledger from "#database/ledger";
+// import Ledger from "#database/ledger";
 import express from "express";
 
 
@@ -12,16 +12,16 @@ Games are implicitly created by episodes, so we dont need full CRUD here (right?
 */
 
 games.get("/games/:view?", (req, res, next) => {
-  const { view = "overview" } = req.params;
+  // const { view = "overview" } = req.params;
   
-  const games = Ledger.games;
-  res.render(`games/${view}`, { games });
+  // const games = Ledger.games;
+  // res.render(`games/${view}`, { games });
 });
 
 games.get("/games/:id/:view?", (req, res, next) => {
-  const { id, view = "overview"} = req.params;
-  const game = Ledger.getGameById(id);
-  res.render(`games/${view}`, { game });
+  // const { id, view = "overview"} = req.params;
+  // const game = Ledger.getGameById(id);
+  // res.render(`games/${view}`, { game });
 });
 
 export default games;

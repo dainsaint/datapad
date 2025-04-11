@@ -1,43 +1,67 @@
-import { EpisodeModel } from "#models/episode";
+import Tags from "#core/tags";
+import Model from "#database/model";
+import Record, { RecordType } from "#models/record";
+import Action from "#models/action";
 
-export default class Society extends EpisodeModel {
-  name = "";
-  archetype = "";
-  planet = "";
-  communities = [];
 
-  constructor({
-    name = "New Society",
-    archetype = "None",
-    planet = "Earth",
-  } = {}) {
-    super();
-    Object.assign(this, { name, archetype, planet });
+export default class Society extends Model {
+  name
+  archetype
+  planet
+
+  tags = new Tags()
+
+  constructor(data) {
+    super(data);
+    this.update(data);
   }
 
-  getCommunityById(id) {
-    return this.communities.find((r) => r.id === id);
-  }
+  startRound( roundNumber ) {
+    //create two new actions if none exist
+    const actionsThisRound = this.episode.actions
+      .filter( action => action.round == roundNumber )
+      .filter( action => action.societyId == this.id )
 
-  addCommunity(community) {
-    this.communities.push(community);
-  }
-
-  removeCommunity(community) {
-    const index = this.communities.indexOf(community);
-    if (index >= 0) {
-      this.communities.splice(index, 1);
+    if( actionsThisRound.length == 0 ) {
+      const numActions = roundNumber == 1 ? 1 : 2;
+      for( let i = 0; i < numActions; i++ ) {
+        const action = new Action({ societyId: this.id, round: roundNumber  });
+        this.episode.addAction(action);
+      }
     }
   }
 
-  getAllResources() {
-    return this.communities.map((community) => community.resources).flat();
+  completeRound( roundNumber ) {
+    //count actions taken this round
+    const actionsTakenThisRound = this.episode.actions
+      .filter( action => action.round == roundNumber )
+      .filter( action => action.societyId == this.id )
+      .filter( action => action.resourceIds.length > 0 ) //TODO: swap this with READY tag
+
+    this.episode.addRecord( new Record({ type: RecordType.SOCIETY_ACTIONS_TAKEN, description: this.name, value: actionsTakenThisRound.length }));
+
+    actionsTakenThisRound.forEach( action => this.episode.addRecord( new Record({ 
+      type: RecordType.ACTION_RESOURCES, 
+      description: `${this.name} used ${ action.resources.map( resource => resource.name ).join() } to take action.`,
+      value: action.resources.length
+    })))
   }
 
+
+  get communities() {
+    return this.episode.communities.filter( community => community.societyId == this.id );
+  }
+
+  get resources() {
+    return this.communities.map( community => community.resources ).flat();
+  }
+
+
   toURL(append = "") {
-    return `/episodes/${this.episode}/societies/${this.id}` + append;
+    return `/episodes/${this.episode.id}/societies/${this.id}` + append;
   }
 }
+
 
 export const SocietyArchetype = {
   AESTHETIC: "the aesthetic",
@@ -49,3 +73,7 @@ export const SocietyArchetype = {
   MIGHTY: "the mighty",
   SCHOLARS: "the scholars",
 };
+
+export const SocietyTags = {
+  INSPIRED: "inspired"
+}

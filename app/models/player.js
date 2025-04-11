@@ -1,24 +1,13 @@
-import Tags from "#core/tags"
-import { EpisodeModel } from "#models/episode"
+import Tags from "#core/tags";
+import Model from "#database/model";
 
-export default class Player extends EpisodeModel {
+export default class Player extends Model {
+  name
+  pronouns
 
-  name = "New Player"
-  pronouns = ["they", "them"] 
-  community
   tags = new Tags()
 
-  constructor({ name = "New Player"} ){
-    super();
-    Object.assign(this, {name})
-  }
-
   toURL(append = "") {
-    return `/episodes/${this.episode}/phases/${this.id}` + append;
+    return `/episodes/${this.episode.id}/phases/${this.id}` + append;
   }
-
-}
-
-export const PlayerTags = {
-
 }

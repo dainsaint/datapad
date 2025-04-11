@@ -1,0 +1,258 @@
+.phase-time--overtime time {
+  color: var(--color-red);
+}
+
+
+
+.phase-timeline {
+  overflow-x: scroll;
+  overflow-y: visible;
+  max-width: 100%;
+  height: 6rem;
+
+  --color-upcoming: lightgray;
+  --color-current: gray;
+  --color-elapsed: var(--color-blue);
+  --color-complete: black;
+  --color-overflow: var(--color-red);
+  --color-hover: darkgray;
+}
+
+.phase-timeline::-webkit-scrollbar {
+  display: none;
+}
+
+.phase-timeline__container {
+  display: flex;
+  gap: 1px;
+  width: 200%;
+  padding: 1px;
+  position: relative
+}
+
+.phase-timeline__phase {
+  --color: var(--color-upcoming);
+  display: flex;
+  flex: auto;
+  position: relative;
+  cursor: pointer;
+}
+.phase-timeline__bar {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.phase-timeline__phase[data-status="complete"] {
+  --color: var(--color-complete);
+}
+
+.phase-timeline__phase--current {
+  --color: var(--color-current);
+}
+
+.phase-timeline__phase--last {
+  margin-right: 5px;
+}
+
+.phase-timeline__phase--last .phase-timeline__bar {
+  border-bottom-right-radius: 15px; 
+}
+
+
+
+.phase-timeline__phase-scheduled {
+  background: var(--color);
+  flex: auto;
+  padding: 5px;
+  position: relative;
+  height: calc(1rem + 10px);
+  overflow: hidden;
+}
+
+.phase-timeline__phase-elapsed {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+}
+
+.phase-timeline__phase--current .phase-timeline__phase-elapsed {
+  background: var(--color-elapsed);
+}
+
+.phase-timeline__phase[data-status="complete"] .phase-timeline__phase-elapsed{
+  display: none;
+}
+
+.phase-timeline__phase--over .phase-timeline__phase-elapsed {
+  background: var(--color-overflow);
+}
+
+
+.phase-timeline__phase-overflow {
+  background: var(--color-overflow);
+  flex: auto;
+  display: none;
+}
+
+.phase-timeline__time {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.phase-timeline__label {
+  position: absolute;
+  top: calc(100% + 1px);
+  opacity: 0;
+}
+
+.phase-timeline__phase:hover .phase-timeline__label {
+  opacity: 1;
+}
+
+.phase-timeline__phase--current .phase-timeline__label {
+  opacity: 1;
+}
+
+.phase-timeline__phase:hover .phase-timeline__phase-scheduled {
+  background: var(--color-hover); 
+}
+
+
+/** 
+
+STATES TO DESIGN FOR 
+- Current Phase
+- Current Phase playing
+- current phase, paused
+- current phase elapsed
+- current phase over time
+- Phase Complete 
+- upcoming phase
+- phase hover
+- Phases, crisis mode
+
+
+
+
+
+**/
+
+
+.phase-card[data-status="playing"] {
+  --color-bg: var(--color-blue);
+}
+
+.phase-card__edit {}
+
+.phase-card__edit .icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+}
+
+
+
+.resource-card[data-tags*="vital"]::before {
+  content: "★";
+  margin-inline-end: .25em;
+}
+
+.resource-card[data-tags*="exhausted"] {
+  opacity: .5;
+}
+
+
+
+.phase-playlist {
+  
+}
+
+.phase-playlist__header {
+  border-bottom: 1px solid var(--color-light);
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.phase-playlist__phases {
+  margin: 0px;
+  padding: 0px;
+}
+
+.phase-playlist__phase {
+  list-style: none;
+  padding: 1rem;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.phase-playlist__drag {
+  cursor: grab;
+  margin-left: -.25rem;
+}
+
+.phase-playlist__phase--current {
+  background: var(--color-mid);
+  color: var(--color-bg);
+  font-weight: bold;
+}
+.phase-playlist__phase--current.phase-playlist__phase--playing {
+  background: var(--color-green);
+}
+
+.phase-playlist__phase--current.phase-playlist__phase--imminent {
+  background: var(--color-orange);
+}
+
+.phase-playlist__phase--current.phase-playlist__phase--complete {
+  background: var(--color-blue);
+}
+
+.phase-playlist__phase--current.phase-playlist__phase--overtime {
+  background: var(--color-red);
+}
+
+
+
+
+
+
+
+
+
+
+.society-card__heading {
+  display: flex;
+  border: 1px solid transparent;
+}
+
+.society-card__edit {
+  font-size: 1.25rem;
+}
+
+.society-card__heading__name {
+  flex: 1 1 100%;
+}
+
+
+.society-card__action[data-tags*="committed"] {
+  background: var(--color-green);
+  border-color: var(--color-green);
+}
+
+.society-card__resources {
+  display: flex;
+  gap: .25rem;
+}
+
+.society-card__resource {
+  color: white;
+  background: var(--color-text);
+  padding: .25rem;
+  font-weight: bold;
+}

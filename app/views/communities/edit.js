@@ -1,9 +1,8 @@
 import { html } from "#core/utils"
-import Episode from "#models/episode";
 
 export default function CommunityEdit({ community }) {
-  const episode = Episode.load(community.episode);
-  const mySociety = episode.societies.find( s => s.getCommunityById( community.id ));
+  const episode = community.episode;
+  const mySociety = episode.getSocietyById( community.societyId );
   
   return html`
     <form class="stack" hx-patch="${ community.toURL() }">

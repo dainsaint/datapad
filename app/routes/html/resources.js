@@ -1,7 +1,8 @@
 import express from "express";
 import Episode from "#models/episode";
-import Resource from "#models/resource";
+import Resource, { ResourceTag } from "#models/resource";
 import { broadcast } from "#routes/html/events";
+import Record, { RecordType } from "#models/record";
 
 
 const resources = express.Router();
@@ -25,14 +26,13 @@ resources.get("/episodes/:episodeId/resources", (req, res, next) => {
 
 resources.post("/episodes/:episodeId/resources", (req, res, next) => {
   const { episodeId } = req.params;
-  const { communityId } = req.body;
 
   const episode = Episode.load(episodeId);
-  const community = episode.getCommunityById( communityId );
   const resource = new Resource( req.body );
   
-  community.addResource(resource);
   episode.addResource(resource);
+  episode.addRecord(new Record({ type: RecordType.RESOURCE_CREATED, value: resource.name }));
+
   episode.save();
   
   const currentUrl = req.get("hx-current-url");
@@ -48,11 +48,11 @@ resources.post("/episodes/:episodeId/resources", (req, res, next) => {
 
 resources.get("/episodes/:episodeId/resources/create", (req, res, next) => {
   const { episodeId } = req.params;
-  const { society } = req.query;
+  const { society, communityId } = req.query;
 
   const episode = Episode.load(episodeId);
 
-  res.render(`resources/create`, { episode, society, layout: "none" });
+  res.render(`resources/create`, { episode, society, communityId, layout: "none" });
 });
 
 
@@ -75,20 +75,27 @@ resources.get("/episodes/:episodeId/resources/:resourceId/:view?", (req, res, ne
 
 resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) => {
   const { episodeId, resourceId } = req.params;
-  const { communityId } = req.body;
+  const { shouldAlterTags, vital, exhausted } = req.body;
 
   const episode = Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
 
-  const prevCommunity = episode.communities.find(community => community.getResourceById(resourceId));
-  const nextCommunity = episode.getCommunityById(communityId);
+  resource.update(req.body);
 
-  if( prevCommunity != nextCommunity ) {
-    prevCommunity.removeResource( resource );
-    nextCommunity.addResource( resource );
+  if( shouldAlterTags ) {
+    if(vital) {
+      resource.tags.add(ResourceTag.VITAL);
+    } else {
+      resource.tags.delete(ResourceTag.VITAL);
+    }
+
+    if(exhausted) {
+      resource.tags.add(ResourceTag.EXHAUSTED);
+    } else {
+      resource.tags.delete(ResourceTag.EXHAUSTED);
+    }
   }
 
-  resource.update(req.body);
   episode.save();
 
   const currentUrl = req.get("hx-current-url");

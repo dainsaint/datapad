@@ -12,11 +12,11 @@ export default function AppLayout(props, children) {
       
       <link rel="stylesheet" id="polyfill-styles" />
       <link rel="stylesheet" href="/css/styles.css" />
-
+      
       <link rel="favicon" href="/images/web-icon.svg"/>
       <link rel="manifest" href="/manifest.webmanifest">
 
-      <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
+      <!-- <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script> -->
 
       <script src="/js/vendor/htmx.min.js"></script>
       <script src="/js/vendor/htmx.sse.js"></script>

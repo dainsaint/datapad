@@ -44,7 +44,13 @@ function reviver(key, value) {
     return value;
   }
 
-  const instance = Object.assign( new Type(value), value );
+  const instance = new Type(value);
+  if( instance.update ) {
+    instance.update( value );
+  } else {
+    Object.assign(instance, value);
+  }
+
   instances.set(value.id, instance);
   return instance;
 }

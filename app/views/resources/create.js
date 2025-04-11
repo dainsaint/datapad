@@ -1,7 +1,10 @@
 import { html } from "#core/utils";
 
-export default function ResourceCreate({ episode, society }) {
+export default function ResourceCreate({ episode, society, communityId }) {
   const current = society;
+  const isCommunitySelected = ( society, community, i ) => {
+    return community.id == communityId || (i == 0 && current == society.id)
+  }
   return html`
     <form class="stack" hx-post="${ episode.toURL('/resources') }">
       <header>
@@ -10,14 +13,17 @@ export default function ResourceCreate({ episode, society }) {
 
       <article class="stack">
         <label for="name">Name</label>
-        <input name="name" autofocus autocapitalize="words" placeholder="New Resource"/>
+        <input name="name" placeholder="New Resource" 
+          autofocus 
+          autocapitalize="words" 
+          required />
         <label for="communityId">Community</label>
 
         <select name="communityId">
         ${ episode.societies.map( society => html`
             <optgroup label="${ society.name }">
               ${ society.communities.map(( community, i ) => 
-                html`<option value="${ community.id }" ${{ selected: i == 0 && current == society.id }}>${community.name}</option>`
+                html`<option value="${ community.id }" ${{ selected: isCommunitySelected(society, community, i) }}>${community.name}</option>`
               )}
             </optgroup>
         `)}

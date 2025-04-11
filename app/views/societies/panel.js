@@ -1,5 +1,4 @@
 import { html } from "#core/utils";
-import Episode from "#models/episode";
 import Society from "#models/society";
 import Community from "#models/community";
 import SocietyInfo from "./components/info.js";;
@@ -7,8 +6,8 @@ import SocietyInfo from "./components/info.js";;
 const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 
 export default function SocietyPanel({ society = new Society()} = {}) {
-  const episode = Episode.load( society.episode );
-  return html` <main id="${societyPanelId(society)}" class="content stack-loose scrollable">
+  const episode = society.episode;
+  return html` <main id="${societyPanelId(society)}" class="content stack-loose scrollable" hx-get="${society.toURL("/panel")}" hx-trigger="sse:societies" hx-swap="outerHTML" hx-disinherit="hx-swap">
       <header>
         <div class="layout-row gap-tight" style="display: flex; gap: 1rem">
           <h1>
@@ -22,17 +21,17 @@ export default function SocietyPanel({ society = new Society()} = {}) {
 
       ${ ActionBuilder({ episode, societyId: society.id }) }
 
-      <div class="grid-medium">
-       ${society.communities.map( (community) => CommunityCard({ community }))}
+      <div class="stack">
+        <h2>Communities</h2>
+
+        <div class="grid-three">
+        ${society.communities.map( (community) => CommunityCard({ community }))}
+        </div>
       </div>
 
-      <div class="stack-tight">
-        <h3>Actions (put these in a better place)</h3>
-        <div class="switch">
-          <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog" ${{ disabled: episode.communities.length == 0 }}>+ New Resource</button>
-          <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">+ New Community</button>
-          <button hx-get="${episode.toURL('/societies/create')}" hx-target="#dialog">+ New Society</button>
-        </div>
+      <div class="layout-row gap-tiny">
+        <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog">+ New Resource</button>
+        <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">+ New Community</button>
       </div>
     </main>
   `;
@@ -55,10 +54,11 @@ export function CommunityCard({ community = new Community() } = {}) {
           </h2>
         </header>
 
-        <div class="grid-three" data-sortable="resources" data-sortable-expand>
+        <div class="grid-small" data-sortable="resources" data-sortable-expand>
           ${community.resources.map((resource) =>
             CommunityResourceCard({ resource })
           )}
+          
         </div>
       </form>
     </div>
@@ -75,7 +75,9 @@ export function CommunityResourceCard({ resource }) {
       hx-trigger="click"
       data-tags="${resource.tags.toList()}"
     >
-      <h3>${resource.name}</h3>
+      <h3>
+        ${resource.name}
+      </h3>
       <input type="hidden" name="resourceIds[]" value="${resource.id}" />
     </a>
   `;
@@ -85,54 +87,46 @@ export function CommunityResourceCard({ resource }) {
 
 
 export function ActionBuilder({ episode, societyId } = {}) {
-  const actions = episode.actions.filter( action => action.society == societyId );
+  const actions = episode.getCurrentActionsForSocietyId( societyId );
 
   return html`
-    <section
-      class="stack"
-      hx-get="${episode.toURL(`/actions?societyId=${societyId}`)}"
-      hx-trigger="sse:actions"
-    >
-      <h2>
-        Actions
-        <button
-          name="societyId"
-          value="${societyId}"
-          ${{ disabled: actions.length >= 2 }}
-          hx-post="${episode.toURL(`/actions`)}"
-        >
-          + New
-        </button>
-      </h2>
+    <section class="stack" hx-get="${episode.toURL(`/actions?societyId=${societyId}`)}" hx-trigger="sse:actions">
+      <h2>Actions</h2>
       ${actions.map(
         (action, i) => html`
-          <div class="layout-row gap">
-            <h3>${i + 1}: We use</h3>
-            <form
-              class="layout-row gap action-resources"
+          <form class="stack-tight"
+            hx-post="${action.toURL("/resources")}"
+            hx-trigger="sorted,change,submit"
+            hx-swap="none"
+          >
+            <div class="action-resources layout-row gap"
               data-sortable="action"
               data-sortable-allow="action, resources: clone"
-              hx-post="${action.toURL("/resources")}"
-              hx-trigger="sorted"
-              hx-swap="none"
             >
-              ${action.resources.length >= 1 &&
-              ActionResourceCard({ resource: action.resources.at(0) })}
+              <h3>${i + 1}: We use</h3>
+              
+              ${action.resources.length >= 1 && ActionResourceCard({ resource: action.resources.at(0) })}
 
               <div class="drop drop-primary">Primary</div>
 
               <h3 class="requires-primary">We aid with</h3>
 
-              ${action.resources.length > 1 &&
-              action.resources
+              ${action.resources
                 .slice(1)
                 .map((resource) => ActionResourceCard({ resource }))}
 
               <div class="requires-primary drop drop-additional">Additional</div>
-            </form>
-          </div>
+            </div>
+
+            <div class="layout-row gap">
+              <input name="text" value="${ action.text }" placeholder="Write full action here"/>
+              <button name="commit" value="commit">Submit</button>
+            </div>
+          </form>
         `
       )}
+
+      
     </section>
 
     <style>

@@ -3,6 +3,7 @@ import Action from "#models/action";
 import Episode from "#models/episode";
 import { broadcast } from "#routes/html/events";
 import { ActionBuilder } from "#views/societies/panel";
+import { filterUnique } from "#core/utils";
 
 const actions = express.Router();
 
@@ -36,19 +37,29 @@ actions.post("/episodes/:episodeId/actions", (req, res, next) => {
 
 actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next) => {
   const { episodeId, actionId } = req.params;
-  const { resourceIds = [] } = req.body;
+  const { resourceIds = [], text, commit } = req.body;
 
   const episode = Episode.load(episodeId);
   const action = episode.getActionById(actionId);
-  const otherActions = episode.actions.filter( other => other != action && other.society == action.society );
+  const otherActions = episode.actions.filter( other => other != action && other.societyId == action.societyId );
 
   //Ensure unique
   const resources = resourceIds
-    .filter( (id, i) => resourceIds.indexOf(id) == i )
-    .map( id => episode.getResourceById(id) );
+    .filter( filterUnique )
+    .map( episode.getResourceById );
 
   action.setResources(resources);
+  action.text = text;
+  
+  if( commit )  {
+    action.commit(); 
+  }
+
   otherActions.forEach( other => other.removeResources(resources) );
+  
+
+
+
   episode.save();
 
   // res.send( ActionBuilder({ episode, society}) );

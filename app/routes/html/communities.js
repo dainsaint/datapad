@@ -2,6 +2,7 @@ import express from "express";
 import Episode from "#models/episode";
 import Community from "#models/community";
 import { broadcast } from "#routes/html/events";
+import { filterUnique } from "#core/utils";
 
 const communities = express.Router();
 
@@ -24,13 +25,10 @@ communities.get("/episodes/:episodeId/communities", (req, res) => {
 
 communities.post("/episodes/:episodeId/communities", (req, res) => {
   const { episodeId } = req.params;
-  const { societyId } = req.body;
 
   const episode = Episode.load(episodeId);
-  const society = episode.getSocietyById(societyId);
   const community = new Community(req.body);
 
-  society.addCommunity(community);
   episode.addCommunity(community);
   episode.save();
   
@@ -64,20 +62,10 @@ communities.get("/episodes/:episodeId/communities/:communityId/:view?", (req, re
 
 communities.patch("/episodes/:episodeId/communities/:communityId", (req, res) => {
   const { episodeId, communityId } = req.params;
-  const { societyId } = req.body;
 
   const episode = Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
   community.update(req.body);
-
-  //update societies (encapsulate!)
-  const prevSociety = episode.societies.find((society) => society.getCommunityById(communityId) );
-  const nextSociety = episode.getSocietyById(societyId);
-
-  if (prevSociety && nextSociety && prevSociety != nextSociety) {
-    prevSociety.removeCommunity(community);
-    nextSociety.addCommunity(community);
-  }
 
   episode.save();
 
@@ -95,14 +83,13 @@ communities.post("/episodes/:episodeId/communities/:communityId/resources", (req
   const { resourceIds = [] } = req.body;
 
   const episode = Episode.load(episodeId);
-  const community = episode.getCommunityById(communityId);
   
   //update resources
   const resources = resourceIds
-    .filter((id, i) => resourceIds.indexOf(id) == i)
+    .filter(filterUnique)
     .map(episode.getResourceById);
     
-  community.resources = resources;
+  resources.forEach( resource => resource.communityId = communityId );
 
   episode.save();
 

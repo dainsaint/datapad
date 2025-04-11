@@ -8,7 +8,7 @@ export default function CommunityCreate({ episode, society }) {
       <p class="text">Enter a name/archetype for this community</p>
       
       <label for="name">Name</label>
-      <input name="name" autofocus autocapitalize="words" placeholder="New Community" />
+      <input name="name" placeholder="New Community" autofocus autocapitalize="words" required />
 
       <label for="societyId">Society</label>
       ${ Select({ name: "societyId", current: society, options: episode.societies }) }

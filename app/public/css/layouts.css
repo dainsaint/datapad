@@ -152,6 +152,10 @@
   align-items: center;
 }
 
+.layout-fill {
+  flex: 1 1 auto;
+}
+
 .layout-toolbar {
   display: grid;
   grid-template-rows: 4rem 1fr 4rem;
@@ -190,6 +194,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "app";
+  /* border: 1px solid red; */
 }
 
 

@@ -11,7 +11,7 @@ export default function CommunityCard({ community = new Community() } = {}) {
         hx-trigger="dropcomplete"
         data-droppable="[data-drop-target]">
         <header>
-          <h2><a hx-get="${ community.toURL('/edit') }" hx-target="#dialog" hx-trigger="click">${community.name}</a></h2>
+          <h2><a hx-get="${ community.toURL('/edit') }" hx-target="#dialog" hx-swap="innerHTML" hx-trigger="click">${community.name}</a></h2>
           <p class="subtitle">${community.voice}</h2>
         </header>
 

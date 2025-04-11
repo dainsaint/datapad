@@ -1,144 +1,241 @@
 {
-  "games": [
-    {
-      "_type": "Game",
-      "id": "n7Jru4dj",
-      "name": "John's House — Feb-Mar 2025",
-      "tags": {
-        "_type": "Tags",
-        "value": []
-      },
-      "episodes": []
-    }
-  ],
   "episodes": [
     {
-      "id": "iYi1c0yR",
-      "name": "A Sample Episode",
-      "date": "2024-12-31T16:09:04.287-05:00"
-    },
-    {
-      "id": "LzOr_rGf",
+      "id": "u65YG",
       "name": "New Episode",
-      "date": "2025-01-02T00:00:00.000-05:00"
-    },
-    {
-      "id": "IQLG8PYV",
-      "name": "My new episode",
-      "date": "2025-03-03T00:00:00.000-05:00"
-    },
-    {
-      "id": "vNIavdFu",
-      "name": "My New Episode",
-      "date": "2025-01-08T00:00:00.000-05:00"
-    }
-  ],
-  "players": [
-    {
-      "_type": "Player",
-      "id": "s-tdMsuP",
-      "episode": "iYi1c0yR",
-      "name": "Ving Rhames",
-      "pronouns": [
-        "they",
-        "them"
-      ],
-      "tags": {
-        "_type": "Tags",
-        "value": []
-      }
+      "date": "2025-03-26T20:56:16.421-04:00"
     }
   ],
   "active": [
     {
       "_type": "Episode",
-      "id": "iYi1c0yR",
-      "name": "A Sample Episode",
-      "date": "2024-12-31T16:09:04.287-05:00",
+      "id": "u65YG",
+      "name": "New Episode",
+      "date": "2025-03-26T20:56:16.421-04:00",
       "scheduledTime": {
-        "s": "2024-12-31T16:09:04.299-05:00",
-        "e": "2024-12-31T21:09:04.299-05:00",
+        "s": "2025-03-26T20:56:16.421-04:00",
+        "e": "2025-03-27T01:56:16.421-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
-      "game": {
-        "_type": "Game",
-        "id": "n7Jru4dj",
-        "name": "John's House — Feb-Mar 2025",
-        "tags": {
-          "_type": "Tags",
-          "value": []
-        },
-        "episodes": []
+      "tags": {
+        "_type": "Tags",
+        "value": [
+          "active"
+        ]
       },
+      "actions": [
+        {
+          "_type": "Action",
+          "id": "PtD47",
+          "societyId": "EwZHX",
+          "resourceIds": [],
+          "round": 1,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "pikFR",
+          "societyId": "EwZHX",
+          "resourceIds": [],
+          "round": 1,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "hw0Ok",
+          "societyId": "EwZHX",
+          "resourceIds": [
+            "RqUx7",
+            "rrPLK",
+            "M1_KP"
+          ],
+          "round": 2,
+          "text": "Use big rock to attack the Pyran. Use the green sludge to coat the big rock.",
+          "tags": {
+            "_type": "Tags",
+            "value": [
+              "committed"
+            ]
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "kdNue",
+          "societyId": "EwZHX",
+          "resourceIds": [],
+          "round": 2,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": [
+              "committed"
+            ]
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "Syng2",
+          "societyId": "EwZHX",
+          "resourceIds": [],
+          "round": 3,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "M1Zjr",
+          "societyId": "EwZHX",
+          "resourceIds": [],
+          "round": 3,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "Xeh6l",
+          "societyId": "EwZHX",
+          "resourceIds": [],
+          "round": 4,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "gWUSD",
+          "societyId": "EwZHX",
+          "resourceIds": [],
+          "round": 4,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "rA3AT",
+          "societyId": "USLJj",
+          "resourceIds": [],
+          "round": 4,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "G8vWD",
+          "societyId": "USLJj",
+          "resourceIds": [],
+          "round": 4,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "tHkCj",
+          "societyId": "USLJj",
+          "resourceIds": [],
+          "round": 1,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "kTZl2",
+          "societyId": "USLJj",
+          "resourceIds": [],
+          "round": 3,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "WWHbb",
+          "societyId": "USLJj",
+          "resourceIds": [],
+          "round": 3,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "JbHKs",
+          "societyId": "USLJj",
+          "resourceIds": [
+            "QPxpJ"
+          ],
+          "round": 2,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "RJujd",
+          "societyId": "USLJj",
+          "resourceIds": [
+            "niGxq"
+          ],
+          "round": 2,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
       "communities": [
         {
           "_type": "Community",
-          "id": "VQHwRDYn",
-          "episode": "iYi1c0yR",
+          "id": "ouZhn",
+          "societyId": "EwZHX",
           "name": "Venerable Elders",
           "voice": "leader",
-          "resources": [
-            {
-              "_type": "Resource",
-              "id": "M-yD8iMV",
-              "episode": "iYi1c0yR",
-              "name": "sdfdsfsd",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            },
-            {
-              "_type": "Resource",
-              "id": "AfdgeFeg",
-              "episode": "iYi1c0yR",
-              "name": "Green Sludge",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            },
-            {
-              "_type": "Resource",
-              "id": "HyqihBK9",
-              "episode": "iYi1c0yR",
-              "name": "Youth Bomb",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              },
-              "communityId": "nce-aLZE"
-            },
-            {
-              "_type": "Resource",
-              "id": "EpIrqIe8",
-              "episode": "iYi1c0yR",
-              "name": "BARABA BARBAR",
-              "relationship": "",
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              },
-              "communityId": "VQHwRDYn"
-            }
-          ],
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "societyId": "S8GfypoA"
+          }
         },
         {
           "_type": "Community",
-          "id": "nce-aLZE",
-          "episode": "iYi1c0yR",
+          "id": "AkNHo",
+          "societyId": "EwZHX",
           "name": "Disaffected Youth",
           "voice": "people",
-          "resources": [],
           "tags": {
             "_type": "Tags",
             "value": []
@@ -146,23 +243,10 @@
         },
         {
           "_type": "Community",
-          "id": "dGJKx-lm",
-          "episode": "iYi1c0yR",
-          "name": "Test Community",
-          "voice": "leader",
-          "resources": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Community",
-          "id": "kxAULBra",
-          "episode": "iYi1c0yR",
-          "name": "Big Ol' Orcs",
+          "id": "HmTVy",
+          "societyId": "USLJj",
+          "name": "nlbak",
           "voice": "people",
-          "resources": [],
           "tags": {
             "_type": "Tags",
             "value": []
@@ -172,483 +256,351 @@
       "phases": [
         {
           "_type": "Phase",
-          "id": "ljzH4NaL",
-          "episode": "iYi1c0yR",
-          "name": "Global Phase",
-          "status": "paused",
+          "id": "aMzE3",
+          "type": "Setup Phase",
+          "status": "complete",
           "round": 0,
           "duration": 1200,
-          "timeElapsed": 1541.637999999975,
+          "timeElapsed": 18.016,
+          "actualTime": {
+            "s": "2025-04-09T17:20:23.134-04:00",
+            "e": "2025-04-10T10:00:06.825-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.300-05:00",
-            "e": "2024-12-31T16:09:04.300-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2025-01-11T19:46:18.028-05:00",
-            "e": "2025-01-11T20:06:18.028-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "JPjOTp4b",
-          "episode": "iYi1c0yR",
-          "name": "Universal Phase",
-          "status": "idle",
-          "round": 0,
-          "duration": 240,
-          "timeElapsed": 0,
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.300-05:00",
-            "e": "2024-12-31T16:09:04.300-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          }
-        },
-        {
-          "_type": "Phase",
-          "id": "Z3fk8Ysa",
-          "episode": "iYi1c0yR",
-          "name": "Societal Phase",
-          "status": "idle",
-          "round": 0,
-          "duration": 600,
-          "timeElapsed": 0,
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          }
-        },
-        {
-          "_type": "Phase",
-          "id": "vLR6bekr",
-          "episode": "iYi1c0yR",
-          "name": "Galactic Phase",
-          "status": "idle",
-          "round": 0,
-          "duration": 600,
-          "timeElapsed": 0,
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          }
-        },
-        {
-          "_type": "Phase",
-          "id": "lvAEYblH",
-          "episode": "iYi1c0yR",
-          "name": "Individual Phase",
-          "status": "idle",
-          "round": 0,
-          "duration": 500,
-          "timeElapsed": 0,
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          }
-        },
-        {
-          "_type": "Phase",
-          "id": "rLy5e4VJ",
-          "episode": "iYi1c0yR",
-          "name": "Universal Phase",
-          "status": "idle",
+          "id": "yh_Ke",
+          "type": "Universal Phase",
+          "status": "complete",
           "round": 1,
           "duration": 240,
-          "timeElapsed": 0,
+          "timeElapsed": 258.2290000000007,
+          "actualTime": {
+            "s": "2025-04-09T10:01:36.510-04:00",
+            "e": "2025-04-10T10:00:07.861-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "aVQwY9yM",
-          "episode": "iYi1c0yR",
-          "name": "Societal Phase",
-          "status": "idle",
+          "id": "LUiqC",
+          "type": "Societal Phase",
+          "status": "complete",
           "round": 1,
           "duration": 600,
-          "timeElapsed": 0,
+          "timeElapsed": 1207.3789999999844,
+          "actualTime": {
+            "s": "2025-04-07T15:40:32.903-04:00",
+            "e": "2025-04-10T10:14:50.838-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "hQX2E74m",
-          "episode": "iYi1c0yR",
-          "name": "Galactic Phase",
-          "status": "idle",
+          "id": "zgtPq",
+          "type": "Galactic Phase",
+          "status": "complete",
           "round": 1,
           "duration": 600,
-          "timeElapsed": 0,
+          "timeElapsed": 241.19400000000056,
+          "actualTime": {
+            "s": "2025-04-07T17:11:12.109-04:00",
+            "e": "2025-04-10T10:14:51.616-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "ScrgPUve",
-          "episode": "iYi1c0yR",
-          "name": "Individual Phase",
-          "status": "idle",
+          "id": "xqYRw",
+          "type": "Individual Phase",
+          "status": "complete",
           "round": 1,
-          "duration": 500,
-          "timeElapsed": 0,
+          "duration": 495,
+          "timeElapsed": 140.11900000000009,
+          "actualTime": {
+            "s": "2025-04-07T17:15:35.334-04:00",
+            "e": "2025-04-10T10:14:51.881-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "zV0hS_Tl",
-          "episode": "iYi1c0yR",
-          "name": "Universal Phase",
-          "status": "idle",
+          "id": "IS4OL",
+          "type": "Universal Phase",
+          "status": "paused",
           "round": 2,
           "duration": 240,
-          "timeElapsed": 0,
+          "timeElapsed": 148.1350000000002,
+          "actualTime": {
+            "s": "2025-04-10T15:21:39.736-04:00",
+            "e": "2025-04-10T15:25:39.736-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "UHcG9ynC",
-          "episode": "iYi1c0yR",
-          "name": "Societal Phase",
+          "id": "YhRkF",
+          "type": "Societal Phase",
+          "status": "idle",
+          "round": 2,
+          "duration": 120,
+          "timeElapsed": 111.098,
+          "actualTime": {
+            "s": "2025-04-09T17:55:42.248-04:00",
+            "e": "2025-04-10T09:30:04.088-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "BL-xN",
+          "type": "Galactic Phase",
           "status": "idle",
           "round": 2,
           "duration": 600,
           "timeElapsed": 0,
+          "actualTime": {
+            "s": "2025-03-26T20:56:16.422-04:00",
+            "e": "2025-04-10T09:28:49.908-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "DnJZU8LB",
-          "episode": "iYi1c0yR",
-          "name": "Galactic Phase",
+          "id": "waKEG",
+          "type": "Individual Phase",
           "status": "idle",
           "round": 2,
-          "duration": 600,
-          "timeElapsed": 0,
+          "duration": 495,
+          "timeElapsed": 2.002,
+          "actualTime": {
+            "s": "2025-04-09T10:00:08.580-04:00",
+            "e": "2025-04-10T09:28:50.291-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "juW4yWnu",
-          "episode": "iYi1c0yR",
-          "name": "Individual Phase",
-          "status": "idle",
-          "round": 2,
-          "duration": 500,
-          "timeElapsed": 0,
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          }
-        },
-        {
-          "_type": "Phase",
-          "id": "LN3rnkYl",
-          "episode": "iYi1c0yR",
-          "name": "Universal Phase",
+          "id": "XlfBs",
+          "type": "Universal Phase",
           "status": "idle",
           "round": 3,
           "duration": 240,
-          "timeElapsed": 0,
+          "timeElapsed": 202.19000000000037,
+          "actualTime": {
+            "s": "2025-04-07T17:45:57.144-04:00",
+            "e": "2025-04-10T09:28:51.191-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "RpgoF1vO",
-          "episode": "iYi1c0yR",
-          "name": "Societal Phase",
+          "id": "ObUN6",
+          "type": "Societal Phase",
           "status": "idle",
           "round": 3,
           "duration": 600,
           "timeElapsed": 0,
+          "actualTime": {
+            "s": "2025-03-26T20:56:16.422-04:00",
+            "e": "2025-04-10T09:28:51.669-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "y18sGMS5",
-          "episode": "iYi1c0yR",
-          "name": "Galactic Phase",
+          "id": "PwTh2",
+          "type": "Galactic Phase",
           "status": "idle",
           "round": 3,
           "duration": 600,
           "timeElapsed": 0,
+          "actualTime": {
+            "s": "2025-03-26T20:56:16.422-04:00",
+            "e": "2025-04-10T09:28:52.120-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "gYr07GK6",
-          "episode": "iYi1c0yR",
-          "name": "Generational Phase",
+          "id": "oy0x2",
+          "type": "Individual Phase",
           "status": "idle",
           "round": 3,
-          "duration": 500,
+          "duration": 495,
           "timeElapsed": 0,
+          "actualTime": {
+            "s": "2025-03-26T20:56:16.422-04:00",
+            "e": "2025-04-10T09:28:52.683-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.301-05:00",
-            "e": "2024-12-31T16:09:04.301-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
-          "actualTime": {
-            "s": "2024-12-31T16:09:04.302-05:00",
-            "e": "2024-12-31T16:09:04.302-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
           }
         },
         {
           "_type": "Phase",
-          "id": "PqvXBNsI",
-          "episode": "iYi1c0yR",
-          "name": "Conclusion Phase",
-          "status": "idle",
-          "round": 3,
-          "duration": 500,
-          "timeElapsed": 0,
+          "id": "KXBhB",
+          "type": "Universal Phase",
+          "status": "paused",
+          "round": 4,
+          "duration": 240,
+          "timeElapsed": 76.07400000000001,
+          "actualTime": {
+            "s": "2025-03-26T21:50:12.802-04:00",
+            "e": "2025-03-26T21:54:12.802-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
           "tags": {
             "_type": "Tags",
             "value": []
-          },
-          "scheduledTime": {
-            "s": "2024-12-31T16:09:04.302-05:00",
-            "e": "2024-12-31T16:09:04.302-05:00",
-            "invalid": null,
-            "isLuxonInterval": true
-          },
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "O1dcF",
+          "type": "Societal Phase",
+          "status": "idle",
+          "round": 4,
+          "duration": 600,
+          "timeElapsed": 0,
           "actualTime": {
-            "s": "2024-12-31T16:09:04.302-05:00",
-            "e": "2024-12-31T16:09:04.302-05:00",
+            "s": "2025-03-26T20:56:16.422-04:00",
+            "e": "2025-03-26T20:56:16.422-04:00",
             "invalid": null,
             "isLuxonInterval": true
+          },
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "WCUmU",
+          "type": "Galactic Phase",
+          "status": "idle",
+          "round": 4,
+          "duration": 600,
+          "timeElapsed": 0,
+          "actualTime": {
+            "s": "2025-03-26T20:56:16.422-04:00",
+            "e": "2025-03-26T20:56:16.422-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "AYgMp",
+          "type": "Generational Phase",
+          "status": "idle",
+          "round": 4,
+          "duration": 495,
+          "timeElapsed": 0,
+          "actualTime": {
+            "s": "2025-03-26T20:56:16.422-04:00",
+            "e": "2025-03-26T20:56:16.422-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "HyvRR",
+          "type": "Conclusion Phase",
+          "status": "idle",
+          "round": 5,
+          "duration": 495,
+          "timeElapsed": 0,
+          "actualTime": {
+            "s": "2025-03-26T20:56:16.422-04:00",
+            "e": "2025-03-26T20:56:16.422-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "tags": {
+            "_type": "Tags",
+            "value": []
           }
         }
       ],
       "players": [
         {
           "_type": "Player",
-          "id": "s-tdMsuP",
-          "episode": "iYi1c0yR",
-          "name": "Ving Rhames",
-          "pronouns": [
-            "they",
-            "them"
-          ],
+          "id": "xxKGU",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -658,10 +610,9 @@
       "resources": [
         {
           "_type": "Resource",
-          "id": "AfdgeFeg",
-          "episode": "iYi1c0yR",
+          "id": "RqUx7",
+          "communityId": "ouZhn",
           "name": "Green Sludge",
-          "relationship": "",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -669,22 +620,21 @@
         },
         {
           "_type": "Resource",
-          "id": "i-hZuEkL",
-          "episode": "iYi1c0yR",
+          "id": "rrPLK",
+          "communityId": "AkNHo",
           "name": "Amazing Suspenders",
-          "relationship": "",
           "tags": {
             "_type": "Tags",
-            "value": []
-          },
-          "communityId": "dGJKx-lm"
+            "value": [
+              "vital"
+            ]
+          }
         },
         {
           "_type": "Resource",
-          "id": "U_LCB8aG",
-          "episode": "iYi1c0yR",
+          "id": "M1_KP",
+          "communityId": "ouZhn",
           "name": "Big Rock",
-          "relationship": "",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -692,10 +642,9 @@
         },
         {
           "_type": "Resource",
-          "id": "GMZnwOAC",
-          "episode": "iYi1c0yR",
-          "name": "alksndas",
-          "relationship": "",
+          "id": "QPxpJ",
+          "communityId": "HmTVy",
+          "name": "aasdfasd",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -703,89 +652,9 @@
         },
         {
           "_type": "Resource",
-          "id": "Jc05Te6W",
-          "episode": "iYi1c0yR",
-          "name": "asdkjasndas",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Resource",
-          "id": "HyqihBK9",
-          "episode": "iYi1c0yR",
-          "name": "Youth Bomb",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "communityId": "nce-aLZE"
-        },
-        {
-          "_type": "Resource",
-          "id": "M-yD8iMV",
-          "episode": "iYi1c0yR",
-          "name": "sdfdsfsd",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Resource",
-          "id": "EpIrqIe8",
-          "episode": "iYi1c0yR",
-          "name": "BARABA BARBAR",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "communityId": "VQHwRDYn"
-        },
-        {
-          "_type": "Resource",
-          "id": "iUm9S7rK",
-          "episode": "iYi1c0yR",
-          "name": "Another",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Resource",
-          "id": "uIPwuZNo",
-          "episode": "iYi1c0yR",
-          "name": "BLARGH",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Resource",
-          "id": "iHw6VQER",
-          "episode": "iYi1c0yR",
-          "name": "werqerq",
-          "relationship": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Resource",
-          "id": "jE62nIO5",
-          "episode": "iYi1c0yR",
-          "name": "sdfds",
-          "relationship": "",
+          "id": "niGxq",
+          "communityId": "HmTVy",
+          "name": "asdas",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -795,307 +664,3042 @@
       "societies": [
         {
           "_type": "Society",
-          "id": "S8GfypoA",
-          "episode": "iYi1c0yR",
+          "id": "EwZHX",
           "name": "Ten Thousand Islands",
-          "archetype": "the aesthetic",
+          "archetype": "the curious",
           "planet": "Jorun",
-          "communities": [
-            {
-              "_type": "Community",
-              "id": "VQHwRDYn",
-              "episode": "iYi1c0yR",
-              "name": "Venerable Elders",
-              "voice": "leader",
-              "resources": [
-                {
-                  "_type": "Resource",
-                  "id": "M-yD8iMV",
-                  "episode": "iYi1c0yR",
-                  "name": "sdfdsfsd",
-                  "relationship": "",
-                  "tags": {
-                    "_type": "Tags",
-                    "value": []
-                  }
-                },
-                {
-                  "_type": "Resource",
-                  "id": "AfdgeFeg",
-                  "episode": "iYi1c0yR",
-                  "name": "Green Sludge",
-                  "relationship": "",
-                  "tags": {
-                    "_type": "Tags",
-                    "value": []
-                  }
-                },
-                {
-                  "_type": "Resource",
-                  "id": "HyqihBK9",
-                  "episode": "iYi1c0yR",
-                  "name": "Youth Bomb",
-                  "relationship": "",
-                  "tags": {
-                    "_type": "Tags",
-                    "value": []
-                  },
-                  "communityId": "nce-aLZE"
-                },
-                {
-                  "_type": "Resource",
-                  "id": "EpIrqIe8",
-                  "episode": "iYi1c0yR",
-                  "name": "BARABA BARBAR",
-                  "relationship": "",
-                  "tags": {
-                    "_type": "Tags",
-                    "value": []
-                  },
-                  "communityId": "VQHwRDYn"
-                }
-              ],
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              },
-              "societyId": "S8GfypoA"
-            },
-            {
-              "_type": "Community",
-              "id": "nce-aLZE",
-              "episode": "iYi1c0yR",
-              "name": "Disaffected Youth",
-              "voice": "people",
-              "resources": [],
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            },
-            {
-              "_type": "Community",
-              "id": "kxAULBra",
-              "episode": "iYi1c0yR",
-              "name": "Big Ol' Orcs",
-              "voice": "people",
-              "resources": [],
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            }
-          ]
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
         },
         {
           "_type": "Society",
-          "id": "qK9CQui6",
-          "episode": "iYi1c0yR",
-          "name": "Test Society",
-          "archetype": "the faithful",
-          "planet": "Earth",
-          "communities": []
-        },
-        {
-          "_type": "Society",
-          "id": "FkMicAOv",
-          "episode": "iYi1c0yR",
-          "name": "Big Coffee",
-          "archetype": "the scholars",
-          "planet": "Earth",
-          "communities": [
-            {
-              "_type": "Community",
-              "id": "dGJKx-lm",
-              "episode": "iYi1c0yR",
-              "name": "Test Community",
-              "voice": "leader",
-              "resources": [],
-              "tags": {
-                "_type": "Tags",
-                "value": []
-              }
-            }
-          ]
-        },
-        {
-          "_type": "Society",
-          "id": "aa9kXNsB",
-          "episode": "iYi1c0yR",
-          "name": "Diamonds On My Wrist",
-          "archetype": "the enterprise",
-          "planet": "Earth",
-          "communities": []
+          "id": "USLJj",
+          "name": "Nargle",
+          "archetype": "the aesthetic",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
         }
       ],
-      "actions": [
+      "records": [
         {
-          "_type": "Action",
-          "id": "KQRX23oI",
-          "episode": "iYi1c0yR",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "resources": [],
-          "society": "S8GfypoA",
-          "roll": []
+          "_type": "Record",
+          "id": "QY_2f",
+          "timestamp": "2025-03-26T20:56:32.460-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 0: Setup Phase",
+          "value": 0
         },
         {
-          "_type": "Action",
-          "id": "yNdIvJvK",
-          "episode": "iYi1c0yR",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "resources": [],
-          "society": "qK9CQui6",
-          "roll": []
+          "_type": "Record",
+          "id": "gtWol",
+          "timestamp": "2025-03-26T20:56:32.460-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
         },
         {
-          "_type": "Action",
-          "id": "w6G9bwmH",
-          "episode": "iYi1c0yR",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "resources": [],
-          "society": "qK9CQui6",
-          "roll": []
+          "_type": "Record",
+          "id": "ZCS_J",
+          "timestamp": "2025-03-26T20:56:32.460-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
         },
         {
-          "_type": "Action",
-          "id": "PoY2bMiF",
-          "episode": "iYi1c0yR",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "resources": [],
-          "society": "S8GfypoA",
-          "roll": []
+          "_type": "Record",
+          "id": "BaYWO",
+          "timestamp": "2025-03-26T20:56:40.723-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Universal Phase",
+          "value": 0
         },
         {
-          "_type": "Action",
-          "id": "GS9yU9g8",
-          "episode": "iYi1c0yR",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "resources": [],
-          "society": "S8GfypoA",
-          "roll": []
+          "_type": "Record",
+          "id": "BK7c0",
+          "timestamp": "2025-03-26T20:56:41.053-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Societal Phase",
+          "value": 0
         },
         {
-          "_type": "Action",
-          "id": "D6WsOFSB",
-          "episode": "iYi1c0yR",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          },
-          "resources": [],
-          "society": "FkMicAOv",
-          "roll": []
+          "_type": "Record",
+          "id": "hhvY4",
+          "timestamp": "2025-03-26T20:56:41.317-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Galactic Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "YXP1y",
+          "timestamp": "2025-03-26T20:56:41.864-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Individual Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "FWq3y",
+          "timestamp": "2025-03-26T20:56:41.864-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "HpOxv",
+          "timestamp": "2025-03-26T20:56:41.864-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Nw7Gy",
+          "timestamp": "2025-03-26T21:08:15.466-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-03-26T21:08:15.466-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "jZT8O",
+          "timestamp": "2025-03-26T21:08:15.466-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 0: Setup Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ZCmp-",
+          "timestamp": "2025-03-26T21:08:17.100-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:08:17.100-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "TN98b",
+          "timestamp": "2025-03-26T21:08:17.101-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "wLQUv",
+          "timestamp": "2025-03-26T21:08:28.680-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:08:28.680-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "rhvwe",
+          "timestamp": "2025-03-26T21:08:28.680-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Ilz2B",
+          "timestamp": "2025-03-26T21:08:30.215-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:08:30.215-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "B9iTj",
+          "timestamp": "2025-03-26T21:08:30.215-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "oX5u7",
+          "timestamp": "2025-03-26T21:08:55.375-04:00",
+          "type": "ResourceCreated",
+          "description": "New Record",
+          "value": "aasdfasd"
+        },
+        {
+          "_type": "Record",
+          "id": "RFJHI",
+          "timestamp": "2025-03-26T21:08:57.949-04:00",
+          "type": "ResourceCreated",
+          "description": "New Record",
+          "value": "asdas"
+        },
+        {
+          "_type": "Record",
+          "id": "D9t_i",
+          "timestamp": "2025-03-26T21:09:19.965-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-03-26T21:09:19.965-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "KIP7P",
+          "timestamp": "2025-03-26T21:09:19.965-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 0: Setup Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "xdk2S",
+          "timestamp": "2025-03-26T21:09:20.896-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:09:20.896-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "ryhoH",
+          "timestamp": "2025-03-26T21:09:20.896-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Universal Phase",
+          "value": 8.006
+        },
+        {
+          "_type": "Record",
+          "id": "Wv96J",
+          "timestamp": "2025-03-26T21:09:22.963-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-03-26T21:09:22.963-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "aVlM1",
+          "timestamp": "2025-03-26T21:09:22.963-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 0: Setup Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "TdyoT",
+          "timestamp": "2025-03-26T21:09:26.217-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:09:26.217-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "iwz44",
+          "timestamp": "2025-03-26T21:09:26.217-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "B-1Lh",
+          "timestamp": "2025-03-26T21:10:02.181-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:10:02.180-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "OSG2u",
+          "timestamp": "2025-03-26T21:10:02.181-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Universal Phase",
+          "value": 9.007
+        },
+        {
+          "_type": "Record",
+          "id": "Fo00M",
+          "timestamp": "2025-03-26T21:10:02.597-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Societal Phase",
+          "value": "2025-03-26T21:10:02.597-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "qwVuu",
+          "timestamp": "2025-03-26T21:10:02.597-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Societal Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "MeAgE",
+          "timestamp": "2025-03-26T21:10:02.792-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-03-26T21:10:02.792-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "KeSSp",
+          "timestamp": "2025-03-26T21:10:02.792-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Galactic Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "oL40j",
+          "timestamp": "2025-03-26T21:10:02.956-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-03-26T21:10:02.955-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "aRCOP",
+          "timestamp": "2025-03-26T21:10:02.956-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Individual Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "fJScf",
+          "timestamp": "2025-03-26T21:10:02.956-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "uKR9R",
+          "timestamp": "2025-03-26T21:10:02.956-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "PoZlD",
+          "timestamp": "2025-03-26T21:10:06.780-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-03-26T21:10:06.780-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "N-Oxq",
+          "timestamp": "2025-03-26T21:10:06.780-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 0: Setup Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "AZ3P7",
+          "timestamp": "2025-03-26T21:10:06.780-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "xcrUE",
+          "timestamp": "2025-03-26T21:10:06.780-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "zGS_o",
+          "timestamp": "2025-03-26T21:10:08.665-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:10:08.665-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "ArHMd",
+          "timestamp": "2025-03-26T21:10:08.666-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "xVQvi",
+          "timestamp": "2025-03-26T21:10:11.534-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:10:11.534-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "pTGFf",
+          "timestamp": "2025-03-26T21:10:11.534-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Universal Phase",
+          "value": 12.011
+        },
+        {
+          "_type": "Record",
+          "id": "KPSDc",
+          "timestamp": "2025-03-26T21:10:13.181-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Societal Phase",
+          "value": "2025-03-26T21:10:13.181-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "pnLM8",
+          "timestamp": "2025-03-26T21:10:13.181-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Societal Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "aDqmp",
+          "timestamp": "2025-03-26T21:10:13.615-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-03-26T21:10:13.615-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "hmh7y",
+          "timestamp": "2025-03-26T21:10:13.615-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Galactic Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "x32G_",
+          "timestamp": "2025-03-26T21:10:15.396-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-03-26T21:10:15.396-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "UAdCw",
+          "timestamp": "2025-03-26T21:10:15.396-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Individual Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "RNF5o",
+          "timestamp": "2025-03-26T21:10:15.397-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "EtQyc",
+          "timestamp": "2025-03-26T21:10:15.397-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "quSvH",
+          "timestamp": "2025-03-26T21:10:15.990-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:10:15.990-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "TF7-6",
+          "timestamp": "2025-03-26T21:10:15.991-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "LqxyR",
+          "timestamp": "2025-03-26T21:10:37.381-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:10:37.381-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "likbI",
+          "timestamp": "2025-03-26T21:10:37.381-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "zawPy",
+          "timestamp": "2025-03-26T21:11:13.462-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-03-26T21:11:13.462-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "yOIcO",
+          "timestamp": "2025-03-26T21:11:13.463-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 0: Setup Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Cr864",
+          "timestamp": "2025-03-26T21:11:13.464-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "t25US",
+          "timestamp": "2025-03-26T21:11:13.464-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "au_sO",
+          "timestamp": "2025-03-26T21:12:03.148-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-03-26T21:12:03.148-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "vt2Jg",
+          "timestamp": "2025-03-26T21:12:03.148-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 0: Setup Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "aPQ6s",
+          "timestamp": "2025-03-26T21:12:03.149-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "rGz0y",
+          "timestamp": "2025-03-26T21:12:03.149-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "tNDkl",
+          "timestamp": "2025-03-26T21:12:20.802-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:12:20.801-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "DyHu8",
+          "timestamp": "2025-03-26T21:12:20.802-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Universal Phase",
+          "value": 98.08700000000007
+        },
+        {
+          "_type": "Record",
+          "id": "NtZ4x",
+          "timestamp": "2025-03-26T21:12:23.149-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Societal Phase",
+          "value": "2025-03-26T21:12:23.149-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "YOiSY",
+          "timestamp": "2025-03-26T21:12:23.149-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Societal Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "gUB8m",
+          "timestamp": "2025-03-26T21:12:26.375-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-03-26T21:12:26.375-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "HkP9Y",
+          "timestamp": "2025-03-26T21:12:26.375-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Galactic Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Xt-NB",
+          "timestamp": "2025-03-26T21:12:35.298-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-03-26T21:12:35.298-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "W22Gb",
+          "timestamp": "2025-03-26T21:12:47.568-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-03-26T21:12:47.568-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "LTSdw",
+          "timestamp": "2025-03-26T21:12:47.568-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Individual Phase",
+          "value": 13.008999999999999
+        },
+        {
+          "_type": "Record",
+          "id": "C-d_q",
+          "timestamp": "2025-03-26T21:12:47.568-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "g9s-n",
+          "timestamp": "2025-03-26T21:12:47.568-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "UMmET",
+          "timestamp": "2025-03-26T21:12:55.933-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:12:55.933-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "PsMCI",
+          "timestamp": "2025-03-26T21:12:55.933-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "New Record",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "WXs2O",
+          "timestamp": "2025-03-26T21:13:39.748-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-03-26T21:13:39.748-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "lbWj4",
+          "timestamp": "2025-03-26T21:13:39.748-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 0: Setup Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "P2uO3",
+          "timestamp": "2025-03-26T21:13:39.748-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ArgMq",
+          "timestamp": "2025-03-26T21:13:39.748-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Zeno5",
+          "timestamp": "2025-03-26T21:13:44.930-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:13:44.930-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "zWNtt",
+          "timestamp": "2025-03-26T21:13:44.931-04:00",
+          "type": "CommunitiesEndangered",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "ZT3PF",
+          "timestamp": "2025-03-26T21:13:59.765-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:13:59.765-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "C0R7i",
+          "timestamp": "2025-03-26T21:13:59.765-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Universal Phase",
+          "value": 112.10200000000012
+        },
+        {
+          "_type": "Record",
+          "id": "KhIn6",
+          "timestamp": "2025-03-26T21:14:12.100-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Societal Phase",
+          "value": "2025-03-26T21:14:12.100-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "nXgHi",
+          "timestamp": "2025-03-26T21:14:12.100-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Societal Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "W1ZlT",
+          "timestamp": "2025-03-26T21:14:12.545-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-03-26T21:14:12.545-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "R6HgY",
+          "timestamp": "2025-03-26T21:14:12.545-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Galactic Phase",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "GYNhI",
+          "timestamp": "2025-03-26T21:14:13.581-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-03-26T21:14:13.581-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "ZyncJ",
+          "timestamp": "2025-03-26T21:14:13.581-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Individual Phase",
+          "value": 13.008999999999999
+        },
+        {
+          "_type": "Record",
+          "id": "hlSh2",
+          "timestamp": "2025-03-26T21:14:13.581-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "MJP8Z",
+          "timestamp": "2025-03-26T21:14:13.581-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ggb7Q",
+          "timestamp": "2025-03-26T21:14:52.706-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ov-nR",
+          "timestamp": "2025-03-26T21:14:52.706-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "yYz_x",
+          "timestamp": "2025-03-26T21:15:04.114-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:15:04.113-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "vxtMx",
+          "timestamp": "2025-03-26T21:15:04.114-04:00",
+          "type": "CommunitiesEndangered",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "UanZM",
+          "timestamp": "2025-03-26T21:15:39.963-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "HFXYq",
+          "timestamp": "2025-03-26T21:15:39.963-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "mn4_T",
+          "timestamp": "2025-03-26T21:15:45.213-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:15:45.213-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "MmcWQ",
+          "timestamp": "2025-03-26T21:15:45.214-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "[object Object]",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "XB-6n",
+          "timestamp": "2025-03-26T21:15:59.447-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:15:59.447-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "z9keX",
+          "timestamp": "2025-03-26T21:15:59.447-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Disaffected Youth",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "aiIZT",
+          "timestamp": "2025-03-26T21:16:12.579-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:16:12.579-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "Y092N",
+          "timestamp": "2025-03-26T21:16:12.579-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": 68.066
+        },
+        {
+          "_type": "Record",
+          "id": "WeCRB",
+          "timestamp": "2025-03-26T21:17:53.244-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:17:53.244-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "f5xnZ",
+          "timestamp": "2025-03-26T21:17:53.244-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Disaffected Youth",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Yw0ET",
+          "timestamp": "2025-03-26T21:17:55.091-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:17:55.091-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "xPDfS",
+          "timestamp": "2025-03-26T21:17:55.092-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": "PT0.0308M"
+        },
+        {
+          "_type": "Record",
+          "id": "X7V5k",
+          "timestamp": "2025-03-26T21:18:47.078-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:18:47.078-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "Hj9ZQ",
+          "timestamp": "2025-03-26T21:18:47.079-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Disaffected Youth",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "WTErj",
+          "timestamp": "2025-03-26T21:18:49.328-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:18:49.328-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "MBSsj",
+          "timestamp": "2025-03-26T21:18:49.329-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": 0.0375
+        },
+        {
+          "_type": "Record",
+          "id": "rA2Bm",
+          "timestamp": "2025-03-26T21:19:33.894-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:19:33.894-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "f5iFe",
+          "timestamp": "2025-03-26T21:19:33.895-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Disaffected Youth",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Sm3f6",
+          "timestamp": "2025-03-26T21:19:34.681-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:19:34.681-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "eyBWi",
+          "timestamp": "2025-03-26T21:19:34.681-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": 0.013116666666666667
+        },
+        {
+          "_type": "Record",
+          "id": "L6j_M",
+          "timestamp": "2025-03-26T21:19:42.245-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:19:42.245-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "hRGSP",
+          "timestamp": "2025-03-26T21:19:42.246-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Disaffected Youth",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "tFMxe",
+          "timestamp": "2025-03-26T21:19:44.368-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:19:44.368-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "qVtYu",
+          "timestamp": "2025-03-26T21:19:44.368-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": 0.035366666666666664
+        },
+        {
+          "_type": "Record",
+          "id": "PFhfV",
+          "timestamp": "2025-03-26T21:20:04.295-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:20:04.295-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "UeiRz",
+          "timestamp": "2025-03-26T21:20:04.295-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Disaffected Youth",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Y-Ukx",
+          "timestamp": "2025-03-26T21:20:42.326-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:20:42.326-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "kJW1y",
+          "timestamp": "2025-03-26T21:20:42.327-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": 0.6338666666666667
+        },
+        {
+          "_type": "Record",
+          "id": "pzN-0",
+          "timestamp": "2025-03-26T21:20:54.905-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "u1sd7",
+          "timestamp": "2025-03-26T21:20:54.905-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "FjVRZ",
+          "timestamp": "2025-03-26T21:20:59.392-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 3: Universal Phase",
+          "value": "2025-03-26T21:20:59.392-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "E5BLH",
+          "timestamp": "2025-03-26T21:20:59.393-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "IzMkN",
+          "timestamp": "2025-03-26T21:28:01.291-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "GFXrI",
+          "timestamp": "2025-03-26T21:28:01.291-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "RBXwY",
+          "timestamp": "2025-03-26T21:28:02.490-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:28:02.490-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "vWYNC",
+          "timestamp": "2025-03-26T21:28:02.490-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "hjjDq",
+          "timestamp": "2025-03-26T21:28:19.736-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "REcif",
+          "timestamp": "2025-03-26T21:28:19.736-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "VHP7o",
+          "timestamp": "2025-03-26T21:28:23.075-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:28:23.075-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "XifFm",
+          "timestamp": "2025-03-26T21:28:23.076-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "OqwNC",
+          "timestamp": "2025-03-26T21:28:38.940-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ObZFC",
+          "timestamp": "2025-03-26T21:28:38.940-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "n3rXz",
+          "timestamp": "2025-03-26T21:28:41.657-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:28:41.657-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "th7FN",
+          "timestamp": "2025-03-26T21:28:41.657-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "SA7bd",
+          "timestamp": "2025-03-26T21:28:52.390-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-03-26T21:28:52.389-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "DbOFK",
+          "timestamp": "2025-03-26T21:28:52.391-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Universal Phase",
+          "value": 0.17888333333333334
+        },
+        {
+          "_type": "Record",
+          "id": "PAOdf",
+          "timestamp": "2025-03-26T21:28:54.372-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "DQm3J",
+          "timestamp": "2025-03-26T21:29:44.436-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "yVrrb",
+          "timestamp": "2025-03-26T21:29:44.436-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "K0TqT",
+          "timestamp": "2025-03-26T21:29:44.436-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Tqzn7",
+          "timestamp": "2025-03-26T21:29:44.437-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "sAzco",
+          "timestamp": "2025-03-26T21:29:53.730-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "OugX0",
+          "timestamp": "2025-03-26T21:29:53.730-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "RiNQE",
+          "timestamp": "2025-03-26T21:29:53.730-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "fhymR",
+          "timestamp": "2025-03-26T21:29:53.730-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "rEzcF",
+          "timestamp": "2025-03-26T21:29:55.424-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:29:55.424-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "dNyla",
+          "timestamp": "2025-03-26T21:29:55.424-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "CYko1",
+          "timestamp": "2025-03-26T21:29:57.104-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:29:57.104-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "cOG2U",
+          "timestamp": "2025-03-26T21:29:57.105-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": 0.028016666666666665
+        },
+        {
+          "_type": "Record",
+          "id": "usnc8",
+          "timestamp": "2025-03-26T21:30:17.950-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "OpLHR",
+          "timestamp": "2025-03-26T21:30:17.950-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "uSwqf",
+          "timestamp": "2025-03-26T21:30:17.950-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "MQyKv",
+          "timestamp": "2025-03-26T21:30:17.950-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "SKS8q",
+          "timestamp": "2025-03-26T21:30:22.056-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Kwnmb",
+          "timestamp": "2025-03-26T21:30:22.056-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "sK357",
+          "timestamp": "2025-03-26T21:30:25.221-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "bofyo",
+          "timestamp": "2025-03-26T21:30:25.222-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "qjNu4",
+          "timestamp": "2025-03-26T21:30:25.222-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "WPGKX",
+          "timestamp": "2025-03-26T21:30:25.222-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "XWgjV",
+          "timestamp": "2025-03-26T21:31:02.804-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "WAhyo",
+          "timestamp": "2025-03-26T21:31:02.804-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "lbesD",
+          "timestamp": "2025-03-26T21:31:04.887-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "MWhzI",
+          "timestamp": "2025-03-26T21:31:04.887-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "raATh",
+          "timestamp": "2025-03-26T21:31:04.887-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "dNyq_",
+          "timestamp": "2025-03-26T21:31:04.887-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "p8K_P",
+          "timestamp": "2025-03-26T21:31:06.605-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:31:06.605-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "ec_br",
+          "timestamp": "2025-03-26T21:31:06.606-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "UaeD8",
+          "timestamp": "2025-03-26T21:31:11.387-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:31:11.387-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "DKPxx",
+          "timestamp": "2025-03-26T21:31:11.388-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": 0.0797
+        },
+        {
+          "_type": "Record",
+          "id": "GqjMS",
+          "timestamp": "2025-03-26T21:31:15.621-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "LvZ1e",
+          "timestamp": "2025-03-26T21:31:15.621-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "TffId",
+          "timestamp": "2025-03-26T21:31:15.621-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "FNSHs",
+          "timestamp": "2025-03-26T21:31:15.621-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "wKCjd",
+          "timestamp": "2025-03-26T21:31:17.674-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:31:17.674-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "I8EvB",
+          "timestamp": "2025-03-26T21:31:17.674-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "qBb7C",
+          "timestamp": "2025-03-26T21:31:52.459-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "HkUFp",
+          "timestamp": "2025-03-26T21:31:52.459-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "GA1Fk",
+          "timestamp": "2025-03-26T21:31:57.584-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 3: Universal Phase",
+          "value": "2025-03-26T21:31:57.584-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "sP6hd",
+          "timestamp": "2025-03-26T21:31:57.584-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Cm4ku",
+          "timestamp": "2025-03-26T21:32:05.737-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Pl4gX",
+          "timestamp": "2025-03-26T21:32:05.738-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Hpd-p",
+          "timestamp": "2025-03-26T21:32:07.686-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "OD9vs",
+          "timestamp": "2025-03-26T21:32:07.687-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "rbM3G",
+          "timestamp": "2025-03-26T21:32:07.687-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Sn7Iu",
+          "timestamp": "2025-03-26T21:32:07.687-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "qqSQ-",
+          "timestamp": "2025-03-26T21:32:12.787-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:32:12.786-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "Aq8fc",
+          "timestamp": "2025-03-26T21:32:12.787-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "g6FCj",
+          "timestamp": "2025-03-26T21:32:14.805-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:32:14.805-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "PnpZQ",
+          "timestamp": "2025-03-26T21:32:14.805-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": 0.03365
+        },
+        {
+          "_type": "Record",
+          "id": "Okoe0",
+          "timestamp": "2025-03-26T21:32:15.904-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "VIeHH",
+          "timestamp": "2025-03-26T21:32:15.904-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "guXyW",
+          "timestamp": "2025-03-26T21:32:16.450-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 3: Universal Phase",
+          "value": "2025-03-26T21:32:16.450-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "SxZkX",
+          "timestamp": "2025-03-26T21:32:16.451-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 3: Universal Phase",
+          "value": 0.31443333333333334
+        },
+        {
+          "_type": "Record",
+          "id": "Fcu6J",
+          "timestamp": "2025-03-26T21:32:18.739-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 3: Universal Phase",
+          "value": "2025-03-26T21:32:18.739-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "aP5fk",
+          "timestamp": "2025-03-26T21:32:18.739-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "Venerable Elders",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "hhtLc",
+          "timestamp": "2025-03-26T21:33:08.471-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 3: Universal Phase",
+          "value": "2025-03-26T21:33:08.471-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "cK1CR",
+          "timestamp": "2025-03-26T21:33:08.471-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "az0Pu",
+          "timestamp": "2025-03-26T21:33:19.438-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "d-u5u",
+          "timestamp": "2025-03-26T21:33:19.438-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "jqk8N",
+          "timestamp": "2025-03-26T21:36:16.115-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "SwAJq",
+          "timestamp": "2025-03-26T21:36:16.115-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "lMIMe",
+          "timestamp": "2025-03-26T21:36:16.115-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Roz73",
+          "timestamp": "2025-03-26T21:36:16.115-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "tTTEJ",
+          "timestamp": "2025-03-26T21:36:19.852-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "JM5TC",
+          "timestamp": "2025-03-26T21:36:19.852-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "ddfmp",
+          "timestamp": "2025-03-26T21:36:19.852-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "hiCtN",
+          "timestamp": "2025-03-26T21:36:19.852-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Ja6kA",
+          "timestamp": "2025-03-26T21:36:20.867-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:36:20.867-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "MVjOq",
+          "timestamp": "2025-03-26T21:36:20.868-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "V5-2W",
+          "timestamp": "2025-03-26T21:36:25.484-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "pWnyT",
+          "timestamp": "2025-03-26T21:36:25.484-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge,Amazing Suspenders to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "ZIvSE",
+          "timestamp": "2025-03-26T21:36:25.484-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "iAS0Z",
+          "timestamp": "2025-03-26T21:36:25.484-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "MltM2",
+          "timestamp": "2025-03-26T21:36:25.725-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-03-26T21:36:25.725-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "ftmSJ",
+          "timestamp": "2025-03-26T21:36:25.726-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 2: Universal Phase",
+          "value": 0.08098333333333334
+        },
+        {
+          "_type": "Record",
+          "id": "eMwjC",
+          "timestamp": "2025-03-26T21:36:27.890-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "HPPGc",
+          "timestamp": "2025-03-26T21:36:27.890-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "CILFB",
+          "timestamp": "2025-03-26T21:36:31.620-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 3: Universal Phase",
+          "value": "2025-03-26T21:36:31.620-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "OtAWi",
+          "timestamp": "2025-03-26T21:36:31.620-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "psfob",
+          "timestamp": "2025-03-26T21:38:05.953-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 3: Universal Phase",
+          "value": "2025-03-26T21:38:05.952-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "kF7Uv",
+          "timestamp": "2025-03-26T21:38:05.953-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 3: Universal Phase",
+          "value": 1.5722166666666666
+        },
+        {
+          "_type": "Record",
+          "id": "fSbf0",
+          "timestamp": "2025-03-26T21:38:09.036-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "TeT0U",
+          "timestamp": "2025-03-26T21:38:09.036-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Amazing Suspenders to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "vzmyh",
+          "timestamp": "2025-03-26T21:38:09.036-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "KumAa",
+          "timestamp": "2025-03-26T21:38:10.532-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 4: Universal Phase",
+          "value": "2025-03-26T21:38:10.532-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "OME0t",
+          "timestamp": "2025-03-26T21:38:10.533-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "iN1CN",
+          "timestamp": "2025-03-26T21:39:21.584-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 4: Universal Phase",
+          "value": "2025-03-26T21:39:21.584-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "wfFbM",
+          "timestamp": "2025-03-26T21:39:21.585-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "KnraA",
+          "timestamp": "2025-03-26T21:39:54.266-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 4: Universal Phase",
+          "value": "2025-03-26T21:39:54.265-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "Ct4wp",
+          "timestamp": "2025-03-26T21:39:54.266-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "yn2cH",
+          "timestamp": "2025-03-26T21:48:59.813-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 4: Universal Phase",
+          "value": "2025-03-26T21:48:59.813-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "llPbv",
+          "timestamp": "2025-03-26T21:48:59.813-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "u44M2",
+          "timestamp": "2025-03-26T21:50:12.802-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 4: Universal Phase",
+          "value": "2025-03-26T21:50:12.802-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "JPSWa",
+          "timestamp": "2025-03-26T21:50:12.803-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "G8BFU",
+          "timestamp": "2025-03-27T11:28:55.911-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "OY5J4",
+          "timestamp": "2025-03-27T11:28:55.911-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "gR1Se",
+          "timestamp": "2025-03-27T11:29:11.521-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "xdJ7h",
+          "timestamp": "2025-03-27T11:29:11.522-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "sklX2",
+          "timestamp": "2025-03-27T11:29:13.672-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "cnUHB",
+          "timestamp": "2025-03-27T11:29:13.672-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "O_-hA",
+          "timestamp": "2025-03-27T11:29:13.672-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "zjkNM",
+          "timestamp": "2025-03-27T11:29:17.322-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "YFx7b",
+          "timestamp": "2025-03-27T11:29:17.323-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "DSDhb",
+          "timestamp": "2025-04-07T15:29:59.872-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-04-07T15:29:59.872-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "LUspu",
+          "timestamp": "2025-04-07T15:29:59.872-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "sheeS",
+          "timestamp": "2025-04-07T15:37:18.134-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-04-07T15:37:18.134-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "L5acp",
+          "timestamp": "2025-04-07T15:37:18.134-04:00",
+          "type": "CommunitiesEndangered",
+          "description": "",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "i9K3D",
+          "timestamp": "2025-04-07T15:40:32.904-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Societal Phase",
+          "value": "2025-04-07T15:40:32.903-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "zmdCv",
+          "timestamp": "2025-04-07T16:35:16.423-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "suwQL",
+          "timestamp": "2025-04-07T16:35:16.424-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "dsjLj",
+          "timestamp": "2025-04-07T17:02:53.998-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-04-07T17:02:53.998-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "Ji3mL",
+          "timestamp": "2025-04-07T17:06:14.154-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-04-07T17:06:14.154-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "yrPjJ",
+          "timestamp": "2025-04-07T17:06:16.680-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-04-07T17:06:16.680-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "opW8v",
+          "timestamp": "2025-04-07T17:10:29.079-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-04-07T17:10:29.079-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "HarzG",
+          "timestamp": "2025-04-07T17:11:00.713-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-04-07T17:11:00.713-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "CQobJ",
+          "timestamp": "2025-04-07T17:11:12.109-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-04-07T17:11:12.109-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "c0XQB",
+          "timestamp": "2025-04-07T17:11:19.181-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 1: Galactic Phase",
+          "value": "2025-04-07T17:11:19.181-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "t0UXq",
+          "timestamp": "2025-04-07T17:11:19.181-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 1: Galactic Phase",
+          "value": 0.11785
+        },
+        {
+          "_type": "Record",
+          "id": "iiBY7",
+          "timestamp": "2025-04-07T17:11:22.532-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-04-07T17:11:22.532-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "MXBSs",
+          "timestamp": "2025-04-07T17:11:47.121-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-04-07T17:11:47.121-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "eHEUv",
+          "timestamp": "2025-04-07T17:12:53.927-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-04-07T17:12:53.927-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "QAWjU",
+          "timestamp": "2025-04-07T17:14:03.604-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-04-07T17:14:03.604-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "f-ap_",
+          "timestamp": "2025-04-07T17:15:28.340-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-04-07T17:15:28.340-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "fFZG9",
+          "timestamp": "2025-04-07T17:15:35.335-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Individual Phase",
+          "value": "2025-04-07T17:15:35.334-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "ZBlaK",
+          "timestamp": "2025-04-07T17:15:40.280-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "pmalt",
+          "timestamp": "2025-04-07T17:15:40.280-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "INxjp",
+          "timestamp": "2025-04-07T17:15:40.280-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "n1aTg",
+          "timestamp": "2025-04-07T17:15:45.951-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "PPQMX",
+          "timestamp": "2025-04-07T17:15:45.952-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "upf9e",
+          "timestamp": "2025-04-07T17:16:15.548-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Hku1m",
+          "timestamp": "2025-04-07T17:16:15.549-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "oo-fX",
+          "timestamp": "2025-04-07T17:16:15.549-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ieITF",
+          "timestamp": "2025-04-07T17:45:13.247-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "PUlOz",
+          "timestamp": "2025-04-07T17:45:13.247-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Green Sludge to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "DDC8v",
+          "timestamp": "2025-04-07T17:45:13.247-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "V973N",
+          "timestamp": "2025-04-07T17:45:20.584-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-07T17:45:20.584-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "wjHr6",
+          "timestamp": "2025-04-07T17:45:51.184-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-07T17:45:51.184-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "W3dQf",
+          "timestamp": "2025-04-07T17:45:55.558-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "q0KnT",
+          "timestamp": "2025-04-07T17:45:55.559-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "x114u",
+          "timestamp": "2025-04-07T17:45:57.145-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 3: Universal Phase",
+          "value": "2025-04-07T17:45:57.144-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "NYLTd",
+          "timestamp": "2025-04-07T17:45:58.541-04:00",
+          "type": "PhaseEnded",
+          "description": "Round 3: Universal Phase",
+          "value": "2025-04-07T17:45:58.541-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "dYPGB",
+          "timestamp": "2025-04-07T17:45:58.542-04:00",
+          "type": "PhaseDuration",
+          "description": "Round 3: Universal Phase",
+          "value": 0.023283333333333333
+        },
+        {
+          "_type": "Record",
+          "id": "yODDk",
+          "timestamp": "2025-04-07T17:46:08.053-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-04-07T17:46:08.053-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "KzTyQ",
+          "timestamp": "2025-04-09T09:30:37.174-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-04-09T09:30:37.174-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "i3l36",
+          "timestamp": "2025-04-09T09:32:20.916-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "f8woW",
+          "timestamp": "2025-04-09T09:32:20.916-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "I7ND4",
+          "timestamp": "2025-04-09T09:32:20.916-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "myQki",
+          "timestamp": "2025-04-09T09:32:28.948-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-04-09T09:32:28.948-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "Y5k25",
+          "timestamp": "2025-04-09T09:32:42.684-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "lzj-b",
+          "timestamp": "2025-04-09T09:32:42.684-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "K_CNx",
+          "timestamp": "2025-04-09T09:36:19.399-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "CkGh6",
+          "timestamp": "2025-04-09T09:36:19.399-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "vmKPE",
+          "timestamp": "2025-04-09T09:36:21.645-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "aCn5Q",
+          "timestamp": "2025-04-09T09:36:21.645-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "l5ck7",
+          "timestamp": "2025-04-09T09:56:26.105-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ktPWf",
+          "timestamp": "2025-04-09T09:56:26.105-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "mtVrN",
+          "timestamp": "2025-04-09T09:56:28.362-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "brF1l",
+          "timestamp": "2025-04-09T09:56:28.362-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "rgCWC",
+          "timestamp": "2025-04-09T09:59:38.721-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-04-09T09:59:38.721-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "ljKi3",
+          "timestamp": "2025-04-09T09:59:46.060-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-04-09T09:59:46.060-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "QgFMU",
+          "timestamp": "2025-04-09T09:59:51.415-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "lW2Rr",
+          "timestamp": "2025-04-09T09:59:51.415-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Cn3Nt",
+          "timestamp": "2025-04-09T10:00:00.602-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "FPVws",
+          "timestamp": "2025-04-09T10:00:00.602-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "f1wJU",
+          "timestamp": "2025-04-09T10:00:02.722-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "gp2In",
+          "timestamp": "2025-04-09T10:00:02.723-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "ShA9c",
+          "timestamp": "2025-04-09T10:00:02.723-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "sp1vR",
+          "timestamp": "2025-04-09T10:00:08.580-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Individual Phase",
+          "value": "2025-04-09T10:00:08.580-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "bK2sX",
+          "timestamp": "2025-04-09T10:00:32.285-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "QZLh6",
+          "timestamp": "2025-04-09T10:00:32.285-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "i0mRT",
+          "timestamp": "2025-04-09T10:01:31.658-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "aSMR5",
+          "timestamp": "2025-04-09T10:01:31.658-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Y0oAn",
+          "timestamp": "2025-04-09T10:01:36.511-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-04-09T10:01:36.510-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "sXiaX",
+          "timestamp": "2025-04-09T10:01:55.799-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "yWn7c",
+          "timestamp": "2025-04-09T10:01:55.799-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "iTUv8",
+          "timestamp": "2025-04-09T10:02:02.235-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "pwBCH",
+          "timestamp": "2025-04-09T10:02:02.235-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "vNlBJ",
+          "timestamp": "2025-04-09T17:16:12.766-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "WSi9-",
+          "timestamp": "2025-04-09T17:16:12.766-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ILq7D",
+          "timestamp": "2025-04-09T17:16:14.280-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "QcTvF",
+          "timestamp": "2025-04-09T17:16:14.280-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "hge4X",
+          "timestamp": "2025-04-09T17:20:23.134-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-04-09T17:20:23.134-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "IRjdc",
+          "timestamp": "2025-04-09T17:20:36.901-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "nUjMB",
+          "timestamp": "2025-04-09T17:20:36.901-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "eCIRJ",
+          "timestamp": "2025-04-09T17:24:42.904-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "HF0Jw",
+          "timestamp": "2025-04-09T17:24:42.905-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Ut04E",
+          "timestamp": "2025-04-09T17:24:45.249-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "U_rVk",
+          "timestamp": "2025-04-09T17:24:45.250-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "AaqY6",
+          "timestamp": "2025-04-09T17:29:15.087-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-04-09T17:29:15.087-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "zR5NL",
+          "timestamp": "2025-04-09T17:29:21.334-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-04-09T17:29:21.334-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "VVQLM",
+          "timestamp": "2025-04-09T17:29:30.919-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-04-09T17:29:30.919-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "lzl0c",
+          "timestamp": "2025-04-09T17:31:07.491-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-09T17:31:07.491-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "wANfc",
+          "timestamp": "2025-04-09T17:32:33.548-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-09T17:32:33.548-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "I4iFc",
+          "timestamp": "2025-04-09T17:33:06.004-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-09T17:33:06.004-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "lSqI5",
+          "timestamp": "2025-04-09T17:54:15.336-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-09T17:54:15.336-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "Nz9o8",
+          "timestamp": "2025-04-09T17:54:21.855-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-09T17:54:21.855-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "T3_dk",
+          "timestamp": "2025-04-09T17:54:54.778-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-09T17:54:54.778-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "u_6xj",
+          "timestamp": "2025-04-09T17:55:24.897-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-09T17:55:24.896-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "KWpDS",
+          "timestamp": "2025-04-09T17:55:42.248-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-04-09T17:55:42.248-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "ccvbr",
+          "timestamp": "2025-04-09T19:00:33.682-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "uyf1D",
+          "timestamp": "2025-04-09T19:00:33.682-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "QdiOs",
+          "timestamp": "2025-04-09T19:00:34.724-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "sJqHY",
+          "timestamp": "2025-04-09T19:00:34.725-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Ui-cQ",
+          "timestamp": "2025-04-09T19:00:51.896-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "GL48W",
+          "timestamp": "2025-04-09T19:00:51.896-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "oE-WO",
+          "timestamp": "2025-04-09T19:01:20.540-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "CdA2F",
+          "timestamp": "2025-04-09T19:01:20.541-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Q3pq-",
+          "timestamp": "2025-04-09T19:01:29.447-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "tIjCn",
+          "timestamp": "2025-04-09T19:01:29.448-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "DLrQ1",
+          "timestamp": "2025-04-09T19:04:21.013-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "XdsbM",
+          "timestamp": "2025-04-09T19:04:21.014-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "B-Z6N",
+          "timestamp": "2025-04-09T19:04:45.728-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "heyHm",
+          "timestamp": "2025-04-09T19:04:45.728-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "DMGBx",
+          "timestamp": "2025-04-10T09:28:30.836-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "KqsSg",
+          "timestamp": "2025-04-10T09:28:30.836-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "k9vz_",
+          "timestamp": "2025-04-10T09:28:32.627-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ftynZ",
+          "timestamp": "2025-04-10T09:28:32.627-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "gTqW_",
+          "timestamp": "2025-04-10T09:28:44.599-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Bpc5G",
+          "timestamp": "2025-04-10T09:28:44.599-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Zkpwz",
+          "timestamp": "2025-04-10T09:28:50.291-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "lKIaE",
+          "timestamp": "2025-04-10T09:28:50.292-04:00",
+          "type": "ActionResources",
+          "description": "Ten Thousand Islands used Big Rock to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "bY89v",
+          "timestamp": "2025-04-10T09:28:50.292-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "J5NK0",
+          "timestamp": "2025-04-10T09:28:52.683-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "R5Aip",
+          "timestamp": "2025-04-10T09:28:52.683-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "QvvS0",
+          "timestamp": "2025-04-10T10:00:06.826-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "ww5d7",
+          "timestamp": "2025-04-10T10:00:06.826-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "jj3qq",
+          "timestamp": "2025-04-10T10:14:51.881-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Ten Thousand Islands",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Msts4",
+          "timestamp": "2025-04-10T10:14:51.882-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Nargle",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "KXUCL",
+          "timestamp": "2025-04-10T15:21:39.736-04:00",
+          "type": "PhaseStarted",
+          "description": "Round 2: Universal Phase",
+          "value": "2025-04-10T15:21:39.736-04:00"
         }
-      ],
-      "tags": {
-        "_type": "Tags",
-        "value": [
-          "active"
-        ]
-      }
-    }
-  ],
-  "index": {
-    "communities": {
-      "iYi1c0yR": [
-        "VQHwRDYn",
-        "nce-aLZE",
-        "dGJKx-lm",
-        "kxAULBra"
-      ],
-      "LzOr_rGf": [],
-      "IQLG8PYV": [],
-      "vNIavdFu": []
-    },
-    "phases": {
-      "iYi1c0yR": [
-        "ljzH4NaL",
-        "JPjOTp4b",
-        "Z3fk8Ysa",
-        "vLR6bekr",
-        "lvAEYblH",
-        "rLy5e4VJ",
-        "aVQwY9yM",
-        "hQX2E74m",
-        "ScrgPUve",
-        "zV0hS_Tl",
-        "UHcG9ynC",
-        "DnJZU8LB",
-        "juW4yWnu",
-        "LN3rnkYl",
-        "RpgoF1vO",
-        "y18sGMS5",
-        "gYr07GK6",
-        "PqvXBNsI"
-      ],
-      "LzOr_rGf": [],
-      "IQLG8PYV": [],
-      "vNIavdFu": []
-    },
-    "players": {
-      "iYi1c0yR": [
-        "s-tdMsuP"
-      ],
-      "LzOr_rGf": [],
-      "IQLG8PYV": [],
-      "vNIavdFu": []
-    },
-    "resources": {
-      "iYi1c0yR": [
-        "AfdgeFeg",
-        "i-hZuEkL",
-        "U_LCB8aG",
-        "GMZnwOAC",
-        "Jc05Te6W",
-        "HyqihBK9",
-        "M-yD8iMV",
-        "EpIrqIe8",
-        "iUm9S7rK",
-        "uIPwuZNo",
-        "iHw6VQER",
-        "jE62nIO5"
-      ],
-      "LzOr_rGf": [],
-      "IQLG8PYV": [],
-      "vNIavdFu": []
-    },
-    "societies": {
-      "iYi1c0yR": [
-        "S8GfypoA",
-        "qK9CQui6",
-        "FkMicAOv",
-        "aa9kXNsB"
-      ],
-      "LzOr_rGf": [
-        "yDVYv18n"
-      ],
-      "IQLG8PYV": [],
-      "vNIavdFu": []
-    },
-    "actions": {
-      "iYi1c0yR": [
-        "KQRX23oI",
-        "yNdIvJvK",
-        "w6G9bwmH",
-        "PoY2bMiF",
-        "GS9yU9g8",
-        "D6WsOFSB"
       ]
     }
-  }
+  ]
 }
