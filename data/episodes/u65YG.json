@@ -293,7 +293,7 @@
       "timeElapsed": 1207.3789999999844,
       "actualTime": {
         "s": "2025-04-07T15:40:32.903-04:00",
-        "e": "2025-04-10T10:14:50.838-04:00",
+        "e": "2025-04-12T00:12:49.377-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -312,7 +312,7 @@
       "timeElapsed": 241.19400000000056,
       "actualTime": {
         "s": "2025-04-07T17:11:12.109-04:00",
-        "e": "2025-04-10T10:14:51.616-04:00",
+        "e": "2025-04-12T00:12:49.530-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -331,7 +331,7 @@
       "timeElapsed": 140.11900000000009,
       "actualTime": {
         "s": "2025-04-07T17:15:35.334-04:00",
-        "e": "2025-04-10T10:14:51.881-04:00",
+        "e": "2025-04-12T00:12:49.735-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -347,10 +347,10 @@
       "status": "paused",
       "round": 2,
       "duration": 240,
-      "timeElapsed": 148.1350000000002,
+      "timeElapsed": 157.14200000000022,
       "actualTime": {
-        "s": "2025-04-10T15:21:39.736-04:00",
-        "e": "2025-04-10T15:25:39.736-04:00",
+        "s": "2025-04-12T00:12:51.643-04:00",
+        "e": "2025-04-12T00:16:51.643-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -3689,6 +3689,30 @@
       "type": "PhaseStarted",
       "description": "Round 2: Universal Phase",
       "value": "2025-04-10T15:21:39.736-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "eHlkQ",
+      "timestamp": "2025-04-12T04:12:49.736Z",
+      "type": "SocietyActionsTaken",
+      "description": "Ten Thousand Islands",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "I3g5x",
+      "timestamp": "2025-04-12T04:12:49.736Z",
+      "type": "SocietyActionsTaken",
+      "description": "Nargle",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "h-y_Z",
+      "timestamp": "2025-04-12T04:12:51.644Z",
+      "type": "PhaseStarted",
+      "description": "Round 2: Universal Phase",
+      "value": "2025-04-12T04:12:51.643Z"
     }
   ]
 }
