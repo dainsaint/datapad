@@ -47,7 +47,6 @@ export default class Society extends Model {
     })))
   }
 
-
   get communities() {
     return this.episode.communities.filter( community => community.societyId == this.id );
   }

@@ -1,5 +1,8 @@
+import { secondsToTime } from "#core/utils";
 import Ledger from "#database/ledger";
+import { ActionTags } from "#models/action";
 import Episode from "#models/episode";
+import { ResourceTag } from "#models/resource";
 import express from "express";
 
 
@@ -9,6 +12,50 @@ jsonRouter.use((req, res, next) => {
   res.type("json");
   next();
 })
+
+
+jsonRouter.get("/episodes/active", (req, res) => {
+  let episode = Ledger.getActiveEpisode();
+
+  const formatResource = ({name, tags}) => ({
+    name,
+    vital: tags.has( ResourceTag.VITAL ),
+    exhausted: tags.has( ResourceTag.EXHAUSTED )
+  })
+
+  const result = {
+    currentPhase: {
+      type: episode.currentPhase.type,
+      status: episode.currentPhase.status,
+      round: episode.currentPhase.round,
+      time: {
+        elapsed: episode.currentPhase.timeElapsed,
+        duration: episode.currentPhase.duration,
+        remaining: episode.currentPhase.timeRemaining,
+        remainingFormatted: secondsToTime(episode.currentPhase.timeRemaining)
+      }
+    },
+    societies: episode.societies.map( society => ({
+      name: society.name,
+      communities: society.communities.map( ({ id: communityId, name, voice }) => ({
+        name, 
+        voice,
+        resources: episode.resources.filter( resource => resource.communityId == communityId ).map( formatResource ) 
+      })),
+      actions: episode.getCurrentActionsForSocietyId( society.id ).map( ({round, text, resourceIds, tags}) => ({
+        round,
+        text,
+        voted: tags.has( ActionTags.COMMITTED ),
+        resources: resourceIds.map( id => episode.getResourceById(id) ).map( formatResource ) 
+      })),
+    }))
+  }
+
+  res.send( result );
+
+});
+
+
 
 jsonRouter.get("/games", (req, res) => {
   res.send(Ledger.games);
