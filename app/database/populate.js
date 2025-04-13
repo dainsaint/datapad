@@ -15,78 +15,15 @@ export function populateDummyData() {
   });
 
   episode.addPhase(new Phase({ type: PhaseType.SETUP,       round: 0, duration: 1200 }))
-  episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: 1, duration: 240 }))
-  episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: 1, duration: 600 }))
-  episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: 1, duration: 600 }))
-  episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,   round: 1, duration: 495 }))
-  episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: 2, duration: 240 }))
-  episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: 2, duration: 600 }))
-  episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: 2, duration: 600 }))
-  episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,   round: 2, duration: 495 }))
-  episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: 3, duration: 240 }))
-  episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: 3, duration: 600 }))
-  episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: 3, duration: 600 }))
-  episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,   round: 3, duration: 495 }))
-  episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: 4, duration: 240 }))
-  episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: 4, duration: 600 }))
-  episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: 4, duration: 600 }))
-  episode.addPhase(new Phase({ type: PhaseType.GENERATIONAL, round: 4, duration: 495 }))
-  episode.addPhase(new Phase({ type: PhaseType.CONCLUSION,   round: 4, duration: 495 }))
 
-
-
-  const player = new Player({
-    name: "Ving Rhames",
-  });
-
-  const society = new Society({
-    name: "Ten Thousand Islands",
-    archetype: SocietyArchetype.CURIOUS,
-    planet: "Jorun",
-  });
-
-  const community = new Community({
-    name: "Venerable Elders",
-    voice: CommunityVoice.LEADER,
-  });
-
-  const community2 = new Community({
-    name: "Disaffected Youth",
-    voice: CommunityVoice.PEOPLE,
-  });
-
-
-  const resource1 = new Resource({ name: "Green Sludge" });
-  const resource2 = new Resource({ name: "Amazing Suspenders" });
-  const resource3 = new Resource({ name: "Big Rock" });
-
-  resource1.communityId = community.id;
-  resource2.communityId = community.id;
-  resource3.communityId = community.id;
-
-  community.societyId = society.id;
-  community2.societyId = society.id;
-
-  episode.addPlayer(player);
-  episode.addSociety(society);
-  episode.addCommunity(community);
-  episode.addCommunity(community2);
-  episode.addResource(resource1);
-  episode.addResource(resource2);
-  episode.addResource(resource3);
-
+  for( var i = 1; i <= 8; i++) {
+    episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: i, duration: 240 }))
+    episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: i, duration: 10 * 60 }))
+    episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: i, duration: 3 * 4 * 60 }))
+    episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,   round: i, duration: 10 * 60 }))
+  }
+  
+  episode.addPhase(new Phase({ type: PhaseType.CONCLUSION,   round: 9, duration: 495 }))
+  episode.makeActive();
   episode.save();
 }
-
-
-
-  // episode.makeActive();
-
-  // const game = new Game({
-  //   name: "John's House — Feb-Mar 2025",
-  // });
-
-  // episode.game = game;
-
-//   episode.save();
-// 
