@@ -24,20 +24,57 @@
           "active"
         ]
       },
-      "actions": [],
+      "actions": [
+        {
+          "_type": "Action",
+          "id": "z-4pk",
+          "societyId": "et0k8",
+          "resourceIds": [],
+          "round": 1,
+          "text": "asdfsdaf",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "H-zNh",
+          "societyId": "V9xbw",
+          "resourceIds": [],
+          "round": 1,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "g3qJ2",
+          "societyId": "VMu4n",
+          "resourceIds": [],
+          "round": 1,
+          "text": "",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
       "communities": [],
       "phases": [
         {
           "_type": "Phase",
           "id": "i2KRr",
           "type": "Setup Phase",
-          "status": "idle",
+          "status": "complete",
           "round": 0,
           "duration": 1200,
-          "timeElapsed": 0,
+          "timeElapsed": 3.0029999999999997,
           "actualTime": {
-            "s": "2025-04-13T12:11:20.108-04:00",
-            "e": "2025-04-13T12:11:20.108-04:00",
+            "s": "2025-04-16T18:12:27.348-04:00",
+            "e": "2025-04-16T18:12:30.475-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -53,10 +90,10 @@
           "status": "idle",
           "round": 1,
           "duration": 240,
-          "timeElapsed": 0,
+          "timeElapsed": 19.014999999999997,
           "actualTime": {
-            "s": "2025-04-13T12:11:20.108-04:00",
-            "e": "2025-04-13T12:11:20.108-04:00",
+            "s": "2025-04-16T18:12:31.858-04:00",
+            "e": "2025-04-16T18:12:50.298-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -69,13 +106,13 @@
           "_type": "Phase",
           "id": "R9ps1",
           "type": "Societal Phase",
-          "status": "idle",
+          "status": "playing",
           "round": 1,
           "duration": 600,
-          "timeElapsed": 0,
+          "timeElapsed": 1712.1459999999984,
           "actualTime": {
-            "s": "2025-04-13T12:11:20.108-04:00",
-            "e": "2025-04-13T12:11:20.108-04:00",
+            "s": "2025-04-16T18:14:26.371-04:00",
+            "e": "2025-04-16T18:24:26.371-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -708,7 +745,96 @@
           }
         }
       ],
-      "records": []
+      "records": [
+        {
+          "_type": "Record",
+          "id": "yxo_p",
+          "timestamp": "2025-04-16T22:12:27.348Z",
+          "type": "PhaseStarted",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-04-16T22:12:27.348Z"
+        },
+        {
+          "_type": "Record",
+          "id": "hi0Ny",
+          "timestamp": "2025-04-16T22:12:30.475Z",
+          "type": "PhaseEnded",
+          "description": "Round 0: Setup Phase",
+          "value": "2025-04-16T22:12:30.475Z"
+        },
+        {
+          "_type": "Record",
+          "id": "NKic2",
+          "timestamp": "2025-04-16T22:12:30.475Z",
+          "type": "PhaseDuration",
+          "description": "Round 0: Setup Phase",
+          "value": 0.052116666666666665
+        },
+        {
+          "_type": "Record",
+          "id": "h9t6T",
+          "timestamp": "2025-04-16T22:12:30.475Z",
+          "type": "SocietyActionsTaken",
+          "description": "First Society",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "A5XPR",
+          "timestamp": "2025-04-16T22:12:30.475Z",
+          "type": "SocietyActionsTaken",
+          "description": "Second Society",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "CQU3S",
+          "timestamp": "2025-04-16T22:12:30.475Z",
+          "type": "SocietyActionsTaken",
+          "description": "Third Society",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "lH-YA",
+          "timestamp": "2025-04-16T22:12:31.858Z",
+          "type": "PhaseStarted",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-04-16T22:12:31.858Z"
+        },
+        {
+          "_type": "Record",
+          "id": "BMmxG",
+          "timestamp": "2025-04-16T22:12:50.298Z",
+          "type": "PhaseEnded",
+          "description": "Round 1: Universal Phase",
+          "value": "2025-04-16T22:12:50.298Z"
+        },
+        {
+          "_type": "Record",
+          "id": "j18Cc",
+          "timestamp": "2025-04-16T22:12:50.298Z",
+          "type": "PhaseDuration",
+          "description": "Round 1: Universal Phase",
+          "value": 0.30733333333333335
+        },
+        {
+          "_type": "Record",
+          "id": "j3tYz",
+          "timestamp": "2025-04-16T22:12:53.129Z",
+          "type": "PhaseStarted",
+          "description": "Round 1: Societal Phase",
+          "value": "2025-04-16T22:12:53.129Z"
+        },
+        {
+          "_type": "Record",
+          "id": "YVjR3",
+          "timestamp": "2025-04-16T22:14:26.371Z",
+          "type": "PhaseStarted",
+          "description": "Round 1: Societal Phase",
+          "value": "2025-04-16T22:14:26.371Z"
+        }
+      ]
     }
   ]
 }
