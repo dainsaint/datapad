@@ -17,8 +17,9 @@ jsonRouter.use((req, res, next) => {
 jsonRouter.get("/episodes/active", (req, res) => {
   let episode = Ledger.getActiveEpisode();
 
-  const formatResource = ({name, tags}) => ({
+  const formatResource = ({name,id, tags}) => ({
     name,
+    id,
     vital: tags.has( ResourceTag.VITAL ),
     exhausted: tags.has( ResourceTag.EXHAUSTED )
   })
@@ -37,9 +38,11 @@ jsonRouter.get("/episodes/active", (req, res) => {
     },
     societies: episode.societies.map( society => ({
       name: society.name,
+      id: society.id,
       communities: society.communities.map( ({ id: communityId, name, voice }) => ({
         name, 
         voice,
+        id: communityId,
         resources: episode.resources.filter( resource => resource.communityId == communityId ).map( formatResource ) 
       })),
       actions: episode.getCurrentActionsForSocietyId( society.id ).map( ({round, text, resourceIds, tags}) => ({
