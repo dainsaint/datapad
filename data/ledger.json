@@ -128,7 +128,7 @@
           "status": "complete",
           "round": 0,
           "duration": 1200,
-          "timeElapsed": 0,
+          "timeElapsed": 3.0029999999999997,
           "actualTime": {
             "s": "2025-05-09T12:12:31.496-04:00",
             "e": "2025-05-09T12:22:24.632-04:00",
@@ -166,7 +166,7 @@
           "status": "complete",
           "round": 1,
           "duration": 600,
-          "timeElapsed": 0,
+          "timeElapsed": 1712.1459999999984,
           "actualTime": {
             "s": "2025-05-09T12:12:31.496-04:00",
             "e": "2025-05-09T13:48:53.445-04:00",
