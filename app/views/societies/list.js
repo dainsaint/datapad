@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import SocietyCard from "#views/societies/card";
+
 import Icon from "#views/ui/icon";
 
 
@@ -21,9 +21,8 @@ export default function SocietyList({ episode }) {
           <div class="grid-two gap-tight">
             ${ actions[society.id].map( action => html`
               <div class="society-card__action card stack-tight" data-tags="${ action.tags.toList() }">
-                <p class="text">&ldquo;${ action.text.trim() || "..." }&rdquo;</p>
-                <div class="society-card__resources">
-                  ${ action.resources.map( x => html`<span class="society-card__resource">${x.name}</span>` ).join(" ") }
+                <div class="society-card__resources stack">
+                  ${ action.resources.map( (x, i) => html`<div>We use <span class="society-card__resource">${x.name}</span> to <strong>${ action.texts[i] }.</strong></div>` ).join("") }
                 </div>
               </div>
             `) }

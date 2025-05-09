@@ -41,6 +41,10 @@ export default class Episode extends Model {
     return (id) => this[key].find( element => element.id === id );
   }
 
+  #deleteById(key) {
+    return (id) => this[key].splice( this[key].findIndex( element => element.id === id ), 1 );
+  }
+
   addAction = this.#addTo("actions")
   addCommunity = this.#addTo("communities")
   addPhase = this.#addTo("phases")
@@ -59,6 +63,15 @@ export default class Episode extends Model {
   getResourceById = this.#getById("resources")
   getSocietyById = this.#getById("societies")
   getRecordById = this.#getById("records")
+
+  deleteActionById = this.#deleteById("actions")
+  deleteCommunityById = this.#deleteById("communities")
+  deletePhaseById = this.#deleteById("phases")
+  deletePlayerById = this.#deleteById("players")
+  deleteResourceById = this.#deleteById("resources")
+  deleteSocietyById = this.#deleteById("societies")
+  deleteRecordById = this.#deleteById("records")
+
 
   get activePhases() {
     return this.phases.filter((phase) => !phase.isComplete)
@@ -120,15 +133,6 @@ export default class Episode extends Model {
       .filter( action => action.societyId == societyId )
   }
 
-
-  beginCrisisMode() {
-    this.tags.add(EpisodeTags.CRISIS_MODE);
-  }
-
-  endCrisisMode() {
-    this.tags.delete(EpisodeTags.CRISIS_MODE);
-  }
-
   makeActive() {
     this.tags.add(EpisodeTags.ACTIVE);
   }
@@ -160,6 +164,5 @@ export default class Episode extends Model {
 
 export const EpisodeTags = {
   ACTIVE: "active",
-  COMPLETE: "complete",
-  CRISIS_MODE: "crisis-mode"
+  COMPLETE: "complete"
 };

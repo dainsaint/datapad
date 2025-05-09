@@ -16,11 +16,13 @@ export function populateDummyData() {
 
   episode.addPhase(new Phase({ type: PhaseType.SETUP,       round: 0, duration: 1200 }))
 
-  for( var i = 1; i <= 8; i++) {
+  for( var i = 1; i <= 6; i++) {
     episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL,    round: i, duration: 240 }))
     episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,     round: i, duration: 10 * 60 }))
     episode.addPhase(new Phase({ type: PhaseType.GALACTIC,     round: i, duration: 3 * 4 * 60 }))
-    episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,   round: i, duration: 10 * 60 }))
+
+    if( i % 2 == 0)
+      episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,   round: i, duration: 10 * 60 }))
   }
   
   episode.addPhase(new Phase({ type: PhaseType.CONCLUSION,   round: 9, duration: 495 }))

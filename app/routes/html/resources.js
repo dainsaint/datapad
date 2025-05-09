@@ -75,7 +75,7 @@ resources.get("/episodes/:episodeId/resources/:resourceId/:view?", (req, res, ne
 
 resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) => {
   const { episodeId, resourceId } = req.params;
-  const { shouldAlterTags, vital, exhausted } = req.body;
+  const { shouldAlterTags, exhausted } = req.body;
 
   const episode = Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
@@ -83,12 +83,6 @@ resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) =
   resource.update(req.body);
 
   if( shouldAlterTags ) {
-    if(vital) {
-      resource.tags.add(ResourceTag.VITAL);
-    } else {
-      resource.tags.delete(ResourceTag.VITAL);
-    }
-
     if(exhausted) {
       resource.tags.add(ResourceTag.EXHAUSTED);
     } else {
@@ -104,5 +98,26 @@ resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) =
 
   broadcast("resources");
 });
+
+
+resources.delete("/episodes/:episodeId/resources/:resourceId", (req, res) => {
+  const { episodeId, resourceId } = req.params;
+
+  try {
+    const episode = Episode.load(episodeId);
+    episode.deleteResourceById( resourceId );
+    episode.save();
+  
+    const currentUrl = req.get("hx-current-url");
+    if (currentUrl) res.setHeader("HX-Location", currentUrl);
+    res.sendStatus(200);
+    broadcast("resources");
+  } catch (e) {
+    res.setHeader("HX-Trigger", "error");
+    res.sendStatus(400);
+  }
+});
+
+
 
 export default resources;

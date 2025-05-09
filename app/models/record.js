@@ -40,8 +40,6 @@ export const RecordType = {
   
   ACTION_RESOURCES: "ActionResources",
 
-  EPISODE_CRISIS_MODE_BEGAN: "EpisodeCrisisModeBegan",
-  EPISODE_CRISIS_MODE_ENDED: "EpisodeCrisisModeEnded",
   EPISODE_COMMUNITIES_ENDANGERED: "CommunitiesEndangered",
   EPISODE_COMMUNITIES_LOST: "CommunitiesLost",
 

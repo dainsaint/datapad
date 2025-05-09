@@ -26,10 +26,6 @@ export default class Resource extends Model {
     return this.tags.has( ResourceTag.EXHAUSTED );
   }
 
-  get isVital() {
-    return this.tags.has( ResourceTag.VITAL );
-  }
-
   get community() {
     return this.episode.communities.find( community => community.id == this.communityId );
   }
@@ -45,7 +41,6 @@ export default class Resource extends Model {
 export const ResourceTag = {
   USING: "using",
   EXHAUSTED: "exhausted",
-  VITAL: "vital",
   TRANSFORMED: "transformed",
   DESTROYED: "destroyed",
   SEIZED: "seized",

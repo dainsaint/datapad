@@ -57,16 +57,6 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
       }
       
       break;
-    case "split":
-      const newGalacticPhase = new Phase({
-        type: PhaseType.GALACTIC,
-        round: phase.round,
-        duration: 180
-      })
-      episode.splitPhase(phase, newGalacticPhase);
-      episode.addRecord(new Record({ type: RecordType.EPISODE_CRISIS_MODE_BEGAN, description: `Round ${phase.round}`, value: true }));
-      // console.log( Phase.splitPhase(phase) );
-      break;
   }
   //TODO: remove active doofer
   episode.makeActive();
@@ -108,5 +98,23 @@ phases.post("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   res.sendStatus(200);
 })
 
+
+phases.delete("/episodes/:episodeId/phases/:phaseId", (req, res) => {
+  const { episodeId, phaseId } = req.params;
+
+  try {
+    const episode = Episode.load(episodeId);
+    episode.deletePhaseById( phaseId );
+    episode.save();
+  
+    const currentUrl = req.get("hx-current-url");
+    if (currentUrl) res.setHeader("HX-Location", currentUrl);
+    res.sendStatus(200);
+    broadcast("phases");
+  } catch (e) {
+    res.setHeader("HX-Trigger", "error");
+    res.sendStatus(400);
+  }
+});
 
 export default phases;

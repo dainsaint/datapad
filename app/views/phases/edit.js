@@ -1,6 +1,5 @@
 import { html, from } from "#core/utils";
 import { PhaseType } from "#models/phase";
-import { DateTime } from "luxon";
 
 export default function PhaseEdit({ phase } = {}) {
   const phaseMinutes = Math.floor(phase.duration / 60);
@@ -8,6 +7,9 @@ export default function PhaseEdit({ phase } = {}) {
   
   return html`
     <form hx-post="${phase.toURL()}" class="stack">
+      <label for="round">Round</label>
+      <input name="round" type="number" value="${phase.round}" min="-1" max="10"/>
+
       <label for="type">Phase Type</label>
       <select name="type">
         ${ Object.values(PhaseType).map( type => 
@@ -15,8 +17,6 @@ export default function PhaseEdit({ phase } = {}) {
         )}
       </select>
 
-      <label for="round">Round</label>
-      <input name="round" type="number" value="${phase.round}" min="-1" max="10"/>
 
       <label for="duration">Duration</label>
       <div class="grid-two">
@@ -34,9 +34,14 @@ export default function PhaseEdit({ phase } = {}) {
       </div>
 
       <div class="layout-row gap-tight">
-        <button type="submit">~ Update Phase</button>
+        <button type="submit"><i class="fa fa-check-circle"></i> Update Phase</button>
         <button type="button" value="cancel">Cancel</button>
       </div>
+
+
+      <footer>
+        <a hx-delete="${ phase.toURL() }">Delete Phase</a>
+      </footer>
       
     </form>
   `;

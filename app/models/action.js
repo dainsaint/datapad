@@ -3,11 +3,19 @@ import { oxfordize } from "#core/utils";
 import Model from "#database/model";
 
 export default class Action extends Model {
+  round
+  
   societyId
   resourceIds = []
-  round
-  text= ""
+  texts = []
+  
+  risk = 1
+  result = []
+
+  
   tags = new Tags()
+
+
 
 
   constructor(data) {
@@ -66,7 +74,6 @@ export default class Action extends Model {
     return `/episodes/${this.episode.id}/actions/${this.id}` + append;
   }
 }
-
 
 export const ActionTags = {
   COMMITTED: "committed",

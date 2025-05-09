@@ -21,9 +21,13 @@ export default function CommunityEdit({ community }) {
         <option value="leader" ${{selected: community.voice == "leader"}}>Voice of the Leaders</option>
       </select>
       <div class="layout-row gap-tight">
-        <button>~ Update Community</button>
+        <button><i class="fa fa-check-circle"></i> Update Community</button>
         <button type="button" value="cancel">Cancel</button>
       </div>
+
+      <footer>
+        <a hx-delete="${ community.toURL() }">Delete Community</a>
+      </footer>
     </form>
   `;
 }

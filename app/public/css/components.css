@@ -133,9 +133,6 @@ STATES TO DESIGN FOR
 - Phase Complete 
 - upcoming phase
 - phase hover
-- Phases, crisis mode
-
-
 
 
 
@@ -155,12 +152,6 @@ STATES TO DESIGN FOR
   font-size: 2rem;
 }
 
-
-
-.resource-card[data-tags*="vital"]::before {
-  content: "★";
-  margin-inline-end: .25em;
-}
 
 .resource-card[data-tags*="exhausted"] {
   opacity: .5;
@@ -246,7 +237,6 @@ STATES TO DESIGN FOR
 }
 
 .society-card__resources {
-  display: flex;
   gap: .25rem;
 }
 

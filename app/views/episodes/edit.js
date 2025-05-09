@@ -21,7 +21,7 @@ export default function EpisodeEdit({ episode = new Episode() } = {}) {
       </article>
 
       <footer>
-        <button type="submit">~ Update Episode</button>
+        <button type="submit"><i class="fa fa-check-circle"></i> Update Episode</button>
         <button type="button" value="cancel">Cancel</button>
       </footer>
     </form>

@@ -1,4 +1,4 @@
-import { html } from "#core/utils";
+import { from, html } from "#core/utils";
 import Society from "#models/society";
 import Community from "#models/community";
 import SocietyInfo from "./components/info.js";;
@@ -8,31 +8,47 @@ const societyPanelId = ( society ) => `society-panel-${society?.id}`;
 export default function SocietyPanel({ society = new Society()} = {}) {
   const episode = society.episode;
   return html` <main id="${societyPanelId(society)}" class="content stack-loose scrollable" hx-get="${society.toURL("/panel")}" hx-trigger="sse:societies" hx-swap="outerHTML" hx-disinherit="hx-swap">
-      <header>
-        <div class="layout-row gap-tight" style="display: flex; gap: 1rem">
-          <h1>
-            <a hx-get="${society.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">
-              ${society.name}
-            </a>
-          </h1>
+
+
+      <div class="grid-two">
+
+        <div class="stack">
+          <header>
+            <div class="layout-row gap-tight" style="display: flex; gap: 1rem">
+              <h1>
+                <a hx-get="${society.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">
+                  ${society.name}
+                </a>
+              </h1>
+            </div>
+            ${SocietyInfo({ society })}
+          </header> 
+
+          <div class="stack">
+            <h2>Communities</h2>
+
+            <div class="grid-three gap-tight">
+              ${society.communities.map( (community) => CommunityCard({ community }))}
+            </div>
+
+            <div class="layout-row gap-tight">
+              <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-cube"></i> New Resource</button>
+              <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-people-group"></i> New Community</button>
+            </div>
+
+          </div>
+
         </div>
-        ${SocietyInfo({ society })}
-      </header> 
 
-      ${ ActionBuilder({ episode, societyId: society.id }) }
 
-      <div class="stack">
-        <h2>Communities</h2>
+       
+        ${ ActionBuilder({ episode, societyId: society.id }) }
 
-        <div class="grid-three">
-        ${society.communities.map( (community) => CommunityCard({ community }))}
-        </div>
       </div>
 
-      <div class="layout-row gap-tiny">
-        <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog">+ New Resource</button>
-        <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">+ New Community</button>
-      </div>
+      <footer>
+        <a hx-delete="${ society.toURL() }" hx-confirm="This will PERMANENTLY delete this society!">Delete Society</a>
+      </footer>
     </main>
   `;
 }
@@ -54,7 +70,7 @@ export function CommunityCard({ community = new Community() } = {}) {
           </h2>
         </header>
 
-        <div class="grid-small" data-sortable="resources" data-sortable-expand>
+        <div class="grid-small gap-tight" data-sortable="resources" data-sortable-expand>
           ${community.resources.map((resource) =>
             CommunityResourceCard({ resource })
           )}
@@ -89,73 +105,95 @@ export function CommunityResourceCard({ resource }) {
 export function ActionBuilder({ episode, societyId } = {}) {
   const actions = episode.getCurrentActionsForSocietyId( societyId );
 
+  const action = actions[0];
+
   return html`
     <section class="stack" hx-get="${episode.toURL(`/actions?societyId=${societyId}`)}" hx-trigger="sse:actions">
-      <h2>Actions</h2>
-      ${actions.map(
-        (action, i) => html`
-          <form class="stack-tight"
-            hx-post="${action.toURL("/resources")}"
-            hx-trigger="sorted,change,submit"
-            hx-swap="none"
-          >
-            <div class="action-resources layout-row gap"
-              data-sortable="action"
-              data-sortable-allow="action, resources: clone"
-            >
-              <h3>${i + 1}: We use</h3>
-              
-              ${action.resources.length >= 1 && ActionResourceCard({ resource: action.resources.at(0) })}
+      
+      ${ action && html`
+        <form class="stack-tight"
+          hx-post="${action.toURL("/resources")}"
+          hx-trigger="sorted,change,submit"
+          hx-swap="none"
+        >
 
-              <div class="drop drop-primary">Primary</div>
+          <div class="grid-two">
+            <h2>Action</h2>
 
-              <h3 class="requires-primary">We aid with</h3>
-
-              ${action.resources
-                .slice(1)
-                .map((resource) => ActionResourceCard({ resource }))}
-
-              <div class="requires-primary drop drop-additional">Additional</div>
+            <div class="layout-row gap-tight">
+              <label for="risk" style="flex-basis: 100%; text-align:right;"><i class="fa fa-fire"></i> Risk Level</label>
+              <select name="risk" style="flex-basis: 5rem;">
+                ${ from(0).to(6).map( risk =>
+                    html`<option ${{value: risk, selected: risk == action.risk }}>${risk}</option>`
+                  )}
+              </select>
             </div>
+          </div>
 
-            <div class="layout-row gap">
-              <input name="text" value="${ action.text }" placeholder="Write full action here"/>
-              <button name="commit" value="commit">Submit</button>
-            </div>
-          </form>
-        `
-      )}
 
+
+          ${ action.resources.map( (resource, i) => ActionComponent({resource, text: action.texts[i], i: i}) ) }
+          ${ ActionComponent({ i: action.resources.length }) }
+          
+
+
+          <button name="commit" value="commit"><i class="fa fa-check-circle"></i> Confirm Action?</button>
+        </form>
+      `}
       
     </section>
 
     <style>
-      .drop {
+     .drop {
         border: 2px dashed var(--color-text);
         padding: 1rem;
       }
 
-      .requires-primary {
+      /* .requires-primary {
         display: none;
-      }
+      } */
 
       .action-resources:has(.action-resource-card) .requires-primary {
         display: initial;
       }
 
-      .drop-primary:has(+ .action-resource-card),
-      .action-resource-card + .drop-primary {
+      /* .action-resources:has(.action-resource-card) .drop-primary {
         display: none;
       }
 
-      .drop:has(+ .is-sortable-ghost),
-      .is-sortable-ghost + .drop {
+      .action-resources:has(.is-sortable-ghost) .drop-primary {
         display: none;
-      }
+      }   */
+
     </style>
   `;
 }
 
+
+export function ActionComponent({ resource, text, i } = {}) {
+  return html`
+    <div class="action-resources gap"
+
+      style= "display: grid; grid-template-columns: max-content 200px max-content 1fr; align-items: center"
+    >
+      <h3>We use</h3>
+      
+      ${ resource && ActionResourceCard({ resource }) }
+
+      ${ !resource && html`<div 
+        class="drop drop-primary"
+        data-sortable="action"
+        data-sortable-allow="action, resources: clone">
+          Resource
+      </div>`}
+
+      <h3>to</h3>
+
+      <input name="texts[]" value="${ text }" placeholder="${ i == 0 ? "Take action" : "Aid action" }" style="flex-basis: 50%"/>
+
+    </div>
+  `
+}
 
 export function ActionResourceCard({resource} ){
   return html`

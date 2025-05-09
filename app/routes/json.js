@@ -19,7 +19,6 @@ jsonRouter.get("/episodes/active", (req, res) => {
 
   const formatResource = ({name, tags}) => ({
     name,
-    vital: tags.has( ResourceTag.VITAL ),
     exhausted: tags.has( ResourceTag.EXHAUSTED )
   })
 

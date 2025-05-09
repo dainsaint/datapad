@@ -30,7 +30,7 @@ export default function SocietyEdit({ society = new Society() } = {}) {
       </select>
 
       <div class="layout-row gap-tight">
-        <button type="submit">~ Update Society</button>
+        <button type="submit"><i class="fa fa-check-circle"></i> Update Society</button>
         <button type="button" value="delete" hx-delete="${society.toURL()}">x Delete Society</button>
         <button type="button" value="cancel">Cancel</button>
       </div>

@@ -12,6 +12,11 @@ export default function AppLayout(props, children) {
       
       <link rel="stylesheet" id="polyfill-styles" />
       <link rel="stylesheet" href="/css/styles.css" />
+      <link rel="stylesheet" href="/css/fonts/fontawesome/css/fontawesome.min.css" />
+      <link rel="stylesheet" href="/css/fonts/fontawesome/css/solid.min.css" />
+      <link rel="stylesheet" href="/css/fonts/fontawesome/css/regular.min.css" />
+    
+
       
       <link rel="favicon" href="/images/web-icon.svg"/>
       <link rel="manifest" href="/manifest.webmanifest">
@@ -20,10 +25,12 @@ export default function AppLayout(props, children) {
 
       <script src="/js/vendor/htmx.min.js"></script>
       <script src="/js/vendor/htmx.sse.js"></script>
+      <script src="/js/vendor/ideomorph.js"></script>
+      <script src="/js/vendor/ideomorph-ext.js"></script>
       <script type="module" src="/js/client.js"></script>
     </head>
 
-    <body>
+    <body hx-ext="morph">
       <section id="app" class="layout-app" hx-ext="sse" sse-connect="/events">
 
         <div class="in-app">

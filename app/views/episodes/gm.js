@@ -1,11 +1,10 @@
 import { html, secondsToTime } from "#core/utils";
-import Episode from "#models/episode";
-import { PhaseType } from "#models/phase";
 import EpisodeLayout from "#views/episodes/components/layout";
-import PhaseCard from "#views/phases/card";
+import PhaseControls from "#views/phases/controls";
 import SocietyList from "#views/societies/list";
 import Icon from "#views/ui/icon";
 import { Duration } from "luxon";
+
 
 export default function EpisodeGameMaster ({ episode } = {}) {
   // console.log( episode );
@@ -25,7 +24,7 @@ export default function EpisodeGameMaster ({ episode } = {}) {
   const content = html`
     <main class="content stack">
 
-      ${ Controls({ currentPhase, phases: episode.phases }) }
+      ${ PhaseControls({ phase: currentPhase }) }
 
       <div class="grid-two">
 
@@ -89,51 +88,7 @@ export default function EpisodeGameMaster ({ episode } = {}) {
 
 
 
-function Controls({ currentPhase, phases }) {
-  const canEnterCrisisMode = currentPhase.isPlaying && (currentPhase.type == PhaseType.SOCIETAL  || currentPhase.type == PhaseType.GALACTIC);
-  
-  return html`
-    <div class="stack">
-      <form class="layout-row gap-tight" hx-put="${ currentPhase.toURL() }" >
-        <button name="action" value="prev" ${{disabled: false || phases.at(0) == currentPhase }}>${ Icon("previous") }</button>
-        ${ !currentPhase.isPlaying && html`<button name="action" value="start" ${{disabled: currentPhase.isComplete }}>${ Icon("play") }</button>` }
-        ${ currentPhase.isPlaying && html`<button name="action" value="pause" >${ Icon("pause") }</button>` }
-        <button name="action" value="next">${ Icon("next") }</button>
-          <!--button name="action" value="next" ${{disabled: phases.at(-1) == currentPhase }}>${ Icon("next") }</button-->
 
-        <div class="layout-row layout-fill gap">
-          <p>${ secondsToTime(currentPhase.timeElapsed) }</p>
-          <progress class="layout-fill" ${{ value: currentPhase.timeElapsed, max: currentPhase.duration }}></progress>
-          <p>${ secondsToTime(currentPhase.duration) }</p>
-        </div>
-
-        <button name="action" value="split" ${{disabled: !canEnterCrisisMode }}>${ Icon("lightning") } Enter Crisis Mode</button>
-      </form>
-
-
-    </div>
-  `
-}
-
-
-
-
-function PhaseControls({ currentPhase, phases }) {
-  const canEnterCrisisMode = currentPhase.type == PhaseType.SOCIETAL  || currentPhase.type == PhaseType.GALACTIC;
-  
-  return html`
-    <div class="stack">
-      <h1>Time Controls</h1>
-      <form hx-put="${ currentPhase.toURL() }" class="grid-four">
-        <button name="action" value="prev" ${{disabled: phases.at(0) == currentPhase }}>Previous Phase</button>
-        ${ !currentPhase.isPlaying && html`<button name="action" value="start" >Start Phase</button>` }
-        ${ currentPhase.isPlaying && html`<button name="action" value="pause" >Pause Phase</button>` }
-        <button name="action" value="split" ${{disabled: !canEnterCrisisMode }}>Enter Crisis Mode</button>
-        <button name="action" value="next" ${{disabled: phases.at(-1) == currentPhase }}>Next Phase</button>
-      </form>
-    </div>
-  `
-}
 
 
 export function PhaseTimeline({ episode, currentPhase, phases }) {

@@ -100,4 +100,21 @@ communities.post("/episodes/:episodeId/communities/:communityId/resources", (req
   broadcast("resources");
 });
 
+
+
+communities.delete("/episodes/:episodeId/communities/:communityId", (req, res) => {
+  const { episodeId, communityId } = req.params;
+
+  const episode = Episode.load(episodeId);
+  episode.deleteCommunityById( communityId );
+  episode.save();
+
+  const currentUrl = req.get("hx-current-url");
+  if (currentUrl) res.setHeader("HX-Location", currentUrl);
+  res.sendStatus(200);
+  broadcast("societies");
+});
+
+
+
 export default communities;
