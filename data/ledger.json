@@ -27,114 +27,6 @@
       "actions": [],
       "communities": [
         {
-          "_type": "Action",
-          "id": "z-4pk",
-          "societyId": "et0k8",
-          "resourceIds": [],
-          "round": 1,
-          "text": "take actions",
-          "tags": {
-            "_type": "Tags",
-            "value": [
-              "committed"
-            ]
-          }
-        },
-        {
-          "_type": "Community",
-          "id": "kegaw",
-          "societyId": "pxu3P",
-          "name": "sthsrth",
-          "voice": "people",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "XsR8M",
-          "societyId": "et0k8",
-          "resourceIds": [
-            "Ridpo",
-            "HOzO6"
-          ],
-          "round": 2,
-          "text": "yobo",
-          "tags": {
-            "_type": "Tags",
-            "value": [
-              "committed"
-            ]
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "fWiZj",
-          "societyId": "et0k8",
-          "resourceIds": [],
-          "round": 2,
-          "text": "meow",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "dTOHK",
-          "societyId": "V9xbw",
-          "resourceIds": [
-            "FADd2"
-          ],
-          "round": 2,
-          "text": "",
-          "tags": {
-            "_type": "Tags",
-            "value": [
-              "committed"
-            ]
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "k85oB",
-          "societyId": "V9xbw",
-          "resourceIds": [],
-          "round": 2,
-          "text": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "dj_FT",
-          "societyId": "VMu4n",
-          "resourceIds": [],
-          "round": 2,
-          "text": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "pcrO5",
-          "societyId": "VMu4n",
-          "resourceIds": [],
-          "round": 2,
-          "text": "",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        }
-      ],
-      "communities": [
-        {
           "_type": "Community",
           "id": "o7kHM",
           "societyId": "et0k8",
@@ -287,13 +179,13 @@
           "_type": "Phase",
           "id": "dGKIT",
           "type": "Societal Phase",
-          "status": "playing",
+          "status": "complete",
           "round": 2,
           "duration": 600,
-          "timeElapsed": 327.1859999999993,
+          "timeElapsed": 477.31299999999766,
           "actualTime": {
             "s": "2025-04-20T15:28:15.501-04:00",
-            "e": "2025-04-20T15:38:15.501-04:00",
+            "e": "2025-05-10T13:48:47.649-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -306,13 +198,13 @@
           "_type": "Phase",
           "id": "wlx26",
           "type": "Galactic Phase",
-          "status": "idle",
+          "status": "complete",
           "round": 2,
           "duration": 720,
           "timeElapsed": 0,
           "actualTime": {
             "s": "2025-05-09T23:53:00.133-04:00",
-            "e": "2025-05-09T23:53:00.133-04:00",
+            "e": "2025-05-10T13:48:56.974-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -325,13 +217,13 @@
           "_type": "Phase",
           "id": "Z6ovG",
           "type": "Individual Phase",
-          "status": "idle",
+          "status": "complete",
           "round": 2,
           "duration": 480,
           "timeElapsed": 0,
           "actualTime": {
             "s": "2025-05-10T12:06:16.286-04:00",
-            "e": "2025-05-10T12:06:16.286-04:00",
+            "e": "2025-05-10T13:49:04.987-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -344,13 +236,13 @@
           "_type": "Phase",
           "id": "f34as",
           "type": "Break",
-          "status": "idle",
+          "status": "playing",
           "round": 2,
           "duration": 0,
-          "timeElapsed": 0,
+          "timeElapsed": 1114.2899999999943,
           "actualTime": {
-            "s": "2025-05-10T11:53:05.954-04:00",
-            "e": "2025-05-10T11:53:05.954-04:00",
+            "s": "2025-05-10T13:51:25.097-04:00",
+            "e": "2025-05-10T13:51:25.097-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -1014,6 +906,30 @@
           "type": "PhaseStarted",
           "description": "Round 2: Societal Phase",
           "value": "2025-04-20T15:28:15.502-04:00"
+        },
+        {
+          "_type": "Record",
+          "id": "X-PS4",
+          "timestamp": "2025-05-10T17:48:47.649Z",
+          "type": "PhaseEnded",
+          "description": "Round 2: Societal Phase",
+          "value": "2025-05-10T17:48:47.649Z"
+        },
+        {
+          "_type": "Record",
+          "id": "gPTcN",
+          "timestamp": "2025-05-10T17:48:47.650Z",
+          "type": "PhaseDuration",
+          "description": "Round 2: Societal Phase",
+          "value": 28700.5358
+        },
+        {
+          "_type": "Record",
+          "id": "VOG5w",
+          "timestamp": "2025-05-10T17:51:25.097Z",
+          "type": "PhaseStarted",
+          "description": "Round 2: Break",
+          "value": "2025-05-10T17:51:25.097Z"
         }
       ]
     }
