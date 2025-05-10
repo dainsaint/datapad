@@ -53,7 +53,7 @@ export function EpisodePlaylist({ episode }) {
 
   const renderRound = ({isRound, round, phases}) => html`
 
-    <details class="phase-playlist__round" ${{open: currentPhase.round == round}}>
+    <details class="phase-playlist__round" g${{open: currentPhase.round == round}}>
       <summary class="phase-playlist__header">Round ${round}</summary>
 
       <div data-sortable="phase">
