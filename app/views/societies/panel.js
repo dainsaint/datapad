@@ -137,7 +137,7 @@ export function ActionBuilder({ episode, societyId } = {}) {
           
 
 
-          <button name="commit" value="commit"><i class="fa fa-check-circle"></i> Confirm Action?</button>
+          <button name="commit" value="commit" ${{ disabled: action.resources.length == 0}}><i class="fa fa-check-circle"></i> Confirm Action?</button>
         </form>
       `}
       
@@ -148,23 +148,6 @@ export function ActionBuilder({ episode, societyId } = {}) {
         border: 2px dashed var(--color-text);
         padding: 1rem;
       }
-
-      /* .requires-primary {
-        display: none;
-      } */
-
-      .action-resources:has(.action-resource-card) .requires-primary {
-        display: initial;
-      }
-
-      /* .action-resources:has(.action-resource-card) .drop-primary {
-        display: none;
-      }
-
-      .action-resources:has(.is-sortable-ghost) .drop-primary {
-        display: none;
-      }   */
-
     </style>
   `;
 }
@@ -174,14 +157,14 @@ export function ActionComponent({ resource, text, i } = {}) {
   return html`
     <div class="action-resources gap"
 
-      style= "display: grid; grid-template-columns: max-content 200px max-content 1fr; align-items: center"
+      style= "display: grid; grid-template-columns: max-content 1fr max-content 60%; align-items: center"
     >
       <h3>We use</h3>
       
       ${ resource && ActionResourceCard({ resource }) }
 
       ${ !resource && html`<div 
-        class="drop drop-primary"
+        class="drop"
         data-sortable="action"
         data-sortable-allow="action, resources: clone">
           Resource

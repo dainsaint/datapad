@@ -3,7 +3,7 @@ import { DateTime, Duration, Interval } from "luxon";
 import { EpisodeTimeInput } from "#views/episodes/create";
 import Episode from "#models/episode";
 import express from "express";
-import { PhaseTimeline } from "#views/episodes/gm";
+import { broadcast } from "#routes/html/events";
 
 const episodes = express.Router();
 
@@ -83,16 +83,30 @@ episodes.get("/episodes/:episodeId/facilitator/:societyId?", (req, res) => {
 });
 
 
-episodes.get("/episodes/:episodeId/timeline", (req, res) => {
-  const { episodeId } = req.params;
+episodes.put("/episodes/:episodeId/phases", (req, res) => {
+  const { episodeId, view } = req.params;
+  const { phaseIds, increments } = req.body;
+  
+  const inOrder = phaseIds.flat();
   const episode = Episode.load(episodeId);
 
-  res.send( PhaseTimeline({
-    episode,
-    currentPhase: episode.currentPhase,
-    phases: episode.phases
-  }))
+  episode.phases.sort( (a, b) => inOrder.indexOf(a.id) - inOrder.indexOf(b.id) );
+  episode.save();
+
+  //this is the way to "refresh" whatever page
+  //this was called from using ajax
+  const currentUrl = req.get("hx-current-url");
+  if (currentUrl) res.setHeader("HX-Location", currentUrl);
+
+  broadcast("phases");
+  
+  res.sendStatus(200);
+
 });
+
+
+
+
 
 episodes.get("/episodes/:episodeId/:view?", (req, res) => {
   const { episodeId, view } = req.params;
@@ -103,6 +117,7 @@ episodes.get("/episodes/:episodeId/:view?", (req, res) => {
   else
     res.render(`episodes/${view}`, { episode, layout: "app" });
 });
+
 
 
 

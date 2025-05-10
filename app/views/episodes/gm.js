@@ -1,4 +1,5 @@
 import { html, secondsToTime } from "#core/utils";
+import { PhaseType } from "#models/phase";
 import EpisodeLayout from "#views/episodes/components/layout";
 import PhaseControls from "#views/phases/controls";
 import SocietyList from "#views/societies/list";
@@ -7,19 +8,7 @@ import { Duration } from "luxon";
 
 
 export default function EpisodeGameMaster ({ episode } = {}) {
-  // console.log( episode );
-  const phasesToDisplay = episode.activePhases.slice(0,3);
   const currentPhase = episode.currentPhase;
-
-  const rounds = episode.phases.reduce( (result, phase, i, phases ) => {
-    if( i == 0 || phases[i-1].round != phase.round ) {
-      result.push([])
-    }
-    result.at(-1).push(phase);
-    return result;
-  }, [])
-
-  const totalTime = Duration.fromObject({ seconds: episode.phases.reduce ( (total, phase) => total + Math.floor( Math.max(phase.duration, phase.timeElapsed) ), 0 ) });
 
   const content = html`
     <main class="content stack">
@@ -28,57 +17,21 @@ export default function EpisodeGameMaster ({ episode } = {}) {
 
       <div class="grid-two">
 
-      <div class="stack">
-        <h1>Society Overview</h1>
+        <div class="stack">
+          <h1>Society Overview</h1>
 
-        ${SocietyList({ episode })}
+          ${SocietyList({ episode })}
 
-        <form 
-          hx-get="${ episode.toURL('/societies/create') }"
-          hx-target="#dialog"
-          >
-          <button>+ Create a new society</button>
-        </form>
-      </div>
-
-
-
-
-
-      <div class="stack">
-        <h1>Timeline</h1>
-        <p>${ episode.phases.length } phases<br/>${ totalTime.rescale().toHuman({ unitDisplay: "short"}) }</p>
-
-
-        <div class="phase-playlist scrollable stack">
-        ${ rounds.map( (round, i) => html`
-          <details class="phase-playlist__round"${ currentPhase.round == i && "open" }>
-            <summary class="phase-playlist__header">Round ${i}</summary>
-            <ul class="phase-playlist__phases"  data-sortable="phase">
-              ${ round.map( phase => html`
-                <li class="phase-playlist__phase ${{ 
-                  "phase-playlist__phase--current": phase == currentPhase,
-                  "phase-playlist__phase--playing": phase.isPlaying,
-                  "phase-playlist__phase--imminent": phase.timeElapsed >= phase.duration - 10,
-                  "phase-playlist__phase--complete": phase.timeElapsed >= phase.duration,
-                  "phase-playlist__phase--overtime": phase.timeElapsed > phase.duration + 10
-                }}">
-                  <div>${phase.type}</div>
-
-                  <div>${secondsToTime( phase.timeElapsed ) } / ${secondsToTime( phase.duration ) } <a hx-get="${ phase.toURL("/edit") }" hx-target="#dialog">${ Icon("pencil") }</a></div>
-                </li>
-              `)}
-            </ul>
-          </details>`
-        )}
+          <form 
+            hx-get="${ episode.toURL('/societies/create') }"
+            hx-target="#dialog"
+            >
+            <button>+ Create a new society</button>
+          </form>
         </div>
 
 
-
-
-      </div>
-
-      
+        ${ EpisodePlaylist({ episode }) }      
       </div>
     </main>
   `;
@@ -91,46 +44,89 @@ export default function EpisodeGameMaster ({ episode } = {}) {
 
 
 
-export function PhaseTimeline({ episode, currentPhase, phases }) {
-  const disp = phases.slice( phases.indexOf( currentPhase ) );
+export function EpisodePlaylist({ episode }) {
+
+  const currentPhase = episode.currentPhase;
+  const phaseGroups = episode.getPhaseGroups();
+
+  const totalTime = Duration.fromObject({ seconds: episode.phases.reduce ( (total, phase) => total + Math.floor( Math.max(phase.duration, phase.timeElapsed) ), 0 ) });
+
+  const renderRound = ({isRound, round, phases}) => html`
+
+    <details class="phase-playlist__round" ${{open: currentPhase.round == round}}>
+      <summary class="phase-playlist__header">Round ${round}</summary>
+
+      <div data-sortable="phase">
+        ${ renderPhases({ isRound, round, phases }) }
+      </div>
+
+    </details>
+
+
+    
+  `
+
+  const renderPhases = ({ phases }) => html`
+      ${ phases.map( (phase, i) => html`
+    
+          
+        <div class="phase-playlist__phase phase-playlist__phase--${ phase.type.split(' ')[0].toLowerCase() } ${{ "phase-playlist__phase--current": phase == currentPhase }}">
+          <div>${phase.round} ${phase.type} <a hx-get="${ phase.toURL("/edit") }" hx-target="#dialog">${ Icon("pencil") }</a> </div>
+
+          <div>
+            ${secondsToTime( phase.timeElapsed ) } / ${secondsToTime( phase.duration ) }  <a hx-delete="${ phase.toURL() }"><i class="fa fa-trash"></i></a>
+            <input name="phaseIds[]" type="hidden" value="${ phase.id }"/>
+          </div>
+
+      </div>
+      `)}`
+
 
   return html`
-  
-    <div class="phase-timeline__container"
-      hx-get="${ episode.toURL('/timeline') }"
-      hx-swap="outerHTML"
-      hx-trigger="sse:phases"
-    > 
-    ${disp.map( (phase, i) => html`
-      <div 
-        class="phase-timeline__phase ${{
-          "phase-timeline__phase--current": phase == currentPhase,
-          "phase-timeline__phase--last": phase.round != disp.at(i+1)?.round,
-          "phase-timeline__phase--over": phase.timeRemaining < 0,
-        }}" 
-        data-status="${phase.status}" 
-        hx-get="${ phase.toURL("/edit") }"
+    <div class="stack">
+      <h1>Timeline</h1>
+      <p>${ episode.phases.length } phases<br/>${ totalTime.rescale().toHuman({ unitDisplay: "short"}) }</p>
+
+      
+      <form 
+        class="phase-playlist scrollable stack-tight" 
+        data-sortable="phase" 
+        style="max-height: 70vh;"
+
+        hx-put="${ episode.toURL("/phases") }"
+        hx-trigger="sorted"
+      >
+    
+        
+      ${ phaseGroups.map( (group) => group.isRound 
+          ? html`
+            <div class="phase-playlist__group">
+              ${ renderRound(group) }
+            </div>` 
+          : html`
+            <div class="phase-playlist__group" data-sortable="phase">
+              ${ renderPhases( group ) }
+            </div>`
+      )}
+
+      </form>
+
+      <form 
+        class="layout-row gap-tight"
+        hx-get="${ episode.toURL('/phases/create') }"
         hx-target="#dialog"
-        hx-swap="innerHTML"
-        style="flex-basis: ${Math.max( phase.duration, phase.timeElapsed )}px" 
         >
-        <div class="phase-timeline__bar">
-          <div class="phase-timeline__phase-scheduled" style="flex-basis: ${phase.duration}px">
-            <div class="phase-timeline__phase-elapsed" style="width: ${ Math.min(phase.timeElapsed / phase.duration, 1) * 100}%;"></div>
-            <span class="phase-timeline__time">${ secondsToTime(phase.duration) }</span>
-          </div>
+        <button><i class="fa fa-bars-staggered"></i> add phase</button>
+        <button><i class="fa fa-arrows-spin"></i> add round</button>
+      </form>
 
-          <div class="phase-timeline__phase-overflow" style="flex-basis: ${phase.timeElapsed - phase.duration}px;">
-            
-          </div>
-        </div>
-
-        <div class="phase-timeline__label">
-          <strong>Round ${ phase.round }</strong> <br/> 
-          ${ phase.type } 
-        </div>
-      </div>`
-    )}
     </div>
-`
+  `
 }
+
+
+// <div style="text-align: center; border-bottom: 1px solid lightgrey; translate: 0 -50%; position: relative">
+// <span style="display: inline-block; position: relative; translate: 0 50%;">
+  // <a style="padding: .25rem; background: white; ">add phase</a>  <a style="padding: .25rem; background: white; ">add round</a>
+// </span>
+// </div>

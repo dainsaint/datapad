@@ -29,14 +29,6 @@ export default class Action extends Model {
       .map( resource => resource.id );
   }
 
-  removeResources( resources ) {
-    for( const resource of resources ) {
-      const index = this.resourceIds.indexOf(resource.id);
-      if( index >= 0 )
-        this.resourceIds.splice(index, 1);
-    }
-  }
-
   commit() {
     this.tags.add( ActionTags.COMMITTED );
   }

@@ -163,11 +163,29 @@ STATES TO DESIGN FOR
   
 }
 
-.phase-playlist__header {
-  border-bottom: 1px solid var(--color-light);
-  padding: 1rem;
-  font-weight: bold;
+
+.phase-playlist__group {
+  border: 1px solid var(--color-light);
+  border-radius: .5rem;
+  overflow: hidden;
 }
+
+
+/* .phase-playlist__round[open] {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+} */
+
+.phase-playlist__header {
+  padding: .5rem;
+  font-weight: bold;
+  background: var(--color-light);
+  cursor: pointer;
+}
+
+/* .phase-playlist__round[open] .phase-playlist__header {
+  writing-mode: vertical-lr;
+} */
 
 .phase-playlist__phases {
   margin: 0px;
@@ -176,10 +194,11 @@ STATES TO DESIGN FOR
 
 .phase-playlist__phase {
   list-style: none;
-  padding: 1rem;
+  padding: .5rem;
   font-size: 1.25rem;
   display: flex;
   justify-content: space-between;
+  cursor: grab;
 }
 
 .phase-playlist__drag {

@@ -1,0 +1,554 @@
+{
+  "_type": "Episode",
+  "id": "CTXGj",
+  "name": "New Episode",
+  "date": "2025-05-09T23:53:00.132-04:00",
+  "scheduledTime": {
+    "s": "2025-05-09T23:53:00.132-04:00",
+    "e": "2025-05-10T04:53:00.132-04:00",
+    "invalid": null,
+    "isLuxonInterval": true
+  },
+  "tags": {
+    "_type": "Tags",
+    "value": [
+      "active"
+    ]
+  },
+  "actions": [],
+  "communities": [
+    {
+      "_type": "Community",
+      "id": "cZdNK",
+      "societyId": "pxu3P",
+      "name": "sthsrt",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Community",
+      "id": "kegaw",
+      "societyId": "pxu3P",
+      "name": "sthsrth",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    }
+  ],
+  "phases": [
+    {
+      "_type": "Phase",
+      "id": "jNe4h",
+      "type": "Setup/Onboarding",
+      "status": "complete",
+      "round": 0,
+      "duration": 1200,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.132-04:00",
+        "e": "2025-05-10T08:58:41.524-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "vS8v2",
+      "type": "Universal Phase",
+      "status": "idle",
+      "round": 1,
+      "duration": 240,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.132-04:00",
+        "e": "2025-05-10T08:58:46.429-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "mBIUo",
+      "type": "Societal Phase",
+      "status": "idle",
+      "round": 1,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-10T08:58:47.965-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "KnY3K",
+      "type": "Galactic Phase",
+      "status": "idle",
+      "round": 1,
+      "duration": 720,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "A5-hS",
+      "type": "Universal Phase",
+      "status": "idle",
+      "round": 2,
+      "duration": 240,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "dGKIT",
+      "type": "Societal Phase",
+      "status": "idle",
+      "round": 2,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "wlx26",
+      "type": "Galactic Phase",
+      "status": "idle",
+      "round": 2,
+      "duration": 720,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "Z6ovG",
+      "type": "Individual Phase",
+      "status": "idle",
+      "round": 2,
+      "duration": 480,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-10T12:06:16.286-04:00",
+        "e": "2025-05-10T12:06:16.286-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "f34as",
+      "type": "Break",
+      "status": "idle",
+      "round": 2,
+      "duration": 0,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-10T11:53:05.954-04:00",
+        "e": "2025-05-10T11:53:05.954-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "tJXlr",
+      "type": "Universal Phase",
+      "status": "idle",
+      "round": 3,
+      "duration": 240,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "BJ7S8",
+      "type": "Societal Phase",
+      "status": "idle",
+      "round": 3,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "dr96n",
+      "type": "Galactic Phase",
+      "status": "idle",
+      "round": 3,
+      "duration": 720,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "TW6li",
+      "type": "Universal Phase",
+      "status": "idle",
+      "round": 4,
+      "duration": 240,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "r5gob",
+      "type": "Societal Phase",
+      "status": "idle",
+      "round": 4,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "qveE2",
+      "type": "Galactic Phase",
+      "status": "idle",
+      "round": 4,
+      "duration": 720,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "iFRIY",
+      "type": "Individual Phase",
+      "status": "idle",
+      "round": 4,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "GJ_oQ",
+      "type": "Break",
+      "status": "idle",
+      "round": 4,
+      "duration": 660,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-10T09:18:56.651-04:00",
+        "e": "2025-05-10T09:18:56.651-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "vKnt4",
+      "type": "Universal Phase",
+      "status": "idle",
+      "round": 5,
+      "duration": 240,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "sJnY3",
+      "type": "Societal Phase",
+      "status": "idle",
+      "round": 5,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "C7lmW",
+      "type": "Galactic Phase",
+      "status": "idle",
+      "round": 5,
+      "duration": 720,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-09T23:53:00.133-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "uf9xF",
+      "type": "Universal Phase",
+      "status": "idle",
+      "round": 6,
+      "duration": 240,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-10T09:19:08.740-04:00",
+        "e": "2025-05-10T09:19:08.740-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "ebgeJ",
+      "type": "Societal Phase",
+      "status": "idle",
+      "round": 6,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-10T09:27:26.238-04:00",
+        "e": "2025-05-10T09:27:26.238-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "Q06jF",
+      "type": "Galactic Phase",
+      "status": "idle",
+      "round": 6,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-10T09:27:39.586-04:00",
+        "e": "2025-05-10T09:27:39.586-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "lyb7N",
+      "type": "Generational Phase",
+      "status": "idle",
+      "round": 6,
+      "duration": 0,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-10T11:52:59.017-04:00",
+        "e": "2025-05-10T11:52:59.017-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "YTkJJ",
+      "type": "Conclusion",
+      "status": "idle",
+      "round": 6,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-10T12:06:55.646-04:00",
+        "e": "2025-05-10T12:06:55.646-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    }
+  ],
+  "players": [],
+  "resources": [
+    {
+      "_type": "Resource",
+      "id": "UVucs",
+      "communityId": "kegaw",
+      "name": "strhsr",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    }
+  ],
+  "societies": [
+    {
+      "_type": "Society",
+      "id": "pxu3P",
+      "name": "dhsrt",
+      "archetype": "the aesthetic",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    }
+  ],
+  "records": [
+    {
+      "_type": "Record",
+      "id": "rQyLV",
+      "timestamp": "2025-05-10T11:44:25.868-04:00",
+      "type": "ResourceCreated",
+      "value": "strhsr"
+    }
+  ]
+}

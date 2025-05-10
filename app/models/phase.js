@@ -14,7 +14,7 @@ export default class Phase extends Model {
 
   tags = new Tags()
 
-  constructor({ type = PhaseType.BLANK, round = 0, duration = 0 }) {
+  constructor({ type = PhaseType.BLANK, round = 0, duration = 0 } = {}) {
     super();
     Object.assign( this, {type, round, duration} );
   }
@@ -78,12 +78,12 @@ export const PhaseStatus = {
 }
 
 export const PhaseType = {
-  BLANK: "Blank Phase",
-  SETUP: "Setup Phase",
+  BREAK: "Break",
+  SETUP: "Setup/Onboarding",
   UNIVERSAL: "Universal Phase",
   SOCIETAL: "Societal Phase",
   GALACTIC: "Galactic Phase",  
   INDIVIDUAL: "Individual Phase",
   GENERATIONAL: "Generational Phase",
-  CONCLUSION: "Conclusion Phase"
+  CONCLUSION: "Conclusion"
 }

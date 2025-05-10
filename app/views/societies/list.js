@@ -21,7 +21,9 @@ export default function SocietyList({ episode }) {
           <div class="grid-two gap-tight">
             ${ actions[society.id].map( action => html`
               <div class="society-card__action card stack-tight" data-tags="${ action.tags.toList() }">
+                
                 <div class="society-card__resources stack">
+                  <div>Risk Level <strong>${action.risk}</strong></div>
                   ${ action.resources.map( (x, i) => html`<div>We use <span class="society-card__resource">${x.name}</span> to <strong>${ action.texts[i] }.</strong></div>` ).join("") }
                 </div>
               </div>

@@ -7,9 +7,6 @@ export default function PhaseEdit({ phase } = {}) {
   
   return html`
     <form hx-post="${phase.toURL()}" class="stack">
-      <label for="round">Round</label>
-      <input name="round" type="number" value="${phase.round}" min="-1" max="10"/>
-
       <label for="type">Phase Type</label>
       <select name="type">
         ${ Object.values(PhaseType).map( type => 
