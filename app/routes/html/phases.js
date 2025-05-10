@@ -15,6 +15,15 @@ const phases = express.Router();
 - [ ] DELETE  /episodes/:episode/phases/:phase;
 */
 
+phases.get("/episodes/:episodeId/phases/create", (req, res, next) => {
+  console.log("sdf");
+  const { episodeId } = req.params;
+  const episode = Episode.load(episodeId);
+  res.render(`phases/create`, { episode, layout: "none" });
+});
+
+
+
 phases.get("/episodes/:episodeId/phases/:phaseId/:view?", (req, res, next) => {
   const { episodeId, phaseId, view = "card" } = req.params;
 
@@ -23,6 +32,36 @@ phases.get("/episodes/:episodeId/phases/:phaseId/:view?", (req, res, next) => {
 
   res.render(`phases/${view}`, { phase, layout: "none" });
 });
+
+
+
+phases.post("/episodes/:episodeId/phases", (req, res, next) => {
+  const { episodeId } = req.params;
+  const { type, duration: { minutes, seconds }} = req.body;
+
+  const episode = Episode.load(episodeId);
+  
+  const update = {
+    type,
+    duration: parseInt(minutes) * 60 + parseInt(seconds)
+  };
+
+  const phase = new Phase(update);
+  episode.addPhase( phase );
+  episode.save();
+
+  //this is the way to "refresh" whatever page
+  //this was called from using ajax
+  const currentUrl = req.get("hx-current-url");
+  if (currentUrl) res.setHeader("HX-Location", currentUrl);
+  
+  res.sendStatus(200);
+
+  broadcast("phases");
+})
+
+
+
 
 phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   const { episodeId, phaseId } = req.params;
@@ -57,15 +96,13 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
       }
       
       break;
-    case "split":
-      const newGalacticPhase = new Phase({
-        type: PhaseType.GALACTIC,
-        round: phase.round,
-        duration: 180
-      })
-      episode.splitPhase(phase, newGalacticPhase);
-      episode.addRecord(new Record({ type: RecordType.EPISODE_CRISIS_MODE_BEGAN, description: `Round ${phase.round}`, value: true }));
-      // console.log( Phase.splitPhase(phase) );
+
+    case "add":
+      phase.duration += 60;
+      break;
+
+    case "subtract":
+      phase.duration = Math.max( phase.duration - 60, 0 );
       break;
   }
   //TODO: remove active doofer
@@ -78,11 +115,11 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   if (currentUrl) res.setHeader("HX-Location", currentUrl);
 
   broadcast("phases");
-  broadcast("societies");
   
   res.sendStatus(200);
 
 });
+
 
 phases.post("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   const { episodeId, phaseId } = req.params;
@@ -108,5 +145,23 @@ phases.post("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   res.sendStatus(200);
 })
 
+
+phases.delete("/episodes/:episodeId/phases/:phaseId", (req, res) => {
+  const { episodeId, phaseId } = req.params;
+
+  try {
+    const episode = Episode.load(episodeId);
+    episode.deletePhaseById( phaseId );
+    episode.save();
+  
+    const currentUrl = req.get("hx-current-url");
+    if (currentUrl) res.setHeader("HX-Location", currentUrl);
+    res.sendStatus(200);
+    broadcast("phases");
+  } catch (e) {
+    res.setHeader("HX-Trigger", "error");
+    res.sendStatus(400);
+  }
+});
 
 export default phases;

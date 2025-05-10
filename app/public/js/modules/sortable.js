@@ -50,7 +50,9 @@ export default function initSortables() {
 
       sortable.addEventListener("end", (evt) => {
         evt.from.dispatchEvent(new CustomEvent("sorted", { bubbles: true }));
-        evt.to.dispatchEvent(new CustomEvent("sorted", { bubbles: true }));
+
+        if( evt.from != evt.to )
+          evt.to.dispatchEvent(new CustomEvent("sorted", { bubbles: true }));
       });
     }
   });

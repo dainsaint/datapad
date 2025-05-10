@@ -126,6 +126,7 @@ time {
   color: var(--color-text);
   padding: 1rem;
   position: relative;
+  border-radius: .5rem;
 }
 
 a.card {

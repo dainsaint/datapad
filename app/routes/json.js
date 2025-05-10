@@ -18,9 +18,8 @@ jsonRouter.get("/episodes/active", (req, res) => {
   let episode = Ledger.getActiveEpisode();
 
   const formatResource = ({name,id, tags}) => ({
-    name,
     id,
-    vital: tags.has( ResourceTag.VITAL ),
+    name,
     exhausted: tags.has( ResourceTag.EXHAUSTED )
   })
 

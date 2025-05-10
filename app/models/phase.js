@@ -14,7 +14,7 @@ export default class Phase extends Model {
 
   tags = new Tags()
 
-  constructor({ type = PhaseType.BLANK, round = 0, duration = 0 }) {
+  constructor({ type = PhaseType.BLANK, round = 0, duration = 0 } = {}) {
     super();
     Object.assign( this, {type, round, duration} );
   }
@@ -41,42 +41,12 @@ export default class Phase extends Model {
   }
 
 
-  split() {
-    if( this.timeElapsed == 0 || this.timeElapsed >= this.duration) {
-      return [this];
-    }
-
-    const phaseA = new Phase({
-      type: this.type,
-      round: this.round,
-      duration: this.timeElapsed
-    })
-
-    const phaseB = new Phase({
-      type: this.type,
-      round: this.round,
-      duration: this.timeRemaining,
-    });
-
-    phaseA.timeElapsed = this.timeElapsed;
-
-    for( const tag of this.tags.values() ) {
-      phaseA.tags.add(tag);
-      phaseB.tags.add(tag);
-    }
-
-    return [phaseA, phaseB];
-  }
-
-
   tick(deltaTimeMS) {
     if (this.isPlaying) {
       this.timeElapsed += deltaTimeMS / 1000;
     }
   }
-
   
-
   get isPlaying() {
     return this.status === PhaseStatus.PLAYING;
   }
@@ -108,12 +78,12 @@ export const PhaseStatus = {
 }
 
 export const PhaseType = {
-  BLANK: "Blank Phase",
-  SETUP: "Setup Phase",
+  BREAK: "Break",
+  SETUP: "Setup/Onboarding",
   UNIVERSAL: "Universal Phase",
   SOCIETAL: "Societal Phase",
   GALACTIC: "Galactic Phase",  
   INDIVIDUAL: "Individual Phase",
   GENERATIONAL: "Generational Phase",
-  CONCLUSION: "Conclusion Phase"
+  CONCLUSION: "Conclusion"
 }

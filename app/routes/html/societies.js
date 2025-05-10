@@ -87,18 +87,9 @@ societies.delete("/episodes/:episodeId/societies/:societyId", (req, res) => {
 
   try {
     const episode = Episode.load(episodeId);
-    const society = episode.getSocietyById(societyId);
-
-    // society.communities.forEach( community => {
-    //   community.resources.forEach( resource => 
-    //     episode.removeResource(resource)
-    //   );
-
-    //   episode.removeCommunity(community);
-    // })
-
-    // episode.removeSociety(society);
-
+    episode.deleteSocietyById( societyId );
+    episode.save();
+  
     const currentUrl = req.get("hx-current-url");
     if (currentUrl) res.setHeader("HX-Location", currentUrl);
     res.sendStatus(200);
@@ -108,5 +99,8 @@ societies.delete("/episodes/:episodeId/societies/:societyId", (req, res) => {
     res.sendStatus(400);
   }
 });
+
+
+
 
 export default societies;

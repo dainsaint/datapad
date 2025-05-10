@@ -26,14 +26,16 @@ export default function ResourceEdit({ resource }) {
       </select>
       <input type="hidden" name="shouldAlterTags" value="true"/>
 
-      ${ Checkbox({ label: "★Vital Resource", name: `vital`, checked: resource.isVital, value: ResourceTag.VITAL }) }
-
       ${ Checkbox({ label: "Is Exhausted", name: `exhausted`, checked: resource.isExhausted, value: ResourceTag.EXHAUSTED }) }
 
       <div class="layout-row gap-tight">
-        <button>~ Update Resource</button>
+        <button><i class="fa fa-check-circle"></i> Update Resource</button>
         <button type="button" value="cancel">Cancel</button>
       </div>
+
+      <footer>
+        <a hx-delete="${ resource.toURL() }" hx-confirm="This will PERMANENTLY delete this resource!">Delete Resource</a>
+      </footer>
     </form>
   `;
 }

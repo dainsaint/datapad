@@ -5,6 +5,7 @@ import Model from "#database/model";
 import Ledger from "#database/ledger";
 import Record, { RecordType } from "#models/record";
 import Tags from "#core/tags";
+import { PhaseType } from "#models/phase";
 
 
 const loadedEpisodes = new Map();
@@ -41,6 +42,10 @@ export default class Episode extends Model {
     return (id) => this[key].find( element => element.id === id );
   }
 
+  #deleteById(key) {
+    return (id) => this[key].splice( this[key].findIndex( element => element.id === id ), 1 );
+  }
+
   addAction = this.#addTo("actions")
   addCommunity = this.#addTo("communities")
   addPhase = this.#addTo("phases")
@@ -60,6 +65,15 @@ export default class Episode extends Model {
   getSocietyById = this.#getById("societies")
   getRecordById = this.#getById("records")
 
+  deleteActionById = this.#deleteById("actions")
+  deleteCommunityById = this.#deleteById("communities")
+  deletePhaseById = this.#deleteById("phases")
+  deletePlayerById = this.#deleteById("players")
+  deleteResourceById = this.#deleteById("resources")
+  deleteSocietyById = this.#deleteById("societies")
+  deleteRecordById = this.#deleteById("records")
+
+
   get activePhases() {
     return this.phases.filter((phase) => !phase.isComplete)
   }
@@ -70,6 +84,7 @@ export default class Episode extends Model {
 
 
   save() {
+    this.sanitizePhases();
     const filename = database.getFilename({ type: "episodes", id: this.id});
     database.save(filename, this);
     Ledger.updateEpisode(this);
@@ -120,15 +135,6 @@ export default class Episode extends Model {
       .filter( action => action.societyId == societyId )
   }
 
-
-  beginCrisisMode() {
-    this.tags.add(EpisodeTags.CRISIS_MODE);
-  }
-
-  endCrisisMode() {
-    this.tags.delete(EpisodeTags.CRISIS_MODE);
-  }
-
   makeActive() {
     this.tags.add(EpisodeTags.ACTIVE);
   }
@@ -155,11 +161,48 @@ export default class Episode extends Model {
     return `/episodes/${this.id}` + append;
   }
 
+
+  getPhaseGroups() {
+    let round = 0;
+    const groups = this.phases.reduce( (result, phase ) => {
+      const isRound = [ PhaseType.UNIVERSAL, PhaseType.SOCIETAL, PhaseType.GALACTIC, PhaseType.INDIVIDUAL,  PhaseType.GENERATIONAL ].includes( phase.type );
+      const startsNewGroup = [ PhaseType.UNIVERSAL, PhaseType.BLANK, PhaseType.BREAK, PhaseType.CONCLUSION, PhaseType.SETUP ].includes( phase.type );
+  
+      if( result.length == 0 || startsNewGroup ) {
+        if( isRound ) round++;
+  
+        result.push({
+          isRound,
+          round,
+          phases: []
+        })
+  
+        
+      }
+      
+      result.at(-1).phases.push(phase);
+      return result;
+    }, [])
+
+    return groups;
+  }
+
+  sanitizePhases() {
+    const groups = this.getPhaseGroups();
+    let round = 0;
+    for( const group of groups ) {
+      for( const phase of group.phases ) {
+        if( phase.type == PhaseType.UNIVERSAL )
+          round++;
+
+        phase.round = round;
+      }
+    }
+  }
 }
 
 
 export const EpisodeTags = {
   ACTIVE: "active",
-  COMPLETE: "complete",
-  CRISIS_MODE: "crisis-mode"
+  COMPLETE: "complete"
 };

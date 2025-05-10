@@ -37,11 +37,12 @@ actions.post("/episodes/:episodeId/actions", (req, res, next) => {
 
 actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next) => {
   const { episodeId, actionId } = req.params;
-  const { resourceIds = [], text, commit } = req.body;
+  const { resourceIds = [], texts = [], risk, commit } = req.body;
+
+  console.log( req.body );
 
   const episode = Episode.load(episodeId);
   const action = episode.getActionById(actionId);
-  const otherActions = episode.actions.filter( other => other != action && other.societyId == action.societyId );
 
   //Ensure unique
   const resources = resourceIds
@@ -49,16 +50,12 @@ actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next
     .map( episode.getResourceById );
 
   action.setResources(resources);
-  action.text = text;
+  action.texts = texts;
+  action.risk = risk;
   
   if( commit )  {
     action.commit(); 
   }
-
-  otherActions.forEach( other => other.removeResources(resources) );
-  
-
-
 
   episode.save();
 
