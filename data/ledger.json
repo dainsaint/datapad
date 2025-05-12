@@ -26,153 +26,6 @@
       },
       "actions": [
         {
-          "_type": "Action",
-          "id": "pzr-F",
-          "round": 2,
-          "societyId": "et0k8",
-          "resourceIds": [
-            "HOzO6"
-          ],
-          "texts": [
-            "blarbhrbagr",
-            ""
-          ],
-          "risk": "1",
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "Mjt4w",
-          "round": 2,
-          "societyId": "V9xbw",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "iTkZy",
-          "round": 2,
-          "societyId": "Feay0",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "jk75L",
-          "round": 2,
-          "societyId": "e-JcG",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "VmMzV",
-          "round": 2,
-          "societyId": "yXHVO",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "zCz57",
-          "round": 1,
-          "societyId": "et0k8",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "Dh8rS",
-          "round": 1,
-          "societyId": "V9xbw",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "EWAp2",
-          "round": 1,
-          "societyId": "Feay0",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "Qkdxy",
-          "round": 1,
-          "societyId": "e-JcG",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Action",
-          "id": "jrAz3",
-          "round": 1,
-          "societyId": "yXHVO",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "result": [],
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        }
-      ],
-      "communities": [
-        {
           "_type": "Community",
           "id": "o7kHM",
           "societyId": "et0k8",
@@ -458,13 +311,13 @@
           "_type": "Phase",
           "id": "MFyrT",
           "type": "Societal Phase",
-          "status": "idle",
-          "round": 4,
+          "status": "complete",
+          "round": 2,
           "duration": 600,
-          "timeElapsed": 0,
+          "timeElapsed": 477.31299999999766,
           "actualTime": {
-            "s": "2025-05-10T16:31:20.841-04:00",
-            "e": "2025-05-10T16:31:20.841-04:00",
+            "s": "2025-04-20T15:28:15.501-04:00",
+            "e": "2025-05-10T13:48:47.649-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -477,13 +330,13 @@
           "_type": "Phase",
           "id": "dr96n",
           "type": "Galactic Phase",
-          "status": "idle",
-          "round": 4,
+          "status": "complete",
+          "round": 2,
           "duration": 720,
           "timeElapsed": 0,
           "actualTime": {
             "s": "2025-05-09T23:53:00.133-04:00",
-            "e": "2025-05-09T23:53:00.133-04:00",
+            "e": "2025-05-10T13:48:56.974-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -496,13 +349,13 @@
           "_type": "Phase",
           "id": "Z6ovG",
           "type": "Individual Phase",
-          "status": "idle",
-          "round": 4,
-          "duration": 600,
+          "status": "complete",
+          "round": 2,
+          "duration": 480,
           "timeElapsed": 0,
           "actualTime": {
             "s": "2025-05-10T12:06:16.286-04:00",
-            "e": "2025-05-10T12:06:16.286-04:00",
+            "e": "2025-05-10T13:49:04.987-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -515,13 +368,13 @@
           "_type": "Phase",
           "id": "f34as",
           "type": "Break",
-          "status": "idle",
-          "round": 4,
-          "duration": 600,
-          "timeElapsed": 0,
+          "status": "playing",
+          "round": 2,
+          "duration": 0,
+          "timeElapsed": 1114.2899999999943,
           "actualTime": {
-            "s": "2025-05-10T11:53:05.954-04:00",
-            "e": "2025-05-10T11:53:05.954-04:00",
+            "s": "2025-05-10T13:51:25.097-04:00",
+            "e": "2025-05-10T13:51:25.097-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -1066,355 +919,27 @@
         },
         {
           "_type": "Record",
-          "id": "Hv0J-",
-          "timestamp": "2025-05-10T13:56:36.339-04:00",
-          "type": "PhaseStarted",
-          "description": "Round 2: Universal Phase",
-          "value": "2025-05-10T13:56:36.339-04:00"
-        },
-        {
-          "_type": "Record",
-          "id": "P6HLZ",
-          "timestamp": "2025-05-10T13:56:38.842-04:00",
+          "id": "X-PS4",
+          "timestamp": "2025-05-10T17:48:47.649Z",
           "type": "PhaseEnded",
-          "description": "Round 2: Universal Phase",
-          "value": "2025-05-10T13:56:38.842-04:00"
+          "description": "Round 2: Societal Phase",
+          "value": "2025-05-10T17:48:47.649Z"
         },
         {
           "_type": "Record",
-          "id": "rFGAR",
-          "timestamp": "2025-05-10T13:56:38.843-04:00",
+          "id": "gPTcN",
+          "timestamp": "2025-05-10T17:48:47.650Z",
           "type": "PhaseDuration",
-          "description": "Round 2: Universal Phase",
-          "value": 0.041716666666666666
+          "description": "Round 2: Societal Phase",
+          "value": 28700.5358
         },
         {
           "_type": "Record",
-          "id": "mfpiA",
-          "timestamp": "2025-05-10T13:56:41.989-04:00",
+          "id": "VOG5w",
+          "timestamp": "2025-05-10T17:51:25.097Z",
           "type": "PhaseStarted",
-          "description": "Round 2: Universal Phase",
-          "value": "2025-05-10T13:56:41.989-04:00"
-        },
-        {
-          "_type": "Record",
-          "id": "wE8zl",
-          "timestamp": "2025-05-10T16:26:19.034-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Frog house",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "kHTVw",
-          "timestamp": "2025-05-10T16:26:19.035-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Toad Shack",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "yTiA9",
-          "timestamp": "2025-05-10T16:26:19.035-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Beetle Junkies",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "q9m-E",
-          "timestamp": "2025-05-10T16:26:19.035-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Better Burritos",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "EvRFq",
-          "timestamp": "2025-05-10T16:26:19.035-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Musical Chairs",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "Toawc",
-          "timestamp": "2025-05-10T16:26:21.020-04:00",
-          "type": "PhaseStarted",
-          "description": "Round 2: Universal Phase",
-          "value": "2025-05-10T16:26:21.020-04:00"
-        },
-        {
-          "_type": "Record",
-          "id": "yIcql",
-          "timestamp": "2025-05-10T18:07:51.603-04:00",
-          "type": "PhaseStarted",
-          "description": "Round 1: Universal Phase",
-          "value": "2025-05-10T18:07:51.603-04:00"
-        },
-        {
-          "_type": "Record",
-          "id": "cwmMe",
-          "timestamp": "2025-05-10T22:39:19.489-04:00",
-          "type": "PhaseStarted",
-          "description": "Round 1: Universal Phase",
-          "value": "2025-05-10T22:39:19.489-04:00"
-        },
-        {
-          "_type": "Record",
-          "id": "KOWL1",
-          "timestamp": "2025-05-10T22:39:33.551-04:00",
-          "type": "PhaseStarted",
-          "description": "Round 1: Universal Phase",
-          "value": "2025-05-10T22:39:33.551-04:00"
-        },
-        {
-          "_type": "Record",
-          "id": "TUUpU",
-          "timestamp": "2025-05-12T16:50:36.034-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Frog house",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "JOdMF",
-          "timestamp": "2025-05-12T16:50:36.035-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Toad Shack",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "kOJgc",
-          "timestamp": "2025-05-12T16:50:36.035-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Beetle Junkies",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "tS_09",
-          "timestamp": "2025-05-12T16:50:36.035-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Better Burritos",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "FV9cH",
-          "timestamp": "2025-05-12T16:50:36.035-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Musical Chairs",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "A_D4u",
-          "timestamp": "2025-05-12T16:55:27.588-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Frog house",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "mpo-P",
-          "timestamp": "2025-05-12T16:55:27.588-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Toad Shack",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "Lp0o4",
-          "timestamp": "2025-05-12T16:55:27.588-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Beetle Junkies",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "h-e--",
-          "timestamp": "2025-05-12T16:55:27.588-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Better Burritos",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "UUqOR",
-          "timestamp": "2025-05-12T16:55:27.588-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Musical Chairs",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "jjxtH",
-          "timestamp": "2025-05-12T16:55:33.143-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Frog house",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "ie1nB",
-          "timestamp": "2025-05-12T16:55:33.143-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Toad Shack",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "bXUgZ",
-          "timestamp": "2025-05-12T16:55:33.144-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Beetle Junkies",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "vl9qm",
-          "timestamp": "2025-05-12T16:55:33.144-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Better Burritos",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "k19Fa",
-          "timestamp": "2025-05-12T16:55:33.144-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Musical Chairs",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "P1Hb5",
-          "timestamp": "2025-05-12T16:55:35.244-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Frog house",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "L0DxG",
-          "timestamp": "2025-05-12T16:55:35.244-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Toad Shack",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "KRcpH",
-          "timestamp": "2025-05-12T16:55:35.244-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Beetle Junkies",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "HyD_o",
-          "timestamp": "2025-05-12T16:55:35.244-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Better Burritos",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "TSYDI",
-          "timestamp": "2025-05-12T16:55:35.244-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Musical Chairs",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "cT1da",
-          "timestamp": "2025-05-12T16:55:39.427-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Frog house",
-          "value": 1
-        },
-        {
-          "_type": "Record",
-          "id": "RORtD",
-          "timestamp": "2025-05-12T16:55:39.428-04:00",
-          "type": "ActionResources",
-          "description": "Frog house used cats to take action.",
-          "value": 1
-        },
-        {
-          "_type": "Record",
-          "id": "PGHEa",
-          "timestamp": "2025-05-12T16:55:39.428-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Toad Shack",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "TZvNQ",
-          "timestamp": "2025-05-12T16:55:39.428-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Beetle Junkies",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "gZVFx",
-          "timestamp": "2025-05-12T16:55:39.428-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Better Burritos",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "Svb-4",
-          "timestamp": "2025-05-12T16:55:39.428-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Musical Chairs",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "Sgi9r",
-          "timestamp": "2025-05-12T16:55:48.276-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Frog house",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "S_Idf",
-          "timestamp": "2025-05-12T16:55:48.276-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Toad Shack",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "mFXUs",
-          "timestamp": "2025-05-12T16:55:48.276-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Beetle Junkies",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "uZ6Y5",
-          "timestamp": "2025-05-12T16:55:48.276-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Better Burritos",
-          "value": 0
-        },
-        {
-          "_type": "Record",
-          "id": "fFnDq",
-          "timestamp": "2025-05-12T16:55:48.276-04:00",
-          "type": "SocietyActionsTaken",
-          "description": "Musical Chairs",
-          "value": 0
+          "description": "Round 2: Break",
+          "value": "2025-05-10T17:51:25.097Z"
         }
       ]
     }
