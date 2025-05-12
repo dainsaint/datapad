@@ -32,10 +32,13 @@ export default function initSortables() {
         return allowed.length ? allowed.includes(from.el.dataset.sortable) : true;
       };
 
+      const handle = sortable.dataset.sortableHandle;
+
       new Sortable(sortable, {
         group: { group, pull, put },
         filter: "[data-sortable-pinned]",
         animation: 150,
+        handle,
         chosenClass: "is-sortable-chosen",
         ghostClass: "is-sortable-ghost",
         dragClass: "is-sortable-drag",

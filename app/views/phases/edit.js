@@ -7,6 +7,9 @@ export default function PhaseEdit({ phase } = {}) {
   
   return html`
     <form hx-post="${phase.toURL()}" class="stack">
+      <h1>Edit phase</h1>
+      <p>Round ${ phase.round }</p>
+
       <label for="type">Phase Type</label>
       <select name="type">
         ${ Object.values(PhaseType).map( type => 

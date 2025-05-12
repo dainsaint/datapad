@@ -160,9 +160,21 @@ STATES TO DESIGN FOR
 
 
 .phase-playlist {
-  
+  user-select: none;
 }
 
+.phase-playlist .mode--editing {
+  display: none;
+}
+
+
+.phase-playlist.phase-playlist--editing .mode--default {
+  display: none;
+}
+
+.phase-playlist.phase-playlist--editing .mode--editing {
+  display: initial;
+}
 
 .phase-playlist__group {
   border: 1px solid var(--color-light);
@@ -198,7 +210,7 @@ STATES TO DESIGN FOR
   font-size: 1.25rem;
   display: flex;
   justify-content: space-between;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .phase-playlist__drag {
@@ -207,32 +219,18 @@ STATES TO DESIGN FOR
 }
 
 .phase-playlist__phase--current {
-  background: var(--color-mid);
+  background: var(--color-green);
   color: var(--color-bg);
   font-weight: bold;
 }
-.phase-playlist__phase--current.phase-playlist__phase--playing {
-  background: var(--color-green);
+
+.phase-playlist__round {
+  background: var(--color-light);
 }
 
-.phase-playlist__phase--current.phase-playlist__phase--imminent {
-  background: var(--color-orange);
+.phase-playlist__round .phase-playlist__phase .drag-handle {
+  display: none !important;
 }
-
-.phase-playlist__phase--current.phase-playlist__phase--complete {
-  background: var(--color-blue);
-}
-
-.phase-playlist__phase--current.phase-playlist__phase--overtime {
-  background: var(--color-red);
-}
-
-
-
-
-
-
-
 
 
 

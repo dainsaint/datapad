@@ -61,6 +61,28 @@ phases.post("/episodes/:episodeId/phases", (req, res, next) => {
 })
 
 
+phases.post("/episodes/:episodeId/phases/round", (req, res, next) => {
+  console.log("arlgknare");
+  const { episodeId } = req.params;
+  const episode = Episode.load(episodeId);
+
+  episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL, duration: 240 }))
+  episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,  duration: 10 * 60 }))
+  episode.addPhase(new Phase({ type: PhaseType.GALACTIC,  duration: 3 * 4 * 60 }))
+  episode.sanitizePhases();
+  episode.save();
+
+
+  const currentUrl = req.get("hx-current-url");
+  if (currentUrl) res.setHeader("HX-Location", currentUrl);
+  
+  res.sendStatus(200);
+
+  broadcast("phases");
+});
+
+
+
 
 
 phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {

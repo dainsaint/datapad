@@ -83,9 +83,9 @@ episodes.get("/episodes/:episodeId/facilitator/:societyId?", (req, res) => {
 });
 
 
-episodes.put("/episodes/:episodeId/phases", (req, res) => {
-  const { episodeId, view } = req.params;
-  const { phaseIds, increments } = req.body;
+episodes.put("/episodes/:episodeId/playlist", (req, res) => {
+  const { episodeId } = req.params;
+  const { phaseIds } = req.body;
   
   const inOrder = phaseIds.flat();
   const episode = Episode.load(episodeId);
@@ -95,13 +95,20 @@ episodes.put("/episodes/:episodeId/phases", (req, res) => {
 
   //this is the way to "refresh" whatever page
   //this was called from using ajax
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
+  // const currentUrl = req.get("hx-current-url");
+  // if (currentUrl) res.setHeader("HX-Location", currentUrl);
 
   broadcast("phases");
   
-  res.sendStatus(200);
+  res.render(`episodes/playlist`, { episode });
+  // res.sendStatus(200);
+});
 
+
+episodes.get("/episodes/:episodeId/playlist", (req, res) => {
+  const { episodeId } = req.params;
+  const episode = Episode.load(episodeId);
+  res.render(`episodes/playlist`, { episode });
 });
 
 
