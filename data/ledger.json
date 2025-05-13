@@ -26,6 +26,153 @@
       },
       "actions": [
         {
+          "_type": "Action",
+          "id": "pzr-F",
+          "round": 2,
+          "societyId": "et0k8",
+          "resourceIds": [
+            "HOzO6"
+          ],
+          "texts": [
+            "blarbhrbagr",
+            ""
+          ],
+          "risk": "1",
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "Mjt4w",
+          "round": 2,
+          "societyId": "V9xbw",
+          "resourceIds": [],
+          "texts": [],
+          "risk": 1,
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "iTkZy",
+          "round": 2,
+          "societyId": "Feay0",
+          "resourceIds": [],
+          "texts": [],
+          "risk": 1,
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "jk75L",
+          "round": 2,
+          "societyId": "e-JcG",
+          "resourceIds": [],
+          "texts": [],
+          "risk": 1,
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "VmMzV",
+          "round": 2,
+          "societyId": "yXHVO",
+          "resourceIds": [],
+          "texts": [],
+          "risk": 1,
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "zCz57",
+          "round": 1,
+          "societyId": "et0k8",
+          "resourceIds": [],
+          "texts": [],
+          "risk": 1,
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "Dh8rS",
+          "round": 1,
+          "societyId": "V9xbw",
+          "resourceIds": [],
+          "texts": [],
+          "risk": 1,
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "EWAp2",
+          "round": 1,
+          "societyId": "Feay0",
+          "resourceIds": [],
+          "texts": [],
+          "risk": 1,
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "Qkdxy",
+          "round": 1,
+          "societyId": "e-JcG",
+          "resourceIds": [],
+          "texts": [],
+          "risk": 1,
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "jrAz3",
+          "round": 1,
+          "societyId": "yXHVO",
+          "resourceIds": [],
+          "texts": [],
+          "risk": 1,
+          "result": [],
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        }
+      ],
+      "communities": [
+        {
           "_type": "Community",
           "id": "o7kHM",
           "societyId": "et0k8",
@@ -312,7 +459,7 @@
           "id": "MFyrT",
           "type": "Societal Phase",
           "status": "complete",
-          "round": 2,
+          "round": 4,
           "duration": 600,
           "timeElapsed": 477.31299999999766,
           "actualTime": {
@@ -331,7 +478,7 @@
           "id": "dr96n",
           "type": "Galactic Phase",
           "status": "complete",
-          "round": 2,
+          "round": 4,
           "duration": 720,
           "timeElapsed": 0,
           "actualTime": {
@@ -350,7 +497,7 @@
           "id": "Z6ovG",
           "type": "Individual Phase",
           "status": "complete",
-          "round": 2,
+          "round": 4,
           "duration": 480,
           "timeElapsed": 0,
           "actualTime": {
@@ -369,9 +516,9 @@
           "id": "f34as",
           "type": "Break",
           "status": "playing",
-          "round": 2,
+          "round": 4,
           "duration": 0,
-          "timeElapsed": 1114.2899999999943,
+          "timeElapsed": 1686.807999999982,
           "actualTime": {
             "s": "2025-05-10T13:51:25.097-04:00",
             "e": "2025-05-10T13:51:25.097-04:00",
@@ -920,15 +1067,15 @@
         {
           "_type": "Record",
           "id": "X-PS4",
-          "timestamp": "2025-05-10T17:48:47.649Z",
+          "timestamp": "2025-05-10T13:48:47.649-04:00",
           "type": "PhaseEnded",
           "description": "Round 2: Societal Phase",
-          "value": "2025-05-10T17:48:47.649Z"
+          "value": "2025-05-10T13:48:47.649-04:00"
         },
         {
           "_type": "Record",
           "id": "gPTcN",
-          "timestamp": "2025-05-10T17:48:47.650Z",
+          "timestamp": "2025-05-10T13:48:47.650-04:00",
           "type": "PhaseDuration",
           "description": "Round 2: Societal Phase",
           "value": 28700.5358
@@ -936,10 +1083,10 @@
         {
           "_type": "Record",
           "id": "VOG5w",
-          "timestamp": "2025-05-10T17:51:25.097Z",
+          "timestamp": "2025-05-10T13:51:25.097-04:00",
           "type": "PhaseStarted",
           "description": "Round 2: Break",
-          "value": "2025-05-10T17:51:25.097Z"
+          "value": "2025-05-10T13:51:25.097-04:00"
         }
       ]
     }

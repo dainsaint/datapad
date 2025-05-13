@@ -27,11 +27,7 @@ export default function EpisodePlaylist({ episode }) {
 
   return html`
     <div id="playlist" class="phase-playlist stack" 
-      hx-get="${ episode.toURL("/playlist") }"
-      hx-swap="morph:outerHTML"
-      hx-target="#playlist"
-      hx-trigger="sse:phases"
-      hx-disinherit="*"
+
       >
 
       <h1>Playlist</h1>

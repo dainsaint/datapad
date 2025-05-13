@@ -10,7 +10,7 @@ import { PhaseType } from "#models/phase";
 
 const loadedEpisodes = new Map();
 
-const database = new Database();
+const database = new Database({useOffshore: true});
 
 export default class Episode extends Model {
   name = "New Episode"

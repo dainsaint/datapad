@@ -3,6 +3,7 @@ import Server from "./app/app.js";
 import registry from "./app/database/registry.js";
 import { populateDummyData } from "./app/database/populate.js";
 
+
 registry.initialize();
 // populateDummyData();
 

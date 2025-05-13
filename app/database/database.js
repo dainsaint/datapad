@@ -5,15 +5,23 @@ import { rateLimit } from "../core/utils.js";
 
 import uuid from "#core/uuid";
 
+import Offshore from "#database/offshore";
+
+const offshore = new Offshore();
+
 export default class Database {
   id
   #root = "data"
   #diskWriteDelay = 2000
+  #offshoreDelay = 300000
+  useOffshore = false;
 
-  constructor({ root = "data", diskWriteDelay = 2000 } = {}) {
+  constructor({ root = "data", diskWriteDelay = 2000, offshoreDelay = 300000, useOffshore = false } = {}) {
     this.id = uuid(8);
     this.#root = root;
     this.#diskWriteDelay = diskWriteDelay;
+    this.#offshoreDelay = offshoreDelay;
+    this.useOffshore = useOffshore;
   }
   
 
@@ -57,10 +65,23 @@ export default class Database {
     return Serializer.deserialize(text);
   }
 
+  #offshore(filename, data) {    
+    try {
+      //save file
+      offshore.saveJSONToPath(filename, data);
+    } catch (e) {
+      console.log(e);
+      throw e;
+    }
+  }
+
   #rateLimitedSave = rateLimit(this.#save, this.#diskWriteDelay);
+  #rateLimitedOffshore = rateLimit(this.#offshore, this.#offshoreDelay);
 
   save(filename, data) {
     this.#rateLimitedSave(filename, data);
+    if( this.useOffshore )
+      this.#rateLimitedOffshore(filename, data);
   }
 
   load(filename) {

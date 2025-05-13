@@ -221,13 +221,165 @@
       "_type": "Phase",
       "id": "TW6li",
       "type": "Universal Phase",
-      "status": "complete",
+      "status": "idle",
       "round": 1,
       "duration": 240,
       "timeElapsed": 0,
       "actualTime": {
-        "s": "2025-04-16T18:12:31.858-04:00",
-        "e": "2025-04-17T20:38:44.818-04:00",
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-12T16:55:53.629-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "r5gob",
+      "type": "Societal Phase",
+      "status": "idle",
+      "round": 1,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-12T16:55:34.772-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "qveE2",
+      "type": "Galactic Phase",
+      "status": "idle",
+      "round": 1,
+      "duration": 720,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-12T16:55:35.243-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "ml6Q3",
+      "type": "Universal Phase",
+      "status": "idle",
+      "round": 2,
+      "duration": 240,
+      "timeElapsed": 19.018,
+      "actualTime": {
+        "s": "2025-05-10T16:26:21.020-04:00",
+        "e": "2025-05-12T16:55:36.225-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "BJ7S8",
+      "type": "Societal Phase",
+      "status": "idle",
+      "round": 2,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-12T16:55:36.563-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "ao-zv",
+      "type": "Galactic Phase",
+      "status": "idle",
+      "round": 2,
+      "duration": 720,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-10T22:35:11.677-04:00",
+        "e": "2025-05-12T16:55:37.008-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "iFRIY",
+      "type": "Individual Phase",
+      "status": "idle",
+      "round": 2,
+      "duration": 600,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-09T23:53:00.133-04:00",
+        "e": "2025-05-12T16:55:37.982-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "VZQ7m",
+      "type": "Break",
+      "status": "idle",
+      "round": 2,
+      "duration": 0,
+      "timeElapsed": 0,
+      "actualTime": {
+        "s": "2025-05-12T15:38:12.770-04:00",
+        "e": "2025-05-12T16:55:39.427-04:00",
+        "invalid": null,
+        "isLuxonInterval": true
+      },
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Phase",
+      "id": "tJXlr",
+      "type": "Universal Phase",
+      "status": "idle",
+      "round": 3,
+      "duration": 240,
+      "timeElapsed": 19.016,
+      "actualTime": {
+        "s": "2025-05-10T22:39:33.551-04:00",
+        "e": "2025-05-12T16:55:40.455-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -240,8 +392,8 @@
       "_type": "Phase",
       "id": "mBIUo",
       "type": "Societal Phase",
-      "status": "complete",
-      "round": 1,
+      "status": "idle",
+      "round": 3,
       "duration": 600,
       "timeElapsed": 1900.2769999999953,
       "actualTime": {
@@ -260,7 +412,7 @@
       "id": "KnY3K",
       "type": "Galactic Phase",
       "status": "complete",
-      "round": 1,
+      "round": 3,
       "duration": 720,
       "timeElapsed": 673.122999999999,
       "actualTime": {
@@ -276,34 +428,15 @@
     },
     {
       "_type": "Phase",
-      "id": "cSxlM",
-      "type": "Individual Phase",
-      "status": "complete",
-      "round": 1,
-      "duration": 600,
-      "timeElapsed": 734.1629999999991,
-      "actualTime": {
-        "s": "2025-04-20T15:16:14.219-04:00",
-        "e": "2025-04-20T15:16:15.964-04:00",
-        "invalid": null,
-        "isLuxonInterval": true
-      },
-      "tags": {
-        "_type": "Tags",
-        "value": []
-      }
-    },
-    {
-      "_type": "Phase",
-      "id": "ml6Q3",
+      "id": "vS8v2",
       "type": "Universal Phase",
-      "status": "complete",
-      "round": 2,
+      "status": "paused",
+      "round": 4,
       "duration": 240,
-      "timeElapsed": 5.003,
+      "timeElapsed": 1,
       "actualTime": {
-        "s": "2025-04-20T15:17:34.606-04:00",
-        "e": "2025-04-20T15:28:00.515-04:00",
+        "s": "2025-05-10T18:07:51.603-04:00",
+        "e": "2025-05-10T18:11:51.603-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -317,7 +450,7 @@
       "id": "MFyrT",
       "type": "Societal Phase",
       "status": "complete",
-      "round": 2,
+      "round": 4,
       "duration": 600,
       "timeElapsed": 477.31299999999766,
       "actualTime": {
@@ -336,7 +469,7 @@
       "id": "dr96n",
       "type": "Galactic Phase",
       "status": "complete",
-      "round": 2,
+      "round": 4,
       "duration": 720,
       "timeElapsed": 0,
       "actualTime": {
@@ -355,7 +488,7 @@
       "id": "Z6ovG",
       "type": "Individual Phase",
       "status": "complete",
-      "round": 2,
+      "round": 4,
       "duration": 480,
       "timeElapsed": 0,
       "actualTime": {
@@ -374,9 +507,9 @@
       "id": "f34as",
       "type": "Break",
       "status": "playing",
-      "round": 2,
+      "round": 4,
       "duration": 0,
-      "timeElapsed": 1114.2899999999943,
+      "timeElapsed": 1688.809999999982,
       "actualTime": {
         "s": "2025-05-10T13:51:25.097-04:00",
         "e": "2025-05-10T13:51:25.097-04:00",
@@ -925,15 +1058,15 @@
     {
       "_type": "Record",
       "id": "X-PS4",
-      "timestamp": "2025-05-10T17:48:47.649Z",
+      "timestamp": "2025-05-10T13:48:47.649-04:00",
       "type": "PhaseEnded",
       "description": "Round 2: Societal Phase",
-      "value": "2025-05-10T17:48:47.649Z"
+      "value": "2025-05-10T13:48:47.649-04:00"
     },
     {
       "_type": "Record",
       "id": "gPTcN",
-      "timestamp": "2025-05-10T17:48:47.650Z",
+      "timestamp": "2025-05-10T13:48:47.650-04:00",
       "type": "PhaseDuration",
       "description": "Round 2: Societal Phase",
       "value": 28700.5358
@@ -941,10 +1074,10 @@
     {
       "_type": "Record",
       "id": "VOG5w",
-      "timestamp": "2025-05-10T17:51:25.097Z",
+      "timestamp": "2025-05-10T13:51:25.097-04:00",
       "type": "PhaseStarted",
       "description": "Round 2: Break",
-      "value": "2025-05-10T17:51:25.097Z"
+      "value": "2025-05-10T13:51:25.097-04:00"
     }
   ]
 }
