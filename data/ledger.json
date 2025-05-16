@@ -106,11 +106,10 @@
           "round": 1,
           "societyId": "et0k8",
           "resourceIds": [
-            "JvqsG",
-            "QvweM"
+            "HOzO6"
           ],
           "texts": [
-            "",
+            "dddddd",
             ""
           ],
           "risk": "1",
@@ -575,6 +574,25 @@
           "actualTime": {
             "s": "2025-05-10T12:06:16.286-04:00",
             "e": "2025-05-10T13:49:04.987-04:00",
+            "invalid": null,
+            "isLuxonInterval": true
+          },
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Phase",
+          "id": "f34as",
+          "type": "Break",
+          "status": "playing",
+          "round": 4,
+          "duration": 0,
+          "timeElapsed": 1920.9579999999785,
+          "actualTime": {
+            "s": "2025-05-10T13:51:25.097-04:00",
+            "e": "2025-05-10T13:51:25.097-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
