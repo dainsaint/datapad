@@ -1,0 +1,52 @@
+import Database from "#database/database"
+import Model from "#database/model";
+import Gootenberg from "gootenberg";
+import { toHast } from "@googleworkspace/google-docs-hast";
+
+import credentials from "../../_config/secrets.json" with { type: "json" };
+
+const loadedDocuments = new Map();
+
+const database = new Database({useOffshore: false});
+
+export default class Document extends Model {
+  name
+  doc_id
+  content
+
+  constructor({ name, doc_id }) {
+    super();
+    this.name = name;
+    this.doc_id = doc_id;
+  }
+
+  async refresh() {
+    const goot = new Gootenberg();
+    await goot.auth.jwt( credentials.google );
+  
+    const doc = await goot.docs.get( this.doc_id );
+  
+    const tree = toHast(doc);
+    
+    this.content = tree;
+    this.save();
+  }
+
+  save() {
+    const filename = database.getFilename({ type: "documents", id: this.id});
+    database.save(filename, this);
+  }
+
+  static load(id) {
+    if (loadedDocuments.has(id)) {
+      return loadedDocuments.get(id);
+    }
+
+    const filename = database.getFilename({ type: "documents", id });
+    const document = database.load(filename);
+
+    loadedDocuments.set(id, document);
+    return document;
+  };
+
+}

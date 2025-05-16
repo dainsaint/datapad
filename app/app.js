@@ -45,6 +45,7 @@ export default class Server {
           const layoutPath = path.join( __dirname, `views/layouts/${layout}.js`);
           const Layout = await import(layoutPath);
           const layoutRendered = Layout.default( {}, content );
+          
           callback(null, layoutRendered);
         } else {
           callback(null, content);

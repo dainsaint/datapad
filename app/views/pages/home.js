@@ -93,7 +93,7 @@ export function styles() {
       }
 
       details a:hover {
-        background: var(--color-dark);
+        background: var(--color-tertiary);
       }
 
       details {

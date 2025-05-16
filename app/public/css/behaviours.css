@@ -5,31 +5,63 @@
 dialog {
   background: var(--color-bg);
   border: none;
+  border-radius: 1rem;
+  padding: 2rem;
   width: max-content;
-  margin-inline-end: 0;
+  /* margin-inline-end: 0;
   margin-block-end: 0;
-  margin-block-start: 0;
-  height: 100dvh;
+  margin-block-start: 0; */
+  /* height: 100dvh; */
   max-height: unset;
-  animation: slideOut 0.2s forwards;
+  animation: zoomOut 0.2s forwards;
   /* transition: display 0.2s step-end, overlay 0.2s step-end; */
   /* transition-behavior: allow-discrete; */
+
+  box-shadow: 2rem 2rem 5rem rgba(0,0,0,.3);
 }
 
 dialog[open] {
-  animation: slideIn 0.2s forwards;
+  animation: zoomIn 0.2s forwards;
 }
 
 dialog::backdrop,
 dialog + .backdrop {
   display: block;
-  background: rgba(0, 0, 0, 0.5);
+  
+  backdrop-filter: blur(10px);
 }
 
 dialog[open]::backdrop,
 dialog + .backdrop {
   animation: fadeIn 0.2s forwards;
 }
+
+#app {
+  background: var(--color-black)
+}
+
+.in-app {
+  transition: scale .2s;
+}
+
+#app:has(dialog[open]) .in-app {
+  scale: 0.97;
+}
+
+
+@keyframes zoomIn {
+  from { scale: .5; opacity: 0 }
+  to { scale: 1; opacity: 1; }
+}
+
+@keyframes zoomOut {
+  from { scale: 1; opacity: 1; }
+  to { scale: .5; opacity: 0 }
+}
+
+
+
+
 
 @keyframes slideIn {
   from { translate: 100% 0% }
@@ -71,5 +103,6 @@ dialog + .backdrop {
 }
 
 .card:has(.is-sortable-ghost) {
-  background: var(--color-mid);
+  border-width: 4px;
+  padding: calc( 1rem - 4px );
 }

@@ -11,6 +11,7 @@ import Resource from "#models/resource";
 import Society from "#models/society";
 import Ledger from "#database/ledger";
 import Serializer from "#database/serializer";
+import Document from "#models/document";
 
 
 function initialize() {
@@ -20,6 +21,7 @@ function initialize() {
   Serializer.register("Phase", Phase);
   Serializer.register("Player", Player);
   Serializer.register("Resource", Resource);
+  Serializer.register("Document", Document);
   Serializer.register("Episode", Episode);
   Serializer.register("Record", Record);
   Serializer.register("Society", Society);

@@ -2,8 +2,9 @@ import express from "express";
 import Action from "#models/action";
 import Episode from "#models/episode";
 import { broadcast } from "#routes/html/events";
-import { ActionBuilder } from "#views/societies/panel";
 import { filterUnique } from "#core/utils";
+
+import ActionEdit from "#views/actions/edit";
 
 const actions = express.Router();
 
@@ -13,7 +14,7 @@ actions.get("/episodes/:episodeId/actions", (req, res, next) => {
 
   const episode = Episode.load(episodeId);
 
-  res.send(ActionBuilder({ episode, societyId }));
+  res.send(ActionEdit({ episode, societyId }));
 });
 
 
@@ -59,7 +60,7 @@ actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next
 
   episode.save();
 
-  // res.send( ActionBuilder({ episode, society}) );
+  // res.send( ActionPanel({ episode, society}) );
   res.location(action.toURL());
   res.sendStatus(201);
   broadcast("actions");

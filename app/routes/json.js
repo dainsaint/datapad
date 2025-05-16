@@ -45,7 +45,6 @@ jsonRouter.get("/episodes/active", (req, res) => {
         id: communityId,
         resources: episode.resources.filter( resource => resource.communityId == communityId ).map( formatResource ) 
       })),
-
       actions: episode.getCurrentActionsForSocietyId( society.id ).map( ({round, tags, resourceIds, texts }) => ({
         round,
         components: resourceIds.map( (resourceId, i) => ({ 

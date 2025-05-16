@@ -1,6 +1,87 @@
-:root {
-  font-size: clamp(12px, 1vw, 16px);
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/montserrat/Montserrat-VariableFont_wght.ttf");
 }
+
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/montserrat/Montserrat-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Calvera;
+  src: url("./fonts/calvera/Calvera.ttf");
+}
+
+:root {
+  font-size: clamp(10px, 1vw, 14px);
+}
+
+
+
+.is-size-1 {
+  font-size: 3rem;
+}
+
+.is-size-2 {
+  font-size: 2.5rem;
+}
+
+.is-size-3 {
+  font-size: 2rem;
+}
+
+.is-size-4 {
+  font-size: 1.5rem;
+}
+
+.is-size-5 {
+  font-size: 1.25rem;
+}
+
+.is-size-6 {
+  font-size: 1rem;
+}
+
+.is-size-7 {
+  font-size: 0.75rem;
+}
+
+
+.is-uppercase {
+  text-transform: uppercase;
+}
+
+
+
+.text-titling {
+  font-family: "Montserrat";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.text-heading {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.text-body {
+  font-family: "Montserrat";
+  font-size: 1rem;
+}
+
+.text-detailing {
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 50%;
+}
+
+
 
 body {
   padding: 0px;
@@ -14,7 +95,7 @@ body {
 }
 
 .layout-app {
-  font-family: 'Neusa';
+  font-family: 'Montserrat';
   line-height: 1;
   text-transform: uppercase;
   top: 0px;
@@ -44,7 +125,14 @@ select {
   display: block;
   padding: .5rem;
   border: 1px solid var(--color-text);
+  border-radius: .25rem;
   width: 100%;
+
+  &:focus {
+    outline: none;
+    border-width: 4px;
+    padding: calc( .5rem - 3px );
+  }
 }
 
 input:user-invalid {
@@ -74,7 +162,7 @@ input[type="checkbox"]:checked::before {
 }
 
 input[type="checkbox"]+label {
-  color: var(--color-dark);
+  color: var(--color-tertiary);
 }
 
 .form-control {
@@ -99,34 +187,47 @@ a {
 }
 
 h1 {
-  font-weight: normal;
-  font-size: 3rem;
+  font-weight: 900;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-weight: normal;
+  font-weight: 700;
+  text-transform: capitalize;
   font-size: 2rem;
 }
 
 time {
   display: block;
-  font-weight: bold;
   font-size: 3rem;
+  font-family: 'Calvera';
 }
 
 .content {
   padding: 1rem 1rem 10rem 1rem;
 }
 
+.panel {
+  border-radius: .5rem;
+  background: var(--color-white);
+  overflow: hidden;
+  padding: 1rem;
+}
+
 
 .card {
-  --color-bg: var(--color-light);
+  --color-bg: var(--color-text);
   background: var(--color-bg);
   border: 1px solid var(--color-bg);
   color: var(--color-text);
   padding: 1rem;
   position: relative;
   border-radius: .5rem;
+  box-sizing: border-box;
+}
+
+.card-outline {
+  background: transparent;
 }
 
 a.card {
@@ -152,25 +253,69 @@ a.card:hover {
 
 
 .toolbar {
-  --color-toolbar-bg: var(--color-dark);
-  --color-toolbar-separator: var(--color-dark);
-  --color-toolbar-item-bg: var(--color-mid);
-  --color-toolbar-item-text: var(--color-dark);
-  --color-toolbar-active-bg: var(--color-bg);
-  --color-toolbar-active-text: var(--color-text);
+  --color-bg: var(--color-black);
+  --color-text: var(--color-white);
+  --color-primary: var(--color-blue);
+
+  background-color: var(--color-bg);
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 5rem;
+  width: min-content;
+  /* justify-content: center; */
+  /* writing-mode: sideways-rl; */
 }
 
 .toolbar a {
   display: flex;
-  background-color: var(--color-toolbar-item-bg);
-  color: var(--color-toolbar-item-text);
+  background-color: transparent;
   text-decoration: none;
   justify-content: center;
+  position: relative;
+  color: var(--color-text);
+  transition: left .2s ease-in-out;
 }
 
+
+
 .toolbar a.active {
-  background-color: var(--color-toolbar-active-bg);
-  color: var(--color-toolbar-active-text);
+  --offset: .8rem;
+  --radius: 2.2rem;
+  
+
+  --color-text: var(--color-black);
+  --color-primary: var(--color-white);
+
+  background: var(--color-primary);
+
+  border-start-start-radius: 3rem;
+  border-end-start-radius: 3rem;
+  position: relative;
+  inset-inline-start: var(--offset);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: var(--radius);
+    height: var(--radius);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &:not(:first-child)::before {
+    inset-block-end: calc(100% - 1px);
+    inset-inline-end: var(--offset);
+    background: radial-gradient(circle var(--radius) at 0 0px, transparent 0, transparent var(--radius), var(--color-primary) calc( var(--radius) + 1px ));
+  }
+
+  &::after {
+    inset-block-start: calc( 100% - 1px );
+    inset-inline-end: var(--offset);
+    background: radial-gradient(circle var(--radius) at 0 var(--radius), transparent 0, transparent var(--radius), var(--color-primary) calc( var(--radius) + 1px ));
+  }
+
 }
 
 .toolbar a:not(:has(svg, img)) {
@@ -189,18 +334,12 @@ a.card:hover {
   height: 2.5rem;
 }
 
-.toolbar.color-contrast {
-  --color-toolbar-bg: var(--color-bg);
-  --color-toolbar-separator: var(--color-text);
-  --color-toolbar-item-bg: var(--color-bg);
-  --color-toolbar-item-text: var(--color-text);
-  --color-toolbar-active-bg: var(--color-mid);
-}
+
 
 .ribbon {
   display: flex;
   width: 100%;
-  background-color: var(--color-toolbar-bg);
+  background-color: var(--color-bg);
 }
 
 .ribbon>* {
@@ -223,7 +362,7 @@ a.card:hover {
 .status-bar {
   background-color: var(--color-bg);
   color: var(--color-text);
-  height: 4rem;
+  height: 5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -251,16 +390,19 @@ a.card:hover {
 button {
   text-transform: inherit;
   font-size: inherit;
-  background: var(--color-bg-active);
-  color: var(--color-text-active);
-  padding: .5rem;
-  font-size: 1.5rem;
+
+  background: var(--color-primary);
+  color: var(--color-text);
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
   cursor: pointer;
-  border: 1px solid var(--color-bg-active);
+  border: none;
 }
 
 button:hover {
-  --color-bg-active: var(--color-blue);
+  --color-primary: var(--color-black);
+  --color-text: var(--color-white);
 }
 
 button[disabled] {
@@ -270,6 +412,8 @@ button[disabled] {
 
 .subtitle {
   font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: .3rem;
 }
 
 .annotation {
@@ -279,7 +423,7 @@ button[disabled] {
 
 .text {
   text-transform: none;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-size: 1.2rem;
   line-height: 1.2;
 }
@@ -319,20 +463,17 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
+
+  --color-primary: var(--color-red);
+  --color-text: var(--color-white );
+
   border: none;
-  width: 1.5rem;
+  /* width: 1.5rem; */
   height: 1.5rem;
-  padding: none;
+  padding: 1rem;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   translate: 50% -50%;
   z-index: 1;
-}
-
-.button-close:hover {
-  background: red;
-  color: var(--color-bg);
 }
 
 .button-close::after {
@@ -342,9 +483,25 @@ body {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fa-style-family);
+  font-size: 1.5rem;
 }
 
 .container {
   position: relative;
+}
+
+.full {
+  height: 100%;
+}
+
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  border-radius: 1rem;
+}
+
+td {
+  border: 1px solid var(--color-text);
+  padding: .5rem;
 }

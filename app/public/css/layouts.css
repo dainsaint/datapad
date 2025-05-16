@@ -175,9 +175,10 @@
 @media screen and (min-width: 500px) {
 .layout-toolbar {
   grid-template-columns: 4rem 1fr;
-  grid-template-areas: "toolbar statusbar"
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas: "statusbar statusbar"
   "toolbar main"
-  "toolbar main";
+  "footer footer";
 }
 }
 
@@ -194,6 +195,11 @@
   overflow: hidden;
 }
 
+.in-footer {
+  grid-area: footer;
+  overflow: hidden;
+}
+
 .layout-app {
   display: grid;
   grid-template-columns: 1fr;
@@ -206,4 +212,17 @@
 .in-app {
   grid-area: app;
   overflow: hidden;
+}
+
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
 }

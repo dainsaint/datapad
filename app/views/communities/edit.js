@@ -25,8 +25,8 @@ export default function CommunityEdit({ community }) {
         <button type="button" value="cancel">Cancel</button>
       </div>
 
-      <footer>
-        <a hx-delete="${ community.toURL() }">Delete Community</a>
+      <footer class="align-right">
+        <a class="color-danger" hx-delete="${ community.toURL() }" hx-confirm="Delete for sure?"><i class="fa fa-trash"></i> Delete Community</a>
       </footer>
     </form>
   `;

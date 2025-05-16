@@ -1,11 +1,11 @@
 import { DateTime, Duration, Interval } from "luxon";
-import Action from "#models/action";
 import Database from "#database/database"
 import Model from "#database/model";
 import Ledger from "#database/ledger";
 import Record, { RecordType } from "#models/record";
 import Tags from "#core/tags";
 import { PhaseType } from "#models/phase";
+import Document from "#models/document";
 
 
 const loadedEpisodes = new Map();
@@ -25,6 +25,7 @@ export default class Episode extends Model {
   resources = []
   societies = []
 
+  documentIds = []
 
   //TODO: Put these in a separate file?
   records = []
@@ -65,6 +66,7 @@ export default class Episode extends Model {
   getSocietyById = this.#getById("societies")
   getRecordById = this.#getById("records")
 
+
   deleteActionById = this.#deleteById("actions")
   deleteCommunityById = this.#deleteById("communities")
   deletePhaseById = this.#deleteById("phases")
@@ -74,12 +76,17 @@ export default class Episode extends Model {
   deleteRecordById = this.#deleteById("records")
 
 
+
   get activePhases() {
     return this.phases.filter((phase) => !phase.isComplete)
   }
 
   get currentPhase() {
     return this.phases.find( phase => !phase.isComplete );
+  }
+
+  get documents() {
+    return this.documentIds.map( id => Document.load(id) );
   }
 
 

@@ -16,6 +16,10 @@ return html`
       <div class="in-main">
         ${children}
       </div>
+
+      <div class="in-footer">
+        Hey now
+      </div>
     </section>
   `;
 }

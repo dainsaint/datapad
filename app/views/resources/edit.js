@@ -34,7 +34,9 @@ export default function ResourceEdit({ resource }) {
       </div>
 
       <footer>
-        <a hx-delete="${ resource.toURL() }" hx-confirm="This will PERMANENTLY delete this resource!">Delete Resource</a>
+        <a class="color-danger" hx-delete="${ resource.toURL() }" hx-confirm="This will PERMANENTLY delete this resource!">
+          <i class="fa fa-trash"></i> Delete Resource
+        </a>
       </footer>
     </form>
   `;
