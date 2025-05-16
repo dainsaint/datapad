@@ -44,11 +44,17 @@ jsonRouter.get("/episodes/active", (req, res) => {
         id: communityId,
         resources: episode.resources.filter( resource => resource.communityId == communityId ).map( formatResource ) 
       })),
-      actions: episode.getCurrentActionsForSocietyId( society.id ).map( ({round, text, resourceIds, tags}) => ({
+      actions: episode.getCurrentActionsForSocietyId( society.id ).map( ({round, tags, resourceIds, texts }) => ({
         round,
-        text,
+        components: resourceIds.map( (resourceId, i) => ({ 
+          resource: {
+            id: resourceId,
+            name: episode.getResourceById(resourceId).name 
+          },
+          text: texts[i], 
+          statement: `We use ${ episode.getResourceById(resourceId).name } to ${ texts[i] }`
+        })),
         voted: tags.has( ActionTags.COMMITTED ),
-        resources: resourceIds.map( id => episode.getResourceById(id) ).map( formatResource ) 
       })),
     }))
   }

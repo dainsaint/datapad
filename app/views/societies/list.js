@@ -16,15 +16,25 @@ export default function SocietyList({ episode }) {
           <h2 class="society-card__heading gap-tight">
             <span>${ Icon.forArchetype( society.archetype ) }</span>
             <span class="society-card__heading__name">${ society.name }</span>
-            <a class="society-card__edit" hx-get="${ society.toURL("/edit") }" hx-target="#dialog">${ Icon("pencil") }</a>
           </h2>
           <div class="grid-two gap-tight">
             ${ actions[society.id].map( action => html`
-              <div class="society-card__action card stack-tight" data-tags="${ action.tags.toList() }">
+              <div class="society-card__action card card-outline stack-tight" data-tags="${ action.tags.toList() }">
                 
-                <div class="society-card__resources stack">
-                  <div>Risk Level <strong>${action.risk}</strong></div>
-                  ${ action.resources.map( (x, i) => html`<div>We use <span class="society-card__resource">${x.name}</span> to <strong>${ action.texts[i] }.</strong></div>` ).join("") }
+                <div class="society-card__resources layout-row" style="gap: 1rem;">
+                  <div>
+                    <i class="fa fa-skull"></i> <strong>${action.risk}</strong>
+                  </div>
+
+                  <div class="stack">
+                    ${ action.resources.map( (x, i) => html`
+                      <div>
+                        We use 
+                        <span hx-get="${ x.toURL("/edit") }" hx-target="#dialog" class="society-card__resource">${x.name}</span>
+                        to 
+                        <strong>${ action.texts[i] || ".." }.</strong>
+                      </div>` ) }
+                  </div>
                 </div>
               </div>
             `) }

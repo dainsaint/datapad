@@ -1,22 +1,30 @@
 import { html } from "#core/utils";
-import Community from "#models/community";
+import Community, { CommunityVoice } from "#models/community";
 
 export default function CommunityCard({ community = new Community() } = {}) {
   return html`
-    <div hx-get="${ community.toURL('/card') }" hx-trigger="sse:resources, sse:societies">
+    <div hx-get="${community.toURL("/card")}" hx-trigger="sse:resources, sse:societies">
       <form 
         id="community-card-${community.id}" 
-        class="card stack droppable"
-        hx-patch="${ community.toURL() }"
-        hx-trigger="dropcomplete"
-        data-droppable="[data-drop-target]">
+        class="card card-fancy card-outline stack-loose droppable-target"
+        data-sortable-bounds
+        hx-post="${community.toURL("/resources")}"
+        hx-trigger="sorted"
+      >
+
         <header>
-          <h2><a hx-get="${ community.toURL('/edit') }" hx-target="#dialog" hx-swap="innerHTML" hx-trigger="click">${community.name}</a></h2>
-          <p class="subtitle">${community.voice}</h2>
+          <p class="text-detailing">${ community.voice }</p>
+          <p>
+            <a class="text-heading is-uppercase" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name}</a>
+          </p>
+          <p class="text-body is-uppercase">Kendra (they/them)</p>
+          <i class="community-card__voice fa ${community.voice == CommunityVoice.LEADER ? "fa-crown" : "fa-hand-fist"}"></i>
         </header>
 
-        <div class="grid-three" data-drop-target>
-          ${ community.resources.map(resource => CommunityResourceCard({ resource })) }
+        <div class="grid-small gap-tight" data-sortable="resources" data-sortable-expand>
+          ${community.resources.map((resource) =>
+            CommunityResourceCard({ resource })
+          )}
         </div>
       </form>
     </div>
@@ -25,18 +33,21 @@ export default function CommunityCard({ community = new Community() } = {}) {
 
 export function CommunityResourceCard({ resource }) {
   return html`
-    <a id="resource-card-${resource.id}" 
-      class="card color-contrast" 
-      draggable="true" 
+    <a
+      id="resource-card-${resource.id}"
+      class="card color-contrast resource-card"
 
-      hx-get="${resource.toURL('/edit')}"
+      hx-get="${resource.toURL("/edit")}"
       hx-target="#dialog"
       hx-trigger="click"
-      
-      data-draggable="[data-droppable]"
-      data-tags="${resource.tags.toList()}">
-      <h3>${resource.name}</h3>
-      <input type="hidden" name="resourceIds[]" value="${resource.id}"/>
+
+      data-tags="${resource.tags.toList()}"
+    >
+      <h3>
+        ${resource.name}
+      </h3>
+      <input type="hidden" name="resourceIds[]" value="${resource.id}" />
     </a>
-  `
+  `;
 }
+

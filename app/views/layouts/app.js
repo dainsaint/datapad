@@ -15,9 +15,8 @@ export default function AppLayout(props, children) {
       <link rel="stylesheet" href="/css/fonts/fontawesome/css/fontawesome.min.css" />
       <link rel="stylesheet" href="/css/fonts/fontawesome/css/solid.min.css" />
       <link rel="stylesheet" href="/css/fonts/fontawesome/css/regular.min.css" />
-    
+      <link rel="stylesheet" href="/css/fonts/fontawesome/css/brands.min.css" />
 
-      
       <link rel="favicon" href="/images/web-icon.svg"/>
       <link rel="manifest" href="/manifest.webmanifest">
 

@@ -11,7 +11,7 @@ export default function PhaseTime({ phase = new Phase() } = {}) {
     <div class="phase-time ${{ "phase-time--overtime": phase.timeElapsed > phase.duration + 5 }}" hx-get="${ phase.toURL('/time') }" hx-trigger="sse:phases">
       <header>
         <p class="subtitle">Round ${phase.round}</p>  
-        <h2>${phase.type}</h2>
+        <h2>${phase.type.toUpperCase()}</h2>
       </header>
       <time datetime="${phase.timeRemaining}s">${sign}${duration.toFormat('mm:ss')}</time>    
     </div>

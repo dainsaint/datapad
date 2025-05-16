@@ -30,6 +30,10 @@ export function html(strings, ...values) {
   }, "");
 }
 
+export function css(strings, ...values) {
+  return strings.join('');
+}
+
 
 export function pluralize( number, one, many = "" ) {
   return number == 1 

@@ -7,6 +7,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "concurrently \"nodemon index.js --ignore data/\" \"node dev.js\"",
+    "encrypt": "openssl aes-256-cbc -e -md sha256 -in ./_config/secrets.json -out ./_config/secrets.encrypted -k $DATAPAD_PASSPHRASE",
+    "decrypt": "openssl aes-256-cbc -d -md sha256 -in ./_config/secrets.encrypted -out ./_config/secrets.json -k $DATAPAD_PASSPHRASE",
+    "postinstall": "npm run decrypt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,11 +36,13 @@
     "nodemon": "^3.1.7"
   },
   "dependencies": {
+    "@googleworkspace/google-docs-hast": "^1.0.5",
     "dotenv": "^16.5.0",
     "express": "^4.21.1",
     "express-session": "^1.18.1",
     "express-validator": "^7.2.1",
     "get-port": "^7.1.0",
+    "gootenberg": "^1.7.0",
     "luxon": "^3.5.0",
     "octokit": "^4.1.3"
   }

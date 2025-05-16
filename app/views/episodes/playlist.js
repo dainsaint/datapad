@@ -31,7 +31,7 @@ export default function EpisodePlaylist({ episode }) {
       >
 
       <h1>Playlist</h1>
-      <p>${ episode.phases.length } phases<br/>${ totalTime.rescale().toHuman({ unitDisplay: "short"}) }</p>
+      <p class="text-body">Total time: ${ totalTime.rescale().toHuman({ unitDisplay: "short"}) }</p>
 
       
       <div class="layout-spread">

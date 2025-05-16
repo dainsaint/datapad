@@ -12,11 +12,13 @@ export default function EpisodeToolbar({ episode = new Episode() } = {}) {
       return '';
   }
   return html`
-    <nav class="toolbar ribbon color-contrast" hx-boost="true" hx-push-url="true">
-      <a id="nav-link-home" class="${ getActiveClass('/') }" href="/">${Icon("spop")}</a>
+    <nav class="toolbar ribbon" hx-boost="true" hx-push-url="true">
+      <!-- <a id="nav-link-home" class="${ getActiveClass('/') }" href="/">${Icon("spop")}</a> -->
       <a id="nav-link-gm" class="${ getActiveClass('gm') }" href="${ episode.toURL('/gm')}">${Icon("dice")}</a>
       <a id="nav-link-facilitator" class="${ getActiveClass('facilitator') }" href="${ episode.toURL('/facilitator') }">${Icon("planet")}</a>
-      <a id="nav-link-settings" class="${ getActiveClass('settings') }" href="${ episode.toURL('/settings') }">${Icon("download")}</a>
+      <a id="nav-link-documents" class="${ getActiveClass('documents') }" href="${ episode.toURL('/documents') }">${Icon("script")}</a>
+      <a id="nav-link-settings" class="${ getActiveClass('settings') }" href="${ episode.toURL('/settings') }">${Icon("gears")}</a>
+      
       <!-- <a id="nav-link-showrunner" class="${ getActiveClass('showrunner') }" href="${ episode.toURL('/showrunner') }">${Icon("chat")}</a> -->
     </nav>
   `;

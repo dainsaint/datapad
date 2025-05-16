@@ -1,11 +1,19 @@
 :root {
-  --color-dark: #939393;
-  --color-mid: #b2b2b2;
-  --color-light: #dcdcdc;
-  --color-text: black;
-  --color-bg: white;
-  --color-text-active: white;
-  --color-bg-active: black;
+  --color-bg: var(--color-white);
+  --color-text: var(--color-black);
+
+  --color-primary: #dcdcdc;
+  --color-secondary: #b2b2b2;
+  --color-tertiary: #939393;
+    
+  --color-black: #2F2F2F;
+  --color-white: #EFEFEF;
+
+
+
+  --color-text-active: var(--color-white);
+  --color-bg-active: var(--color-black);
+
   --color-error: red;
 
 
@@ -18,12 +26,15 @@
 
 
 .color-contrast {
-  --color-bg: black;
-  --color-text: white;
-  --color-bg-active: var(--color-mid);
+  --color-bg: var(--color-black);
+  --color-text: var(--color-white);
+  --color-bg-active: var(--color-secondary);
 }
 
-
 .color-danger {
-  --color-bg: var(--color-red);
+  --color-primary: var(--color-red);
+}
+
+a.color-danger {
+  color: var(--color-primary);
 }

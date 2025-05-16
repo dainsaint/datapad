@@ -9,21 +9,23 @@ export default function EpisodeGameMaster ({ episode } = {}) {
   const currentPhase = episode.currentPhase;
 
   const content = html`
-    <main class="content stack">
-      ${ PhaseControls({ phase: currentPhase }) }
-
-      <div class="grid-two">
-        <div class="stack">
-          <h1>Society Overview</h1>
-
-          <form hx-get="${ episode.toURL('/societies/create') }" hx-target="#dialog">
-            <button>${ Icon("planet") } new society</button>
-          </form>
-          ${SocietyList({ episode })}
-
-        </div>
-
+    <main class="grid-two" style="height: 100%;">
+      <div class="panel stack">
+        ${ PhaseControls({ phase: currentPhase }) }
         ${ EpisodePlaylist({ episode }) }      
+      </div>
+
+      <div class="stack panel">
+        <h1>Game State</h1>
+
+        <form hx-target="#dialog">
+          <button hx-get="${ episode.toURL('/resources/create') }" ><i class="fa fa-cube"></i> new resource</button>
+
+          <button hx-get="${ episode.toURL('/societies/create') }" >${ Icon("planet") } new society</button>
+          <button hx-get="${ episode.toURL('/communities/create') }" ><i class="fa fa-people-group"></i> new community</button>
+        </form>
+
+        ${SocietyList({ episode })}
       </div>
     </main>
   `;
