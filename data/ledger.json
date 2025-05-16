@@ -105,9 +105,14 @@
           "id": "zCz57",
           "round": 1,
           "societyId": "et0k8",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
+          "resourceIds": [
+            "HOzO6"
+          ],
+          "texts": [
+            "dddddd",
+            ""
+          ],
+          "risk": "1",
           "result": [],
           "tags": {
             "_type": "Tags",
@@ -518,7 +523,7 @@
           "status": "playing",
           "round": 4,
           "duration": 0,
-          "timeElapsed": 1686.807999999982,
+          "timeElapsed": 1920.9579999999785,
           "actualTime": {
             "s": "2025-05-10T13:51:25.097-04:00",
             "e": "2025-05-10T13:51:25.097-04:00",
