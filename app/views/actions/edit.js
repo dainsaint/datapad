@@ -1,55 +1,48 @@
 import { from, html } from "#core/utils";
 import { CommunityResourceCard } from "#views/communities/card";
 
-export default function ActionEdit({ episode, societyId } = {}) {
-  const actions = episode.getCurrentActionsForSocietyId( societyId );
-  const action = actions[0];
-
+export default function ActionEdit({ action } = {}) {
   return html`
-    <section class="stack" hx-get="${episode.toURL(`/actions?societyId=${societyId}`)}" hx-trigger="sse:actions">
-      
-      ${ action && html`
-        <form class="stack"
-          hx-post="${action.toURL("/resources")}"
-          hx-trigger="sorted,change,submit"
-          hx-swap="none"
-        >
-          <h1>Action</h1>
+    <section class="stack" hx-get="${ action.toURL("/edit") }" hx-trigger="sse:actions">
+      <form class="stack"
+        hx-post="${action.toURL("/resources")}"
+        hx-trigger="sorted,change,submit"
+        hx-swap="none"
+      >
+        <h1>Action</h1>
 
-          <div class="layout-row gap-tight">
-            <label for="risk" style=""><i class="fa fa-skull"></i></label>
-            <select class="is-uppercase is-size-6" name="risk" style="flex-basis: auto;">
-              ${ from(0).to(6).map( risk =>
-                  html`<option ${{value: risk, selected: risk == action.risk }}>Risk ${risk}</option>`
-                )}
-            </select>
+        <div class="layout-row gap-tight">
+          <label for="risk" style=""><i class="fa fa-skull"></i></label>
+          <select class="is-uppercase is-size-6" name="risk" style="flex-basis: auto;">
+            ${ from(0).to(6).map( risk =>
+                html`<option ${{value: risk, selected: risk == action.risk }}>Risk ${risk}</option>`
+              )}
+          </select>
 
-            <label for="advantage" style=""><i class="fa fa-heart"></i></label>
-            <select class="is-uppercase is-size-6"  name="advantage" style="flex-basis: auto;">
-              ${ from(0).to(2).map( advantage =>
-                  html`<option ${{value: advantage, selected: advantage == action.advantage }}>Adv ${advantage}</option>`
-                )}
-            </select>
+          <label for="advantage" style=""><i class="fa fa-heart"></i></label>
+          <select class="is-uppercase is-size-6"  name="advantage" style="flex-basis: auto;">
+            ${ from(0).to(2).map( advantage =>
+                html`<option ${{value: advantage, selected: advantage == action.advantage }}>Adv ${advantage}</option>`
+              )}
+          </select>
 
-            <label for="disadvantage" style=""><i class="fa fa-heart-broken"></i></label>
-            <select class="is-uppercase is-size-6"  name="disadvantage" style="flex-basis: auto;">
-              ${ from(0).to(2).map( disadvantage =>
-                  html`<option ${{value: disadvantage, selected: disadvantage == action.disadvantage }}>Dis ${disadvantage}</option>`
-                )}
-            </select>
-          </div>
+          <label for="disadvantage" style=""><i class="fa fa-heart-broken"></i></label>
+          <select class="is-uppercase is-size-6"  name="disadvantage" style="flex-basis: auto;">
+            ${ from(0).to(2).map( disadvantage =>
+                html`<option ${{value: disadvantage, selected: disadvantage == action.disadvantage }}>Dis ${disadvantage}</option>`
+              )}
+          </select>
+        </div>
 
-          <hr/>
+        <hr/>
 
-          <div class="stack-tight">
-            ${ action.resources.map( (resource, i) => ActionComponent({resource, text: action.texts[i], i: i}) ) }
-            ${ ActionComponent({ i: action.resources.length }) }
-          </div>
+        <div class="stack-tight">
+          ${ action.resources.map( (resource, i) => ActionComponent({resource, text: action.texts[i], i: i}) ) }
+          ${ ActionComponent({ i: action.resources.length }) }
+        </div>
 
-          <button name="commit" value="commit" ${{ disabled: action.resources.length == 0}}><i class="fa fa-check-circle"></i> Confirm Action?</button>
-        </form>
-      `}
-      
+        <button name="commit" value="commit" ${{ disabled: action.resources.length == 0}}><i class="fa fa-check-circle"></i> Confirm Action?</button>
+      </form>
     </section>
 
     <style>

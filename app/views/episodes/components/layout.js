@@ -5,7 +5,7 @@ import EpisodeToolbar from "./toolbar.js";
 export default function EpisodeLayout({ episode }, children) {
 return html`
     <section class="layout-toolbar">
-      <div class="in-toolbar">
+      <div class="in-toolbar" hx-swap="none">
         ${EpisodeToolbar({ episode })}
       </div>
 
@@ -13,7 +13,7 @@ return html`
         ${EpisodeStatusBar({ episode })}
       </div>
 
-      <div class="in-main">
+      <div id="main" class="in-main" hx-swap-oob="true" hx-disinherit="*">
         ${children}
       </div>
     </section>

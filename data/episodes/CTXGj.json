@@ -97,7 +97,8 @@
       "round": 1,
       "societyId": "et0k8",
       "resourceIds": [
-        "HOzO6"
+        "HOzO6",
+        "oxn07"
       ],
       "texts": [
         "dddddd",
@@ -129,9 +130,14 @@
       "id": "EWAp2",
       "round": 1,
       "societyId": "Feay0",
-      "resourceIds": [],
-      "texts": [],
-      "risk": 1,
+      "resourceIds": [
+        "oxn07"
+      ],
+      "texts": [
+        "",
+        ""
+      ],
+      "risk": "1",
       "result": [],
       "tags": {
         "_type": "Tags",
@@ -144,8 +150,10 @@
       "round": 1,
       "societyId": "e-JcG",
       "resourceIds": [],
-      "texts": [],
-      "risk": 1,
+      "texts": [
+        ""
+      ],
+      "risk": "1",
       "result": [],
       "tags": {
         "_type": "Tags",
@@ -761,17 +769,19 @@
     {
       "_type": "Resource",
       "id": "Ridpo",
-      "communityId": "B95dD",
+      "communityId": "o7kHM",
       "name": "dogs",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "exhausted"
+        ]
       }
     },
     {
       "_type": "Resource",
       "id": "HOzO6",
-      "communityId": "o7kHM",
+      "communityId": "B95dD",
       "name": "cats",
       "tags": {
         "_type": "Tags",
@@ -793,7 +803,7 @@
     {
       "_type": "Resource",
       "id": "QvweM",
-      "communityId": "o7kHM",
+      "communityId": "cV-Kn",
       "name": "arg",
       "tags": {
         "_type": "Tags",
@@ -803,7 +813,7 @@
     {
       "_type": "Resource",
       "id": "YaD-S",
-      "communityId": "kATHn",
+      "communityId": "R9tmF",
       "name": "shtrhstr",
       "tags": {
         "_type": "Tags",
@@ -823,7 +833,7 @@
     {
       "_type": "Resource",
       "id": "arNw1",
-      "communityId": "LiQVN",
+      "communityId": "kATHn",
       "name": "afergre",
       "tags": {
         "_type": "Tags",

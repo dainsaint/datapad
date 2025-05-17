@@ -18,7 +18,7 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
     <div id="episode-documents" class="layout-row full" style="overflow: hidden">
 
       <div class="society-panel__communities panel full" style="flex: 1 0 max-content;">
-        <div id="documents-toolbar">
+        <div id="documents-toolbar" hx-swap="none">
           ${ Toolbar({
             id: "document-toolbar",
             class: "toolbar-rounded",
@@ -30,13 +30,13 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
           })}
         </div>
 
-        <div id="documents-outline" class="stack scrollable text">
+        <div id="documents-outline" class="stack scrollable text" hx-swap-oob="true">
           <h1>${ currentDocument.name }</h1>
           ${ renderOutline( currentDocument.content ) }
         </div>
       </div>
 
-      <div id="documents-view" class="panel color-contrast full">
+      <div id="documents-view" class="panel color-contrast full" hx-swap-oob="true">
         <main class="content stack text scrollable">
           ${ DocumentView({document: currentDocument}) }
         </main>

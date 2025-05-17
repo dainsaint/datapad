@@ -8,16 +8,8 @@ dialog {
   border-radius: 1rem;
   padding: 2rem;
   min-width: 40vw;
-  /* width: max-content; */
-  /* margin-inline-end: 0;
-  margin-block-end: 0;
-  margin-block-start: 0; */
-  /* height: 100dvh; */
   max-height: unset;
   animation: zoomOut 0.2s forwards;
-  /* transition: display 0.2s step-end, overlay 0.2s step-end; */
-  /* transition-behavior: allow-discrete; */
-  backdrop-filter: blur(10px);
   box-shadow: 2rem 2rem 5rem rgba(0,0,0,.3);
 }
 
@@ -29,7 +21,7 @@ dialog::backdrop,
 dialog + .backdrop {
   display: block;
   background-color: color-mix( in srgb, var(--palette-fg), transparent 50% );
-
+  backdrop-filter: blur(5px);
 }
 
 dialog[open]::backdrop,
