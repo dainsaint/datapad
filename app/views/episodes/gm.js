@@ -18,9 +18,9 @@ export default function EpisodeGameMaster ({ episode } = {}) {
       <div class="stack panel">
         <h1>Game State</h1>
 
-        <form hx-target="#dialog">
+        <form class="layout-row gap-tight" hx-target="#dialog">
           <button hx-get="${ episode.toURL('/resources/create') }" ><i class="fa fa-cube"></i> new resource</button>
-
+          <div class="layout-fill"></div>
           <button hx-get="${ episode.toURL('/societies/create') }" >${ Icon("planet") } new society</button>
           <button hx-get="${ episode.toURL('/communities/create') }" ><i class="fa fa-people-group"></i> new community</button>
         </form>

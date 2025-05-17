@@ -37,6 +37,10 @@ export default class Document extends Model {
     database.save(filename, this);
   }
 
+  toURL(append = "") {
+    return `/episodes/${this.episode.id}/documents/${this.id}` + append;
+  }
+
   static load(id) {
     if (loadedDocuments.has(id)) {
       return loadedDocuments.get(id);

@@ -2,6 +2,7 @@ import { html } from "#core/utils";
 import Document from "#models/document";
 import Episode from "#models/episode";
 import DocumentView from "#views/documents/view";
+import Toolbar from "#views/ui/toolbar";
 import EpisodeLayout from "./components/layout.js";
 
 const icons = {
@@ -14,31 +15,32 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
 
 
   const content = html`
-    <div class="layout-row full" style="overflow: hidden">
+    <div id="episode-documents" class="layout-row full" style="overflow: hidden">
 
-    <div class="society-panel__communities panel full" style="flex: 1 0 max-content;">
-      <div>
-      <nav id="document-select" class="toolbar toolbar-rounded" hx-boost="true" hx-preserve data-selectable>
-        ${ episode.documents.map( (document) => html`
-          <a class="${{ active: currentDocument == document }}" href="${ episode.toURL('/documents/' + document.id) }" >
-            <span class="toolbar-link__bkg"></span>
-            <i class="fa ${icons[document.name]} icon is-size-3"></i>
-          </a>
-        `)}
-      </nav>
+      <div class="society-panel__communities panel full" style="flex: 1 0 max-content;">
+        <div id="documents-toolbar">
+          ${ Toolbar({
+            id: "document-toolbar",
+            class: "toolbar-rounded",
+            links: episode.documents.map( document => ({
+              href: episode.toURL("/documents/" + document.id ),
+              content: html`<i class="fa ${icons[document.name]} icon is-size-3"></i>`,
+              isActive: document == currentDocument
+            }))
+          })}
         </div>
 
-      <div class="stack scrollable text">
-        <h1>${ currentDocument.name }</h1>
-        ${ renderOutline( currentDocument.content ) }
+        <div id="documents-outline" class="stack scrollable text">
+          <h1>${ currentDocument.name }</h1>
+          ${ renderOutline( currentDocument.content ) }
+        </div>
       </div>
-    </div>
 
-    <div class="panel color-contrast full">
-      <main class="content stack text scrollable">
-        ${ DocumentView({document: currentDocument}) }
-      </main>
-    </div>
+      <div id="documents-view" class="panel color-contrast full">
+        <main class="content stack text scrollable">
+          ${ DocumentView({document: currentDocument}) }
+        </main>
+      </div>
 
     </div>
   `;

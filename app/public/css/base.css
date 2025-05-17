@@ -94,13 +94,6 @@ body {
   overscroll-behavior: none;
 }
 
-a {
-  color: var(--palette-support)
-}
-
-a:hover {
-  color: var(--palette-faint)
-}
 
 .layout-app {
   font-family: 'Montserrat';
@@ -331,7 +324,7 @@ a.card:hover {
 
 
 
-.toolbar a.active {
+.toolbar a.is-active {
   --palette-fg: var(--color-black);
 
   /* background: var(--palette-accent); */
@@ -389,7 +382,7 @@ a.card:hover {
   }
 }
 
-.toolbar a.active .toolbar-link__bkg {
+.toolbar a.is-active .toolbar-link__bkg {
   border-start-start-radius: 3rem;
   border-end-start-radius: 3rem;
   translate: var(--offset) 0%;
@@ -513,6 +506,14 @@ button[disabled] {
   /* font-family: sans-serif; */
   font-size: 1.2rem;
   line-height: 1.2;
+
+  a {
+    color: var(--palette-support)
+  }
+
+  a:hover {
+    color: var(--palette-faint)
+  }
 }
 
 .shadow {
@@ -539,6 +540,7 @@ body {
 .scrollable {
   max-height: 100%;
   overflow-y: auto;
+  scroll-behavior: smooth
 }
 
 
