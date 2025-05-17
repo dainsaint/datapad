@@ -1,40 +1,97 @@
 :root {
-  --color-bg: var(--color-white);
-  --color-text: var(--color-black);
-
-  --color-primary: #dcdcdc;
-  --color-secondary: #b2b2b2;
-  --color-tertiary: #939393;
-    
   --color-black: #2F2F2F;
   --color-white: #EFEFEF;
-
-
-
-  --color-text-active: var(--color-white);
-  --color-bg-active: var(--color-black);
-
-  --color-error: red;
-
 
   --color-blue: #3498db;
   --color-purple: #9b59b6;
   --color-green: #2ecc71;
   --color-red: #e74c3c;
   --color-orange: #f39c12;
+  --color-error: red;
+
+  --color-black: #494949;
+  --color-white: #E6DCD1;
+  --color-primary: #D7675C;
+  --color-support: #787671;
+  --color-faint: #96705B;
+
+  
+  --color-black: #1a1423;
+
+  --color-black: #231423;
+  --color-white: #d3bbb2;
+
+
+  --color-river-stone: #7AA590;
+  --color-common-ground: #635908;
+  --color-canary-diamond: #C4B045;
+  --color-red-sun-rising: #B22E02;
+  --color-huckleberry: #650807;
+  --color-strawberry-quartz: #B97E90;
+  --color-violet-strands: #A584AC;
+
+
+  --color-primary: #3D314A;
+  --color-support: #3D314A;
+
+
+  --palette-bg: var(--color-white);
+  --palette-fg: var(--color-black);
+  --palette-accent: var(--color-primary);
+  --palette-over-accent: var(--color-white);
+  --palette-support: var(--color-support);
+  --palette-faint: var(--color-faint);
 }
+
+
+
+.color-river-stone{
+  --palette-bg: var(--color-river-stone);
+  --palette-fg: var(--color-black);
+}
+
+.color-common-ground{
+  --palette-bg: var(--color-common-ground);
+  --palette-fg: var(--color-white);
+}
+
+.color-canary-diamond{
+  --palette-bg: var(--color-canary-diamond);
+  --palette-fg: var(--color-black);
+}
+
+.color-red-sun-rising{
+  --palette-bg: var(--color-red-sun-rising);
+  --palette-fg: var(--color-white);
+}
+
+.color-huckleberry{
+  --palette-bg: var(--color-huckleberry);
+  --palette-fg: var(--color-white);
+}
+
+.color-strawberry-quartz{
+  --palette-bg: var(--color-strawberry-quartz);
+  --palette-fg: var(--color-black);
+}
+
+.color-violet-strands{
+  --palette-bg: var(--color-violet-strands);
+  --palette-fg: var(--color-black);
+}
+
+
 
 
 .color-contrast {
-  --color-bg: var(--color-black);
-  --color-text: var(--color-white);
-  --color-bg-active: var(--color-secondary);
+  --palette-bg: var(--color-black);
+  --palette-fg: var(--color-white);
 }
 
 .color-danger {
-  --color-primary: var(--color-red);
+  --palette-accent: var(--color-red-sun-rising);
 }
 
 a.color-danger {
-  color: var(--color-primary);
+  color: var(--palette-accent);
 }

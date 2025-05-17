@@ -91,7 +91,7 @@ body {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  overscroll-behavior: none
+  overscroll-behavior: none;
 }
 
 .layout-app {
@@ -103,8 +103,8 @@ body {
   right: 0px;
   bottom: 0px;
   position: absolute;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--palette-bg);
+  color: var(--palette-fg);
 }
 
 p,
@@ -124,7 +124,9 @@ input[type="time"],
 select {
   display: block;
   padding: .5rem;
-  border: 1px solid var(--color-text);
+  background: var(--palette-bg);
+  color: var(--palette-fg);
+  border: 1px solid var(--palette-fg);
   border-radius: .25rem;
   width: 100%;
 
@@ -137,6 +139,10 @@ select {
 
 input:user-invalid {
   border-color: var(--color-error);
+}
+
+input::placeholder {
+  color: var(--palette-faint);
 }
 
 input[type="checkbox"] {
@@ -154,7 +160,7 @@ input[type="checkbox"]::before {
   height: .65em;
   transform: scale(0);
   transition: transform .2s ease-in-out;
-  box-shadow: inset 1em 1em var(--color-text);
+  box-shadow: inset 1em 1em var(--palette-fg);
 }
 
 input[type="checkbox"]:checked::before {
@@ -162,7 +168,7 @@ input[type="checkbox"]:checked::before {
 }
 
 input[type="checkbox"]+label {
-  color: var(--color-tertiary);
+  color: var(--palette-faint);
 }
 
 .form-control {
@@ -197,6 +203,11 @@ h2 {
   font-size: 2rem;
 }
 
+hr {
+  border-top: none;
+  border-bottom: 1px solid var(--palette-faint);
+}
+
 time {
   display: block;
   font-size: 3rem;
@@ -209,17 +220,16 @@ time {
 
 .panel {
   border-radius: .5rem;
-  background: var(--color-white);
+  background: var(--palette-bg);
+  color: var(--palette-fg);
   overflow: hidden;
   padding: 1rem;
 }
 
 
 .card {
-  --color-bg: var(--color-text);
-  background: var(--color-bg);
-  border: 1px solid var(--color-bg);
-  color: var(--color-text);
+  background: var(--palette-bg);
+  color: var(--palette-fg);
   padding: 1rem;
   position: relative;
   border-radius: .5rem;
@@ -228,6 +238,7 @@ time {
 
 .card-outline {
   background: transparent;
+  border: 1px solid var(--palette-fg);
 }
 
 a.card {
@@ -236,12 +247,11 @@ a.card {
 }
 
 a.card:hover {
-  border: 1px solid var(--color-text);
+  --palette-bg: var(--palette-support);
 }
 
 
 .card-fancy {
-  border-bottom-left-radius: .5rem;
   border-top-right-radius: 3rem;
 }
 
@@ -253,11 +263,11 @@ a.card:hover {
 
 
 .toolbar {
-  --color-bg: var(--color-black);
-  --color-text: var(--color-white);
-  --color-primary: var(--color-blue);
+  --palette-bg: var(--color-black);
+  --palette-fg: var(--color-white);
+  --palette-accent: var(--color-blue);
 
-  background-color: var(--color-bg);
+  background-color: var(--palette-bg);
 
   display: flex;
   flex-direction: column;
@@ -273,7 +283,7 @@ a.card:hover {
   text-decoration: none;
   justify-content: center;
   position: relative;
-  color: var(--color-text);
+  color: var(--palette-fg);
   transition: left .2s ease-in-out;
 }
 
@@ -284,10 +294,10 @@ a.card:hover {
   --radius: 2.2rem;
   
 
-  --color-text: var(--color-black);
-  --color-primary: var(--color-white);
+  --palette-fg: var(--color-black);
+  --palette-accent: var(--color-white);
 
-  background: var(--color-primary);
+  background: var(--palette-accent);
 
   border-start-start-radius: 3rem;
   border-end-start-radius: 3rem;
@@ -307,13 +317,13 @@ a.card:hover {
   &:not(:first-child)::before {
     inset-block-end: calc(100% - 1px);
     inset-inline-end: var(--offset);
-    background: radial-gradient(circle var(--radius) at 0 0px, transparent 0, transparent var(--radius), var(--color-primary) calc( var(--radius) + 1px ));
+    background: radial-gradient(circle var(--radius) at 0 0px, transparent 0, transparent var(--radius), var(--palette-accent) calc( var(--radius) + 1px ));
   }
 
   &::after {
     inset-block-start: calc( 100% - 1px );
     inset-inline-end: var(--offset);
-    background: radial-gradient(circle var(--radius) at 0 var(--radius), transparent 0, transparent var(--radius), var(--color-primary) calc( var(--radius) + 1px ));
+    background: radial-gradient(circle var(--radius) at 0 var(--radius), transparent 0, transparent var(--radius), var(--palette-accent) calc( var(--radius) + 1px ));
   }
 
 }
@@ -339,7 +349,7 @@ a.card:hover {
 .ribbon {
   display: flex;
   width: 100%;
-  background-color: var(--color-bg);
+  background-color: var(--palette-bg);
 }
 
 .ribbon>* {
@@ -360,8 +370,8 @@ a.card:hover {
 
 
 .status-bar {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--palette-bg);
+  color: var(--palette-fg);
   height: 5rem;
   display: flex;
   flex-direction: row;
@@ -391,18 +401,18 @@ button {
   text-transform: inherit;
   font-size: inherit;
 
-  background: var(--color-primary);
-  color: var(--color-text);
+  background: var(--palette-accent);
+  border: none;
+  color: var(--palette-over-accent);
   padding: .5rem 1rem;
   font-size: 1rem;
   border-radius: 2rem;
   cursor: pointer;
-  border: none;
 }
 
 button:hover {
-  --color-primary: var(--color-black);
-  --color-text: var(--color-white);
+  --palette-accent: var(--color-black);
+  --palette-fg: var(--color-white);
 }
 
 button[disabled] {
@@ -464,14 +474,14 @@ body {
   right: 0;
   top: 0;
 
-  --color-primary: var(--color-red);
-  --color-text: var(--color-white );
+  --palette-accent: var(--color-red-sun-rising);
+  --palette-fg: var(--color-white );
 
   border: none;
   /* width: 1.5rem; */
   height: 1.5rem;
   padding: 1rem;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); */
   translate: 50% -50%;
   z-index: 1;
 }
@@ -502,6 +512,6 @@ table {
 }
 
 td {
-  border: 1px solid var(--color-text);
+  border: 1px solid var(--palette-fg);
   padding: .5rem;
 }

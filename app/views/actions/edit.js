@@ -18,21 +18,21 @@ export default function ActionEdit({ episode, societyId } = {}) {
 
           <div class="layout-row gap-tight">
             <label for="risk" style=""><i class="fa fa-skull"></i></label>
-            <select class="text-detailing is-size-6" name="risk" style="flex-basis: auto;">
+            <select class="is-uppercase is-size-6" name="risk" style="flex-basis: auto;">
               ${ from(0).to(6).map( risk =>
                   html`<option ${{value: risk, selected: risk == action.risk }}>Risk ${risk}</option>`
                 )}
             </select>
 
             <label for="advantage" style=""><i class="fa fa-heart"></i></label>
-            <select class="text-detailing is-size-6"  name="advantage" style="flex-basis: auto;">
+            <select class="is-uppercase is-size-6"  name="advantage" style="flex-basis: auto;">
               ${ from(0).to(2).map( advantage =>
                   html`<option ${{value: advantage, selected: advantage == action.advantage }}>Adv ${advantage}</option>`
                 )}
             </select>
 
             <label for="disadvantage" style=""><i class="fa fa-heart-broken"></i></label>
-            <select class="text-detailing is-size-6"  name="disadvantage" style="flex-basis: auto;">
+            <select class="is-uppercase is-size-6"  name="disadvantage" style="flex-basis: auto;">
               ${ from(0).to(2).map( disadvantage =>
                   html`<option ${{value: disadvantage, selected: disadvantage == action.disadvantage }}>Dis ${disadvantage}</option>`
                 )}
@@ -54,7 +54,7 @@ export default function ActionEdit({ episode, societyId } = {}) {
 
     <style>
      .drop {
-        border: 2px dashed var(--color-text);
+        border: 2px dashed var(--palette-fg);
         padding: 1rem;
       }
     </style>

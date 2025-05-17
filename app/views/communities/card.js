@@ -6,7 +6,7 @@ export default function CommunityCard({ community = new Community() } = {}) {
     <div hx-get="${community.toURL("/card")}" hx-trigger="sse:resources, sse:societies">
       <form 
         id="community-card-${community.id}" 
-        class="card card-fancy card-outline stack-loose droppable-target"
+        class="card card-fancy ${ community.society.color } stack-loose droppable-target"
         data-sortable-bounds
         hx-post="${community.toURL("/resources")}"
         hx-trigger="sorted"
@@ -35,7 +35,7 @@ export function CommunityResourceCard({ resource }) {
   return html`
     <a
       id="resource-card-${resource.id}"
-      class="card color-contrast resource-card"
+      class="card color-contrast"
 
       hx-get="${resource.toURL("/edit")}"
       hx-target="#dialog"

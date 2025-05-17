@@ -39,8 +39,8 @@ export function styles() {
   return html`
     <style>
       #home {
-        --color-bg: black;
-        --color-text: white;
+        --palette-bg: black;
+        --palette-fg: white;
         background: black;
         color: white;
         display: grid;
@@ -93,7 +93,7 @@ export function styles() {
       }
 
       details a:hover {
-        background: var(--color-tertiary);
+        background: var(--palette-faint);
       }
 
       details {
@@ -105,8 +105,8 @@ export function styles() {
       }
 
       details[open] h2 {
-        background: var(--color-text);
-        color: var(--color-bg);
+        background: var(--palette-fg);
+        color: var(--palette-bg);
       }
 
       details > summary::-webkit-details-marker {

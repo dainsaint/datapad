@@ -32,7 +32,7 @@ export default function EpisodeDocuments ({ episode = new Episode()} = {}) {
       </div>
     </div>
 
-    <div class="panel">
+    <div class="panel color-contrast">
       <main class="content stack text scrollable">
         ${ episode.documents.map( document => DocumentView({document}) ) }
       </main>

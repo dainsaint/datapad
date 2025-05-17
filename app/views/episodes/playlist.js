@@ -8,7 +8,7 @@ export default function EpisodePlaylist({ episode }) {
       
 
   const renderRound = ({round, phases}) => html`
-    <details id="round-${ phases[0].id }"class="phase-playlist__round phase-playlist__group" ${{open: currentPhase.round == round}}>
+    <details id="round-${ phases[0].id }"class="phase-playlist__round" ${{open: currentPhase.round == round}}>
       <summary class="phase-playlist__header"><i class="fa fa-up-down drag-handle mode--editing"></i> Round ${round} (${ secondsToTime( phases.reduce( (sum, phase) => sum + phase.duration, 0 )) })</summary>
       ${ renderPhases({ phases }) }
     </details>`

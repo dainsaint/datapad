@@ -30,7 +30,7 @@ export default function SocietyList({ episode }) {
                     ${ action.resources.map( (x, i) => html`
                       <div>
                         We use 
-                        <span hx-get="${ x.toURL("/edit") }" hx-target="#dialog" class="society-card__resource">${x.name}</span>
+                        <span hx-get="${ x.toURL("/edit") }" hx-target="#dialog" class="society-card__resource ${society.color}">${x.name}</span>
                         to 
                         <strong>${ action.texts[i] || ".." }.</strong>
                       </div>` ) }

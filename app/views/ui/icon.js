@@ -23,7 +23,7 @@ Icon.forArchetype = function (archetype) {
     "the scholars": "scholars",
   };
 
-  const name = lookup[archetype.toLowerCase()] || "spop";
+  const name = lookup[archetype.toLowerCase?.()] || "spop";
 
   return Icon(name);
 };

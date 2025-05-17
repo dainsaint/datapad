@@ -140,7 +140,7 @@ STATES TO DESIGN FOR
 
 
 .phase-card[data-status="playing"] {
-  --color-bg: var(--color-blue);
+  --palette-bg: var(--color-blue);
 }
 
 .phase-card__edit {}
@@ -177,27 +177,21 @@ STATES TO DESIGN FOR
 }
 
 .phase-playlist__group {
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--palette-fg);
   border-radius: .5rem;
   overflow: hidden;
 }
 
+.phase-playlist__group:has(.phase-playlist__phase--current) {
+  border: none;
+}
 
-/* .phase-playlist__round[open] {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-} */
 
 .phase-playlist__header {
   padding: .5rem;
   font-weight: bold;
-  background: var(--color-primary);
   cursor: pointer;
 }
-
-/* .phase-playlist__round[open] .phase-playlist__header {
-  writing-mode: vertical-lr;
-} */
 
 .phase-playlist__phases {
   margin: 0px;
@@ -219,13 +213,14 @@ STATES TO DESIGN FOR
 }
 
 .phase-playlist__phase--current {
-  background: var(--color-green);
-  color: var(--color-bg);
+  background: var(--palette-support);
+  color: var(--palette-bg);
   font-weight: bold;
 }
 
-.phase-playlist__round {
-  background: var(--color-primary);
+.phase-playlist__round:has(.phase-playlist__phase--current) {
+  background: var(--palette-fg);
+  color: var(--palette-bg);
 }
 
 .phase-playlist__round .phase-playlist__phase .drag-handle {
@@ -258,20 +253,10 @@ STATES TO DESIGN FOR
 }
 
 .society-card__resource {
-  color: var(--color-white);
-  background: var(--color-text);
+  background: var(--palette-bg);
+  color: var(--palette-fg);
   padding: .25rem;
   font-weight: bold;
-}
-
-
-.community-card {
-  overflow: hidden;
-  position: relative;
-  background: transparent;
-  border: 1px solid var(--color-black);
-  border-radius: 1rem;
-  border-top-right-radius: 3rem;
 }
 
 .community-card__voice {

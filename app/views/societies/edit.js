@@ -1,16 +1,5 @@
 import { html } from "#core/utils";
-import Society from "#models/society";
-
-const archetypes = {
-  "the aesthetic": "The Aesthetic",
-  "the curious": "The Curious",
-  "the enterprise": "The Enterprise",
-  "the faithful": "The Faithful",
-  "the grounded": "The Grounded",
-  "the intrepid": "The Intrepid",
-  "the mighty": "The Mighty",
-  "the scholars": "The Scholars",
-};
+import Society, {SocietyArchetype, SocietyColor} from "#models/society";
 
 export default function SocietyEdit({ society = new Society() } = {}) {
   return html`
@@ -23,9 +12,17 @@ export default function SocietyEdit({ society = new Society() } = {}) {
 
       <label for="archetype">Society Archetype</label>
       <select name="archetype" placeholder="Select Archetype">
-      ${Object.entries(archetypes).map(
-        ([value, text]) =>
-          html`<option value="${value}" ${{selected: society.archetype == value}}>${text}</option>`
+      ${Object.entries(SocietyArchetype).map(
+        ([key, value]) =>
+          html`<option value="${value}" ${{selected: society.archetype == value}}>${value}</option>`
+      )}
+      </select>
+
+      <label for="archetype">Society Color</label>
+      <select name="color" placeholder="Select Color">
+      ${Object.entries(SocietyColor).map(
+        ([key, value]) =>
+          html`<option value="${value}" ${{selected: society.color == value}}>${key}</option>`
       )}
       </select>
 

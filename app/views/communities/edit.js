@@ -6,7 +6,7 @@ export default function CommunityEdit({ community }) {
   
   return html`
     <form class="stack" hx-patch="${ community.toURL() }">
-      <h1>Edit a community</h1>
+      <h1>Edit community</h1>
       <p class="text">Enter a name/archetype for this community</p>
       <label for="name">Name</label>
       <input name="name" autofocus autocapitalize="words" placeholder="New Community" value="${ community.name }"/>

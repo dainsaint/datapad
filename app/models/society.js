@@ -7,7 +7,7 @@ import Action from "#models/action";
 export default class Society extends Model {
   name
   archetype
-  planet
+  color
 
   tags = new Tags()
 
@@ -68,6 +68,18 @@ export const SocietyArchetype = {
   MIGHTY: "the mighty",
   SCHOLARS: "the scholars",
 };
+
+
+export const SocietyColor = {
+  RIVER_STONE: "color-river-stone",
+  COMMON_GROUND: "color-common-ground",
+  CANARY_DIAMOND: "color-canary-diamond",
+  RED_SUN_RISING: "color-red-sun-rising",
+  HUCKLEBERRY: "color-huckleberry",
+  STRAWBERRY_QUARTZ: "color-strawberry-quartz",
+  VIOLET_STRANDS: "color-violet-strands"
+};
+
 
 export const SocietyTags = {
   INSPIRED: "inspired"

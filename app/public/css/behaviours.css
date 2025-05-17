@@ -3,7 +3,7 @@
 */
 
 dialog {
-  background: var(--color-bg);
+  background: var(--palette-bg);
   border: none;
   border-radius: 1rem;
   padding: 2rem;
