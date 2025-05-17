@@ -38,6 +38,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
     societies: episode.societies.map( society => ({
       name: society.name,
       id: society.id,
+      archetype: society.archetype,
       communities: society.communities.map( ({ id: communityId, name, voice }) => ({
         name, 
         voice,
