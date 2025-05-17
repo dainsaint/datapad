@@ -173,13 +173,12 @@
 }
 
 @media screen and (min-width: 500px) {
-.layout-toolbar {
-  grid-template-columns: 4rem 1fr;
-  grid-template-rows: min-content 1fr min-content;
-  grid-template-areas: "statusbar statusbar"
-  "toolbar main"
-  "footer footer";
-}
+  .layout-toolbar {
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas: "statusbar statusbar"
+    "toolbar main"
+  }
 }
 
 .in-statusbar {

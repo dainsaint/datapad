@@ -9,7 +9,7 @@ export default function EpisodeGameMaster ({ episode } = {}) {
   const currentPhase = episode.currentPhase;
 
   const content = html`
-    <main class="grid-two" style="height: 100%;">
+    <main class="grid-large" style="height: 100%;">
       <div class="panel stack">
         ${ PhaseControls({ phase: currentPhase }) }
         ${ EpisodePlaylist({ episode }) }      

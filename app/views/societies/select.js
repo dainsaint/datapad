@@ -5,7 +5,7 @@ import Icon from "#views/ui/icon";
 export default function SocietySelect ({ episode = new Episode(), societyId = undefined } = {}) {
   const currentSociety = societyId ? episode.getSocietyById( societyId ) : episode.societies.at(0);
   return html`
-    <nav class="toolbar">
+    <nav id="society-select" class="toolbar toolbar-rounded" hx-preserve data-selectable>
       ${ episode.societies.map( (society) =>
         SocietyToolbarLink(episode, society, society == currentSociety)
       )}
@@ -16,6 +16,7 @@ export default function SocietySelect ({ episode = new Episode(), societyId = un
 function SocietyToolbarLink(episode, society, isActive) {
   return html`
     <a hx-boost="true" class="${isActive && 'active'}" href="${ episode.toURL('/facilitator/' + society.id) }">
+      <span class="toolbar-link__bkg"></span>
       ${Icon.forArchetype(society.archetype)}
     </a>
   `;

@@ -12,16 +12,19 @@ export default function EpisodeDocuments ({ episode = new Episode()} = {}) {
   }
 
   const content = html`
-    <div class="grid-two" style="height: 100%">
+    <div class="grid-large" style="height: 100%">
 
-    <div class="society-panel__communities layout-row panel">
-      <nav class="toolbar">
+    <div class="society-panel__communities  panel" style="flex: 1 1 auto;">
+      <div>
+      <nav class="toolbar toolbar-rounded">
         ${ episode.documents.map( (document, i) => html`
           <a hx-boost="true" class="${i == 0 && 'active'}"">
+            <span class="toolbar-link__bkg"></span>
             <i class="fa ${icons[document.name]} icon is-size-3"></i>
           </a>
         `)}
       </nav>
+        </div>
 
       <div class="stack scrollable">
         <h1>Outline</h1>

@@ -17,7 +17,6 @@ export default function SocietyPanel({ society = new Society()} = {}) {
 
      hx-get="${society.toURL("/panel")}" 
      hx-trigger="sse:societies" 
-     hx-swap="outerHTML" 
      hx-disinherit="hx-swap"
     >
 

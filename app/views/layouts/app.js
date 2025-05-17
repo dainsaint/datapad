@@ -29,14 +29,14 @@ export default function AppLayout(props, children) {
       <script type="module" src="/js/client.js"></script>
     </head>
 
-    <body hx-ext="morph">
-      <section id="app" class="layout-app" hx-ext="sse" sse-connect="/events">
+    <body hx-ext="morph" hx-ext="sse" sse-connect="/events">
+      <section id="app" class="layout-app" >
 
         <div class="in-app">
           ${children} 
         </div>
         
-        <dialog id="dialog" class="stack" 
+        <dialog id="dialog" class="stack in-dialog" 
           hx-on:htmx:load="this.showModal()" 
           onclick="if(event.target.value === 'cancel') this.close()">
         </dialog>

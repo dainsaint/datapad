@@ -8,7 +8,7 @@ export default function ResourceEdit({ resource }) {
 
   return html`
     <form class="stack" hx-patch=${ resource.toURL() }>
-      <h1>Edit a resource</h1>
+      <h1>Edit resource</h1>
       <p class="text">Enter a name for this resource</p>
       <label for="name">Name</label>
       <input name="name" autofocus autocapitalize="words" placeholder="New Resource" value="${ resource.name }"/>
@@ -33,7 +33,7 @@ export default function ResourceEdit({ resource }) {
         <button type="button" value="cancel">Cancel</button>
       </div>
 
-      <footer>
+      <footer class="align-right">
         <a class="color-danger" hx-delete="${ resource.toURL() }" hx-confirm="This will PERMANENTLY delete this resource!">
           <i class="fa fa-trash"></i> Delete Resource
         </a>

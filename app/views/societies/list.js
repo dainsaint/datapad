@@ -17,7 +17,7 @@ export default function SocietyList({ episode }) {
             <span>${ Icon.forArchetype( society.archetype ) }</span>
             <span class="society-card__heading__name">${ society.name }</span>
           </h2>
-          <div class="grid-two gap-tight">
+          <div class="grid-two gap-tight scrollable">
             ${ actions[society.id].map( action => html`
               <div class="society-card__action card card-outline stack-tight" data-tags="${ action.tags.toList() }">
                 

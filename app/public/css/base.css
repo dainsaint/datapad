@@ -78,7 +78,7 @@
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1rem;
-  letter-spacing: 50%;
+  letter-spacing: 25%;
 }
 
 
@@ -103,6 +103,11 @@ body {
   right: 0px;
   bottom: 0px;
   position: absolute;
+  background: var(--palette-bg);
+  color: var(--palette-fg);
+}
+
+dialog {
   background: var(--palette-bg);
   color: var(--palette-fg);
 }
@@ -262,6 +267,15 @@ a.card:hover {
 
 
 
+
+@property --radius {
+  syntax: '<number>';
+  /* <- defined as type number for the transition to work */
+  initial-value: 0rem;
+  inherits: false;
+}
+
+
 .toolbar {
   --palette-bg: var(--color-black);
   --palette-fg: var(--color-white);
@@ -271,38 +285,67 @@ a.card:hover {
 
   display: flex;
   flex-direction: column;
-  border-radius: 5rem;
+  
   width: min-content;
+  z-index: 0;
+
+  overflow: hidden;
+
   /* justify-content: center; */
   /* writing-mode: sideways-rl; */
 }
 
+.toolbar-rounded {
+  border-radius: 5rem;
+}
+
+
+
 .toolbar a {
+  --offset: .8rem;
+
+
   display: flex;
   background-color: transparent;
   text-decoration: none;
   justify-content: center;
   position: relative;
   color: var(--palette-fg);
-  transition: left .2s ease-in-out;
+  --palette-accent: var(--color-white);
+
+  transition: all .2s ease-in-out;
+
+  & > * {
+    z-index: 1;
+  }
 }
 
 
 
 .toolbar a.active {
-  --offset: .8rem;
-  --radius: 2.2rem;
-  
-
   --palette-fg: var(--color-black);
+
+  /* background: var(--palette-accent); */
+  padding-inline-start: calc( 2 * var(--offset) );
+}
+
+
+
+.toolbar a .toolbar-link__bkg {
+  --radius: 2.2rem;
   --palette-accent: var(--color-white);
 
-  background: var(--palette-accent);
+  position: absolute;
+  z-index: 0;
+  inset: 0px;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+  background-color: var(--palette-accent);
+  pointer-events: none;
 
-  border-start-start-radius: 3rem;
-  border-end-start-radius: 3rem;
-  position: relative;
-  inset-inline-start: var(--offset);
+  translate: 100% 0%;
+
+  transition: all .2s ease-in-out;
 
   &::before,
   &::after {
@@ -311,22 +354,46 @@ a.card:hover {
     width: var(--radius);
     height: var(--radius);
     pointer-events: none;
-    z-index: 2;
-  }
 
-  &:not(:first-child)::before {
-    inset-block-end: calc(100% - 1px);
-    inset-inline-end: var(--offset);
-    background: radial-gradient(circle var(--radius) at 0 0px, transparent 0, transparent var(--radius), var(--palette-accent) calc( var(--radius) + 1px ));
+    scale: 0;
+    transform-origin: var(--radius) 0;
+    transition: all .2s ease-in-out;
+
+    translate: -100% 0%;
   }
 
   &::after {
-    inset-block-start: calc( 100% - 1px );
+    inset-block-start: calc(100% - 1px);
     inset-inline-end: var(--offset);
-    background: radial-gradient(circle var(--radius) at 0 var(--radius), transparent 0, transparent var(--radius), var(--palette-accent) calc( var(--radius) + 1px ));
+    background: radial-gradient(circle var(--radius) at 0 var(--radius), transparent 0, transparent var(--radius), var(--palette-accent) calc(var(--radius) + 1px));
+  }
+
+  
+}
+
+.toolbar a:not(:first-child) .toolbar-link__bkg {
+  &::before {
+    inset-block-end: calc(100% - 1px);
+    inset-inline-end: var(--offset);
+    background: radial-gradient(circle var(--radius) at 0 0px, transparent 0, transparent var(--radius), var(--palette-accent) calc(var(--radius) + 1px));
+    transform-origin: var(--radius) var(--radius);
+  }
+}
+
+.toolbar a.active .toolbar-link__bkg {
+  border-start-start-radius: 3rem;
+  border-end-start-radius: 3rem;
+  translate: var(--offset) 0%;
+
+  &::before,
+  &::after {
+    scale: 1;
+    translate: 0% 0%;
   }
 
 }
+
+
 
 .toolbar a:not(:has(svg, img)) {
   font-size: 1.5rem;
@@ -348,6 +415,7 @@ a.card:hover {
 
 .ribbon {
   display: flex;
+  flex-direction: row;
   width: 100%;
   background-color: var(--palette-bg);
 }
@@ -423,7 +491,7 @@ button[disabled] {
 .subtitle {
   font-weight: bold;
   font-size: 1rem;
-  letter-spacing: .3rem;
+  letter-spacing: 25%;
 }
 
 .annotation {
