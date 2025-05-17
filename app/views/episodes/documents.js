@@ -1,24 +1,26 @@
 import { html } from "#core/utils";
+import Document from "#models/document";
 import Episode from "#models/episode";
 import DocumentView from "#views/documents/view";
 import EpisodeLayout from "./components/layout.js";
 
+const icons = {
+  Script: "fa-scroll",
+  Rules: "fa-scale-balanced"
+}
 
-export default function EpisodeDocuments ({ episode = new Episode()} = {}) {
+export default function EpisodeDocuments ({ episode = new Episode(), documentId = undefined} = {} ) {
+  const currentDocument = documentId ? Document.load(documentId) : episode.documents.at(0);
 
-  const icons = {
-    Script: "fa-scroll",
-    Rules: "fa-scale-balanced"
-  }
 
   const content = html`
-    <div class="grid-large" style="height: 100%">
+    <div class="layout-row full" style="overflow: hidden">
 
-    <div class="society-panel__communities  panel" style="flex: 1 1 auto;">
+    <div class="society-panel__communities panel full" style="flex: 1 0 max-content;">
       <div>
-      <nav class="toolbar toolbar-rounded">
-        ${ episode.documents.map( (document, i) => html`
-          <a hx-boost="true" class="${i == 0 && 'active'}"">
+      <nav id="document-select" class="toolbar toolbar-rounded" hx-boost="true" hx-preserve data-selectable>
+        ${ episode.documents.map( (document) => html`
+          <a class="${{ active: currentDocument == document }}" href="${ episode.toURL('/documents/' + document.id) }" >
             <span class="toolbar-link__bkg"></span>
             <i class="fa ${icons[document.name]} icon is-size-3"></i>
           </a>
@@ -26,18 +28,15 @@ export default function EpisodeDocuments ({ episode = new Episode()} = {}) {
       </nav>
         </div>
 
-      <div class="stack scrollable">
-        <h1>Outline</h1>
-        ${ episode.documents.map( document => html`
-          <h2>${ document.name }</h2>
-          ${ renderOutline( document.content ) }
-        `) }
+      <div class="stack scrollable text">
+        <h1>${ currentDocument.name }</h1>
+        ${ renderOutline( currentDocument.content ) }
       </div>
     </div>
 
-    <div class="panel color-contrast">
+    <div class="panel color-contrast full">
       <main class="content stack text scrollable">
-        ${ episode.documents.map( document => DocumentView({document}) ) }
+        ${ DocumentView({document: currentDocument}) }
       </main>
     </div>
 

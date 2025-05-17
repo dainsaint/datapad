@@ -2,7 +2,6 @@ import { html } from "#core/utils";
 
 export default function DocumentView({ document }) {
   return html`
-    <h1>${ document.name }</h1>
     ${renderNode( document.content )}
   `
 }

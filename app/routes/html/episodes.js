@@ -83,6 +83,26 @@ episodes.get("/episodes/:episodeId/facilitator/:societyId?", (req, res) => {
 });
 
 
+episodes.get("/episodes/:episodeId/documents/:documentId?", (req, res) => {
+  const { episodeId, documentId } = req.params;
+  
+  const episode = Episode.load(episodeId);
+
+  req.session.document ??= {}  
+
+  if( !documentId && episode.documents.length ) {
+    req.session.document.documentId ??= episode.documents.at(0)?.id;
+    res.redirect(
+      `/episodes/${episodeId}/documents/${req.session.document.documentId}`
+    );
+  } else {
+    req.session.document.documentId = documentId;
+    res.render(`episodes/documents`, { episode, documentId, layout: "app" });
+  }
+  
+});
+
+
 episodes.put("/episodes/:episodeId/playlist", (req, res) => {
   const { episodeId } = req.params;
   const { phaseIds } = req.body;
