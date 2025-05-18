@@ -25,11 +25,8 @@ actions.post("/episodes/:episodeId/actions", (req, res, next) => {
   const episode = Episode.load(episodeId);  
   const action = new Action({ society: societyId });
   episode.addAction(action);
-
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
   
-  res.location( action.toURL() )
+  // res.location( action.toURL() )
   res.sendStatus(201);
 
   broadcast("actions");

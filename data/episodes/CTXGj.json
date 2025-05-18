@@ -82,9 +82,13 @@
       "id": "VmMzV",
       "round": 2,
       "societyId": "yXHVO",
-      "resourceIds": [],
-      "texts": [],
-      "risk": 1,
+      "resourceIds": [
+        "KB9VT"
+      ],
+      "texts": [
+        ""
+      ],
+      "risk": "1",
       "result": [],
       "tags": {
         "_type": "Tags",
@@ -97,11 +101,11 @@
       "round": 1,
       "societyId": "et0k8",
       "resourceIds": [
-        "HOzO6",
-        "oxn07"
+        "HOzO6"
       ],
       "texts": [
         "dddddd",
+        "",
         ""
       ],
       "risk": "1",
@@ -285,6 +289,72 @@
         "_type": "Tags",
         "value": []
       }
+    },
+    {
+      "_type": "Community",
+      "id": "ssnLF",
+      "societyId": "Feay0",
+      "name": "baba",
+      "voice": "leader",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Community",
+      "id": "FRomU",
+      "societyId": "Feay0",
+      "name": "gaga",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Community",
+      "id": "NzLOs",
+      "societyId": "Feay0",
+      "name": "dada",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Community",
+      "id": "NVQbL",
+      "societyId": "Feay0",
+      "name": "popo",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Community",
+      "id": "u0fa0",
+      "societyId": "e-JcG",
+      "name": "skreeee",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Community",
+      "id": "jaCtF",
+      "societyId": "yXHVO",
+      "name": "big ol shair",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
     }
   ],
   "phases": [
@@ -330,13 +400,13 @@
       "_type": "Phase",
       "id": "r5gob",
       "type": "Societal Phase",
-      "status": "idle",
+      "status": "complete",
       "round": 1,
-      "duration": 600,
+      "duration": 900,
       "timeElapsed": 0,
       "actualTime": {
         "s": "2025-05-09T23:53:00.133-04:00",
-        "e": "2025-05-17T08:17:07.574-04:00",
+        "e": "2025-05-18T09:45:37.996-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -349,13 +419,13 @@
       "_type": "Phase",
       "id": "qveE2",
       "type": "Galactic Phase",
-      "status": "idle",
+      "status": "complete",
       "round": 1,
       "duration": 720,
       "timeElapsed": 0,
       "actualTime": {
         "s": "2025-05-09T23:53:00.133-04:00",
-        "e": "2025-05-17T08:17:07.991-04:00",
+        "e": "2025-05-18T09:46:34.443-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -368,13 +438,13 @@
       "_type": "Phase",
       "id": "ml6Q3",
       "type": "Universal Phase",
-      "status": "idle",
+      "status": "complete",
       "round": 2,
       "duration": 240,
       "timeElapsed": 19.018,
       "actualTime": {
         "s": "2025-05-10T16:26:21.020-04:00",
-        "e": "2025-05-17T08:14:33.197-04:00",
+        "e": "2025-05-18T10:05:55.727-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -387,13 +457,13 @@
       "_type": "Phase",
       "id": "BJ7S8",
       "type": "Societal Phase",
-      "status": "idle",
+      "status": "paused",
       "round": 2,
       "duration": 600,
-      "timeElapsed": 0,
+      "timeElapsed": 18.013,
       "actualTime": {
-        "s": "2025-05-09T23:53:00.133-04:00",
-        "e": "2025-05-17T08:14:33.549-04:00",
+        "s": "2025-05-18T10:06:27.460-04:00",
+        "e": "2025-05-18T10:16:27.460-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -412,7 +482,7 @@
       "timeElapsed": 0,
       "actualTime": {
         "s": "2025-05-10T22:35:11.677-04:00",
-        "e": "2025-05-17T08:14:33.907-04:00",
+        "e": "2025-05-18T10:05:52.104-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -431,7 +501,7 @@
       "timeElapsed": 0,
       "actualTime": {
         "s": "2025-05-09T23:53:00.133-04:00",
-        "e": "2025-05-17T08:14:34.278-04:00",
+        "e": "2025-05-18T10:03:33.642-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -450,7 +520,7 @@
       "timeElapsed": 0,
       "actualTime": {
         "s": "2025-05-12T15:38:12.770-04:00",
-        "e": "2025-05-17T08:14:34.656-04:00",
+        "e": "2025-05-18T10:03:34.093-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -781,7 +851,7 @@
     {
       "_type": "Resource",
       "id": "HOzO6",
-      "communityId": "B95dD",
+      "communityId": "cV-Kn",
       "name": "cats",
       "tags": {
         "_type": "Tags",
@@ -823,7 +893,7 @@
     {
       "_type": "Resource",
       "id": "JvqsG",
-      "communityId": "Qw0Xm",
+      "communityId": "B95dD",
       "name": "righteous anger",
       "tags": {
         "_type": "Tags",
@@ -833,7 +903,7 @@
     {
       "_type": "Resource",
       "id": "arNw1",
-      "communityId": "kATHn",
+      "communityId": "LiQVN",
       "name": "afergre",
       "tags": {
         "_type": "Tags",
@@ -843,7 +913,7 @@
     {
       "_type": "Resource",
       "id": "BqPmG",
-      "communityId": "UDMgC",
+      "communityId": "kATHn",
       "name": "asdfaergre",
       "tags": {
         "_type": "Tags",
@@ -855,6 +925,66 @@
       "id": "oxn07",
       "communityId": "G_9_r",
       "name": "blergh",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "zj1sr",
+      "communityId": "ssnLF",
+      "name": "hey now",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "h463E",
+      "communityId": "FRomU",
+      "name": "new",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "wRedp",
+      "communityId": "NVQbL",
+      "name": "adfasd",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "Mqfth",
+      "communityId": "NzLOs",
+      "name": "bytes",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "psJiM",
+      "communityId": "NzLOs",
+      "name": "urk87kru",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "KB9VT",
+      "communityId": "jaCtF",
+      "name": "scum",
       "tags": {
         "_type": "Tags",
         "value": []
@@ -900,6 +1030,7 @@
       "id": "e-JcG",
       "name": "Better Burritos",
       "archetype": "the mighty",
+      "color": "color-violet-strands",
       "tags": {
         "_type": "Tags",
         "value": []
@@ -910,6 +1041,7 @@
       "id": "yXHVO",
       "name": "Musical Chairs",
       "archetype": "the enterprise",
+      "color": "color-red-sun-rising",
       "tags": {
         "_type": "Tags",
         "value": []
@@ -920,6 +1052,9 @@
     "Wt6ry",
     "ZWFCD"
   ],
+  "links": {
+    "discord": "discord://-/channels/1063250197993492480/1063254140341473350"
+  },
   "records": [
     {
       "_type": "Record",
@@ -1615,6 +1750,405 @@
       "timestamp": "2025-05-17T08:52:32.197-04:00",
       "type": "ResourceCreated",
       "value": "blergh"
+    },
+    {
+      "_type": "Record",
+      "id": "BGlIO",
+      "timestamp": "2025-05-18T09:02:00.820-04:00",
+      "type": "ResourceCreated",
+      "value": "hey now"
+    },
+    {
+      "_type": "Record",
+      "id": "plxGt",
+      "timestamp": "2025-05-18T09:07:04.561-04:00",
+      "type": "ResourceCreated",
+      "value": "a new resource"
+    },
+    {
+      "_type": "Record",
+      "id": "gS5no",
+      "timestamp": "2025-05-18T09:09:15.068-04:00",
+      "type": "ResourceCreated",
+      "value": "new"
+    },
+    {
+      "_type": "Record",
+      "id": "XIBeR",
+      "timestamp": "2025-05-18T09:10:08.012-04:00",
+      "type": "ResourceCreated",
+      "value": "adfasd"
+    },
+    {
+      "_type": "Record",
+      "id": "KaLi0",
+      "timestamp": "2025-05-18T09:10:26.040-04:00",
+      "type": "ResourceCreated",
+      "value": "agr"
+    },
+    {
+      "_type": "Record",
+      "id": "aNm9y",
+      "timestamp": "2025-05-18T09:10:58.488-04:00",
+      "type": "ResourceCreated",
+      "value": "etyjetyj"
+    },
+    {
+      "_type": "Record",
+      "id": "gdXCC",
+      "timestamp": "2025-05-18T09:11:33.433-04:00",
+      "type": "ResourceCreated",
+      "value": "bytes"
+    },
+    {
+      "_type": "Record",
+      "id": "OXey5",
+      "timestamp": "2025-05-18T09:11:42.357-04:00",
+      "type": "ResourceCreated",
+      "value": "urk87kru"
+    },
+    {
+      "_type": "Record",
+      "id": "CDe4h",
+      "timestamp": "2025-05-18T09:23:49.018-04:00",
+      "type": "ResourceCreated",
+      "value": "scum"
+    },
+    {
+      "_type": "Record",
+      "id": "Uu1vM",
+      "timestamp": "2025-05-18T09:45:42.926-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Frog house",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "bjrYR",
+      "timestamp": "2025-05-18T09:45:42.927-04:00",
+      "type": "ActionResources",
+      "description": "Frog house used cats to take action.",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "s1DZB",
+      "timestamp": "2025-05-18T09:45:42.927-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Toad Shack",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "D0KDI",
+      "timestamp": "2025-05-18T09:45:42.927-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Beetle Junkies",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "zOkxo",
+      "timestamp": "2025-05-18T09:45:42.927-04:00",
+      "type": "ActionResources",
+      "description": "Beetle Junkies used blergh to take action.",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "QXEgX",
+      "timestamp": "2025-05-18T09:45:42.927-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Better Burritos",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "VkRiu",
+      "timestamp": "2025-05-18T09:45:42.927-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Musical Chairs",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "R6hry",
+      "timestamp": "2025-05-18T09:46:32.804-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Frog house",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "FE-K5",
+      "timestamp": "2025-05-18T09:46:32.804-04:00",
+      "type": "ActionResources",
+      "description": "Frog house used cats to take action.",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "jM5oJ",
+      "timestamp": "2025-05-18T09:46:32.804-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Toad Shack",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "ToBho",
+      "timestamp": "2025-05-18T09:46:32.804-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Beetle Junkies",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "w_pkM",
+      "timestamp": "2025-05-18T09:46:32.804-04:00",
+      "type": "ActionResources",
+      "description": "Beetle Junkies used blergh to take action.",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "uRX88",
+      "timestamp": "2025-05-18T09:46:32.805-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Better Burritos",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "HQoaN",
+      "timestamp": "2025-05-18T09:46:32.805-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Musical Chairs",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "PijmU",
+      "timestamp": "2025-05-18T09:46:34.444-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Frog house",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "XC2tw",
+      "timestamp": "2025-05-18T09:46:34.444-04:00",
+      "type": "ActionResources",
+      "description": "Frog house used cats to take action.",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "thTyL",
+      "timestamp": "2025-05-18T09:46:34.444-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Toad Shack",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "HVgmZ",
+      "timestamp": "2025-05-18T09:46:34.444-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Beetle Junkies",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "h1DcB",
+      "timestamp": "2025-05-18T09:46:34.444-04:00",
+      "type": "ActionResources",
+      "description": "Beetle Junkies used blergh to take action.",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "II89K",
+      "timestamp": "2025-05-18T09:46:34.444-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Better Burritos",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "i-Id7",
+      "timestamp": "2025-05-18T09:46:34.444-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Musical Chairs",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "L9Vzo",
+      "timestamp": "2025-05-18T09:50:41.197-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Frog house",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "ZU4Wc",
+      "timestamp": "2025-05-18T09:50:41.197-04:00",
+      "type": "ActionResources",
+      "description": "Frog house used cats to take action.",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "L8Q85",
+      "timestamp": "2025-05-18T09:50:41.197-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Toad Shack",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "PgTRt",
+      "timestamp": "2025-05-18T09:50:41.197-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Beetle Junkies",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "oxmBi",
+      "timestamp": "2025-05-18T09:50:41.197-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Better Burritos",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "b9-mm",
+      "timestamp": "2025-05-18T09:50:41.197-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Musical Chairs",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "Z7dvo",
+      "timestamp": "2025-05-18T09:50:42.807-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Frog house",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "HBE22",
+      "timestamp": "2025-05-18T09:50:42.807-04:00",
+      "type": "ActionResources",
+      "description": "Frog house used cats to take action.",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "ZvoJn",
+      "timestamp": "2025-05-18T09:50:42.807-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Toad Shack",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "KdFj2",
+      "timestamp": "2025-05-18T09:50:42.807-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Beetle Junkies",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "eAzqC",
+      "timestamp": "2025-05-18T09:50:42.807-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Better Burritos",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "tKn5C",
+      "timestamp": "2025-05-18T09:50:42.807-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Musical Chairs",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "T49TB",
+      "timestamp": "2025-05-18T10:03:34.093-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Frog house",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "X18G6",
+      "timestamp": "2025-05-18T10:03:34.093-04:00",
+      "type": "ActionResources",
+      "description": "Frog house used cats to take action.",
+      "value": 1
+    },
+    {
+      "_type": "Record",
+      "id": "V9uZu",
+      "timestamp": "2025-05-18T10:03:34.094-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Toad Shack",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "KPSXN",
+      "timestamp": "2025-05-18T10:03:34.094-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Beetle Junkies",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "nkFeW",
+      "timestamp": "2025-05-18T10:03:34.094-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Better Burritos",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "EvR9u",
+      "timestamp": "2025-05-18T10:03:34.094-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "Musical Chairs",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "vAmxL",
+      "timestamp": "2025-05-18T10:03:51.647-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 2: Societal Phase",
+      "value": "2025-05-18T10:03:51.647-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "iJf0x",
+      "timestamp": "2025-05-18T10:03:54.141-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 2: Societal Phase",
+      "value": "2025-05-18T10:03:54.141-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "n3j9a",
+      "timestamp": "2025-05-18T10:06:27.460-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 2: Societal Phase",
+      "value": "2025-05-18T10:06:27.460-04:00"
     }
   ]
 }

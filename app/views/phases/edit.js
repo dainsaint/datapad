@@ -39,8 +39,8 @@ export default function PhaseEdit({ phase } = {}) {
       </div>
 
 
-      <footer>
-        <a hx-delete="${ phase.toURL() }">Delete Phase</a>
+      <footer class="align-right">
+        <a class="color-danger" hx-delete="${ phase.toURL() }" hx-confirm="Delete phase for sure?"><i class="fa fa-trash"></i> Delete Phase</a>
       </footer>
       
     </form>

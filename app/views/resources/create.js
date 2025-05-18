@@ -11,7 +11,7 @@ export default function ResourceCreate({ episode, society, communityId }) {
         <h1>Create a new resource</h1>
       </header>
 
-      <article class="stack">
+      <article class="stack-loose">
         <label for="name">Name</label>
         <input name="name" placeholder="New Resource" 
           autofocus 

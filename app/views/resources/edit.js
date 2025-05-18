@@ -7,37 +7,43 @@ export default function ResourceEdit({ resource }) {
   const myCommunity = episode.getCommunityById( resource.communityId );
 
   return html`
-    <form class="stack" hx-patch=${ resource.toURL() }>
-      <h1>Edit resource</h1>
-      <p class="text">Enter a name for this resource</p>
-      <label for="name">Name</label>
-      <input name="name" autofocus autocapitalize="words" placeholder="New Resource" value="${ resource.name }"/>
-      <label for="communityId">Community</label>
-      <select name="communityId">
-      ${ episode.societies.map( society => {
-        return `
-          <optgroup label="${ society.name }">
-            ${ society.communities.map( community => 
-              html`<option value="${ community.id }" ${ community.id === myCommunity.id && "selected" }>${community.name}</option>`
-            )}
-          </optgroup>
-        `
-      } ) }
-      </select>
-      <input type="hidden" name="shouldAlterTags" value="true"/>
+    <form class="stack-loose" hx-patch=${ resource.toURL() }>
+      <header class="stack-tight">
+        <h1>Edit resource</h1>
+        <div>
+          <a class="color-danger" hx-delete="${ resource.toURL() }" hx-confirm="This will PERMANENTLY delete this resource!"><i class="fa fa-trash"></i> Delete Resource</a>
+        </div>
+      </header>
+      
+      <fieldset>
+        <label for="name">Name</label>
+        <input name="name" autofocus autocapitalize="words" placeholder="New Resource" value="${ resource.name }"/>
+      </fieldset>
 
-      ${ Checkbox({ label: "Is Exhausted", name: `exhausted`, checked: resource.isExhausted, value: ResourceTag.EXHAUSTED }) }
+      <fieldset>
+        <label for="communityId">Community</label>
+        <select name="communityId">
+        ${ episode.societies.map( society => {
+          return `
+            <optgroup label="${ society.name }">
+              ${ society.communities.map( community => 
+                html`<option value="${ community.id }" ${ community.id === myCommunity.id && "selected" }>${community.name}</option>`
+              )}
+            </optgroup>
+          `
+        } ) }
+        </select>
+      </fieldset>
 
-      <div class="layout-row gap-tight">
+      <fieldset>
+        <input type="hidden" name="shouldAlterTags" value="true"/>
+        ${ Checkbox({ label: `Exhausted <i class="fa fa-battery-quarter"></i>`, name: `exhausted`, checked: resource.isExhausted, value: ResourceTag.EXHAUSTED }) }
+      </fieldset>
+
+      <fieldset class="layout-spread stack-push">
         <button><i class="fa fa-check-circle"></i> Update Resource</button>
         <button type="button" value="cancel">Cancel</button>
-      </div>
-
-      <footer class="align-right">
-        <a class="color-danger" hx-delete="${ resource.toURL() }" hx-confirm="This will PERMANENTLY delete this resource!">
-          <i class="fa fa-trash"></i> Delete Resource
-        </a>
-      </footer>
+      </fieldset>
     </form>
   `;
 }

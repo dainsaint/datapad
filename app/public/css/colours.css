@@ -14,6 +14,7 @@
   --color-primary: #D7675C;
   --color-support: #787671;
   --color-faint: #96705B;
+  --color-bright: #dbcfca;
 
   
   --color-black: #1a1423;
@@ -41,6 +42,7 @@
   --palette-over-accent: var(--color-white);
   --palette-support: var(--color-support);
   --palette-faint: var(--color-faint);
+  --palette-bright: var(--color-bright);
 }
 
 

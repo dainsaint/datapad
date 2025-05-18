@@ -3,7 +3,6 @@ import Document from "#models/document";
 import Episode from "#models/episode";
 import DocumentView from "#views/documents/view";
 import Toolbar from "#views/ui/toolbar";
-import EpisodeLayout from "./components/layout.js";
 
 const icons = {
   Script: "fa-scroll",
@@ -13,12 +12,11 @@ const icons = {
 export default function EpisodeDocuments ({ episode = new Episode(), documentId = undefined} = {} ) {
   const currentDocument = documentId ? Document.load(documentId) : episode.documents.at(0);
 
-
-  const content = html`
+  return html`
     <div id="episode-documents" class="layout-row full" style="overflow: hidden">
 
       <div class="society-panel__communities panel full" style="flex: 1 0 max-content;">
-        <div id="documents-toolbar" hx-swap="none">
+        <div id="documents-toolbar" hx-swap="none" hx-select-oob="#documents-outline, #documents-view">
           ${ Toolbar({
             id: "document-toolbar",
             class: "toolbar-rounded",
@@ -30,13 +28,21 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
           })}
         </div>
 
-        <div id="documents-outline" class="stack scrollable text" hx-swap-oob="true">
+        <div id="documents-outline" class="stack scrollable">
           <h1>${ currentDocument.name }</h1>
-          ${ renderOutline( currentDocument.content ) }
+          <div class="layout-row gap">
+            <button><i class="fa fa-refresh"></i> Reload </button>  
+            <div class="layout-fill"></div>
+            <a class="button" target="_blank" href="http://docs.google.com/document/d/${currentDocument.googleDocId}"><i class="fa fa-pen-to-square"></i> Edit In Google Docs</a>
+          </div>
+
+          <div class="text">
+            ${ renderOutline( currentDocument.content ) }
+          </div>
         </div>
       </div>
 
-      <div id="documents-view" class="panel color-contrast full" hx-swap-oob="true">
+      <div id="documents-view" class="panel color-contrast full">
         <main class="content stack text scrollable">
           ${ DocumentView({document: currentDocument}) }
         </main>
@@ -45,7 +51,6 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
     </div>
   `;
 
-  return EpisodeLayout({episode}, content);
 }
 
 

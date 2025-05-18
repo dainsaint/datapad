@@ -7,8 +7,10 @@ export default function SocietyView({ society } = {}) {
   return html`
     <div 
       class="stack society-view"
-      hx-get="${society.toURL("/view")}" 
-      hx-trigger="sse:societies" 
+      
+      hx-trigger="sse:societies"
+      hx-get="${ society.toURL("/view") }"         
+      hx-swap="outerHTML"
       hx-disinherit="*"
       >
       <header>
@@ -31,7 +33,7 @@ export default function SocietyView({ society } = {}) {
         ${society.communities.map( (community) => CommunityCard({ community }))}
       </div>
 
-      <div class="layout-row gap-tight">
+      <div class="layout-row gap-tight stack-push">
         <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-cube"></i> New Resource</button>
         <div class="layout-fill"></div>
         <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-people-group"></i> New Community</button>

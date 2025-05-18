@@ -15,7 +15,7 @@
 }
 
 :root {
-  font-size: clamp(10px, 1vw, 14px);
+  font-size: clamp(12px, 1vw, 14px);
 }
 
 
@@ -141,22 +141,39 @@ label {
 
 input,
 input[type="date"],
-input[type="time"],
-select {
+input[type="time"] {
   display: block;
-  padding: .5rem;
+  padding: .5rem 1rem;
   background: var(--palette-bg);
   color: var(--palette-fg);
-  border: 1px solid var(--palette-fg);
-  border-radius: .25rem;
+  border: none;
+  border-bottom: 1px solid var(--palette-fg);
   width: 100%;
 
   &:focus {
     outline: none;
     border-width: 4px;
-    padding: calc( .5rem - 3px );
+    margin-block-end: -3px;
   }
 }
+
+select {
+  display: block;
+  padding: .5rem 1rem;
+  background: var(--palette-bg);
+  color: var(--palette-fg);
+  border: none;
+  border: 1px solid var(--palette-fg);
+  
+  border-end-end-radius: 2rem;
+  width: 100%;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 
 input:user-invalid {
   border-color: var(--color-error);
@@ -188,9 +205,15 @@ input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
-input[type="checkbox"]+label {
-  color: var(--palette-faint);
+
+fieldset {
+  border: none;
+  padding: 0px;
 }
+
+
+
+
 
 .form-control {
   display: grid;
@@ -490,7 +513,7 @@ button {
   border: none;
   color: var(--palette-over-accent);
   padding: .5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   border-radius: 2rem;
   cursor: pointer;
 }

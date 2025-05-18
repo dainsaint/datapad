@@ -14,6 +14,13 @@ const episodes = express.Router();
 - [x] GET     /episodes/:episodeId/view?
 */
 
+
+function episodeLayout(req, res, next) {
+  res.locals.layout = req.headers["hx-request"] ? "none" : "episode";
+  next();
+}
+
+
 episodes.get("/episodes/create", (req, res) => {
   res.render(`episodes/create`, { layout: "none" });
 });
@@ -63,9 +70,9 @@ episodes.post("/episodes",
 // INDIVIDUAL ROUTES
 ////////////////////////////////////////
 
-episodes.get("/episodes/:episodeId/facilitator/:societyId?", (req, res) => {
+episodes.get("/episodes/:episodeId/facilitator/:societyId?", episodeLayout, (req, res) => {
   const { episodeId, societyId } = req.params;
-  
+
   const episode = Episode.load(episodeId);
 
   req.session.facilitator ??= {}  
@@ -77,13 +84,13 @@ episodes.get("/episodes/:episodeId/facilitator/:societyId?", (req, res) => {
     );
   } else {
     req.session.facilitator.societyId = societyId;
-    res.render(`episodes/facilitator`, { episode, societyId, layout: "app" });
+    res.render(`episodes/facilitator`, { episode, societyId });
   }
   
 });
 
 
-episodes.get("/episodes/:episodeId/documents/:documentId?", (req, res) => {
+episodes.get("/episodes/:episodeId/documents/:documentId?", episodeLayout, (req, res) => {
   const { episodeId, documentId } = req.params;
   
   const episode = Episode.load(episodeId);
@@ -97,7 +104,7 @@ episodes.get("/episodes/:episodeId/documents/:documentId?", (req, res) => {
     );
   } else {
     req.session.document.documentId = documentId;
-    res.render(`episodes/documents`, { episode, documentId, layout: "app" });
+    res.render(`episodes/documents`, { episode, documentId });
   }
   
 });
@@ -113,15 +120,8 @@ episodes.put("/episodes/:episodeId/playlist", (req, res) => {
   episode.phases.sort( (a, b) => inOrder.indexOf(a.id) - inOrder.indexOf(b.id) );
   episode.save();
 
-  //this is the way to "refresh" whatever page
-  //this was called from using ajax
-  // const currentUrl = req.get("hx-current-url");
-  // if (currentUrl) res.setHeader("HX-Location", currentUrl);
-
-  broadcast("phases");
-  
-  res.render(`episodes/playlist`, { episode });
-  // res.sendStatus(200);
+  res.sendStatus(200);
+  broadcast("episode");
 });
 
 
@@ -135,14 +135,15 @@ episodes.get("/episodes/:episodeId/playlist", (req, res) => {
 
 
 
-episodes.get("/episodes/:episodeId/:view?", (req, res) => {
+episodes.get("/episodes/:episodeId/:view?", episodeLayout, (req, res) => {
   const { episodeId, view } = req.params;
+
   const episode = Episode.load(episodeId);
 
   if(!view)
     res.redirect(`/episodes/${episodeId}/gm`)
   else
-    res.render(`episodes/${view}`, { episode, layout: "app" });
+    res.render(`episodes/${view}`, { episode });
 });
 
 

@@ -19,7 +19,7 @@ export default function PhaseCreate({ episode } = {}) {
       <div class="grid-two">
         <select name="duration[minutes]">
           ${ from(0).to(30).map( minutes =>
-            html`<option ${{value: minutes }}>${minutes}m</option>`
+            html`<option ${{value: minutes, selected: minutes == 10 }}>${minutes}m</option>`
           )}
         </select>
 

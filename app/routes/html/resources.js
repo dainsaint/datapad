@@ -35,9 +35,6 @@ resources.post("/episodes/:episodeId/resources", (req, res, next) => {
 
   episode.save();
   
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
-  
   res.location( resource.toURL() )
   res.sendStatus(201);
 
@@ -52,7 +49,7 @@ resources.get("/episodes/:episodeId/resources/create", (req, res, next) => {
 
   const episode = Episode.load(episodeId);
 
-  res.render(`resources/create`, { episode, society, communityId, layout: "none" });
+  res.render(`resources/create`, { episode, society, communityId });
 });
 
 
@@ -92,10 +89,7 @@ resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) =
 
   episode.save();
 
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
   res.sendStatus(201);
-
   broadcast("resources");
 });
 
@@ -107,9 +101,7 @@ resources.delete("/episodes/:episodeId/resources/:resourceId", (req, res) => {
     const episode = Episode.load(episodeId);
     episode.deleteResourceById( resourceId );
     episode.save();
-  
-    const currentUrl = req.get("hx-current-url");
-    if (currentUrl) res.setHeader("HX-Location", currentUrl);
+
     res.sendStatus(200);
     broadcast("resources");
   } catch (e) {

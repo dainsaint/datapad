@@ -16,10 +16,9 @@ const phases = express.Router();
 */
 
 phases.get("/episodes/:episodeId/phases/create", (req, res, next) => {
-  console.log("sdf");
   const { episodeId } = req.params;
   const episode = Episode.load(episodeId);
-  res.render(`phases/create`, { episode, layout: "none" });
+  res.render(`phases/create`, { episode });
 });
 
 
@@ -30,7 +29,7 @@ phases.get("/episodes/:episodeId/phases/:phaseId/:view?", (req, res, next) => {
   const episode = Episode.load(episodeId);
   const phase = episode.getPhaseById(phaseId);
 
-  res.render(`phases/${view}`, { phase, layout: "none" });
+  res.render(`phases/${view}`, { phase });
 });
 
 
@@ -50,19 +49,13 @@ phases.post("/episodes/:episodeId/phases", (req, res, next) => {
   episode.addPhase( phase );
   episode.save();
 
-  //this is the way to "refresh" whatever page
-  //this was called from using ajax
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
   
   res.sendStatus(200);
-
   broadcast("phases");
 })
 
 
 phases.post("/episodes/:episodeId/phases/round", (req, res, next) => {
-  console.log("arlgknare");
   const { episodeId } = req.params;
   const episode = Episode.load(episodeId);
 
@@ -71,13 +64,8 @@ phases.post("/episodes/:episodeId/phases/round", (req, res, next) => {
   episode.addPhase(new Phase({ type: PhaseType.GALACTIC,  duration: 3 * 4 * 60 }))
   episode.sanitizePhases();
   episode.save();
-
-
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
   
   res.sendStatus(200);
-
   broadcast("phases");
 });
 
@@ -96,9 +84,12 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   const prevPhase = episode.phases.at( episode.phases.indexOf(phase) - 1);
   const nextPhase = episode.phases.at( episode.phases.indexOf(phase) + 1);
 
+  let broadcastEvent = "phases";
+
   switch (action) {
     case "prev":
       prevPhase.status = PhaseStatus.IDLE;
+      broadcastEvent = "episode";
       break;
     case "start":
       phase.startPhase();
@@ -116,7 +107,7 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
       if( nextPhase && nextPhase.round > phase.round ) {
         episode.completeRound( phase.round );
       }
-      
+      broadcastEvent = "episode";
       break;
 
     case "add":
@@ -131,15 +122,9 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   episode.makeActive();
   episode.save();
 
-  //this is the way to "refresh" whatever page
-  //this was called from using ajax
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
-
-  broadcast("phases");
-  
   res.sendStatus(200);
-
+  broadcast( broadcastEvent );
+  
 });
 
 
@@ -159,12 +144,9 @@ phases.post("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
   phase.update( update );
   episode.save();
 
-  //this is the way to "refresh" whatever page
-  //this was called from using ajax
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
-  
+
   res.sendStatus(200);
+  broadcast("phases");
 })
 
 
@@ -176,8 +158,6 @@ phases.delete("/episodes/:episodeId/phases/:phaseId", (req, res) => {
     episode.deletePhaseById( phaseId );
     episode.save();
   
-    const currentUrl = req.get("hx-current-url");
-    if (currentUrl) res.setHeader("HX-Location", currentUrl);
     res.sendStatus(200);
     broadcast("phases");
   } catch (e) {

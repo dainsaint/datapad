@@ -1,5 +1,4 @@
 import { html } from "#core/utils";
-import EpisodeLayout from "#views/episodes/components/layout";
 import PhaseControls from "#views/phases/controls";
 import SocietyList from "#views/societies/list";
 import EpisodePlaylist from "#views/episodes/playlist";
@@ -8,14 +7,20 @@ import Icon from "#views/ui/icon";
 export default function EpisodeGameMaster ({ episode } = {}) {
   const currentPhase = episode.currentPhase;
 
-  const content = html`
-    <main class="grid-large" style="height: 100%;">
-      <div class="panel stack">
+  return html`
+    <main class="grid-huge" style="height: 100%;"
+      hx-trigger="sse:episode"  
+      hx-get="${ episode.toURL("/gm") }" 
+      hx-swap="none"
+      hx-select-oob="#gm-playlist, #gm-game-state"
+      hx-disinherit="*"
+    >
+      <div id="gm-playlist" class="panel stack" >
         ${ PhaseControls({ phase: currentPhase }) }
         ${ EpisodePlaylist({ episode }) }      
       </div>
 
-      <div class="stack panel">
+      <div id="gm-game-state" class="stack panel">
         <h1>Game State</h1>
 
         <form class="layout-row gap-tight" hx-target="#dialog">
@@ -29,7 +34,5 @@ export default function EpisodeGameMaster ({ episode } = {}) {
       </div>
     </main>
   `;
-
-  return EpisodeLayout({ episode }, content );
 }
 

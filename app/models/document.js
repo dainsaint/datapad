@@ -11,20 +11,20 @@ const database = new Database({useOffshore: false});
 
 export default class Document extends Model {
   name
-  doc_id
+  googleDocId
   content
 
-  constructor({ name, doc_id }) {
+  constructor({ name, googleDocId }) {
     super();
     this.name = name;
-    this.doc_id = doc_id;
+    this.googleDocId = googleDocId;
   }
 
   async refresh() {
     const goot = new Gootenberg();
     await goot.auth.jwt( credentials.google );
   
-    const doc = await goot.docs.get( this.doc_id );
+    const doc = await goot.docs.get( this.googleDocId );
   
     const tree = toHast(doc);
     

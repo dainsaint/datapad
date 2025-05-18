@@ -8,6 +8,7 @@ dialog {
   border-radius: 1rem;
   padding: 2rem;
   min-width: 40vw;
+  width: 600px;
   max-height: unset;
   animation: zoomOut 0.2s forwards;
   box-shadow: 2rem 2rem 5rem rgba(0,0,0,.3);
@@ -96,6 +97,53 @@ dialog + .backdrop {
 }
 
 .card:has(.is-sortable-ghost) {
-  border-width: 4px;
-  padding: calc( 1rem - 4px );
+  /* border-width: 4px; */
+  /* padding: calc( 1rem - 4px ); */
+}
+
+
+
+
+/**
+* VIEW TRANSITIONS
+*/
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(90px);
+  }
+}
+
+@keyframes slide-to-left {
+  to {
+    transform: translateX(-90px);
+  }
+}
+
+/* define animations for the old and new content */
+::view-transition-old(slide-it) {
+  animation: 180ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(slide-it) {
+  animation: 420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+    600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+/* tie the view transition to a given CSS class */
+.view-transition {
+  view-transition-name: slide-it;
 }

@@ -7,7 +7,7 @@ import Action from "#models/action";
 export default class Society extends Model {
   name
   archetype
-  color
+  color = SocietyColor.RIVER_STONE
 
   tags = new Tags()
 

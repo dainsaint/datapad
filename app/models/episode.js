@@ -27,6 +27,10 @@ export default class Episode extends Model {
 
   documentIds = []
 
+  links = {
+    discord: "discord://-/channels/1063250197993492480/1063254140341473350",
+  }
+
   //TODO: Put these in a separate file?
   records = []
 

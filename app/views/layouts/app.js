@@ -24,12 +24,10 @@ export default function AppLayout(props, children) {
 
       <script src="/js/vendor/htmx.min.js"></script>
       <script src="/js/vendor/htmx.sse.js"></script>
-      <script src="/js/vendor/ideomorph.js"></script>
-      <script src="/js/vendor/ideomorph-ext.js"></script>
       <script type="module" src="/js/client.js"></script>
     </head>
 
-    <body hx-ext="morph" hx-ext="sse" sse-connect="/events">
+    <body hx-ext="sse" sse-connect="/events">
       <section id="app" class="layout-app" >
 
         <div class="in-app">
@@ -38,6 +36,7 @@ export default function AppLayout(props, children) {
         
         <dialog id="dialog" class="stack in-dialog" 
           hx-on:htmx:load="this.showModal()" 
+          hx-on:htmx:after-request="this.close()"
           onclick="if(event.target.value === 'cancel') this.close()">
         </dialog>
       </section>

@@ -19,7 +19,7 @@ const societies = express.Router();
 societies.get("/episodes/:episodeId/societies/:view?", (req, res, next) => {
   const { episodeId, view = "list" } = req.params;
   const episode = Episode.load(episodeId);
-  res.render(`societies/${view}`, { episode, layout: "none" })
+  res.render(`societies/${view}`, { episode })
 });
 
 societies.post("/episodes/:episodeId/societies", (req, res, next) => {
@@ -30,13 +30,9 @@ societies.post("/episodes/:episodeId/societies", (req, res, next) => {
   episode.addSociety(society);
   episode.save();
 
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
-
   res.location(society.toURL());
   res.sendStatus(201);
-  // TODO: this should really return the url of the newly created resource...
-  
+
   broadcast("societies");
 });
 
@@ -71,8 +67,6 @@ societies.put("/episodes/:episodeId/societies/:societyId", body("name").trim(), 
   society.update( data );
   episode.save();
 
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
   res.sendStatus(200);
 
   broadcast("societies");
@@ -90,8 +84,6 @@ societies.delete("/episodes/:episodeId/societies/:societyId", (req, res) => {
     episode.deleteSocietyById( societyId );
     episode.save();
   
-    const currentUrl = req.get("hx-current-url");
-    if (currentUrl) res.setHeader("HX-Location", currentUrl);
     res.sendStatus(200);
     broadcast("societies");
   } catch (e) {

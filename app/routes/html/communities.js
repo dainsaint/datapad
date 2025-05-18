@@ -31,12 +31,10 @@ communities.post("/episodes/:episodeId/communities", (req, res) => {
 
   episode.addCommunity(community);
   episode.save();
-  
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
+
   res.sendStatus(201);
 
-  broadcast("resources");
+  broadcast("societies");
 });
 
 communities.get("/episodes/:episodeId/communities/create", (req, res) => {
@@ -69,8 +67,6 @@ communities.patch("/episodes/:episodeId/communities/:communityId", (req, res) =>
 
   episode.save();
 
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
   res.sendStatus(200);
   broadcast("societies");
 });
@@ -93,9 +89,7 @@ communities.post("/episodes/:episodeId/communities/:communityId/resources", (req
 
   episode.save();
 
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
-  res.sendStatus(200);
+  res.redirect(`/episodes/${episodeId}/communities/${communityId}/card`);
   
   broadcast("resources");
 });

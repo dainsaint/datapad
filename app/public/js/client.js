@@ -4,6 +4,8 @@ import initScrollables from "./modules/scrollable.js";
 import initSelectables from "./modules/selectable.js";
 
 const init = () => {
+  htmx.config.allowNestedOobSwaps = false;
+
   initPolyfills();
   initSortables();
   initScrollables();

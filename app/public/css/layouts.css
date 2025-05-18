@@ -1,5 +1,6 @@
 :root {
   --gap: 1rem;
+  --column-basis: calc(100% / 12);
 }
 
 /* 
@@ -18,6 +19,17 @@
   margin-top: 2rem;
 }
 
+.stack > * + .stack-push {
+  margin-top: 2rem;
+}
+
+.stack-tight > * + .stack-push {
+  margin-top: 1rem;
+}
+
+.stack-loose > * + .stack-push {
+  margin-top: 4rem;
+}
 
 /* 
 ** GRIDS 
@@ -192,6 +204,8 @@
 .in-main {
   grid-area: main;
   overflow: hidden;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
 }
 
 .in-footer {
@@ -224,4 +238,55 @@
 
 .align-right {
   text-align: right;
+}
+
+
+
+
+.is-wide-1 {
+  flex-basis: calc( 1 * var(--column-basis) );
+}
+
+.is-wide-2 {
+  flex-basis: calc( 2 * var(--column-basis) );
+}
+
+.is-wide-3 {
+  flex-basis: calc( 3 * var(--column-basis) );
+}
+
+.is-wide-4 {
+  flex-basis: calc( 4 * var(--column-basis) );
+}
+
+.is-wide-5 {
+  flex-basis: calc( 5 * var(--column-basis) );
+}
+
+.is-wide-6 {
+  flex-basis: calc( 6 * var(--column-basis) );
+}
+
+.is-wide-7 {
+  flex-basis: calc( 7 * var(--column-basis) );
+}
+
+.is-wide-8 {
+  flex-basis: calc( 8 * var(--column-basis) );
+}
+
+.is-wide-9 {
+  flex-basis: calc( 9 * var(--column-basis) );
+}
+
+.is-wide-10 {
+  flex-basis: calc( 10 * var(--column-basis) );
+}
+
+.is-wide-11 {
+  flex-basis: calc( 11 * var(--column-basis) );
+}
+
+.is-wide-12 {
+  flex-basis: calc( 12 * var(--column-basis) );
 }
