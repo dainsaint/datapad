@@ -21,7 +21,9 @@ export default function CommunityCard({ community = new Community() } = {}) {
           <i class="community-card__voice fa ${community.voice == CommunityVoice.LEADER ? "fa-crown" : "fa-hand-fist"}"></i>
         </header>
 
-        <div class="grid-small gap-tight" data-sortable="resources" data-sortable-expand>
+        <div class="grid-small gap-tight" data-sortable="resources" data-sortable-expand 
+          hx-target="#dialog"
+          hx-boost="true">
           ${community.resources.map((resource) =>
             CommunityResourceCard({ resource })
           )}
@@ -33,19 +35,12 @@ export default function CommunityCard({ community = new Community() } = {}) {
 
 export function CommunityResourceCard({ resource }) {
   return html`
-    <a
-      id="resource-card-${resource.id}"
+    <a id="resource-card-${resource.id}"
       class="card color-contrast"
-
-      hx-get="${resource.toURL("/edit")}"
-      hx-target="#dialog"
-      hx-trigger="click"
-
+      href="${resource.toURL("/edit")}"
       data-tags="${resource.tags.toList()}"
     >
-      <h3>
-        ${resource.name}
-      </h3>
+      <h3>${resource.name}</h3>
       <input type="hidden" name="resourceIds[]" value="${resource.id}" />
     </a>
   `;
