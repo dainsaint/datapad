@@ -62,6 +62,10 @@ export default class Action extends Model {
     return this.episode.getSocietyById( this.societyId );
   }
 
+  get isConfirmed() {
+    return this.tags.has( ActionTags.COMMITTED );
+  }
+
   toURL(append = "") {
     return `/episodes/${this.episode.id}/actions/${this.id}` + append;
   }

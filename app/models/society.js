@@ -17,14 +17,14 @@ export default class Society extends Model {
   }
 
   startRound( roundNumber ) {
-    const actionThisRound = this.episode.actions
-      .filter( action => action.round == roundNumber )
-      .find( action => action.societyId == this.id )
+    // const actionThisRound = this.episode.actions
+    //   .filter( action => action.round == roundNumber )
+    //   .find( action => action.societyId == this.id )
 
-    if( !actionThisRound ) {
-      const action = new Action({ societyId: this.id, round: roundNumber });
-      this.episode.addAction(action);
-    }
+    // if( !actionThisRound ) {
+    //   const action = new Action({ societyId: this.id, round: roundNumber });
+    //   this.episode.addAction(action);
+    // }
   }
 
   completeRound( roundNumber ) {

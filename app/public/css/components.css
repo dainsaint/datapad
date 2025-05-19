@@ -282,3 +282,9 @@ STATES TO DESIGN FOR
   gap: 10px;
   /* align-items: start; */
 }
+
+
+.drop {
+  border: 2px dashed var(--palette-fg);
+  padding: 1rem;
+}

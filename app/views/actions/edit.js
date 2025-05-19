@@ -8,7 +8,7 @@ export default function ActionEdit({ action } = {}) {
       hx-trigger="sorted,change,submit"
       hx-swap="none"
     >
-      <div class="layout-row gap-tight">
+      <fieldset class="layout-row gap-tight">
         <label for="risk" style=""><i class="fa fa-skull"></i></label>
         <select class="is-uppercase is-size-6" name="risk" style="flex-basis: auto;">
           ${ from(0).to(6).map( risk =>
@@ -29,25 +29,20 @@ export default function ActionEdit({ action } = {}) {
               html`<option ${{value: disadvantage, selected: disadvantage == action.disadvantage }}>Dis ${disadvantage}</option>`
             )}
         </select>
-      </div>
+      </fieldset>
 
-      <div class="stack-tight">
+      <fieldset class="stack-tight">
         ${ action.resources.map( (resource, i) => ActionComponent({resource, text: action.texts[i], i: i}) ) }
         ${ ActionComponent({ i: action.resources.length }) }
-      </div>
+      </fieldset>
 
-      <div class="layout-row">
-        <div class="layout-fill"></div>
-        <button name="commit" value="commit" ${{ disabled: action.resources.length == 0}}><i class="fa fa-check-circle"></i> Confirm Action?</button>
-      </div>
+      ${ !action.isConfirmed && html`
+        <footer class="layout-row">
+          <div class="layout-fill"></div>
+          <button name="commit" value="commit" ${{ disabled: action.resources.length == 0}}><i class="fa fa-check-circle"></i> Confirm Action?</button>
+        </footer>
+      `}
     </form>
-
-    <style>
-     .drop {
-        border: 2px dashed var(--palette-fg);
-        padding: 1rem;
-      }
-    </style>
   `;
 }
 

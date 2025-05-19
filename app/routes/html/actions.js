@@ -18,19 +18,21 @@ actions.get("/episodes/:episodeId/actions", (req, res, next) => {
 });
 
 
-actions.post("/episodes/:episodeId/actions", (req, res, next) => {
-  const { episodeId } = req.params;
-  const { societyId } = req.body;
+actions.post("/episodes/:episodeId/societies/:societyId/actions", (req, res, next) => {
+  const { episodeId, societyId } = req.params;
+  const { round } = req.body;
 
   const episode = Episode.load(episodeId);  
-  const action = new Action({ society: societyId });
+  const action = new Action({ societyId, round });
   episode.addAction(action);
   
-  // res.location( action.toURL() )
+  res.location( action.toURL() )
   res.sendStatus(201);
 
   broadcast("actions");
 });
+
+
 
 
 actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next) => {

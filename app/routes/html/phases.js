@@ -94,7 +94,6 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
     case "start":
       phase.startPhase();
       if( phase.type == PhaseType.UNIVERSAL ) {
-        console.log("BLKABFA");
         episode.startRound( phase.round );
       }
       break;

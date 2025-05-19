@@ -8,7 +8,7 @@ export default function SocietySelect ({ society: currentSociety } = {}) {
     <div>
       ${ Toolbar({
         id: "society-select",
-        class: "toolbar-rounded is-size-5",
+        class: "toolbar-rounded",
         links: currentSociety.episode.societies.map( society => ({ 
           href: society.episode.toURL('/facilitator/' + society.id),
           content: Icon.forArchetype( society.archetype ),
