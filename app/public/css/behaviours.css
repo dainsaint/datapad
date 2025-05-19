@@ -31,7 +31,7 @@ dialog + .backdrop {
 }
 
 #app {
-  background: var(--color-black)
+  background: var(--palette-fg)
 }
 
 .in-app {

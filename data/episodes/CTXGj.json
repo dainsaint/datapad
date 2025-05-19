@@ -459,11 +459,11 @@
       "type": "Societal Phase",
       "status": "paused",
       "round": 2,
-      "duration": 600,
-      "timeElapsed": 18.013,
+      "duration": 660,
+      "timeElapsed": 42.033,
       "actualTime": {
-        "s": "2025-05-18T10:06:27.460-04:00",
-        "e": "2025-05-18T10:16:27.460-04:00",
+        "s": "2025-05-19T16:06:55.833-04:00",
+        "e": "2025-05-19T16:17:55.833-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -997,7 +997,7 @@
       "id": "et0k8",
       "name": "Frog house",
       "archetype": "the curious",
-      "color": "color-river-stone",
+      "color": "color-strawberry-quartz",
       "tags": {
         "_type": "Tags",
         "value": []
@@ -1018,7 +1018,7 @@
       "_type": "Society",
       "id": "Feay0",
       "name": "Beetle Junkies",
-      "archetype": "the intrepid",
+      "archetype": "the grounded",
       "color": "color-strawberry-quartz",
       "tags": {
         "_type": "Tags",
@@ -2149,6 +2149,22 @@
       "type": "PhaseStarted",
       "description": "Round 2: Societal Phase",
       "value": "2025-05-18T10:06:27.460-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "eM9rH",
+      "timestamp": "2025-05-19T16:06:12.475-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 2: Societal Phase",
+      "value": "2025-05-19T16:06:12.474-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "Ne8zA",
+      "timestamp": "2025-05-19T16:06:55.833-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 2: Societal Phase",
+      "value": "2025-05-19T16:06:55.833-04:00"
     }
   ]
 }

@@ -24,6 +24,11 @@ const errorHandler = (err, req, res, next) => {
     .send(`<pre>${err.stack}</pre>`);
 };
 
+const hxLayout = (layout) => (req, res, next) => {
+  res.locals.layout ??= req.headers["hx-request"] ? "none" : layout;
+  next();
+}
+
 export default class Server {
 
   timer;
@@ -74,10 +79,7 @@ export default class Server {
       next();
     });
 
-    app.use((req, res, next) => {
-      res.locals.layout ??= req.headers["hx-request"] ? "none" : "app";
-      next();
-    });
+    app.use( hxLayout("app") );
 
     app.use("/api/v1", jsonRouter);
     app.use("/", htmlRouter);

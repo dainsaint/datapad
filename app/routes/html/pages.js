@@ -11,7 +11,7 @@ const pages = express.Router();
 // pages.get("/", (req, res) => {
 //   const games = Ledger.games;
 //   const episodes = Ledger.episodes;
-//   res.render("pages/home", { games, episodes, layout: "app" });
+//   res.render("pages/home", { games, episodes });
 // });
 
 pages.get("/", (req, res) => {

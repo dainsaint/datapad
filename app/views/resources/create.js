@@ -6,19 +6,21 @@ export default function ResourceCreate({ episode, society, communityId }) {
     return community.id == communityId || (i == 0 && current == society.id)
   }
   return html`
-    <form class="stack" hx-post="${ episode.toURL('/resources') }">
+    <form class="stack-loose" hx-post="${ episode.toURL('/resources') }">
       <header>
         <h1>Create a new resource</h1>
       </header>
 
-      <article class="stack-loose">
+      <fieldset>
         <label for="name">Name</label>
         <input name="name" placeholder="New Resource" 
           autofocus 
           autocapitalize="words" 
           required />
-        <label for="communityId">Community</label>
+      </fieldset>
 
+      <fieldset>
+        <label for="communityId">Community</label>
         <select name="communityId">
         ${ episode.societies.map( society => html`
             <optgroup label="${ society.name }">
@@ -28,9 +30,9 @@ export default function ResourceCreate({ episode, society, communityId }) {
             </optgroup>
         `)}
         </select>
-      </article>
+      </fieldset>
 
-      <footer class="layout-row gap-tight">
+      <footer class="layout-spread stack-push">
         <button type="submit">+ New Resource</button>
         <button type="button" value="cancel">Cancel</button>
       </footer>

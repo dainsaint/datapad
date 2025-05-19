@@ -41,7 +41,7 @@ communities.get("/episodes/:episodeId/communities/create", (req, res) => {
   const { episodeId } = req.params;
   const { society } = req.query;
   const episode = Episode.load(episodeId);
-  res.render(`communities/create`, { episode, society, layout: "none" });
+  res.render(`communities/create`, { episode, society });
 });
 
 ////////////////////////////////////////
@@ -54,7 +54,7 @@ communities.get("/episodes/:episodeId/communities/:communityId/:view?", (req, re
   const episode = Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
 
-  res.render(`communities/${view}`, {community, layout: "none"});
+  res.render(`communities/${view}`, {community});
 });
 
 
@@ -103,8 +103,6 @@ communities.delete("/episodes/:episodeId/communities/:communityId", (req, res) =
   episode.deleteCommunityById( communityId );
   episode.save();
 
-  const currentUrl = req.get("hx-current-url");
-  if (currentUrl) res.setHeader("HX-Location", currentUrl);
   res.sendStatus(200);
   broadcast("societies");
 });

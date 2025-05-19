@@ -1,4 +1,6 @@
 import { html } from "#core/utils"
+import { CommunityVoiceInput } from "#views/communities/create";
+import { CommunityVoice } from "#models/community";
 
 export default function CommunityEdit({ community }) {
   const episode = community.episode;
@@ -25,10 +27,9 @@ export default function CommunityEdit({ community }) {
 
       <fieldset>
         <label for="voice">Voice</label>
-        <select name="voice">
-          <option value="people" ${{selected: community.voice == "people"}}>Voice of the People</option>
-          <option value="leader" ${{selected: community.voice == "leader"}}>Voice of the Leaders</option>
-        </select>
+        <div class="grid-two gap-tight">
+          ${Object.values(CommunityVoice).map( voice => CommunityVoiceInput({voice, checked: community.voice == voice}))}
+        </div>
       </fieldset>
 
       <footer class="layout-spread stack-push">
@@ -38,3 +39,4 @@ export default function CommunityEdit({ community }) {
     </form>
   `;
 }
+

@@ -67,7 +67,7 @@ resources.get("/episodes/:episodeId/resources/:resourceId/:view?", (req, res, ne
   const episode = Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
 
-  res.render(`resources/${view}`, { resource, layout: "none" });
+  res.render(`resources/${view}`, { resource });
 });
 
 resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) => {

@@ -6,43 +6,46 @@ export default function PhaseEdit({ phase } = {}) {
   const phaseSeconds = phase.duration - phaseMinutes * 60;
   
   return html`
-    <form hx-post="${phase.toURL()}" class="stack">
-      <h1>Edit phase</h1>
-      <p>Round ${ phase.round }</p>
+    <form class="stack-loose" hx-post="${phase.toURL()}">
+      <header class="stack-tight">
+        <p class="subtitle">Round ${ phase.round }</p>
+        <h1>Edit phase</h1>
+        <div>
+          <a class="color-danger" hx-delete="${ phase.toURL() }" hx-confirm="Delete phase for sure?"><i class="fa fa-trash"></i> Delete Phase</a>
+        </div>
+      </header>
 
-      <label for="type">Phase Type</label>
-      <select name="type">
-        ${ Object.values(PhaseType).map( type => 
-          html`<option ${{value: type, selected: phase.type == type}}>${type}</option>`
-        )}
-      </select>
-
-
-      <label for="duration">Duration</label>
-      <div class="grid-two">
-        <select name="duration[minutes]">
-          ${ from(0).to(30).map( minutes =>
-            html`<option ${{value: minutes, selected: phaseMinutes == minutes }}>${minutes}m</option>`
+      <fieldset>
+        <label for="type">Phase Type</label>
+        <select name="type">
+          ${ Object.values(PhaseType).map( type => 
+            html`<option ${{value: type, selected: phase.type == type}}>${type}</option>`
           )}
         </select>
+      </fieldset>
 
-        <select name="duration[seconds]">
-          ${ [0, 15, 30, 45].map( seconds =>
-            html`<option ${{value: seconds.toString(), selected: phaseSeconds == seconds }}>${seconds}s</option>`
-          )}
-        </select>
-      </div>
 
-      <div class="layout-row gap-tight">
+      <fieldset>
+        <label for="duration">Duration</label>
+        <div class="grid-two">
+          <select name="duration[minutes]">
+            ${ from(0).to(30).map( minutes =>
+              html`<option ${{value: minutes, selected: phaseMinutes == minutes }}>${minutes}m</option>`
+            )}
+          </select>
+
+          <select name="duration[seconds]">
+            ${ [0, 15, 30, 45].map( seconds =>
+              html`<option ${{value: seconds.toString(), selected: phaseSeconds == seconds }}>${seconds}s</option>`
+            )}
+          </select>
+        </div>
+      </fieldset>
+
+      <div class="layout-spread stack-push">
         <button type="submit"><i class="fa fa-check-circle"></i> Update Phase</button>
         <button type="button" value="cancel">Cancel</button>
       </div>
-
-
-      <footer class="align-right">
-        <a class="color-danger" hx-delete="${ phase.toURL() }" hx-confirm="Delete phase for sure?"><i class="fa fa-trash"></i> Delete Phase</a>
-      </footer>
-      
     </form>
   `;
 }

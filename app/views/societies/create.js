@@ -1,33 +1,64 @@
 import { html } from "#core/utils";
 import Episode from "#models/episode";
+import { SocietyArchetype, SocietyColor } from "#models/society";
+import { RadioContent } from "#views/ui/forms";
+import Icon from "#views/ui/icon";
 
 //figure out the society/episode jawn here...
 export default function SocietyCreate({ episode = new Episode()} = {}) {
   return html`
-    <h1>Create a new society</h1>
-    <p class="text">Enter a name for this new society, and select its archetype.</p>
+    <form class="stack-loose" hx-post="${ episode.toURL('/societies') }" hx-swap="none">
+      <header>
+        <h1>Create a new society</h1>
+        <input type="hidden" name="episodeId" value="${episode.id}"/>
+      </header>
 
-    <form class="stack" hx-post="${ episode.toURL('/societies') }" hx-swap="none">
-      <input type="hidden" name="episodeId" value="${episode.id}"/>
+      <fieldset>
+        <label for="name">Society Name</label>
+        <input name="name" placeholder="New Society" autocapitalize="words" autofocus required/>
+      </fieldset>
 
-      <label for="name">Society Name</label>
-      <input name="name" placeholder="New Society" autocapitalize="words" autofocus required/>
+      <fieldset>
+        <label for="name">Society Archetype</label>
+        <div class="grid-four gap-tight">
+          ${Object.values(SocietyArchetype).map( archetype => SocietyArchetypeInput({ archetype }))}
+        </div>
+      </fieldset>
 
-      <label for="name">Society Archetype</label>
-      <select name="archetype" placeholder="Select Archetype" >
-        <option value="the aesthetic">The Aesthetic</option>
-        <option value="the enterprise">The Enterprise</option>
-        <option value="the faithful">The Faithful</option>
-        <option value="the grounded">The Grounded</option>
-        <option value="the intrepid">The Intrepid</option>
-        <option value="the mighty">The Mighty</option>
-        <option value="the scholars">The Scholars</option>
-      </select>
 
-      <div class="layout-row gap-tight">
-        <button type="submit">+ New Society</button>
+      <fieldset>
+        <label for="name">Society Color</label>
+        <div class="grid-seven gap-tight">
+          ${Object.values(SocietyColor).map( color => SocietyColorInput({ color }))}
+        </div>
+      </fieldset>
+
+      <footer class="layout-spread stack-push">
+        <button type="submit">${Icon("planet")} New Society</button>
         <button type="button" value="cancel">Cancel</button>
-      </div>
+      </footer>
     </form>
   `;
+}
+
+export function SocietyArchetypeInput({ archetype, checked }) {
+  return RadioContent({ 
+    name: "archetype", 
+    value: archetype, 
+    checked,
+    label: html`
+      <div class="align-center">
+        <div class="is-size-1">${Icon.forArchetype(archetype)}</div>
+        <div class="is-size-6">${archetype}</div>
+      </div>`})
+
+}
+
+export function SocietyColorInput({ color, checked }) {
+  return RadioContent({ 
+    name: "color", 
+    value: color, 
+    checked,
+    label: html`<div class="card ${color}">&nbsp;</div>`
+  })
 }

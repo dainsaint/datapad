@@ -22,7 +22,7 @@ function episodeLayout(req, res, next) {
 
 
 episodes.get("/episodes/create", (req, res) => {
-  res.render(`episodes/create`, { layout: "none" });
+  res.render(`episodes/create`);
 });
 
 episodes.post("/episodes/create/time", (req, res) => {

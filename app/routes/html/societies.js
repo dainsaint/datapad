@@ -40,7 +40,7 @@ societies.post("/episodes/:episodeId/societies", (req, res, next) => {
 societies.get("/episodes/:episodeId/societies/create", (req, res, next) => {
   const { episodeId } = req.params;
   const episode = Episode.load(episodeId);
-  res.render(`societies/create`, { episode, layout: "none" });
+  res.render(`societies/create`, { episode });
 });
 
 
@@ -54,7 +54,7 @@ societies.get("/episodes/:episodeId/societies/:societyId/:view?", (req, res, nex
   const episode = Episode.load(episodeId);
   const society = episode.getSocietyById(societyId);
 
-  res.render(`societies/${view}`, { society, layout: "none" });
+  res.render(`societies/${view}`, { society });
 });
 
 societies.put("/episodes/:episodeId/societies/:societyId", body("name").trim(), (req, res, next) => {

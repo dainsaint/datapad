@@ -1,40 +1,41 @@
 import { html } from "#core/utils";
 import Society, {SocietyArchetype, SocietyColor} from "#models/society";
+import { SocietyArchetypeInput, SocietyColorInput } from "#views/societies/create";
 
 export default function SocietyEdit({ society = new Society() } = {}) {
   return html`
-    <h1>Edit Society</h1>
-    <p class="text">Enter a name for this new society, and select its archetype.</p>
+    <form class="stack-loose" hx-put="${society.toURL()}" hx-swap="none">
+      <header class="stack-tight">
+        <h1>Edit Society</h1>
+        <div>
+          <a class="color-danger" hx-delete="${ society.toURL() }" hx-confirm="This will PERMANENTLY delete this society!">
+            <i class="fa fa-trash"></i> Delete Society
+          </a>
+        </div>
+      </header>
 
-    <form class="stack" hx-put="${society.toURL()}" hx-swap="none">
-      <label for="name">Society Name</label>
-      <input name="name" autofocus autocapitalize="words" placeholder="e.g. Ten Thousand Islands" value="${society.name}"/>
+      <fieldset>
+        <label for="name">Society Name</label>
+        <input name="name" autofocus autocapitalize="words" placeholder="e.g. Ten Thousand Islands" value="${society.name}"/>
+      </fieldset>
 
-      <label for="archetype">Society Archetype</label>
-      <select name="archetype" placeholder="Select Archetype">
-      ${Object.entries(SocietyArchetype).map(
-        ([key, value]) =>
-          html`<option value="${value}" ${{selected: society.archetype == value}}>${value}</option>`
-      )}
-      </select>
+      <fieldset>
+        <label for="name">Society Archetype</label>
+        <div class="grid-four gap-tight">
+          ${Object.values(SocietyArchetype).map( archetype => SocietyArchetypeInput({ archetype, checked: society.archetype == archetype }))}
+        </div>
+      </fieldset>
 
-      <label for="archetype">Society Color</label>
-      <select name="color" placeholder="Select Color">
-      ${Object.entries(SocietyColor).map(
-        ([key, value]) =>
-          html`<option value="${value}" ${{selected: society.color == value}}>${key}</option>`
-      )}
-      </select>
+      <fieldset>
+        <label for="archetype">Society Color</label>
+        <div class="grid-seven gap-tight">
+          ${Object.values(SocietyColor).map( color => SocietyColorInput({ color, checked: society.color == color }))}
+        </div>
+      </fieldset>
 
-      <div class="layout-row gap-tight">
+      <footer class="layout-spread stack-push">
         <button type="submit"><i class="fa fa-check-circle"></i> Update Society</button>
         <button type="button" value="cancel">Cancel</button>
-      </div>
-
-      <footer style="text-align: right">
-        <a class="color-danger" hx-delete="${ society.toURL() }" hx-confirm="This will PERMANENTLY delete this society!">
-          <i class="fa fa-trash"></i> Delete Society
-        </a>
       </footer>
     </form>
   `;

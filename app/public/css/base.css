@@ -256,6 +256,7 @@ time {
   display: block;
   font-size: 3rem;
   font-family: 'Calvera';
+  width: 6rem;
 }
 
 .content {
@@ -316,11 +317,7 @@ a.card:hover {
 
 
 .toolbar {
-  --palette-bg: var(--color-black);
-  --palette-fg: var(--color-white);
-  --palette-accent: var(--color-blue);
-
-  background-color: var(--palette-bg);
+  background-color: var(--palette-fg);
 
   display: flex;
   flex-direction: column;
@@ -330,28 +327,23 @@ a.card:hover {
   translate: 0 0;
   overflow: hidden;
   background-clip: padding-box;
-
-  /* justify-content: center; */
-  /* writing-mode: sideways-rl; */
 }
 
 .toolbar-rounded {
-  border-radius: 5rem;
+  border-radius: 5em;
 }
 
 
 
 .toolbar a {
-  --offset: .8rem;
-
+  --offset: .8em;
 
   display: flex;
   background-color: transparent;
   text-decoration: none;
   justify-content: center;
   position: relative;
-  color: var(--palette-fg);
-  --palette-accent: var(--color-white);
+  color: var(--palette-bg);
 
   transition: all .2s ease-in-out;
 
@@ -363,17 +355,15 @@ a.card:hover {
 
 
 .toolbar a.is-active {
-  --palette-fg: var(--color-black);
-
-  /* background: var(--palette-accent); */
+  color: var(--palette-fg);
   padding-inline-start: calc( 2 * var(--offset) );
 }
 
 
 
 .toolbar a .toolbar-link__bkg {
-  --radius: 2.2rem;
-  --palette-accent: var(--color-white);
+  --radius: 2.2em;
+  --palette-accent: var(--palette-bg);
 
   position: absolute;
   z-index: 0;
@@ -421,8 +411,8 @@ a.card:hover {
 }
 
 .toolbar a.is-active .toolbar-link__bkg {
-  border-start-start-radius: 3rem;
-  border-end-start-radius: 3rem;
+  border-start-start-radius: 3em;
+  border-end-start-radius: 3em;
   translate: var(--offset) 0%;
 
   &::before,
@@ -441,14 +431,14 @@ a.card:hover {
 }
 
 .toolbar a:has(.icon) {
-  width: 4rem;
-  height: 4rem;
+  width: 4em;
+  height: 4em;
   place-items: center;
 }
 
 .toolbar .icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.5em;
+  height: 2.5em;
 }
 
 
@@ -457,7 +447,6 @@ a.card:hover {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: var(--palette-bg);
 }
 
 .ribbon>* {
@@ -617,4 +606,41 @@ table {
 td {
   border: 1px solid var(--palette-fg);
   padding: .5rem;
+}
+
+
+.form-radio {
+  border: 1px solid var(--palette-faint);
+  border-radius: .5rem;
+  padding: .5rem;
+  align-items: center;
+}
+
+.form-radio:has(input:checked) {
+  background: var(--palette-fg);
+  color: var(--palette-bg);
+  border-color: var(--palette-fg);
+}
+
+.form-radio input[type="radio"] {
+  display: none;
+}
+
+label.form-radio + * {
+  margin: 0px !important;
+}
+
+
+
+input[type="radio"] {
+  width: auto;
+  padding: .5rem;
+  border: 1px solid var(--palette-fg);
+  border-radius: 100%;
+}
+
+
+
+progress {
+  accent-color: var(--palette-accent);
 }

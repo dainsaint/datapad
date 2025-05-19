@@ -37,7 +37,7 @@ export default function SocietyView({ society } = {}) {
         <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-cube"></i> New Resource</button>
         <div class="layout-fill"></div>
         <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-people-group"></i> New Community</button>
-        <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog">${ Icon("planet")} New Society</button>
+        <button hx-get="${episode.toURL(`/societies/create`)}" hx-target="#dialog">${ Icon("planet")} New Society</button>
       </div>
     </div>
   `

@@ -1,4 +1,7 @@
 import { html } from "#core/utils";
+import { CommunityVoice } from "#models/community";
+import { RadioContent } from "#views/ui/forms";
+import Icon from "#views/ui/icon";
 import Select from "#views/ui/select";
 
 export default function CommunityCreate({ episode, society }) {
@@ -20,17 +23,30 @@ export default function CommunityCreate({ episode, society }) {
 
       <fieldset>
         <label for="voice">Voice</label>
-        <select name="voice">
-          <option value="people">Voice of the People</option>
-          <option value="leader">Voice of the Leaders</option>
-        </select>
+        <div class="grid-two gap-tight">
+          ${Object.values(CommunityVoice).map( voice => CommunityVoiceInput({voice}))}
+        </div>
       </fieldset>
 
       <footer class="layout-row gap-tight stack-push">
-        <button class="color-river-stone" ><i class="fa fa-people-group"></i> Create Community</button>
+        <button><i class="fa fa-people-group"></i> Create Community</button>
         <div class="layout-fill"></div>
-        <buttontype="button" value="cancel">Cancel</button>
+        <button type="button" value="cancel">Cancel</button>
       </footer>
     </form>
   `;
+}
+
+
+export function CommunityVoiceInput({ voice, checked }) {
+  return RadioContent({ 
+    name: "voice", 
+    value: voice, 
+    checked,
+    label: html`
+      <div class="align-center">
+        <div class="is-size-1">${Icon(voice)}</div>
+        <div class="is-size-6">${voice}</div>
+      </div>`})
+
 }
