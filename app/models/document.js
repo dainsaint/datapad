@@ -11,6 +11,7 @@ const database = new Database({useOffshore: false});
 
 export default class Document extends Model {
   name
+  icon
   googleDocId
   content
 

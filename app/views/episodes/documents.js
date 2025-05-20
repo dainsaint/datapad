@@ -22,7 +22,7 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
             class: "toolbar-rounded",
             links: episode.documents.map( document => ({
               href: episode.toURL("/documents/" + document.id ),
-              content: html`<i class="fa ${icons[document.name]} icon is-size-3"></i>`,
+              content: html`<i class="fa ${icons[document.name]} icon is-size-3 align-center"></i>`,
               isActive: document == currentDocument
             }))
           })}

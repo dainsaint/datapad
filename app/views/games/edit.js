@@ -3,7 +3,7 @@ import Game from "#models/game";
 
 export default function GameEdit({ game = new Game() } = {}) {
   return html`
-    <form class="stack" onsubmit="event.preventDefault()">
+    <form class="stack-loose" onsubmit="event.preventDefault()">
       <h1>Create a new game</h1>
       <p class="text">Enter a name for this dingy. Use the format "Location - Month Year", i.e. "Pendle Hill - January 2024"</p>
       <label for="name">Name</label>

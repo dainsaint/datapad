@@ -66,4 +66,17 @@ actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next
 });
 
 
+
+actions.get("/episodes/:episodeId/actions/:actionId/:view?", (req, res) => {
+  const { episodeId, actionId, view = "view" } = req.params;
+
+  const episode = Episode.load(episodeId);
+  const action = episode.getActionById(actionId);
+
+  res.render(`actions/${view}`, {action});
+});
+
+
+
+
 export default actions;

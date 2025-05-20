@@ -22,8 +22,7 @@ export default function CommunityCard({ community = new Community() } = {}) {
         data-sortable-bounds
       >
 
-        <header class="community-card__header">
-          <p class="text-detailing">${ community.voice }</p>
+        <header class="community-card__header stack-tight">
           <p>
             <a class="text-heading is-uppercase" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name}</a>
           </p>
@@ -52,7 +51,7 @@ export function CommunityResourceCard({ resource }) {
       
       data-tags="${resource.tags.toList()}"
     >
-      <h3 class="layout-row">${ resource.name }${ resource.isExhausted && html`&nbsp;&nbsp;<i class="fa fa-battery-quarter"></i>` } </h3>
+      <strong class="layout-row">${ resource.name }${ resource.isExhausted && html`&nbsp;&nbsp;<i class="fa fa-battery-quarter"></i>` } </strong>
       <input type="hidden" name="resourceIds[]" value="${resource.id}" />
     </a>
   `;

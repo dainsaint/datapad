@@ -8,19 +8,15 @@ export default function EpisodeGameMaster ({ episode } = {}) {
   const currentPhase = episode.currentPhase;
 
   return html`
-    <main class="grid-huge" style="height: 100%;"
+    <main class="full"
       hx-trigger="sse:episode"  
       hx-get="${ episode.toURL("/gm") }" 
       hx-swap="none"
-      hx-select-oob="#gm-playlist, #gm-game-state"
+      hx-select-oob="#gm-playlist"
       hx-disinherit="*"
     >
-      <div id="gm-playlist" class="panel stack" >
+      <div id="gm-playlist" class="panel stack full" >
         ${ PhaseControls({ phase: currentPhase }) }
-        ${ EpisodePlaylist({ episode }) }      
-      </div>
-
-      <div id="gm-game-state" class="stack panel">
         <h1>Game State</h1>
 
         <form class="layout-row gap-tight" hx-target="#dialog">
@@ -32,6 +28,7 @@ export default function EpisodeGameMaster ({ episode } = {}) {
 
         ${SocietyList({ episode })}
       </div>
+
     </main>
   `;
 }

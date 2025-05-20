@@ -10,7 +10,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
 
   return society
     ? html`
-      <main id="facilitator" style="display: flex; flex-wrap: wrap; width: 100%; height: 100%; gap: 10px;">
+      <main id="facilitator" class="grid-two full">
         <section class="society-panel__communities panel" style="flex: 3 1 auto;">    
           <div id="facilitator-society-select" hx-swap="none" hx-select-oob="#facilitator-society-view, #facilitator-action-edit">
             ${ SocietySelect({ society })}

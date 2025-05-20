@@ -15,7 +15,8 @@
 }
 
 :root {
-  font-size: clamp(12px, 1vw, 14px);
+  /* font-size: clamp(12px, 1vw, 14px); */
+  font-size: 12px;
 }
 
 
@@ -69,18 +70,29 @@
   }
 }
 
+h1 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+h2 {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
 
 .text-titling {
   font-family: "Montserrat";
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .text-heading {
   font-family: "Montserrat";
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .text-body {
@@ -134,7 +146,7 @@ input[type="date"],
 input[type="time"],
 select,
 label {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: inherit;
 }
 
@@ -143,7 +155,7 @@ input,
 input[type="date"],
 input[type="time"] {
   display: block;
-  padding: .5rem 1rem;
+  padding: .5rem;
   background: var(--palette-bg);
   color: var(--palette-fg);
   border: none;
@@ -159,7 +171,7 @@ input[type="time"] {
 
 select {
   display: block;
-  padding: .5rem 1rem;
+  padding: .5rem;
   background: var(--palette-bg);
   color: var(--palette-fg);
   border: none;
@@ -225,10 +237,9 @@ fieldset {
 label {
   display: block;
   font-weight: bold;
-  font-size: 1.5rem;
 }
 
-label+* {
+label + * {
   margin-top: .25rem !important;
 }
 
@@ -236,16 +247,7 @@ a {
   cursor: pointer;
 }
 
-h1 {
-  font-weight: 900;
-  font-size: 2.5rem;
-}
 
-h2 {
-  font-weight: 700;
-  text-transform: capitalize;
-  font-size: 2rem;
-}
 
 hr {
   border-top: none;
@@ -426,8 +428,8 @@ a.card:hover {
 
 
 .toolbar a:not(:has(svg, img)) {
-  font-size: 1.5rem;
-  padding: .5rem;
+  /* font-size: 1.5rem; */
+  /* padding: .5rem; */
 }
 
 .toolbar a:has(.icon) {
@@ -439,6 +441,7 @@ a.card:hover {
 .toolbar .icon {
   width: 2.5em;
   height: 2.5em;
+  place-content: center;
 }
 
 
@@ -481,7 +484,7 @@ a.card:hover {
 .status-bar .phase-time {
   display: flex;
   flex-direction: row-reverse;
-  gap: 1rem;
+  gap: 1s.5rem;
 }
 
 
@@ -502,7 +505,7 @@ button {
   border: none;
   color: var(--palette-over-accent);
   padding: .5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   border-radius: 2rem;
   cursor: pointer;
 }

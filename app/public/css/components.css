@@ -191,7 +191,6 @@ STATES TO DESIGN FOR
   padding: .5rem;
   font-weight: bold;
   cursor: pointer;
-  font-size: 1.25rem;
 }
 
 .phase-playlist__phases {
@@ -202,7 +201,6 @@ STATES TO DESIGN FOR
 .phase-playlist__phase {
   list-style: none;
   padding: .5rem;
-  font-size: 1.25rem;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
