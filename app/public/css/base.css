@@ -484,7 +484,7 @@ a.card:hover {
 .status-bar .phase-time {
   display: flex;
   flex-direction: row-reverse;
-  gap: 1s.5rem;
+  gap: 1.5rem;
 }
 
 
