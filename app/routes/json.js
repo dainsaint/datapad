@@ -64,6 +64,18 @@ jsonRouter.get("/episodes/active", (req, res) => {
 
 });
 
+jsonRouter.get("/episodes/active/playlist", (req, res) => {
+  let episode = Ledger.getActiveEpisode();
+
+
+  const result = {
+    'phases': [episode.phases]
+  }
+
+  res.send( result );
+
+});
+
 
 
 jsonRouter.get("/games", (req, res) => {
