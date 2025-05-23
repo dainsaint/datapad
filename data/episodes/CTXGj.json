@@ -216,7 +216,7 @@
       "_type": "Community",
       "id": "o7kHM",
       "societyId": "et0k8",
-      "name": "Wizened Elders",
+      "name": "Wizened Youth",
       "voice": "people",
       "tags": {
         "_type": "Tags",
@@ -492,10 +492,10 @@
       "status": "paused",
       "round": 2,
       "duration": 660,
-      "timeElapsed": 69.05400000000002,
+      "timeElapsed": 73.05700000000002,
       "actualTime": {
-        "s": "2025-05-20T17:13:24.191-04:00",
-        "e": "2025-05-20T17:24:24.191-04:00",
+        "s": "2025-05-20T19:35:24.461-04:00",
+        "e": "2025-05-20T19:46:24.461-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -883,7 +883,7 @@
     {
       "_type": "Resource",
       "id": "HOzO6",
-      "communityId": "o7kHM",
+      "communityId": "Qw0Xm",
       "name": "feral cats",
       "tags": {
         "_type": "Tags",
@@ -905,7 +905,7 @@
     {
       "_type": "Resource",
       "id": "QvweM",
-      "communityId": "o7kHM",
+      "communityId": "kATHn",
       "name": "arg",
       "tags": {
         "_type": "Tags",
@@ -915,7 +915,7 @@
     {
       "_type": "Resource",
       "id": "YaD-S",
-      "communityId": "Qw0Xm",
+      "communityId": "B95dD",
       "name": "shtrhstr",
       "tags": {
         "_type": "Tags",
@@ -925,7 +925,7 @@
     {
       "_type": "Resource",
       "id": "JvqsG",
-      "communityId": "B95dD",
+      "communityId": "UDMgC",
       "name": "righteous anger",
       "tags": {
         "_type": "Tags",
@@ -945,7 +945,7 @@
     {
       "_type": "Resource",
       "id": "BqPmG",
-      "communityId": "cV-Kn",
+      "communityId": "B95dD",
       "name": "asdfaergre",
       "tags": {
         "_type": "Tags",
@@ -2757,16 +2757,24 @@
     {
       "_type": "Record",
       "id": "nDwzZ",
-      "timestamp": "2025-05-20T21:16:40.690Z",
+      "timestamp": "2025-05-20T17:16:40.690-04:00",
       "type": "ResourceCreated",
       "value": "wgrtgrtgw"
     },
     {
       "_type": "Record",
       "id": "HKpWl",
-      "timestamp": "2025-05-20T21:16:47.347Z",
+      "timestamp": "2025-05-20T17:16:47.347-04:00",
       "type": "ResourceCreated",
       "value": "gwgwrtgwrt"
+    },
+    {
+      "_type": "Record",
+      "id": "Gh3vO",
+      "timestamp": "2025-05-20T23:35:24.461Z",
+      "type": "PhaseStarted",
+      "description": "Round 2: Societal Phase",
+      "value": "2025-05-20T23:35:24.461Z"
     }
   ]
 }

@@ -10,8 +10,8 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
 
   return society
     ? html`
-      <main id="facilitator" class="grid-two full">
-        <section class="society-panel__communities panel" style="flex: 3 1 auto;">    
+      <main id="facilitator"  class="full" style="display: flex; gap: 10px;">
+        <section class="society-panel__communities panel" style="flex: 3 1 67%;">    
           <div id="facilitator-society-select" hx-swap="none" hx-select-oob="#facilitator-society-view, #facilitator-action-edit">
             ${ SocietySelect({ society })}
           </div>
@@ -21,7 +21,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
           </div>
         </section>
 
-        <section id="facilitator-action-edit" class="panel"  style="flex: 1 1 auto;">
+        <section id="facilitator-action-edit" class="panel"  style="flex: 1 1 33%;">
           ${ SocietyActions({ society }) }
         </section>
       </main>`

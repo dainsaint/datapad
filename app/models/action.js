@@ -12,7 +12,7 @@ export default class Action extends Model {
   risk = 1
   result = []
 
-  
+  commitTime
   tags = new Tags()
 
 
@@ -31,6 +31,7 @@ export default class Action extends Model {
 
   commit() {
     this.tags.add( ActionTags.COMMITTED );
+    this.commitTime = new Date();
   }
 
   toDeclaration() {

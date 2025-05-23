@@ -1,9 +1,8 @@
 import { from, html } from "#core/utils";
-import { ActionComponent } from "#views/actions/edit";
 
 export default function ActionView({ action } = {}) {
   return html`
-    <form class="card stack-loose color-support"
+    <form class="card stack-loose card-outline"
       hx-post="${action.toURL("/resources")}"
       hx-trigger="sorted,change,submit"
       hx-swap="none"
@@ -37,4 +36,21 @@ export default function ActionView({ action } = {}) {
 
     </form>
   `;
+}
+
+
+export function ActionComponent({ resource, text, i } = {}) {
+  return html`
+    <div 
+      class="action-resources gap"
+      style= "display: grid; grid-template-columns: max-content max-content max-content 1fr; align-items: center"
+    >
+    <h3>
+      We use 
+      <span class="society-card__resource color-contrast">${resource.name}</span>
+      to 
+      <strong>${ text || ".." }.</strong>
+</h3>
+    </div>
+  `
 }

@@ -15,8 +15,7 @@
 }
 
 :root {
-  /* font-size: clamp(12px, 1vw, 14px); */
-  font-size: 12px;
+  font-size: clamp(12px, .5vw, 14px);
 }
 
 

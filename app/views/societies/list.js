@@ -1,4 +1,6 @@
 import { html } from "#core/utils";
+import ActionView from "#views/actions/view";
+import ActionEdit from "#views/actions/edit";
 
 import Icon from "#views/ui/icon";
 
@@ -10,7 +12,7 @@ export default function SocietyList({ episode }) {
     return actions;
   }, {});
   return html`
-    <div id="society-card-list" class="grid-two gap-loose" hx-get="${ episode.toURL('/societies/list') }" hx-trigger="sse:societies,sse:actions">
+    <div id="society-card-list" class="grid-huge gap-loose" hx-get="${ episode.toURL('/societies/list') }" hx-trigger="sse:societies,sse:actions">
       ${ episode.societies.map( society => html`
         <div class="society-card stack-tight">
           <h2 class="society-card__heading gap-tight">
@@ -18,33 +20,38 @@ export default function SocietyList({ episode }) {
             <span class="society-card__heading__name">${ society.name }</span>
           </h2>
           <div class="grid-huge gap-tight">
-            ${ actions[society.id].map( action => html`
-              <div class="society-card__action card ${ action.isConfirmed ? "color-support" : "card-outline" } stack-tight" hx-get="${ action.toURL("/edit") }" hx-target="#dialog">
-                
-                <div class="society-card__resources stack" >
-
-                  <div class="stack">
-                    ${ action.resources.map( (x, i) => html`
-                      <div>
-                        We use 
-                        <span hx-get="${ x.toURL("/edit") }" hx-target="#dialog" class="society-card__resource ${society.color}">${x.name}</span>
-                        to 
-                        <strong>${ action.texts[i] || ".." }.</strong>
-                      </div>` ) }
-                  </div>
-
-                  <div>
-                    <i class="fa fa-skull"></i> <strong>${action.risk}</strong>
-                    <i class="fa fa-heart"></i> <strong>0</strong>
-                    <i class="fa fa-heart-broken"></i> <strong>0</strong>
-                  </div>
-
-                </div>
-              </div>
-            `) }
+            ${ [actions[society.id].at(-1)].map( action => ActionView({ action }) ) }
           </div>
         </div>
       ` )}
     </div>
   `;
 }
+
+
+
+
+// html`
+//               <div class="society-card__action card ${ action.isConfirmed ? "color-support" : "card-outline" } stack-tight" hx-get="${ action.toURL("/edit") }" hx-target="#dialog">
+                
+//                 <div class="society-card__resources stack" >
+
+//                   <div class="stack">
+//                     ${ action.resources.map( (x, i) => html`
+//                       <div>
+//                         We use 
+//                         <span hx-get="${ x.toURL("/edit") }" hx-target="#dialog" class="society-card__resource ${society.color}">${x.name}</span>
+//                         to 
+//                         <strong>${ action.texts[i] || ".." }.</strong>
+//                       </div>` ) }
+//                   </div>
+
+//                   <div>
+//                     <i class="fa fa-skull"></i> <strong>${action.risk}</strong>
+//                     <i class="fa fa-heart"></i> <strong>0</strong>
+//                     <i class="fa fa-heart-broken"></i> <strong>0</strong>
+//                   </div>
+
+//                 </div>
+//               </div>
+//             `) 
