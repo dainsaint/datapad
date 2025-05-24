@@ -12,8 +12,13 @@ const icons = {
 export default function EpisodeDocuments ({ episode = new Episode(), documentId = undefined} = {} ) {
   const currentDocument = documentId ? Document.load(documentId) : episode.documents.at(0);
 
+console.log( documentId );
   return html`
-    <div id="episode-documents" class="layout-row full" style="overflow: hidden">
+    <div id="episode-documents" class="layout-row full" style="overflow: hidden" 
+      hx-get="${episode.toURL(`/documents/${documentId}`)}"
+      hx-trigger="sse:documents"
+      hx-swap="outerHTML"
+    >
 
       <div class="society-panel__communities panel full" style="flex: 1 0 max-content;">
         <div id="documents-toolbar" hx-swap="none" hx-select-oob="#documents-outline, #documents-view">
@@ -22,7 +27,7 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
             class: "toolbar-rounded",
             links: episode.documents.map( document => ({
               href: episode.toURL("/documents/" + document.id ),
-              content: html`<i class="fa ${icons[document.name]} icon is-size-3 align-center"></i>`,
+              content: html`<i class="fa ${document.icon} icon is-size-3 align-center"></i>`,
               isActive: document == currentDocument
             }))
           })}
@@ -30,11 +35,12 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
 
         <div id="documents-outline" class="stack scrollable">
           <h1>${ currentDocument.name }</h1>
-          <div class="layout-row gap">
+          <form class="layout-row gap" hx-post="${currentDocument.toURL("/refresh")}"  hx-disabled-elt="button">
             <button><i class="fa fa-refresh"></i> Reload </button>  
+            <i class="fa fa-spinner fa-spin htmx-indicator"></i>
             <div class="layout-fill"></div>
             <a class="button" target="_blank" href="http://docs.google.com/document/d/${currentDocument.googleDocId}"><i class="fa fa-pen-to-square"></i> Edit In Google Docs</a>
-          </div>
+        </form>
 
           <div class="text">
             ${ renderOutline( currentDocument.content ) }

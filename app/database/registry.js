@@ -15,12 +15,14 @@ import Document from "#models/document";
 
 
 function initialize() {
+  console.log("registry initialize");
   Serializer.register("Action", Action);
   Serializer.register("Community", Community);
   // Serializer.register("Game", Game);
   Serializer.register("Phase", Phase);
   Serializer.register("Player", Player);
   Serializer.register("Resource", Resource);
+  console.log("bout to load document to serializer");
   Serializer.register("Document", Document);
   Serializer.register("Episode", Episode);
   Serializer.register("Record", Record);

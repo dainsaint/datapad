@@ -78,6 +78,11 @@ export default class Episode extends Model {
   deleteResourceById = this.#deleteById("resources")
   deleteSocietyById = this.#deleteById("societies")
   deleteRecordById = this.#deleteById("records")
+  
+  deleteDocumentById(id) {
+    this.documentIds = this.documentIds.filter( dId => dId != id );
+    
+  }
 
 
 

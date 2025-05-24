@@ -449,6 +449,7 @@
           "_type": "Community",
           "id": "Qw0Xm",
           "societyId": "et0k8",
+          "player": "Jim (he/him)",
           "name": "todd",
           "voice": "leader",
           "ambassadorTo": "",
@@ -1349,7 +1350,8 @@
       ],
       "documentIds": [
         "Wt6ry",
-        "ZWFCD"
+        "ZWFCD",
+        "oauHF"
       ],
       "links": {
         "discord": "discord://-/channels/1063250197993492480/1063254140341473350"
@@ -3394,7 +3396,7 @@
         {
           "_type": "Record",
           "id": "G4hl_",
-          "timestamp": "2025-05-24T03:30:00.987Z",
+          "timestamp": "2025-05-23T23:30:00.987-04:00",
           "type": "SocietyActionsTaken",
           "description": "Frog house",
           "value": 0
@@ -3402,7 +3404,7 @@
         {
           "_type": "Record",
           "id": "kLif9",
-          "timestamp": "2025-05-24T03:30:00.987Z",
+          "timestamp": "2025-05-23T23:30:00.987-04:00",
           "type": "SocietyActionsTaken",
           "description": "Toad Shack",
           "value": 0
@@ -3410,7 +3412,7 @@
         {
           "_type": "Record",
           "id": "xpuef",
-          "timestamp": "2025-05-24T03:30:00.987Z",
+          "timestamp": "2025-05-23T23:30:00.987-04:00",
           "type": "SocietyActionsTaken",
           "description": "Beetle Junkies",
           "value": 0
@@ -3418,7 +3420,7 @@
         {
           "_type": "Record",
           "id": "P_Poo",
-          "timestamp": "2025-05-24T03:30:00.987Z",
+          "timestamp": "2025-05-23T23:30:00.987-04:00",
           "type": "SocietyActionsTaken",
           "description": "Better Burritos",
           "value": 0
@@ -3426,7 +3428,7 @@
         {
           "_type": "Record",
           "id": "tvBGy",
-          "timestamp": "2025-05-24T03:30:00.987Z",
+          "timestamp": "2025-05-23T23:30:00.987-04:00",
           "type": "SocietyActionsTaken",
           "description": "Musical Chairs",
           "value": 0
@@ -3434,7 +3436,7 @@
         {
           "_type": "Record",
           "id": "z1VE1",
-          "timestamp": "2025-05-24T03:30:03.746Z",
+          "timestamp": "2025-05-23T23:30:03.746-04:00",
           "type": "SocietyActionsTaken",
           "description": "Frog house",
           "value": 1
@@ -3442,7 +3444,7 @@
         {
           "_type": "Record",
           "id": "PqSCj",
-          "timestamp": "2025-05-24T03:30:03.747Z",
+          "timestamp": "2025-05-23T23:30:03.747-04:00",
           "type": "ActionResources",
           "description": "Frog house used  to take action.",
           "value": 0
@@ -3450,7 +3452,7 @@
         {
           "_type": "Record",
           "id": "Gkc8Y",
-          "timestamp": "2025-05-24T03:30:03.747Z",
+          "timestamp": "2025-05-23T23:30:03.747-04:00",
           "type": "SocietyActionsTaken",
           "description": "Toad Shack",
           "value": 0
@@ -3458,7 +3460,7 @@
         {
           "_type": "Record",
           "id": "UIo5N",
-          "timestamp": "2025-05-24T03:30:03.747Z",
+          "timestamp": "2025-05-23T23:30:03.747-04:00",
           "type": "SocietyActionsTaken",
           "description": "Beetle Junkies",
           "value": 1
@@ -3466,7 +3468,7 @@
         {
           "_type": "Record",
           "id": "GcGKs",
-          "timestamp": "2025-05-24T03:30:03.747Z",
+          "timestamp": "2025-05-23T23:30:03.747-04:00",
           "type": "ActionResources",
           "description": "Beetle Junkies used gwgwrtgwrt,new to take action.",
           "value": 2
@@ -3474,7 +3476,7 @@
         {
           "_type": "Record",
           "id": "xjYRa",
-          "timestamp": "2025-05-24T03:30:03.747Z",
+          "timestamp": "2025-05-23T23:30:03.747-04:00",
           "type": "SocietyActionsTaken",
           "description": "Better Burritos",
           "value": 0
@@ -3482,7 +3484,7 @@
         {
           "_type": "Record",
           "id": "xVX66",
-          "timestamp": "2025-05-24T03:30:03.748Z",
+          "timestamp": "2025-05-23T23:30:03.748-04:00",
           "type": "SocietyActionsTaken",
           "description": "Musical Chairs",
           "value": 1
@@ -3490,7 +3492,7 @@
         {
           "_type": "Record",
           "id": "scdUW",
-          "timestamp": "2025-05-24T03:30:03.748Z",
+          "timestamp": "2025-05-23T23:30:03.748-04:00",
           "type": "ActionResources",
           "description": "Musical Chairs used  to take action.",
           "value": 0

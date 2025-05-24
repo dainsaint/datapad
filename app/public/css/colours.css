@@ -59,58 +59,69 @@
 
 .color-support {
   --palette-bg: var(--color-support);
+  --palette-accent: var(--color-support);
   --palette-fg: var(--color-white);
 }
 
 .color-river-stone{
   --palette-bg: var(--color-river-stone);
+  --palette-accent: var(--color-river-stone);
   --palette-fg: var(--color-black);
 }
 
 .color-common-ground{
   --palette-bg: var(--color-common-ground);
+  --palette-accent: var(--color-common-ground);
   --palette-fg: var(--color-white);
 }
 
 .color-canary-diamond{
   --palette-bg: var(--color-canary-diamond);
+  --palette-accent: var(--color-canary-diamond);
   --palette-fg: var(--color-black);
 }
 
 .color-red-sun-rising{
   --palette-bg: var(--color-red-sun-rising);
+  --palette-accent: var(--color-red-sun-rising);
   --palette-fg: var(--color-white);
 }
 
 .color-deep-orange {
   --palette-bg: var(--color-deep-orange);
+  --palette-accent: var(--color-deep-orange);
   --palette-fg: var(--color-white);
 }
 
 .color-huckleberry{
   --palette-bg: var(--color-huckleberry);
+  --palette-accent: var(--color-huckleberry);
   --palette-fg: var(--color-white);
 }
 
 .color-strawberry-quartz{
   --palette-bg: var(--color-strawberry-quartz);
+  --palette-accent: var(--color-strawberry-quartz);
   --palette-fg: var(--color-black);
 }
 
 .color-violet-strands{
   --palette-bg: var(--color-violet-strands);
+  --palette-accent: var(--color-violet-strands);
   --palette-fg: var(--color-black);
 }
 
 
 .color-deep-purple {
   --palette-bg: var(--color-deep-purple);
+  --palette-accent: var(--color-deep-purple);
   --palette-fg: var(--color-white);
 }
 
 
 .color-light-blue {
   --palette-bg: var(--color-light-blue);
+  --palette-accent: var(--color-light-blue);
   --palette-fg: var(--color-black);
 }
 
@@ -118,6 +129,7 @@
 
 .color-contrast {
   --palette-bg: var(--color-black);
+  --palette-accent: var(--color-black);
   --palette-fg: var(--color-white);
 }
 
@@ -132,20 +144,24 @@ a.color-danger {
 
 .color-valid {
   --palette-bg: var(--color-valid);
+  --palette-accent: var(--color-valid);
   --palette-fg: var(--color-white);
 }
 
 .color-faint {
   --palette-bg: var(--color-faint);
+  --palette-accent: var(--color-faint);
   --palette-fg: var(--color-white);
 }
 
 .color-bright {
   --palette-bg: var(--color-bright);
+  --palette-accent: var(--color-bright);
   --palette-fg: var(--color-black);
 }
 
 .color-white {
   --palette-bg: var(--color-white);
+  --palette-accent: var(--color-white);
   --palette-fg: var(--color-black);
 }

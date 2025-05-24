@@ -14,6 +14,12 @@ export default function CommunityCreate({ episode, society }) {
         <input name="name" placeholder="New Community" autofocus autocapitalize="words" required />
       </fieldset>
 
+      <fieldset>
+        <label for="player">Player</label>
+        <input name="player" autocapitalize="words" placeholder="Pat Person (they/them)" value="${ community.player }"/>
+      </fieldset>
+
+
       
       <fieldset>
         <label for="societyId">Society</label>

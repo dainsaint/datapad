@@ -21,7 +21,7 @@ export default function CommunityCard({ community = new Community() } = {}) {
     >
       <form 
         id="community-card-${community.id}" 
-        class="card card-fancy ${ community.society.color } stack-loose droppable-target"
+        class="card card-fancy ${community.society.color} community-card--${community.voice} stack-loose droppable-target"
 
         hx-trigger="sorted"
         hx-post="${community.toURL("/resources")}"
@@ -35,19 +35,19 @@ export default function CommunityCard({ community = new Community() } = {}) {
           <p>
             <a class="text-heading is-uppercase" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name}</a>
           </p>
-          <p class="text-body is-uppercase">Kendra (they/them)</p>
+          <p class="text-body is-uppercase">${ community.player }</p>
           ${ community.ambassadorTo && 
             html`<p class="text"><em>Ambassador from ${ community.society.name }</em></p>`
           }
         </header>
-
+        <div class="community-card__voice">${ Icon(voiceIcon) }</div>
         <div class="grid-small gap-tight" data-sortable="resources" data-sortable-expand hx-target="#dialog">
           ${community.resources.map((resource) =>
             CommunityResourceCard({ resource })
           )}
         </div>
 
-        <div class="community-card__voice">${ Icon(voiceIcon) }</div>
+
       </form>
     </div>
   `;

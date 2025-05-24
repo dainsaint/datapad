@@ -1,17 +1,19 @@
 {
+  "_type": "Document",
   "id": "Wt6ry",
   "name": "Script",
+  "icon": "fa-scroll",
   "googleDocId": "1p8tBGHzzx4TZJlASzC7Ea9t3kwk-WakZiZa-QSrknXI",
   "content": {
     "type": "root",
     "children": [
       {
         "type": "element",
-        "tagName": "h2",
+        "tagName": "h1",
         "properties": {
           "style": "margin-top: 12PT; margin-bottom: 12PT",
           "className": [
-            "heading-2"
+            "heading-1"
           ],
           "id": "introductions-and-world-building"
         },
@@ -4948,5 +4950,6 @@
         ]
       }
     ]
-  }
+  },
+  "status": "ok"
 }

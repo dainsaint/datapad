@@ -16,7 +16,13 @@ export default function CommunityEdit({ community }) {
 
       <fieldset>
         <label for="name">Name</label>
-        <input name="name" autofocus autocapitalize="words" placeholder="New Community" value="${ community.name }"/>
+        <input name="name" autofocus autocapitalize="words" placeholder="Community Name" value="${ community.name }"/>
+      </fieldset>
+
+
+      <fieldset>
+        <label for="player">Player</label>
+        <input name="player" autocapitalize="words" placeholder="Pat Person (they/them)" value="${ community.player }"/>
       </fieldset>
 
       <fieldset>

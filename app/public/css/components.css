@@ -263,9 +263,21 @@ STATES TO DESIGN FOR
   position: absolute;
   right: 1rem;
   top: 1rem;
-  opacity: .2;
-  color: var(--palette-fg);
+  color: var(--palette-accent);
   margin-top: 0px;
+  z-index: 0;
+}
+
+.community-card--leader {
+  --palette-bg: var(--color-bright);
+  --palette-fg: var(--color-black);
+  /* --palette-accent: var(--color-accent); */
+
+  border: 2px solid var(--palette-accent);
+}
+
+.community-card--people {
+  --palette-accent: var(--color-fg);
 }
 
 .community-card__header {

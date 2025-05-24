@@ -4,7 +4,8 @@ import Model from "#database/model";
 
 export default class Community extends Model {
   societyId
-  playerId
+  
+  player
 
   name
   voice;

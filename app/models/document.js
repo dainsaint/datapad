@@ -11,26 +11,48 @@ const database = new Database({useOffshore: false});
 
 export default class Document extends Model {
   name
-  icon
+  icon = "fa-file"
   googleDocId
   content
+  status
 
-  constructor({ name, googleDocId }) {
+  constructor({ name, googleDocId, icon = "fa-file" }) {
     super();
     this.name = name;
     this.googleDocId = googleDocId;
+    this.icon = icon;
   }
 
   async refresh() {
-    const goot = new Gootenberg();
-    await goot.auth.jwt( credentials.google );
-  
-    const doc = await goot.docs.get( this.googleDocId );
-  
-    const tree = toHast(doc);
+    try {
+      const goot = new Gootenberg();
+      await goot.auth.jwt( credentials.google );
     
-    this.content = tree;
-    this.save();
+      const doc = await goot.docs.get( this.googleDocId );
+      const tree = toHast(doc);
+      
+      this.content = tree;
+      this.status = DocumentStatus.OK;
+      this.save();
+    } catch(e) {
+      this.status = DocumentStatus.ERROR;
+      this.content = {
+        "type": "root",
+        "children": [
+          {
+            "type": "element",
+            "tagName": "p",
+            "children": [
+              {
+                "type": "text",
+                "value": "ERROR: " + e.toString()
+              }
+            ]
+          }
+        ]
+      }
+      this.save();
+    }
   }
 
   save() {
@@ -39,7 +61,7 @@ export default class Document extends Model {
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/documents/${this.id}` + append;
+    return `/documents/${this.id}` + append;
   }
 
   static load(id) {
@@ -54,4 +76,10 @@ export default class Document extends Model {
     return document;
   };
 
+}
+
+
+export const DocumentStatus = {
+  OK: "ok",
+  ERROR: "error"
 }
