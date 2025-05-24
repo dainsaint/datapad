@@ -89,6 +89,8 @@ h2 {
 }
 
 .text-heading {
+  color: inherit;
+  text-decoration: inherit;
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 1.5rem;
@@ -285,6 +287,11 @@ time {
 .card-outline {
   background: transparent;
   border: 1px solid var(--palette-fg);
+}
+
+.card-accent {
+  --palette-bg: var(--color-accent);
+  --palette-fg: var(--color-over-accent);
 }
 
 a.card {
@@ -516,7 +523,7 @@ button:hover {
 
 button[disabled] {
   pointer-events: none;
-  opacity: .5;
+  --palette-accent: var(--color-faint);
 }
 
 .subtitle {
@@ -555,7 +562,8 @@ body {
 .scrollable {
   max-height: 100%;
   overflow-y: auto;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  padding-bottom: 200px;
 }
 
 

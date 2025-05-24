@@ -141,8 +141,12 @@ export default class Episode extends Model {
 
 
   getCurrentActionsForSocietyId( societyId ) {
+    return this.getActionsByRound(societyId, this.currentPhase.round);
+  }
+
+  getActionsByRound( societyId, round )  {
     return this.actions
-      .filter( action => action.round == this.currentPhase.round )
+      .filter( action => action.round == round )
       .filter( action => action.societyId == societyId )
   }
 

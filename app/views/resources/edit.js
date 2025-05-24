@@ -1,6 +1,6 @@
 import { html } from "#core/utils";
-import Episode from "#models/episode";
 import { ResourceTag } from "#models/resource";
+import { Checkbox } from "#views/ui/forms";
 
 export default function ResourceEdit({ resource }) {
   const episode = resource.episode;
@@ -50,14 +50,7 @@ export default function ResourceEdit({ resource }) {
 
 
 
-function Checkbox({label, name = "", value = false, checked = false}){
-  return html`
-    <div class="form-control">
-      <input name="${name}" type="checkbox" ${ checked && "checked" } value="${value}"/>
-      <label for="${name}">${ label }</label>
-    </div>
-  `
-}; 
+
 
 
 

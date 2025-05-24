@@ -32,8 +32,6 @@ export default function EpisodeGameMaster ({ episode } = {}) {
         </div>
       </div>
 
-      <div class="panel">
-      </div>
 
     </main>
   `;

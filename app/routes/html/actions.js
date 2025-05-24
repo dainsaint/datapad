@@ -25,6 +25,7 @@ actions.post("/episodes/:episodeId/societies/:societyId/actions", (req, res, nex
   const episode = Episode.load(episodeId);  
   const action = new Action({ societyId, round });
   episode.addAction(action);
+  episode.save();
   
   res.location( action.toURL() )
   res.sendStatus(201);
@@ -37,7 +38,7 @@ actions.post("/episodes/:episodeId/societies/:societyId/actions", (req, res, nex
 
 actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next) => {
   const { episodeId, actionId } = req.params;
-  const { resourceIds = [], texts = [], risk, commit } = req.body;
+  const { resourceIds = [], texts = [], risk, disadvantage, advantage, vote } = req.body;
 
   console.log( req.body );
 
@@ -52,9 +53,15 @@ actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next
   action.setResources(resources);
   action.texts = texts;
   action.risk = risk;
+  action.advantage = advantage;
+  action.disadvantage = disadvantage
+
   
-  if( commit )  {
-    action.commit(); 
+  if( vote )  {
+    action.vote(); 
+    //invalidate all the other actions before this one
+    const others = episode.getActionsByRound( action.societyId, action.round ).filter( a => a.id !== action.id );
+    others.forEach( action => action.invalidate() );
   }
 
   episode.save();

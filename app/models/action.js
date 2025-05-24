@@ -1,6 +1,7 @@
 import Tags from "#core/tags";
 import { oxfordize } from "#core/utils";
 import Model from "#database/model";
+import { DateTime } from "luxon";
 
 export default class Action extends Model {
   round
@@ -10,9 +11,12 @@ export default class Action extends Model {
   texts = []
   
   risk = 1
+  advantage = 0
+  disadvantage = 0
   result = []
 
-  commitTime
+  voteTime
+  status = ActionStatus.OPEN
   tags = new Tags()
 
 
@@ -29,25 +33,13 @@ export default class Action extends Model {
       .map( resource => resource.id );
   }
 
-  commit() {
-    this.tags.add( ActionTags.COMMITTED );
-    this.commitTime = new Date();
+  vote() {
+    this.status = ActionStatus.VOTED;
+    this.voteTime = DateTime.now();
   }
 
-  toDeclaration() {
-    let result = "";
-    const resources = this.resources;
-
-    if( resources.length > 0 )
-      result += `They use ${resources.at(0).name}.`
-    
-    if( resources.length > 1 )
-      result += ` They aid with ${ oxfordize(resources.slice(1).map( x => x.name ))}.`
-
-    else if ( resources.length == 0 )
-      result = "Action not yet decided."
-
-    return result;
+  invalidate() {
+    this.status = ActionStatus.INVALID;
   }
 
   get primaryResource () {
@@ -63,24 +55,25 @@ export default class Action extends Model {
     return this.episode.getSocietyById( this.societyId );
   }
 
-  get isConfirmed() {
-    return this.tags.has( ActionTags.COMMITTED );
-  }
-
   toURL(append = "") {
     return `/episodes/${this.episode.id}/actions/${this.id}` + append;
   }
 }
 
-export const ActionTags = {
-  COMMITTED: "committed",
 
+export const ActionStatus = {
+  OPEN: "open",
+  VOTED: "voted",
+  INVALID: "invalid"
+}
+
+
+
+export const ActionTags = {
   SUCCESS: "success",
   MIXED_SUCCESS: "mixed_success",
   CRITICAL_SUCCESS: "critical_success",
   FAILURE: "failure",
   MIXED_FAILURE: "mixed_failure",
-  CRITICAL_FAILURE: "critical_failure",
-  ADVANTAGE: "advantage",
-  DISADVANTAGE: "disadvantage"
+  CRITICAL_FAILURE: "critical_failure"
 }

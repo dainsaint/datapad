@@ -242,7 +242,7 @@ STATES TO DESIGN FOR
 }
 
 
-.society-card__action[data-tags*="committed"] {
+.society-card__action[data-tags*="voted"] {
   background: var(--color-green);
   border-color: var(--color-green);
 }

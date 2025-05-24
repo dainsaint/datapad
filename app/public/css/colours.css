@@ -9,11 +9,14 @@
   --color-orange: #f39c12;
   --color-error: red;
 
+
+  --color-faint: #96705B;
+
   --color-black: #494949;
   --color-white: #E6DCD1;
   --color-primary: #D7675C;
   --color-support: #787671;
-  --color-faint: #96705B;
+  --color-faint: #b2a7a1;
   --color-bright: #dbcfca;
 
   
@@ -24,17 +27,23 @@
   --color-white: #dad4c6;
 
 
+  --color-light-blue: #B2BFCD;
   --color-river-stone: #7AA590;
   --color-common-ground: #635908;
   --color-canary-diamond: #C4B045;
   --color-red-sun-rising: #B22E02;
+  --color-deep-orange: #8D4829;
   --color-huckleberry: #650807;
   --color-strawberry-quartz: #B97E90;
   --color-violet-strands: #A584AC;
+  --color-deep-purple: #4B1434;
 
 
   --color-primary: #3D314A;
   --color-support: #3D314A;
+
+  --color-danger: #B22E02;
+  --color-valid: #037e24;
 
 
   --palette-bg: var(--color-white);
@@ -73,6 +82,11 @@
   --palette-fg: var(--color-white);
 }
 
+.color-deep-orange {
+  --palette-bg: var(--color-deep-orange);
+  --palette-fg: var(--color-white);
+}
+
 .color-huckleberry{
   --palette-bg: var(--color-huckleberry);
   --palette-fg: var(--color-white);
@@ -89,6 +103,17 @@
 }
 
 
+.color-deep-purple {
+  --palette-bg: var(--color-deep-purple);
+  --palette-fg: var(--color-white);
+}
+
+
+.color-light-blue {
+  --palette-bg: var(--color-light-blue);
+  --palette-fg: var(--color-black);
+}
+
 
 
 .color-contrast {
@@ -102,4 +127,25 @@
 
 a.color-danger {
   color: var(--palette-accent);
+}
+
+
+.color-valid {
+  --palette-bg: var(--color-valid);
+  --palette-fg: var(--color-white);
+}
+
+.color-faint {
+  --palette-bg: var(--color-faint);
+  --palette-fg: var(--color-white);
+}
+
+.color-bright {
+  --palette-bg: var(--color-bright);
+  --palette-fg: var(--color-black);
+}
+
+.color-white {
+  --palette-bg: var(--color-white);
+  --palette-fg: var(--color-black);
 }

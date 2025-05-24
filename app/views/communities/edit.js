@@ -1,10 +1,11 @@
 import { html } from "#core/utils"
-import { CommunityVoiceInput } from "#views/communities/create";
-import { CommunityVoice } from "#models/community";
+import { CommunityVoiceInput, CommunityRoleInput } from "#views/communities/create";
+import { CommunityRole, CommunityVoice } from "#models/community";
 
 export default function CommunityEdit({ community }) {
   const episode = community.episode;
   const mySociety = episode.getSocietyById( community.societyId );
+  const ambassadorSociety = episode.getSocietyById( community.ambassadorTo );
   
   return html`
     <form class="stack-loose" hx-patch="${ community.toURL() }">
@@ -31,6 +32,17 @@ export default function CommunityEdit({ community }) {
           ${Object.values(CommunityVoice).map( voice => CommunityVoiceInput({voice, checked: community.voice == voice}))}
         </div>
       </fieldset>
+
+      <fieldset>
+        <label for="ambassadorTo">Ambassador To</label>
+        <select name="ambassadorTo">
+          <option value="">None</option>
+          ${ episode.societies
+              .filter( society => society.id != mySociety.id )
+              .map(society => html`<option value="${society.id}" ${{selected: society.id === ambassadorSociety?.id}}>${society.name}</option>`) }
+        </select>
+      </fieldset>
+
 
       <footer class="layout-spread stack-push">
         <button><i class="fa fa-check-circle"></i> Update Community</button>  

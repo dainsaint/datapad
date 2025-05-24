@@ -4,6 +4,10 @@ import Icon from "#views/ui/icon";
 
 export default function SocietyView({ society } = {}) {
   const episode = society.episode;
+  const visiting = episode.societies.map( s => s.communities.filter( community => community.ambassadorTo == society.id) ).flat();
+  const present = society.communities.filter( community => !community.ambassadorTo );
+
+  const communities = [ ...present, ...visiting ];
   return html`
     <div 
       class="stack society-view"
@@ -30,7 +34,7 @@ export default function SocietyView({ society } = {}) {
       </header> 
 
       <div class="grid-three gap-tight">
-        ${society.communities.map( (community) => CommunityCard({ community }))}
+        ${communities.map( (community) => CommunityCard({ community }))}
       </div>
 
       <div class="layout-row gap-tight stack-push">

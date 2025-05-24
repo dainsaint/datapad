@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import EpisodeStatusBar from "../episodes/components/statusbar.js";
+import EpisodeStatusBar from "../episodes/statusbar.js";
 import EpisodeToolbar from "../episodes/components/toolbar.js";
 import AppLayout from "./app.js";
 

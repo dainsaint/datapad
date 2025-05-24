@@ -55,7 +55,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
           text: texts[i], 
           statement: `We use ${ episode.getResourceById(resourceId).name } to ${ texts[i] }`
         })),
-        voted: tags.has( ActionTags.COMMITTED ),
+        voted: tags.has( ActionTags.VOTED ),
       })),
     }))
   }

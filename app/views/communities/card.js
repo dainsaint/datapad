@@ -1,8 +1,17 @@
 import { html } from "#core/utils";
-import Community, { CommunityVoice } from "#models/community";
+import Community, { CommunityTag, CommunityVoice } from "#models/community";
 import Icon from "#views/ui/icon";
 
 export default function CommunityCard({ community = new Community() } = {}) {
+
+  let voiceIcon = community.voice;
+
+  if( community.tags.has( CommunityTag.EMISSARY ) )
+    voiceIcon += "-emissary";
+
+  if( community.ambassadorTo )
+    voiceIcon += "-ambassador";
+
   return html`
     <div id="${community.id}" 
       hx-get="${community.toURL("/card")}" 
@@ -27,6 +36,9 @@ export default function CommunityCard({ community = new Community() } = {}) {
             <a class="text-heading is-uppercase" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name}</a>
           </p>
           <p class="text-body is-uppercase">Kendra (they/them)</p>
+          ${ community.ambassadorTo && 
+            html`<p class="text"><em>Ambassador from ${ community.society.name }</em></p>`
+          }
         </header>
 
         <div class="grid-small gap-tight" data-sortable="resources" data-sortable-expand hx-target="#dialog">
@@ -35,7 +47,7 @@ export default function CommunityCard({ community = new Community() } = {}) {
           )}
         </div>
 
-        <div class="community-card__voice">${ Icon(community.voice) }</div>
+        <div class="community-card__voice">${ Icon(voiceIcon) }</div>
       </form>
     </div>
   `;

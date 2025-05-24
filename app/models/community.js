@@ -8,6 +8,8 @@ export default class Community extends Model {
 
   name
   voice;
+  isEmissary;
+  ambassadorTo;
   tags = new Tags()
 
   constructor(data) {
@@ -51,6 +53,10 @@ export default class Community extends Model {
     return this.episode.players.find( player => player.id == this.playerId );
   }
 
+  get ambassadorSociety() {
+    return this.episode.societies.find( society => society.id == this.ambassadorTo );
+  }
+
   toURL(append = "") {
     return `/episodes/${this.episode.id}/communities/${this.id}` + append;
   }
@@ -70,4 +76,6 @@ export const CommunityRole = {
 export const CommunityTag = {
   ENDANGERED: "endangered",
   LOST: "lost",
+  EMISSARY: "emissary",
+  AMBASSADOR: "ambassador",
 };

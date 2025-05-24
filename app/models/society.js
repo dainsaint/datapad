@@ -1,7 +1,7 @@
 import Tags from "#core/tags";
 import Model from "#database/model";
 import Record, { RecordType } from "#models/record";
-import Action from "#models/action";
+import Action, { ActionStatus, ActionTags } from "#models/action";
 
 
 export default class Society extends Model {
@@ -32,7 +32,7 @@ export default class Society extends Model {
     const actionsTakenThisRound = this.episode.actions
       .filter( action => action.round == roundNumber )
       .filter( action => action.societyId == this.id )
-      .filter( action => action.resourceIds.length > 0 ) //TODO: swap this with READY tag
+      .filter( action => action.status == ActionStatus.VOTED )
 
     this.episode.addRecord( new Record({ type: RecordType.SOCIETY_ACTIONS_TAKEN, description: this.name, value: actionsTakenThisRound.length }));
 
@@ -71,13 +71,16 @@ export const SocietyArchetype = {
 
 
 export const SocietyColor = {
+  LIGHT_BLUE: "color-light-blue",
   RIVER_STONE: "color-river-stone",
   COMMON_GROUND: "color-common-ground",
   CANARY_DIAMOND: "color-canary-diamond",
   RED_SUN_RISING: "color-red-sun-rising",
+  DEEP_ORANGE: "color-deep-orange",
   HUCKLEBERRY: "color-huckleberry",
   STRAWBERRY_QUARTZ: "color-strawberry-quartz",
-  VIOLET_STRANDS: "color-violet-strands"
+  VIOLET_STRANDS: "color-violet-strands",
+  DEEP_PURPLE: "color-deep-purple"
 };
 
 

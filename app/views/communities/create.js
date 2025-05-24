@@ -50,3 +50,17 @@ export function CommunityVoiceInput({ voice, checked }) {
       </div>`})
 
 }
+
+
+export function CommunityRoleInput({ role, checked }) {
+  return RadioContent({ 
+    name: "role", 
+    value: role, 
+    checked,
+    label: html`
+      <div class="align-center">
+        <div class="is-size-1">${Icon(role)}</div>
+        <div class="is-size-6">${role}</div>
+      </div>`})
+
+}

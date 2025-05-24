@@ -12,21 +12,21 @@ export default function ActionEdit({ action } = {}) {
         <label for="risk" style=""><i class="fa fa-skull"></i></label>
         <select class="is-uppercase is-size-6" name="risk" style="flex-basis: auto;">
           ${ from(0).to(6).map( risk =>
-              html`<option ${{value: risk, selected: risk == action.risk }}>Risk ${risk}</option>`
+              html`<option value="${risk}" ${{selected: risk == action.risk }}>Risk ${risk}</option>`
             )}
         </select>
 
         <label for="advantage" style=""><i class="fa fa-heart"></i></label>
         <select class="is-uppercase is-size-6"  name="advantage" style="flex-basis: auto;">
           ${ from(0).to(2).map( advantage =>
-              html`<option ${{value: advantage, selected: advantage == action.advantage }}>Adv ${advantage}</option>`
+              html`<option value="${advantage}" ${{selected: advantage == action.advantage }}>Adv ${advantage}</option>`
             )}
         </select>
 
         <label for="disadvantage" style=""><i class="fa fa-heart-broken"></i></label>
         <select class="is-uppercase is-size-6"  name="disadvantage" style="flex-basis: auto;">
           ${ from(0).to(2).map( disadvantage =>
-              html`<option ${{value: disadvantage, selected: disadvantage == action.disadvantage }}>Dis ${disadvantage}</option>`
+              html`<option value="${disadvantage}" ${{selected: disadvantage == action.disadvantage }}>Dis ${disadvantage}</option>`
             )}
         </select>
       </fieldset>
@@ -36,12 +36,10 @@ export default function ActionEdit({ action } = {}) {
         ${ ActionComponent({ i: action.resources.length }) }
       </fieldset>
 
-      ${ !action.isConfirmed && html`
-        <footer class="layout-row">
-          <div class="layout-fill"></div>
-          <button name="commit" value="commit" ${{ disabled: action.resources.length == 0}}><i class="fa fa-check-circle"></i> Confirm Action?</button>
-        </footer>
-      `}
+      <footer class="layout-row"> 
+        <div class="layout-fill"></div>
+        <button name="vote" value="vote" ${{ disabled: action.resources.length == 0}}><i class="fa fa-check-to-slot"></i> Vote!</button>
+      </footer>
     </form>
   `;
 }

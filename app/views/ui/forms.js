@@ -8,3 +8,12 @@ export function RadioContent({ name, value, id, checked, label }) {
     </label>
   `
 }
+
+export function Checkbox({label, name = "", value = false, checked = false}){
+  return html`
+    <div class="form-control">
+      <input name="${name}" type="checkbox" ${ checked && "checked" } value="${value}"/>
+      <label for="${name}">${ label }</label>
+    </div>
+  `
+}; 
