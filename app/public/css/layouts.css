@@ -193,6 +193,8 @@
   }
 }
 
+
+
 .in-statusbar {
   grid-area: statusbar;
 }
@@ -220,6 +222,13 @@
   grid-template-areas: "app";
   /* border: 1px solid red; */
 }
+
+.layout-bottom-toolbar {
+  display: grid; 
+  grid-template-rows: 1fr max-content; 
+  gap: var(--gap);
+}
+
 
 
 .in-app {

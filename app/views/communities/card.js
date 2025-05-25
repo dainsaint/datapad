@@ -6,10 +6,10 @@ export default function CommunityCard({ community = new Community() } = {}) {
 
   let voiceIcon = community.voice;
 
-  if( community.tags.has( CommunityTag.EMISSARY ) )
+  if( community.isEmissary )
     voiceIcon += "-emissary";
 
-  if( community.ambassadorTo )
+  if( community.isAmbassador )
     voiceIcon += "-ambassador";
 
   return html`
@@ -21,7 +21,7 @@ export default function CommunityCard({ community = new Community() } = {}) {
     >
       <form 
         id="community-card-${community.id}" 
-        class="card card-fancy ${community.society.color} community-card--${community.voice} stack-loose droppable-target"
+        class="card card-fancy ${community.society.color} community-card community-card--${community.voice} stack-loose droppable-target"
 
         hx-trigger="sorted"
         hx-post="${community.toURL("/resources")}"
@@ -36,7 +36,7 @@ export default function CommunityCard({ community = new Community() } = {}) {
             <a class="text-heading is-uppercase" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name}</a>
           </p>
           <p class="text-body is-uppercase">${ community.player }</p>
-          ${ community.ambassadorTo && 
+          ${ community.isAmbassador && 
             html`<p class="text"><em>Ambassador from ${ community.society.name }</em></p>`
           }
         </header>

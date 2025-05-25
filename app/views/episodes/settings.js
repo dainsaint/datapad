@@ -6,7 +6,7 @@ export default function EpisodeSettings ({ episode = new Episode()} = {}) {
   return html`
     <main class="panel content stack-loose full"
       hx-get="${episode.toURL("/settings")}"
-      hx-trigger="sse:documents"
+      hx-trigger="sse:documents, sse:episode"
       hx-swap="outerHTML"
     >
       <h1>Episode Settings</h1>
@@ -51,12 +51,13 @@ export default function EpisodeSettings ({ episode = new Episode()} = {}) {
 
         <div class="stack">
           <h2>Links</h2>
-          <form>
+          <form hx-put="${episode.toURL()}" hx-swap="none">
             <label for="links.discord">Discord Channel</label>
             <div class="layout-row gap">
-              <input name="links.discord" placeholder="Discord Link" value="${ episode.links.discord }"/>
+              <input name="links[discord]" placeholder="Discord Link" value="${ episode.links.discord }"/>
               <div class="is-wide-3" >
                 <button><i class="fa fa-check-circle"></i></button>
+                <i class="fa fa-spinner fa-spin htmx-indicator"></i>
               </div>
             </div>
           </form>

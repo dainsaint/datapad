@@ -440,10 +440,10 @@
       "_type": "Community",
       "id": "Qw0Xm",
       "societyId": "et0k8",
+      "ambassadorSocietyId": "",
       "player": "Jim (he/him)",
-      "name": "todd",
+      "name": "Calendar Daddies",
       "voice": "leader",
-      "ambassadorTo": "",
       "tags": {
         "_type": "Tags",
         "value": []
@@ -453,6 +453,8 @@
       "_type": "Community",
       "id": "lHvo5",
       "societyId": "V9xbw",
+      "ambassadorSocietyId": "",
+      "player": "",
       "name": "ribs",
       "voice": "leader",
       "tags": {
@@ -475,9 +477,9 @@
       "_type": "Community",
       "id": "B95dD",
       "societyId": "et0k8",
+      "ambassadorSocietyId": "",
       "name": "Jason",
       "voice": "leader",
-      "ambassadorTo": "",
       "tags": {
         "_type": "Tags",
         "value": []
@@ -487,9 +489,9 @@
       "_type": "Community",
       "id": "cV-Kn",
       "societyId": "et0k8",
+      "ambassadorSocietyId": "",
       "name": "Fredrick",
       "voice": "people",
-      "ambassadorTo": "",
       "tags": {
         "_type": "Tags",
         "value": []
@@ -534,6 +536,8 @@
       "_type": "Community",
       "id": "G_9_r",
       "societyId": "Feay0",
+      "ambassadorSocietyId": "",
+      "player": "",
       "name": "nana",
       "voice": "people",
       "tags": {
@@ -547,6 +551,8 @@
       "_type": "Community",
       "id": "ssnLF",
       "societyId": "Feay0",
+      "ambassadorSocietyId": "",
+      "player": "",
       "name": "baba",
       "voice": "leader",
       "tags": {
@@ -560,6 +566,8 @@
       "_type": "Community",
       "id": "FRomU",
       "societyId": "Feay0",
+      "ambassadorSocietyId": "",
+      "player": "",
       "name": "gaga",
       "voice": "people",
       "tags": {
@@ -571,8 +579,10 @@
       "_type": "Community",
       "id": "NzLOs",
       "societyId": "Feay0",
+      "ambassadorSocietyId": "",
+      "player": "",
       "name": "dada",
-      "voice": "people",
+      "voice": "leader",
       "tags": {
         "_type": "Tags",
         "value": []
@@ -595,6 +605,8 @@
       "_type": "Community",
       "id": "u0fa0",
       "societyId": "e-JcG",
+      "ambassadorSocietyId": "",
+      "player": "",
       "name": "skreeee",
       "voice": "people",
       "tags": {
@@ -608,6 +620,8 @@
       "_type": "Community",
       "id": "jaCtF",
       "societyId": "yXHVO",
+      "ambassadorSocietyId": "",
+      "player": "",
       "name": "big ol shair",
       "voice": "people",
       "tags": {
@@ -1292,7 +1306,45 @@
       "tags": {
         "_type": "Tags",
         "value": []
-      }
+      },
+      "roundData": [
+        {
+          "round": {
+            "round": 3,
+            "societyId": "et0k8"
+          },
+          "leadershipOverrides": {}
+        },
+        {
+          "round": {
+            "round": "round=",
+            "societyId": "et0k8"
+          },
+          "emissaryCommunityId": "cV-Kn",
+          "leadershipOverrides": {}
+        },
+        {
+          "round": {
+            "round": 3,
+            "societyId": "et0k8"
+          },
+          "leadershipOverrides": {}
+        },
+        {
+          "round": {
+            "round": "round=",
+            "societyId": "et0k8"
+          },
+          "emissaryCommunityId": "B95dD",
+          "leadershipOverrides": {}
+        },
+        {
+          "round": 3,
+          "societyId": "et0k8",
+          "emissaryCommunityId": "Qw0Xm",
+          "leadershipOverrides": {}
+        }
+      ]
     },
     {
       "_type": "Society",
@@ -1303,7 +1355,15 @@
       "tags": {
         "_type": "Tags",
         "value": []
-      }
+      },
+      "roundData": [
+        {
+          "round": 3,
+          "societyId": "V9xbw",
+          "leadershipOverrides": {},
+          "emissaryCommunityId": ""
+        }
+      ]
     },
     {
       "_type": "Society",
@@ -1314,7 +1374,15 @@
       "tags": {
         "_type": "Tags",
         "value": []
-      }
+      },
+      "roundData": [
+        {
+          "round": 3,
+          "societyId": "Feay0",
+          "leadershipOverrides": {},
+          "emissaryCommunityId": "ssnLF"
+        }
+      ]
     },
     {
       "_type": "Society",
@@ -1325,7 +1393,14 @@
       "tags": {
         "_type": "Tags",
         "value": []
-      }
+      },
+      "roundData": [
+        {
+          "round": 3,
+          "societyId": "e-JcG",
+          "leadershipOverrides": {}
+        }
+      ]
     },
     {
       "_type": "Society",
@@ -1336,7 +1411,14 @@
       "tags": {
         "_type": "Tags",
         "value": []
-      }
+      },
+      "roundData": [
+        {
+          "round": 3,
+          "societyId": "yXHVO",
+          "leadershipOverrides": {}
+        }
+      ]
     }
   ],
   "documentIds": [

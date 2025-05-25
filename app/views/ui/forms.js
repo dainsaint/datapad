@@ -17,3 +17,12 @@ export function Checkbox({label, name = "", value = false, checked = false}){
     </div>
   `
 }; 
+
+
+export function Select({ name, current, options }) {
+  return html`
+    <select name="${name}">
+      ${ options.map( option => `<option value=${option.id} ${ option.id == current ? "selected" : "" }>${option.name}</option>` ) }
+    </select>
+  `
+}

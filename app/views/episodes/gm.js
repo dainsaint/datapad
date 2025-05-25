@@ -8,32 +8,39 @@ export default function EpisodeGameMaster ({ episode } = {}) {
   const currentPhase = episode.currentPhase;
 
   return html`
-    <main class="full grid-two"
+    <main class="full" style="display: grid; grid-template-rows: 1fr max-content; gap: 10px"
       hx-trigger="sse:episode"  
       hx-get="${ episode.toURL("/gm") }" 
       hx-swap="none"
       hx-select-oob="#gm-playlist"
       hx-disinherit="*"
     >
-    
-      <div id="gm-playlist" class="panel stack full" >
+    <article class="full grid-two">
+      <div id="gm-playlist" class="panel stack full" style="border-top-left-radius: 0px">
         ${ PhaseControls({ phase: currentPhase }) }
         <h1>Game State</h1>
 
-        <form class="layout-row gap-tight" hx-target="#dialog">
-          <button hx-get="${ episode.toURL('/resources/create') }" ><i class="fa fa-cube"></i> new resource</button>
-          <div class="layout-fill"></div>
-          <button hx-get="${ episode.toURL('/societies/create') }" >${ Icon("planet") } new society</button>
-          <button hx-get="${ episode.toURL('/communities/create') }" ><i class="fa fa-people-group"></i> new community</button>
-        </form>
 
         <div class="scrollable">
           ${SocietyList({ episode })}
         </div>
       </div>
+      
+
+</article>
 
 
-    </main>
+    <aside>
+    <form class="layout-row gap-tight" hx-target="#dialog">
+    <button hx-get="${ episode.toURL('/societies/create') }" >${ Icon("planet") } new society</button>
+    <button hx-get="${ episode.toURL('/communities/create') }" ><i class="fa fa-people-group"></i> new community</button>
+          
+          <div class="layout-fill"></div>
+          <button hx-get="${ episode.toURL('/resources/create') }" ><i class="fa fa-cube"></i> new resource</button>
+        </form>
+</aside>
+
+</main>
   `;
 }
 

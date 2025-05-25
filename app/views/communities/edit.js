@@ -5,7 +5,7 @@ import { CommunityRole, CommunityVoice } from "#models/community";
 export default function CommunityEdit({ community }) {
   const episode = community.episode;
   const mySociety = episode.getSocietyById( community.societyId );
-  const ambassadorSociety = episode.getSocietyById( community.ambassadorTo );
+  const ambassadorSociety = episode.getSocietyById( community.ambassadorSocietyId );
   
   return html`
     <form class="stack-loose" hx-patch="${ community.toURL() }">
@@ -32,6 +32,17 @@ export default function CommunityEdit({ community }) {
         </select>
       </fieldset>
 
+
+      <fieldset>
+        <label for="ambassadorSocietyId">Ambassador To</label>
+        <select name="ambassadorSocietyId">
+          <option value="">None</option>
+          ${ episode.societies
+              .filter( society => society.id != mySociety.id )
+              .map(society => html`<option value="${society.id}" ${{selected: society.id === ambassadorSociety?.id}}>${society.name}</option>`) }
+        </select>
+      </fieldset>
+
       <fieldset>
         <label for="voice">Voice</label>
         <div class="grid-two gap-tight">
@@ -39,15 +50,6 @@ export default function CommunityEdit({ community }) {
         </div>
       </fieldset>
 
-      <fieldset>
-        <label for="ambassadorTo">Ambassador To</label>
-        <select name="ambassadorTo">
-          <option value="">None</option>
-          ${ episode.societies
-              .filter( society => society.id != mySociety.id )
-              .map(society => html`<option value="${society.id}" ${{selected: society.id === ambassadorSociety?.id}}>${society.name}</option>`) }
-        </select>
-      </fieldset>
 
 
       <footer class="layout-spread stack-push">

@@ -93,6 +93,38 @@ societies.delete("/episodes/:episodeId/societies/:societyId", (req, res) => {
 });
 
 
+societies.post("/episodes/:episodeId/societies/:societyId/ambassador", (req, res) => {
+  const { episodeId } = req.params;
+  const { communityId, ambassadorSocietyId } = req.body;
+
+  const episode = Episode.load(episodeId);
+  const community = episode.getCommunityById(communityId);
+  community.ambassadorSocietyId = ambassadorSocietyId;
+
+  episode.save();
+
+  res.sendStatus(200);
+  broadcast("societies");
+})
+
+
+societies.post("/episodes/:episodeId/societies/:societyId/emissary", (req, res) => {
+  console.log("what up");
+  const { episodeId, societyId } = req.params;
+  const { round, emissaryCommunityId } = req.body;
+
+  const episode = Episode.load(episodeId);
+  const society = episode.getSocietyById(societyId);
+  const roundData = society.getRoundData( round );
+  roundData.emissaryCommunityId = emissaryCommunityId;
+
+  episode.save();
+
+  res.sendStatus(200);
+  broadcast("societies");
+})
+
+
 
 
 export default societies;

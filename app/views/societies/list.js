@@ -23,10 +23,10 @@ export default function SocietyList({ episode }) {
   return html`
     <div id="society-card-list" class="grid-huge gap" hx-get="${ episode.toURL('/societies/list') }" hx-trigger="sse:societies,sse:actions">
       ${ societies.map( ({society, open, voted, time}, i) => html`
-        <div class="society-card card ${society.color} stack">
+        <section id="${ society.id }" class="society-card card ${society.color} stack">
 
           <div class="layout-row layout-spread">
-            <a class="text-heading" href="${ episode.toURL(`/facilitator/${society.id}`)}">
+            <a class="text-heading">
               <span class="society-card__heading__name">${i+1}) ${ society.name }</span>
             </a>
 
@@ -42,10 +42,20 @@ export default function SocietyList({ episode }) {
             </div>
           </div>
 
+          <div class="layout-row gap-tight">
+            <div class="is-size-3">
+              ${ Icon("emissary") }
+            </div>
+            <div>
+              <strong>${ society.currentEmissary?.name }</strong><br/>
+              ${ society.currentEmissary?.player }<br/>
+            </div>
+          </div>
+
           <div class="stack-tight">
             ${ voted && ActionView({ action: voted }) }
           </div>
-        </div>
+        </section>
       ` )}
     </div>
   `;

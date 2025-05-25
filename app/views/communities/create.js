@@ -2,7 +2,7 @@ import { html } from "#core/utils";
 import { CommunityVoice } from "#models/community";
 import { RadioContent } from "#views/ui/forms";
 import Icon from "#views/ui/icon";
-import Select from "#views/ui/select";
+import { Select } from "#views/ui/forms";
 
 export default function CommunityCreate({ episode, society }) {
   return html`

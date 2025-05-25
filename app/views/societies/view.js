@@ -4,8 +4,8 @@ import Icon from "#views/ui/icon";
 
 export default function SocietyView({ society } = {}) {
   const episode = society.episode;
-  const visiting = episode.societies.map( s => s.communities.filter( community => community.ambassadorTo == society.id) ).flat();
-  const present = society.communities.filter( community => !community.ambassadorTo );
+  const visiting = episode.societies.map( s => s.communities.filter( community => community.ambassadorSocietyId == society.id) ).flat();
+  const present = society.communities.filter( community => !community.ambassadorSocietyId );
 
   const communities = [ ...present, ...visiting ];
   return html`
@@ -37,12 +37,6 @@ export default function SocietyView({ society } = {}) {
         ${communities.map( (community) => CommunityCard({ community }))}
       </div>
 
-      <div class="layout-row gap-tight stack-push">
-        <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-cube"></i> New Resource</button>
-        <div class="layout-fill"></div>
-        <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-people-group"></i> New Community</button>
-        <button hx-get="${episode.toURL(`/societies/create`)}" hx-target="#dialog">${ Icon("planet")} New Society</button>
-      </div>
     </div>
   `
 }

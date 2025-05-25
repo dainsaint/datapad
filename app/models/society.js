@@ -11,10 +11,27 @@ export default class Society extends Model {
 
   tags = new Tags()
 
+  roundData = []
+
   constructor(data) {
     super(data);
     this.update(data);
   }
+
+  getRoundData(round) {
+    let data = this.roundData.find( data => data.round == round )
+    if(!data) {
+      data = new SocietyRound({ round, societyId: this.id });
+      this.roundData.push(data);
+      this.roundData.sort( (a, b) => a.round - b.round );
+    }
+
+    return data;
+  }
+
+
+
+
 
   startRound( roundNumber ) {
     // const actionThisRound = this.episode.actions
@@ -51,10 +68,38 @@ export default class Society extends Model {
     return this.communities.map( community => community.resources ).flat();
   }
 
+  get currentEmissary() {
+    const id = this.getRoundData( this.episode.currentPhase.round )?.emissaryCommunityId
+    return this.episode.getCommunityById(id);
+  }
+
 
   toURL(append = "") {
     return `/episodes/${this.episode.id}/societies/${this.id}` + append;
   }
+}
+
+
+export class SocietyRound {
+
+  round
+  societyId
+
+  emissaryCommunityId
+  leadershipOverrides = {}
+  
+  ambassadorsSent = []
+
+  constructor({round, societyId}) {
+    this.round = round
+    this.societyId = societyId
+  }
+
+  addAmbassador( communityId, societyId ) {
+    this.ambassadorsSent.push( {communityId, societyId} );
+  }
+
+
 }
 
 

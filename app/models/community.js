@@ -4,13 +4,10 @@ import Model from "#database/model";
 
 export default class Community extends Model {
   societyId
-  
+  ambassadorSocietyId;
   player
-
   name
   voice;
-  isEmissary;
-  ambassadorTo;
   tags = new Tags()
 
   constructor(data) {
@@ -36,6 +33,15 @@ export default class Community extends Model {
     }
   }
 
+  get isEmissary() {
+    return this.society.getRoundData( this.episode.currentPhase.round ).emissaryCommunityId === this.id;
+  }
+
+  get isAmbassador() {
+    return this.ambassadorSocietyId;
+  }
+
+
 
   get isEndangered() {
     return this.tags.has( CommunityTag.ENDANGERED );
@@ -55,7 +61,7 @@ export default class Community extends Model {
   }
 
   get ambassadorSociety() {
-    return this.episode.societies.find( society => society.id == this.ambassadorTo );
+    return this.episode.societies.find( society => society.id == this.ambassadorSocietyId );
   }
 
   toURL(append = "") {

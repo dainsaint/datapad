@@ -66,6 +66,16 @@ episodes.post("/episodes",
     res.redirect( episode.toURL() );
 })
 
+episodes.put("/episodes/:episodeId", (req, res) => {
+  const { episodeId } = req.params;
+  const episode = Episode.load( episodeId );
+  console.log( req.body );
+  episode.update( req.body );
+  episode.save();
+  res.sendStatus(200);
+  broadcast("episode");
+})
+
 ////////////////////////////////////////
 // INDIVIDUAL ROUTES
 ////////////////////////////////////////
@@ -123,16 +133,6 @@ episodes.put("/episodes/:episodeId/playlist", (req, res) => {
   res.sendStatus(200);
   broadcast("episode");
 });
-
-
-episodes.get("/episodes/:episodeId/playlist", (req, res) => {
-  const { episodeId } = req.params;
-  const episode = Episode.load(episodeId);
-  res.render(`episodes/playlist`, { episode });
-});
-
-
-
 
 
 episodes.get("/episodes/:episodeId/:view?", episodeLayout, (req, res) => {
