@@ -33,7 +33,7 @@ export default class Resource extends Model {
 
   
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/resources/${this.id}` + append;
+    return `/resources/${this.episode.id}/${this.id}` + append;
   }
 }
 

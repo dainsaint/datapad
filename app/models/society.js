@@ -75,7 +75,7 @@ export default class Society extends Model {
 
 
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/societies/${this.id}` + append;
+    return `/societies/${this.episode.id}/${this.id}` + append;
   }
 }
 

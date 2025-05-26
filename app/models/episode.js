@@ -177,7 +177,7 @@ export default class Episode extends Model {
   };
 
 
-    toURL(append = "") {
+  toURL(append = "") {
     return `/episodes/${this.id}` + append;
   }
 

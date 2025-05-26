@@ -1,7 +1,6 @@
 import { html } from "#core/utils";
 import PhaseControls from "#views/phases/controls";
-import SocietyList from "#views/societies/list";
-import EpisodePlaylist from "#views/episodes/playlist";
+import EpisodeSocieties from "#views/episodes/societies";
 import Icon from "#views/ui/icon";
 
 export default function EpisodeGameMaster ({ episode } = {}) {
@@ -22,7 +21,7 @@ export default function EpisodeGameMaster ({ episode } = {}) {
 
 
         <div class="scrollable">
-          ${SocietyList({ episode })}
+          ${EpisodeSocieties({ episode })}
         </div>
       </div>
       

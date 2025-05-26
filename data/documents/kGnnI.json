@@ -1,0 +1,23 @@
+{
+  "_type": "Document",
+  "id": "kGnnI",
+  "name": "Lore",
+  "icon": "fa-dice-d20",
+  "googleDocId": "adsfds",
+  "content": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "children": [
+          {
+            "type": "text",
+            "value": "ERROR: Error: Requested entity was not found."
+          }
+        ]
+      }
+    ]
+  },
+  "status": "error"
+}

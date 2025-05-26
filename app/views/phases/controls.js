@@ -11,7 +11,7 @@ export default function PhaseControls({ phase }) {
       hx-trigger="sse:phases"
       hx-swap="outerHTML"
     >
-      <form class="layout-row gap-tight" hx-put="${ currentPhase.toURL() }" hx-swap="none">
+      <form class="layout-row gap-tight" hx-post="${ currentPhase.toURL() }" hx-swap="none">
         <button name="action" value="prev" ${{disabled: false || phases.at(0) == currentPhase }}><i class="fa fa-backward-step"></i></button>
         ${ !currentPhase.isPlaying && html`<button name="action" value="start" ${{disabled: currentPhase.isComplete }}><i class="fa fa-play"></i></button>` }
         ${ currentPhase.isPlaying && html`<button name="action" value="pause" ><i class="fa fa-pause"></i></button>` }

@@ -6,7 +6,7 @@ export default function PhaseEdit({ phase } = {}) {
   const phaseSeconds = phase.duration - phaseMinutes * 60;
   
   return html`
-    <form class="stack-loose" hx-post="${phase.toURL()}">
+    <form class="stack-loose" hx-put="${phase.toURL()}">
       <header class="stack-tight">
         <p class="subtitle">Round ${ phase.round }</p>
         <h1>Edit phase</h1>

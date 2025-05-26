@@ -15,7 +15,7 @@ const resources = express.Router();
 */
 
 
-resources.get("/episodes/:episodeId/resources", (req, res, next) => {
+resources.get("/:episodeId", (req, res, next) => {
   const { episodeId } = req.params;
   const { view = "list", layout = "none" } = req.query;
 
@@ -24,7 +24,7 @@ resources.get("/episodes/:episodeId/resources", (req, res, next) => {
   res.render(`resources/${view}`, { episode, layout });
 });
 
-resources.post("/episodes/:episodeId/resources", (req, res, next) => {
+resources.post("/:episodeId", (req, res, next) => {
   const { episodeId } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -43,7 +43,7 @@ resources.post("/episodes/:episodeId/resources", (req, res, next) => {
 
 
 
-resources.get("/episodes/:episodeId/resources/create", (req, res, next) => {
+resources.get("/:episodeId/create", (req, res, next) => {
   const { episodeId } = req.params;
   const { society, communityId } = req.query;
 
@@ -61,7 +61,7 @@ resources.get("/episodes/:episodeId/resources/create", (req, res, next) => {
 
 
 
-resources.get("/episodes/:episodeId/resources/:resourceId/:view?", (req, res, next) => {
+resources.get("/:episodeId/:resourceId/:view?", (req, res, next) => {
   const { episodeId, resourceId, view = "edit" } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -70,7 +70,7 @@ resources.get("/episodes/:episodeId/resources/:resourceId/:view?", (req, res, ne
   res.render(`resources/${view}`, { resource });
 });
 
-resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) => {
+resources.patch("/:episodeId/:resourceId", (req, res, next) => {
   const { episodeId, resourceId } = req.params;
   const { shouldAlterTags, exhausted } = req.body;
 
@@ -94,7 +94,7 @@ resources.patch("/episodes/:episodeId/resources/:resourceId", (req, res, next) =
 });
 
 
-resources.delete("/episodes/:episodeId/resources/:resourceId", (req, res) => {
+resources.delete("/:episodeId/:resourceId", (req, res) => {
   const { episodeId, resourceId } = req.params;
 
   try {

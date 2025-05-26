@@ -4,6 +4,7 @@ import { EpisodeTimeInput } from "#views/episodes/create";
 import Episode from "#models/episode";
 import express from "express";
 import { broadcast } from "#routes/html/events";
+import Document from "#models/document";
 
 const episodes = express.Router();
 
@@ -21,11 +22,11 @@ function episodeLayout(req, res, next) {
 }
 
 
-episodes.get("/episodes/create", (req, res) => {
+episodes.get("/create", (req, res) => {
   res.render(`episodes/create`);
 });
 
-episodes.post("/episodes/create/time", (req, res) => {
+episodes.post("/create/time", (req, res) => {
   const { date, time, duration } = req.body;
 
   res.send( EpisodeTimeInput({
@@ -35,7 +36,7 @@ episodes.post("/episodes/create/time", (req, res) => {
   }))
 });
 
-episodes.post("/episodes",
+episodes.post("/",
   
   body("name").notEmpty(), 
   body("date").customSanitizer( (date, meta) => {
@@ -66,7 +67,7 @@ episodes.post("/episodes",
     res.redirect( episode.toURL() );
 })
 
-episodes.put("/episodes/:episodeId", (req, res) => {
+episodes.put("/:episodeId", (req, res) => {
   const { episodeId } = req.params;
   const episode = Episode.load( episodeId );
   console.log( req.body );
@@ -80,7 +81,9 @@ episodes.put("/episodes/:episodeId", (req, res) => {
 // INDIVIDUAL ROUTES
 ////////////////////////////////////////
 
-episodes.get("/episodes/:episodeId/facilitator/:societyId?", episodeLayout, (req, res) => {
+
+
+episodes.get("/:episodeId/facilitator/:societyId?", episodeLayout, (req, res) => {
   const { episodeId, societyId } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -100,7 +103,7 @@ episodes.get("/episodes/:episodeId/facilitator/:societyId?", episodeLayout, (req
 });
 
 
-episodes.get("/episodes/:episodeId/documents/:documentId?", episodeLayout, (req, res) => {
+episodes.get("/:episodeId/documents/:documentId?", episodeLayout, (req, res) => {
   const { episodeId, documentId } = req.params;
   
   const episode = Episode.load(episodeId);
@@ -120,7 +123,21 @@ episodes.get("/episodes/:episodeId/documents/:documentId?", episodeLayout, (req,
 });
 
 
-episodes.put("/episodes/:episodeId/playlist", (req, res) => {
+episodes.get("/:episodeId/:view?", episodeLayout, (req, res) => {
+  const { episodeId, view } = req.params;
+
+  const episode = Episode.load(episodeId);
+
+  if(!view)
+    res.redirect(`/episodes/${episodeId}/gm`)
+  else
+    res.render(`episodes/${view}`, { episode });
+});
+
+
+
+
+episodes.put("/:episodeId/playlist", (req, res) => {
   const { episodeId } = req.params;
   const { phaseIds } = req.body;
   
@@ -135,15 +152,19 @@ episodes.put("/episodes/:episodeId/playlist", (req, res) => {
 });
 
 
-episodes.get("/episodes/:episodeId/:view?", episodeLayout, (req, res) => {
-  const { episodeId, view } = req.params;
 
+episodes.post("/:episodeId/documents", async (req, res) => {
+  const { episodeId } = req.params;
   const episode = Episode.load(episodeId);
+  const document = new Document(req.body);
 
-  if(!view)
-    res.redirect(`/episodes/${episodeId}/gm`)
-  else
-    res.render(`episodes/${view}`, { episode });
+  episode.documentIds.push( document.id );
+  episode.save();
+
+  await document.refresh();
+
+  res.sendStatus("200");
+  broadcast("documents");
 });
 
 
