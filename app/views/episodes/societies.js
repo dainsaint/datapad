@@ -1,14 +1,12 @@
-import { html, pluralize } from "#core/utils";
-import ActionView from "#views/actions/view";
-import ActionEdit from "#views/actions/edit";
-
-import Icon from "#views/ui/icon";
+import { html } from "#core/utils";
 import { ActionStatus } from "#models/action";
-import { DateTime } from "luxon";
+import ActionView from "#views/actions/view";
+import Icon from "#views/ui/icon";
 
 
 
-export default function SocietyList({ episode }) {
+
+export default function EpisodeSocieties({ episode }) {
   const societies = episode.societies.reduce( (societies, society) => {
     const voted = episode.getCurrentActionsForSocietyId( society.id ).find( action => action.status == ActionStatus.VOTED );
     const open = episode.getCurrentActionsForSocietyId( society.id ).find( action => action.status == ActionStatus.OPEN );
@@ -21,7 +19,7 @@ export default function SocietyList({ episode }) {
   societies.sort( (a, b) => a.sort - b.sort );
 
   return html`
-    <div id="society-card-list" class="grid-huge gap" hx-get="${ episode.toURL('/societies/list') }" hx-trigger="sse:societies,sse:actions">
+    <div id="society-card-list" class="grid-huge gap" hx-get="${ episode.toURL('/societies') }" hx-trigger="sse:societies,sse:actions">
       ${ societies.map( ({society, open, voted, time}, i) => html`
         <section id="${ society.id }" class="society-card card ${society.color} stack">
 

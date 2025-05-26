@@ -6,15 +6,8 @@ import { filterUnique } from "#core/utils";
 
 const communities = express.Router();
 
-/*
-- [x] GET     /episodes/:episode/communities;
-- [X] POST    /episodes/:episode/communities;
-- [X] GET     /episodes/:episode/communities/:community/:view?
-- [X] PATCH   /episodes/:episode/communities/:community;
-- [ ] DELETE  /episodes/:episode/communities/:community;
-*/
 
-communities.get("/episodes/:episodeId/communities", (req, res) => {
+communities.get("/:episodeId", (req, res) => {
   const { episodeId } = req.params;
   const { view = "list" } = req.query;
 
@@ -23,7 +16,7 @@ communities.get("/episodes/:episodeId/communities", (req, res) => {
 });
 
 
-communities.post("/episodes/:episodeId/communities", (req, res) => {
+communities.post("/:episodeId", (req, res) => {
   const { episodeId } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -37,7 +30,7 @@ communities.post("/episodes/:episodeId/communities", (req, res) => {
   broadcast("societies");
 });
 
-communities.get("/episodes/:episodeId/communities/create", (req, res) => {
+communities.get("/:episodeId/create", (req, res) => {
   const { episodeId } = req.params;
   const { society } = req.query;
   const episode = Episode.load(episodeId);
@@ -48,7 +41,7 @@ communities.get("/episodes/:episodeId/communities/create", (req, res) => {
 // INDIVIDUAL ROUTES
 ////////////////////////////////////////
 
-communities.get("/episodes/:episodeId/communities/:communityId/:view?", (req, res) => {
+communities.get("/:episodeId/:communityId/:view?", (req, res) => {
   const { episodeId, communityId, view = "card" } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -58,7 +51,7 @@ communities.get("/episodes/:episodeId/communities/:communityId/:view?", (req, re
 });
 
 
-communities.patch("/episodes/:episodeId/communities/:communityId", (req, res) => {
+communities.patch("/:episodeId/:communityId", (req, res) => {
   const { episodeId, communityId } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -73,7 +66,7 @@ communities.patch("/episodes/:episodeId/communities/:communityId", (req, res) =>
 
 
 
-communities.post("/episodes/:episodeId/communities/:communityId/resources", (req, res) => {
+communities.post("/:episodeId/:communityId/resources", (req, res) => {
 
   const { episodeId, communityId } = req.params;
   const { resourceIds = [] } = req.body;
@@ -88,15 +81,13 @@ communities.post("/episodes/:episodeId/communities/:communityId/resources", (req
   resources.forEach( resource => resource.communityId = communityId );
 
   episode.save();
-
-  res.redirect(`/episodes/${episodeId}/communities/${communityId}/card`);
-  
+  res.sendStatus(200);
   broadcast("resources");
 });
 
 
 
-communities.delete("/episodes/:episodeId/communities/:communityId", (req, res) => {
+communities.delete("/:episodeId/:communityId", (req, res) => {
   const { episodeId, communityId } = req.params;
 
   const episode = Episode.load(episodeId);

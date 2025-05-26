@@ -27,7 +27,7 @@ export default function EpisodeSettings ({ episode = new Episode()} = {}) {
               
               <formset>
                 <button><i class="fa fa-check-circle"></i></button>
-                <button type="button" class="color-danger" hx-delete="${episode.toURL(`/documents/${document.id}`)}" hx-confirm="Remove this document from this episode? The actual Google Doc will be fine."><i class="fa fa-trash"></i></button>
+                <button type="button" class="color-danger" hx-delete="${document.toURL(`/${episode.id}`)}" hx-confirm="Remove this document from this episode? The actual Google Doc will be fine."><i class="fa fa-trash"></i></button>
                 <i class="fa fa-spinner fa-spin htmx-indicator"></i>
                 ${ document.status === DocumentStatus.ERROR && html`<span><i class="fa fa-warning color-danger"></i> Error Loading</span>`}
               </formset>
@@ -66,8 +66,8 @@ export default function EpisodeSettings ({ episode = new Episode()} = {}) {
         <div class="stack">
           <h2>Download Data</h2>
           <ul class="text">
-            <li><a href="${ episode.toURL("/download") }" download>Download this episode (JSON)</a></li>
-            <li><a href="${ episode.toURL("/download/csv") }" download>Download this episode's record log (CSV)</a></li>
+            <li><a href="/downloads/${ episode.id }.json" download>Download this episode (JSON)</a></li>
+            <li><a href="/downloads/${ episode.id }.csv" download>Download this episode's record log (CSV)</a></li>
           </ul>
         </div>
 

@@ -15,17 +15,17 @@ import pages from "#routes/html/pages";
 
 const htmlRouter = express.Router();
 
-htmlRouter.use("/", actions);
-htmlRouter.use("/", communities);
-htmlRouter.use("/", documents);
-htmlRouter.use("/", downloads);
-htmlRouter.use("/", events);
-htmlRouter.use("/", games);
-htmlRouter.use("/", phases);
-htmlRouter.use("/", players);
-htmlRouter.use("/", resources);
-htmlRouter.use("/", episodes);
-htmlRouter.use("/", societies);
+htmlRouter.use("/actions", actions);
+htmlRouter.use("/communities", communities);
+htmlRouter.use("/documents", documents);
+htmlRouter.use("/downloads", downloads);
+htmlRouter.use("/events", events);
+htmlRouter.use("/games", games);
+htmlRouter.use("/phases", phases);
+htmlRouter.use("/players", players);
+htmlRouter.use("/resources", resources);
+htmlRouter.use("/episodes", episodes);
+htmlRouter.use("/societies", societies);
 htmlRouter.use("/", pages);
 
 export default htmlRouter;

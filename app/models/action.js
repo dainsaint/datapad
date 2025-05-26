@@ -56,7 +56,7 @@ export default class Action extends Model {
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/actions/${this.id}` + append;
+    return `/actions/${this.episode.id}/${this.id}` + append;
   }
 }
 

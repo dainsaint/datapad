@@ -4,37 +4,17 @@ import Record, { RecordType } from "#models/record";
 import express from "express";
 import { broadcast } from "#routes/html/events";
 
-
 const phases = express.Router();
 
-/*
-- [ ] GET     /episodes/:episode/phases;
-- [ ] POST    /episodes/:episode/phases;
-- [x] GET     /episodes/:episode/phases/:phase;
-- [x] PUT     /episodes/:episode/phases/:phase;
-- [ ] DELETE  /episodes/:episode/phases/:phase;
-*/
 
-phases.get("/episodes/:episodeId/phases/create", (req, res, next) => {
+phases.get("/:episodeId/create", (req, res, next) => {
   const { episodeId } = req.params;
   const episode = Episode.load(episodeId);
   res.render(`phases/create`, { episode });
 });
 
 
-
-phases.get("/episodes/:episodeId/phases/:phaseId/:view?", (req, res, next) => {
-  const { episodeId, phaseId, view = "card" } = req.params;
-
-  const episode = Episode.load(episodeId);
-  const phase = episode.getPhaseById(phaseId);
-
-  res.render(`phases/${view}`, { phase });
-});
-
-
-
-phases.post("/episodes/:episodeId/phases", (req, res, next) => {
+phases.post("/:episodeId/phases", (req, res, next) => {
   const { episodeId } = req.params;
   const { type, duration: { minutes, seconds }} = req.body;
 
@@ -55,7 +35,7 @@ phases.post("/episodes/:episodeId/phases", (req, res, next) => {
 })
 
 
-phases.post("/episodes/:episodeId/phases/round", (req, res, next) => {
+phases.post("/:episodeId/round", (req, res, next) => {
   const { episodeId } = req.params;
   const episode = Episode.load(episodeId);
 
@@ -72,8 +52,18 @@ phases.post("/episodes/:episodeId/phases/round", (req, res, next) => {
 
 
 
+phases.get("/:episodeId/:phaseId/:view?", (req, res, next) => {
+  const { episodeId, phaseId, view = "card" } = req.params;
 
-phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
+  const episode = Episode.load(episodeId);
+  const phase = episode.getPhaseById(phaseId);
+
+  res.render(`phases/${view}`, { phase });
+});
+
+
+
+phases.post("/:episodeId/:phaseId", (req, res, next) => {
   const { episodeId, phaseId } = req.params;
   const { action } = req.body;
   
@@ -127,7 +117,8 @@ phases.put("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
 });
 
 
-phases.post("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
+
+phases.put("/:episodeId/:phaseId", (req, res, next) => {
   const { episodeId, phaseId } = req.params;
   const { type, round, duration: { minutes, seconds }} = req.body;
 
@@ -149,7 +140,7 @@ phases.post("/episodes/:episodeId/phases/:phaseId", (req, res, next) => {
 })
 
 
-phases.delete("/episodes/:episodeId/phases/:phaseId", (req, res) => {
+phases.delete("/:episodeId/:phaseId", (req, res) => {
   const { episodeId, phaseId } = req.params;
 
   try {

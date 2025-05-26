@@ -4,6 +4,7 @@ import Society from "#models/society";
 
 import { broadcast } from "#routes/html/events";
 import { body, matchedData } from "express-validator";
+import Action from "#models/action";
 
 const societies = express.Router();
 
@@ -16,13 +17,13 @@ const societies = express.Router();
 - [~] DELETE  /episodes/:episode/societies/:society
 */
 
-societies.get("/episodes/:episodeId/societies/:view?", (req, res, next) => {
+societies.get("/:episodeId/:view?", (req, res, next) => {
   const { episodeId, view = "list" } = req.params;
   const episode = Episode.load(episodeId);
   res.render(`societies/${view}`, { episode })
 });
 
-societies.post("/episodes/:episodeId/societies", (req, res, next) => {
+societies.post("/:episodeId", (req, res, next) => {
   const { episodeId } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -37,18 +38,30 @@ societies.post("/episodes/:episodeId/societies", (req, res, next) => {
 });
 
 
-societies.get("/episodes/:episodeId/societies/create", (req, res, next) => {
-  const { episodeId } = req.params;
-  const episode = Episode.load(episodeId);
-  res.render(`societies/create`, { episode });
-});
 
 
 ////////////////////////////////////////
 // INDIVIDUAL ROUTES
 ////////////////////////////////////////
 
-societies.get("/episodes/:episodeId/societies/:societyId/:view?", (req, res, next) => {
+
+societies.post("/:episodeId/:societyId/actions", (req, res, next) => {
+  const { episodeId, societyId } = req.params;
+  const { round } = req.body;
+
+  const episode = Episode.load(episodeId);  
+  const action = new Action({ societyId, round });
+  episode.addAction(action);
+  episode.save();
+  
+  res.location( action.toURL() )
+  res.sendStatus(201);
+
+  broadcast("actions");
+});
+
+
+societies.get("/:episodeId/:societyId/:view?", (req, res, next) => {
   const { episodeId, societyId, view = "panel" } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -57,7 +70,7 @@ societies.get("/episodes/:episodeId/societies/:societyId/:view?", (req, res, nex
   res.render(`societies/${view}`, { society });
 });
 
-societies.put("/episodes/:episodeId/societies/:societyId", body("name").trim(), (req, res, next) => {
+societies.put("/:episodeId/:societyId", body("name").trim(), (req, res, next) => {
   const { episodeId, societyId } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -72,28 +85,9 @@ societies.put("/episodes/:episodeId/societies/:societyId", body("name").trim(), 
   broadcast("societies");
 });
     
-//TODO: Determine what actual deletion logic we want, and how far it propagates
-//Like, does deleting a society delete all communities it had?
-// episode.removeSocietyById(societyId);
-
-societies.delete("/episodes/:episodeId/societies/:societyId", (req, res) => {
-  const { episodeId, societyId } = req.params;
-
-  try {
-    const episode = Episode.load(episodeId);
-    episode.deleteSocietyById( societyId );
-    episode.save();
-  
-    res.sendStatus(200);
-    broadcast("societies");
-  } catch (e) {
-    res.setHeader("HX-Trigger", "error");
-    res.sendStatus(400);
-  }
-});
 
 
-societies.post("/episodes/:episodeId/societies/:societyId/ambassador", (req, res) => {
+societies.post("/:episodeId/:societyId/ambassador", (req, res) => {
   const { episodeId } = req.params;
   const { communityId, ambassadorSocietyId } = req.body;
 
@@ -108,7 +102,7 @@ societies.post("/episodes/:episodeId/societies/:societyId/ambassador", (req, res
 })
 
 
-societies.post("/episodes/:episodeId/societies/:societyId/emissary", (req, res) => {
+societies.post("/:episodeId/:societyId/emissary", (req, res) => {
   console.log("what up");
   const { episodeId, societyId } = req.params;
   const { round, emissaryCommunityId } = req.body;
@@ -123,6 +117,27 @@ societies.post("/episodes/:episodeId/societies/:societyId/emissary", (req, res) 
   res.sendStatus(200);
   broadcast("societies");
 })
+
+
+//TODO: Determine what actual deletion logic we want, and how far it propagates
+//Like, does deleting a society delete all communities it had?
+// episode.removeSocietyById(societyId);
+
+societies.delete("/:episodeId/:societyId", (req, res) => {
+  const { episodeId, societyId } = req.params;
+
+  try {
+    const episode = Episode.load(episodeId);
+    episode.deleteSocietyById( societyId );
+    episode.save();
+  
+    res.sendStatus(200);
+    broadcast("societies");
+  } catch (e) {
+    res.setHeader("HX-Trigger", "error");
+    res.sendStatus(400);
+  }
+});
 
 
 

@@ -28,7 +28,7 @@ export function tick(deltaTime) {
 - [X] POST    /events;
 */
 
-events.get("/events", (req, res) => {
+events.get("/", (req, res) => {
   // Set headers for SSE
   res.setHeader("Content-Type", "text/event-stream");
   res.setHeader("Cache-Control", "no-cache");
@@ -44,7 +44,7 @@ events.get("/events", (req, res) => {
   });
 });
 
-events.post("/events", (req, res) => {
+events.post("/", (req, res) => {
   const { data } = req.body;
   broadcast(data);
 });

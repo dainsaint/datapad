@@ -65,7 +65,7 @@ export default class Community extends Model {
   }
 
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/communities/${this.id}` + append;
+    return `/communities/${this.episode.id}/${this.id}` + append;
   }
 }
 

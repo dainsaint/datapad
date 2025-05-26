@@ -65,7 +65,7 @@ export default class Phase extends Model {
 
 
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/phases/${this.id}` + append;
+    return `/phases/${this.episode.id}/${this.id}` + append;
   }
 }
 

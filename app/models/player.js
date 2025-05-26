@@ -8,6 +8,6 @@ export default class Player extends Model {
   tags = new Tags()
 
   toURL(append = "") {
-    return `/episodes/${this.episode.id}/phases/${this.id}` + append;
+    return `/players/${this.episode.id}/${this.id}` + append;
   }
 }

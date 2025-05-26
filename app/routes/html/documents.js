@@ -7,7 +7,7 @@ const documents = express.Router();
 
 
 
-documents.post("/documents/:documentId/refresh", async (req, res) => {
+documents.post("/:documentId/refresh", async (req, res) => {
   const { documentId } = req.params;
   const document = Document.load(documentId);
   await document.refresh();
@@ -22,7 +22,7 @@ documents.post("/documents/:documentId/refresh", async (req, res) => {
 
 });
 
-documents.post("/documents/:documentId", async (req, res) => {
+documents.post("/:documentId", async (req, res) => {
   const { documentId } = req.params;
   const document = Document.load(documentId);
   console.log( req.body );
@@ -41,23 +41,7 @@ documents.post("/documents/:documentId", async (req, res) => {
 });
 
 
-documents.post("/episodes/:episodeId/documents/", async (req, res) => {
-  console.log('sup');
-  const { episodeId } = req.params;
-  const episode = Episode.load(episodeId);
-  const document = new Document(req.body);
-  
-  episode.documentIds.push( document.id );
-  episode.save();
-
-  await document.refresh();
-
-  res.sendStatus("200");
-  broadcast("documents");
-});
-
-
-documents.delete("/episodes/:episodeId/documents/:documentId", async (req, res) => {
+documents.delete("/:documentId/:episodeId", async (req, res) => {
   const { episodeId, documentId } = req.params;
   const episode = Episode.load(episodeId);
   episode.deleteDocumentById(documentId);

@@ -8,7 +8,7 @@ import ActionEdit from "#views/actions/edit";
 
 const actions = express.Router();
 
-actions.get("/episodes/:episodeId/actions", (req, res, next) => {
+actions.get("/:episodeId", (req, res, next) => {
   const { episodeId } = req.params;
   const { societyId } = req.query;
 
@@ -18,25 +18,11 @@ actions.get("/episodes/:episodeId/actions", (req, res, next) => {
 });
 
 
-actions.post("/episodes/:episodeId/societies/:societyId/actions", (req, res, next) => {
-  const { episodeId, societyId } = req.params;
-  const { round } = req.body;
-
-  const episode = Episode.load(episodeId);  
-  const action = new Action({ societyId, round });
-  episode.addAction(action);
-  episode.save();
-  
-  res.location( action.toURL() )
-  res.sendStatus(201);
-
-  broadcast("actions");
-});
 
 
 
 
-actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next) => {
+actions.post("/:episodeId/:actionId/resources", (req, res, next) => {
   const { episodeId, actionId } = req.params;
   const { resourceIds = [], texts = [], risk, disadvantage, advantage, vote } = req.body;
 
@@ -74,7 +60,7 @@ actions.post("/episodes/:episodeId/actions/:actionId/resources", (req, res, next
 
 
 
-actions.get("/episodes/:episodeId/actions/:actionId/:view?", (req, res) => {
+actions.get("/:episodeId/:actionId/:view?", (req, res) => {
   const { episodeId, actionId, view = "view" } = req.params;
 
   const episode = Episode.load(episodeId);
@@ -82,7 +68,6 @@ actions.get("/episodes/:episodeId/actions/:actionId/:view?", (req, res) => {
 
   res.render(`actions/${view}`, {action});
 });
-
 
 
 
