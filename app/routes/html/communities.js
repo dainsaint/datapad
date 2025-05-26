@@ -32,8 +32,11 @@ communities.post("/:episodeId", (req, res) => {
 
 communities.get("/:episodeId/create", (req, res) => {
   const { episodeId } = req.params;
-  const { society } = req.query;
+  const { societyId } = req.query;
+  
   const episode = Episode.load(episodeId);
+  const society = episode.getSocietyById( societyId );
+
   res.render(`communities/create`, { episode, society });
 });
 

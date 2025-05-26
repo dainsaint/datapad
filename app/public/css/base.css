@@ -196,7 +196,7 @@ input::placeholder {
   color: var(--palette-faint);
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   appearance: none;
   width: 1.15em;
   height: 1.15em;
@@ -216,7 +216,7 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
   transform: scale(1);
-}
+} */
 
 
 fieldset {
@@ -234,13 +234,81 @@ fieldset {
   gap: .25rem;
 }
 
+.form-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  border: 1px solid var(--palette-fg);
+  border-radius: 10rem;
+  width: max-content;
+  position: relative;
+  gap: 1rem;
+}
+
+.form-toggle input[type="checkbox"] {
+  display: block;
+  position: absolute;
+  border-radius: 10rem;
+  inset: .25rem;
+  width: calc( 100% - .5rem );
+  cursor: pointer;
+  border: none;
+}
+
+.form-toggle input[type="checkbox"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  inset: 0px;
+  border-radius: 10rem;
+  background: var(--palette-fg);
+  transition: translate .1s ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+  translate: 100% 0%;
+}
+
+
+.form-toggle label {  
+  translate: 0px 0px;
+  pointer-events: none;
+  text-align: center;
+}
+
+
+.form-toggle label + * {
+  margin: 0px;
+}
+.form-toggle {
+  .form-toggle__checked {
+    color: var(--palette-fg);
+  }
+
+  .form-toggle__unchecked {
+    color: var(--palette-bg);
+  }
+}
+
+
+.form-toggle:has(input[type="checkbox"]:checked){
+  .form-toggle__checked {
+    color: var(--palette-bg);
+  }
+
+  .form-toggle__unchecked {
+    color: var(--palette-fg);
+  }
+}
 
 label {
   display: block;
   font-weight: bold;
 }
 
-label + * {
+fieldset > label + * {
   margin-top: .25rem !important;
 }
 

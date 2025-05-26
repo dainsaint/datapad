@@ -656,6 +656,19 @@
             "_type": "Tags",
             "value": []
           }
+        },
+        {
+          "_type": "Community",
+          "id": "Bd8RN",
+          "societyId": "V9xbw",
+          "ambassadorSocietyId": "",
+          "player": "",
+          "name": "My Guys",
+          "voice": "people",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
         }
       ],
       "phases": [

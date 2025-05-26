@@ -5,6 +5,7 @@ import SocietyView from "#views/societies/view";
 import Icon from "#views/ui/icon";
 import SocietyActions from "#views/societies/actions";
 
+
 export default function EpisodeFacilitator ({ episode = new Episode(), societyId = undefined } = {}) {
   const society = societyId ? episode.getSocietyById( societyId ) : episode.societies.at(0);
 
@@ -33,17 +34,17 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
             </div>
           </section>
 
-          <section id="facilitator-action-edit" class="panel"  style="flex: 1 1 33%;">
+        <section id="facilitator-action-edit" class="panel"  style="flex: 1 1 33%;">
             ${ SocietyActions({ society }) }
           </section>
 
         </article>
 
-        <aside class="layout-row gap-tight stack-push">
-          <button hx-get="${episode.toURL(`/resources/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-cube"></i> New Resource</button>
+        <aside class="layout-row gap-tight stack-push" hx-target="#dialog">
+          <button hx-get="/communities/${episode.id}/create?societyId=${society.id}"><i class="fa fa-people-group"></i> New Community</button>
+          <button hx-get="/societies/${episode.id}/create">${ Icon("planet")} New Society</button>
           <div class="layout-fill"></div>
-          <button hx-get="${episode.toURL(`/communities/create?society=${society.id}`)}" hx-target="#dialog"><i class="fa fa-people-group"></i> New Community</button>
-          <button hx-get="${episode.toURL(`/societies/create`)}" hx-target="#dialog">${ Icon("planet")} New Society</button>
+          <button hx-get="/resources/${episode.id}/create?societyId=${society.id}"><i class="fa fa-cube"></i> New Resource</button>
         </aside>
       </main>
       

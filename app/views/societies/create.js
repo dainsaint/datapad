@@ -7,7 +7,7 @@ import Icon from "#views/ui/icon";
 //figure out the society/episode jawn here...
 export default function SocietyCreate({ episode = new Episode()} = {}) {
   return html`
-    <form class="stack-loose" hx-post="${ episode.toURL('/societies') }" hx-swap="none">
+    <form class="stack-loose" hx-post="/societies/${episode.id}" hx-swap="none">
       <header>
         <h1>Create a new society</h1>
         <input type="hidden" name="episodeId" value="${episode.id}"/>

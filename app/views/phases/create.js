@@ -3,7 +3,7 @@ import Phase, { PhaseType } from "#models/phase";
 
 export default function PhaseCreate({ episode } = {}) {
   return html`
-    <form class="stack-loose" hx-post="${episode.toURL("/phases")}">
+    <form class="stack-loose" hx-post="/phases/${episode.id}">
       
       <h1>Add a phase</h1>
     

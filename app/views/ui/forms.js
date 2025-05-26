@@ -19,6 +19,17 @@ export function Checkbox({label, name = "", value = false, checked = false}){
 }; 
 
 
+export function Toggle({checkedLabel, uncheckedLabel, name = "", value = false, checked = false}){
+  return html`
+    <div class="form-toggle">
+      <input name="${name}" type="checkbox" ${ checked && "checked" } value="${value}"/>
+      <label class="form-toggle__unchecked" for="${name}">${ uncheckedLabel }</label>
+      <label class="form-toggle__checked" for="${name}">${ checkedLabel }</label>
+    </div>
+  `
+}; 
+
+
 export function Select({ name, current, options }) {
   return html`
     <select name="${name}">

@@ -5,6 +5,7 @@ import Society from "#models/society";
 import { broadcast } from "#routes/html/events";
 import { body, matchedData } from "express-validator";
 import Action from "#models/action";
+import Community from "#models/community";
 
 const societies = express.Router();
 
@@ -45,6 +46,9 @@ societies.post("/:episodeId", (req, res, next) => {
 ////////////////////////////////////////
 
 
+
+
+
 societies.post("/:episodeId/:societyId/actions", (req, res, next) => {
   const { episodeId, societyId } = req.params;
   const { round } = req.body;
@@ -58,6 +62,20 @@ societies.post("/:episodeId/:societyId/actions", (req, res, next) => {
   res.sendStatus(201);
 
   broadcast("actions");
+});
+
+societies.post("/:episodeId/:societyId/communities", (req, res) => {
+  const { episodeId } = req.params;
+
+  const episode = Episode.load(episodeId);
+  const community = new Community(req.body);
+
+  episode.addCommunity(community);
+  episode.save();
+
+  res.sendStatus(201);
+
+  broadcast("societies");
 });
 
 

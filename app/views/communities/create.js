@@ -6,7 +6,7 @@ import { Select } from "#views/ui/forms";
 
 export default function CommunityCreate({ episode, society }) {
   return html`
-    <form class="stack-loose" hx-post="${ episode.toURL('/communities') }">
+    <form class="stack-loose" hx-post="/communities/${episode.id}">
       <h1>Create a new community</h1>
       
       <fieldset>
@@ -16,14 +16,14 @@ export default function CommunityCreate({ episode, society }) {
 
       <fieldset>
         <label for="player">Player</label>
-        <input name="player" autocapitalize="words" placeholder="Pat Person (they/them)" value="${ community.player }"/>
+        <input name="player" autocapitalize="words" placeholder="Pat Person (they/them)"/>
       </fieldset>
 
 
       
       <fieldset>
         <label for="societyId">Society</label>
-        ${ Select({ name: "societyId", current: society, options: episode.societies }) }
+        ${ Select({ name: "societyId", current: society.id, options: episode.societies }) }
       </fieldset>
 
 

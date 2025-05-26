@@ -26,20 +26,17 @@ export default function EpisodeGameMaster ({ episode } = {}) {
       </div>
       
 
-</article>
+    </article>
 
 
-    <aside>
-    <form class="layout-row gap-tight" hx-target="#dialog">
-    <button hx-get="${ episode.toURL('/societies/create') }" >${ Icon("planet") } new society</button>
-    <button hx-get="${ episode.toURL('/communities/create') }" ><i class="fa fa-people-group"></i> new community</button>
-          
-          <div class="layout-fill"></div>
-          <button hx-get="${ episode.toURL('/resources/create') }" ><i class="fa fa-cube"></i> new resource</button>
-        </form>
-</aside>
+    <aside class="layout-row gap-tight stack-push" hx-target="#dialog">
+      <button hx-get="/communities/${episode.id}/create"><i class="fa fa-people-group"></i> New Community</button>
+      <button hx-get="/societies/${episode.id}/create">${ Icon("planet")} New Society</button>
+      <div class="layout-fill"></div>
+      <button hx-get="/resources/${episode.id}/create"><i class="fa fa-cube"></i> New Resource</button>
+    </aside>
 
-</main>
+  </main>
   `;
 }
 

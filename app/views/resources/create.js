@@ -6,7 +6,7 @@ export default function ResourceCreate({ episode, society, communityId }) {
     return community.id == communityId || (i == 0 && current == society.id)
   }
   return html`
-    <form class="stack-loose" hx-post="${ episode.toURL('/resources') }">
+    <form class="stack-loose" hx-post="/resources/${episode.id}">
       <header>
         <h1>Create a new resource</h1>
       </header>

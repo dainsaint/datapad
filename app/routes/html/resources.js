@@ -45,9 +45,10 @@ resources.post("/:episodeId", (req, res, next) => {
 
 resources.get("/:episodeId/create", (req, res, next) => {
   const { episodeId } = req.params;
-  const { society, communityId } = req.query;
+  const { societyId, communityId } = req.query;
 
   const episode = Episode.load(episodeId);
+  const society = episode.getSocietyById(societyId);
 
   res.render(`resources/create`, { episode, society, communityId });
 });

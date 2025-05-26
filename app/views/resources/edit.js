@@ -1,6 +1,6 @@
 import { html } from "#core/utils";
 import { ResourceTag } from "#models/resource";
-import { Checkbox } from "#views/ui/forms";
+import { Checkbox, Toggle } from "#views/ui/forms";
 
 export default function ResourceEdit({ resource }) {
   const episode = resource.episode;
@@ -24,7 +24,7 @@ export default function ResourceEdit({ resource }) {
         <label for="communityId">Community</label>
         <select name="communityId">
         ${ episode.societies.map( society => {
-          return `
+          return html`
             <optgroup label="${ society.name }">
               ${ society.communities.map( community => 
                 html`<option value="${ community.id }" ${ community.id === myCommunity.id && "selected" }>${community.name}</option>`
@@ -36,8 +36,18 @@ export default function ResourceEdit({ resource }) {
       </fieldset>
 
       <fieldset>
-        <input type="hidden" name="shouldAlterTags" value="true"/>
-        ${ Checkbox({ label: `Exhausted <i class="fa fa-battery-quarter"></i>`, name: `exhausted`, checked: resource.isExhausted, value: ResourceTag.EXHAUSTED }) }
+        <label>Status</label>
+
+        ${ Toggle({
+            name: "exhausted",
+            uncheckedLabel: html`<i class="fa fa-battery-full"></i> Ready`,
+            checkedLabel: html`<i class="fa fa-battery-quarter"></i> Exhausted`,
+            checked: resource.isExhausted,
+            value: ResourceTag.EXHAUSTED
+          }) }
+
+<input type="hidden" name="shouldAlterTags" value="true"/>
+          
       </fieldset>
 
       <fieldset class="layout-spread stack-push">
@@ -47,7 +57,6 @@ export default function ResourceEdit({ resource }) {
     </form>
   `;
 }
-
 
 
 

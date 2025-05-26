@@ -1,6 +1,6 @@
 import { from, html } from "#core/utils";
 import { ActionStatus } from "#models/action";
-
+import { Toggle } from "#views/ui/forms";
 
 const deco = {
   [ActionStatus.OPEN]: "card-outline",
@@ -56,6 +56,8 @@ export default function ActionView({ action } = {}) {
         ${ action.resources.map( (resource, i) => ActionComponent({resource, text: action.texts[i], i: i}) ) }
       </fieldset>
 </div>
+
+
   </form>
 
   `;
