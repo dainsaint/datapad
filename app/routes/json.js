@@ -26,6 +26,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
   const result = {
     currentPhase: {
       type: episode.currentPhase.type,
+      id: episode.currentPhase.id,
       status: episode.currentPhase.status,
       round: episode.currentPhase.round,
       time: {
