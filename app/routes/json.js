@@ -26,6 +26,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
   const result = {
     currentPhase: {
       type: episode.currentPhase.type,
+      id: episode.currentPhase.id,
       status: episode.currentPhase.status,
       round: episode.currentPhase.round,
       time: {
@@ -35,6 +36,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
         remainingFormatted: secondsToTime(episode.currentPhase.timeRemaining)
       }
     },
+    phases: [episode.phases],
     societies: episode.societies.map( society => ({
       name: society.name,
       id: society.id,
