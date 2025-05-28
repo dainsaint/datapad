@@ -36,6 +36,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
         remainingFormatted: secondsToTime(episode.currentPhase.timeRemaining)
       }
     },
+    phases: [episode.phases],
     societies: episode.societies.map( society => ({
       name: society.name,
       id: society.id,
