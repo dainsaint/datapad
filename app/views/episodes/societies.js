@@ -1,5 +1,6 @@
 import { html } from "#core/utils";
 import { ActionStatus } from "#models/action";
+import ActionRisk from "#views/actions/risk";
 import ActionView from "#views/actions/view";
 import Icon from "#views/ui/icon";
 
@@ -39,6 +40,8 @@ export default function EpisodeSocieties({ episode }) {
               </p>
             </div>
           </div>
+
+          ${ ActionRisk() }
 
           <div class="layout-row gap-tight">
             <div class="is-size-3">

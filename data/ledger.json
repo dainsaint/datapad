@@ -37,7 +37,7 @@
           "disadvantage": "Dis 0",
           "result": [],
           "voteTime": "2025-05-23T15:28:12.818-04:00",
-          "status": "voted",
+          "status": "invalid",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -350,13 +350,21 @@
           "id": "B_pLW",
           "round": "2",
           "societyId": "et0k8",
-          "resourceIds": [],
-          "texts": [],
+          "resourceIds": [
+            "JvqsG",
+            "HOzO6"
+          ],
+          "texts": [
+            "fsggsdgre",
+            "dsgsrrae",
+            ""
+          ],
           "risk": 1,
           "advantage": 0,
           "disadvantage": 0,
           "result": [],
-          "status": "open",
+          "voteTime": "2025-05-28T10:31:53.179-04:00",
+          "status": "voted",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -436,11 +444,15 @@
           "id": "fnRCI",
           "round": "3",
           "societyId": "V9xbw",
-          "resourceIds": [],
-          "texts": [],
-          "risk": 1,
-          "advantage": 0,
-          "disadvantage": 0,
+          "resourceIds": [
+            "FADd2"
+          ],
+          "texts": [
+            ""
+          ],
+          "risk": "1",
+          "advantage": "0",
+          "disadvantage": "0",
           "result": [],
           "status": "open",
           "tags": {
@@ -494,7 +506,9 @@
           "_type": "Community",
           "id": "UDMgC",
           "societyId": "et0k8",
-          "name": "Bobby",
+          "ambassadorSocietyId": "",
+          "player": "Bobby",
+          "name": "Jeffrey Bezos",
           "voice": "people",
           "tags": {
             "_type": "Tags",
@@ -506,7 +520,8 @@
           "id": "B95dD",
           "societyId": "et0k8",
           "ambassadorSocietyId": "",
-          "name": "Jason",
+          "player": "Jason",
+          "name": "Dirty Harries",
           "voice": "leader",
           "tags": {
             "_type": "Tags",
@@ -518,7 +533,8 @@
           "id": "cV-Kn",
           "societyId": "et0k8",
           "ambassadorSocietyId": "",
-          "name": "Fredrick",
+          "player": "Fredrick",
+          "name": "Elders",
           "voice": "people",
           "tags": {
             "_type": "Tags",
@@ -529,7 +545,9 @@
           "_type": "Community",
           "id": "LiQVN",
           "societyId": "et0k8",
-          "name": "Lapiz",
+          "ambassadorSocietyId": "",
+          "player": "Jeff",
+          "name": "Pencils Down",
           "voice": "people",
           "tags": {
             "_type": "Tags",
@@ -620,6 +638,8 @@
           "_type": "Community",
           "id": "NVQbL",
           "societyId": "Feay0",
+          "ambassadorSocietyId": "",
+          "player": "",
           "name": "popo",
           "voice": "people",
           "tags": {
@@ -809,7 +829,7 @@
           "_type": "Phase",
           "id": "iFRIY",
           "type": "Individual Phase",
-          "status": "complete",
+          "status": "idle",
           "round": 2,
           "duration": 600,
           "timeElapsed": 0,
@@ -828,7 +848,7 @@
           "_type": "Phase",
           "id": "VZQ7m",
           "type": "Break",
-          "status": "complete",
+          "status": "idle",
           "round": 2,
           "duration": 0,
           "timeElapsed": 0,
@@ -847,7 +867,7 @@
           "_type": "Phase",
           "id": "tJXlr",
           "type": "Universal Phase",
-          "status": "complete",
+          "status": "idle",
           "round": 3,
           "duration": 240,
           "timeElapsed": 188.16100000000026,
@@ -866,7 +886,7 @@
           "_type": "Phase",
           "id": "mBIUo",
           "type": "Societal Phase",
-          "status": "complete",
+          "status": "idle",
           "round": 3,
           "duration": 600,
           "timeElapsed": 1900.2769999999953,
@@ -1163,7 +1183,7 @@
         {
           "_type": "Resource",
           "id": "HOzO6",
-          "communityId": "Qw0Xm",
+          "communityId": "LiQVN",
           "name": "feral cats",
           "tags": {
             "_type": "Tags",
@@ -1175,7 +1195,7 @@
         {
           "_type": "Resource",
           "id": "FADd2",
-          "communityId": "lHvo5",
+          "communityId": "NVQbL",
           "name": "lillypadz",
           "tags": {
             "_type": "Tags",
@@ -1185,7 +1205,7 @@
         {
           "_type": "Resource",
           "id": "QvweM",
-          "communityId": "kATHn",
+          "communityId": "cV-Kn",
           "name": "arg",
           "tags": {
             "_type": "Tags",
@@ -1195,7 +1215,7 @@
         {
           "_type": "Resource",
           "id": "YaD-S",
-          "communityId": "cV-Kn",
+          "communityId": "kATHn",
           "name": "shtrhstr",
           "tags": {
             "_type": "Tags",
@@ -1205,7 +1225,7 @@
         {
           "_type": "Resource",
           "id": "JvqsG",
-          "communityId": "UDMgC",
+          "communityId": "Qw0Xm",
           "name": "righteous anger",
           "tags": {
             "_type": "Tags",
@@ -1225,7 +1245,7 @@
         {
           "_type": "Resource",
           "id": "BqPmG",
-          "communityId": "UDMgC",
+          "communityId": "kATHn",
           "name": "asdfaergre",
           "tags": {
             "_type": "Tags",
@@ -1235,7 +1255,7 @@
         {
           "_type": "Resource",
           "id": "oxn07",
-          "communityId": "NzLOs",
+          "communityId": "lHvo5",
           "name": "blergh",
           "tags": {
             "_type": "Tags",
@@ -1247,7 +1267,7 @@
         {
           "_type": "Resource",
           "id": "zj1sr",
-          "communityId": "NzLOs",
+          "communityId": "G_9_r",
           "name": "hey now",
           "tags": {
             "_type": "Tags",
@@ -1271,7 +1291,7 @@
         {
           "_type": "Resource",
           "id": "wRedp",
-          "communityId": "NzLOs",
+          "communityId": "ssnLF",
           "name": "adfasd",
           "tags": {
             "_type": "Tags",
@@ -1283,7 +1303,7 @@
         {
           "_type": "Resource",
           "id": "Mqfth",
-          "communityId": "NzLOs",
+          "communityId": "lHvo5",
           "name": "bytes",
           "tags": {
             "_type": "Tags",
@@ -1327,7 +1347,7 @@
         {
           "_type": "Resource",
           "id": "AwCCh",
-          "communityId": "cV-Kn",
+          "communityId": "UDMgC",
           "name": "gwgwrtgwrt",
           "tags": {
             "_type": "Tags",
@@ -1380,6 +1400,12 @@
               "leadershipOverrides": {}
             },
             {
+              "round": 2,
+              "societyId": "et0k8",
+              "leadershipOverrides": {},
+              "ambassadorsSent": []
+            },
+            {
               "round": 3,
               "societyId": "et0k8",
               "emissaryCommunityId": "",
@@ -1398,6 +1424,12 @@
             "value": []
           },
           "roundData": [
+            {
+              "round": 2,
+              "societyId": "V9xbw",
+              "leadershipOverrides": {},
+              "ambassadorsSent": []
+            },
             {
               "round": 3,
               "societyId": "V9xbw",
@@ -1418,6 +1450,13 @@
           },
           "roundData": [
             {
+              "round": 2,
+              "societyId": "Feay0",
+              "leadershipOverrides": {},
+              "ambassadorsSent": [],
+              "emissaryCommunityId": "NzLOs"
+            },
+            {
               "round": 3,
               "societyId": "Feay0",
               "leadershipOverrides": {},
@@ -1436,6 +1475,12 @@
             "value": []
           },
           "roundData": [
+            {
+              "round": 2,
+              "societyId": "e-JcG",
+              "leadershipOverrides": {},
+              "ambassadorsSent": []
+            },
             {
               "round": 3,
               "societyId": "e-JcG",
@@ -1456,6 +1501,12 @@
           },
           "roundData": [
             {
+              "round": 2,
+              "societyId": "yXHVO",
+              "leadershipOverrides": {},
+              "ambassadorsSent": []
+            },
+            {
               "round": 3,
               "societyId": "yXHVO",
               "leadershipOverrides": {}
@@ -1465,8 +1516,7 @@
       ],
       "documentIds": [
         "Wt6ry",
-        "ZWFCD",
-        "oauHF"
+        "ZWFCD"
       ],
       "links": {
         "discord": "discord://-/channels/1063250197993492480/1063254140341473350"

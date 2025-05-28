@@ -432,71 +432,78 @@ a.card:hover {
 
 .toolbar a.is-active {
   color: var(--palette-fg);
-  padding-inline-start: calc( 2 * var(--offset) );
+  background-color: var(--palette-bg);
 }
 
 
+@media screen and (min-width: 500px) {
 
-.toolbar a .toolbar-link__bkg {
-  --radius: 2.2em;
-  --palette-accent: var(--palette-bg);
+  .toolbar a.is-active {
+    background-color: transparent;
+    padding-inline-start: calc(2 * var(--offset)); 
+  }
 
-  position: absolute;
-  z-index: 0;
-  inset: 0px;
-  border-start-start-radius: 0;
-  border-end-start-radius: 0;
-  background-color: var(--palette-accent);
-  pointer-events: none;
+  .toolbar a .toolbar-link__bkg {
+    --radius: 2.2em;
+    --palette-accent: var(--palette-bg);
 
-  translate: 100% 0%;
-
-  transition: all .2s ease-in-out;
-
-  &::before,
-  &::after {
-    content: '';
     position: absolute;
-    width: var(--radius);
-    height: var(--radius);
+    z-index: 0;
+    inset: 0px;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+    background-color: var(--palette-accent);
     pointer-events: none;
 
-    scale: 0;
-    transform-origin: var(--radius) 0;
+    translate: 100% 0%;
+
     transition: all .2s ease-in-out;
 
-    translate: -100% 0%;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: var(--radius);
+      height: var(--radius);
+      pointer-events: none;
+
+      scale: 0;
+      transform-origin: var(--radius) 0;
+      transition: all .2s ease-in-out;
+
+      translate: -100% 0%;
+    }
+
+    &::after {
+      inset-block-start: calc(100% - 1px);
+      inset-inline-end: var(--offset);
+      background: radial-gradient(circle var(--radius) at 0 var(--radius), transparent 0, transparent var(--radius), var(--palette-accent) calc(var(--radius) + 1px));
+    }
+
+
+    }
+
+    .toolbar a:not(:first-child) .toolbar-link__bkg {
+    &::before {
+      inset-block-end: calc(100% - 1px);
+      inset-inline-end: var(--offset);
+      background: radial-gradient(circle var(--radius) at 0 0px, transparent 0, transparent var(--radius), var(--palette-accent) calc(var(--radius) + 1px));
+      transform-origin: var(--radius) var(--radius);
+    }
+    }
+
+    .toolbar a.is-active .toolbar-link__bkg {
+    border-start-start-radius: 3em;
+    border-end-start-radius: 3em;
+    translate: var(--offset) 0%;
+
+    &::before,
+    &::after {
+      scale: 1;
+      translate: 0% 0%;
+    }
+
   }
-
-  &::after {
-    inset-block-start: calc(100% - 1px);
-    inset-inline-end: var(--offset);
-    background: radial-gradient(circle var(--radius) at 0 var(--radius), transparent 0, transparent var(--radius), var(--palette-accent) calc(var(--radius) + 1px));
-  }
-
-  
-}
-
-.toolbar a:not(:first-child) .toolbar-link__bkg {
-  &::before {
-    inset-block-end: calc(100% - 1px);
-    inset-inline-end: var(--offset);
-    background: radial-gradient(circle var(--radius) at 0 0px, transparent 0, transparent var(--radius), var(--palette-accent) calc(var(--radius) + 1px));
-    transform-origin: var(--radius) var(--radius);
-  }
-}
-
-.toolbar a.is-active .toolbar-link__bkg {
-  border-start-start-radius: 3em;
-  border-end-start-radius: 3em;
-  translate: var(--offset) 0%;
-
-  &::before,
-  &::after {
-    scale: 1;
-    translate: 0% 0%;
-  }
-
 }
 
 
@@ -526,7 +533,7 @@ a.card:hover {
   width: 100%;
 }
 
-.ribbon>* {
+.ribbon > * {
   flex-grow: 1;
 }
 
@@ -571,7 +578,7 @@ a.card:hover {
   display: inline-block;
 }
 
-button {
+button, a.button {
   text-transform: inherit;
   font-size: inherit;
 
@@ -582,14 +589,15 @@ button {
   font-size: 1rem;
   border-radius: 2rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
-button:hover {
+button:hover, a.button:hover {
   --palette-accent: var(--color-black);
   --palette-fg: var(--color-white);
 }
 
-button[disabled] {
+button[disabled], a.button[disabled] {
   pointer-events: none;
   --palette-accent: var(--color-faint);
 }

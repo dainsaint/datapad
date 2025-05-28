@@ -14,6 +14,24 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
 
 console.log( documentId );
   return html`
+    <style>
+    #episode-documents {
+      display: grid;
+      grid-template-columns: minmax(600px, 1fr) minmax(400px, auto);
+      
+      gap: var(--gap);
+      height: 100%;
+      overflow: hidden;
+    }
+
+    @media (max-width: 1000px) {
+      #episode-documents {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr;
+      }
+    }
+    </style>
+
     <div id="episode-documents" class="layout-row full" style="overflow: hidden" 
       hx-get="${episode.toURL(`/documents/${documentId}`)}"
       hx-trigger="sse:documents"
@@ -36,11 +54,10 @@ console.log( documentId );
         <div id="documents-outline" class="stack scrollable">
           <h1>${ currentDocument.name }</h1>
           <form class="layout-row gap" hx-post="${currentDocument.toURL("/refresh")}"  hx-disabled-elt="button">
+            <a class="button" target="_blank" href="http://docs.google.com/document/d/${currentDocument.googleDocId}"><i class="fa fa-pen-to-square"></i> Edit In Google Docs</a>  
             <button><i class="fa fa-refresh"></i> Reload </button>  
             <i class="fa fa-spinner fa-spin htmx-indicator"></i>
-            <div class="layout-fill"></div>
-            <a class="button" target="_blank" href="http://docs.google.com/document/d/${currentDocument.googleDocId}"><i class="fa fa-pen-to-square"></i> Edit In Google Docs</a>
-        </form>
+          </form>
 
           <div class="text">
             ${ renderOutline( currentDocument.content ) }

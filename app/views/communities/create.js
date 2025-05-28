@@ -23,7 +23,7 @@ export default function CommunityCreate({ episode, society }) {
       
       <fieldset>
         <label for="societyId">Society</label>
-        ${ Select({ name: "societyId", current: society.id, options: episode.societies }) }
+        ${ Select({ name: "societyId", current: society?.id, options: episode.societies }) }
       </fieldset>
 
 

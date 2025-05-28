@@ -7,29 +7,26 @@ export default function EpisodeGameMaster ({ episode } = {}) {
   const currentPhase = episode.currentPhase;
 
   return html`
-    <main class="full" style="display: grid; grid-template-rows: 1fr max-content; gap: 10px"
+    <main class="full layout-bottom-toolbar"
       hx-trigger="sse:episode"  
       hx-get="${ episode.toURL("/gm") }" 
       hx-swap="none"
       hx-select-oob="#gm-playlist"
       hx-disinherit="*"
     >
-    <article class="full grid-two">
-      <div id="gm-playlist" class="panel stack full" style="border-top-left-radius: 0px">
-        ${ PhaseControls({ phase: currentPhase }) }
-        <h1>Game State</h1>
 
+    <article id="gm-playlist" class="panel stack" style="border-top-left-radius: 0px">
+      ${ PhaseControls({ phase: currentPhase }) }
+      <h1>Game State</h1>
 
-        <div class="scrollable">
-          ${EpisodeSocieties({ episode })}
-        </div>
+      <div>
+        ${EpisodeSocieties({ episode })}
       </div>
-      
-
     </article>
 
 
-    <aside class="layout-row gap-tight stack-push" hx-target="#dialog">
+
+    <aside class="layout-row gap-tight" hx-target="#dialog">
       <button hx-get="/communities/${episode.id}/create"><i class="fa fa-people-group"></i> New Community</button>
       <button hx-get="/societies/${episode.id}/create">${ Icon("planet")} New Society</button>
       <div class="layout-fill"></div>

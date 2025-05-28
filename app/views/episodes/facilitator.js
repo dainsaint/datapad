@@ -12,9 +12,23 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
   return society
     ? html`
       <main class="full layout-bottom-toolbar">
+  <style>
+    #facilitator {
+      display: grid;
+      grid-template-columns: minmax(600px, 2fr) minmax(400px, 1fr);
+      gap: var(--gap);
+      height: 100%;
+      overflow: hidden;
+    }
 
-        <article id="facilitator" style="display: flex; gap: var(--gap)">
-          <section class="society-panel__communities panel full" style="flex: 3 1 67%;">    
+    @media (max-width: 1000px) {
+      #facilitator {
+        grid-template-columns: 1fr;
+      }
+    }
+    </style>
+        <article id="facilitator" >
+          <section class="society-panel__communities panel scrollable">    
             <div class="stack" id="facilitator-society-select">
               <div hx-swap="none" hx-select-oob="#facilitator-society-view, #facilitator-action-edit, #facilitator-society-select">
                 ${ SocietySelect({ society })}
@@ -24,9 +38,6 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
                 <a hx-get="${ society.toURL("/emissary")}" hx-target="#dialog">${ Icon("emissary") }</a>
               </div>
 
-              <div class="toolbar toolbar-rounded">
-                <a hx-get="${ society.toURL("/ambassador")}" hx-target="#dialog">${ Icon("ambassador") }</a>
-              </div>
             </div>
 
             <div id="facilitator-society-view" class="stack">
@@ -34,7 +45,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
             </div>
           </section>
 
-        <section id="facilitator-action-edit" class="panel"  style="flex: 1 1 33%;">
+          <section id="facilitator-action-edit" class="panel">
             ${ SocietyActions({ society }) }
           </section>
 
