@@ -4,7 +4,6 @@ import Model from "#database/model";
 
 export default class Community extends Model {
   societyId
-  ambassadorSocietyId;
   player
   name
   voice;
@@ -33,12 +32,16 @@ export default class Community extends Model {
     }
   }
 
+  lose() {
+    this.tags.add( CommunityTag.LOST );
+  }
+
   get isEmissary() {
-    return this.society.getRoundData( this.episode.currentPhase.round ).emissaryCommunityId === this.id;
+    return this.society.currentTurn?.emissaryCommunityId === this.id;
   }
 
   get isAmbassador() {
-    return this.ambassadorSocietyId;
+    return this.society?.currentTurn?.isAmbassador( this.id );
   }
 
 
@@ -47,9 +50,17 @@ export default class Community extends Model {
     return this.tags.has( CommunityTag.ENDANGERED );
   }
 
+  get isActive() {
+    return !this.tags.has( CommunityTag.LOST );
+  }
+
 
   get resources() {
     return this.episode.resources.filter( resource => resource.communityId == this.id );
+  }
+
+  get activeResources() {
+    return this.resources.filter( resource => resource.isActive );
   }
 
   get society() {
@@ -61,7 +72,7 @@ export default class Community extends Model {
   }
 
   get ambassadorSociety() {
-    return this.episode.societies.find( society => society.id == this.ambassadorSocietyId );
+    return this.society.currentTurn?.getAmbassadorSociety( this.id );
   }
 
   toURL(append = "") {

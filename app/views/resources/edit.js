@@ -26,7 +26,7 @@ export default function ResourceEdit({ resource }) {
         ${ episode.societies.map( society => {
           return html`
             <optgroup label="${ society.name }">
-              ${ society.communities.map( community => 
+              ${ society.activeCommunities.map( community => 
                 html`<option value="${ community.id }" ${ community.id === myCommunity.id && "selected" }>${community.name}</option>`
               )}
             </optgroup>
@@ -46,12 +46,14 @@ export default function ResourceEdit({ resource }) {
             value: ResourceTag.EXHAUSTED
           }) }
 
-<input type="hidden" name="shouldAlterTags" value="true"/>
+        <input type="hidden" name="shouldAlterTags" value="true"/>
           
       </fieldset>
 
-      <fieldset class="layout-spread stack-push">
+      <fieldset class="layout-row gap stack-push">
         <button><i class="fa fa-check-circle"></i> Update Resource</button>
+        <button class="color-danger" hx-post="${ resource.toURL("/destroy")}" hx-confirm="Destroy Resource? Use this in gameplay"><i class="fa fa-fire"></i> Destroy Resource</button>
+        <div class="layout-fill"></div>
         <button type="button" value="cancel">Cancel</button>
       </fieldset>
     </form>

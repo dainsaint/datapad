@@ -4,15 +4,9 @@ import Episode from "#models/episode";
 import DocumentView from "#views/documents/view";
 import Toolbar from "#views/ui/toolbar";
 
-const icons = {
-  Script: "fa-scroll",
-  Rules: "fa-scale-balanced"
-}
-
 export default function EpisodeDocuments ({ episode = new Episode(), documentId = undefined} = {} ) {
   const currentDocument = documentId ? Document.load(documentId) : episode.documents.at(0);
 
-console.log( documentId );
   return html`
     <style>
     #episode-documents {
@@ -33,12 +27,14 @@ console.log( documentId );
     </style>
 
     <div id="episode-documents" class="layout-row full" style="overflow: hidden" 
-      hx-get="${episode.toURL(`/documents/${documentId}`)}"
+      hx-get
       hx-trigger="sse:documents"
       hx-swap="outerHTML"
     >
 
+
       <div class="society-panel__communities panel full" style="flex: 1 0 max-content;">
+        
         <div id="documents-toolbar" hx-swap="none" hx-select-oob="#documents-outline, #documents-view">
           ${ Toolbar({
             id: "document-toolbar",
@@ -53,7 +49,7 @@ console.log( documentId );
 
         <div id="documents-outline" class="stack scrollable">
           <h1>${ currentDocument.name }</h1>
-          <form class="layout-row gap" hx-post="${currentDocument.toURL("/refresh")}"  hx-disabled-elt="button">
+          <form class="layout-row gap" hx-post="${currentDocument.toURL("/refresh")}"  hx-disabled-elt="button" hx-swap="none">
             <a class="button" target="_blank" href="http://docs.google.com/document/d/${currentDocument.googleDocId}"><i class="fa fa-pen-to-square"></i> Edit In Google Docs</a>  
             <button><i class="fa fa-refresh"></i> Reload </button>  
             <i class="fa fa-spinner fa-spin htmx-indicator"></i>

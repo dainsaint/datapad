@@ -1,7 +1,7 @@
 import { html } from "#core/utils";
 import { ActionStatus } from "#models/action";
-import ActionRisk from "#views/actions/risk";
 import ActionView from "#views/actions/view";
+import TurnRisk from "#views/turns/risk";
 import Icon from "#views/ui/icon";
 
 
@@ -41,17 +41,20 @@ export default function EpisodeSocieties({ episode }) {
             </div>
           </div>
 
-          ${ ActionRisk() }
-
           <div class="layout-row gap-tight">
             <div class="is-size-3">
               ${ Icon("emissary") }
             </div>
             <div>
-              <strong>${ society.currentEmissary?.name }</strong><br/>
-              ${ society.currentEmissary?.player }<br/>
+              <strong>${ society.currentEmissary?.name || "No Emissary"}</strong><br/>
+              ${ society.currentEmissary?.player || "Not yet elected"}<br/>
             </div>
           </div>
+
+
+          ${ TurnRisk({ turn: society.currentTurn }) }
+
+
 
           <div class="stack-tight">
             ${ voted && ActionView({ action: voted }) }

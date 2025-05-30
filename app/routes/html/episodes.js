@@ -108,15 +108,15 @@ episodes.get("/:episodeId/documents/:documentId?", episodeLayout, (req, res) => 
   
   const episode = Episode.load(episodeId);
 
-  req.session.document ??= {}  
+  req.session.documents ??= {}  
 
   if( !documentId && episode.documents.length ) {
-    req.session.document.documentId ??= episode.documents.at(0)?.id;
+    req.session.documents.documentId ??= episode.documents.at(0)?.id;
     res.redirect(
-      `/episodes/${episodeId}/documents/${req.session.document.documentId}`
+      `/episodes/${episodeId}/documents/${req.session.documents.documentId}`
     );
   } else {
-    req.session.document.documentId = documentId;
+    req.session.documents.documentId = documentId;
     res.render(`episodes/documents`, { episode, documentId });
   }
   

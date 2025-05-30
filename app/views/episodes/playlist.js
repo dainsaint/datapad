@@ -60,14 +60,16 @@ export default function EpisodePlaylist({ episode }) {
           <div class="phase-playlist__add-menu mode--editing">
             <button
               type="button"
-              hx-get="${ episode.toURL('/phases/create') }"
+              hx-get="/phases/${episode.id}/create"
               hx-target="#dialog">
               <i class="fa fa-square-plus"></i> add phase
             </button>
 
             <button
               type="button"
-              hx-post="${ episode.toURL('/phases/round') }">
+              hx-post="/phases/${episode.id}/round"
+              hx-swap="none"
+              >
               <i class="fa fa-folder-plus"></i> add round
             </button>
           </div>

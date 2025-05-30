@@ -480,10 +480,9 @@
           "_type": "Community",
           "id": "Qw0Xm",
           "societyId": "et0k8",
-          "ambassadorSocietyId": "",
           "player": "Jim (he/him)",
           "name": "Calendar Daddies",
-          "voice": "leader",
+          "voice": "people",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -493,7 +492,6 @@
           "_type": "Community",
           "id": "lHvo5",
           "societyId": "V9xbw",
-          "ambassadorSocietyId": "",
           "player": "",
           "name": "ribs",
           "voice": "leader",
@@ -506,7 +504,6 @@
           "_type": "Community",
           "id": "UDMgC",
           "societyId": "et0k8",
-          "ambassadorSocietyId": "",
           "player": "Bobby",
           "name": "Jeffrey Bezos",
           "voice": "people",
@@ -519,7 +516,6 @@
           "_type": "Community",
           "id": "B95dD",
           "societyId": "et0k8",
-          "ambassadorSocietyId": "",
           "player": "Jason",
           "name": "Dirty Harries",
           "voice": "leader",
@@ -532,7 +528,6 @@
           "_type": "Community",
           "id": "cV-Kn",
           "societyId": "et0k8",
-          "ambassadorSocietyId": "",
           "player": "Fredrick",
           "name": "Elders",
           "voice": "people",
@@ -545,7 +540,6 @@
           "_type": "Community",
           "id": "LiQVN",
           "societyId": "et0k8",
-          "ambassadorSocietyId": "",
           "player": "Jeff",
           "name": "Pencils Down",
           "voice": "people",
@@ -560,6 +554,7 @@
           "_type": "Community",
           "id": "R9tmF",
           "societyId": "et0k8",
+          "player": "",
           "name": "Quinn",
           "voice": "people",
           "tags": {
@@ -582,10 +577,9 @@
           "_type": "Community",
           "id": "G_9_r",
           "societyId": "Feay0",
-          "ambassadorSocietyId": "",
           "player": "",
           "name": "nana",
-          "voice": "people",
+          "voice": "leader",
           "tags": {
             "_type": "Tags",
             "value": [
@@ -597,7 +591,6 @@
           "_type": "Community",
           "id": "ssnLF",
           "societyId": "Feay0",
-          "ambassadorSocietyId": "",
           "player": "",
           "name": "baba",
           "voice": "leader",
@@ -612,8 +605,7 @@
           "_type": "Community",
           "id": "FRomU",
           "societyId": "Feay0",
-          "ambassadorSocietyId": "",
-          "player": "",
+          "player": "freddie (she/they))",
           "name": "gaga",
           "voice": "people",
           "tags": {
@@ -625,7 +617,6 @@
           "_type": "Community",
           "id": "NzLOs",
           "societyId": "Feay0",
-          "ambassadorSocietyId": "",
           "player": "",
           "name": "dada",
           "voice": "leader",
@@ -638,7 +629,6 @@
           "_type": "Community",
           "id": "NVQbL",
           "societyId": "Feay0",
-          "ambassadorSocietyId": "",
           "player": "",
           "name": "popo",
           "voice": "people",
@@ -653,7 +643,6 @@
           "_type": "Community",
           "id": "u0fa0",
           "societyId": "e-JcG",
-          "ambassadorSocietyId": "",
           "player": "",
           "name": "skreeee",
           "voice": "people",
@@ -668,7 +657,6 @@
           "_type": "Community",
           "id": "jaCtF",
           "societyId": "yXHVO",
-          "ambassadorSocietyId": "",
           "player": "",
           "name": "big ol shair",
           "voice": "people",
@@ -681,7 +669,6 @@
           "_type": "Community",
           "id": "Bd8RN",
           "societyId": "V9xbw",
-          "ambassadorSocietyId": "",
           "player": "",
           "name": "My Guys",
           "voice": "people",
@@ -1183,7 +1170,7 @@
         {
           "_type": "Resource",
           "id": "HOzO6",
-          "communityId": "LiQVN",
+          "communityId": "Qw0Xm",
           "name": "feral cats",
           "tags": {
             "_type": "Tags",
@@ -1195,7 +1182,7 @@
         {
           "_type": "Resource",
           "id": "FADd2",
-          "communityId": "NVQbL",
+          "communityId": "B95dD",
           "name": "lillypadz",
           "tags": {
             "_type": "Tags",
@@ -1215,7 +1202,7 @@
         {
           "_type": "Resource",
           "id": "YaD-S",
-          "communityId": "kATHn",
+          "communityId": "LiQVN",
           "name": "shtrhstr",
           "tags": {
             "_type": "Tags",
@@ -1224,18 +1211,8 @@
         },
         {
           "_type": "Resource",
-          "id": "JvqsG",
-          "communityId": "Qw0Xm",
-          "name": "righteous anger",
-          "tags": {
-            "_type": "Tags",
-            "value": []
-          }
-        },
-        {
-          "_type": "Resource",
           "id": "arNw1",
-          "communityId": "B95dD",
+          "communityId": "R9tmF",
           "name": "afergre",
           "tags": {
             "_type": "Tags",
@@ -1337,7 +1314,7 @@
         {
           "_type": "Resource",
           "id": "vi3Gq",
-          "communityId": "R9tmF",
+          "communityId": "UDMgC",
           "name": "wgrtgrtgw",
           "tags": {
             "_type": "Tags",
@@ -1347,12 +1324,24 @@
         {
           "_type": "Resource",
           "id": "AwCCh",
-          "communityId": "UDMgC",
+          "communityId": "kATHn",
           "name": "gwgwrtgwrt",
           "tags": {
             "_type": "Tags",
             "value": [
               "exhausted"
+            ]
+          }
+        },
+        {
+          "_type": "Resource",
+          "id": "JvqsG",
+          "communityId": "NVQbL",
+          "name": "righteous anger",
+          "tags": {
+            "_type": "Tags",
+            "value": [
+              "destroyed"
             ]
           }
         }
@@ -1403,7 +1392,8 @@
               "round": 2,
               "societyId": "et0k8",
               "leadershipOverrides": {},
-              "ambassadorsSent": []
+              "ambassadorsSent": [],
+              "emissaryCommunityId": "B95dD"
             },
             {
               "round": 3,
@@ -1512,6 +1502,73 @@
               "leadershipOverrides": {}
             }
           ]
+        }
+      ],
+      "turns": [
+        {
+          "_type": "Turn",
+          "id": "B2CW4",
+          "round": 2,
+          "societyId": "V9xbw",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "YQyms",
+          "round": 2,
+          "societyId": "Feay0",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "emissaryCommunityId": "FRomU",
+          "ambassadors": {
+            "NVQbL": "",
+            "G_9_r": "",
+            "FRomU": ""
+          },
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "jfuy-",
+          "round": 2,
+          "societyId": "e-JcG",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "CoGAL",
+          "round": 2,
+          "societyId": "et0k8",
+          "risk": "1",
+          "advantage": "2",
+          "disadvantage": "0",
+          "emissaryCommunityId": "cV-Kn",
+          "ambassadors": {
+            "Qw0Xm": "",
+            "R9tmF": "",
+            "LiQVN": ""
+          },
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "kezZk",
+          "round": 2,
+          "societyId": "yXHVO",
+          "risk": "1",
+          "advantage": "2",
+          "disadvantage": "2",
+          "ambassadors": {},
+          "alterLeadership": {}
         }
       ],
       "documentIds": [

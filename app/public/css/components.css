@@ -266,8 +266,8 @@ STATES TO DESIGN FOR
   color: var(--palette-accent);
   margin-top: 0px;
   z-index: 0;
+  opacity: .2;
 }
-
 
 
 
@@ -284,7 +284,8 @@ STATES TO DESIGN FOR
 }
 
 .community-card--is-home.community-card--is-ambassador {
-  opacity: .2;
+  --palette-bg: var(--color-faint);
+  --palette-fg: var(--color-white);
 }
 
 .community-card--is-ambassador .community-card__ambassador-to {

@@ -11,6 +11,7 @@ import players from "#routes/html/players";
 import resources from "#routes/html/resources";
 import episodes from "#routes/html/episodes";
 import societies from "#routes/html/societies";
+import turns from "#routes/html/turns";
 import pages from "#routes/html/pages";
 
 const htmlRouter = express.Router();
@@ -26,6 +27,7 @@ htmlRouter.use("/players", players);
 htmlRouter.use("/resources", resources);
 htmlRouter.use("/episodes", episodes);
 htmlRouter.use("/societies", societies);
+htmlRouter.use("/turns", turns);
 htmlRouter.use("/", pages);
 
 export default htmlRouter;

@@ -64,13 +64,25 @@ export default class Society extends Model {
     return this.episode.communities.filter( community => community.societyId == this.id );
   }
 
+  get activeCommunities() {
+    return this.communities.filter( community => community.isActive );
+  }
+
   get resources() {
     return this.communities.map( community => community.resources ).flat();
   }
 
+  get activeResources() {
+    return this.activeCommunities.map( community => community.activeResources ).flat();
+  }
+
   get currentEmissary() {
-    const id = this.getRoundData( this.episode.currentPhase.round )?.emissaryCommunityId
+    const id = this.currentTurn.emissaryCommunityId
     return this.episode.getCommunityById(id);
+  }
+
+  get currentTurn() {
+    return this.episode.getCurrentTurnForSocietyId( this.id );
   }
 
 

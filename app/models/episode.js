@@ -6,6 +6,7 @@ import Record, { RecordType } from "#models/record";
 import Tags from "#core/tags";
 import { PhaseType } from "#models/phase";
 import Document from "#models/document";
+import Turn from "#models/turn";
 
 
 const loadedEpisodes = new Map();
@@ -24,6 +25,7 @@ export default class Episode extends Model {
   players = []
   resources = []
   societies = []
+  turns = []
 
   documentIds = []
 
@@ -51,12 +53,16 @@ export default class Episode extends Model {
     return (id) => this[key].splice( this[key].findIndex( element => element.id === id ), 1 );
   }
 
+
+
   addAction = this.#addTo("actions")
   addCommunity = this.#addTo("communities")
   addPhase = this.#addTo("phases")
   addPlayer = this.#addTo("players")
   addResource = this.#addTo("resources")
   addSociety = this.#addTo("societies")
+  addTurn = this.#addTo("turns");
+
   addRecord = record => {
     console.log( record.toLog() );
     this.#addTo("records")(record);
@@ -69,6 +75,7 @@ export default class Episode extends Model {
   getResourceById = this.#getById("resources")
   getSocietyById = this.#getById("societies")
   getRecordById = this.#getById("records")
+  getTurnById = this.#getById("turn")
 
 
   deleteActionById = this.#deleteById("actions")
@@ -78,12 +85,12 @@ export default class Episode extends Model {
   deleteResourceById = this.#deleteById("resources")
   deleteSocietyById = this.#deleteById("societies")
   deleteRecordById = this.#deleteById("records")
-  
+
+
   deleteDocumentById(id) {
     this.documentIds = this.documentIds.filter( dId => dId != id );
     
   }
-
 
 
   get activePhases() {
@@ -94,8 +101,20 @@ export default class Episode extends Model {
     return this.phases.find( phase => !phase.isComplete );
   }
 
+  get currentRound() {
+    return this.currentPhase.round;
+  }
+
   get documents() {
     return this.documentIds.map( id => Document.load(id) );
+  }
+
+  get activeCommunities() {
+    return this.communities.filter( community => community.isActive );
+  }
+
+  get activeResources() {
+    return this.resources.filter( resource => resource.isActive );
   }
 
 
@@ -107,7 +126,7 @@ export default class Episode extends Model {
   }
 
   rereferenceModels() {
-    [ this.actions, this.communities, this.phases, this.players, this.records, this.resources, this.societies ].forEach( 
+    [ this.actions, this.communities, this.phases, this.players, this.records, this.resources, this.societies, this.turns ].forEach( 
       collection => collection.forEach(
         model => model?.setEpisode?.(this)
       )
@@ -155,6 +174,26 @@ export default class Episode extends Model {
       .filter( action => action.societyId == societyId )
   }
 
+
+  getTurnByRound( societyId, round ) {
+    round = parseInt(round);
+    let turn = this.turns.find( turn => turn.round == round && turn.societyId == societyId );
+    
+    
+    if(!turn) {
+      turn = new Turn({ round, societyId });
+      this.addTurn( turn );
+    }
+    
+    return turn;
+  }
+
+  getCurrentTurnForSocietyId( societyId ) {
+    
+    return this.getTurnByRound( societyId, this.currentRound );
+  }
+
+
   makeActive() {
     this.tags.add(EpisodeTags.ACTIVE);
   }
@@ -180,6 +219,7 @@ export default class Episode extends Model {
   toURL(append = "") {
     return `/episodes/${this.id}` + append;
   }
+
 
 
   getPhaseGroups() {

@@ -20,14 +20,22 @@ export default class Resource extends Model {
   unexhaust() {
     this.tags.delete( ResourceTag.EXHAUSTED );
   }
+
+  destroy() {
+    this.tags.add( ResourceTag.DESTROYED );
+  }
   
 
   get isExhausted() {
     return this.tags.has( ResourceTag.EXHAUSTED );
   }
 
+  get isActive() {
+    return !this.tags.has( ResourceTag.DESTROYED );
+  }
+
   get community() {
-    return this.episode.communities.find( community => community.id == this.communityId );
+    return this.episode.getCommunityById( this.communityId );
   }
 
 

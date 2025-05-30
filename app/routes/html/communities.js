@@ -59,6 +59,10 @@ communities.patch("/:episodeId/:communityId", (req, res) => {
 
   const episode = Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
+
+  const turn = community.society.currentTurn;
+  turn.sendAmbassador( community.id, req.body.ambassadorSocietyId );
+
   community.update(req.body);
 
   episode.save();
@@ -86,6 +90,18 @@ communities.post("/:episodeId/:communityId/resources", (req, res) => {
   episode.save();
   res.sendStatus(200);
   broadcast("resources");
+});
+
+
+communities.post("/:episodeId/:communityId/destroy", (req, res) => {
+  const { episodeId, communityId } = req.params;
+  const episode = Episode.load(episodeId);
+  const community = episode.getResourceById(communityId);
+  community.destroy();
+  episode.save();
+
+  res.sendStatus(200);
+  broadcast("societies");
 });
 
 

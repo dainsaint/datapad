@@ -48,7 +48,7 @@ export default class Action extends Model {
   }
 
   get resources() {
-    return this.resourceIds.map(this.episode.getResourceById);
+    return this.resourceIds.map( id => this.episode.getResourceById(id) );
   }
 
   get society() {

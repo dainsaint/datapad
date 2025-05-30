@@ -21,6 +21,7 @@ export default function ActionView({ action } = {}) {
       hx-post="${action.toURL("/resources")}"
       hx-trigger="sorted,change,submit"
       hx-swap="none"
+      hx-disinherit="*"
     >
     <div class="layout-row gap">
       <div class="is-size-3">
@@ -47,7 +48,7 @@ export function ActionComponent({ resource, text, i } = {}) {
     >
     <p>
       We use 
-      <span class="society-card__resource color-contrast">${resource.name}</span>
+      <span class="society-card__resource ${resource.community.society.color}" hx-get=${ resource.toURL("/edit") } hx-target="#dialog">${resource.name}</span>
       to 
       <strong>${ text || ".." }.</strong>
       <input name="resourceIds[]" value="${ resource.id }" type="hidden"/>

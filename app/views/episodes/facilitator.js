@@ -38,6 +38,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
                 <a hx-get="${ society.toURL("/emissary")}" hx-target="#dialog">${ Icon("emissary") }</a>
               </div>
 
+
             </div>
 
             <div id="facilitator-society-view" class="stack">

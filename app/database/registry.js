@@ -9,6 +9,7 @@ import Player from "#models/player";
 import Record from "#models/record";
 import Resource from "#models/resource";
 import Society from "#models/society";
+import Turn from "#models/turn";
 import Ledger from "#database/ledger";
 import Serializer from "#database/serializer";
 import Document from "#models/document";
@@ -27,6 +28,7 @@ function initialize() {
   Serializer.register("Episode", Episode);
   Serializer.register("Record", Record);
   Serializer.register("Society", Society);
+  Serializer.register("Turn", Turn);
   Serializer.register("Tags", Tags);
 
   Ledger.initialize();

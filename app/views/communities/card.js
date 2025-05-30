@@ -18,9 +18,6 @@ export default function CommunityCard({ community = new Community(), inSociety }
     cardClasses.push( "community-card--is-ambassador");
   }
 
-  const isAway = community.isAmbassador && community.society === inSociety;
-  const isVisiting = community.isAmbassador && community.society !== inSociety; 
-
   return html`
     <div id="${community.id}" 
       hx-get="${community.toURL("/card")}" 
@@ -30,7 +27,7 @@ export default function CommunityCard({ community = new Community(), inSociety }
     >
       <form 
         id="community-card-${community.id}" 
-        class="card card-fancy ${community.society.color} community-card community-card--${community.voice} ${ cardClasses } stack-loose droppable-target js-community-card"
+        class="card card-fancy community-card ${community.society.color} community-card--${community.voice} ${ cardClasses } stack-loose droppable-target js-community-card"
         data-society-id="${community.society.id}"
         hx-trigger="sorted"
         hx-post="${community.toURL("/resources")}"
@@ -40,22 +37,24 @@ export default function CommunityCard({ community = new Community(), inSociety }
         data-sortable-bounds
       >
 
-        <header class="community-card__header stack-tight">
-          <p>
-            <a class="text-heading is-uppercase" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name}</a>
-          </p>
+        <header class="community-card__header">
+          <p class="is-size-7">${ community.voice } ${ community.isEmissary && "• emissary"} ${ community.isAmbassador && "• ambassador"}</p></p>
+          <strong>
+            ${ community.resources.length == 0 && html`<i class="fa fa-warning"></i> ` }<a class="is-uppercase is-size-5" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name}</a>
+          </strong>
           <p class="text-body is-uppercase">${ community.player }</p>
           ${ community.isAmbassador && 
             html`<p class="text">
               <em class="community-card__ambassador-from">Ambassador from ${ community.society.name }</em>
-              <em class="community-card__ambassador-to">Ambassador to ${ community.ambassadorSociety.name }</em>
+              <em class="community-card__ambassador-to">Visiting ${ community.ambassadorSociety.name }</em>
             </em></p>`
           }
         </header>
+
         <div class="community-card__voice">${ Icon(voiceIcon) }</div>
 
         <div class="community-card__resources grid-small gap-tight" data-sortable="resources" data-sortable-expand hx-target="#dialog">
-          ${community.resources.map((resource) =>
+          ${community.activeResources.map((resource) =>
             CommunityResourceCard({ resource })
           )}
         </div>

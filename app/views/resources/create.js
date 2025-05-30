@@ -24,7 +24,7 @@ export default function ResourceCreate({ episode, society, communityId }) {
         <select name="communityId">
         ${ episode.societies.map( society => html`
             <optgroup label="${ society.name }">
-              ${ society.communities.map(( community, i ) => 
+              ${ society.activeCommunities.map(( community, i ) => 
                 html`<option value="${ community.id }" ${{ selected: isCommunitySelected(society, community, i) }}>${community.name}</option>`
               )}
             </optgroup>

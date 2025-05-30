@@ -15,7 +15,7 @@ export default function ActionEdit({ action } = {}) {
 
       <footer class="layout-row"> 
         <div class="layout-fill"></div>
-        <button name="vote" value="vote" ${{ disabled: action.resources.length == 0}}><i class="fa fa-check-to-slot"></i> Vote!</button>
+        <button name="vote" value="vote" ${{ disabled: action.resources.length == 0}}><i class="fa fa-check-to-slot"></i> Confirm Vote!</button>
       </footer>
     </form>
   `;

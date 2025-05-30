@@ -105,36 +105,36 @@ societies.put("/:episodeId/:societyId", body("name").trim(), (req, res, next) =>
     
 
 
-societies.post("/:episodeId/:societyId/ambassador", (req, res) => {
-  const { episodeId } = req.params;
-  const { communityId, ambassadorSocietyId } = req.body;
+// societies.post("/:episodeId/:societyId/ambassador", (req, res) => {
+//   const { episodeId } = req.params;
+//   const { communityId, ambassadorSocietyId } = req.body;
 
-  const episode = Episode.load(episodeId);
-  const community = episode.getCommunityById(communityId);
-  community.ambassadorSocietyId = ambassadorSocietyId;
+//   const episode = Episode.load(episodeId);
+//   const community = episode.getCommunityById(communityId);
+//   community.ambassadorSocietyId = ambassadorSocietyId;
 
-  episode.save();
+//   episode.save();
 
-  res.sendStatus(200);
-  broadcast("societies");
-})
+//   res.sendStatus(200);
+//   broadcast("societies");
+// })
 
 
-societies.post("/:episodeId/:societyId/emissary", (req, res) => {
-  console.log("what up");
-  const { episodeId, societyId } = req.params;
-  const { round, emissaryCommunityId } = req.body;
+// societies.post("/:episodeId/:societyId/emissary", (req, res) => {
+//   console.log("what up");
+//   const { episodeId, societyId } = req.params;
+//   const { round, emissaryCommunityId } = req.body;
 
-  const episode = Episode.load(episodeId);
-  const society = episode.getSocietyById(societyId);
-  const roundData = society.getRoundData( round );
-  roundData.emissaryCommunityId = emissaryCommunityId;
+//   const episode = Episode.load(episodeId);
+//   const society = episode.getSocietyById(societyId);
+//   const roundData = society.getRoundData( round );
+//   roundData.emissaryCommunityId = emissaryCommunityId;
 
-  episode.save();
+//   episode.save();
 
-  res.sendStatus(200);
-  broadcast("societies");
-})
+//   res.sendStatus(200);
+//   broadcast("societies");
+// })
 
 
 //TODO: Determine what actual deletion logic we want, and how far it propagates

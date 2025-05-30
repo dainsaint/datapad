@@ -95,6 +95,18 @@ resources.patch("/:episodeId/:resourceId", (req, res, next) => {
 });
 
 
+resources.post("/:episodeId/:resourceId/destroy", (req, res) => {
+  const { episodeId, resourceId } = req.params;
+  const episode = Episode.load(episodeId);
+  const resource = episode.getResourceById(resourceId);
+  resource.destroy();
+  episode.save();
+
+  res.sendStatus(200);
+  broadcast("resources");
+});
+
+
 resources.delete("/:episodeId/:resourceId", (req, res) => {
   const { episodeId, resourceId } = req.params;
 

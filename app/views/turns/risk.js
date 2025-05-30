@@ -1,8 +1,10 @@
 import { from, html } from "#core/utils";
 
-export default function ActionRisk({ risk = 1, advantage, disadvantage } = {}) {
+export default function TurnRisk({ turn } = {}) {
+  const { risk, advantage, disadvantage } = turn;
+
   return html`
-    <form>
+    <form hx-post="${ turn.toURL() }" hx-trigger="change">
       <fieldset class="layout-row gap-tight">
         <label for="risk" style=""><i class="fa fa-skull"></i></label>
         <select class="is-uppercase is-size-6" name="risk" style="flex-basis: auto;">
