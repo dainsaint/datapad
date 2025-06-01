@@ -47,7 +47,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
         id: communityId,
         resources: episode.resources.filter( resource => resource.communityId == communityId ).map( formatResource ) 
       })),
-      actions: episode.getCurrentActionsForSocietyId( society.id ).map( ({round, status, resourceIds, texts }) => ({
+      actions: episode.getCurrentActionsForSocietyId( society.id ).map( ({round, status, resourceIds, texts, voteTime }) => ({
         round,
         components: resourceIds.map( (resourceId, i) => ({ 
           resource: {
@@ -57,7 +57,9 @@ jsonRouter.get("/episodes/active", (req, res) => {
           text: texts[i], 
           statement: `We use ${ episode.getResourceById(resourceId).name } to ${ texts[i] }`
         })),
-        voted: status == ActionStatus.VOTED
+        voted: status == ActionStatus.VOTED,
+        voteTime: voteTime
+
       })),
     }))
   }
