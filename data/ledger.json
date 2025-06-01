@@ -433,7 +433,7 @@
           "disadvantage": "0",
           "result": [],
           "voteTime": "2025-05-23T18:05:30.161-04:00",
-          "status": "voted",
+          "status": "invalid",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -455,6 +455,26 @@
           "disadvantage": "0",
           "result": [],
           "status": "open",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
+        },
+        {
+          "_type": "Action",
+          "id": "IvEu8",
+          "round": "2",
+          "societyId": "Feay0",
+          "resourceIds": [
+            "kDphD"
+          ],
+          "texts": [
+            "",
+            ""
+          ],
+          "result": [],
+          "voteTime": "2025-05-31T22:01:43.190-04:00",
+          "status": "voted",
           "tags": {
             "_type": "Tags",
             "value": []
@@ -554,7 +574,7 @@
           "_type": "Community",
           "id": "R9tmF",
           "societyId": "et0k8",
-          "player": "",
+          "player": "Sam Reich (he/him(",
           "name": "Quinn",
           "voice": "people",
           "tags": {
@@ -566,6 +586,7 @@
           "_type": "Community",
           "id": "kATHn",
           "societyId": "et0k8",
+          "player": "",
           "name": "Jimmy",
           "voice": "people",
           "tags": {
@@ -674,7 +695,9 @@
           "voice": "people",
           "tags": {
             "_type": "Tags",
-            "value": []
+            "value": [
+              "lost"
+            ]
           }
         }
       ],
@@ -803,7 +826,7 @@
           "timeElapsed": 9.009999999999998,
           "actualTime": {
             "s": "2025-05-20T17:13:18.473-04:00",
-            "e": "2025-05-23T17:10:30.048-04:00",
+            "e": "2025-05-30T16:51:06.420-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -816,13 +839,13 @@
           "_type": "Phase",
           "id": "iFRIY",
           "type": "Individual Phase",
-          "status": "idle",
+          "status": "complete",
           "round": 2,
           "duration": 600,
           "timeElapsed": 0,
           "actualTime": {
             "s": "2025-05-09T23:53:00.133-04:00",
-            "e": "2025-05-23T18:07:41.423-04:00",
+            "e": "2025-05-30T16:51:07.375-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -841,7 +864,7 @@
           "timeElapsed": 0,
           "actualTime": {
             "s": "2025-05-12T15:38:12.770-04:00",
-            "e": "2025-05-23T23:30:03.746-04:00",
+            "e": "2025-05-30T16:51:08.042-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -860,7 +883,7 @@
           "timeElapsed": 188.16100000000026,
           "actualTime": {
             "s": "2025-05-23T23:26:28.659-04:00",
-            "e": "2025-05-25T20:07:03.242-04:00",
+            "e": "2025-05-30T16:51:09.351-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -879,7 +902,7 @@
           "timeElapsed": 1900.2769999999953,
           "actualTime": {
             "s": "2025-04-16T18:14:26.371-04:00",
-            "e": "2025-05-25T20:07:05.892-04:00",
+            "e": "2025-05-30T16:51:09.651-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -898,7 +921,7 @@
           "timeElapsed": 676.124999999999,
           "actualTime": {
             "s": "2025-05-25T20:06:55.382-04:00",
-            "e": "2025-05-25T20:06:59.241-04:00",
+            "e": "2025-05-30T16:51:10.103-04:00",
             "invalid": null,
             "isLuxonInterval": true
           },
@@ -1344,6 +1367,16 @@
               "destroyed"
             ]
           }
+        },
+        {
+          "_type": "Resource",
+          "id": "kDphD",
+          "communityId": "FRomU",
+          "name": "Incredible Thighs",
+          "tags": {
+            "_type": "Tags",
+            "value": []
+          }
         }
       ],
       "societies": [
@@ -1555,7 +1588,8 @@
           "ambassadors": {
             "Qw0Xm": "",
             "R9tmF": "",
-            "LiQVN": ""
+            "LiQVN": "",
+            "kATHn": ""
           },
           "alterLeadership": {}
         },
@@ -1567,6 +1601,116 @@
           "risk": "1",
           "advantage": "2",
           "disadvantage": "2",
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "TRDG7",
+          "round": 3,
+          "societyId": "et0k8",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "b2TXM",
+          "round": 3,
+          "societyId": "V9xbw",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "BBuJC",
+          "round": 3,
+          "societyId": "Feay0",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "UJ9tm",
+          "round": 3,
+          "societyId": "e-JcG",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "gDFnc",
+          "round": 3,
+          "societyId": "yXHVO",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "vu6we",
+          "round": 4,
+          "societyId": "et0k8",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "Vtxwl",
+          "round": 4,
+          "societyId": "V9xbw",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "WYvOq",
+          "round": 4,
+          "societyId": "Feay0",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "Q-pfs",
+          "round": 4,
+          "societyId": "e-JcG",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
+          "ambassadors": {},
+          "alterLeadership": {}
+        },
+        {
+          "_type": "Turn",
+          "id": "ExKuK",
+          "round": 4,
+          "societyId": "yXHVO",
+          "risk": 1,
+          "advantage": 0,
+          "disadvantage": 0,
           "ambassadors": {},
           "alterLeadership": {}
         }
@@ -3774,6 +3918,189 @@
           "type": "SocietyActionsTaken",
           "description": "Musical Chairs",
           "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "YJy2O",
+          "timestamp": "2025-05-30T16:50:34.124-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Frog house",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "Pgzjy",
+          "timestamp": "2025-05-30T16:50:34.125-04:00",
+          "type": "ActionResources",
+          "description": "Frog house used righteous anger,feral cats to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "MP52D",
+          "timestamp": "2025-05-30T16:50:34.125-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Toad Shack",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "lniKC",
+          "timestamp": "2025-05-30T16:50:34.125-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Beetle Junkies",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "mqIAy",
+          "timestamp": "2025-05-30T16:50:34.125-04:00",
+          "type": "ActionResources",
+          "description": "Beetle Junkies used gwgwrtgwrt,new to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "EsyOy",
+          "timestamp": "2025-05-30T16:50:34.126-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Better Burritos",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "MiU9_",
+          "timestamp": "2025-05-30T16:50:34.126-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Musical Chairs",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "ivElo",
+          "timestamp": "2025-05-30T16:50:34.126-04:00",
+          "type": "ActionResources",
+          "description": "Musical Chairs used  to take action.",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "nEVXC",
+          "timestamp": "2025-05-30T16:51:08.042-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Frog house",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "YDN0V",
+          "timestamp": "2025-05-30T16:51:08.042-04:00",
+          "type": "ActionResources",
+          "description": "Frog house used righteous anger,feral cats to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "RVtAK",
+          "timestamp": "2025-05-30T16:51:08.042-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Toad Shack",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "GbUxR",
+          "timestamp": "2025-05-30T16:51:08.043-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Beetle Junkies",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "OMaUg",
+          "timestamp": "2025-05-30T16:51:08.043-04:00",
+          "type": "ActionResources",
+          "description": "Beetle Junkies used gwgwrtgwrt,new to take action.",
+          "value": 2
+        },
+        {
+          "_type": "Record",
+          "id": "DWGid",
+          "timestamp": "2025-05-30T16:51:08.043-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Better Burritos",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "Mwr7B",
+          "timestamp": "2025-05-30T16:51:08.043-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Musical Chairs",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "HSGn1",
+          "timestamp": "2025-05-30T16:51:08.043-04:00",
+          "type": "ActionResources",
+          "description": "Musical Chairs used  to take action.",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "h9ZDB",
+          "timestamp": "2025-05-30T16:51:10.103-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Frog house",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "vFr8D",
+          "timestamp": "2025-05-30T16:51:10.103-04:00",
+          "type": "ActionResources",
+          "description": "Frog house used righteous anger to take action.",
+          "value": 1
+        },
+        {
+          "_type": "Record",
+          "id": "gB8xg",
+          "timestamp": "2025-05-30T16:51:10.103-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Toad Shack",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "i0wJx",
+          "timestamp": "2025-05-30T16:51:10.103-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Beetle Junkies",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "xUF32",
+          "timestamp": "2025-05-30T16:51:10.103-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Better Burritos",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "bdW-h",
+          "timestamp": "2025-05-30T16:51:10.103-04:00",
+          "type": "SocietyActionsTaken",
+          "description": "Musical Chairs",
+          "value": 0
+        },
+        {
+          "_type": "Record",
+          "id": "YLXCz",
+          "timestamp": "2025-05-30T20:56:34.054Z",
+          "type": "ResourceCreated",
+          "value": "Incredible Thighs"
         }
       ]
     }

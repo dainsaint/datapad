@@ -86,6 +86,11 @@ export default class Society extends Model {
   }
 
 
+  get players() {
+    return this.communities.map( community => community.player );
+  }
+
+
   toURL(append = "") {
     return `/societies/${this.episode.id}/${this.id}` + append;
   }

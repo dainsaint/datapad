@@ -24,7 +24,10 @@ export default function CommunityEdit({ community }) {
 
       <fieldset>
         <label for="player">Player</label>
-        <input name="player" autocapitalize="words" placeholder="Pat Person (they/them)" value="${ community.player }"/>
+        <input name="player" autocapitalize="words" type="text" list="players" placeholder="Pat Person (they/them)" value="${ community.player }"/>
+        <datalist id="players">
+          ${ mySociety.players.map( player => html`<option>${ player }</option>`) }
+        </datalist>
       </fieldset>
 
 

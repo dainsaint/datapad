@@ -33,7 +33,7 @@ export default function CommunityCard({ community = new Community(), inSociety }
         hx-post="${community.toURL("/resources")}"
         hx-swap="none"
         hx-disinherit="*"
-
+        data-tags="${ community.tags.toList() }"
         data-sortable-bounds
       >
 

@@ -59,6 +59,10 @@ export default function EpisodeSocieties({ episode }) {
           <div class="stack-tight">
             ${ voted && ActionView({ action: voted }) }
           </div>
+
+          <footer class="color-support">
+            <button hx-get="/resources/${episode.id}/create?societyId=${society.id}&communityId=${society.currentEmissary?.id}" hx-target="#dialog"><i class="fa fa-cube"></i> Grant Resource</button>
+          </footer>
         </section>
       ` )}
     </div>

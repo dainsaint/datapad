@@ -32,12 +32,12 @@ communities.post("/:episodeId", (req, res) => {
 
 communities.get("/:episodeId/create", (req, res) => {
   const { episodeId } = req.params;
-  const { societyId } = req.query;
+  const { societyId, communityId } = req.query;
   
   const episode = Episode.load(episodeId);
   const society = episode.getSocietyById( societyId );
 
-  res.render(`communities/create`, { episode, society });
+  res.render(`communities/create`, { episode, society, communityId });
 });
 
 ////////////////////////////////////////
@@ -93,11 +93,11 @@ communities.post("/:episodeId/:communityId/resources", (req, res) => {
 });
 
 
-communities.post("/:episodeId/:communityId/destroy", (req, res) => {
+communities.post("/:episodeId/:communityId/lose", (req, res) => {
   const { episodeId, communityId } = req.params;
   const episode = Episode.load(episodeId);
-  const community = episode.getResourceById(communityId);
-  community.destroy();
+  const community = episode.getCommunityById(communityId);
+  community.lose();
   episode.save();
 
   res.sendStatus(200);

@@ -16,7 +16,10 @@ export default function CommunityCreate({ episode, society }) {
 
       <fieldset>
         <label for="player">Player</label>
-        <input name="player" autocapitalize="words" placeholder="Pat Person (they/them)"/>
+        <input name="player" autocapitalize="words" type="text" list="players" placeholder="Pat Person (they/them)"/>
+        <datalist id="players">
+          ${ society.players.map( player => html`<option>${ player }</option>`) }
+        </datalist>
       </fieldset>
 
 

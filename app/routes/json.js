@@ -1,6 +1,6 @@
 import { secondsToTime } from "#core/utils";
 import Ledger from "#database/ledger";
-import { ActionTags } from "#models/action";
+import { ActionStatus, ActionTags } from "#models/action";
 import Episode from "#models/episode";
 import { ResourceTag } from "#models/resource";
 import express from "express";
@@ -47,7 +47,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
         id: communityId,
         resources: episode.resources.filter( resource => resource.communityId == communityId ).map( formatResource ) 
       })),
-      actions: episode.getCurrentActionsForSocietyId( society.id ).map( ({round, tags, resourceIds, texts }) => ({
+      actions: episode.getCurrentActionsForSocietyId( society.id ).map( ({round, status, resourceIds, texts }) => ({
         round,
         components: resourceIds.map( (resourceId, i) => ({ 
           resource: {
@@ -57,7 +57,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
           text: texts[i], 
           statement: `We use ${ episode.getResourceById(resourceId).name } to ${ texts[i] }`
         })),
-        voted: tags.has( ActionTags.VOTED ),
+        voted: status == ActionStatus.VOTED
       })),
     }))
   }
