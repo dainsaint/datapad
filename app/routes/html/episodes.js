@@ -5,6 +5,7 @@ import Episode from "#models/episode";
 import express from "express";
 import { broadcast } from "#routes/html/events";
 import Document from "#models/document";
+import Ledger from "#database/ledger";
 
 const episodes = express.Router();
 
@@ -59,12 +60,12 @@ episodes.post("/",
     }
 
     const data = matchedData(req);
-    // console.log( data );
+    console.log( data );
 
     const episode = new Episode(data);
     episode.save();
 
-    res.redirect( episode.toURL() );
+    broadcast("episode");
 })
 
 episodes.put("/:episodeId", (req, res) => {
@@ -81,6 +82,14 @@ episodes.put("/:episodeId", (req, res) => {
 // INDIVIDUAL ROUTES
 ////////////////////////////////////////
 
+
+episodes.post("/:episodeId/active", (req, res) => {
+  const { episodeId } = req.params;
+  const episode = Episode.load( episodeId );
+  Ledger.setActiveEpisode( episode );
+  res.sendStatus(200);
+  broadcast("episode");
+})
 
 
 episodes.get("/:episodeId/facilitator/:societyId?", episodeLayout, (req, res) => {

@@ -27,7 +27,6 @@ export default function AppLayout(props, children) {
 
       <script src="/js/vendor/htmx.min.js"></script>
       <script src="/js/vendor/htmx.sse.js"></script>
-      <script src="/js/vendor/masonry.min.js"></script>
       <script type="module" src="/js/client.js"></script>
     </head>
 

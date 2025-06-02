@@ -1,0 +1,28 @@
+{
+  "_type": "Episode",
+  "id": "lErEj",
+  "name": "Opening Night - June 14",
+  "date": "2025-06-14",
+  "scheduledTime": {
+    "s": "2025-06-02T14:48:45.167-04:00",
+    "e": "2025-06-02T19:48:45.167-04:00",
+    "invalid": null,
+    "isLuxonInterval": true
+  },
+  "tags": {
+    "_type": "Tags",
+    "value": []
+  },
+  "actions": [],
+  "communities": [],
+  "phases": [],
+  "players": [],
+  "resources": [],
+  "societies": [],
+  "turns": [],
+  "documentIds": [],
+  "links": {
+    "discord": "discord://-/channels/1063250197993492480/1063254140341473350"
+  },
+  "records": []
+}

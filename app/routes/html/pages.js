@@ -8,23 +8,22 @@ const pages = express.Router();
 - [x] GET     /
 */
 
-// pages.get("/", (req, res) => {
-//   const games = Ledger.games;
-//   const episodes = Ledger.episodes;
-//   res.render("pages/home", { games, episodes });
-// });
+pages.get("/home", (req, res) => {
+  const games = Ledger.games;
+  const episodes = Ledger.episodes;
+  res.render("pages/home", { games, episodes });
+});
 
 pages.get("/", (req, res) => {
   let episode = Ledger.getActiveEpisode();
   
   if( !episode ) {
-    const lastEpisodeData = Ledger.episodes.at(-1);  
+    const lastEpisodeData = Ledger.episodes.at(-1);
    
     episode = Episode.load( lastEpisodeData.id );
-    episode.makeActive();
     episode.save();
 
-    console.log( Ledger.active );
+    Ledger.setActiveEpisode(episode);
   }
 
   res.redirect(`/episodes/${ episode.id }/gm`)

@@ -1,17 +1,48 @@
 import { html } from "#core/utils";
+import Ledger from "#database/ledger";
 import { DocumentStatus } from "#models/document";
 import Episode from "#models/episode";
 
 export default function EpisodeSettings ({ episode = new Episode()} = {}) {
+
+  const date = episode.scheduledTime.start;
+  const time = episode.scheduledTime.start;
+  const duration = episode.scheduledTime.toDuration("hours");
+  const endTime = date.set({ hour: time.hour, minute: time.minute }).plus(duration);
+  const isActiveEpisode = Ledger.getActiveEpisode()?.id == episode.id;
+
+
   return html`
     <main class="panel content stack-loose full"
       hx-get="${episode.toURL("/settings")}"
       hx-trigger="sse:documents, sse:episode"
       hx-swap="outerHTML"
+      hx-disinherit="*"
     >
       <h1>Episode Settings</h1>
       
-      <div class="text stack-loose">
+      <div class="stack-loose">
+
+        <div class="stack">
+          <h2>Episode Details</h2>
+          <div class="card color-contrast stack">
+            <p class="text-heading">${ episode.name }</p>
+            <p>
+              This episode will take place ${date.toFormat("DDD")}
+              from ${time.toFormat("h:mm a")}
+              till ${endTime.toFormat("h:mm a")}.
+            </p>
+            <footer class="color-support layout-row gap">
+              <button hx-get="${ episode.toURL("/edit")}" hx-target="#dialog"><i class="fa fa-pencil"></i> Edit Details</button>
+              
+              ${ !isActiveEpisode && html`<button hx-post="${ episode.toURL("/active")}" hx-target="#dialog" hx-swap="none" hx-confirm="This will set this as the active episode for ALL connected datapads!"><i class="fa fa-plug-circle-xmark"></i> Make Active Episode</button>` }
+              ${ isActiveEpisode && html`<button disabled><i class="fa fa-plug-circle-check"></i> This Is The Active Episode</button>` }
+              
+              <div class="layout-fill"></div>
+              <button class="color-danger" hx-get="${ episode.toURL("/copy")}" hx-target="#dialog"><i class="fa fa-copy"></i> Copy From Another Episode</button>
+            </footer>
+          </div>
+        </div>
   
         <div class="stack">
           <h2>Documents</h2>

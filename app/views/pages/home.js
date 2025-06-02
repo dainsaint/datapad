@@ -5,27 +5,21 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
   return html`
     <main id="home">
       <div class="top">
-        ${Icon("spop")}
+        ${Icon("spop-v2")}
       </div>
 
       <div class="content stack scrollable">
-        <div>Space Opera Datapad v0.1-alpha</div>
+        <div>Space Opera Datapad v0.8-alpha</div>
 
         <details>
-          <summary><h2>Load Episode</h2></summary>
+          <summary><h2 class="text-detailing">Load Episode</h2></summary>
           ${ episodes.map( (episode) =>
             html`<a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a>`
           )}
         </details>
 
-        <h2 hx-get="/episodes/create" hx-target="#dialog">New Episode</h2>
+        <h2  class="text-detailing" hx-get="/episodes/create" hx-target="#dialog">New Episode</h2>
         
-        <details>
-          <summary><h2>View Games</h2></summary>
-          ${games.map( (game) =>
-            html`<a href="${game.toURL("/overview")}">${game.name} • ${game.episodes.length} ${pluralize(game.episodes.length, "episode")}</a>`
-          )}
-        </details>  
       </div>
     </main>
 
@@ -39,10 +33,8 @@ export function styles() {
   return html`
     <style>
       #home {
-        --palette-bg: black;
-        --palette-fg: white;
-        background: black;
-        color: white;
+        background: var(--palette-fg);
+        color: var(--palette-bg);
         display: grid;
         grid-template-rows: 50% 50%;
         /* inset: 0px; */

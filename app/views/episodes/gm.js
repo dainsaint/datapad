@@ -16,7 +16,7 @@ export default function EpisodeGameMaster ({ episode } = {}) {
     >
 
     <article id="gm-playlist" class="panel stack" style="border-top-left-radius: 0px">
-      ${ PhaseControls({ phase: currentPhase }) }
+      ${ currentPhase && PhaseControls({ phase: currentPhase }) }
       <h1>Game State</h1>
       <h3></h3>
 

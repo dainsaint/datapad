@@ -1,8 +1,8 @@
 {
   "_type": "Episode",
   "id": "CTXGj",
-  "name": "New Episode",
-  "date": "2025-05-09T23:53:00.132-04:00",
+  "name": "Main Test Episode",
+  "date": "2025-05-09T00:00:00.000-04:00",
   "scheduledTime": {
     "s": "2025-05-09T23:53:00.132-04:00",
     "e": "2025-05-10T04:53:00.132-04:00",
@@ -40,7 +40,10 @@
       "round": 2,
       "societyId": "V9xbw",
       "resourceIds": [],
-      "texts": [],
+      "texts": [
+        "",
+        ""
+      ],
       "risk": 1,
       "advantage": 0,
       "disadvantage": 0,
@@ -463,9 +466,35 @@
         "",
         ""
       ],
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
       "result": [],
       "voteTime": "2025-05-31T22:01:43.190-04:00",
       "status": "voted",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Action",
+      "id": "m_XgE",
+      "round": "0",
+      "societyId": "et0k8",
+      "resourceIds": [
+        "HOzO6"
+      ],
+      "texts": [
+        "",
+        "",
+        ""
+      ],
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "result": [],
+      "status": "open",
       "tags": {
         "_type": "Tags",
         "value": []
@@ -565,7 +594,7 @@
       "_type": "Community",
       "id": "R9tmF",
       "societyId": "et0k8",
-      "player": "Sam Reich (he/him(",
+      "player": "Sam Reich (he/him)",
       "name": "Quinn",
       "voice": "people",
       "tags": {
@@ -690,6 +719,29 @@
           "lost"
         ]
       }
+    },
+    {
+      "_type": "Community",
+      "id": "EyA7h",
+      "societyId": "et0k8",
+      "player": "Natalie (she/they)",
+      "name": "Big bois",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Community",
+      "id": "wyWh4",
+      "societyId": "V9xbw",
+      "player": "Here",
+      "name": "What happened",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
     }
   ],
   "phases": [
@@ -697,7 +749,7 @@
       "_type": "Phase",
       "id": "KN4Rt",
       "type": "Setup/Onboarding",
-      "status": "complete",
+      "status": "idle",
       "round": 0,
       "duration": 1200,
       "timeElapsed": 0,
@@ -716,7 +768,7 @@
       "_type": "Phase",
       "id": "TW6li",
       "type": "Universal Phase",
-      "status": "complete",
+      "status": "idle",
       "round": 1,
       "duration": 240,
       "timeElapsed": 174.15800000000033,
@@ -735,7 +787,7 @@
       "_type": "Phase",
       "id": "r5gob",
       "type": "Societal Phase",
-      "status": "complete",
+      "status": "idle",
       "round": 1,
       "duration": 900,
       "timeElapsed": 0,
@@ -754,7 +806,7 @@
       "_type": "Phase",
       "id": "qveE2",
       "type": "Galactic Phase",
-      "status": "complete",
+      "status": "idle",
       "round": 1,
       "duration": 720,
       "timeElapsed": 0,
@@ -773,7 +825,7 @@
       "_type": "Phase",
       "id": "ml6Q3",
       "type": "Universal Phase",
-      "status": "complete",
+      "status": "idle",
       "round": 2,
       "duration": 240,
       "timeElapsed": 19.018,
@@ -792,7 +844,7 @@
       "_type": "Phase",
       "id": "BJ7S8",
       "type": "Societal Phase",
-      "status": "complete",
+      "status": "idle",
       "round": 2,
       "duration": 660,
       "timeElapsed": 73.05700000000002,
@@ -811,7 +863,7 @@
       "_type": "Phase",
       "id": "ao-zv",
       "type": "Galactic Phase",
-      "status": "complete",
+      "status": "idle",
       "round": 2,
       "duration": 720,
       "timeElapsed": 9.009999999999998,
@@ -830,7 +882,7 @@
       "_type": "Phase",
       "id": "iFRIY",
       "type": "Individual Phase",
-      "status": "complete",
+      "status": "idle",
       "round": 2,
       "duration": 600,
       "timeElapsed": 0,
@@ -849,13 +901,13 @@
       "_type": "Phase",
       "id": "VZQ7m",
       "type": "Break",
-      "status": "idle",
+      "status": "paused",
       "round": 2,
-      "duration": 0,
-      "timeElapsed": 0,
+      "duration": 300,
+      "timeElapsed": 16.013999999999996,
       "actualTime": {
-        "s": "2025-05-12T15:38:12.770-04:00",
-        "e": "2025-05-30T16:51:08.042-04:00",
+        "s": "2025-06-02T14:41:47.647-04:00",
+        "e": "2025-06-02T14:46:47.647-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -1368,6 +1420,26 @@
         "_type": "Tags",
         "value": []
       }
+    },
+    {
+      "_type": "Resource",
+      "id": "qwUwl",
+      "communityId": "wyWh4",
+      "name": "Spring Rolls",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "J9Elj",
+      "communityId": "wyWh4",
+      "name": "Adele CDs",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
     }
   ],
   "societies": [
@@ -1573,9 +1645,9 @@
       "round": 2,
       "societyId": "et0k8",
       "risk": "1",
-      "advantage": "2",
+      "advantage": "0",
       "disadvantage": "0",
-      "emissaryCommunityId": "cV-Kn",
+      "emissaryCommunityId": "R9tmF",
       "ambassadors": {
         "Qw0Xm": "",
         "R9tmF": "",
@@ -1590,8 +1662,8 @@
       "round": 2,
       "societyId": "yXHVO",
       "risk": "1",
-      "advantage": "2",
-      "disadvantage": "2",
+      "advantage": "0",
+      "disadvantage": "0",
       "ambassadors": {},
       "alterLeadership": {}
     },
@@ -1698,6 +1770,116 @@
       "_type": "Turn",
       "id": "ExKuK",
       "round": 4,
+      "societyId": "yXHVO",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "Tw149",
+      "round": 0,
+      "societyId": "et0k8",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "ZCFzl",
+      "round": 0,
+      "societyId": "V9xbw",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "bAwL4",
+      "round": 0,
+      "societyId": "Feay0",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "VV_io",
+      "round": 0,
+      "societyId": "e-JcG",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "AwU2e",
+      "round": 0,
+      "societyId": "yXHVO",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "oVaP8",
+      "round": 1,
+      "societyId": "et0k8",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "mlK-8",
+      "round": 1,
+      "societyId": "V9xbw",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "SCRMy",
+      "round": 1,
+      "societyId": "Feay0",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "bRsbe",
+      "round": 1,
+      "societyId": "e-JcG",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "vdo8r",
+      "round": 1,
       "societyId": "yXHVO",
       "risk": 1,
       "advantage": 0,
@@ -4089,9 +4271,39 @@
     {
       "_type": "Record",
       "id": "YLXCz",
-      "timestamp": "2025-05-30T20:56:34.054Z",
+      "timestamp": "2025-05-30T16:56:34.054-04:00",
       "type": "ResourceCreated",
       "value": "Incredible Thighs"
+    },
+    {
+      "_type": "Record",
+      "id": "uTZ3X",
+      "timestamp": "2025-06-02T14:36:53.487-04:00",
+      "type": "ResourceCreated",
+      "value": "Spring Rolls"
+    },
+    {
+      "_type": "Record",
+      "id": "ryKZy",
+      "timestamp": "2025-06-02T14:38:20.939-04:00",
+      "type": "ResourceCreated",
+      "value": "Adele CDs"
+    },
+    {
+      "_type": "Record",
+      "id": "ryKt7",
+      "timestamp": "2025-06-02T14:41:31.375-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 2: Break",
+      "value": "2025-06-02T14:41:31.375-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "LqChp",
+      "timestamp": "2025-06-02T14:41:47.648-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 2: Break",
+      "value": "2025-06-02T14:41:47.648-04:00"
     }
   ]
 }

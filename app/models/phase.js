@@ -65,7 +65,7 @@ export default class Phase extends Model {
 
 
   toURL(append = "") {
-    return `/phases/${this.episode.id}/${this.id}` + append;
+    return `/phases/${this.episode?.id}/${this.id}` + append;
   }
 }
 
@@ -85,5 +85,6 @@ export const PhaseType = {
   GALACTIC: "Galactic Phase",  
   INDIVIDUAL: "Individual Phase",
   GENERATIONAL: "Generational Phase",
-  CONCLUSION: "Conclusion"
+  CONCLUSION: "Conclusion",
+  ERROR: "Error: No Phases"
 }

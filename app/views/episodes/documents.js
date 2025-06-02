@@ -33,8 +33,12 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
     >
 
 
+    
+
+
       <div class="society-panel__communities panel full" style="flex: 1 0 max-content;">
         
+      ${ currentDocument && html`
         <div id="documents-toolbar" hx-swap="none" hx-select-oob="#documents-outline, #documents-view">
           ${ Toolbar({
             id: "document-toolbar",
@@ -59,15 +63,17 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
             ${ renderOutline( currentDocument.content ) }
           </div>
         </div>
+        `}
       </div>
 
       <div id="documents-view" class="panel color-contrast full">
         <main class="content stack text scrollable">
-          ${ DocumentView({document: currentDocument}) }
+          ${ currentDocument && DocumentView({document: currentDocument}) }
         </main>
       </div>
 
     </div>
+    
   `;
 
 }

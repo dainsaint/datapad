@@ -81,8 +81,8 @@ export default class Community extends Model {
 }
 
 export const CommunityVoice = {
-  LEADER: "leader",
   PEOPLE: "people",
+  LEADER: "leader",  
 };
 
 export const CommunityRole = {

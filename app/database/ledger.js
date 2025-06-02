@@ -10,7 +10,7 @@ const filename = "ledger.json";
 
 class LedgerSingleton {
   episodes = [];
-  active = [];
+  active;
 
   initialize() {
     try {
@@ -50,22 +50,19 @@ class LedgerSingleton {
     };
   }
 
+  setActiveEpisode( episode ) {
+    this.active = episode
+    this.#save();
+  }
 
   getActiveEpisode() {
     //TODO: Fix this doofer
-    return this.active.at(0);
+    return this.active
   }
 
   //TODO: Make sure each game has a list of its episodes
   updateEpisode(episode) {
     this.#updateRecord("episodes", this.#getEpisodeRecord(episode));
-
-    if (episode.isActive() && !this.active.includes(episode)) {
-      this.active.push(episode);
-    } else if (!episode.isActive() && this.active.includes(episode)) {
-      this.active.splice(this.active.indexOf(episode), 1);
-    }
-
     this.#save();
   }
 }

@@ -14,7 +14,7 @@ phases.get("/:episodeId/create", (req, res, next) => {
 });
 
 
-phases.post("/:episodeId/phases", (req, res, next) => {
+phases.post("/:episodeId", (req, res, next) => {
   const { episodeId } = req.params;
   const { type, duration: { minutes, seconds }} = req.body;
 
@@ -107,8 +107,7 @@ phases.post("/:episodeId/:phaseId", (req, res, next) => {
       phase.duration = Math.max( phase.duration - 60, 0 );
       break;
   }
-  //TODO: remove active doofer
-  episode.makeActive();
+  
   episode.save();
 
   res.sendStatus(200);

@@ -15,7 +15,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
   <style>
     #facilitator {
       display: grid;
-      grid-template-columns: minmax(600px, 2fr) minmax(400px, 1fr);
+      grid-template-columns: minmax(500px, 2fr) minmax(400px, 1fr);
       gap: var(--gap);
       height: 100%;
       overflow: hidden;
@@ -71,7 +71,7 @@ function NoSocieties({episode}) {
     <main id="faciliator" class="content panel full stack">
       <h1>No Societies Yet</h1>
       <p class="text">Let's get on that.</p>
-      <button hx-get="${episode.toURL('/societies/create')}" hx-target="#dialog">${ Icon("planet") } new society</button>
+      <button hx-get="/societies/${episode.id}/create"  hx-target="#dialog">${ Icon("planet")} New Society</button>
     </main>
   `;
 }

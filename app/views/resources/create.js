@@ -1,10 +1,10 @@
 import { html } from "#core/utils";
 
 export default function ResourceCreate({ episode, society, communityId }) {
-  const current = society;
-  const isCommunitySelected = ( society, community, i ) => {
-    return community.id == communityId || (i == 0 && current == society.id)
+  const isCommunitySelected = ( soc, community, i ) => {
+    return community.id == communityId || (i == 0 && society == soc)
   }
+  
   return html`
     <form class="stack-loose" hx-post="/resources/${episode.id}">
       <header>

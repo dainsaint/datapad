@@ -20,7 +20,7 @@ export default function EpisodeSocieties({ episode }) {
   societies.sort( (a, b) => a.sort - b.sort );
 
   return html`
-    <div id="society-card-list" class="grid-huge gap" hx-get="${ episode.toURL('/societies') }" hx-trigger="sse:societies,sse:actions">
+    <div id="society-card-list" class="grid-large gap" hx-get="${ episode.toURL('/societies') }" style="--grid-min-width: 35rem;" hx-trigger="sse:societies,sse:actions">
       ${ societies.map( ({society, open, voted, time}, i) => html`
         <section id="${ society.id }" class="society-card card ${society.color} stack">
 
@@ -60,7 +60,8 @@ export default function EpisodeSocieties({ episode }) {
             ${ voted && ActionView({ action: voted }) }
           </div>
 
-          <footer class="color-support">
+          <footer class="layout-row gap color-support">
+            <div class="layout-fill"></div>
             <button hx-get="/resources/${episode.id}/create?societyId=${society.id}&communityId=${society.currentEmissary?.id}" hx-target="#dialog"><i class="fa fa-cube"></i> Grant Resource</button>
           </footer>
         </section>

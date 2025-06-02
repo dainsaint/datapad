@@ -5,7 +5,7 @@ import { EpisodeTimeInput } from "./create.js";
 
 export default function EpisodeEdit({ episode = new Episode() } = {}) {
   return html`
-    <form hx-post="/episodes" class="stack">
+    <form class="stack" hx-put="${episode.toURL()}" hx-swap="none">
       <header>
         <h1>Edit Episode</h1>
       </header>

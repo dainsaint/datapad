@@ -7,7 +7,7 @@ export default function EpisodeShowrunner ({ episode } = {}) {
   const currentPhase = episode.currentPhase;
 
   return html`
-    <main class="grid-huge" style="height: 100%;"
+    <main class="grid-large" style="height: 100%;"
       hx-trigger="sse:episode"  
       hx-get="${ episode.toURL("/showrunner") }" 
       hx-swap="none"
@@ -15,7 +15,7 @@ export default function EpisodeShowrunner ({ episode } = {}) {
       hx-disinherit="*"
     >
       <div id="showrunner-playlist" class="panel stack" >
-        ${ PhaseControls({ phase: currentPhase }) }
+        ${ currentPhase && PhaseControls({ phase: currentPhase }) }
         ${ EpisodePlaylist({ episode }) }      
       </div>
 

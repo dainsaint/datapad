@@ -18,7 +18,7 @@ export default function CommunityCreate({ episode, society }) {
         <label for="player">Player</label>
         <input name="player" autocapitalize="words" type="text" list="players" placeholder="Pat Person (they/them)"/>
         <datalist id="players">
-          ${ society.players.map( player => html`<option>${ player }</option>`) }
+          ${ society?.players?.map( player => html`<option>${ player }</option>`) }
         </datalist>
       </fieldset>
 
@@ -33,7 +33,7 @@ export default function CommunityCreate({ episode, society }) {
       <fieldset>
         <label for="voice">Voice</label>
         <div class="grid-two gap-tight">
-          ${Object.values(CommunityVoice).map( voice => CommunityVoiceInput({voice}))}
+          ${Object.values(CommunityVoice).map( voice => CommunityVoiceInput({voice, checked: voice == CommunityVoice.PEOPLE}))}
         </div>
       </fieldset>
 

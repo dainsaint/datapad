@@ -11,15 +11,14 @@ export function broadcast(name, data) {
 
 export function tick(deltaTime) {
   try {
-    Ledger.active.forEach((episode) => {
-      const activePhases = episode.phases.filter((phase) => phase.isPlaying);
+    const activePhases = Ledger.active?.phases?.filter((phase) => phase.isPlaying);
 
-      for (const phase of activePhases) {
-        phase.tick(deltaTime);
-        broadcast("phases");
-        episode.save();
-      }
-    });
+    for (const phase of activePhases) {
+      phase.tick(deltaTime);
+      broadcast("phases");
+      episode.save();
+    }
+
   } catch (e) {}
 }
 
