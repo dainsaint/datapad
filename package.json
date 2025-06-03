@@ -20,6 +20,7 @@
   "imports": {
     "#/*": "./app/*.js",
     "#core/*": "./app/core/*.js",
+    "#data/*": "./app/data/*.json",
     "#database/*": "./app/database/*.js",
     "#models/*": "./app/models/*.js",
     "#routes/*": "./app/routes/*.js",

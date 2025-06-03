@@ -14,7 +14,6 @@ export default function ResourceCreate({ episode, society, communityId }) {
       <fieldset>
         <label for="name">Name</label>
         <input name="name" placeholder="New Resource" 
-          autofocus 
           autocapitalize="words" 
           required />
       </fieldset>

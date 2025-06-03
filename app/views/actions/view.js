@@ -24,14 +24,14 @@ export default function ActionView({ action } = {}) {
       hx-disinherit="*"
     >
     <div class="layout-row gap">
-      <div class="is-size-3">
+      <div class="is-size-3" hx-get="${action.toURL("/edit")}" hx-target="#dialog">
         <i class="fa ${icon[ action.status ]}"></i>
       </div>
 
       <fieldset class="stack-tight">
         ${ action.resources.map( (resource, i) => ActionComponent({resource, text: action.texts[i], i: i}) ) }
       </fieldset>
-</div>
+    </div>
 
 
   </form>

@@ -1,0 +1,81 @@
+{
+  "the mighty": {
+    "motto": "Strength and Power",
+    "ideal": "What makes your society mighty?",
+    "fates": {
+      "fate_one": "We will claim what is ours",
+      "fate_two": "We will strengthen our bonds",
+      "fate_three": "We will hold the line"
+    }
+  },
+
+  "the intrepid": {
+    "motto": "Grit and Exploration",
+    "ideal": "How does your society explore the beyond?",
+    "fates": {
+      "fate_one": "We will forge a path",
+      "fate_two": "We will chart the unknown",
+      "fate_three": "We will risk safety for glory"
+    }
+  },
+
+  "the scholars": {
+    "motto": "Story and Tradition ",
+    "ideal": "Through what tradition does your society remember the past?",
+    "fates": {
+      "fate_one": "We will bring history into the present",
+      "fate_two": "We will change the narrative",
+      "fate_three": "We will preserve something precious"
+    }
+  },
+
+  "the enterprise": {
+    "motto": "Wealth and Commerce",
+    "ideal": "How did your society acquire its wealth?",
+    "fates": {
+      "fate_one": "We will broker a new deal",
+      "fate_two": "We will turn a crisis into an opportunity",
+      "fate_three": "We will share the wealth"
+    }
+  },
+
+  "the aesthetic": {
+    "motto": "Beauty and Truth",
+    "ideal": "What does your society consider most beautiful?",
+    "fates": {
+      "fate_one": "We will create something beautiful",
+      "fate_two": "We will destroy something ugly",
+      "fate_three": "We will reveal the truth behind the facade"
+    }
+  },
+
+  "the faithful": {
+    "motto": "Hope and Spirit",
+    "ideal": "What does your society worship?",
+    "fates": {
+      "fate_one": "We will convert others to our ways",
+      "fate_two": "We will plunge into the unknown",
+      "fate_three": "We will keep our faith in the darkness"
+    }
+  },
+
+  "the grounded": {
+    "motto": "Nature and Nurture",
+    "ideal": "What natural aspect of your home does your society most treasure?",
+    "fates": {
+      "fate_one": "We will make something barren, verdant",
+      "fate_two": "We will root into the earth ",
+      "fate_three": "We will engulf like vines"
+    }
+  },
+
+  "the curious": {
+    "motto": "Vision and Innovation",
+    "ideal": "How does your society innovate?",
+    "fates": {
+      "fate_one": "We will understand what was previously the unexplainable",
+      "fate_two": "We will reinvent what we have",
+      "fate_three": "We will make a technological breakthrough"
+    }
+  }
+}

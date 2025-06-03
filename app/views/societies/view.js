@@ -20,20 +20,22 @@ export default function SocietyView({ society } = {}) {
       hx-swap="outerHTML"
       hx-disinherit="*"
       >
-      <header>
+      <header class="stack-tight">
         <h1><a hx-get="${society.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">
           ${society.name}
         </a></h1>
 
-        <div class="layout-row layout-spread gap-tight">
-          <p class="subtitle">
-            ${society.archetype} • 
-            ${society.activeCommunities.length} 
-            ${pluralize(society.activeCommunities.length, "community", "communities")} • 
-            ${society.activeResources.length}
-            ${pluralize(society.activeResources.length, "resource")}
-          </p>
-        </div>
+        <p class="subtitle">
+          ${society.archetype} • 
+          ${society.activeCommunities.length} 
+          ${pluralize(society.activeCommunities.length, "community", "communities")} • 
+          ${society.activeResources.length}
+          ${pluralize(society.activeResources.length, "resource")}
+        </p>
+
+        <p class="text-body">
+          Fate: &ldquo;${society.fate}&rdquo;
+        </p>
       </header> 
 
       <div class="community-card-container grid-three">

@@ -20,8 +20,6 @@ export default class Action extends Model {
   tags = new Tags()
 
 
-
-
   constructor(data) {
     super(data);
     this.update(data);
@@ -31,6 +29,16 @@ export default class Action extends Model {
     this.resourceIds = resources
       .filter( resource => !resource.isExhausted )
       .map( resource => resource.id );
+  }
+
+  sanitizeResult() {
+    while( this.result.length < this.resourceIds.length ) {
+      this.result.push(0);
+    }
+
+    while( this.result.length > this.resourceIds.length ) {
+      this.result.pop();
+    }
   }
 
   vote() {

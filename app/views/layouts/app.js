@@ -21,10 +21,6 @@ export default function AppLayout(props, children) {
       <link rel="manifest" href="/manifest.webmanifest">
 
 
-
-
-      <!-- <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script> -->
-
       <script src="/js/vendor/htmx.min.js"></script>
       <script src="/js/vendor/htmx.sse.js"></script>
       <script type="module" src="/js/client.js"></script>

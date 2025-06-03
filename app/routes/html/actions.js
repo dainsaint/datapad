@@ -58,6 +58,23 @@ actions.post("/:episodeId/:actionId/resources", (req, res, next) => {
   broadcast("actions");
 });
 
+actions.post("/:episodeId/:actionId/result", (req, res) => {
+  const { episodeId, actionId } = req.params;
+  const { result } = req.body;
+
+  const episode = Episode.load(episodeId);
+  const action = episode.getActionById(actionId);
+
+  const newResult = result.map( r => Array.isArray(r) ? parseInt(r.at(-1)) : parseInt(r) );
+  
+  action.result = newResult;
+  episode.save();
+
+  res.sendStatus(201);
+  broadcast("societies");
+});
+
+
 
 
 actions.get("/:episodeId/:actionId/:view?", (req, res) => {

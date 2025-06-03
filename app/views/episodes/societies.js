@@ -1,6 +1,7 @@
 import { html } from "#core/utils";
 import { ActionStatus } from "#models/action";
 import ActionView from "#views/actions/view";
+import ActionResult from "#views/actions/result";
 import TurnRisk from "#views/turns/risk";
 import Icon from "#views/ui/icon";
 
@@ -24,12 +25,29 @@ export default function EpisodeSocieties({ episode }) {
       ${ societies.map( ({society, open, voted, time}, i) => html`
         <section id="${ society.id }" class="society-card card ${society.color} stack">
 
-          <div class="layout-row layout-spread">
-            <a class="text-heading">
-              <span class="society-card__heading__name">${i+1}) ${ society.name }</span>
-            </a>
+          
+          <header class="layout-row layout-spread" style="align-items: start;">
+            
+            <div class="stack-tight">
+              <a href="${episode.toURL(`/facilitator/${society.id}`)}" class="is-size-4">
+                <strong class="society-card__heading__name">#${i+1} ${ society.name }</strong>
+              </a>
 
-            <div class="layout-row">
+              <div class="layout-row gap-tight" hx-target="#dialog">
+                <div class="is-size-3">
+                  <a ${{ "hx-get": society.currentEmissary?.toURL("/edit") }}>${ Icon("emissary") }</a>
+                </div>
+                <div>
+                  <a ${{ "hx-get": society.currentEmissary?.toURL("/edit") }}>
+                    <strong>${ society.currentEmissary?.name || "No Emissary"}</strong><br/>
+                    ${ society.currentEmissary?.player || "Not yet elected"}<br/>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="stack-tight align-right">
               <p class="text-eyebrow">
                 <span>${ Icon.forArchetype( society.archetype ) }</span>
                 ${society.archetype} • 
@@ -38,29 +56,27 @@ export default function EpisodeSocieties({ episode }) {
                 ${society.resources.length}
                 <i class="fa fa-cube"></i>
               </p>
-            </div>
-          </div>
 
-          <div class="layout-row gap-tight">
-            <div class="is-size-3">
-              ${ Icon("emissary") }
+              <p class="text-body">
+                &ldquo;${society.fate}&rdquo;
+              </p>
             </div>
-            <div>
-              <strong>${ society.currentEmissary?.name || "No Emissary"}</strong><br/>
-              ${ society.currentEmissary?.player || "Not yet elected"}<br/>
-            </div>
-          </div>
 
+          </header>
 
           ${ TurnRisk({ turn: society.currentTurn }) }
 
+          
 
 
           <div class="stack-tight">
             ${ voted && ActionView({ action: voted }) }
           </div>
 
+          
+
           <footer class="layout-row gap color-support">
+            ${ ActionResult({ action: voted })}
             <div class="layout-fill"></div>
             <button hx-get="/resources/${episode.id}/create?societyId=${society.id}&communityId=${society.currentEmissary?.id}" hx-target="#dialog"><i class="fa fa-cube"></i> Grant Resource</button>
           </footer>

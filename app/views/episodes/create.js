@@ -13,8 +13,7 @@ export default function EpisodeCreate({}) {
 
       <article class="stack">
         <label for="name">Episode Name</label>
-        <input name="name" type="text" placeholder="New Episode" 
-          autofocus 
+        <input name="name" type="text" placeholder="New Episode"  
           autocapitalize="words" 
           required/>
 

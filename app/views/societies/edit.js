@@ -1,5 +1,5 @@
 import { html } from "#core/utils";
-import Society, {SocietyArchetype, SocietyColor} from "#models/society";
+import Society, {SocietyArchetype, SocietyColor, SocietyFate} from "#models/society";
 import { SocietyArchetypeInput, SocietyColorInput } from "#views/societies/create";
 
 export default function SocietyEdit({ society = new Society() } = {}) {
@@ -16,7 +16,7 @@ export default function SocietyEdit({ society = new Society() } = {}) {
 
       <fieldset>
         <label for="name">Society Name</label>
-        <input name="name" autofocus autocapitalize="words" placeholder="e.g. Ten Thousand Islands" value="${society.name}"/>
+        <input name="name" autocapitalize="words" placeholder="e.g. Ten Thousand Islands" value="${society.name}"/>
       </fieldset>
 
       <fieldset>
@@ -25,6 +25,13 @@ export default function SocietyEdit({ society = new Society() } = {}) {
           ${Object.values(SocietyArchetype).map( archetype => SocietyArchetypeInput({ archetype, checked: society.archetype == archetype }))}
         </div>
       </fieldset>
+
+      <fieldset>
+          <label for="fateId">Society Fate</label>
+          <select name="fateId">
+            ${ Object.values(SocietyFate).map(fateId => html`<option value="${fateId}" ${{selected: society.fateId == fateId}}> ${ Society.getFateForArchetype( society.archetype, fateId ) }</option>`) }
+          </select>
+        </fieldset>
 
       <fieldset>
         <label for="archetype">Society Color</label>

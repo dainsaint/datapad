@@ -12,7 +12,7 @@ export default function EpisodeEdit({ episode = new Episode() } = {}) {
 
       <article class="stack">
         <label for="name">Episode Name</label>
-        <input name="name" type="text" value="${episode.name}" autofocus autocapitalize="words" required/>
+        <input name="name" type="text" value="${episode.name}" autocapitalize="words" required/>
 
         ${ EpisodeTimeInput({ 
           date: episode.scheduledTime.start,

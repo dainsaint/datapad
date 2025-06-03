@@ -255,7 +255,9 @@ STATES TO DESIGN FOR
   background: var(--palette-bg);
   color: var(--palette-fg);
   padding: .25rem;
+  border-radius: .25rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .community-card__voice {

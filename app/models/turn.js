@@ -1,5 +1,5 @@
-import Tags from "#core/tags";
 import Model from "#database/model";
+import { ActionStatus } from "#models/action";
 
 export default class Turn extends Model {
 
@@ -36,6 +36,11 @@ export default class Turn extends Model {
 
   get society() {
     return this.episode.societies.find( society => society.id == this.societyId );
+  }
+
+  get action() {
+    const actions = this.episode.getActionsByRound( this.societyId, this.round );
+    return actions.find( action => action.status == ActionStatus.VOTED);
   }
   
   toURL(append = "") {

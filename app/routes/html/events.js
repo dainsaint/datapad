@@ -31,7 +31,9 @@ events.get("/", (req, res) => {
   // Set headers for SSE
   res.setHeader("Content-Type", "text/event-stream");
   res.setHeader("Cache-Control", "no-cache");
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader("Connection", "keep-alive");
+  res.flushHeaders();
 
   // Add client to Set
   clients.add(res);
@@ -40,6 +42,7 @@ events.get("/", (req, res) => {
   // Handle client disconnect
   req.on("close", () => {
     clients.delete(res);
+    res.end();
   });
 });
 

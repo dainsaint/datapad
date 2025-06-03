@@ -15,7 +15,7 @@ export default function EpisodeGameMaster ({ episode } = {}) {
       hx-disinherit="*"
     >
 
-    <article id="gm-playlist" class="panel stack" style="border-top-left-radius: 0px">
+    <article id="gm-playlist" class="panel stack">
       ${ currentPhase && PhaseControls({ phase: currentPhase }) }
       <h1>Game State</h1>
       <h3></h3>

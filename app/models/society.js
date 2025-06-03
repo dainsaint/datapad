@@ -1,12 +1,14 @@
 import Tags from "#core/tags";
 import Model from "#database/model";
 import Record, { RecordType } from "#models/record";
-import Action, { ActionStatus, ActionTags } from "#models/action";
+import { ActionStatus } from "#models/action";
+import societies from "#data/societies" with {type: 'json'};
 
 
 export default class Society extends Model {
   name
   archetype
+  fateId
   color = SocietyColor.RIVER_STONE
 
   tags = new Tags()
@@ -90,9 +92,17 @@ export default class Society extends Model {
     return this.communities.map( community => community.player );
   }
 
+  get fate() {
+    return societies[this.archetype]?.fates[ this.fateId ] || "No Fate Selected";
+  }
+
 
   toURL(append = "") {
     return `/societies/${this.episode.id}/${this.id}` + append;
+  }
+
+  static getFateForArchetype( archetype, fateId ) {
+    return societies[archetype]?.fates[ fateId ] || "None";
   }
 }
 
@@ -145,6 +155,13 @@ export const SocietyColor = {
   DEEP_PURPLE: "color-deep-purple"
 };
 
+
+export const SocietyFate = {
+  NONE: "",
+  FATE_ONE: "fate_one",
+  FATE_TWO: "fate_two",
+  FATE_THREE: "fate_three"
+}
 
 export const SocietyTags = {
   INSPIRED: "inspired"

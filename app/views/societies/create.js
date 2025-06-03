@@ -15,7 +15,7 @@ export default function SocietyCreate({ episode = new Episode()} = {}) {
 
       <fieldset>
         <label for="name">Society Name</label>
-        <input name="name" placeholder="New Society" autocapitalize="words" autofocus required/>
+        <input name="name" placeholder="New Society" autocapitalize="words" required/>
       </fieldset>
 
       <fieldset>

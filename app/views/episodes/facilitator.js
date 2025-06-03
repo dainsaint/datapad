@@ -28,7 +28,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
     }
     </style>
         <article id="facilitator" >
-          <section class="society-panel__communities panel scrollable">    
+          <section class="society-panel__communities panel scrollable"  style="border-top-left-radius: 0px">    
             <div class="stack" id="facilitator-society-select">
               <div hx-swap="none" hx-select-oob="#facilitator-society-view, #facilitator-action-edit, #facilitator-society-select">
                 ${ SocietySelect({ society })}

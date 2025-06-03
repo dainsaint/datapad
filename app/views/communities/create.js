@@ -11,7 +11,7 @@ export default function CommunityCreate({ episode, society }) {
       
       <fieldset>
         <label for="name">Name</label>
-        <input name="name" placeholder="New Community" autofocus autocapitalize="words" required />
+        <input name="name" placeholder="New Community" autocapitalize="words" required />
       </fieldset>
 
       <fieldset>

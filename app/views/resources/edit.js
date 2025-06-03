@@ -17,7 +17,7 @@ export default function ResourceEdit({ resource }) {
       
       <fieldset>
         <label for="name">Name</label>
-        <input name="name" autofocus autocapitalize="words" placeholder="New Resource" value="${ resource.name }"/>
+        <input name="name" autocapitalize="words" placeholder="New Resource" value="${ resource.name }"/>
       </fieldset>
 
       <fieldset>

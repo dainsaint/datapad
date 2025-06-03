@@ -314,6 +314,8 @@ fieldset > label + * {
 
 a {
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
 }
 
 

@@ -5,8 +5,8 @@ import { request } from "../../../app.js";
 
 export default function EpisodeToolbar({ episode = new Episode() } = {}) {
   const links = [
-    { href: episode.toURL('/gm'),           content: Icon("dice") },
     { href: episode.toURL('/facilitator'),  content: Icon("planet")  },
+    { href: episode.toURL('/gm'),           content: Icon("dice") },
     { href: episode.toURL('/showrunner'),   content: Icon("playlist")  },
     { href: episode.toURL('/documents'),    content: Icon("script")  },
     { href: episode.toURL('/settings'),     content: Icon("gears")  },
