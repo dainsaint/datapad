@@ -147,7 +147,7 @@ input[type="date"],
 input[type="time"],
 select,
 label {
-  font-size: 1rem;
+  font-size: inherit;
   color: inherit;
 }
 

@@ -6,7 +6,7 @@ import societies from "#data/societies" with {type: 'json'};
 
 
 export default class Society extends Model {
-  name
+  // name
   archetype
   fateId
   color = SocietyColor.RIVER_STONE
@@ -76,6 +76,10 @@ export default class Society extends Model {
 
   get activeResources() {
     return this.activeCommunities.map( community => community.activeResources ).flat();
+  }
+
+  get name() {
+    return this.archetype;
   }
 
   get currentEmissary() {

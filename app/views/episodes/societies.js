@@ -19,7 +19,8 @@ export default function EpisodeSocieties({ episode }) {
   }, [])
 
   societies.sort( (a, b) => a.sort - b.sort );
-
+  const suffixes = ["st", "nd", "rd", "th"]
+  const ordinalize = (i) => suffixes.at(i);
   return html`
     <div id="society-card-list" class="grid-large gap" hx-get="${ episode.toURL('/societies') }" style="--grid-min-width: 35rem;" hx-trigger="sse:societies,sse:actions">
       ${ societies.map( ({society, open, voted, time}, i) => html`
@@ -29,17 +30,15 @@ export default function EpisodeSocieties({ episode }) {
           <header class="layout-row layout-spread" style="align-items: start;">
             
             <div class="stack-tight">
+
               <a href="${episode.toURL(`/facilitator/${society.id}`)}" class="is-size-4">
-                <strong class="society-card__heading__name">#${i+1} ${ society.name }</strong>
+                <strong class="layout-row gap-tight society-card__heading__name">${ Icon.forArchetype( society.archetype ) } ${ society.name }</strong>
               </a>
 
               <div class="layout-row gap-tight" hx-target="#dialog">
-                <div class="is-size-3">
-                  <a ${{ "hx-get": society.currentEmissary?.toURL("/edit") }}>${ Icon("emissary") }</a>
-                </div>
                 <div>
                   <a ${{ "hx-get": society.currentEmissary?.toURL("/edit") }}>
-                    <strong>${ society.currentEmissary?.name || "No Emissary"}</strong><br/>
+                    <strong class="layout-row">${ Icon("emissary") }&nbsp;${ society.currentEmissary?.name || "No Emissary"}</strong>
                     ${ society.currentEmissary?.player || "Not yet elected"}<br/>
                   </a>
                 </div>
@@ -49,8 +48,8 @@ export default function EpisodeSocieties({ episode }) {
 
             <div class="stack-tight align-right">
               <p class="text-eyebrow">
-                <span>${ Icon.forArchetype( society.archetype ) }</span>
-                ${society.archetype} • 
+              ${ voted && `${i + 1}${ordinalize(i)}` }
+              ${ !voted && `Have not voted` } • 
                 ${society.communities.length} 
                 <i class="fa fa-people-group"></i> • 
                 ${society.resources.length}

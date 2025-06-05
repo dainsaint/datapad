@@ -13,10 +13,10 @@ export default function SocietyCreate({ episode = new Episode()} = {}) {
         <input type="hidden" name="episodeId" value="${episode.id}"/>
       </header>
 
-      <fieldset>
+      <!-- <fieldset>
         <label for="name">Society Name</label>
         <input name="name" placeholder="New Society" autocapitalize="words" required/>
-      </fieldset>
+      </fieldset> -->
 
       <fieldset>
         <label for="name">Society Archetype</label>

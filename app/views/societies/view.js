@@ -26,7 +26,6 @@ export default function SocietyView({ society } = {}) {
         </a></h1>
 
         <p class="subtitle">
-          ${society.archetype} • 
           ${society.activeCommunities.length} 
           ${pluralize(society.activeCommunities.length, "community", "communities")} • 
           ${society.activeResources.length}

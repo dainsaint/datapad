@@ -4,7 +4,7 @@ export default function TurnRisk({ turn } = {}) {
   const { risk, advantage, disadvantage } = turn;
 
   return html`
-    <form hx-post="${ turn.toURL() }" hx-trigger="change">
+    <form hx-post="${ turn.toURL() }" hx-trigger="change" hx-swap="none">
       <fieldset class="layout-row gap-tight">
         <label for="risk" style=""><i class="fa fa-skull"></i></label>
         <select class="is-uppercase is-size-6" name="risk" style="flex-basis: auto;">

@@ -14,10 +14,10 @@ export default function SocietyEdit({ society = new Society() } = {}) {
         </div>
       </header>
 
-      <fieldset>
+      <!-- <fieldset>
         <label for="name">Society Name</label>
         <input name="name" autocapitalize="words" placeholder="e.g. Ten Thousand Islands" value="${society.name}"/>
-      </fieldset>
+      </fieldset> -->
 
       <fieldset>
         <label for="name">Society Archetype</label>
