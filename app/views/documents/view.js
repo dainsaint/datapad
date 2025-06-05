@@ -25,7 +25,7 @@ function renderChildren( children ) {
 
 function renderElement( child ) {
   return html`
-    <${child.tagName} ${{id: child.properties?.id}}>
+    <${child.tagName} ${{id: child.properties?.id, style: child.properties?.style}}>
       ${ renderChildren(child.children) }
     </${child.tagName}>
   `

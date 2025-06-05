@@ -357,8 +357,8 @@
       "advantage": 0,
       "disadvantage": 0,
       "result": [
-        5,
-        5
+        2,
+        4
       ],
       "voteTime": "2025-06-03T15:04:35.836-04:00",
       "status": "voted",
@@ -1896,7 +1896,8 @@
   ],
   "documentIds": [
     "Wt6ry",
-    "ZWFCD"
+    "ZWFCD",
+    "Q7rUf"
   ],
   "links": {
     "discord": "discord://-/channels/1063250197993492480/1063254140341473350"
@@ -4394,7 +4395,7 @@
     {
       "_type": "Record",
       "id": "NShem",
-      "timestamp": "2025-06-03T19:48:49.709Z",
+      "timestamp": "2025-06-03T15:48:49.709-04:00",
       "type": "SocietyActionsTaken",
       "description": "Frog house",
       "value": 1
@@ -4402,7 +4403,7 @@
     {
       "_type": "Record",
       "id": "jpHHi",
-      "timestamp": "2025-06-03T19:48:49.709Z",
+      "timestamp": "2025-06-03T15:48:49.709-04:00",
       "type": "ActionResources",
       "description": "Frog house used righteous anger,feral cats to take action.",
       "value": 2
@@ -4410,7 +4411,7 @@
     {
       "_type": "Record",
       "id": "nMVcG",
-      "timestamp": "2025-06-03T19:48:49.709Z",
+      "timestamp": "2025-06-03T15:48:49.709-04:00",
       "type": "SocietyActionsTaken",
       "description": "Toad Shack",
       "value": 0
@@ -4418,7 +4419,7 @@
     {
       "_type": "Record",
       "id": "Csj6G",
-      "timestamp": "2025-06-03T19:48:49.709Z",
+      "timestamp": "2025-06-03T15:48:49.709-04:00",
       "type": "SocietyActionsTaken",
       "description": "Beetle Junkies",
       "value": 1
@@ -4426,7 +4427,7 @@
     {
       "_type": "Record",
       "id": "bBnp3",
-      "timestamp": "2025-06-03T19:48:49.710Z",
+      "timestamp": "2025-06-03T15:48:49.710-04:00",
       "type": "ActionResources",
       "description": "Beetle Junkies used Incredible Thighs to take action.",
       "value": 1
@@ -4434,7 +4435,7 @@
     {
       "_type": "Record",
       "id": "IqAyz",
-      "timestamp": "2025-06-03T19:48:49.710Z",
+      "timestamp": "2025-06-03T15:48:49.710-04:00",
       "type": "SocietyActionsTaken",
       "description": "Better Burritos",
       "value": 0
@@ -4442,7 +4443,7 @@
     {
       "_type": "Record",
       "id": "Hgd36",
-      "timestamp": "2025-06-03T19:48:49.710Z",
+      "timestamp": "2025-06-03T15:48:49.710-04:00",
       "type": "SocietyActionsTaken",
       "description": "Musical Chairs",
       "value": 1
@@ -4450,7 +4451,7 @@
     {
       "_type": "Record",
       "id": "HkDYE",
-      "timestamp": "2025-06-03T19:48:49.710Z",
+      "timestamp": "2025-06-03T15:48:49.710-04:00",
       "type": "ActionResources",
       "description": "Musical Chairs used  to take action.",
       "value": 0
@@ -4458,7 +4459,7 @@
     {
       "_type": "Record",
       "id": "HtufA",
-      "timestamp": "2025-06-03T19:48:54.831Z",
+      "timestamp": "2025-06-03T15:48:54.831-04:00",
       "type": "SocietyActionsTaken",
       "description": "Frog house",
       "value": 1
@@ -4466,7 +4467,7 @@
     {
       "_type": "Record",
       "id": "a-FoD",
-      "timestamp": "2025-06-03T19:48:54.831Z",
+      "timestamp": "2025-06-03T15:48:54.831-04:00",
       "type": "ActionResources",
       "description": "Frog house used righteous anger to take action.",
       "value": 1
@@ -4474,7 +4475,7 @@
     {
       "_type": "Record",
       "id": "Se98x",
-      "timestamp": "2025-06-03T19:48:54.832Z",
+      "timestamp": "2025-06-03T15:48:54.832-04:00",
       "type": "SocietyActionsTaken",
       "description": "Toad Shack",
       "value": 0
@@ -4482,7 +4483,7 @@
     {
       "_type": "Record",
       "id": "PvCDg",
-      "timestamp": "2025-06-03T19:48:54.832Z",
+      "timestamp": "2025-06-03T15:48:54.832-04:00",
       "type": "SocietyActionsTaken",
       "description": "Beetle Junkies",
       "value": 0
@@ -4490,7 +4491,7 @@
     {
       "_type": "Record",
       "id": "Su6Gi",
-      "timestamp": "2025-06-03T19:48:54.832Z",
+      "timestamp": "2025-06-03T15:48:54.832-04:00",
       "type": "SocietyActionsTaken",
       "description": "Better Burritos",
       "value": 0
@@ -4498,7 +4499,7 @@
     {
       "_type": "Record",
       "id": "pWWqR",
-      "timestamp": "2025-06-03T19:48:54.832Z",
+      "timestamp": "2025-06-03T15:48:54.832-04:00",
       "type": "SocietyActionsTaken",
       "description": "Musical Chairs",
       "value": 0

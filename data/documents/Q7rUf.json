@@ -1,0 +1,218 @@
+{
+  "_type": "Document",
+  "id": "Q7rUf",
+  "name": "Seeds",
+  "icon": "fa-sprout",
+  "googleDocId": "1i7Ru1_F6iJG02UEkZh8j3pcORpF_FcFlHjY4GGPLrc4",
+  "content": {
+    "type": "root",
+    "children": [
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {
+          "className": [
+            "normal-text"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a place to gather ideas (or seeds) from players for reactive design/performance purposes!"
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "h1",
+        "properties": {
+          "className": [
+            "heading-1"
+          ],
+          "id": "the-faithful-hope-and-spirit"
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "The Faithful: Hope and Spirit"
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "h1",
+        "properties": {
+          "className": [
+            "heading-1"
+          ],
+          "id": "the-mighty-strength-and-power"
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "The Mighty: Strength and Power"
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "h1",
+        "properties": {
+          "className": [
+            "heading-1"
+          ],
+          "id": "the-enterprise-wealth-and-commerce"
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "The Enterprise: Wealth and Commerce"
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "h1",
+        "properties": {
+          "className": [
+            "heading-1"
+          ],
+          "id": "the-intrepid-grit-and-exploration"
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "The Intrepid: Grit and Exploration"
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "h1",
+        "properties": {
+          "className": [
+            "heading-1"
+          ],
+          "id": "the-aesthetic-beauty-and-truth"
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "The Aesthetic: Beauty and Truth"
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "status": "ok"
+}

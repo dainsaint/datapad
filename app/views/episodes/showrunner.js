@@ -16,12 +16,12 @@ export default function EpisodeShowrunner ({ episode } = {}) {
     >
       <div id="showrunner-playlist" class="panel stack" >
         ${ currentPhase && PhaseControls({ phase: currentPhase }) }
+        <h1>Playlist</h1>
         ${ EpisodePlaylist({ episode }) }      
       </div>
 
       <div id="showrunner-game-state" class="stack panel">
       <h1>Game State</h1>
-      <h3></h3>
 
       <div class="scrollable">
         ${EpisodeSocieties({ episode })}

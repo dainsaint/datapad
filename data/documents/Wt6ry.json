@@ -68,8 +68,17 @@
         },
         "children": [
           {
-            "type": "text",
-            "value": ""
+            "type": "element",
+            "tagName": "span",
+            "properties": {
+              "style": "background-color: rgb(153, 0, 255)"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
           }
         ]
       },
@@ -85,8 +94,17 @@
         },
         "children": [
           {
-            "type": "text",
-            "value": "Three Pillars of Our Story"
+            "type": "element",
+            "tagName": "span",
+            "properties": {
+              "style": "background-color: rgb(153, 0, 255); color: rgb(0, 0, 0)"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Three Pillars of Our Story"
+              }
+            ]
           }
         ]
       },

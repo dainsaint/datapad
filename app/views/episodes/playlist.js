@@ -27,7 +27,7 @@ export default function EpisodePlaylist({ episode }) {
 
   return html`
     <div id="playlist"
-
+      class="full scrollable"
     >
       <form
         class="phase-playlist stack"
@@ -36,7 +36,6 @@ export default function EpisodePlaylist({ episode }) {
         hx-disinherit="*"
       >
 
-        <h1>Playlist</h1>
         <p class="text-body">Total time: ${ totalTime.rescale().toHuman({ unitDisplay: "short"}) }</p>
 
         
@@ -76,7 +75,7 @@ export default function EpisodePlaylist({ episode }) {
         </div>
 
         <div 
-          class="phase-playlist__list scrollable full stack-tight" 
+          class="phase-playlist__list full stack-tight" 
           data-sortable="phase" 
           data-sortable-handle=".drag-handle"
           style="max-height: 70vh; padding-bottom: 10vh;"
