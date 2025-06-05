@@ -10,11 +10,10 @@ export default function AppLayout(props, children) {
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       
-      <link rel="stylesheet" id="polyfill-styles" />
       <link rel="stylesheet" href="/css/styles.css" />
       <link rel="stylesheet" href="/css/fonts/fontawesome/css/fontawesome.min.css" />
       <link rel="stylesheet" href="/css/fonts/fontawesome/css/solid.min.css" />
-      <link rel="stylesheet" href="/css/fonts/fontawesome/css/regular.min.css" />
+      <!-- <link rel="stylesheet" href="/css/fonts/fontawesome/css/regular.min.css" /> -->
       <link rel="stylesheet" href="/css/fonts/fontawesome/css/brands.min.css" />
 
       <link rel="favicon" href="/images/web-icon.svg"/>
