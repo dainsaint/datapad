@@ -202,6 +202,10 @@ export default class Episode extends Model {
     return this.tags.has(EpisodeTags.ACTIVE);
   }
 
+  static uncache(id) {
+    loadedEpisodes.delete(id);
+  }
+
   static load(id) {
     if (loadedEpisodes.has(id)) {
       return loadedEpisodes.get(id);

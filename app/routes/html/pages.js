@@ -26,7 +26,7 @@ pages.get("/", (req, res) => {
     Ledger.setActiveEpisode(episode);
   }
 
-  res.redirect(`/episodes/${ episode.id }/gm`)
+  res.redirect(`/episodes/${ episode.id }/facilitator`)
 });
 
 

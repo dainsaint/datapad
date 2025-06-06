@@ -1,11 +1,14 @@
 import { body, matchedData, validationResult } from "express-validator";
+import { broadcast } from "#routes/html/events";
 import { DateTime, Duration, Interval } from "luxon";
 import { EpisodeTimeInput } from "#views/episodes/create";
+import Community from "#models/community";
+import Document from "#models/document";
 import Episode from "#models/episode";
 import express from "express";
-import { broadcast } from "#routes/html/events";
-import Document from "#models/document";
 import Ledger from "#database/ledger";
+import Phase from "#models/phase";
+import Society from "#models/society";
 
 const episodes = express.Router();
 
@@ -176,6 +179,33 @@ episodes.post("/:episodeId/documents", async (req, res) => {
   broadcast("documents");
 });
 
+
+episodes.post("/:episodeId/copy", (req, res) => {
+  const { episodeId } = req.params;
+  const { originalEpisodeId } = req.body;
+  const episode = Episode.load( episodeId );
+  const original = Episode.load( originalEpisodeId );
+
+  episode.resources = [];
+  episode.actions = [];
+  episode.turns = []
+  episode.records = [];
+  
+  
+  episode.societies = original.societies.map( society => new Society(society) );
+  episode.communities = original.communities.map( community => new Community(community) );
+  episode.phases = original.phases.map( phases => new Phase(phases) );
+  episode.documentIds = original.documentIds.map( id => id );
+  episode.links = Object.create( original.links );
+
+  
+
+  episode.save();
+  Episode.uncache(episode.id);
+  
+  res.sendStatus(200);
+  broadcast("episode");
+})
 
 
 

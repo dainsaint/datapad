@@ -18,8 +18,8 @@ export default function EpisodeCopy({ episode = new Episode() } = {}) {
       </p>
 
       <article class="stack">
-        <label for="episodeId">Episode</label>
-        <select name="episodeId">
+        <label for="originalEpisodeId">Episode</label>
+        <select name="originalEpisodeId">
           <option value="">-- No Episode Selected --</option>
           ${ episodes.map( episode => html`
               <option value="${episode.id}">${ episode.name }</option>
