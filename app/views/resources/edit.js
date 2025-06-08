@@ -27,7 +27,7 @@ export default function ResourceEdit({ resource }) {
           return html`
             <optgroup label="${ society.name }">
               ${ society.activeCommunities.map( community => 
-                html`<option value="${ community.id }" ${ community.id === myCommunity.id && "selected" }>${community.name}</option>`
+                html`<option value="${ community.id }" ${ community.id === myCommunity?.id && "selected" }>${community.name}</option>`
               )}
             </optgroup>
           `

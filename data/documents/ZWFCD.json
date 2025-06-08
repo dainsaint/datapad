@@ -3,7 +3,7 @@
   "id": "ZWFCD",
   "name": "Rules",
   "icon": "fa-scale-balanced",
-  "googleDocId": "1iJS_VBhnyGk2dI81qN_xF2IDZ4xGHnDZLhOTWBvhgvo",
+  "googleDocId": "1k_TK2l6W1WKhCIqoDxCzCF2ahS5J-1oveQtxyfKq8RU",
   "content": {
     "type": "root",
     "children": [
@@ -75,7 +75,7 @@
         "children": [
           {
             "type": "text",
-            "value": "Players have three primary goals in Space Opera: "
+            "value": "Players have three primary goals in Space Opera:"
           }
         ]
       },
@@ -198,15 +198,7 @@
         "children": [
           {
             "type": "text",
-            "value": "Each play session of Space Opera is called a Generation. Each Generation consists of multiple rounds. Each round of Space Opera has four phases. Rounds take around"
-          },
-          {
-            "type": "text",
-            "value": " 75-minutes and are followed by a 5-10 min break. "
-          },
-          {
-            "type": "text",
-            "value": ""
+            "value": "Each play session of Space Opera is called a Generation. Each Generation consists of multiple rounds. Each round of Space Opera has either three or four phases"
           }
         ]
       },
@@ -382,7 +374,7 @@
             "children": [
               {
                 "type": "text",
-                "value": "Phase 4. The Individual Phase"
+                "value": "Phase 4. The Individual Phase (12 min)"
               }
             ]
           },
@@ -469,996 +461,77 @@
       },
       {
         "type": "element",
-        "tagName": "table",
-        "properties": {},
+        "tagName": "p",
+        "properties": {
+          "className": [
+            "normal-text"
+          ]
+        },
         "children": [
           {
             "type": "element",
-            "tagName": "tr",
+            "tagName": "u",
             "properties": {},
             "children": [
               {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Duration (min)"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Phase"
-                      }
-                    ]
-                  }
-                ]
+                "type": "text",
+                "value": "Round 1"
               }
             ]
           },
           {
             "type": "element",
-            "tagName": "tr",
+            "tagName": "u",
             "properties": {},
             "children": [
               {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "30"
-                      }
-                    ]
-                  }
-                ]
-              },
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ol",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ],
+          "list-style-type": "decimal"
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
               {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Onboarding"
-                      }
-                    ]
-                  }
-                ]
+                "type": "text",
+                "value": "Universe Responds"
               }
             ]
           },
           {
             "type": "element",
-            "tagName": "tr",
+            "tagName": "li",
             "properties": {},
             "children": [
               {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "2"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Universe Responds"
-                      }
-                    ]
-                  }
-                ]
+                "type": "text",
+                "value": "Societal Phase"
               }
             ]
           },
           {
             "type": "element",
-            "tagName": "tr",
+            "tagName": "li",
             "properties": {},
             "children": [
               {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "15"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Societal Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "12"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Galactic Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "2"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Universe Responds"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "12"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Societal Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "12"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Galactic Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "12"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Individual Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "10"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Break"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "2"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Universe Responds"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "12"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Societal Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "12"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Galactic Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "2"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Universe Responds"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "12"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Societal Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "12"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Galactic Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "12"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Individual Phase"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "30"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "padding-bottom: 5PT; padding-left: 5PT; padding-right: 5PT; padding-top: 5PT; vertical-align: top"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Meal"
-                      }
-                    ]
-                  }
-                ]
+                "type": "text",
+                "value": "Galactic Phase"
               }
             ]
           }
@@ -1474,8 +547,228 @@
         },
         "children": [
           {
+            "type": "element",
+            "tagName": "u",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Round 2"
+              }
+            ]
+          },
+          {
             "type": "text",
             "value": ""
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ol",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ],
+          "list-style-type": "decimal"
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Universe Responds"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Societal Phase"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Galactic Phase"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Individual Phase"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {
+          "className": [
+            "normal-text"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "u",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Round 3"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ol",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ],
+          "list-style-type": "decimal"
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Universe Responds"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Societal Phase"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Galactic Phase"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {
+          "className": [
+            "normal-text"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "u",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Final Round"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ol",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ],
+          "list-style-type": "decimal"
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Universe Responds"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Societal Phase"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Galactic Phase"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Generation Shifts"
+              }
+            ]
           }
         ]
       },
@@ -1565,71 +858,7 @@
           },
           {
             "type": "text",
-            "value": " to work in their Societies to decide on the actions that their Society will attempt to take this round:"
-          }
-        ]
-      },
-      {
-        "type": "element",
-        "tagName": "ol",
-        "properties": {
-          "className": [
-            "nesting-level-1"
-          ],
-          "list-style-type": "decimal"
-        },
-        "children": [
-          {
-            "type": "element",
-            "tagName": "li",
-            "properties": {},
-            "children": [
-              {
-                "type": "text",
-                "value": "Each societal phase begins with a brief (2-3 minute) period to "
-              },
-              {
-                "type": "element",
-                "tagName": "strong",
-                "properties": {},
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Establish Roles"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": ", where decision-makers are identified, ambassadors are sent abroad, and emissaries are elected. "
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "li",
-            "properties": {},
-            "children": [
-              {
-                "type": "text",
-                "value": "After establishing roles, societies "
-              },
-              {
-                "type": "element",
-                "tagName": "strong",
-                "properties": {},
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Take Action"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": " by deliberating on the action they will take during the Galactic Phase. "
-              }
-            ]
+            "value": " to work in their Societies to decide on the actions that their Society will attempt to take this round."
           }
         ]
       },
@@ -1640,12 +869,12 @@
           "className": [
             "heading-2"
           ],
-          "id": "communities-voices-and-decision-making-roles"
+          "id": "communities-and-voices"
         },
         "children": [
           {
             "type": "text",
-            "value": "Communities, Voices, and Decision Making Roles"
+            "value": "Communities and Voices"
           }
         ]
       },
@@ -1783,7 +1012,22 @@
         "children": [
           {
             "type": "text",
-            "value": "If, at the beginning of the Societal Phase, there are no Voice of the Leaders in a Society, your society has fallen into a Crisis of Leadership."
+            "value": "If there are no Voice of the Leaders in a Society, your society has fallen into a "
+          },
+          {
+            "type": "element",
+            "tagName": "strong",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Crisis of Leadership"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
           }
         ]
       },
@@ -1814,7 +1058,7 @@
         "children": [
           {
             "type": "text",
-            "value": "If there are no Voice of the Leaders at your table, your society is in a Crisis of Leadership and cannot take any actions. To resolve this, every community will roll a dice pool equal to the number of resources they hold. Any communities that roll a 6 become Voice of the Leaders. If no community rolls a 6, all communities roll again until at least one community rolls a 6."
+            "value": "If there are no Voice of the Leaders at your table, your society is in a Crisis of Leadership and as soon as possible during the Societal Phase must resolve that crisis before being able to take an action. To resolve this, every community interested in becoming a Voice of the Leader will roll a dice pool equal to the number of resources they hold. Any communities that roll a 6 become Voice of the Leaders. If no community rolls a 6, all communities that rolled then roll again until at least one community rolls a 6."
           }
         ]
       },
@@ -1844,7 +1088,7 @@
         "children": [
           {
             "type": "text",
-            "value": "Certain cards and actions may trigger a Crisis of Leadership even when there are Voices of the Leaders present. In this case, all Leaders roll first as above to maintain power; if no Leaders roll a 6, all communities may roll again as above."
+            "value": "Certain cards and actions may trigger a Crisis of Leadership even when there are Voice of the Leaders present. In this case, all Leaders roll first as above to maintain power; If no Leaders roll a 6, then all communities may roll as above."
           }
         ]
       },
@@ -1860,6 +1104,21 @@
           {
             "type": "text",
             "value": ""
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {
+          "className": [
+            "normal-text"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "Once the Crisis of Leadership has been resolved, play continues as normal."
           }
         ]
       },
@@ -1954,11 +1213,11 @@
           },
           {
             "type": "text",
-            "value": "enters the Individual phase with no resources, that"
+            "value": "enters the Individual phase with no resources"
           },
           {
             "type": "text",
-            "value": " community is Lost, their culture is transformed or forgotten, and the player will need to create a new Community."
+            "value": ", that community is Lost, their culture is transformed or forgotten, and the player will need to create a new Community."
           }
         ]
       },
@@ -2393,21 +1652,6 @@
         "type": "element",
         "tagName": "p",
         "properties": {
-          "className": [
-            "normal-text"
-          ]
-        },
-        "children": [
-          {
-            "type": "text",
-            "value": ""
-          }
-        ]
-      },
-      {
-        "type": "element",
-        "tagName": "p",
-        "properties": {
           "style": "margin-top: 12PT; margin-bottom: 12PT",
           "className": [
             "normal-text"
@@ -2416,7 +1660,7 @@
         "children": [
           {
             "type": "text",
-            "value": "A community’s resources cannot be used without their "
+            "value": "A community’s resources cannot be used for an action without their "
           },
           {
             "type": "element",
@@ -2458,12 +1702,12 @@
           "className": [
             "heading-3"
           ],
-          "id": "the-flow-of-the-societal-phase"
+          "id": "the-flow-of-the-societal-phase-and-deciding-actions"
         },
         "children": [
           {
             "type": "text",
-            "value": "The Flow of the Societal Phase"
+            "value": "The Flow of the Societal Phase and Deciding Actions"
           }
         ]
       },
@@ -2478,22 +1722,7 @@
         "children": [
           {
             "type": "text",
-            "value": ""
-          }
-        ]
-      },
-      {
-        "type": "element",
-        "tagName": "p",
-        "properties": {
-          "className": [
-            "normal-text"
-          ]
-        },
-        "children": [
-          {
-            "type": "text",
-            "value": "To decide on an action the societies:"
+            "value": "The Societal Phase is divided into four steps: Establish Roles, Propose Actions, Formal Voting, and Joining the Galactic Council"
           }
         ]
       },
@@ -2534,9 +1763,13 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Establish Roles (2-3 min): "
+                    "value": "Establish Roles "
                   }
                 ]
+              },
+              {
+                "type": "text",
+                "value": "(suggested that this step takes no longer than 2-minutes)"
               },
               {
                 "type": "element",
@@ -2554,19 +1787,19 @@
                     "properties": {},
                     "children": [
                       {
-                        "type": "text",
-                        "value": "Only VoL may speak."
-                      }
-                    ]
-                  },
-                  {
-                    "type": "element",
-                    "tagName": "li",
-                    "properties": {},
-                    "children": [
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Confirm which Communities are currently Voice of the Leaders"
+                          }
+                        ]
+                      },
                       {
                         "type": "text",
-                        "value": "Identify the decision-makers and resolve any played willpower cards that impact decision-making. "
+                        "value": ""
                       },
                       {
                         "type": "element",
@@ -2585,7 +1818,7 @@
                             "children": [
                               {
                                 "type": "text",
-                                "value": "VoL may vote (simple majority) to change one VoP into VoL. If they desire to change more than one VoP into VoL, they must hold one vote per nominee. "
+                                "value": "This is also a good opportunity for the Voice of the Leaders to vote in or vote out Voice of the Leaders."
                               }
                             ]
                           },
@@ -2611,7 +1844,7 @@
                               },
                               {
                                 "type": "text",
-                                "value": " (above). "
+                                "value": " and must resolve it before moving on. "
                               }
                             ]
                           }
@@ -2625,8 +1858,19 @@
                     "properties": {},
                     "children": [
                       {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Select an Emissary. "
+                          }
+                        ]
+                      },
+                      {
                         "type": "text",
-                        "value": "Nominate an emissary. The emissary must already be a VoL. "
+                        "value": "An Emissary must be one player from a Voice of the Leaders community, and is decided by a majority vote of the current Voice of the Leaders."
                       },
                       {
                         "type": "element",
@@ -2701,7 +1945,7 @@
                                     "children": [
                                       {
                                         "type": "text",
-                                        "value": "Clarifying the action being taken, or what a resource is. "
+                                        "value": "Clarifying or adding detail to the action being taken, or what a resource is. "
                                       }
                                     ]
                                   }
@@ -2719,113 +1963,19 @@
                     "properties": {},
                     "children": [
                       {
-                        "type": "text",
-                        "value": "Send ambassadors abroad. "
-                      },
-                      {
                         "type": "element",
-                        "tagName": "ol",
-                        "properties": {
-                          "className": [
-                            "nesting-level-3"
-                          ],
-                          "list-style-type": "lower-roman"
-                        },
+                        "tagName": "strong",
+                        "properties": {},
                         "children": [
                           {
-                            "type": "element",
-                            "tagName": "li",
-                            "properties": {},
-                            "children": [
-                              {
-                                "type": "text",
-                                "value": "An ambassador can be either VoL or VoP. "
-                              }
-                            ]
-                          },
-                          {
-                            "type": "element",
-                            "tagName": "li",
-                            "properties": {},
-                            "children": [
-                              {
-                                "type": "text",
-                                "value": "Ambassadors remain in the society they travel to until the "
-                              },
-                              {
-                                "type": "element",
-                                "tagName": "strong",
-                                "properties": {},
-                                "children": [
-                                  {
-                                    "type": "text",
-                                    "value": "conclusion"
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "text",
-                                "value": " of the galactic phase. "
-                              }
-                            ]
-                          },
-                          {
-                            "type": "element",
-                            "tagName": "li",
-                            "properties": {},
-                            "children": [
-                              {
-                                "type": "text",
-                                "value": "The ambassador takes their Resources and Willpower cards to the society they travel to. This means that their Resources may not be used by their home society until they return. "
-                              }
-                            ]
-                          },
-                          {
-                            "type": "element",
-                            "tagName": "li",
-                            "properties": {},
-                            "children": [
-                              {
-                                "type": "text",
-                                "value": "Upon arrival to a new society, the Ambassador must be admitted. Ambassadors are admitted if and only if the VoL of the receiving society takes a majority vote in favor of admitting them. Rejected ambassadors immediately return home to their societies. "
-                              }
-                            ]
+                            "type": "text",
+                            "value": "Send Ambassadors or Receive Ambassadors. "
                           }
                         ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "element",
-                    "tagName": "li",
-                    "properties": {},
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Accept ambassadors from other societies."
                       },
                       {
-                        "type": "element",
-                        "tagName": "ol",
-                        "properties": {
-                          "className": [
-                            "nesting-level-3"
-                          ],
-                          "list-style-type": "lower-roman"
-                        },
-                        "children": [
-                          {
-                            "type": "element",
-                            "tagName": "li",
-                            "properties": {},
-                            "children": [
-                              {
-                                "type": "text",
-                                "value": "Upon arrival, take a majority vote of VoL to accept or deny an ambassador. "
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "value": " This is also a good moment (though not the only moment) for Societies to decide if they would like to send an Ambassador (see below)"
                       }
                     ]
                   }
@@ -2845,7 +1995,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Decide on an action to take."
+                    "value": "Propose Actions"
                   }
                 ]
               },
@@ -2866,7 +2016,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "All players (VoL and VoP) may speak during this phase. "
+                        "value": "During this step all Communities in the Society can participate in discussion to create and amend proposed actions that the Society might take this round."
                       }
                     ]
                   },
@@ -2877,18 +2027,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Proposals may be discussed and amended during this phase. "
-                      }
-                    ]
-                  },
-                  {
-                    "type": "element",
-                    "tagName": "li",
-                    "properties": {},
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Players must write their proposed action down on the vision board before they can take that action to a vote.  "
+                        "value": "A single action must be written down on the Vision Board before moving to the Formal Voting step."
                       }
                     ]
                   }
@@ -2908,7 +2047,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Take a formal vote to decide their action"
+                    "value": "Formal Voting"
                   }
                 ]
               },
@@ -2929,11 +2068,11 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "The VoL take a majority vote to determine whether the proposed action moves forward"
+                        "value": "Only Voice of the Leader communities are able to vote in the final decision as to what the society’s action will be, and in order to pass, it requires a majority vote from the Voice of the Leaders. If a majority vote is not reached, or a vote does not happen the Society takes no action that round. For example:"
                       },
                       {
                         "type": "text",
-                        "value": ". For example:"
+                        "value": ""
                       },
                       {
                         "type": "element",
@@ -2989,30 +2128,7 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "If the vote fails, return to step 2."
-                      },
-                      {
-                        "type": "element",
-                        "tagName": "ol",
-                        "properties": {
-                          "className": [
-                            "nesting-level-3"
-                          ],
-                          "list-style-type": "lower-roman"
-                        },
-                        "children": [
-                          {
-                            "type": "element",
-                            "tagName": "li",
-                            "properties": {},
-                            "children": [
-                              {
-                                "type": "text",
-                                "value": "It is possible for players (including VoP) to play willpower cards during deliberation that may change the decision-making structure of the society (e.g. Usurp or Incite).   "
-                              }
-                            ]
-                          }
-                        ]
+                        "value": "If the vote fails, return to Propose Actions. "
                       }
                     ]
                   }
@@ -3094,7 +2210,7 @@
             "children": [
               {
                 "type": "text",
-                "value": "At any point during the Societal Phase, any communities may:"
+                "value": "At any point during the Societal Phase:"
               }
             ]
           }
@@ -3115,13 +2231,17 @@
             "properties": {},
             "children": [
               {
+                "type": "text",
+                "value": "Any Community may "
+              },
+              {
                 "type": "element",
                 "tagName": "strong",
                 "properties": {},
                 "children": [
                   {
                     "type": "text",
-                    "value": "Exchange Resources/Willpower:"
+                    "value": "exchange Resources and Willpower."
                   }
                 ]
               },
@@ -3137,21 +2257,150 @@
             "properties": {},
             "children": [
               {
+                "type": "text",
+                "value": "Any Community may"
+              },
+              {
                 "type": "element",
                 "tagName": "strong",
                 "properties": {},
                 "children": [
                   {
                     "type": "text",
-                    "value": "Play Willpower Cards: "
+                    "value": " play Willpower Cards. "
                   }
                 ]
               },
               {
                 "type": "text",
-                "value": "Any community may play a willpower card that is marked for the Societal Phase. This may mean that roles established at the beginning of the phase can be disrupted by players with ulterior motives!"
+                "value": "This may mean that roles established at the beginning of the phase can be disrupted by players with ulterior motives!"
               }
             ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Voice of the Leaders may "
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "add new Voice of the Leaders or remove Voice of the Leaders"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " demoting them to Voice of the People. This process can only be done for one candidate at a time, and requires a majority vote from the current Voice of the Leaders, including any being voted on."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "A Society may "
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "send Ambassadors or receive Ambassadors. "
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " Societies may send one or multiple ambassadors to other societies. An Ambassador can be a Voice of the People or a Voice of the Leaders and is decided by a majority vote of the current Voice of the Leaders. The Ambassador takes all of their Resources and Willpower cards with them."
+              },
+              {
+                "type": "element",
+                "tagName": "ol",
+                "properties": {
+                  "className": [
+                    "nesting-level-2"
+                  ],
+                  "list-style-type": "lower-alpha"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "The Voice of the Leaders of the receiving Society must take a majority vote to admit or deny the ambassador, with minimal conversation between the receiving Society and the Ambassador (as to not negate the purpose of sending the Ambassador)."
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "ol",
+                        "properties": {
+                          "className": [
+                            "nesting-level-3"
+                          ],
+                          "list-style-type": "lower-roman"
+                        },
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "li",
+                            "properties": {},
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Ex. A potential Ambassador could say, “I am here to discuss trading resources” but cannot give their entire pitch before being accepted."
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "If an Ambassador is accepted by the other Society they must remain there until the conclusion of the Galactic Phase, and act as a Voice of the People of the receiving Society until they leave. This allows them to use Resources and Willpower cards as usual. Once they have left their home Society, ambassadors may take no part in their home Society until they return. If an Ambassador is rejected they must immediately return to their home society."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {
+          "style": "margin-top: 12PT; margin-bottom: 12PT",
+          "className": [
+            "normal-text"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": ""
           }
         ]
       },
@@ -3257,13 +2506,28 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "flawed resource"
+                    "value": "flawed resources"
                   }
                 ]
               },
               {
                 "type": "text",
-                "value": ", which imposes disadvantage when used for its intended purpose, but grants advantage on future attempts to refine or complete it. For example, a society may want to create “Laser Cannons”, but a flawed version may be “Prototype Cannons” or “Cannon Schematics”."
+                "value": ", which imposes disadvantage when used for their intended purpose, or"
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": " incomplete resources"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " which grans advantage on future attempts to refine or complete them."
               }
             ]
           },
@@ -3285,7 +2549,7 @@
               },
               {
                 "type": "text",
-                "value": " are those demanding significant effort and would have transformative effects on the galaxy. A successful roll yields a highly flawed resource; using an flawed epic resource not only causes disadvantage, but also increases the risk level of the action. To complete it, societies must "
+                "value": " are those demanding significant effort and would have transformative effects on the galaxy. They are so epic that they are not treated as “resources” in the usual sense, but rather become major elements or set pieces of the larger narrative that can have various ongoing narrative and mechanical impacts as decided by the GM. To complete these epic resources, societies must "
               },
               {
                 "type": "element",
@@ -3294,28 +2558,13 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "permanently destroy six"
+                    "value": "commit 1/3rd of the total number of existing resources"
                   }
                 ]
               },
               {
                 "type": "text",
-                "value": " "
-              },
-              {
-                "type": "element",
-                "tagName": "strong",
-                "properties": {},
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "additional resources"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": ". These may come from any society, or be newly created through normal actions. Using a perfect epic resource for its intended purpose grants advantage and reduces the risk level of the action."
+                "value": ". Committed resources can come from any Society and all resources that are committed are unusable for any other purpose and are, in practice, destroyed. A Society can only commit resources that are offered with consent by the controlling Community (offered during the Societal Phase). After an Epic resource project has begun, any Society can contribute additional resources during their turn at the dais during the Galactic Phase. This is done by the emissary and before taking an action."
               }
             ]
           }
@@ -3328,13 +2577,9 @@
           "className": [
             "heading-2"
           ],
-          "id": "-willpower-cards"
+          "id": "willpower-cards"
         },
         "children": [
-          {
-            "type": "text",
-            "value": " "
-          },
           {
             "type": "text",
             "value": "Willpower Cards"
@@ -3394,7 +2639,7 @@
         "children": [
           {
             "type": "text",
-            "value": "Willpower Cards are used by players during the Societal Phase and/or Galactic Phase, as marked on each card. Players may choose to keep these cards private or share them publicly. Like Resources, Willpower cards can be traded with other Communities during the Societal Phase. Players can have up to three Willpower cards at a time, and must discard down to three as soon as they have more than three in their hand."
+            "value": "Willpower Cards are used by players during the Societal Phase. Players may choose to keep these cards private or share them publicly. Like Resources, Willpower cards can be traded with other Communities during the Societal Phase. Players can have up to three Willpower cards at a time, and must discard down to three as soon as they have more than three in their hand."
           }
         ]
       },
@@ -3517,7 +2762,14 @@
                     ]
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
               {
                 "type": "element",
                 "tagName": "td",
@@ -3536,7 +2788,7 @@
                     "children": [
                       {
                         "type": "element",
-                        "tagName": "strong",
+                        "tagName": "i",
                         "properties": {},
                         "children": [
                           {
@@ -3548,7 +2800,7 @@
                             "children": [
                               {
                                 "type": "text",
-                                "value": "Relevant Phases "
+                                "value": "Voice of the People"
                               }
                             ]
                           }
@@ -3557,46 +2809,6 @@
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Seize"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
               },
               {
                 "type": "element",
@@ -3623,464 +2835,7 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "Permanently claim a resource from another community in the society you are currently in and take it as your own. Discard this card."
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Societal "
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Influence "
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "For this round, raise or lower the risk level for the society you are currently in. Discard this card."
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Galactic"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Counter"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Play this immediately after another Community has played a Willpower Card to cancel the effect of that Willpower card. You can play this after any Willpower card. Discard this card."
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Galactic, Societal"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Surge"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Exhaust a resource, or refresh an exhausted resource. Discard this card."
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Societal"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Destroy"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Destroy any resource belonging to any Community in any Society. Discard this card."
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Galactic, Societal"
+                            "value": ""
                           }
                         ]
                       }
@@ -4153,30 +2908,30 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "You pick any Community, including yourself, to act as the Emissary for this round. Discard this card."
+                            "value": "Play this card to designate any community in this society (including yourself) to "
                           }
                         ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "act as the Emissary"
+                              }
+                            ]
+                          }
+                        ]
+                      },
                       {
                         "type": "element",
                         "tagName": "span",
@@ -4186,161 +2941,7 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "Societal"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "tr",
-            "properties": {},
-            "children": [
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Incite"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "You decide which communities are Voice of the Leaders and Voice of the People for this round. "
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": ""
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "You may elect to trigger a Crisis of Leadership to attempt to make your new structure permanent. If you choose not to trigger a Crisis, leadership returns to its previous state during the next round."
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "Societal"
+                            "value": " for this round."
                           }
                         ]
                       }
@@ -4413,7 +3014,80 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "Redistribute any/all number of resources belonging to the Voice of the Leaders. Discard this card."
+                            "value": "Play this card to "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "redistribute any resources stewarded by Leaders"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " to any other community in this society.."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Mobilize"
                           }
                         ]
                       }
@@ -4446,7 +3120,930 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "Societal"
+                            "value": "Play this card to trigger an immediate "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Crisis of Leadership"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " in this society. Communities who are currently Leaders will roll first"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Incite"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Play this card to "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "dictate which communities in this society are Leaders or People"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " for this round."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "i",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Voice of the Leaders"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": ""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Influence "
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Play this card to "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "raise or lower the risk level"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " of this society’s next action by one."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Strategize"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Play this card and destroy one of your resources to "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "bestow advantage "
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "i",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "strong",
+                            "properties": {},
+                            "children": [
+                              {
+                                "type": "element",
+                                "tagName": "span",
+                                "properties": {
+                                  "style": "font-size: 10PT"
+                                },
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "value": "or"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": " disadvantage"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " on this society’s next action."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Leverage"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Play this card to "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "exhaust a resource "
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "i",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "strong",
+                            "properties": {},
+                            "children": [
+                              {
+                                "type": "element",
+                                "tagName": "span",
+                                "properties": {
+                                  "style": "font-size: 10PT"
+                                },
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "value": "or"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": " refresh an exhausted resource"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " in this society."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Override"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Play this card to "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "act as the sole Leader"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " for this society this round. You cannot be vetoed in any decisions. "
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "i",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Both Voices"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": ""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Disrupt"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
+                  {
+                    "type": "element",
+                    "tagName": "p",
+                    "properties": {
+                      "className": [
+                        "normal-text"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Play this card to "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "transform or destroy any one resource"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " belonging to any community in this society"
                           }
                         ]
                       }
@@ -4519,30 +4116,30 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "Prevent a Resource from being transformed, occupied, seized, or destroyed by other Communities or by the GM. Then discard this card. "
+                            "value": "Play this card to "
                           }
                         ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "element",
-                "tagName": "td",
-                "properties": {
-                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
-                },
-                "children": [
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "protect a resource"
+                              }
+                            ]
+                          }
+                        ]
+                      },
                       {
                         "type": "element",
                         "tagName": "span",
@@ -4552,7 +4149,7 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "Galactic, Societal"
+                            "value": " from being transformed, seized, or destroyed by other communities, societies, or the universe. "
                           }
                         ]
                       }
@@ -4592,7 +4189,7 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "Usurp"
+                            "value": "Occupy"
                           }
                         ]
                       }
@@ -4625,12 +4222,61 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "For this round you are the only Leader, cannot add or remove other Leaders, and cannot be vetoed in any decisions. "
+                            "value": "Play this card to "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "permanently move a resource"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " from one community in this society to another community, including your own. "
                           }
                         ]
                       }
                     ]
-                  },
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "tr",
+            "properties": {},
+            "children": [
+              {
+                "type": "element",
+                "tagName": "td",
+                "properties": {
+                  "style": "border-left: 0.50000025PT rgb(204, 204, 204) solid; border-right: 0.50000025PT rgb(204, 204, 204) solid; border-top: 0.50000025PT rgb(204, 204, 204) solid; border-bottom: 0.50000025PT rgb(204, 204, 204) solid; padding-bottom: 2PT; padding-left: 2PT; padding-right: 2PT; padding-top: 2PT; vertical-align: bottom"
+                },
+                "children": [
                   {
                     "type": "element",
                     "tagName": "p",
@@ -4649,31 +4295,7 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": ""
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "element",
-                    "tagName": "p",
-                    "properties": {
-                      "className": [
-                        "normal-text"
-                      ]
-                    },
-                    "children": [
-                      {
-                        "type": "element",
-                        "tagName": "span",
-                        "properties": {
-                          "style": "font-size: 10PT"
-                        },
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "You may elect to trigger a Crisis of Leadership to attempt to make your new structure permanent. If you choose not to trigger a Crisis, leadership returns to its previous state during the next round."
+                            "value": "Counter"
                           }
                         ]
                       }
@@ -4706,7 +4328,40 @@
                         "children": [
                           {
                             "type": "text",
-                            "value": "Societal"
+                            "value": "Play this card immediately after another community in this society plays a willpower card to "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "strong",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "element",
+                            "tagName": "span",
+                            "properties": {
+                              "style": "font-size: 10PT"
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "cancel the effect"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "span",
+                        "properties": {
+                          "style": "font-size: 10PT"
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": " of that card."
                           }
                         ]
                       }
@@ -5052,17 +4707,6 @@
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "type": "element",
-            "tagName": "li",
-            "properties": {},
-            "children": [
-              {
-                "type": "text",
-                "value": "On a Force roll you add-up the total value of all dice rolled and compare them against the dice rolled by either the Game Master or the other Player, with a tie going to the GM or the defender."
               }
             ]
           }
@@ -5424,67 +5068,7 @@
         "children": [
           {
             "type": "text",
-            "value": "If the rolling society is successful at destroying resources, they may well destroy a resource intended to be used by another society’s action that round. In this case, the injured society will remove that die from their dice pool. If the destroyed resource was the primary resource for the action, they will also roll with disadvantage."
-          }
-        ]
-      },
-      {
-        "type": "element",
-        "tagName": "p",
-        "properties": {
-          "className": [
-            "normal-text"
-          ]
-        },
-        "children": [
-          {
-            "type": "text",
-            "value": ""
-          }
-        ]
-      },
-      {
-        "type": "element",
-        "tagName": "p",
-        "properties": {
-          "className": [
-            "normal-text"
-          ]
-        },
-        "children": [
-          {
-            "type": "text",
-            "value": "WIllpower cards like Resist can be played to negate the destruction of a resource! Should this happen, the GM will add a narrative hardship to the injured society instead."
-          }
-        ]
-      },
-      {
-        "type": "element",
-        "tagName": "p",
-        "properties": {
-          "className": [
-            "normal-text"
-          ]
-        },
-        "children": [
-          {
-            "type": "text",
-            "value": ""
-          }
-        ]
-      },
-      {
-        "type": "element",
-        "tagName": "p",
-        "properties": {
-          "className": [
-            "normal-text"
-          ]
-        },
-        "children": [
-          {
-            "type": "text",
-            "value": "The injured society may choose to retaliate when they deliberate on their next action."
+            "value": "Societal actions are resolved in the order that Societies arrive at the dais, which can have a major impact on the actions being taken. For example, if a society is successful at destroying another’s resources, they may well destroy a resource intended to be used by another society’s action later that round. In this case, the injured society will remove that die from their dice pool. If the destroyed resource was the primary resource for the action, the emissary can decide if they would like to forego taking an action or to take the action but with disadvantage alongside the removed die. The aggressed society may choose to retaliate when they deliberate on their next action."
           }
         ]
       },
@@ -5878,7 +5462,7 @@
             "children": [
               {
                 "type": "text",
-                "value": "Take a blank Community sheet. Your new community will be a Voice of the People."
+                "value": "Discard all resources and Willpower cards from your previous Community."
               }
             ]
           },
@@ -5889,7 +5473,7 @@
             "children": [
               {
                 "type": "text",
-                "value": "If the player has any remaining Willpower cards they pick one Willpower card to keep, and discard the rest."
+                "value": "Take a blank Community sheet. Your new community will be a Voice of the People."
               }
             ]
           },
@@ -6015,7 +5599,7 @@
         "children": [
           {
             "type": "text",
-            "value": "During The Universe Responds, the Game Master reveals additional major plot developments, and may ask Communities to make Force rolls to resist unexpected events and outcomes. The GM may also announce any ongoing buffs or debuffs affecting Societies."
+            "value": "During The Universe Responds, the Game Master reveals additional major plot developments, and may impact Societies and Communities with unexpected events. The GM may also announce any ongoing buffs or debuffs affecting Societies."
           }
         ]
       },
@@ -6052,7 +5636,38 @@
         "children": [
           {
             "type": "text",
-            "value": "During the Universal Phase, if the GM is impacting a Society, the GM names the Communities impacted, and then the impacted Communities decide which of their resources are then impacted. Ex. If a meteor hits a Society, the GM decides the impacted Community and the impacted Community picks which resource is transformed or destroyed."
+            "value": "During the Universal Phase, if the GM is impacting a Society, the GM names the Communities impacted, and then the impacted Communities decide which of their resources are then impacted."
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {
+          "style": "padding-left: 36PT; text-indent: 36PT",
+          "className": [
+            "normal-text"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "Ex. If a meteor hits a Society, the GM decides the impacted Community and the impacted Community picks which resource is transformed or destroyed."
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "p",
+        "properties": {
+          "className": [
+            "normal-text"
+          ]
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "Additionally, if a Voice of the Leaders is impacted, they may choose to instead impact a Voice of the People of their choosing."
           },
           {
             "type": "text",
@@ -7983,7 +7598,7 @@
             "children": [
               {
                 "type": "text",
-                "value": "As Societies are being built, they pick one Fate from a group of three that are unique to that Society’s archetype. They also answer, collectively, the prompt for their Ideal."
+                "value": "As Societies are being built, they pick one Fate from a group of three that are unique to that Society’s archetype. If a Society successfully completes their Fate, as decided by the GM, they become inspired and can add one additional d6 to one future roll of their choice. They also answer, collectively, the prompt for their Ideal."
               }
             ]
           }
@@ -8721,7 +8336,14 @@
                       {
                         "type": "text",
                         "value": "We will make a technological breakthrough"
-                      },
+                      }
+                    ]
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "li",
+                    "properties": {},
+                    "children": [
                       {
                         "type": "text",
                         "value": ""
@@ -11716,6 +11338,77 @@
           {
             "type": "text",
             "value": ""
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "h1",
+        "properties": {
+          "className": [
+            "heading-1"
+          ],
+          "id": "on-pacing"
+        },
+        "children": [
+          {
+            "type": "text",
+            "value": "On Pacing"
+          }
+        ]
+      },
+      {
+        "type": "element",
+        "tagName": "ul",
+        "properties": {
+          "className": [
+            "nesting-level-1"
+          ]
+        },
+        "children": [
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Every round needs to feel like a new chapter in a book, not just the next line or paragraph."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "The world needs to change drastically enough that an opportunity to act only exists for a single round."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "The amount of time that passes between rounds is on the order of months and years, not days and weeks; Narrated and described through how the universe responds."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "li",
+            "properties": {},
+            "children": [
+              {
+                "type": "text",
+                "value": "Player actions should be grand endeavors, not momentary attempts."
+              }
+            ]
           }
         ]
       }

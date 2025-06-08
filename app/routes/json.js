@@ -8,13 +8,13 @@ import express from "express";
 
 const jsonRouter = express.Router();
 
-jsonRouter.use((req, res, next) => {
+jsonRouter.use(async (req, res, next) => {
   res.type("json");
   next();
 })
 
 
-jsonRouter.get("/episodes/active", (req, res) => {
+jsonRouter.get("/episodes/active", async (req, res) => {
   let episode = Ledger.getActiveEpisode();
 
   const formatResource = ({name,id, tags}) => ({
@@ -68,7 +68,7 @@ jsonRouter.get("/episodes/active", (req, res) => {
 
 });
 
-jsonRouter.get("/episodes/active/playlist", (req, res) => {
+jsonRouter.get("/episodes/active/playlist", async (req, res) => {
   let episode = Ledger.getActiveEpisode();
 
 
@@ -82,34 +82,34 @@ jsonRouter.get("/episodes/active/playlist", (req, res) => {
 
 
 
-jsonRouter.get("/games", (req, res) => {
+jsonRouter.get("/games", async (req, res) => {
   res.send(Ledger.games);
 });
 
-jsonRouter.get("/episodes", (req, res) => {
+jsonRouter.get("/episodes", async (req, res) => {
   res.send(Ledger.episodes);
 });
 
-jsonRouter.get("/episodes/:episodeId", (req, res) => {
+jsonRouter.get("/episodes/:episodeId", async (req, res) => {
   const { episodeId } = req.params;
-  const episode = Episode.load(episodeId)
+  const episode = await Episode.load(episodeId)
   res.send(episode);
 });
 
 //TODO: These requests should be scoped to either a specific society, or the active society (if one exists)
-jsonRouter.get("/communities", (req, res) => {
+jsonRouter.get("/communities", async (req, res) => {
   const activeEpisode = Ledger.getActiveEpisode();
   const communities = activeEpisode?.communities || [];
   res.send(communities);
 });
 
-jsonRouter.get("/players", (req, res) => {
+jsonRouter.get("/players", async (req, res) => {
   const activeEpisode = Ledger.getActiveEpisode();
   const players = activeEpisode?.players || [];
   res.send(players);
 });
 
-jsonRouter.get("/societies", (req, res) => {
+jsonRouter.get("/societies", async (req, res) => {
   const activeEpisode = Ledger.getActiveEpisode();
   const societies = activeEpisode?.societies || [];
   res.send(societies);

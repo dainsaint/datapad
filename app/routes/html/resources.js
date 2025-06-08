@@ -15,19 +15,19 @@ const resources = express.Router();
 */
 
 
-resources.get("/:episodeId", (req, res, next) => {
+resources.get("/:episodeId", async (req, res, next) => {
   const { episodeId } = req.params;
   const { view = "list", layout = "none" } = req.query;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
 
   res.render(`resources/${view}`, { episode, layout });
 });
 
-resources.post("/:episodeId", (req, res, next) => {
+resources.post("/:episodeId", async (req, res, next) => {
   const { episodeId } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const resource = new Resource( req.body );
   
   episode.addResource(resource);
@@ -43,11 +43,11 @@ resources.post("/:episodeId", (req, res, next) => {
 
 
 
-resources.get("/:episodeId/create", (req, res, next) => {
+resources.get("/:episodeId/create", async (req, res, next) => {
   const { episodeId } = req.params;
   const { societyId, communityId } = req.query;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const society = episode.getSocietyById(societyId);
 
   res.render(`resources/create`, { episode, society, communityId });
@@ -62,20 +62,20 @@ resources.get("/:episodeId/create", (req, res, next) => {
 
 
 
-resources.get("/:episodeId/:resourceId/:view?", (req, res, next) => {
+resources.get("/:episodeId/:resourceId/:view?", async (req, res, next) => {
   const { episodeId, resourceId, view = "edit" } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
 
   res.render(`resources/${view}`, { resource });
 });
 
-resources.patch("/:episodeId/:resourceId", (req, res, next) => {
+resources.patch("/:episodeId/:resourceId", async (req, res, next) => {
   const { episodeId, resourceId } = req.params;
   const { shouldAlterTags, exhausted } = req.body;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
 
   resource.update(req.body);
@@ -95,9 +95,9 @@ resources.patch("/:episodeId/:resourceId", (req, res, next) => {
 });
 
 
-resources.post("/:episodeId/:resourceId/destroy", (req, res) => {
+resources.post("/:episodeId/:resourceId/destroy", async (req, res) => {
   const { episodeId, resourceId } = req.params;
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
   resource.destroy();
   episode.save();
@@ -107,11 +107,11 @@ resources.post("/:episodeId/:resourceId/destroy", (req, res) => {
 });
 
 
-resources.delete("/:episodeId/:resourceId", (req, res) => {
+resources.delete("/:episodeId/:resourceId", async (req, res) => {
   const { episodeId, resourceId } = req.params;
 
   try {
-    const episode = Episode.load(episodeId);
+    const episode = await Episode.load(episodeId);
     episode.deleteResourceById( resourceId );
     episode.save();
 

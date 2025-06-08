@@ -20,17 +20,17 @@ const episodes = express.Router();
 */
 
 
-function episodeLayout(req, res, next) {
+function episodeLayout (req, res, next) {
   res.locals.layout = req.headers["hx-request"] ? "none" : "episode";
   next();
 }
 
 
-episodes.get("/create", (req, res) => {
+episodes.get("/create", async (req, res) => {
   res.render(`episodes/create`);
 });
 
-episodes.post("/create/time", (req, res) => {
+episodes.post("/create/time", async (req, res) => {
   const { date, time, duration } = req.body;
 
   res.send( EpisodeTimeInput({
@@ -56,7 +56,7 @@ episodes.post("/",
   }),
   body("scheduledTime"),
   
-  (req, res) => {
+  async (req, res) => {
     const result = validationResult(req);
     if( !result.isEmpty() ) {
       throw new Error( JSON.stringify( result.array(), null, 2 ) )
@@ -71,9 +71,9 @@ episodes.post("/",
     broadcast("episode");
 })
 
-episodes.put("/:episodeId", (req, res) => {
+episodes.put("/:episodeId", async (req, res) => {
   const { episodeId } = req.params;
-  const episode = Episode.load( episodeId );
+  const episode = await Episode.load( episodeId );
   console.log( req.body );
   episode.update( req.body );
   episode.save();
@@ -86,19 +86,19 @@ episodes.put("/:episodeId", (req, res) => {
 ////////////////////////////////////////
 
 
-episodes.post("/:episodeId/active", (req, res) => {
+episodes.post("/:episodeId/active", async (req, res) => {
   const { episodeId } = req.params;
-  const episode = Episode.load( episodeId );
+  const episode = await Episode.load( episodeId );
   Ledger.setActiveEpisode( episode );
   res.sendStatus(200);
   broadcast("episode");
 })
 
 
-episodes.get("/:episodeId/facilitator/:societyId?", episodeLayout, (req, res) => {
+episodes.get("/:episodeId/facilitator/:societyId?", episodeLayout, async (req, res) => {
   const { episodeId, societyId } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
 
   req.session.facilitator ??= {}  
 
@@ -115,10 +115,10 @@ episodes.get("/:episodeId/facilitator/:societyId?", episodeLayout, (req, res) =>
 });
 
 
-episodes.get("/:episodeId/documents/:documentId?", episodeLayout, (req, res) => {
+episodes.get("/:episodeId/documents/:documentId?", episodeLayout, async (req, res) => {
   const { episodeId, documentId } = req.params;
   
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
 
   req.session.documents ??= {}  
 
@@ -135,10 +135,10 @@ episodes.get("/:episodeId/documents/:documentId?", episodeLayout, (req, res) => 
 });
 
 
-episodes.get("/:episodeId/:view?", episodeLayout, (req, res) => {
+episodes.get("/:episodeId/:view?", episodeLayout, async (req, res) => {
   const { episodeId, view } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
 
   if(!view)
     res.redirect(`/episodes/${episodeId}/gm`)
@@ -149,12 +149,12 @@ episodes.get("/:episodeId/:view?", episodeLayout, (req, res) => {
 
 
 
-episodes.put("/:episodeId/playlist", (req, res) => {
+episodes.put("/:episodeId/playlist", async (req, res) => {
   const { episodeId } = req.params;
   const { phaseIds } = req.body;
   
   const inOrder = phaseIds.flat();
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
 
   episode.phases.sort( (a, b) => inOrder.indexOf(a.id) - inOrder.indexOf(b.id) );
   episode.save();
@@ -167,7 +167,7 @@ episodes.put("/:episodeId/playlist", (req, res) => {
 
 episodes.post("/:episodeId/documents", async (req, res) => {
   const { episodeId } = req.params;
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const document = new Document(req.body);
 
   episode.documentIds.push( document.id );
@@ -180,11 +180,11 @@ episodes.post("/:episodeId/documents", async (req, res) => {
 });
 
 
-episodes.post("/:episodeId/copy", (req, res) => {
+episodes.post("/:episodeId/copy", async (req, res) => {
   const { episodeId } = req.params;
   const { originalEpisodeId } = req.body;
-  const episode = Episode.load( episodeId );
-  const original = Episode.load( originalEpisodeId );
+  const episode = await Episode.load( episodeId );
+  const original = await Episode.load( originalEpisodeId );
 
   episode.resources = [];
   episode.actions = [];

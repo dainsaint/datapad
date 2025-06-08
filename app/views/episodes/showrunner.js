@@ -14,7 +14,7 @@ export default function EpisodeShowrunner ({ episode } = {}) {
       hx-select-oob="#showrunner-playlist, #showrunner-game-state"
       hx-disinherit="*"
     >
-      <div id="showrunner-playlist" class="panel stack" >
+      <div id="showrunner-playlist" class="stack panel" >
         ${ currentPhase && PhaseControls({ phase: currentPhase }) }
         <h1>Playlist</h1>
         ${ EpisodePlaylist({ episode }) }      

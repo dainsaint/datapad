@@ -11,14 +11,14 @@ Games are implicitly created by episodes, so we dont need full CRUD here (right?
 - [ ] PUT    /games/:game
 */
 
-games.get("/:view?", (req, res, next) => {
+games.get("/:view?", async (req, res, next) => {
   // const { view = "overview" } = req.params;
   
   // const games = Ledger.games;
   // res.render(`games/${view}`, { games });
 });
 
-games.get("/:gameId/:view?", (req, res, next) => {
+games.get("/:gameId/:view?", async (req, res, next) => {
   // const { id, view = "overview"} = req.params;
   // const game = Ledger.getGameById(id);
   // res.render(`games/${view}`, { game });

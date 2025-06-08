@@ -43,7 +43,7 @@ documents.post("/:documentId", async (req, res) => {
 
 documents.delete("/:documentId/:episodeId", async (req, res) => {
   const { episodeId, documentId } = req.params;
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   episode.deleteDocumentById(documentId);
   episode.save();
 

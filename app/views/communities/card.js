@@ -1,10 +1,15 @@
 import { html } from "#core/utils";
 import Community, { CommunityTag, CommunityVoice } from "#models/community";
+import { TurnOverrideVoice } from "#models/turn";
 import Icon from "#views/ui/icon";
 
 export default function CommunityCard({ community = new Community(), inSociety } = {}) {
 
-  let voiceIcon = community.voice;
+  const turn = community.society.currentTurn;
+  const turnVoice = turn.alterLeadership[community.id];
+  const voice = (turnVoice && turnVoice != TurnOverrideVoice.NONE) ? turnVoice : community.voice;
+
+  let voiceIcon = voice;
 
   const cardClasses = [];
 
@@ -27,7 +32,7 @@ export default function CommunityCard({ community = new Community(), inSociety }
     >
       <form 
         id="community-card-${community.id}" 
-        class="card card-fancy community-card ${community.society.color} community-card--${community.voice} ${ cardClasses } stack-loose droppable-target js-community-card"
+        class="card card-fancy community-card ${community.society.color} community-card--${voice} ${ cardClasses } stack-loose droppable-target js-community-card"
         data-society-id="${community.society.id}"
         hx-trigger="sorted"
         hx-post="${community.toURL("/resources")}"
@@ -38,7 +43,7 @@ export default function CommunityCard({ community = new Community(), inSociety }
       >
 
         <header class="community-card__header">
-          <p class="is-size-7">${ community.voice } ${ community.isEmissary && "• emissary"} ${ community.isAmbassador && "• ambassador"}</p></p>
+          <p class="is-size-7">${ voice } ${ community.isEmissary && "• emissary"} ${ community.isAmbassador && "• ambassador"}</p></p>
           <strong>
             ${ community.resources.length == 0 && html`<i class="fa fa-warning"></i> ` }<a class="is-uppercase is-size-5" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name}</a>
           </strong>

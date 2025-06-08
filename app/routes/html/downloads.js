@@ -3,17 +3,17 @@ import Episode from "#models/episode";
 
 const downloads = express.Router();
 
-downloads.get("/:episodeId.json", (req, res) => {
+downloads.get("/:episodeId.json", async (req, res) => {
   const { episodeId } = req.params;
-  let episode = Episode.load(episodeId);
+  let episode = await Episode.load(episodeId);
   
   res.setHeader("Content-Type", "application/json");
   res.send( JSON.stringify(episode, null, 2) );
 });
 
-downloads.get("/:episodeId.csv", (req, res) => {
+downloads.get("/:episodeId.csv", async (req, res) => {
   const { episodeId } = req.params;
-  let episode = Episode.load(episodeId);
+  let episode = await Episode.load(episodeId);
 
   const records = episode.records.map( record => `${record.timestamp}, ${record.type}, ${record.description}, ${record.value}`).join("\n");
   const response = "timestamp, type, description, value\n" + records;

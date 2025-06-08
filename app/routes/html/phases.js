@@ -7,18 +7,18 @@ import { broadcast } from "#routes/html/events";
 const phases = express.Router();
 
 
-phases.get("/:episodeId/create", (req, res, next) => {
+phases.get("/:episodeId/create", async (req, res, next) => {
   const { episodeId } = req.params;
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   res.render(`phases/create`, { episode });
 });
 
 
-phases.post("/:episodeId", (req, res, next) => {
+phases.post("/:episodeId", async (req, res, next) => {
   const { episodeId } = req.params;
   const { type, duration: { minutes, seconds }} = req.body;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   
   const update = {
     type,
@@ -35,13 +35,14 @@ phases.post("/:episodeId", (req, res, next) => {
 })
 
 
-phases.post("/:episodeId/round", (req, res, next) => {
+phases.post("/:episodeId/round", async (req, res, next) => {
   const { episodeId } = req.params;
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
 
   episode.addPhase(new Phase({ type: PhaseType.UNIVERSAL, duration: 240 }))
   episode.addPhase(new Phase({ type: PhaseType.SOCIETAL,  duration: 10 * 60 }))
   episode.addPhase(new Phase({ type: PhaseType.GALACTIC,  duration: 3 * 4 * 60 }))
+  episode.addPhase(new Phase({ type: PhaseType.INDIVIDUAL,  duration: 10 * 60 }))
   episode.sanitizePhases();
   episode.save();
   
@@ -52,10 +53,10 @@ phases.post("/:episodeId/round", (req, res, next) => {
 
 
 
-phases.get("/:episodeId/:phaseId/:view?", (req, res, next) => {
+phases.get("/:episodeId/:phaseId/:view?", async (req, res, next) => {
   const { episodeId, phaseId, view = "card" } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const phase = episode.getPhaseById(phaseId);
 
   res.render(`phases/${view}`, { phase });
@@ -63,11 +64,11 @@ phases.get("/:episodeId/:phaseId/:view?", (req, res, next) => {
 
 
 
-phases.post("/:episodeId/:phaseId", (req, res, next) => {
+phases.post("/:episodeId/:phaseId", async (req, res, next) => {
   const { episodeId, phaseId } = req.params;
   const { action } = req.body;
   
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const phase = episode.getPhaseById(phaseId);
 
   //TODO: handle this logic better, with the mutability problem
@@ -117,11 +118,11 @@ phases.post("/:episodeId/:phaseId", (req, res, next) => {
 
 
 
-phases.put("/:episodeId/:phaseId", (req, res, next) => {
+phases.put("/:episodeId/:phaseId", async (req, res, next) => {
   const { episodeId, phaseId } = req.params;
   const { type, round, duration: { minutes, seconds }} = req.body;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const phase = episode.getPhaseById(phaseId);
   
   const update = {
@@ -139,11 +140,11 @@ phases.put("/:episodeId/:phaseId", (req, res, next) => {
 })
 
 
-phases.delete("/:episodeId/:phaseId", (req, res) => {
+phases.delete("/:episodeId/:phaseId", async (req, res) => {
   const { episodeId, phaseId } = req.params;
 
   try {
-    const episode = Episode.load(episodeId);
+    const episode = await Episode.load(episodeId);
     episode.deletePhaseById( phaseId );
     episode.save();
   

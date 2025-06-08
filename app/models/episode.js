@@ -229,8 +229,8 @@ export default class Episode extends Model {
   getPhaseGroups() {
     let round = 0;
     const groups = this.phases.reduce( (result, phase ) => {
-      const isRound = [ PhaseType.UNIVERSAL, PhaseType.SOCIETAL, PhaseType.GALACTIC ].includes( phase.type );
-      const startsNewGroup = [ PhaseType.UNIVERSAL, PhaseType.BLANK, PhaseType.BREAK, PhaseType.CONCLUSION, PhaseType.SETUP, PhaseType.INDIVIDUAL,  PhaseType.GENERATIONAL ].includes( phase.type );
+      const isRound = [ PhaseType.UNIVERSAL, PhaseType.SOCIETAL, PhaseType.GALACTIC, PhaseType.INDIVIDUAL, PhaseType.GENERATIONAL ].includes( phase.type );
+      const startsNewGroup = [ PhaseType.UNIVERSAL, PhaseType.BLANK, PhaseType.BREAK, PhaseType.CONCLUSION, PhaseType.SETUP ].includes( phase.type );
   
       if( result.length == 0 || startsNewGroup ) {
         if( isRound ) round++;

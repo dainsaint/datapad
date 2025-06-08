@@ -8,19 +8,19 @@ const pages = express.Router();
 - [x] GET     /
 */
 
-pages.get("/home", (req, res) => {
+pages.get("/home", async (req, res) => {
   const games = Ledger.games;
   const episodes = Ledger.episodes;
   res.render("pages/home", { games, episodes });
 });
 
-pages.get("/", (req, res) => {
+pages.get("/", async (req, res) => {
   let episode = Ledger.getActiveEpisode();
   
   if( !episode ) {
     const lastEpisodeData = Ledger.episodes.at(-1);
    
-    episode = Episode.load( lastEpisodeData.id );
+    episode = await Episode.load( lastEpisodeData.id );
     episode.save();
 
     Ledger.setActiveEpisode(episode);

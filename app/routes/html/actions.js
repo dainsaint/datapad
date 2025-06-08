@@ -8,11 +8,11 @@ import ActionEdit from "#views/actions/edit";
 
 const actions = express.Router();
 
-actions.get("/:episodeId", (req, res, next) => {
+actions.get("/:episodeId", async (req, res, next) => {
   const { episodeId } = req.params;
   const { societyId } = req.query;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
 
   res.send(ActionEdit({ episode, societyId }));
 });
@@ -22,13 +22,13 @@ actions.get("/:episodeId", (req, res, next) => {
 
 
 
-actions.post("/:episodeId/:actionId/resources", (req, res, next) => {
+actions.post("/:episodeId/:actionId/resources", async (req, res, next) => {
   const { episodeId, actionId } = req.params;
   const { resourceIds = [], texts = [], risk, disadvantage, advantage, vote } = req.body;
 
   console.log( req.body );
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const action = episode.getActionById(actionId);
 
   //Ensure unique
@@ -58,11 +58,11 @@ actions.post("/:episodeId/:actionId/resources", (req, res, next) => {
   broadcast("actions");
 });
 
-actions.post("/:episodeId/:actionId/result", (req, res) => {
+actions.post("/:episodeId/:actionId/result", async (req, res) => {
   const { episodeId, actionId } = req.params;
   const { result } = req.body;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const action = episode.getActionById(actionId);
 
   const newResult = result.map( r => Array.isArray(r) ? parseInt(r.at(-1)) : parseInt(r) );
@@ -77,10 +77,10 @@ actions.post("/:episodeId/:actionId/result", (req, res) => {
 
 
 
-actions.get("/:episodeId/:actionId/:view?", (req, res) => {
+actions.get("/:episodeId/:actionId/:view?", async (req, res) => {
   const { episodeId, actionId, view = "view" } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const action = episode.getActionById(actionId);
 
   res.render(`actions/${view}`, {action});

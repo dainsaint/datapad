@@ -27,7 +27,7 @@ export default function EpisodePlaylist({ episode }) {
 
   return html`
     <div id="playlist"
-      class="full scrollable"
+      class="scrollable"
     >
       <form
         class="phase-playlist stack"
@@ -78,7 +78,6 @@ export default function EpisodePlaylist({ episode }) {
           class="phase-playlist__list full stack-tight" 
           data-sortable="phase" 
           data-sortable-handle=".drag-handle"
-          style="max-height: 70vh; padding-bottom: 10vh;"
         >
           
         ${ phaseGroups.map( (group) => html`
@@ -88,18 +87,6 @@ export default function EpisodePlaylist({ episode }) {
         ` )}
         </div>
       </form>
-
-
     </div>
-
   `
 }
-
-
-
-
-
-// hx-trigger="sse:phases"
-// hx-get="${ episode.toURL("/playlist") }"
-// hx-swap="outerHTML"
-// hx-disinherit="*"

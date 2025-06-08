@@ -51,13 +51,13 @@ class LedgerSingleton {
   }
 
   setActiveEpisode( episode ) {
-    this.active = episode
+    this.active = episode.id
     this.#save();
   }
 
   getActiveEpisode() {
     //TODO: Fix this doofer
-    return this.active
+    return this.episodes.find( episode => episode.id == this.active );
   }
 
   //TODO: Make sure each game has a list of its episodes

@@ -1,5 +1,6 @@
 import Model from "#database/model";
 import { ActionStatus } from "#models/action";
+import { CommunityVoice } from "#models/community";
 
 export default class Turn extends Model {
 
@@ -19,6 +20,11 @@ export default class Turn extends Model {
   constructor({round, societyId}) {
     super({round, societyId});
     this.update({round, societyId});
+  }
+
+  validateLeadership() {
+    this.society.activeCommunities.forEach( community => this.alterLeadership[community.id] ??= community.voice )
+    this.episode.save();
   }
 
   isAmbassador( communityId ) {
@@ -47,3 +53,9 @@ export default class Turn extends Model {
     return `/turns/${this.episode.id}/${this.societyId}/${this.round}` + append;
   }
 }
+
+export const TurnOverrideVoice = {
+  NONE: "None",
+  LEADER: CommunityVoice.LEADER,
+  PEOPLE: CommunityVoice.PEOPLE
+} 

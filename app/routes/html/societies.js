@@ -18,16 +18,16 @@ const societies = express.Router();
 - [~] DELETE  /episodes/:episode/societies/:society
 */
 
-societies.get("/:episodeId/:view?", (req, res, next) => {
+societies.get("/:episodeId/:view?", async (req, res, next) => {
   const { episodeId, view = "list" } = req.params;
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   res.render(`societies/${view}`, { episode })
 });
 
-societies.post("/:episodeId", (req, res, next) => {
+societies.post("/:episodeId", async (req, res, next) => {
   const { episodeId } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const society = new Society(req.body);
   episode.addSociety(society);
   episode.save();
@@ -49,11 +49,11 @@ societies.post("/:episodeId", (req, res, next) => {
 
 
 
-societies.post("/:episodeId/:societyId/actions", (req, res, next) => {
+societies.post("/:episodeId/:societyId/actions", async (req, res, next) => {
   const { episodeId, societyId } = req.params;
   const { round } = req.body;
 
-  const episode = Episode.load(episodeId);  
+  const episode = await Episode.load(episodeId);  
   const action = new Action({ societyId, round });
   episode.addAction(action);
   episode.save();
@@ -64,10 +64,10 @@ societies.post("/:episodeId/:societyId/actions", (req, res, next) => {
   broadcast("actions");
 });
 
-societies.post("/:episodeId/:societyId/communities", (req, res) => {
+societies.post("/:episodeId/:societyId/communities", async (req, res) => {
   const { episodeId } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const community = new Community(req.body);
 
   episode.addCommunity(community);
@@ -79,19 +79,19 @@ societies.post("/:episodeId/:societyId/communities", (req, res) => {
 });
 
 
-societies.get("/:episodeId/:societyId/:view?", (req, res, next) => {
+societies.get("/:episodeId/:societyId/:view?", async (req, res, next) => {
   const { episodeId, societyId, view = "panel" } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const society = episode.getSocietyById(societyId);
 
   res.render(`societies/${view}`, { society });
 });
 
-societies.put("/:episodeId/:societyId", body("name").trim(), (req, res, next) => {
+societies.put("/:episodeId/:societyId", body("name").trim(), async (req, res, next) => {
   const { episodeId, societyId } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const society = episode.getSocietyById(societyId);
   const data = { ...req.body, ...matchedData(req) }
 
@@ -105,11 +105,11 @@ societies.put("/:episodeId/:societyId", body("name").trim(), (req, res, next) =>
     
 
 
-// societies.post("/:episodeId/:societyId/ambassador", (req, res) => {
+// societies.post("/:episodeId/:societyId/ambassador", async (req, res) => {
 //   const { episodeId } = req.params;
 //   const { communityId, ambassadorSocietyId } = req.body;
 
-//   const episode = Episode.load(episodeId);
+//   const episode = await Episode.load(episodeId);
 //   const community = episode.getCommunityById(communityId);
 //   community.ambassadorSocietyId = ambassadorSocietyId;
 
@@ -120,12 +120,12 @@ societies.put("/:episodeId/:societyId", body("name").trim(), (req, res, next) =>
 // })
 
 
-// societies.post("/:episodeId/:societyId/emissary", (req, res) => {
+// societies.post("/:episodeId/:societyId/emissary", async (req, res) => {
 //   console.log("what up");
 //   const { episodeId, societyId } = req.params;
 //   const { round, emissaryCommunityId } = req.body;
 
-//   const episode = Episode.load(episodeId);
+//   const episode = await Episode.load(episodeId);
 //   const society = episode.getSocietyById(societyId);
 //   const roundData = society.getRoundData( round );
 //   roundData.emissaryCommunityId = emissaryCommunityId;
@@ -141,11 +141,11 @@ societies.put("/:episodeId/:societyId", body("name").trim(), (req, res, next) =>
 //Like, does deleting a society delete all communities it had?
 // episode.removeSocietyById(societyId);
 
-societies.delete("/:episodeId/:societyId", (req, res) => {
+societies.delete("/:episodeId/:societyId", async (req, res) => {
   const { episodeId, societyId } = req.params;
 
   try {
-    const episode = Episode.load(episodeId);
+    const episode = await Episode.load(episodeId);
     episode.deleteSocietyById( societyId );
     episode.save();
   

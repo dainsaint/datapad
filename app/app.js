@@ -24,7 +24,7 @@ const errorHandler = (err, req, res, next) => {
     .send(`<pre>${err.stack}</pre>`);
 };
 
-const hxLayout = (layout) => (req, res, next) => {
+const hxLayout = (layout) => async (req, res, next) => {
   res.locals.layout ??= req.headers["hx-request"] ? "none" : layout;
   next();
 }
@@ -72,7 +72,7 @@ export default class Server {
     app.use(express.json());
     app.use(express.urlencoded());
     app.use(express.static("app/public"));
-    app.use((req, res, next) => {
+    app.use(async (req, res, next) => {
       request.path = req.path;
       request.query = req.query;
       request.params = req.params;

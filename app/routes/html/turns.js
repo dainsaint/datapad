@@ -9,36 +9,42 @@ const turns = express.Router();
 ////////////////////////////////////////
 
 
-turns.post("/:episodeId/:societyId/:round", (req, res) => {
+turns.post("/:episodeId/:societyId/:round", async (req, res) => {
   const { episodeId, round, societyId } = req.params;
 
-  const episode = Episode.load(episodeId);
+  const episode = await Episode.load(episodeId);
   const turn = episode.getTurnByRound(societyId, round);
   turn.update( req.body )
-
-console.log( req.body, turn.id );
-
   episode.save();
 
   res.sendStatus(200);
   broadcast("societies");
 })
 
+turns.get("/:episodeId/:societyId/:round/:view?", async (req, res) => {
+  const { episodeId, round, societyId, view } = req.params;
 
-turns.post("/:episodeId/:round/:societyId/ambassador", (req, res) => {
-  const { episodeId, round } = req.params;
-  const { communityId, ambassadorSocietyId } = req.body;
+  const episode = await Episode.load(episodeId);
+  const turn = episode.getTurnByRound(societyId, round);
 
-  const episode = Episode.load(episodeId);
-  const community = episode.getCommunityById(communityId);
-  community.ambassadorSocietyId = ambassadorSocietyId;
+  res.render(`turns/${view}`, { turn });
+})
 
-  episode.save();
+
+turns.post("/:episodeId/:societyId/:round/leadership", async (req, res) => {
+  const { episodeId, societyId, round } = req.params;
+
+  console.log( req.body );
+
+  const episode = await Episode.load(episodeId);
+  const turn = episode.getTurnByRound(societyId, round);
+
+  
+  // episode.save();
 
   res.sendStatus(200);
   broadcast("societies");
 })
-
 
 
 export default turns;

@@ -1,7 +1,14 @@
 import "dotenv/config";
 import {Octokit} from "octokit";
+import Storage from "#database/storage";
 
-export default class Offshore {
+
+
+
+
+export default class RemoteStorage extends Storage {
+  enabled = true;
+
   options = {
     owner: "dainsaint",
     repo: "datapad-data",
@@ -9,10 +16,11 @@ export default class Offshore {
       'X-Github-Api-Version': '2022-11-28'
     }
   }
+  
 
-  enabled = true;
+  constructor({ root = "data", diskWriteDelay = 2000 } = {}) {
+    super({ root, diskWriteDelay });
 
-  constructor(){
     if( !process.env.DATAPAD_CLIENT ) {
       console.log("You need to set DATAPAD_CLIENT in your environment variables to offshore data!");
       this.enabled = false;
@@ -28,7 +36,6 @@ export default class Offshore {
       return;
     }
 
-
     this.octokit = new Octokit({
       auth: process.env.GITHUB_TOKEN
     });
@@ -38,45 +45,22 @@ export default class Offshore {
     return process.env.DATAPAD_CLIENT + "/" + path;
   }
 
-  async getJSONFromPath(path) {
-    if(!this.enabled) return;
-    try {
-      const remote = await this.getRemote(path)
-      const file = await fetch( remote.data.download_url )
-      const text = await file.text();
-      return JSON.parse(text);
-    } catch(e) {
-      console.logError( e );
-    }
-  }
-
-  async getRemote(path) {
-    if(!this.enabled) return;
-
-    const remote = await this.octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
-      ...this.options,
-      path: this.getPath(path)
-    })
-
-    return remote;
-  }
-
-  async saveJSONToPath(path, json) {
+  async _save(filename, data) {
     if(!this.enabled) return;
 
     const putOptions = {
-      path: this.getPath(path),
-      message: "Updating ${path}",
+      path: this.getPath(filename),
+      message: `Updating ${filename}`,
       committer: {
         name: 'Dain Saint',
         email: "dain@cipherprime.com"
       },
-      content: btoa( JSON.stringify(json, null, 2) )
+      content: btoa( JSON.stringify(data, null, 2) )
     }
 
 
     try {
-      const remote = await this.getRemote(path);
+      const remote = await this.getRemote(filename);
       putOptions.sha = remote.data.sha;
     } catch(e) {
       // console.log(e);
@@ -90,28 +74,37 @@ export default class Offshore {
         ...putOptions
       })
 
-      console.log(`Offshored ${path}`);
+      console.log(`Offshored ${filename}`);
 
     } catch(e) {
       console.error( e );
     }
   }
 
-
-  async listFiles() {
+  async _load(filename) {
     if(!this.enabled) return;
 
     try {
-      const repo = await octokit.request('GET /repos/{owner}/{repo}/git/trees/main', {
-        ...this.options
-      })
-
-      console.log(repo.data.tree);
-
-      return repo.data.tree;
+      const path = this.getPath(filename);
+      const remote = await this.getRemote(path);
+      const file = await fetch( remote.data.download_url );
+      const text = await file.text();
+      return JSON.parse(text);
     } catch(e) {
-      console.log( e );
+      console.logError( e );
     }
+  }
+
+
+  async getRemote(path) {
+    if(!this.enabled) return;
+
+    const remote = await this.octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+      ...this.options,
+      path: this.getPath(path)
+    })
+
+    return remote;
   }
 
 }

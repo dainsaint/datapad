@@ -8,6 +8,7 @@ import SocietyActions from "#views/societies/actions";
 
 export default function EpisodeFacilitator ({ episode = new Episode(), societyId = undefined } = {}) {
   const society = societyId ? episode.getSocietyById( societyId ) : episode.societies.at(0);
+  const turn = society.currentTurn;
 
   return society
     ? html`
@@ -38,6 +39,9 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
                 <a hx-get="${ society.toURL("/emissary")}" hx-target="#dialog">${ Icon("emissary") }</a>
               </div>
 
+              <div class="toolbar toolbar-rounded">
+                <a hx-get="${ turn.toURL("/leadership")}" hx-target="#dialog">${ Icon("leader") }</a>
+              </div>
 
             </div>
 
