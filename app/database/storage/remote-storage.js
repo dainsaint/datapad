@@ -63,7 +63,6 @@ export default class RemoteStorage extends Storage {
     if(!this.enabled) return;
 
     const content = Serializer.serialize(data);
-    console.log( content, data );
 
     const putOptions = {
       path: this.getPath(filename),
