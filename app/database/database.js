@@ -29,6 +29,6 @@ export default class Database {
 
 
 export const DatabaseLocation = {
-  LOCAL: "Local",
-  REMOTE: "Remote"
+  LOCAL: "local",
+  REMOTE: "remote"
 }
