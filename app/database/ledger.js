@@ -67,6 +67,10 @@ class LedgerSingleton {
       return null;
   }
 
+  getActiveEpisodeCached() {
+    return Episode.loadCached(this.active)
+  }
+
   //TODO: Make sure each game has a list of its episodes
   updateEpisode(episode) {
     this.#updateRecord("episodes", this.#getEpisodeRecord(episode));

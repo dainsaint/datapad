@@ -42,8 +42,10 @@ export default function PhaseEdit({ phase } = {}) {
         </div>
       </fieldset>
 
-      <div class="layout-spread stack-push">
+      <div class="layout-row gap-tight stack-push">
         <button type="submit"><i class="fa fa-check-circle"></i> Update Phase</button>
+        <button class="color-danger" name="timeElapsed" value="0"><i class="fa fa-arrow-rotate-left"></i> Reset Phase</button>
+        <div class="layout-fill"></div>
         <button type="button" value="cancel">Cancel</button>
       </div>
     </form>

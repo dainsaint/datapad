@@ -120,7 +120,7 @@ phases.post("/:episodeId/:phaseId", async (req, res, next) => {
 
 phases.put("/:episodeId/:phaseId", async (req, res, next) => {
   const { episodeId, phaseId } = req.params;
-  const { type, round, duration: { minutes, seconds }} = req.body;
+  const { type, round, duration: { minutes, seconds }, timeElapsed} = req.body;
 
   const episode = await Episode.load(episodeId);
   const phase = episode.getPhaseById(phaseId);
@@ -130,6 +130,9 @@ phases.put("/:episodeId/:phaseId", async (req, res, next) => {
     round: parseInt(round),
     duration: parseInt(minutes) * 60 + parseInt(seconds)
   };
+
+  if( timeElapsed !== undefined )
+    update.timeElapsed = parseInt(timeElapsed);
 
   phase.update( update );
   episode.save();

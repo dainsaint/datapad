@@ -174,7 +174,6 @@ export default class Episode extends Model {
     round = parseInt(round);
     let turn = this.turns.find( turn => turn.round == round && turn.societyId == societyId );
     
-    
     if(!turn) {
       turn = new Turn({ round, societyId });
       this.addTurn( turn );
@@ -184,7 +183,6 @@ export default class Episode extends Model {
   }
 
   getCurrentTurnForSocietyId( societyId ) {
-    
     return this.getTurnByRound( societyId, this.currentRound );
   }
 
@@ -214,6 +212,10 @@ export default class Episode extends Model {
     return episode;
   };
 
+  static loadCached(id) {
+    return loadedEpisodes.get(id);
+  }
+
 
   toURL(append = "") {
     return `/episodes/${this.id}` + append;
@@ -235,8 +237,6 @@ export default class Episode extends Model {
           round,
           phases: []
         })
-  
-        
       }
       
       result.at(-1).phases.push(phase);

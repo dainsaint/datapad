@@ -11,7 +11,8 @@ export function broadcast(name, data) {
 
 export function tick(deltaTime) {
   try {
-    const activePhases = Ledger.active?.phases?.filter((phase) => phase.isPlaying);
+    const activeEpisode = Ledger.getActiveEpisodeCached();
+    const activePhases = activeEpisode?.phases?.filter((phase) => phase.isPlaying);
 
     for (const phase of activePhases) {
       phase.tick(deltaTime);

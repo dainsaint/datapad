@@ -2,7 +2,7 @@
   "_type": "Episode",
   "id": "gNAXW",
   "name": "Blue Episode",
-  "date": "2025-06-02",
+  "date": "2025-06-02T00:00:00.000-04:00",
   "scheduledTime": {
     "s": "2025-06-02T15:07:36.118-04:00",
     "e": "2025-06-02T20:07:36.118-04:00",
@@ -26,7 +26,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -38,7 +40,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -50,7 +54,9 @@
       "voice": "leader",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -62,7 +68,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -74,7 +82,9 @@
       "voice": "leader",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -86,7 +96,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -112,7 +124,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -124,7 +138,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -164,7 +180,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -176,7 +194,9 @@
       "voice": "leader",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -216,7 +236,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -229,7 +251,8 @@
       "tags": {
         "_type": "Tags",
         "value": [
-          "lost"
+          "lost",
+          "endangered"
         ]
       }
     },
@@ -241,7 +264,9 @@
       "name": "Big bois",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     },
     {
@@ -253,7 +278,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     }
   ],
@@ -262,13 +289,13 @@
       "_type": "Phase",
       "id": "kXv9m",
       "type": "Setup/Onboarding",
-      "status": "idle",
+      "status": "complete",
       "round": 0,
       "duration": 1200,
       "timeElapsed": 0,
       "actualTime": {
-        "s": "2025-06-06T15:54:40.378-04:00",
-        "e": "2025-06-06T15:54:40.378-04:00",
+        "s": "2025-06-11T12:26:32.336-04:00",
+        "e": "2025-06-11T12:26:43.059-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -281,13 +308,13 @@
       "_type": "Phase",
       "id": "YQSS3",
       "type": "Universal Phase",
-      "status": "idle",
+      "status": "paused",
       "round": 1,
       "duration": 240,
       "timeElapsed": 0,
       "actualTime": {
-        "s": "2025-06-06T15:54:40.378-04:00",
-        "e": "2025-06-06T15:54:40.378-04:00",
+        "s": "2025-06-11T12:48:20.095-04:00",
+        "e": "2025-06-11T12:52:20.095-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -306,7 +333,7 @@
       "timeElapsed": 0,
       "actualTime": {
         "s": "2025-06-06T15:54:40.378-04:00",
-        "e": "2025-06-06T15:54:40.378-04:00",
+        "e": "2025-06-11T12:26:20.049-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -325,7 +352,7 @@
       "timeElapsed": 0,
       "actualTime": {
         "s": "2025-06-06T15:54:40.378-04:00",
-        "e": "2025-06-06T15:54:40.378-04:00",
+        "e": "2025-06-11T12:26:20.387-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -344,7 +371,7 @@
       "timeElapsed": 0,
       "actualTime": {
         "s": "2025-06-06T15:54:40.378-04:00",
-        "e": "2025-06-06T15:54:40.378-04:00",
+        "e": "2025-06-11T12:26:20.739-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -941,6 +968,116 @@
       "_type": "Turn",
       "id": "zFBkI",
       "round": 0,
+      "societyId": "yXHVO",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "acGRn",
+      "round": 1,
+      "societyId": "et0k8",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "qebaI",
+      "round": 1,
+      "societyId": "V9xbw",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "yP0XO",
+      "round": 1,
+      "societyId": "Feay0",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "KZnVq",
+      "round": 1,
+      "societyId": "e-JcG",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "toBXz",
+      "round": 1,
+      "societyId": "yXHVO",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "za01w",
+      "round": 2,
+      "societyId": "et0k8",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "hybmk",
+      "round": 2,
+      "societyId": "V9xbw",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "XUe-M",
+      "round": 2,
+      "societyId": "Feay0",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "qAHcJ",
+      "round": 2,
+      "societyId": "e-JcG",
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
+      "ambassadors": {},
+      "alterLeadership": {}
+    },
+    {
+      "_type": "Turn",
+      "id": "GfN-T",
+      "round": 2,
       "societyId": "yXHVO",
       "risk": 1,
       "advantage": 0,
@@ -12464,5 +12601,238 @@
     }
   ],
   "links": {},
-  "records": []
+  "records": [
+    {
+      "_type": "Record",
+      "id": "BxmWV",
+      "timestamp": "2025-06-11T12:26:17.989-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the faithful",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "k05OB",
+      "timestamp": "2025-06-11T12:26:17.989-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the aesthetic",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "bHB2Y",
+      "timestamp": "2025-06-11T12:26:17.989-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the mighty",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "TSesH",
+      "timestamp": "2025-06-11T12:26:17.989-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the intrepid",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "XDdPW",
+      "timestamp": "2025-06-11T12:26:17.990-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the enterprise",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "bta7s",
+      "timestamp": "2025-06-11T12:26:20.387-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the faithful",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "uSEpl",
+      "timestamp": "2025-06-11T12:26:20.388-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the aesthetic",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "t3cz5",
+      "timestamp": "2025-06-11T12:26:20.388-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the mighty",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "XwFG3",
+      "timestamp": "2025-06-11T12:26:20.388-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the intrepid",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "HUJnu",
+      "timestamp": "2025-06-11T12:26:20.388-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the enterprise",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "Taq2b",
+      "timestamp": "2025-06-11T12:26:24.782-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 0: Setup/Onboarding",
+      "value": "2025-06-11T12:26:24.782-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "LBybN",
+      "timestamp": "2025-06-11T12:26:32.336-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 0: Setup/Onboarding",
+      "value": "2025-06-11T12:26:32.336-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "en6NT",
+      "timestamp": "2025-06-11T12:26:43.059-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the faithful",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "SuEI3",
+      "timestamp": "2025-06-11T12:26:43.059-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the aesthetic",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "yLDIC",
+      "timestamp": "2025-06-11T12:26:43.059-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the mighty",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "fa3DN",
+      "timestamp": "2025-06-11T12:26:43.059-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the intrepid",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "iCbFf",
+      "timestamp": "2025-06-11T12:26:43.059-04:00",
+      "type": "SocietyActionsTaken",
+      "description": "the enterprise",
+      "value": 0
+    },
+    {
+      "_type": "Record",
+      "id": "jHneF",
+      "timestamp": "2025-06-11T12:26:43.861-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 1: Universal Phase",
+      "value": "2025-06-11T12:26:43.861-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "NMLFM",
+      "timestamp": "2025-06-11T12:26:43.862-04:00",
+      "type": "CommunitiesEndangered",
+      "description": "Blue Episode: Wizened Youth,Calendar Daddies,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened",
+      "value": 19
+    },
+    {
+      "_type": "Record",
+      "id": "zOw_Z",
+      "timestamp": "2025-06-11T12:26:52.771-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 1: Universal Phase",
+      "value": "2025-06-11T12:26:52.771-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "Fx1YX",
+      "timestamp": "2025-06-11T12:26:52.771-04:00",
+      "type": "CommunitiesEndangered",
+      "description": "Blue Episode: Wizened Youth,Calendar Daddies,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened",
+      "value": 19
+    },
+    {
+      "_type": "Record",
+      "id": "fhAUG",
+      "timestamp": "2025-06-11T12:41:19.197-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 1: Universal Phase",
+      "value": "2025-06-11T12:41:19.197-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "M0rXO",
+      "timestamp": "2025-06-11T12:41:19.197-04:00",
+      "type": "CommunitiesEndangered",
+      "description": "Blue Episode: Wizened Youth,Calendar Daddies,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened",
+      "value": 19
+    },
+    {
+      "_type": "Record",
+      "id": "mhzX8",
+      "timestamp": "2025-06-11T12:41:25.150-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 1: Universal Phase",
+      "value": "2025-06-11T12:41:25.150-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "mK_5m",
+      "timestamp": "2025-06-11T12:41:25.150-04:00",
+      "type": "CommunitiesEndangered",
+      "description": "Blue Episode: Wizened Youth,Calendar Daddies,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened",
+      "value": 19
+    },
+    {
+      "_type": "Record",
+      "id": "M1K0X",
+      "timestamp": "2025-06-11T12:45:31.042-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 1: Universal Phase",
+      "value": "2025-06-11T12:45:31.042-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "FIoeg",
+      "timestamp": "2025-06-11T12:45:31.043-04:00",
+      "type": "CommunitiesEndangered",
+      "description": "Blue Episode: Wizened Youth,Calendar Daddies,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened",
+      "value": 19
+    },
+    {
+      "_type": "Record",
+      "id": "TEIKF",
+      "timestamp": "2025-06-11T16:48:20.096Z",
+      "type": "PhaseStarted",
+      "description": "Round 1: Universal Phase",
+      "value": "2025-06-11T16:48:20.096Z"
+    },
+    {
+      "_type": "Record",
+      "id": "V3DXG",
+      "timestamp": "2025-06-11T16:48:20.096Z",
+      "type": "CommunitiesEndangered",
+      "description": "Blue Episode: Wizened Youth,Calendar Daddies,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened",
+      "value": 19
+    }
+  ]
 }
