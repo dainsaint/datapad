@@ -61,7 +61,10 @@ class LedgerSingleton {
 
   async getActiveEpisode() {
     //TODO: Fix this doofer
-    return await Episode.load( this.active ); //this.episodes.find( episode => episode.id == this.active );
+    if( this.active )
+      return await Episode.load( this.active );
+    else
+      return null;
   }
 
   //TODO: Make sure each game has a list of its episodes
