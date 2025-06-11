@@ -1,13 +1,14 @@
-export default class Storage {
-  id
-  _root = "data"
-  _diskWriteDelay = 2000
+import fs from "fs";
+import path from "node:path";
+import Serializer from "#database/serializer";
+import Storage from "#database/storage/storage";
+
+
+export default class LocalStorage extends Storage{
 
   constructor({ root = "data", diskWriteDelay = 2000 } = {}) {
-    this._root = root;
-    this._diskWriteDelay = diskWriteDelay;
+    super({ root, diskWriteDelay });
   }
-
 
   async _save(filename, data) {
     const fullPath = path.join(this._root, filename);
@@ -34,23 +35,4 @@ export default class Storage {
     return file.toString();
   }
 
-  #parse(text) {
-    return Serializer.deserialize(text);
-  }
-
-  #rateLimitedSave = rateLimit(this._save, this._diskWriteDelay);
-
-  async save(filename, data) {
-    this.#rateLimitedSave(filename, data);
-  }
-
-  async load(filename) {
-    const text = await this._load(filename);
-    const json = this.#parse(text);
-    return json;
-  }
-
-  getFilename({ id, type }) {
-    return `${type.toLowerCase()}/${id}.json`;
-  }
 }

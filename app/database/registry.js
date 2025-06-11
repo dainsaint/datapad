@@ -15,7 +15,7 @@ import Serializer from "#database/serializer";
 import Document from "#models/document";
 
 
-function initialize() {
+async function initialize() {
   console.log("registry initialize");
   Serializer.register("Action", Action);
   Serializer.register("Community", Community);
@@ -31,7 +31,7 @@ function initialize() {
   Serializer.register("Turn", Turn);
   Serializer.register("Tags", Tags);
 
-  Ledger.initialize();
+  await Ledger.initialize();
 }
 
 export default {

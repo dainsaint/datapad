@@ -1,17 +1,16 @@
 import { DateTime, Duration, Interval } from "luxon";
-import Database from "#database/database"
 import Model from "#database/model";
 import Ledger from "#database/ledger";
 import Record, { RecordType } from "#models/record";
 import Tags from "#core/tags";
 import { PhaseType } from "#models/phase";
-import Document from "#models/document";
 import Turn from "#models/turn";
+import Database from "#database/database";
 
 
 const loadedEpisodes = new Map();
 
-const database = new Database({useOffshore: true});
+const database = new Database()
 
 export default class Episode extends Model {
   name = "New Episode"
@@ -27,7 +26,7 @@ export default class Episode extends Model {
   societies = []
   turns = []
 
-  documentIds = []
+  documents = []
 
   links = {
     discord: "discord://-/channels/1063250197993492480/1063254140341473350",
@@ -56,6 +55,7 @@ export default class Episode extends Model {
 
 
   addAction = this.#addTo("actions")
+  addDocument = this.#addTo("documents")
   addCommunity = this.#addTo("communities")
   addPhase = this.#addTo("phases")
   addPlayer = this.#addTo("players")
@@ -70,6 +70,7 @@ export default class Episode extends Model {
   
   getActionById = this.#getById("actions")
   getCommunityById = this.#getById("communities")
+  getDocumentById = this.#getById("documents")
   getPhaseById = this.#getById("phases")
   getPlayerById = this.#getById("players")
   getResourceById = this.#getById("resources")
@@ -85,13 +86,7 @@ export default class Episode extends Model {
   deleteResourceById = this.#deleteById("resources")
   deleteSocietyById = this.#deleteById("societies")
   deleteRecordById = this.#deleteById("records")
-
-
-  deleteDocumentById(id) {
-    this.documentIds = this.documentIds.filter( dId => dId != id );
-    
-  }
-
+  deleteDocumentById = this.#deleteById("documents")
 
   get activePhases() {
     return this.phases.filter((phase) => !phase.isComplete)
@@ -105,9 +100,9 @@ export default class Episode extends Model {
     return this.currentPhase.round;
   }
 
-  get documents() {
-    return this.documentIds.map( id => Document.load(id) );
-  }
+  // get documents() {
+  //   return this.documentIds.map( id => Document.load(id) );
+  // }
 
   get activeCommunities() {
     return this.communities.filter( community => community.isActive );
@@ -126,7 +121,7 @@ export default class Episode extends Model {
   }
 
   rereferenceModels() {
-    [ this.actions, this.communities, this.phases, this.players, this.records, this.resources, this.societies, this.turns ].forEach( 
+    [ this.actions, this.communities, this.phases, this.players, this.records, this.resources, this.societies, this.turns, this.documents ].forEach( 
       collection => collection.forEach(
         model => model?.setEpisode?.(this)
       )
@@ -206,13 +201,13 @@ export default class Episode extends Model {
     loadedEpisodes.delete(id);
   }
 
-  static load(id) {
+  static async load(id) {
     if (loadedEpisodes.has(id)) {
       return loadedEpisodes.get(id);
     }
 
     const filename = database.getFilename({ type: "episodes", id });
-    const episode = database.load(filename);
+    const episode = await database.load(filename);
     episode.rereferenceModels();
 
     loadedEpisodes.set(id, episode);

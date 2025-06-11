@@ -123,7 +123,11 @@ episodes.get("/:episodeId/documents/:documentId?", episodeLayout, async (req, re
   req.session.documents ??= {}  
 
   if( !documentId && episode.documents.length ) {
-    req.session.documents.documentId ??= episode.documents.at(0)?.id;
+    const document = episode.getDocumentById(req.session.documents.documentId);
+
+    if(!document)
+      req.session.documents.documentId = episode.documents.at(0)?.id;
+
     res.redirect(
       `/episodes/${episodeId}/documents/${req.session.documents.documentId}`
     );
@@ -165,21 +169,6 @@ episodes.put("/:episodeId/playlist", async (req, res) => {
 
 
 
-episodes.post("/:episodeId/documents", async (req, res) => {
-  const { episodeId } = req.params;
-  const episode = await Episode.load(episodeId);
-  const document = new Document(req.body);
-
-  episode.documentIds.push( document.id );
-  episode.save();
-
-  await document.refresh();
-
-  res.sendStatus("200");
-  broadcast("documents");
-});
-
-
 episodes.post("/:episodeId/copy", async (req, res) => {
   const { episodeId } = req.params;
   const { originalEpisodeId } = req.body;
@@ -195,7 +184,7 @@ episodes.post("/:episodeId/copy", async (req, res) => {
   episode.societies = original.societies.map( society => new Society(society) );
   episode.communities = original.communities.map( community => new Community(community) );
   episode.phases = original.phases.map( phases => new Phase(phases) );
-  episode.documentIds = original.documentIds.map( id => id );
+  episode.documents = original.documents.map( document => new Document(document) );
   episode.links = Object.create( original.links );
 
   

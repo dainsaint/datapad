@@ -7,9 +7,28 @@ const documents = express.Router();
 
 
 
-documents.post("/:documentId/refresh", async (req, res) => {
-  const { documentId } = req.params;
-  const document = Document.load(documentId);
+documents.post("/:episodeId", async (req, res) => {
+  const { episodeId } = req.params;
+  const episode = await Episode.load(episodeId);
+  const document = new Document(req.body);
+
+  episode.addDocument( document );
+  episode.save();
+
+  await document.refresh();
+
+  res.sendStatus("200");
+  broadcast("documents");
+});
+
+
+
+
+documents.post("/:episodeId/:documentId/refresh", async (req, res) => {
+  const { episodeId, documentId } = req.params;
+  const episode = await Episode.load( episodeId );
+  const document = episode.getDocumentById(documentId);
+
   await document.refresh();
 
   if( document.status === DocumentStatus.OK ) {
@@ -22,13 +41,15 @@ documents.post("/:documentId/refresh", async (req, res) => {
 
 });
 
-documents.post("/:documentId", async (req, res) => {
-  const { documentId } = req.params;
-  const document = Document.load(documentId);
-  console.log( req.body );
+documents.post("/:episodeId/:documentId", async (req, res) => {
+  const { episodeId, documentId } = req.params;
+  const episode = await Episode.load( episodeId );
+  const document = episode.getDocumentById(documentId);
+
   document.update( req.body );
-
   await document.refresh();
+
+  episode.save();
 
   if( document.status === DocumentStatus.OK ) {
     res.sendStatus("200");
@@ -41,7 +62,7 @@ documents.post("/:documentId", async (req, res) => {
 });
 
 
-documents.delete("/:documentId/:episodeId", async (req, res) => {
+documents.delete("/:episodeId/:documentId", async (req, res) => {
   const { episodeId, documentId } = req.params;
   const episode = await Episode.load(episodeId);
   episode.deleteDocumentById(documentId);

@@ -22,7 +22,7 @@ export default function EpisodeSocieties({ episode }) {
   const suffixes = ["st", "nd", "rd", "th"]
   const ordinalize = (i) => suffixes.at(i);
   return html`
-    <div id="society-card-list" class="grid-large gap" hx-get="${ episode.toURL('/societies') }" style="--grid-min-width: 35rem;" hx-trigger="sse:societies,sse:actions">
+    <div id="society-card-list" class="grid-large gap" hx-get="${ episode.toURL('/societies') }" style="--grid-min-width: 40rem;" hx-trigger="sse:societies,sse:actions">
       ${ societies.map( ({society, open, voted, time}, i) => html`
         <section id="${ society.id }" class="society-card card ${society.color} stack">
 

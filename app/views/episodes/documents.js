@@ -5,8 +5,10 @@ import DocumentView from "#views/documents/view";
 import Toolbar from "#views/ui/toolbar";
 
 export default function EpisodeDocuments ({ episode = new Episode(), documentId = undefined} = {} ) {
-  const currentDocument = documentId ? Document.load(documentId) : episode.documents.at(0);
+  const currentDocument = documentId ? episode.getDocumentById(documentId) : episode.documents.at(0);
+  // const content = await currentDocument?.getContent();
 
+  // console.log( currentDocument, documentId );
   return html`
     <style>
     #episode-documents {
@@ -31,10 +33,6 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
       hx-trigger="sse:documents"
       hx-swap="outerHTML"
     >
-
-
-    
-
 
       <div class="society-panel__communities panel full" style="flex: 1 0 max-content;">
         

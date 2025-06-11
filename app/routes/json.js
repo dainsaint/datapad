@@ -15,7 +15,7 @@ jsonRouter.use(async (req, res, next) => {
 
 
 jsonRouter.get("/episodes/active", async (req, res) => {
-  let episode = Ledger.getActiveEpisode();
+  let episode = await Ledger.getActiveEpisode();
 
   const formatResource = ({name,id, tags}) => ({
     id,
@@ -69,7 +69,7 @@ jsonRouter.get("/episodes/active", async (req, res) => {
 });
 
 jsonRouter.get("/episodes/active/playlist", async (req, res) => {
-  let episode = Ledger.getActiveEpisode();
+  let episode = await Ledger.getActiveEpisode();
 
 
   const result = {
@@ -98,19 +98,19 @@ jsonRouter.get("/episodes/:episodeId", async (req, res) => {
 
 //TODO: These requests should be scoped to either a specific society, or the active society (if one exists)
 jsonRouter.get("/communities", async (req, res) => {
-  const activeEpisode = Ledger.getActiveEpisode();
+  const activeEpisode = await Ledger.getActiveEpisode();
   const communities = activeEpisode?.communities || [];
   res.send(communities);
 });
 
 jsonRouter.get("/players", async (req, res) => {
-  const activeEpisode = Ledger.getActiveEpisode();
+  const activeEpisode = await Ledger.getActiveEpisode();
   const players = activeEpisode?.players || [];
   res.send(players);
 });
 
 jsonRouter.get("/societies", async (req, res) => {
-  const activeEpisode = Ledger.getActiveEpisode();
+  const activeEpisode = await Ledger.getActiveEpisode();
   const societies = activeEpisode?.societies || [];
   res.send(societies);
 });

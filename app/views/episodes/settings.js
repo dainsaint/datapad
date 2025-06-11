@@ -9,8 +9,7 @@ export default function EpisodeSettings ({ episode = new Episode()} = {}) {
   const time = episode.scheduledTime.start;
   const duration = episode.scheduledTime.toDuration("hours");
   const endTime = date.set({ hour: time.hour, minute: time.minute }).plus(duration);
-  const isActiveEpisode = Ledger.getActiveEpisode()?.id == episode.id;
-
+  const isActiveEpisode = Ledger.active == episode.id;
 
   return html`
     <main class="panel content stack-loose full"
@@ -58,14 +57,14 @@ export default function EpisodeSettings ({ episode = new Episode()} = {}) {
               
               <formset>
                 <button><i class="fa fa-check-circle"></i></button>
-                <button type="button" class="color-danger" hx-delete="${document.toURL(`/${episode.id}`)}" hx-confirm="Remove this document from this episode? The actual Google Doc will be fine."><i class="fa fa-trash"></i></button>
+                <button type="button" class="color-danger" hx-delete="${document.toURL()}" hx-confirm="Remove this document from this episode? The actual Google Doc will be fine."><i class="fa fa-trash"></i></button>
                 <i class="fa fa-spinner fa-spin htmx-indicator"></i>
                 ${ document.status === DocumentStatus.ERROR && html`<span><i class="fa fa-warning color-danger"></i> Error Loading</span>`}
               </formset>
           </form>
           `)}
 
-          <form style="display: grid; grid-template-columns: 1rem 1fr 1fr 6fr 4fr; gap: 10px;"  hx-post="${episode.toURL(`/documents`)}">
+          <form style="display: grid; grid-template-columns: 1rem 1fr 1fr 6fr 4fr; gap: 10px;"  hx-post="/documents/${episode.id}">
             <i class="fa fa-file"></i>
 
             <input name="icon"  placeholder="Icon"/>

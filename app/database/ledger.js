@@ -1,7 +1,11 @@
 import Database from "#database/database";
+import Episode from "#models/episode";
+
+// const database = new Database();
+const filename = "ledger.json";
+
 
 const database = new Database();
-const filename = "ledger.json";
 
 /*
 - [ ] Index players?
@@ -12,23 +16,23 @@ class LedgerSingleton {
   episodes = [];
   active;
 
-  initialize() {
+  async initialize() {
     try {
-      const fromDisk = database.load(filename);
-      Object.assign(this, fromDisk);
+      const data = await database.load(filename);
+      Object.assign(this, data);
     } catch (e) {
       if (e.code !== "ENOENT") {
         //ENONENT means file doesnt exist, thats fine
         //(we'll create automatically on next save)
         //any other error, we should see
-        console.log(e);
+        // console.log(e);
       }
     }
   }
 
   //PRIVATE METHODS
-  #save() {
-    database.save(filename, this);
+  async #save() {
+    await database.save(filename, this);
   }
 
   #updateRecord(key, record) {
@@ -55,9 +59,9 @@ class LedgerSingleton {
     this.#save();
   }
 
-  getActiveEpisode() {
+  async getActiveEpisode() {
     //TODO: Fix this doofer
-    return this.episodes.find( episode => episode.id == this.active );
+    return await Episode.load( this.active ); //this.episodes.find( episode => episode.id == this.active );
   }
 
   //TODO: Make sure each game has a list of its episodes

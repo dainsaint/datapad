@@ -15,18 +15,22 @@ pages.get("/home", async (req, res) => {
 });
 
 pages.get("/", async (req, res) => {
-  let episode = Ledger.getActiveEpisode();
-  
-  if( !episode ) {
+  let episode = await Ledger.getActiveEpisode();
+  if( episode ) {
+    res.redirect(`/episodes/${ episode.id }/facilitator`)
+  } else if( !episode && Ledger.episodes.length) {
     const lastEpisodeData = Ledger.episodes.at(-1);
    
     episode = await Episode.load( lastEpisodeData.id );
     episode.save();
 
     Ledger.setActiveEpisode(episode);
+    res.redirect(`/episodes/${ episode.id }/facilitator`)
+  } else {
+    res.redirect(`/home`)
   }
 
-  res.redirect(`/episodes/${ episode.id }/facilitator`)
+  
 });
 
 
