@@ -12598,6 +12598,4979 @@
           }
         ]
       }
+    },
+    {
+      "_type": "Document",
+      "id": "MJx1L",
+      "name": "Script",
+      "icon": "fa-scroll",
+      "googleDocId": "1p8tBGHzzx4TZJlASzC7Ea9t3kwk-WakZiZa-QSrknXI",
+      "status": "ok",
+      "content": {
+        "type": "root",
+        "children": [
+          {
+            "type": "element",
+            "tagName": "h1",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-1"
+              ],
+              "id": "introductions-and-world-building"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Introductions and World Building"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "introduce-ourselves-as-individuals"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Introduce ourselves as individuals"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Have players go around their tables and briefly introduce themselves to one another, including their names and pronouns."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "span",
+                "properties": {
+                  "style": "background-color: rgb(153, 0, 255)"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "three-pillars-of-our-story"
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "span",
+                "properties": {
+                  "style": "color: rgb(0, 0, 0)"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Three Pillars of Our Story"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Three pillars to help us have fun and tell an interesting story:"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "ul",
+            "properties": {
+              "className": [
+                "nesting-level-1"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Space Opera is not a game you can win or lose, and some of the most interesting stories involve people struggling to get by under dire circumstances. We encourage you to play to tell a story that you find fun and engaging."
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Space Opera is a sci-fi fantasy story. In this world, we are all recognizably the descendants of humans, we all have access to space travel, and instantaneous communication. We have never directly encountered aliens to our historical knowledge, but we know that other people like us are out there."
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "This is a world where the scientific and the spiritual or magical can have equal effect. There is no need for any actual scientific knowledge in order to play effectively."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "In Space Opera we will be switching between two levels of play. At one level you will each be playing as a Community who is part of a larger Society. At the other level you will be playing as Individuals who are part of the Communities that you play as. Now that we know a bit more about the pillars of our story, let’s start to zoom in to learn a bit more about our solar system."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "introduce-societies"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Introduce Societies"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "On the table in front of you there is a sheet of paper that has some information about your Society. Each Society has a unique archetype, that tells you a little bit about the values of your Society."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Today our three Societies are"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "The Faithful - Hope and Spirit - Expaxia, Unpredictable Jungles and Deep Cave Networks"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "The Aesthetic - Beauty and Truth - Namu, Frozen Desert Tundra Planet"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "The Curious - Vision and Innovation - Scorn,Inhospitable Mountains and Lush Valleys"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Dain, can you tell us about the planets that each of our Societies live on?"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Additionally, on your Society sheet you will see your Society’s story. This story is how your people broadly understand your history. Of course what that history means and how it is interpreted might vary from person-to-person. Take a moment to read your story out loud now."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Finally, at the bottom of your Society sheet you will see three different Fates. During the game, if your Society successfully completes your Fate through an action, your people will become Inspired and you will unlock a special ability. Take 2 minutes now to pick one Fate from the three, and circle it on your Society sheet."
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "introduce-communities"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Introduce Communities"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Ok, so now we know a little bit about our Societies, what is important to them, what they hope to achieve, and the planets that they live on. Let’s keep zooming in, and learn more about the Communities that you will be playing as."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "In front of you, you will see your Community Sheet. Find the section of your Community Sheet that says, “Then” at the top.  All of our Communities come from somewhere, including yours. On your Community sheet you will see who your Community was Generations ago. This broad archetype takes the form of “Adjective People.” For example, “Rebellious Youth” or “Entrenched Dynasty.” "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, look on your Community Sheet where it says, “Now.” For some of you, you will see the same thing written. For some of you, you might have just one word written. For others, there might be nothing written. Time has taken its toll, and our communities change over time. If both words are written for “Adjective People” on your sheet, leave it as it is. If you have one word written, you can fill in the missing word, or if both spots are blank, you can fill in both words. This is the Community you will be playing as for this Generation"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "You will see that you have a Voices Card. On one side it says Voice of the Leaders and on the other it says Voice of the People. Everyone should grab a six sided die from the table, roll it, and remember your number"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "If you rolled even, flip your Voices card to Voice of the People. If you rolled odd, flip it to Voice of the Leaders."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Take a moment to consider: How does your Community relate to having power and being a leader of this Society? How long have they been in power for? What motivates them to hold onto this power? Remember, “Nothing human is alien to me,” and humanity is both beautiful and ugly in its complexity. We are here to tell an interesting story."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Raise your hand if you are a Voice of the Leaders. Raise your hand if you are a Voice of the People."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Voice of the Leader are the people who make decisions in your society, either through direct or indirect control over the levers of power. Voice of the People are other Communities in our Society whose voice is loud enough to be heard by all. The Communities you are playing are not the only Communities in your Society, but simply the ones who are currently in the spotlight. Over time some Communities may become Lost to us, and others will come into focus, and which Communities Lead us will change."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "creating-resources"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Creating Resources"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "In front of you, you will have anywhere from 1 to 3 index cards. Take one now, and write “Vital Resource” on the top right hand corner."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now you’re going to create a "
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Vital Resource"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " that is associated with your community. This Vital Resource is the thing that your community is centered around. We’ll talk more about what Resources are used for later, but this can be almost anything: a particular skill or area of expertise, a cultural practice or tradition, an object, a place, or an important relationship. A good resource is something specific, material, and practical. A bad resource is something abstract, for instance a value, a belief, a concept or idea. A bad resource can often become a good resource by describing how it is manifested in the world. For instance, “charity” is a bad resource because anyone can be charitable, but “religious tithing” “mandated service hours” or “soup kitchens” would be good resources. Your resources are how your community manifests in the world. It is a measurement of your community’s cultural footprint. In this way, your resources also represent the health and presence of your community. If your Community loses all of its resources, it can survive for one round before it becomes Lost, and you will need to create a new Community."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "So now, on that same index card, write down the name of your Vital Resource. Underneath that, write a brief sentence or phrase that describes your Community’s relationship to that resource. Take one minute to do this."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "If you have more than one index card in front of you, do this again for each index card, but do not write Vital Resource on it. These are other resources that belong in your Community’s domain, but are not as critical to you as your Vital resource."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "If your Community ever loses its Vital Resource, you should immediately pick a new resource from your existing resources to become your Vital Resource. When you do this, you should also update your Community’s archetype to represent this change."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, we’ll give you a few minutes to introduce your Communities to everyone at your table. Try to not take more than 30-seconds per Community."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Finally, we need to come-up with a name for our Societies. We’re going to give you 3-minutes to come-up with a name for your Society. Anyone at the table can contribute, but the Voice of the Leaders must come to a decision on one name, via a Majority Vote."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Have players introduce their Society’s names and the Fate that they picked."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "padding-left: 36PT; text-indent: 36PT; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "introduce-the-world--hook"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Introduce the World + Hook"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "societal-phase-1-"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Societal Phase 1 ()"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "deciding-a-course-of-action"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Deciding a Course of Action"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "During the Societal phase your goal is to work in your Societies to decide on the course of action that your Society will attempt to take this round, and select an Emissary who will represent you during the Galactic Phase. You will generally have 10-minutes to accomplish this but that may change."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "As you can see on the Action Sheets on your table, "
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "to take an action, your Society must complete the following phrase"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": [Name of Society] uses [resource] to [action]."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "For example:"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "ul",
+            "properties": {
+              "className": [
+                "nesting-level-1"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "[The Raiders of Zoth] use our [Raiders] to [attack the village]"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "[The Wanderers] use our [Maps of the Galaxy] to [Discover a land rich in natural resources]."
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "[The Cyber Clerics] use our [Connection to God] to [Pray for Divine Guidance]."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "A Community’s Resource cannot be used in their Society’s action without the Community’s consent. Each resource that is used is “exhausted” and cannot be used for "
+              },
+              {
+                "type": "text",
+                "value": "any"
+              },
+              {
+                "type": "text",
+                "value": " purpose during the next round of gameplay. So if your resources are all exhausted, this leaves you defenseless and without the ability to take actions for a full round."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "You can choose to use additional resources to aid the action, which increases the likelihood of success at the cost of risking the additional resources.  To do this you complete the additional phrase, “We use [additional resource] to [aid action].” The additional resource and the way it is used must make sense with the primary action and be directly connected. If it does not make sense, you will be more likely to fail your action, or if it is an entirely separate action, the GM may simply remove those resources from your action for this turn."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "So if the [The Raiders of Zoth] want to use their [Raiders] to [attack the village]"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "A good aiding action might be:"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "ul",
+            "properties": {
+              "className": [
+                "nesting-level-1"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "[The Raiders of Zoth] use our [Raiders] to [attack the village]. We use [laser guns] to [arm the Raiders]."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "And a bad aiding action might be:"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "ul",
+            "properties": {
+              "className": [
+                "nesting-level-1"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "We use [lavish feasts] to [stuff our enemies bellies]. - This doesn’t make narrative sense"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "We use [publicists] to [make it look like we were the good guys]. - This is a separate action."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Finally, the Voice of the Leaders must take a formal vote and agree on the action via a majority rule. Voice of the People are forbidden from participating in this vote, formally or informally. After you have voted, add a check-mark into the box on your Action sheet."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Let me repeat that, because this is a critical rule of Space Opera: the Voice of the Leaders "
+              },
+              {
+                "type": "element",
+                "tagName": "u",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MUST"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " take a formal vote in order for the action to count. If you want to change your action after you vote, that is fine, but you MUST take a formal vote on the updated action in order for it to count. "
+              },
+              {
+                "type": "text",
+                "value": "Again, everyone can participate in discussion, but only the VoL decide, requiring a majority vote."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "pick-an-emissary"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Pick an Emissary"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "During the round the Voice of the Leaders will also need to pick an Emissary. The Emissary will announce the action that your Society takes during the next phase, roll dice, and will also have the power to make certain decisions in response to how the story unfolds this round. An Emissary must be one person from a Voice of the Leaders community, and is decided in the same way as deciding an action."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "If you do not decide your course of action, and/or do not pick an emissary by the time the phase has ended, your society will fall into a crisis of leadership and no action will be taken."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Remind players about the narrative stakes, and start the phase."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "galactic-phase-1-"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Galactic Phase 1 ()"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "In a moment we’re going to hear your actions and roll dice to find out if your actions were successful or unsuccessful. For every resource used in your action, you will roll an additional die, and your success or failure will be determined by the highest value among all the dice you roll. If your highest die is a six, that means you’re going to have greater success, and if your highest die is a one, that means things are going to get a lot more challenging."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Every resource used in an action is at a risk to be transformed or destroyed based on how you roll."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Additionally, resources might be destroyed because of the “Risk Level” which represents the likelihood of mishap or harm, separate from the likelihood of success of your actions. Risk Level always starts at 1 and might be increased by the GM or in other ways. For every die rolled that is at or below the current Risk Level, one resource will be destroyed. So for example, if the risk level is 3, and a player rolls a 6, 3, 2, and 2 three resources are destroyed but the action succeeds."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "individual-phase-1--"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Individual Phase 1 ()"
+              },
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Imagine you are someone in the community you just represented in the last phase. "
+              },
+              {
+                "type": "text",
+                "value": "This person is not the leader of your community, nor do they have the power to make unilateral decisions for your community. What is this person’s role in their community? I’ll give you one minute to brainstorm."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One minute timer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "It's ok if you're still thinking, you can work it out with a neighbor. Turn to someone else at your table and tell them a little bit about your character. You'll have two minutes to talk."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two minute timer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now I'm going to ask you all a question and have you move based on what your character believes."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Based on what just happened in the Societal and Galactic Phase, move here if your character wants to reshape what their Society will be, move here if your character wants their society to remain what it is, and move here if your character wants their society to reclaim what they were."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, at these stations, get into pairs or groups of three. You will have two minutes total to introduce your characters to your new partners, and tell them why your character wants their society to Reshape, Remain, or Reclaim."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two minute timer."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, take a quick look at the cards at your stations. Each card has a word and symbol associated with it. You will have one minute to pick one card that resonates most closely with the story your partner told you, and give them that card. Each player should receive no more than one card total, so if you were in a group of three, pick a Willpower card for the player on your right."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "These are "
+              },
+              {
+                "type": "element",
+                "tagName": "strong",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Willpower"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " cards, and they represent a sentiment rising within your community that has joined with the means to act upon it. Over time, members of your community may have desires — they may wish to create something new, uphold the status quo, shift the power structure, or destroy that which does not work. These sentiments do not last forever though, so keep in mind that you can only have three Willpower cards at a time, if you have more than three, you’ll need to discard one."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Each Willpower card carries both an action and the instructions on its use, and you can play them at any point during the Societal Phase. It can be strategic to keep these cards private. "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Think back to your character. How do you think your character would relate to this Willpower rising in their community? Are they on board? Oblivious? Curious? Apprehensive? You will have three minutes to discuss."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Three minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "You may now return to your societies."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "universe-responds-2-"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Universe Responds 2 ()"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "societal-phase-2-"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Societal Phase 2 ()"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "className": [
+                "heading-3"
+              ],
+              "id": "second-action"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Second Action"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Your Societies can now take a second action. If you do, you cannot use the same resources for multiple actions, and your actions can’t be dependent on one another."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "So for example: You cannot use your first action to try and build a wall and the second action to reinforce the wall, because you don’t know if your first action will succeed or not."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "You can also now exchange resources and willpower cards between Communities in the same Society, at any point during the Societal Phase, so feel free to start wheeling and dealing. Trade can only happen between two players at a time, and does not need to be equal, so you are welcome to just give away resources or trade multiple resources for just one."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "className": [
+                "heading-3"
+              ],
+              "id": "changing-leadership"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Changing Leadership"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "The Voice of the Leaders can now change the power structures of their Society. You can choose to vote in a Voice of the People to Voice of the Leaders or turn a Voice of the Leaders into a Voice of the people via the usual majority vote."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "crisis-mode"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Crisis Mode"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Finally, if your Society decides it wants to take an aggressive or non-consensual action towards another Society. If you decide you want to do that, you have two options: Either come and let the GM know as soon as your Society has voted on the action, or wait to announce it until the Galactic Phase."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "And as a final reminder, you still need to complete at least one action and decide on an emissary before the timer runs out in order to take an action this round."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "galactic-phase-2-"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Galactic Phase 2 ()"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "advantagedisadvantage"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Advantage/Disadvantage"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "When taking your actions, if you use a resource and strategy that is particularly well suited to the situation you may be granted Advantage. Advantage allows you to reroll your lowest die if you choose, or if you are only rolling one die, roll twice and take the highest number."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "If you use a resource or strategy that is poorly suited to the situation or makes very little sense, you may be cursed with Disadvantage. When you have disadvantage you must remove the highest value die, or if you are only rolling one die, roll twice and take the lowest value. Disadvantage can stack multiple times."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "individual-phase-2--"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Individual Phase 2 () "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Take a second to recall the character you made in the last round. So far, you have learned a little bit about your character and their role in your community. Now I'd like you to think about one value or belief your character might hold tightly. Take a moment to brainstorm quietly."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One minute."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "OK - find a new neighbor - maybe someone you haven't spoken to yet. You will have two minutes. Tell them about the value your character holds. "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two minute timer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Based on what just happened in the Societal and Galactic Phase, move here if your character wants to reshape what their Society will be, move here if your character wants their society to remain what it is, and move here if your character wants their society to reclaim what they were."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, at these stations, get into pairs or groups of three. You will have two minutes total to introduce your characters to your new partners, and tell them why your character wants their society to Reshape, Remain, or Reclaim."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two minute timer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, pick one Willpower to give to your partner, or player on your right if you are in a group of three, based on the story they told."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Think back to your character. How do you think your character would relate to this Willpower rising in their community? You’ll have three minutes to share with your partner."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Three minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "You may now return to your societies."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "universe-responds-phase-3-"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Universe Responds Phase 3 ()"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "societal-phase-3-"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Societal Phase 3 ()"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h3",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-3"
+              ],
+              "id": "ambassadors"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Ambassadors"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Your Societies can now begin to communicate with each other and exchange resources with one another. To do so, you can send an ambassador from your Society to another Society. "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Ambassadors are decided in the same way that emissaries are decided but can include Voice of the People. Ambassadors also take all of their resources and willpower cards with them. The receiving Society must choose to admit or deny the ambassador, with minimal conversation between the receiving Society and the Ambassador (as to not negate the purpose of sending the Ambassador). If an Ambassador is rejected they must immediately return to their home society. If an ambassador is accepted by the other society they must remain there until the beginning of the next Societal phase and act as a Voice of the People in the new society. Once they have left their home Society, ambassadors may take no part in their home Society until they return."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "galactic-phase-3-"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Galactic Phase 3 ()"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": ""
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "individual-phase-3-"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Individual Phase 3 ()"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Last round you thought about what your character values. Now I’d like you to consider what makes your character feel as though they belong to their community. Take a moment to brainstorm."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One min"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Ok find a neighbor, introduce yourself and your character, and tell them about a time your character felt that they belonged."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two min"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Based on what just happened in the Societal and Galactic Phase, move here if your character wants to reshape what their Society will be, move here if your character wants their society to remain what it is, and move here if your character wants their society to reclaim what they were."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, at these stations, get into pairs or groups of three. You will have two minutes total to introduce your characters to your new partners, and tell them why your character wants their society to Reshape, Remain, or Reclaim."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two minute timer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, pick one Willpower to give to your partner, or player on your right if you are in a group of three, based on the story they told."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Think back to your character. How do you think your character would relate to this Willpower rising in their community? You’ll have three minutes to share with your partner."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Three minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "As a quick reminder, you can only have three Willpower cards at a time, and if you would have more, you will need to discard down to just three."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "You may now return to your societies."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "universe-responds-phase-4-455---500-5-minutes"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Universe Responds Phase 4 (4:55 - 5:00, 5-minutes)"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "line-height: 115%; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "societal-phase-4"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Societal Phase 4"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "line-height: 115%; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "galactic-phase-4"
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "span",
+                "properties": {
+                  "style": "font-size: 16PT"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Galactic Phase 4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "line-height: 115%; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "individual-phase-4"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Individual Phase 4"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Last round you thought about what makes your character feel like they belong. Now I’d like you to consider why your character believes their community is different from others? Is there another community that they feel drawn to, or one that they feel averse towards? Take a moment to brainstorm."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One min"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Ok find a neighbor, introduce yourself and your character, and tell them about what you came up with."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two min"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Based on what just happened in the Societal and Galactic Phase, move here if your character wants to reshape what their Society will be, move here if your character wants their society to remain what it is, and move here if your character wants their society to reclaim what they were."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, at these stations, get into pairs or groups of three. You will have two minutes total to introduce your characters to your new partners, and tell them why your character wants their society to Reshape, Remain, or Reclaim."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two minute timer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, pick one Willpower to give to your partner, or player on your right if you are in a group of three, based on the story they told."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Think back to your character. How do you think your character would relate to this Willpower rising in their community? You’ll have three minutes to share with your partner."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Three minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "As a quick reminder, you can only have three Willpower cards at a time, and if you would have more, you will need to discard down to just three."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "You may now return to your societies."
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "line-height: 115%; margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "universe-respond-phase-5"
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "span",
+                "properties": {
+                  "style": "font-size: 16PT"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Universe Respond Phase "
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "5"
+              },
+              {
+                "type": "element",
+                "tagName": "span",
+                "properties": {
+                  "style": "font-size: 16PT"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "societal-phase-5"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Societal Phase 5"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "individual-phase-5"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Individual Phase 5"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Last round you thought about how your character sees their Community compared to others. Now, I’d like you to imagine: How do people in your Community greet each other? Is there a phrase or a gesture of greeting that they use?"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One min"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Ok find a neighbor, introduce yourself and your character, and teach them your gesture. Repeat your greetings back to one another, and explain where this greeting comes from."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two min"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Based on what just happened in the Societal and Galactic Phase, move here if your character wants to reshape what their Society will be, move here if your character wants their society to remain what it is, and move here if your character wants their society to reclaim what they were."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, at these stations, get into pairs or groups of three. You will have two minutes total to introduce your characters to your new partners, and tell them why your character wants their society to Reshape, Remain, or Reclaim."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Two minute timer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, pick one Willpower to give to your partner, or player on your right if you are in a group of three, based on the story they told."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "One minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Think back to your character. How do you think your character would relate to this Willpower rising in their community? You’ll have three minutes to share with your partner."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Three minute timer"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "As a quick reminder, you can only have three Willpower cards at a time, and if you would have more, you will need to discard down to just three."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "You may now return to your societies."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "universe-respond-phase-5-1"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Universe Respond Phase 5"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "universe-respond-phase-6"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Universe Respond Phase 6"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "societal-phase-6"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Societal Phase 6"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "style": "margin-top: 12PT; margin-bottom: 12PT",
+              "className": [
+                "heading-2"
+              ],
+              "id": "generations-passing"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Generations Passing"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "So it's time to bring our day of play together to a close. However our Societies and Communities will continue on beyond us as the Generations pass. We’re going to start by giving everyone a blank Community sheet. While we do that, if you have any Willpower cards in your hand, pick the card that most captures your Community’s hopes and desires for the future."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Take a look at that card, and find where it says, “At the end of a generation.” On your new Community sheet, under “Inherited Remembrance” write your answer to the question on your card. If you don’t have any Willpower cards remaining instead answer the question, “What is your Community’s greatest regret from this generation?”"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Next, complete the section labeled “How we relate…”Make sure to only circle one option from the two, not both!"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Flip your sheet over, and find the section at the top labeled “Then”"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Our GM is going to roll a 10 sided die to decide how many generations pass between now, and the next session of "
+              },
+              {
+                "type": "element",
+                "tagName": "i",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Space Opera"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Write this number down where it says “Number” and write your Community’s archetype where it says “Adjective People.”"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Flip your sheet over again and find the section labeled “what we leave behind.”"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "NEED CLARITY FROM DAIN"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "Finally, you will work together to create a new story on a new Society Sheet, containing the same three elements of “At first”, “but then”, and “and now.” For “At First” copy what was written for your Society’s previous “and now.” For “But then” and “and now”  create something new."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "h2",
+            "properties": {
+              "className": [
+                "heading-2"
+              ],
+              "id": "new-community-creation-script"
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "New Community Creation Script"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "If your Community had no resources at the beginning of the Universe Responds and had no resources when the Galactic Phase ended, your Community is now Lost to us. Please head over here to create a new Community."
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": "To create a new Community players:"
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "p",
+            "properties": {
+              "className": [
+                "normal-text"
+              ]
+            },
+            "children": [
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "element",
+            "tagName": "ol",
+            "properties": {
+              "className": [
+                "nesting-level-1"
+              ],
+              "list-style-type": "decimal"
+            },
+            "children": [
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Get a new Community sheet."
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Pick one Willpower card to keep, and discard the rest. If you have no Willpower cards left, you do not start with any Willpower cards."
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Roll 1d6 to decide if their new Community is a Voice of the Leader or Voice of the People. If the roll is even they are a Voice of the People, if it is Odd they are a Voice of the Leaders"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Create a new archetype that takes the form “Adjective Noun” ex. Rebellious Youth or Entrenched Dynasty,"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Roll 1d6 to decide on the number of new resources they have."
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "ul",
+                    "properties": {
+                      "className": [
+                        "nesting-level-2"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "li",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "1 or 2 is one vital resource"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "li",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "3 - 5 is one vital resource and one regular resource."
+                          }
+                        ]
+                      },
+                      {
+                        "type": "element",
+                        "tagName": "li",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "6 is one vital resource and two regular resources."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Create a new name for this Community"
+                  }
+                ]
+              },
+              {
+                "type": "element",
+                "tagName": "li",
+                "properties": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Decide if their previous character joined this community or if they would like to create a new character."
+                  },
+                  {
+                    "type": "element",
+                    "tagName": "ul",
+                    "properties": {
+                      "className": [
+                        "nesting-level-2"
+                      ]
+                    },
+                    "children": [
+                      {
+                        "type": "element",
+                        "tagName": "li",
+                        "properties": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "To create a new character:"
+                          },
+                          {
+                            "type": "element",
+                            "tagName": "ul",
+                            "properties": {
+                              "className": [
+                                "nesting-level-3"
+                              ]
+                            },
+                            "children": [
+                              {
+                                "type": "element",
+                                "tagName": "li",
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "value": "Imagine you are someone in this new community. This person is not the leader of your community, nor do they have the power to make unilateral decisions for your community. What is this person’s role in their community?"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "links": {},
@@ -12821,15 +17794,15 @@
     {
       "_type": "Record",
       "id": "TEIKF",
-      "timestamp": "2025-06-11T16:48:20.096Z",
+      "timestamp": "2025-06-11T12:48:20.096-04:00",
       "type": "PhaseStarted",
       "description": "Round 1: Universal Phase",
-      "value": "2025-06-11T16:48:20.096Z"
+      "value": "2025-06-11T12:48:20.096-04:00"
     },
     {
       "_type": "Record",
       "id": "V3DXG",
-      "timestamp": "2025-06-11T16:48:20.096Z",
+      "timestamp": "2025-06-11T12:48:20.096-04:00",
       "type": "CommunitiesEndangered",
       "description": "Blue Episode: Wizened Youth,Calendar Daddies,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened",
       "value": 19

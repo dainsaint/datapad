@@ -76,6 +76,16 @@ export default function EpisodeDocuments ({ episode = new Episode(), documentId 
 
 }
 
+function flattenChildren( children ) {
+  return children.reduce( (acc, cur) => {
+    if( cur.type == "text" ) {
+      return acc + cur.value
+    } else {
+      return acc + flattenChildren(cur.children)
+    }
+  }, "")
+}
+
 
 function renderOutline(root) {
   const headings = root.children.filter( child => child.properties?.id );
@@ -86,7 +96,7 @@ function renderOutline(root) {
     const next = headings.at(i+1);
 
     result += "<li>"
-    result += html`<a href="#${heading.properties.id}">${ heading.children.map( child => child.value ) }</a>`
+    result += html`<a href="#${heading.properties.id}">${ flattenChildren(heading.children) }</a>`
     if( next?.tagName > heading.tagName ) {
       result += "<ul>"
     } else if ( !next || next?.tagName < heading.tagName ) {
