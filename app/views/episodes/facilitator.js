@@ -31,7 +31,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
         <article id="facilitator" >
           <section class="society-panel__communities panel scrollable"  style="border-top-left-radius: 0px">    
             <div class="stack" id="facilitator-society-select">
-              <div hx-swap="none" hx-select-oob="#facilitator-society-view, #facilitator-action-edit, #facilitator-society-select">
+              <div hx-swap="none" hx-select-oob="#facilitator-society-view, #facilitator-action-edit, #facilitator-society-select, #facilitator-tools">
                 ${ SocietySelect({ society })}
               </div>
 
@@ -56,7 +56,7 @@ export default function EpisodeFacilitator ({ episode = new Episode(), societyId
 
         </article>
 
-        <aside class="layout-row gap-tight stack-push" hx-target="#dialog">
+        <aside id="facilitator-tools" class="layout-row gap-tight stack-push" hx-target="#dialog">
           <button hx-get="/communities/${episode.id}/create?societyId=${society.id}"><i class="fa fa-people-group"></i> New Community</button>
           <button hx-get="/societies/${episode.id}/create">${ Icon("planet")} New Society</button>
           <div class="layout-fill"></div>
