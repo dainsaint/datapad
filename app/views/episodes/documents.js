@@ -6,9 +6,7 @@ import Toolbar from "#views/ui/toolbar";
 
 export default function EpisodeDocuments ({ episode = new Episode(), documentId = undefined} = {} ) {
   const currentDocument = documentId ? episode.getDocumentById(documentId) : episode.documents.at(0);
-  // const content = await currentDocument?.getContent();
 
-  // console.log( currentDocument, documentId );
   return html`
     <style>
     #episode-documents {
@@ -88,20 +86,28 @@ function flattenChildren( children ) {
 
 
 function renderOutline(root) {
-  const headings = root.children.filter( child => child.properties?.id );
+  const headings = root.children
+    .filter( child => child.tagName.startsWith('h') )
+    .filter( child => flattenChildren(child.children) )
+
   let result = "<ul>";
 
   for( let i = 0; i < headings.length; i++ ){
     const heading = headings.at(i);
     const next = headings.at(i+1);
-
+    const content = flattenChildren(heading.children);
+    
     result += "<li>"
-    result += html`<a href="#${heading.properties.id}">${ flattenChildren(heading.children) }</a>`
+    result += html`<a href="#${heading.properties.id}">${ content }</a>`
+  
     if( next?.tagName > heading.tagName ) {
       result += "<ul>"
-    } else if ( !next || next?.tagName < heading.tagName ) {
+    } else if ( next?.tagName < heading.tagName ) {
       result += "</ul>"
+    } else if( next ){
+      result += "</li>"
     }
+    
   }
 
   result += "</ul>";
