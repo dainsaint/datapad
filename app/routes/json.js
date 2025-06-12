@@ -33,7 +33,7 @@ jsonRouter.get("/episodes/active", async (req, res) => {
         elapsed: episode.currentPhase.timeElapsed,
         duration: episode.currentPhase.duration,
         remaining: episode.currentPhase.timeRemaining,
-        remainingFormatted: secondsToTime(episode.currentPhase.timeRemaining)
+        remainingFormatted: secondsToTime( Math.max(episode.currentPhase.timeRemaining, 0) )
       }
     },
     phases: [episode.phases],
