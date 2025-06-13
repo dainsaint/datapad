@@ -13,7 +13,52 @@
     "_type": "Tags",
     "value": []
   },
-  "actions": [],
+  "actions": [
+    {
+      "_type": "Action",
+      "id": "SOzel",
+      "round": "1",
+      "societyId": "et0k8",
+      "resourceIds": [
+        "prOam"
+      ],
+      "texts": [
+        "leave calling cards of mohawk on the other representative",
+        ""
+      ],
+      "result": [
+        0
+      ],
+      "voteTime": "2025-06-12T20:16:23.154-04:00",
+      "status": "invalid",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Action",
+      "id": "NEUR1",
+      "round": "1",
+      "societyId": "et0k8",
+      "resourceIds": [
+        "prOam",
+        "GUwLf"
+      ],
+      "texts": [
+        "leave calling aoeiuf pair hfpaieufnp ajkenf aref faiohowien ifn ineio apjfffasdf",
+        "fakifjn aiufhao ewfpoja euyibf rovihb iauwepo fbu ietoih aeb",
+        ""
+      ],
+      "result": [],
+      "voteTime": "2025-06-12T20:17:40.979-04:00",
+      "status": "voted",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    }
+  ],
   "communities": [
     {
       "_type": "Community",
@@ -762,7 +807,28 @@
     }
   ],
   "players": [],
-  "resources": [],
+  "resources": [
+    {
+      "_type": "Resource",
+      "id": "prOam",
+      "communityId": "Qw0Xm",
+      "name": "jabfgare",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    },
+    {
+      "_type": "Resource",
+      "id": "GUwLf",
+      "communityId": "Qw0Xm",
+      "name": "asdfadsf",
+      "tags": {
+        "_type": "Tags",
+        "value": []
+      }
+    }
+  ],
   "societies": [
     {
       "_type": "Society",
@@ -36472,6 +36538,20 @@
       "type": "CommunitiesEndangered",
       "description": "Blue Episode: Wizened Youth,Calendar Daddies,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened",
       "value": 19
+    },
+    {
+      "_type": "Record",
+      "id": "qK_2C",
+      "timestamp": "2025-06-13T00:16:01.622Z",
+      "type": "ResourceCreated",
+      "value": "jabfgare"
+    },
+    {
+      "_type": "Record",
+      "id": "CQAGP",
+      "timestamp": "2025-06-13T00:17:28.587Z",
+      "type": "ResourceCreated",
+      "value": "asdfadsf"
     }
   ]
 }

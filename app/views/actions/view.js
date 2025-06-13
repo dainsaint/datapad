@@ -28,7 +28,7 @@ export default function ActionView({ action } = {}) {
         <i class="fa ${icon[ action.status ]}"></i>
       </div>
 
-      <fieldset class="stack-tight">
+      <fieldset class="stack">
         ${ action.resources.map( (resource, i) => ActionComponent({resource, text: action.texts[i], i: i}) ) }
       </fieldset>
     </div>
@@ -44,7 +44,7 @@ export function ActionComponent({ resource, text, i } = {}) {
   return html`
     <div 
       class="action-resources gap"
-      style= "display: grid; grid-template-columns: max-content max-content max-content 1fr; align-items: center"
+      style= "line-height: 1.5; align-items: center;"
     >
     <p>
       We use 
