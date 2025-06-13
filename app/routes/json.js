@@ -52,10 +52,10 @@ jsonRouter.get("/episodes/active", async (req, res) => {
         components: resourceIds.map( (resourceId, i) => ({ 
           resource: {
             id: resourceId,
-            name: episode.getResourceById(resourceId).name 
+            name: episode.getResourceById(resourceId)?.name 
           },
           text: texts[i], 
-          statement: `We use ${ episode.getResourceById(resourceId).name } to ${ texts[i] }`
+          statement: `We use ${ episode.getResourceById(resourceId)?.name } to ${ texts[i] }`
         })),
         voted: status == ActionStatus.VOTED,
         voteTime: voteTime
