@@ -14,7 +14,7 @@ export default function Home ({ games = new Array(), episodes = new Array() }) {
         <details>
           <summary><h2 class="text-detailing">Load Episode</h2></summary>
           ${ episodes.map( (episode) =>
-            html`<a href="/episodes/${episode.id}">${episode.name} • ${episode.date.toISODate()}</a>`
+            html`<a href="/episodes/${episode.id}">${episode.name} • ${episode?.date?.toISODate?.()}</a>`
           )}
         </details>
 
