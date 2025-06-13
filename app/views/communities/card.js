@@ -45,7 +45,7 @@ export default function CommunityCard({ community = new Community(), inSociety }
         <header class="community-card__header">
           <p class="is-size-7">${ voice } ${ community.isEmissary && "• emissary"} ${ community.isAmbassador && "• ambassador"}</p></p>
           <strong>
-            ${ community.resources.length == 0 && html`<i class="fa fa-warning"></i> ` }<a class="is-uppercase is-size-5" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name}</a>
+            ${ community.resources.length == 0 && html`<i class="fa fa-warning"></i> ` }<a class="is-uppercase is-size-5" hx-get="${community.toURL("/edit")}" hx-target="#dialog" hx-trigger="click">${community.name.trim() || "No Community Name"}</a>
           </strong>
           <p class="text-body is-uppercase">${ community.player }</p>
           ${ community.isAmbassador && 
