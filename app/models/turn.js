@@ -24,6 +24,11 @@ export default class Turn extends Model {
 
   validateLeadership() {
     this.society.activeCommunities.forEach( community => this.alterLeadership[community.id] ??= community.voice )
+    
+    const activeCommunityIds = this.society.activeCommunities.map( x => x.id );
+    const errantCommunityIds = Object.keys(this.alterLeadership).filter( communityId => !activeCommunityIds.includes(communityId));
+    errantCommunityIds.forEach( communityId => delete this.alterLeadership[communityId]);
+
     this.episode.save();
   }
 

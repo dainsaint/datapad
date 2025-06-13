@@ -8,7 +8,7 @@ import Icon from "#views/ui/icon";
 export default function TurnLeadership({ turn } = {}) {
   turn.validateLeadership();
   const { alterLeadership } = turn;
-  const communities = turn.society.communities.reduce( (map, community) => {
+  const communities = turn.society.activeCommunities.reduce( (map, community) => {
     map[community.id] = community;
     return map;
   }, {})

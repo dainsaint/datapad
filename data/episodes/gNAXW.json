@@ -26,6 +26,9 @@
         "leave calling cards of mohawk on the other representative",
         ""
       ],
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
       "result": [
         0
       ],
@@ -50,6 +53,9 @@
         "fakifjn aiufhao ewfpoja euyibf rovihb iauwepo fbu ietoih aeb",
         ""
       ],
+      "risk": 1,
+      "advantage": 0,
+      "disadvantage": 0,
       "result": [],
       "voteTime": "2025-06-12T20:17:40.979-04:00",
       "status": "voted",
@@ -325,6 +331,20 @@
         "_type": "Tags",
         "value": [
           "endangered"
+        ]
+      }
+    },
+    {
+      "_type": "Community",
+      "id": "tOuBE",
+      "societyId": "et0k8",
+      "player": "",
+      "name": "a community I'll lose",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": [
+          "lost"
         ]
       }
     }
@@ -1050,7 +1070,15 @@
       "advantage": 0,
       "disadvantage": 0,
       "ambassadors": {},
-      "alterLeadership": {}
+      "alterLeadership": {
+        "Qw0Xm": "people",
+        "UDMgC": "people",
+        "B95dD": "leader",
+        "cV-Kn": "people",
+        "LiQVN": "people",
+        "R9tmF": "people",
+        "kATHn": "people"
+      }
     },
     {
       "_type": "Turn",
@@ -36542,14 +36570,14 @@
     {
       "_type": "Record",
       "id": "qK_2C",
-      "timestamp": "2025-06-13T00:16:01.622Z",
+      "timestamp": "2025-06-12T20:16:01.622-04:00",
       "type": "ResourceCreated",
       "value": "jabfgare"
     },
     {
       "_type": "Record",
       "id": "CQAGP",
-      "timestamp": "2025-06-13T00:17:28.587Z",
+      "timestamp": "2025-06-12T20:17:28.587-04:00",
       "type": "ResourceCreated",
       "value": "asdfadsf"
     }
