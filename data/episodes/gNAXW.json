@@ -56,7 +56,10 @@
       "risk": 1,
       "advantage": 0,
       "disadvantage": 0,
-      "result": [],
+      "result": [
+        0,
+        0
+      ],
       "voteTime": "2025-06-12T20:17:40.979-04:00",
       "status": "voted",
       "tags": {
@@ -346,6 +349,18 @@
         "value": [
           "lost"
         ]
+      }
+    },
+    {
+      "_type": "Community",
+      "id": "Reoh6",
+      "societyId": "Feay0",
+      "player": "",
+      "name": "dsfafe",
+      "voice": "people",
+      "tags": {
+        "_type": "Tags",
+        "value": []
       }
     }
   ],

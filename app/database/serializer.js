@@ -1,7 +1,7 @@
 import { DateTime, Interval } from "luxon";
 
 const Types = new Map();
-const instances = new Map();
+// const instances = new Map();
 
 function replacer(_, value) {
   const typeName = [...Types.entries()].find( ([_, Type]) => value instanceof Type )?.[0];
@@ -33,9 +33,9 @@ function reviver(key, value) {
     return value;
   }
 
-  if (Object.hasOwn(value, "id") && instances.has(value.id)) {
-    return instances.get(value.id);
-  }
+  // if (Object.hasOwn(value, "id") && instances.has(value.id)) {
+  //   return instances.get(value.id);
+  // }
 
   const Type = Types.get(value._type);
 
@@ -51,7 +51,7 @@ function reviver(key, value) {
     Object.assign(instance, value);
   }
 
-  instances.set(value.id, instance);
+  // instances.set(value.id, instance);
   return instance;
 }
 
