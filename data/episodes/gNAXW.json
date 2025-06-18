@@ -94,9 +94,7 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": [
-          "endangered"
-        ]
+        "value": []
       }
     },
     {
@@ -347,7 +345,8 @@
       "tags": {
         "_type": "Tags",
         "value": [
-          "lost"
+          "lost",
+          "endangered"
         ]
       }
     },
@@ -360,7 +359,9 @@
       "voice": "people",
       "tags": {
         "_type": "Tags",
-        "value": []
+        "value": [
+          "endangered"
+        ]
       }
     }
   ],
@@ -391,10 +392,10 @@
       "status": "paused",
       "round": 1,
       "duration": 240,
-      "timeElapsed": 0,
+      "timeElapsed": 3.0029999999999997,
       "actualTime": {
-        "s": "2025-06-11T12:48:20.095-04:00",
-        "e": "2025-06-11T12:52:20.095-04:00",
+        "s": "2025-06-18T18:38:31.347-04:00",
+        "e": "2025-06-18T18:42:31.347-04:00",
         "invalid": null,
         "isLuxonInterval": true
       },
@@ -36595,6 +36596,38 @@
       "timestamp": "2025-06-12T20:17:28.587-04:00",
       "type": "ResourceCreated",
       "value": "asdfadsf"
+    },
+    {
+      "_type": "Record",
+      "id": "cXI9o",
+      "timestamp": "2025-06-18T18:38:19.412-04:00",
+      "type": "PhaseStarted",
+      "description": "Round 1: Universal Phase",
+      "value": "2025-06-18T18:38:19.412-04:00"
+    },
+    {
+      "_type": "Record",
+      "id": "d3smG",
+      "timestamp": "2025-06-18T18:38:19.412-04:00",
+      "type": "CommunitiesEndangered",
+      "description": "Blue Episode: Wizened Youth,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened,a community I'll lose,dsfafe",
+      "value": 20
+    },
+    {
+      "_type": "Record",
+      "id": "saJTr",
+      "timestamp": "2025-06-18T22:38:31.347Z",
+      "type": "PhaseStarted",
+      "description": "Round 1: Universal Phase",
+      "value": "2025-06-18T22:38:31.347Z"
+    },
+    {
+      "_type": "Record",
+      "id": "Ny9yg",
+      "timestamp": "2025-06-18T22:38:31.347Z",
+      "type": "CommunitiesEndangered",
+      "description": "Blue Episode: Wizened Youth,ribs,Jeffrey Bezos,Dirty Harries,Elders,Pencils Down,Quinn,Jimmy,nana,baba,gaga,dada,popo,skreeee,big ol shair,My Guys,Big bois,What happened,a community I'll lose,dsfafe",
+      "value": 20
     }
   ]
 }

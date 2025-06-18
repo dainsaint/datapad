@@ -108,7 +108,7 @@ export default class RemoteStorage extends Storage {
       const text = await file.text();
       return text;
     } catch(e) {
-      // console.error( e );
+      console.error( e );
     }
   }
 
