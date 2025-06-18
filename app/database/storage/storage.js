@@ -28,8 +28,13 @@ export default class Storage {
 
   async load(filename) {
     const text = await this._load(filename);
-    const json = this.#parse(text);
-    return json;
+    try {
+      const json = this.#parse(text);
+      return json;
+    } catch(e) {
+      console.log(e);
+      return null;
+    }
   }
 
   getFilename({ id, type }) {

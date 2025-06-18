@@ -109,7 +109,7 @@ export default class RemoteStorage extends Storage {
       return text;
     } catch(e) {
       // console.error( e );
-      return "";
+      // return "{}";
     }
   }
 
