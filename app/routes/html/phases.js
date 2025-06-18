@@ -55,7 +55,11 @@ phases.post("/:episodeId/round", async (req, res, next) => {
 
 phases.get("/:episodeId/:phaseId/:view?", async (req, res, next) => {
   const { episodeId, phaseId, view = "card" } = req.params;
-console.log( episodeId, phaseId );
+  if( !episodeId ) {
+    res.sendStatus(200);
+    return;
+  }
+
   const episode = await Episode.load(episodeId);
   const phase = episode.getPhaseById(phaseId);
 
