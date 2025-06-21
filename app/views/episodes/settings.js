@@ -38,7 +38,9 @@ export default function EpisodeSettings ({ episode = new Episode()} = {}) {
               ${ isActiveEpisode && html`<button disabled><i class="fa fa-plug-circle-check"></i> This Is The Active Episode</button>` }
               
               <div class="layout-fill"></div>
-              <button class="color-danger" hx-get="${ episode.toURL("/copy")}" hx-target="#dialog"><i class="fa fa-copy"></i> Copy From Another Episode</button>
+              <button hx-get="${ episode.toURL("/copy")}" hx-target="#dialog"><i class="fa fa-copy"></i> Copy From Another Episode</button>
+              <button class="color-danger" hx-post="${ episode.toURL("/reset")}" hx-swap="none" hx-confirm="This will clear all actions and turns, and set all phases back to zero! (This won't clear societies, communities or resources.)"><i class="fa fa-broom"></i> Reset Episode</button>
+              
             </footer>
           </div>
         </div>

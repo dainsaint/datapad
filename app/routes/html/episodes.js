@@ -95,6 +95,18 @@ episodes.post("/:episodeId/active", async (req, res) => {
 })
 
 
+episodes.post("/:episodeId/reset", async (req, res) => {
+  const { episodeId } = req.params;
+  const episode = await Episode.load( episodeId );
+
+  episode.reset();
+
+  res.sendStatus(200);
+  broadcast("episode");
+})
+
+
+
 episodes.get("/:episodeId/facilitator/:societyId?", episodeLayout, async (req, res) => {
   const { episodeId, societyId } = req.params;
 

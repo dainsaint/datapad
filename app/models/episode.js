@@ -195,6 +195,14 @@ export default class Episode extends Model {
     return this.tags.has(EpisodeTags.ACTIVE);
   }
 
+  reset() {
+    this.actions = [];
+    this.records = [];
+    this.turns = [];
+    this.phases.forEach( phase => phase.reset() );
+    this.save();
+  }
+
   static uncache(id) {
     loadedEpisodes.delete(id);
   }

@@ -24,7 +24,7 @@ export default function ActionView({ action } = {}) {
       hx-disinherit="*"
     >
     <div class="layout-row gap">
-      <div class="is-size-3" hx-get="${action.toURL("/edit")}" hx-target="#dialog">
+      <div class="is-size-3" hx-get="${action.toURL("/complete")}" hx-target="#dialog">
         <i class="fa ${icon[ action.status ]}"></i>
       </div>
 

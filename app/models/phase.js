@@ -46,6 +46,11 @@ export default class Phase extends Model {
       this.timeElapsed += deltaTimeMS / 1000;
     }
   }
+
+  reset() {
+    this.timeElapsed = 0;
+    this.status = PhaseStatus.IDLE;
+  }
   
   get isPlaying() {
     return this.status === PhaseStatus.PLAYING;
