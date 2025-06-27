@@ -35,6 +35,11 @@ export default class Episode extends Model {
   //TODO: Put these in a separate file?
   records = []
 
+  constructor(data) {
+    super(data);
+    this.update(data);
+  }
+
   //Helper functions
   #addTo(key) {
     return (object) => {

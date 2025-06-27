@@ -35,6 +35,7 @@ export default function AppLayout(props, children) {
         <dialog id="dialog" class="stack in-dialog" 
           hx-on:htmx:load="this.showModal()" 
           hx-on:htmx:after-request="this.close()"
+          hx-disinherit="*"
           onclick="if(event.target.value === 'cancel') this.close()">
         </dialog>
       </section>

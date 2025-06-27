@@ -1,0 +1,28 @@
+{
+  "_type": "Episode",
+  "id": "voHxR",
+  "name": "srvlarkjnvare",
+  "date": "2025-06-27T00:00:00.000-04:00",
+  "scheduledTime": {
+    "s": "2025-06-27T13:00:00.000-04:00",
+    "e": "2025-06-27T18:00:00.000-04:00",
+    "invalid": null,
+    "isLuxonInterval": true
+  },
+  "tags": {
+    "_type": "Tags",
+    "value": []
+  },
+  "actions": [],
+  "communities": [],
+  "phases": [],
+  "players": [],
+  "resources": [],
+  "societies": [],
+  "turns": [],
+  "documents": [],
+  "links": {
+    "discord": "discord://-/channels/1063250197993492480/1063254140341473350"
+  },
+  "records": []
+}

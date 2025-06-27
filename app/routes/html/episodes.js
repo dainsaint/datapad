@@ -66,19 +66,36 @@ episodes.post("/",
     console.log( data );
 
     const episode = new Episode(data);
+    console.log( episode );
     episode.save();
 
+    res.redirect( episode.toURL() );
     broadcast("episode");
 })
 
-episodes.put("/:episodeId", async (req, res) => {
-  const { episodeId } = req.params;
-  const episode = await Episode.load( episodeId );
-  console.log( req.body );
-  episode.update( req.body );
-  episode.save();
-  res.sendStatus(200);
-  broadcast("episode");
+episodes.put("/:episodeId", 
+  body("name").notEmpty(), 
+  body("date").customSanitizer( (date, meta) => {
+    const { time, duration } = meta.req.body;
+    const { hour, minute } = DateTime.fromISO(time).toObject();
+    
+    const dateObject = DateTime.fromISO(date);
+    const start = dateObject.set( { hour, minute } );
+    const scheduledTime = Interval.after(start, Duration.fromDurationLike(duration));
+
+    meta.req.body.scheduledTime = scheduledTime;
+    return dateObject;
+  }),
+  body("scheduledTime"),
+  
+  async (req, res) => {
+    const { episodeId } = req.params;
+    const episode = await Episode.load( episodeId );
+    console.log( req.body );
+    episode.update( req.body );
+    episode.save();
+    res.sendStatus(200);
+    broadcast("episode");
 })
 
 ////////////////////////////////////////
