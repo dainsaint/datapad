@@ -55,7 +55,7 @@ export default class Turn extends Model {
   }
   
   toURL(append = "") {
-    return `/turns/${this.episode.id}/${this.societyId}/${this.round}` + append;
+    return `/turns/${this.episode?.id}/${this.societyId}/${this.round}` + append;
   }
 }
 

@@ -17,7 +17,7 @@ export default class Record extends Model {
   }
 
   toURL(append = "") {
-    return `/records/${this.episode.id}/${this.id}` + append;
+    return `/records/${this.episode?.id}/${this.id}` + append;
   }
 
 }

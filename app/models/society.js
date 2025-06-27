@@ -102,7 +102,7 @@ export default class Society extends Model {
 
 
   toURL(append = "") {
-    return `/societies/${this.episode.id}/${this.id}` + append;
+    return `/societies/${this.episode?.id}/${this.id}` + append;
   }
 
   static getFateForArchetype( archetype, fateId ) {

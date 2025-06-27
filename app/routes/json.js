@@ -61,6 +61,7 @@ jsonRouter.get("/episodes/active", async (req, res) => {
         voteTime: voteTime
 
       })),
+      turn: society.currentTurn
     }))
   }
 
