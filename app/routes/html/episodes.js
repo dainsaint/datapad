@@ -20,9 +20,9 @@ const episodes = express.Router();
 */
 
 
-function episodeLayout (req, res, next, err) {
+async function episodeLayout (req, res, next) {
   res.locals.layout = req.headers["hx-request"] ? "none" : "episode";
-  next(err);
+  next();
 }
 
 

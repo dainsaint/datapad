@@ -4,6 +4,7 @@ import EpisodeToolbar from "../episodes/components/toolbar.js";
 import AppLayout from "./app.js";
 
 export default function EpisodeLayout(props, children) {
+  console.log("ep layout??");
   const layout = html`
     <section class="layout-toolbar">
       <div class="in-toolbar" hx-target="#main">
