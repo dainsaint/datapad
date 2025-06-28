@@ -19,12 +19,17 @@ const societies = express.Router();
 */
 
 societies.get("/:episodeId/:view?", async (req, res, next) => {
+  try {
   const { episodeId, view = "list" } = req.params;
   const episode = await Episode.load(episodeId);
   res.render(`societies/${view}`, { episode })
+} catch(err) {
+  next(err);
+}
 });
 
 societies.post("/:episodeId", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -36,6 +41,9 @@ societies.post("/:episodeId", async (req, res, next) => {
   res.sendStatus(201);
 
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 });
 
 
@@ -50,6 +58,7 @@ societies.post("/:episodeId", async (req, res, next) => {
 
 
 societies.post("/:episodeId/:societyId/actions", async (req, res, next) => {
+  try {
   const { episodeId, societyId } = req.params;
   const { round } = req.body;
 
@@ -62,9 +71,13 @@ societies.post("/:episodeId/:societyId/actions", async (req, res, next) => {
   res.sendStatus(201);
 
   broadcast("actions");
+} catch(err) {
+  next(err);
+}
 });
 
-societies.post("/:episodeId/:societyId/communities", async (req, res) => {
+societies.post("/:episodeId/:societyId/communities", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -76,19 +89,27 @@ societies.post("/:episodeId/:societyId/communities", async (req, res) => {
   res.sendStatus(201);
 
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 });
 
 
 societies.get("/:episodeId/:societyId/:view?", async (req, res, next) => {
+  try {
   const { episodeId, societyId, view = "panel" } = req.params;
 
   const episode = await Episode.load(episodeId);
   const society = episode.getSocietyById(societyId);
 
   res.render(`societies/${view}`, { society });
+} catch(err) {
+  next(err);
+}
 });
 
 societies.put("/:episodeId/:societyId", body("name").trim(), async (req, res, next) => {
+  try {
   const { episodeId, societyId } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -101,11 +122,14 @@ societies.put("/:episodeId/:societyId", body("name").trim(), async (req, res, ne
   res.sendStatus(200);
 
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 });
     
 
 
-// societies.post("/:episodeId/:societyId/ambassador", async (req, res) => {
+// societies.post("/:episodeId/:societyId/ambassador", async (req, res, next) => {
 //   const { episodeId } = req.params;
 //   const { communityId, ambassadorSocietyId } = req.body;
 
@@ -120,7 +144,7 @@ societies.put("/:episodeId/:societyId", body("name").trim(), async (req, res, ne
 // })
 
 
-// societies.post("/:episodeId/:societyId/emissary", async (req, res) => {
+// societies.post("/:episodeId/:societyId/emissary", async (req, res, next) => {
 //   console.log("what up");
 //   const { episodeId, societyId } = req.params;
 //   const { round, emissaryCommunityId } = req.body;
@@ -141,7 +165,7 @@ societies.put("/:episodeId/:societyId", body("name").trim(), async (req, res, ne
 //Like, does deleting a society delete all communities it had?
 // episode.removeSocietyById(societyId);
 
-societies.delete("/:episodeId/:societyId", async (req, res) => {
+societies.delete("/:episodeId/:societyId", async (req, res, next) => {
   const { episodeId, societyId } = req.params;
 
   try {

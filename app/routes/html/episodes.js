@@ -20,24 +20,32 @@ const episodes = express.Router();
 */
 
 
-function episodeLayout (req, res, next) {
+function episodeLayout (req, res, next, err) {
   res.locals.layout = req.headers["hx-request"] ? "none" : "episode";
-  next();
+  next(err);
 }
 
 
-episodes.get("/create", async (req, res) => {
-  res.render(`episodes/create`);
+episodes.get("/create", async (req, res, next) => {
+  try {
+    res.render(`episodes/create`);
+  } catch(err) {
+    next(err);
+  }
 });
 
-episodes.post("/create/time", async (req, res) => {
-  const { date, time, duration } = req.body;
+episodes.post("/create/time", async (req, res, next) => {
+  try {
+    const { date, time, duration } = req.body;
 
-  res.send( EpisodeTimeInput({
-    date: DateTime.fromISO(date),
-    time: DateTime.fromISO(time),
-    duration
-  }))
+    res.send( EpisodeTimeInput({
+      date: DateTime.fromISO(date),
+      time: DateTime.fromISO(time),
+      duration
+    }))
+  } catch(err) {
+    next(err);
+  }
 });
 
 episodes.post("/",
@@ -56,21 +64,25 @@ episodes.post("/",
   }),
   body("scheduledTime"),
   
-  async (req, res) => {
-    const result = validationResult(req);
-    if( !result.isEmpty() ) {
-      throw new Error( JSON.stringify( result.array(), null, 2 ) )
+  async (req, res, next) => {
+    try {
+      const result = validationResult(req);
+      if( !result.isEmpty() ) {
+        throw new Error( JSON.stringify( result.array(), null, 2 ) )
+      }
+
+      const data = matchedData(req);
+      console.log( data );
+
+      const episode = new Episode(data);
+      console.log( episode );
+      episode.save();
+
+      res.redirect( episode.toURL() );
+      broadcast("episode");
+    } catch(err) {
+      next(err);
     }
-
-    const data = matchedData(req);
-    console.log( data );
-
-    const episode = new Episode(data);
-    console.log( episode );
-    episode.save();
-
-    res.redirect( episode.toURL() );
-    broadcast("episode");
 })
 
 episodes.put("/:episodeId", 
@@ -88,14 +100,18 @@ episodes.put("/:episodeId",
   }),
   body("scheduledTime"),
   
-  async (req, res) => {
-    const { episodeId } = req.params;
-    const episode = await Episode.load( episodeId );
-    console.log( req.body );
-    episode.update( req.body );
-    episode.save();
-    res.sendStatus(200);
-    broadcast("episode");
+  async (req, res, next) => {
+    try {
+      const { episodeId } = req.params;
+      const episode = await Episode.load( episodeId );
+      console.log( req.body );
+      episode.update( req.body );
+      episode.save();
+      res.sendStatus(200);
+      broadcast("episode");
+    } catch(err) {
+      next(err);
+    }
 })
 
 ////////////////////////////////////////
@@ -103,16 +119,21 @@ episodes.put("/:episodeId",
 ////////////////////////////////////////
 
 
-episodes.post("/:episodeId/active", async (req, res) => {
+episodes.post("/:episodeId/active", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const episode = await Episode.load( episodeId );
   Ledger.setActiveEpisode( episode );
   res.sendStatus(200);
   broadcast("episode");
+} catch(err) {
+  next(err);
+}
 })
 
 
-episodes.post("/:episodeId/reset", async (req, res) => {
+episodes.post("/:episodeId/reset", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const episode = await Episode.load( episodeId );
 
@@ -120,11 +141,15 @@ episodes.post("/:episodeId/reset", async (req, res) => {
 
   res.sendStatus(200);
   broadcast("episode");
+} catch(err) {
+  next(err);
+}
 })
 
 
 
-episodes.get("/:episodeId/facilitator/:societyId?", episodeLayout, async (req, res) => {
+episodes.get("/:episodeId/facilitator/:societyId?", episodeLayout, async (req, res, next) => {
+  try {
   const { episodeId, societyId } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -140,11 +165,15 @@ episodes.get("/:episodeId/facilitator/:societyId?", episodeLayout, async (req, r
     req.session.facilitator.societyId = societyId;
     res.render(`episodes/facilitator`, { episode, societyId });
   }
+} catch(err) {
+  next(err);
+}
   
 });
 
 
-episodes.get("/:episodeId/documents/:documentId?", episodeLayout, async (req, res) => {
+episodes.get("/:episodeId/documents/:documentId?", episodeLayout, async (req, res, next) => {
+  try {
   const { episodeId, documentId } = req.params;
   
   const episode = await Episode.load(episodeId);
@@ -164,11 +193,16 @@ episodes.get("/:episodeId/documents/:documentId?", episodeLayout, async (req, re
     req.session.documents.documentId = documentId;
     res.render(`episodes/documents`, { episode, documentId });
   }
+
+} catch(err) {
+  next(err);
+}
   
 });
 
 
-episodes.get("/:episodeId/:view?", episodeLayout, async (req, res) => {
+episodes.get("/:episodeId/:view?", episodeLayout, async (req, res, next) => {
+  try {
   const { episodeId, view } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -177,12 +211,17 @@ episodes.get("/:episodeId/:view?", episodeLayout, async (req, res) => {
     res.redirect(`/episodes/${episodeId}/gm`)
   else
     res.render(`episodes/${view}`, { episode });
+
+  } catch(err) {
+    next(err);
+  }
 });
 
 
 
 
-episodes.put("/:episodeId/playlist", async (req, res) => {
+episodes.put("/:episodeId/playlist", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const { phaseIds } = req.body;
   
@@ -194,11 +233,16 @@ episodes.put("/:episodeId/playlist", async (req, res) => {
 
   res.sendStatus(200);
   broadcast("episode");
+
+} catch(err) {
+  next(err);
+}
 });
 
 
 
-episodes.post("/:episodeId/copy", async (req, res) => {
+episodes.post("/:episodeId/copy", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const { originalEpisodeId } = req.body;
   const episode = await Episode.load( episodeId );
@@ -223,6 +267,10 @@ episodes.post("/:episodeId/copy", async (req, res) => {
   
   res.sendStatus(200);
   broadcast("episode");
+
+} catch(err) {
+  next(err);
+}
 })
 
 

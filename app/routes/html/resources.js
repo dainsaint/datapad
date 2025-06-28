@@ -16,15 +16,20 @@ const resources = express.Router();
 
 
 resources.get("/:episodeId", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const { view = "list", layout = "none" } = req.query;
 
   const episode = await Episode.load(episodeId);
 
   res.render(`resources/${view}`, { episode, layout });
+} catch(err) {
+  next(err);
+}
 });
 
 resources.post("/:episodeId", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -39,11 +44,15 @@ resources.post("/:episodeId", async (req, res, next) => {
   res.sendStatus(201);
 
   broadcast("resources");
+} catch(err) {
+  next(err);
+}
 });
 
 
 
 resources.get("/:episodeId/create", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const { societyId, communityId } = req.query;
 
@@ -51,6 +60,9 @@ resources.get("/:episodeId/create", async (req, res, next) => {
   const society = episode.getSocietyById(societyId);
 
   res.render(`resources/create`, { episode, society, communityId });
+} catch(err) {
+  next(err);
+}
 });
 
 
@@ -63,15 +75,20 @@ resources.get("/:episodeId/create", async (req, res, next) => {
 
 
 resources.get("/:episodeId/:resourceId/:view?", async (req, res, next) => {
+  try {
   const { episodeId, resourceId, view = "edit" } = req.params;
 
   const episode = await Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
 
   res.render(`resources/${view}`, { resource });
+} catch(err) {
+  next(err);
+}
 });
 
 resources.patch("/:episodeId/:resourceId", async (req, res, next) => {
+  try {
   const { episodeId, resourceId } = req.params;
   const { shouldAlterTags, exhausted } = req.body;
 
@@ -92,10 +109,14 @@ resources.patch("/:episodeId/:resourceId", async (req, res, next) => {
 
   res.sendStatus(201);
   broadcast("resources");
+} catch(err) {
+  next(err);
+}
 });
 
 
-resources.post("/:episodeId/:resourceId/destroy", async (req, res) => {
+resources.post("/:episodeId/:resourceId/destroy", async (req, res, next) => {
+  try {
   const { episodeId, resourceId } = req.params;
   const episode = await Episode.load(episodeId);
   const resource = episode.getResourceById(resourceId);
@@ -104,10 +125,13 @@ resources.post("/:episodeId/:resourceId/destroy", async (req, res) => {
 
   res.sendStatus(200);
   broadcast("resources");
+} catch(err) {
+  next(err);
+}
 });
 
 
-resources.delete("/:episodeId/:resourceId", async (req, res) => {
+resources.delete("/:episodeId/:resourceId", async (req, res, next) => {
   const { episodeId, resourceId } = req.params;
 
   try {

@@ -8,13 +8,18 @@ const pages = express.Router();
 - [x] GET     /
 */
 
-pages.get("/home", async (req, res) => {
+pages.get("/home", async (req, res, next) => {
+  try {
   const games = Ledger.games;
   const episodes = Ledger.episodes;
   res.render("pages/home", { games, episodes });
+} catch(err) {
+  next(err);
+}
 });
 
-pages.get("/", async (req, res) => {
+pages.get("/", async (req, res, next) => {
+  try {
   let episode = await Ledger.getActiveEpisode();
   if( episode ) {
     res.redirect(`/episodes/${ episode.id }/facilitator`)
@@ -30,7 +35,9 @@ pages.get("/", async (req, res) => {
     res.redirect(`/home`)
   }
 
-  
+} catch(err) {
+  next(err);
+}
 });
 
 

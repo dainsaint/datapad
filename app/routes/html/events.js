@@ -28,7 +28,8 @@ export function tick(deltaTime) {
 - [X] POST    /events;
 */
 
-events.get("/", async (req, res) => {
+events.get("/", async (req, res, next) => {
+  try {
   // Set headers for SSE
   res.setHeader("Content-Type", "text/event-stream");
   res.setHeader("Cache-Control", "no-cache");
@@ -45,11 +46,18 @@ events.get("/", async (req, res) => {
     clients.delete(res);
     res.end();
   });
+} catch(err) {
+  next(err);
+}
 });
 
-events.post("/", async (req, res) => {
+events.post("/", async (req, res, next) => {
+  try {
   const { data } = req.body;
   broadcast(data);
+} catch(err) {
+  next(err);
+}
 });
 
 export default events;

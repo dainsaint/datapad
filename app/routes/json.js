@@ -14,7 +14,7 @@ jsonRouter.use(async (req, res, next) => {
 })
 
 
-jsonRouter.get("/episodes/active", async (req, res) => {
+jsonRouter.get("/episodes/active", async (req, res, next) => {
   let episode = await Ledger.getActiveEpisode();
 
   const formatResource = ({name,id, tags}) => ({
@@ -69,7 +69,7 @@ jsonRouter.get("/episodes/active", async (req, res) => {
 
 });
 
-jsonRouter.get("/episodes/active/playlist", async (req, res) => {
+jsonRouter.get("/episodes/active/playlist", async (req, res, next) => {
   let episode = await Ledger.getActiveEpisode();
 
 
@@ -83,34 +83,34 @@ jsonRouter.get("/episodes/active/playlist", async (req, res) => {
 
 
 
-jsonRouter.get("/games", async (req, res) => {
+jsonRouter.get("/games", async (req, res, next) => {
   res.send(Ledger.games);
 });
 
-jsonRouter.get("/episodes", async (req, res) => {
+jsonRouter.get("/episodes", async (req, res, next) => {
   res.send(Ledger.episodes);
 });
 
-jsonRouter.get("/episodes/:episodeId", async (req, res) => {
+jsonRouter.get("/episodes/:episodeId", async (req, res, next) => {
   const { episodeId } = req.params;
   const episode = await Episode.load(episodeId)
   res.send(episode);
 });
 
 //TODO: These requests should be scoped to either a specific society, or the active society (if one exists)
-jsonRouter.get("/communities", async (req, res) => {
+jsonRouter.get("/communities", async (req, res, next) => {
   const activeEpisode = await Ledger.getActiveEpisode();
   const communities = activeEpisode?.communities || [];
   res.send(communities);
 });
 
-jsonRouter.get("/players", async (req, res) => {
+jsonRouter.get("/players", async (req, res, next) => {
   const activeEpisode = await Ledger.getActiveEpisode();
   const players = activeEpisode?.players || [];
   res.send(players);
 });
 
-jsonRouter.get("/societies", async (req, res) => {
+jsonRouter.get("/societies", async (req, res, next) => {
   const activeEpisode = await Ledger.getActiveEpisode();
   const societies = activeEpisode?.societies || [];
   res.send(societies);

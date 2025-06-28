@@ -8,13 +8,18 @@ const phases = express.Router();
 
 
 phases.get("/:episodeId/create", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const episode = await Episode.load(episodeId);
   res.render(`phases/create`, { episode });
+} catch(err) {
+  next(err);
+}
 });
 
 
 phases.post("/:episodeId", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const { type, duration: { minutes, seconds }} = req.body;
 
@@ -32,10 +37,14 @@ phases.post("/:episodeId", async (req, res, next) => {
   
   res.sendStatus(200);
   broadcast("phases");
+} catch(err) {
+  next(err);
+}
 })
 
 
 phases.post("/:episodeId/round", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const episode = await Episode.load(episodeId);
 
@@ -48,23 +57,31 @@ phases.post("/:episodeId/round", async (req, res, next) => {
   
   res.sendStatus(200);
   broadcast("phases");
+} catch(err) {
+  next(err);
+}
 });
 
 
 
 
 phases.get("/:episodeId/:phaseId/:view?", async (req, res, next) => {
+  try {
   const { episodeId, phaseId, view = "card" } = req.params;
 
   const episode = await Episode.load(episodeId);
   const phase = episode.getPhaseById(phaseId);
 
   res.render(`phases/${view}`, { phase });
+} catch(err) {
+  next(err);
+}
 });
 
 
 
 phases.post("/:episodeId/:phaseId", async (req, res, next) => {
+  try {
   const { episodeId, phaseId } = req.params;
   const { action } = req.body;
   
@@ -113,12 +130,15 @@ phases.post("/:episodeId/:phaseId", async (req, res, next) => {
 
   res.sendStatus(200);
   broadcast( broadcastEvent );
-  
+} catch(err) {
+  next(err);
+}
 });
 
 
 
 phases.put("/:episodeId/:phaseId", async (req, res, next) => {
+  try {
   const { episodeId, phaseId } = req.params;
   const { type, round, duration: { minutes, seconds }, timeElapsed} = req.body;
 
@@ -140,10 +160,14 @@ phases.put("/:episodeId/:phaseId", async (req, res, next) => {
 
   res.sendStatus(200);
   broadcast("phases");
+
+} catch(err) {
+  next(err);
+}
 })
 
 
-phases.delete("/:episodeId/:phaseId", async (req, res) => {
+phases.delete("/:episodeId/:phaseId", async (req, res, next) => {
   const { episodeId, phaseId } = req.params;
 
   try {

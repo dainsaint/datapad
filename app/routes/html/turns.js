@@ -9,7 +9,8 @@ const turns = express.Router();
 ////////////////////////////////////////
 
 
-turns.post("/:episodeId/:societyId/:round", async (req, res) => {
+turns.post("/:episodeId/:societyId/:round", async (req, res, next) => {
+  try {
   const { episodeId, round, societyId } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -19,19 +20,27 @@ turns.post("/:episodeId/:societyId/:round", async (req, res) => {
 
   res.sendStatus(200);
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 })
 
-turns.get("/:episodeId/:societyId/:round/:view?", async (req, res) => {
+turns.get("/:episodeId/:societyId/:round/:view?", async (req, res, next) => {
+  try {
   const { episodeId, round, societyId, view } = req.params;
 
   const episode = await Episode.load(episodeId);
   const turn = episode.getTurnByRound(societyId, round);
 
   res.render(`turns/${view}`, { turn });
+} catch(err) {
+  next(err);
+}
 })
 
 
-turns.post("/:episodeId/:societyId/:round/leadership", async (req, res) => {
+turns.post("/:episodeId/:societyId/:round/leadership", async (req, res, next) => {
+  try {
   const { episodeId, societyId, round } = req.params;
 
   console.log( req.body );
@@ -44,6 +53,9 @@ turns.post("/:episodeId/:societyId/:round/leadership", async (req, res) => {
 
   res.sendStatus(200);
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 })
 
 

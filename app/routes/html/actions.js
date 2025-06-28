@@ -9,12 +9,16 @@ import ActionEdit from "#views/actions/edit";
 const actions = express.Router();
 
 actions.get("/:episodeId", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const { societyId } = req.query;
 
   const episode = await Episode.load(episodeId);
 
   res.send(ActionEdit({ episode, societyId }));
+} catch(err) {
+  next(err);
+}
 });
 
 
@@ -23,6 +27,7 @@ actions.get("/:episodeId", async (req, res, next) => {
 
 
 actions.post("/:episodeId/:actionId/resources", async (req, res, next) => {
+  try {
   const { episodeId, actionId } = req.params;
   const { resourceIds = [], texts = [], risk, disadvantage, advantage, vote } = req.body;
 
@@ -56,9 +61,13 @@ actions.post("/:episodeId/:actionId/resources", async (req, res, next) => {
   res.location(action.toURL());
   res.sendStatus(201);
   broadcast("actions");
+} catch(err) {
+  next(err);
+}
 });
 
-actions.post("/:episodeId/:actionId/result", async (req, res) => {
+actions.post("/:episodeId/:actionId/result", async (req, res, next) => {
+  try {
   const { episodeId, actionId } = req.params;
   const { result } = req.body;
 
@@ -72,18 +81,25 @@ actions.post("/:episodeId/:actionId/result", async (req, res) => {
 
   res.sendStatus(201);
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 });
 
 
 
 
-actions.get("/:episodeId/:actionId/:view?", async (req, res) => {
+actions.get("/:episodeId/:actionId/:view?", async (req, res, next) => {
+  try {
   const { episodeId, actionId, view = "view" } = req.params;
 
   const episode = await Episode.load(episodeId);
   const action = episode.getActionById(actionId);
 
   res.render(`actions/${view}`, {action});
+} catch(err) {
+  next(err);
+}
 });
 
 

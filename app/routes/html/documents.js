@@ -7,7 +7,8 @@ const documents = express.Router();
 
 
 
-documents.post("/:episodeId", async (req, res) => {
+documents.post("/:episodeId", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const episode = await Episode.load(episodeId);
   const document = new Document(req.body);
@@ -19,12 +20,16 @@ documents.post("/:episodeId", async (req, res) => {
 
   res.sendStatus("200");
   broadcast("documents");
+} catch(err) {
+  next(err);
+}
 });
 
 
 
 
-documents.post("/:episodeId/:documentId/refresh", async (req, res) => {
+documents.post("/:episodeId/:documentId/refresh", async (req, res, next) => {
+  try {
   const { episodeId, documentId } = req.params;
   const episode = await Episode.load( episodeId );
   const document = episode.getDocumentById(documentId);
@@ -38,10 +43,13 @@ documents.post("/:episodeId/:documentId/refresh", async (req, res) => {
   }
 
   broadcast("documents");
-
+} catch(err) {
+  next(err);
+}
 });
 
-documents.post("/:episodeId/:documentId", async (req, res) => {
+documents.post("/:episodeId/:documentId", async (req, res, next) => {
+  try {
   const { episodeId, documentId } = req.params;
   const episode = await Episode.load( episodeId );
   const document = episode.getDocumentById(documentId);
@@ -58,11 +66,14 @@ documents.post("/:episodeId/:documentId", async (req, res) => {
   }
 
   broadcast("documents");
-
+} catch(err) {
+  next(err);
+}
 });
 
 
-documents.delete("/:episodeId/:documentId", async (req, res) => {
+documents.delete("/:episodeId/:documentId", async (req, res, next) => {
+  try {
   const { episodeId, documentId } = req.params;
   const episode = await Episode.load(episodeId);
   episode.deleteDocumentById(documentId);
@@ -70,6 +81,9 @@ documents.delete("/:episodeId/:documentId", async (req, res) => {
 
   res.sendStatus("200");
   broadcast("documents");
+} catch(err) {
+  next(err);
+}
 });
 
 

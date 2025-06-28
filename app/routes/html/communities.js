@@ -7,16 +7,21 @@ import { filterUnique } from "#core/utils";
 const communities = express.Router();
 
 
-communities.get("/:episodeId", async (req, res) => {
+communities.get("/:episodeId", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const { view = "list" } = req.query;
 
   const episode = await Episode.load(episodeId);
   res.render(`communities/${view}`, { episode })
+} catch(err) {
+  next(err);
+}
 });
 
 
-communities.post("/:episodeId", async (req, res) => {
+communities.post("/:episodeId", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -28,9 +33,13 @@ communities.post("/:episodeId", async (req, res) => {
   res.sendStatus(201);
 
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 });
 
-communities.get("/:episodeId/create", async (req, res) => {
+communities.get("/:episodeId/create", async (req, res, next) => {
+  try {
   const { episodeId } = req.params;
   const { societyId, communityId } = req.query;
   
@@ -38,23 +47,31 @@ communities.get("/:episodeId/create", async (req, res) => {
   const society = episode.getSocietyById( societyId );
 
   res.render(`communities/create`, { episode, society, communityId });
+} catch(err) {
+  next(err);
+}
 });
 
 ////////////////////////////////////////
 // INDIVIDUAL ROUTES
 ////////////////////////////////////////
 
-communities.get("/:episodeId/:communityId/:view?", async (req, res) => {
+communities.get("/:episodeId/:communityId/:view?", async (req, res, next) => {
+  try {
   const { episodeId, communityId, view = "card" } = req.params;
 
   const episode = await Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
 
   res.render(`communities/${view}`, {community});
+} catch(err) {
+  next(err);
+}
 });
 
 
-communities.patch("/:episodeId/:communityId", async (req, res) => {
+communities.patch("/:episodeId/:communityId", async (req, res, next) => {
+  try {
   const { episodeId, communityId } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -69,12 +86,15 @@ communities.patch("/:episodeId/:communityId", async (req, res) => {
 
   res.sendStatus(200);
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 });
 
 
 
-communities.post("/:episodeId/:communityId/resources", async (req, res) => {
-
+communities.post("/:episodeId/:communityId/resources", async (req, res, next) => {
+  try {
   const { episodeId, communityId } = req.params;
   const { resourceIds = [] } = req.body;
 
@@ -90,10 +110,14 @@ communities.post("/:episodeId/:communityId/resources", async (req, res) => {
   episode.save();
   res.sendStatus(200);
   broadcast("resources");
+} catch(err) {
+  next(err);
+}
 });
 
 
-communities.post("/:episodeId/:communityId/lose", async (req, res) => {
+communities.post("/:episodeId/:communityId/lose", async (req, res, next) => {
+  try {
   const { episodeId, communityId } = req.params;
   const episode = await Episode.load(episodeId);
   const community = episode.getCommunityById(communityId);
@@ -102,11 +126,15 @@ communities.post("/:episodeId/:communityId/lose", async (req, res) => {
 
   res.sendStatus(200);
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 });
 
 
 
-communities.delete("/:episodeId/:communityId", async (req, res) => {
+communities.delete("/:episodeId/:communityId", async (req, res, next) => {
+  try {
   const { episodeId, communityId } = req.params;
 
   const episode = await Episode.load(episodeId);
@@ -115,6 +143,9 @@ communities.delete("/:episodeId/:communityId", async (req, res) => {
 
   res.sendStatus(200);
   broadcast("societies");
+} catch(err) {
+  next(err);
+}
 });
 
 

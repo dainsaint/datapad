@@ -213,6 +213,10 @@ export default class Episode extends Model {
   }
 
   static async load(id) {
+    if(!id) {
+      throw new Error("no id provided for desired episode");
+    }
+
     if (loadedEpisodes.has(id)) {
       return loadedEpisodes.get(id);
     }
